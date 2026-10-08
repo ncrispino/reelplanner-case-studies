@@ -1,0 +1,96 @@
+{
+  "name": "reelplanning-case-studies",
+  "kind": "brownfield",
+  "components": [
+    {
+      "id": "study",
+      "path": "bob-dylan-site/",
+      "name": "The study folder"
+    },
+    {
+      "id": "study-page",
+      "path": "docs/bob-dylan/index.html",
+      "name": "The study page"
+    },
+    {
+      "id": "review-bundle",
+      "path": "docs/bob-dylan/review/",
+      "name": "The review bundle"
+    },
+    {
+      "id": "built-site",
+      "path": "docs/bob-dylan/site/",
+      "name": "The built site"
+    },
+    {
+      "id": "front-page",
+      "path": "docs/index.html",
+      "name": "The front page"
+    },
+    {
+      "id": "watch-page",
+      "path": "docs/bob-dylan/watch/",
+      "name": "The watch page"
+    },
+    {
+      "id": "timeline",
+      "path": "bob-dylan-site/timeline.json",
+      "name": "The timeline record"
+    }
+  ],
+  "edges": [
+    {
+      "from": "study-page",
+      "to": "review-bundle",
+      "label": "links each video"
+    },
+    {
+      "from": "study-page",
+      "to": "built-site",
+      "label": "links the site"
+    },
+    {
+      "from": "study-page",
+      "to": "study",
+      "label": "links the project and transcript"
+    },
+    {
+      "from": "front-page",
+      "to": "study-page",
+      "label": "lists the study"
+    },
+    {
+      "from": "study-page",
+      "to": "watch-page",
+      "label": "opens each video"
+    },
+    {
+      "from": "timeline",
+      "to": "study-page",
+      "label": "is drawn as"
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "publish",
+      "label": "Publishing a study",
+      "steps": [
+        "study",
+        "review-bundle",
+        "built-site",
+        "study-page",
+        "front-page"
+      ]
+    }
+  ],
+  "stage": {
+    "rail": {
+      "x": 80,
+      "y": 150,
+      "w": 500,
+      "slotH": 90,
+      "gap": 20,
+      "slots": 6
+    }
+  }
+}

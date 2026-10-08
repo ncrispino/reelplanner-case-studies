@@ -1,0 +1,1999 @@
+{
+  "project": "walkthrough-video",
+  "title": "walkthrough-video",
+  "planDir": ".reelplanning/plans/2026-10-07-fuller",
+  "kind": "walkthrough",
+  "totalSeconds": 232.711,
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "What landed",
+      "fromFrame": 1,
+      "toFrame": 7,
+      "start": 0,
+      "end": 103.083,
+      "linearSeconds": 103.083,
+      "watchedSeconds": 96.56,
+      "decisions": [
+        "q5"
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Albums and songs",
+      "fromFrame": 8,
+      "toFrame": 12,
+      "start": 103.083,
+      "end": 155.66,
+      "linearSeconds": 52.577,
+      "watchedSeconds": 46.577,
+      "decisions": [
+        "q4"
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Wide windows and links out",
+      "fromFrame": 13,
+      "toFrame": 18,
+      "start": 155.66,
+      "end": 232.711,
+      "linearSeconds": 77.051,
+      "watchedSeconds": 77.051,
+      "decisions": []
+    }
+  ],
+  "levels": null,
+  "quizzes": [],
+  "autonomy": [
+    {
+      "id": "d1",
+      "frameIndex": 9,
+      "planStep": 4,
+      "chose": "removed the desktop-only \"Also in this era\" row; the previous and next album of the era, with covers, replace it at every width",
+      "insteadOf": "keeping both",
+      "why": "two bands of the same era's covers is the clutter the brief asked to avoid",
+      "check": "src/pages/album/[id].astro",
+      "at": 131.087
+    },
+    {
+      "id": "a17",
+      "frameIndex": 15,
+      "planStep": 6,
+      "chose": "the desktop check names eight gaps the photo search could not fill and does not fail on them: Back to the Roots (2 photos) and seven moments with no photo or clip (the Shelton review, marrying Sara Lownds, the motorcycle accident, Pat Garrett, the 1980 retrospective shows, Chronicles, The Philosophy of Modern Song); any other gap fails",
+      "insteadOf": "the check failing until they are filled",
+      "why": "Commons has no free photograph that fits; these pages show the era's photograph, labelled",
+      "check": "tools/check-desktop.mjs (KNOWN_GAPS)",
+      "at": 200.048
+    }
+  ],
+  "autonomyGroups": [
+    {
+      "id": "stop-3",
+      "stop": true,
+      "frameIndex": 3,
+      "planStep": 2,
+      "ids": [
+        "a14",
+        "a16"
+      ],
+      "calls": [
+        {
+          "id": "a14",
+          "planStep": 2,
+          "chose": "an era's gallery is up to five photographs of its own; a photo marked as a moment's belongs to that moment, and tops up a gallery with fewer than three (Basement and Blood on the Tracks: 2 of their own and 1 from a moment)",
+          "insteadOf": "a moment's photo counted in every gallery, or never",
+          "why": "the moment's photo leads its own page; a gallery of two looked thin",
+          "check": "src/lib/data.ts (photosOfEra)"
+        },
+        {
+          "id": "a16",
+          "planStep": 2,
+          "chose": "a moment's photograph is often its place or its people, and the caption says so: Big Pink for the Basement sessions, the Warfield for the gospel shows, Roy Orbison for the Wilburys",
+          "insteadOf": "a photo only of the event itself",
+          "why": "Commons has few free photos of the events; a place, captioned, is honest and still shows it",
+          "check": "data/photos.json"
+        }
+      ],
+      "at": 53.262
+    },
+    {
+      "id": "stop-4",
+      "stop": true,
+      "frameIndex": 4,
+      "planStep": 3,
+      "ids": [
+        "a1",
+        "a3",
+        "a4",
+        "a19",
+        "a26"
+      ],
+      "calls": [
+        {
+          "id": "a1",
+          "planStep": 3,
+          "chose": "(question 5) every era on the timeline gets its bands, under its own spread, inside a new wrapper (`article.eb`) that a phone swipes and a computer snaps to; the home page's timeline gets them too",
+          "insteadOf": "bands only for the era in the address, after the whole timeline",
+          "why": "/era/&lt;id&gt;/ is the whole timeline, and › and ← → move between eras, so each era needs its bands under its own spread",
+          "check": "src/components/EraSpread.astro, src/components/Timeline.astro"
+        },
+        {
+          "id": "a3",
+          "planStep": 3,
+          "chose": "the \"records and moments\" band shows only from 1100 px; phones and tablets get the story and gallery, songs to start with, threads and Read on, stacked",
+          "insteadOf": "the same band on a phone",
+          "why": "the phone's era panel just above already lists the same albums and moments",
+          "check": "src/components/EraStory.astro"
+        },
+        {
+          "id": "a4",
+          "planStep": 3,
+          "chose": "a moment page shows its clip first, its own photo under it when it has both; with neither, the era's lead photo, headed \"The era's photograph · &lt;era&gt;\"; \"Around it\" is the two moments either side; \"His songs from &lt;year&gt;\" up to 8, the most connected first",
+          "insteadOf": "only the clip or only one photo",
+          "why": "a full page at every width, and the era's photo honestly labelled",
+          "check": "src/pages/moment/[id].astro"
+        },
+        {
+          "id": "a19",
+          "planStep": 3,
+          "chose": "the gallery is a grid (the first photo wide, then two a row) with one line naming the photographers; each photo's credit and licence show when it opens large",
+          "insteadOf": "a sideways row, or a credit under every thumbnail",
+          "why": "a sideways scroller inside the phone's sideways swipe fights it; credits under every thumbnail crowd it",
+          "check": "src/components/Gallery.astro"
+        },
+        {
+          "id": "a26",
+          "planStep": 3,
+          "chose": "an era's \"Threads through it\" shows at most six threads, those with the most of the era's songs first",
+          "insteadOf": "every thread that passes through it",
+          "why": "the twelve threads pass through most eras; six reads as a band",
+          "check": "src/components/EraStory.astro"
+        }
+      ],
+      "at": 76.003
+    },
+    {
+      "id": "stop-8",
+      "stop": true,
+      "frameIndex": 8,
+      "planStep": 4,
+      "ids": [
+        "a5",
+        "a7",
+        "a24",
+        "a25"
+      ],
+      "calls": [
+        {
+          "id": "a5",
+          "planStep": 4,
+          "chose": "album page: the cover and the Spotify album player on the left; Why it matters with the essay, the track list and \"Where its songs lead\" on the right; previous and next album under both",
+          "insteadOf": "the essay in the left column",
+          "why": "the left column is already a 480 px cover; the essay reads better at the right column's measure",
+          "check": "src/pages/album/[id].astro"
+        },
+        {
+          "id": "a7",
+          "planStep": 4,
+          "chose": "\"Where its songs lead\": at most six connections to songs off the album, covers, borrowed tunes, answers and rewrites before shared themes",
+          "insteadOf": "all of them",
+          "why": "Blonde on Blonde alone has dozens; six reads as a band, not a wall",
+          "check": "src/pages/album/[id].astro"
+        },
+        {
+          "id": "a24",
+          "planStep": 4,
+          "chose": "(question 4) Fallen Angels has no album player: MusicBrainz lists no Spotify album whose title matches it, and the desktop check only asks for a player where an album has a Spotify id",
+          "insteadOf": "all 39 with a player",
+          "why": "a guessed album id could play the wrong record; its songs still have their own players",
+          "check": "data/sources/spotify-albums.json, runs/find-spotify-albums.txt"
+        },
+        {
+          "id": "a25",
+          "planStep": 4,
+          "chose": "a song page's \"In threads\" also lists the thread made from the song (\"From &lt;song&gt;\"), so a song in no curated thread still has one",
+          "insteadOf": "the curated threads only",
+          "why": "every connected song has its own thread (D-052's link), and the band would otherwise be empty for most songs",
+          "check": "src/pages/song/[id].astro"
+        }
+      ],
+      "at": 123.364
+    },
+    {
+      "id": "stop-13",
+      "stop": true,
+      "frameIndex": 13,
+      "planStep": 5,
+      "ids": [
+        "a8",
+        "a9"
+      ],
+      "calls": [
+        {
+          "id": "a8",
+          "planStep": 5,
+          "chose": "the rail is on album, song and moment pages only",
+          "insteadOf": "a rail on every page",
+          "why": "the era page is full-bleed and already shows the eras; threads, the map, search and About have no single era",
+          "check": "src/layouts/Shell.astro"
+        },
+        {
+          "id": "a9",
+          "planStep": 5,
+          "chose": "from 1440 px the content starts under the header's left edge, up to 1200 px, with the rail (240 px and a 48 px gap) in the right margin: the content is 984 px at 1440, the full 1200 from about 1900",
+          "insteadOf": "the content centred with the rail outside it",
+          "why": "1200 px plus the rail cannot be centred below about 1830 px; lining up with the header keeps the page calm",
+          "check": "src/styles/site.css"
+        }
+      ],
+      "at": 174.533
+    },
+    {
+      "id": "stop-14",
+      "stop": true,
+      "frameIndex": 14,
+      "planStep": 6,
+      "ids": [
+        "a11",
+        "a13",
+        "a23"
+      ],
+      "calls": [
+        {
+          "id": "a11",
+          "planStep": 6,
+          "chose": "\"Read on: Wikipedia ↗ · MusicBrainz ↗\" at the end of album and song pages and of each era's bands, in a new tab, and nothing when there are no links",
+          "insteadOf": "near the title",
+          "why": "it is where reading carries on, and it keeps the top of the page clear",
+          "check": "src/components/ReadOn.astro"
+        },
+        {
+          "id": "a13",
+          "planStep": 6,
+          "chose": "eras link only to Wikipedia, an article picked by hand for what the era is most about (Hibbing, Greenwich Village, the Electric Dylan controversy, The Basement Tapes, the Rolling Thunder Revue, the Traveling Wilburys, the 2016 Nobel Prize in Literature), each kept only when it answers; Gospel, Back to the Roots, the Standards and Rough and Rowdy have none",
+          "insteadOf": "no era links",
+          "why": "an era is not a MusicBrainz entity, so the finder found none; the plan says each era links out",
+          "check": "tools/find-links-out.mjs (ERA_WIKI)"
+        },
+        {
+          "id": "a23",
+          "planStep": 6,
+          "chose": "links out for the 452 album songs only; the 86 songs on no album of his (old tunes, other artists' versions) have none",
+          "insteadOf": "every song",
+          "why": "those are other artists' recordings, with no MusicBrainz release in the site's data to start from",
+          "check": "tools/find-links-out.mjs"
+        }
+      ],
+      "at": 188.357
+    },
+    {
+      "id": "list-17",
+      "list": true,
+      "frameIndex": 17,
+      "planStep": null,
+      "ids": [
+        "a18",
+        "a21",
+        "a15",
+        "a2",
+        "a6",
+        "a20",
+        "a10",
+        "a12",
+        "a22"
+      ],
+      "calls": [
+        {
+          "id": "a18",
+          "planStep": 1,
+          "chose": "the data check compares quoted titles loosely (curly and straight apostrophes, hyphens, a bracketed subtitle) and accepts seven real songs on none of the site's albums (\"Dignity\", \"Blind Willie McTell\", \"Series of Dreams\", \"Things Have Changed\", \"I Shall Be Released\", \"This Wheel's on Fire\", \"Handle with Care\")",
+          "insteadOf": "quoting only titles on the site",
+          "why": "the stories name these songs; they are titles, not lyrics",
+          "check": "tools/check-data.mjs (OTHER_TITLES)"
+        },
+        {
+          "id": "a21",
+          "planStep": 1,
+          "chose": "the data check holds each era section to 60–110 words, a moment to 80–150 and an album essay to 100–180",
+          "insteadOf": "an exact length, or no bound",
+          "why": "the plan says \"about\" (D-085); the band catches a text that is cut off or runs on, not one a few words over",
+          "check": "tools/check-data.mjs (holdText)"
+        },
+        {
+          "id": "a15",
+          "planStep": 2,
+          "chose": "six of the first 26 photographs are now marked as a moment's, since each already shows it (the March on Washington, Isle of Wight 1969, Chicago 1974, Ginsberg on the Rolling Thunder Revue, Rotterdam 1978, the American Reunion of 1993)",
+          "insteadOf": "leaving them as era photos only",
+          "why": "those moments get their photo without a new search",
+          "check": "data/photos.json"
+        },
+        {
+          "id": "a2",
+          "planStep": 3,
+          "chose": "on a phone the swiped row is as tall as the era in view (a ResizeObserver follows it)",
+          "insteadOf": "every era as tall as the tallest era's bands",
+          "why": "a short era would end in a screen or more of blank space",
+          "check": "src/components/Timeline.astro"
+        },
+        {
+          "id": "a6",
+          "planStep": 4,
+          "chose": "a track row's title stays a link to its song; a separate ▾ button opens the row in place (preview, themes, its Spotify player, \"Its page ›\"), and the player loads the first time the row opens",
+          "insteadOf": "the whole row as the toggle",
+          "why": "links keep working as before, on phones too; 30 players loading with the album would be heavy",
+          "check": "src/pages/album/[id].astro"
+        },
+        {
+          "id": "a20",
+          "planStep": 4,
+          "chose": "a song page's \"The same year\" lists up to 8 of his own songs from his records that year, the most connected first, leaving out covers and other artists' songs",
+          "insteadOf": "every song from that year on the site",
+          "why": "it is about what he was writing then",
+          "check": "src/pages/song/[id].astro"
+        },
+        {
+          "id": "a10",
+          "planStep": 5,
+          "chose": "the rail: the era badge and years, the eras as a list of bars sized by their years with this one lit and a pin at the page's year, and quick links (the era, the album, a thread, the map)",
+          "insteadOf": "a small horizontal ribbon",
+          "why": "a 240 px column reads better as a list with names",
+          "check": "src/components/Rail.astro"
+        },
+        {
+          "id": "a12",
+          "planStep": 6,
+          "chose": "each new desktop-check rule reads the built pages (the essay block, the album player's address, the moment's own photo or a clip) and only fails once its data exists",
+          "insteadOf": "checking only the data",
+          "why": "it checks that the pages actually show the parts",
+          "check": "tools/check-desktop.mjs"
+        },
+        {
+          "id": "a22",
+          "planStep": 6,
+          "chose": "a song's \"MusicBrainz ↗\" opens the work (the song as written)",
+          "insteadOf": "the recording on the album",
+          "why": "the work is where MusicBrainz keeps the Wikipedia link and every recording of the song",
+          "check": "tools/find-links-out.mjs"
+        }
+      ],
+      "at": 226.661
+    }
+  ],
+  "openQuestion": {
+    "question": "Seeing it run, anything you'd change?",
+    "frameIndex": 18,
+    "at": 232.661
+  },
+  "watchedSeconds": 220.188,
+  "frames": [
+    {
+      "index": 1,
+      "title": "A fuller site",
+      "compositionId": "01-built",
+      "type": "hook",
+      "durationSeconds": 18.368,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "What landed",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "The site has more on every page now. Each era tells its story beside a gallery of photographs, most moments have a page with a picture of their own, and every album has its player, an essay, and a track list that opens in place. Wide windows get a rail at the side, and pages link out to Wikipedia and MusicBrainz.",
+      "start": 0,
+      "thumb": "snapshots/frame-00-at-9.43s.png",
+      "terms": [
+        "era",
+        "gallery",
+        "rail"
+      ],
+      "defines": [
+        "era",
+        "gallery",
+        "rail"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "Step 1 · Longer writing",
+      "compositionId": "02-step1",
+      "type": "benefit_highlight",
+      "durationSeconds": 16.491,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step one. Every era now has three short sections, of about eighty words each: what happened, the music, and what it led to. Each moment has about a hundred and twenty words, and each album an essay of about a hundred and fifty. None of it quotes a lyric, and the data check holds each text to its length.",
+      "start": 18.368,
+      "thumb": "snapshots/frame-01-at-26.86s.png",
+      "terms": [
+        "data check",
+        "era"
+      ],
+      "defines": [
+        "data check"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "Step 2 · More photographs",
+      "compositionId": "03-stop2",
+      "type": "cta",
+      "durationSeconds": 18.453,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step two. Thirty-eight more photographs from Wikimedia Commons, sixty-four in all. Two choices: a moment's photo belongs to its moment, and only tops up an era's gallery when the gallery has fewer than three. And many moment photos show the place, not the event, like Big Pink for the basement sessions; the caption says so.",
+      "start": 34.859,
+      "thumb": "snapshots/frame-02-at-44.34s.png",
+      "autonomyStop": [
+        "a14",
+        "a16"
+      ],
+      "terms": [
+        "wikimedia commons",
+        "caption",
+        "call",
+        "tag"
+      ],
+      "defines": [
+        "wikimedia commons",
+        "caption",
+        "call",
+        "tag"
+      ]
+    },
+    {
+      "index": 4,
+      "title": "Step 3 · Era bands and moments",
+      "compositionId": "04-stop3",
+      "type": "cta",
+      "durationSeconds": 22.741,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step three. Under every era's full screen come its bands: the story and gallery, records and moments, songs to start with, and threads. Five choices. Every era gets them, the home page too. The records and moments band shows only on a computer. A moment with no clip or photo shows the era's photograph, labelled. The gallery is a grid, with each credit when a photo opens. And an era lists at most six threads.",
+      "start": 53.312,
+      "thumb": "snapshots/frame-03-at-64.93s.png",
+      "autonomyStop": [
+        "a1",
+        "a3",
+        "a4",
+        "a19",
+        "a26"
+      ],
+      "terms": [
+        "bands",
+        "records and moments band",
+        "songs to start with",
+        "thread",
+        "era",
+        "full screen"
+      ],
+      "defines": [
+        "bands",
+        "records and moments band",
+        "songs to start with",
+        "thread"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Question 5 · Bands on the home page",
+      "compositionId": "05-q5",
+      "type": "cta",
+      "durationSeconds": 14.507,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": "q5",
+      "branch": null,
+      "question": "Bands on the front of the site as well?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "Yes, as built: every era's bands on the home page too",
+          "why": "Scrolling down from any era opens its story; a long home page.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Only at an era's own address",
+          "why": "The home page keeps each era's full screen alone; two versions to keep.",
+          "recommended": false
+        }
+      ],
+      "narration": "That first choice is question five. A: the bands stay on the home page too, so scrolling down from any era opens its story. B: they show only at an era's own address, and the home page keeps each era's full screen alone. I recommend A.",
+      "start": 76.053,
+      "thumb": "snapshots/frame-04-at-83.56s.png",
+      "terms": [
+        "call",
+        "bands"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "If A: as built",
+      "compositionId": "06-q5-a",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q5=a",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With A, the home page stays as built: a long page, with every era's story under it.",
+      "start": 90.56,
+      "thumb": "snapshots/frame-05-at-93.81s.png",
+      "terms": [
+        "home page"
+      ]
+    },
+    {
+      "index": 7,
+      "title": "If B: spreads only",
+      "compositionId": "07-q5-b",
+      "type": "benefit_highlight",
+      "durationSeconds": 6.523,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q5=b",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With B, the home page loses the bands, and the home page and the era pages become two versions to keep.",
+      "start": 96.56,
+      "thumb": "snapshots/frame-06-at-100.07s.png",
+      "terms": [
+        "era",
+        "home page",
+        "bands"
+      ]
+    },
+    {
+      "index": 8,
+      "title": "Step 4 · The album page",
+      "compositionId": "08-stop4",
+      "type": "cta",
+      "durationSeconds": 20.331,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "Albums and songs",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step four. An album page has the cover and its Spotify player on the left, and the essay and track list on the right. Three choices: under the tracks, six connections that lead off the album, not all of them; a song's In threads band also lists the thread made from that song; and Fallen Angels has no player, because MusicBrainz lists no Spotify album for it.",
+      "start": 103.083,
+      "thumb": "snapshots/frame-07-at-113.25s.png",
+      "autonomyStop": [
+        "a5",
+        "a7",
+        "a24",
+        "a25"
+      ],
+      "terms": [
+        "spotify player",
+        "essay",
+        "track list",
+        "connections",
+        "in threads"
+      ],
+      "defines": [
+        "spotify player",
+        "essay",
+        "track list",
+        "connections",
+        "in threads"
+      ]
+    },
+    {
+      "index": 9,
+      "title": "Off-plan change · one row fewer",
+      "compositionId": "09-d1",
+      "type": "cta",
+      "durationSeconds": 7.723,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "d1",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Off the plan: the Also in this era row is gone, because the previous and next album, with their covers, show the same era just below.",
+      "start": 123.414,
+      "thumb": "snapshots/frame-08-at-127.53s.png",
+      "terms": [
+        "off-plan change",
+        "deviation",
+        "era"
+      ],
+      "defines": [
+        "off-plan change",
+        "deviation"
+      ]
+    },
+    {
+      "index": 10,
+      "title": "Question 4 · Fallen Angels",
+      "compositionId": "10-q4",
+      "type": "cta",
+      "durationSeconds": 12.523,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": "q4",
+      "branch": null,
+      "question": "Fallen Angels has no Spotify album to embed: what goes in its place?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "Nothing: its songs' players only",
+          "why": "As built; the one album page with no player.",
+          "recommended": false
+        },
+        {
+          "id": "b",
+          "label": "A line: Find Fallen Angels on Spotify ↗",
+          "why": "A search page, not a player; it opens Spotify.",
+          "recommended": true
+        }
+      ],
+      "narration": "Fallen Angels is question four. A: nothing takes the player's place, and its songs keep their own players. B: one line, Find Fallen Angels on Spotify, that opens a Spotify search for it. I recommend B.",
+      "start": 131.137,
+      "thumb": "snapshots/frame-09-at-137.65s.png",
+      "terms": [
+        "search",
+        "fallen angels"
+      ],
+      "defines": [
+        "search"
+      ]
+    },
+    {
+      "index": 11,
+      "title": "If A: as built",
+      "compositionId": "11-q4-a",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q4=a",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With A, the album page stays as built.",
+      "start": 143.66,
+      "thumb": "snapshots/frame-10-at-146.91s.png"
+    },
+    {
+      "index": 12,
+      "title": "If B: one link",
+      "compositionId": "12-q4-b",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q4=b",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With B, one link sits where the player would be.",
+      "start": 149.66,
+      "thumb": "snapshots/frame-11-at-152.91s.png"
+    },
+    {
+      "index": 13,
+      "title": "Step 5 · The rail",
+      "compositionId": "13-stop5",
+      "type": "cta",
+      "durationSeconds": 18.923,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "Wide windows and links out",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step five. From fourteen hundred and forty pixels, a rail sits at the right of album, song and moment pages: the era, a bar for each era with this one lit, and quick links. The content lines up with the header, so at fourteen forty it is nine hundred and eighty-four pixels wide, and the full twelve hundred from about nineteen hundred.",
+      "start": 155.66,
+      "thumb": "snapshots/frame-12-at-165.37s.png",
+      "autonomyStop": [
+        "a8",
+        "a9"
+      ],
+      "terms": [
+        "rail",
+        "quick links",
+        "pixels"
+      ],
+      "defines": [
+        "rail",
+        "quick links"
+      ]
+    },
+    {
+      "index": 14,
+      "title": "Step 6 · Read on",
+      "compositionId": "14-stop6",
+      "type": "cta",
+      "durationSeconds": 13.824,
+      "planStep": 6,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step six. Read on, with Wikipedia and MusicBrainz, ends each page. Eras are not in MusicBrainz, so seven eras got a Wikipedia article picked by hand, and four have none. And songs that are not on his albums get no links.",
+      "start": 174.583,
+      "thumb": "snapshots/frame-13-at-181.5s.png",
+      "autonomyStop": [
+        "a11",
+        "a13",
+        "a23"
+      ],
+      "terms": [
+        "read on",
+        "wikipedia",
+        "musicbrainz"
+      ],
+      "defines": [
+        "read on",
+        "wikipedia",
+        "musicbrainz"
+      ]
+    },
+    {
+      "index": 15,
+      "title": "The gaps",
+      "compositionId": "15-gaps",
+      "type": "cta",
+      "durationSeconds": 11.691,
+      "planStep": 6,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "a17",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "And eight gaps the photo search could not fill: Back to the Roots has two photographs, and seven moments have no photo or clip. The desktop check names them and does not fail on them; any new gap fails.",
+      "start": 188.407,
+      "thumb": "snapshots/frame-14-at-194.25s.png",
+      "terms": [
+        "gap",
+        "desktop check",
+        "search"
+      ],
+      "defines": [
+        "gap",
+        "desktop check"
+      ]
+    },
+    {
+      "index": 16,
+      "title": "What ran",
+      "compositionId": "16-ran",
+      "type": "benefit_highlight",
+      "durationSeconds": 14.613,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "What ran: the data check, the build, the phone check, and the desktop check at two sizes, all passing; and a code check by a fresh agent, whose six findings are answered. Not done: questions four and five, the eight gaps, and checking every sentence of the new writing.",
+      "start": 200.098,
+      "thumb": "snapshots/frame-15-at-207.4s.png",
+      "terms": [
+        "phone check",
+        "code check",
+        "fresh agent"
+      ],
+      "defines": [
+        "phone check",
+        "code check",
+        "fresh agent"
+      ]
+    },
+    {
+      "index": 17,
+      "title": "The rest of the choices",
+      "compositionId": "17-list",
+      "type": "cta",
+      "durationSeconds": 12,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "autonomyList": [
+        "a18",
+        "a21",
+        "a15",
+        "a2",
+        "a6",
+        "a20",
+        "a10",
+        "a12",
+        "a22"
+      ],
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "The rest of the choices are on this list, nine of them, one line each.",
+      "start": 214.711,
+      "thumb": "snapshots/frame-16-at-220.71s.png",
+      "terms": [
+        "call",
+        "list"
+      ]
+    },
+    {
+      "index": 18,
+      "title": "Anything you'd change?",
+      "compositionId": "18-ending",
+      "type": "cta",
+      "durationSeconds": 6,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "That's the fuller site. Seeing it run, anything you'd change?",
+      "start": 226.711,
+      "thumb": "snapshots/frame-17-at-229.71s.png"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "q5",
+      "kind": "one",
+      "frameIndex": 5,
+      "compositionId": "05-q5",
+      "planStep": 3,
+      "question": "Bands on the front of the site as well?",
+      "questionMore": "The home page and /era/<id>/ are the same timeline, so as built both carry the bands.",
+      "at": 90.51,
+      "resumeAt": 103.083,
+      "options": [
+        {
+          "id": "a",
+          "label": "Yes, as built: every era's bands on the home page too",
+          "why": "Scrolling down from any era opens its story; a long home page.",
+          "recommended": true,
+          "more": "On /, scrolling down from Duluth and Hibbing opens its story, gallery, songs and threads.",
+          "branch": {
+            "frameIndex": 6,
+            "compositionId": "06-q5-a",
+            "start": 90.56,
+            "end": 96.56
+          }
+        },
+        {
+          "id": "b",
+          "label": "Only at an era's own address",
+          "why": "The home page keeps each era's full screen alone; two versions to keep.",
+          "recommended": false,
+          "more": "On /, the eras stay their full screens; /era/hibbing/ has the bands.",
+          "branch": {
+            "frameIndex": 7,
+            "compositionId": "07-q5-b",
+            "start": 96.56,
+            "end": 103.083
+          }
+        }
+      ],
+      "summary": null
+    },
+    {
+      "id": "q4",
+      "kind": "one",
+      "frameIndex": 10,
+      "compositionId": "10-q4",
+      "planStep": 4,
+      "question": "Fallen Angels has no Spotify album to embed: what goes in its place?",
+      "questionMore": "MusicBrainz lists no Spotify album whose title matches Fallen Angels, so a guessed one could play the wrong record.",
+      "at": 143.61,
+      "resumeAt": 155.66,
+      "options": [
+        {
+          "id": "a",
+          "label": "Nothing: its songs' players only",
+          "why": "As built; the one album page with no player.",
+          "recommended": false,
+          "more": "/album/fallen-angels/ shows the cover, the essay and the track list; each track row has its own player.",
+          "branch": {
+            "frameIndex": 11,
+            "compositionId": "11-q4-a",
+            "start": 143.66,
+            "end": 149.66
+          }
+        },
+        {
+          "id": "b",
+          "label": "A line: Find Fallen Angels on Spotify ↗",
+          "why": "A search page, not a player; it opens Spotify.",
+          "recommended": true,
+          "more": "Under the cover: \"Find Fallen Angels on Spotify ↗\", opening Spotify's search for the album.",
+          "branch": {
+            "frameIndex": 12,
+            "compositionId": "12-q4-b",
+            "start": 149.66,
+            "end": 155.66
+          }
+        }
+      ],
+      "summary": null
+    }
+  ],
+  "details": [],
+  "guide": {
+    "parts": [
+      {
+        "name": "step-1",
+        "title": "Step 1 · Longer writing for eras, moments and albums (question 3)",
+        "planStep": 1,
+        "kind": "step",
+        "src": "guide/step-1.html"
+      },
+      {
+        "name": "step-2",
+        "title": "Step 2 · More photographs for eras and moments",
+        "planStep": 2,
+        "kind": "step",
+        "src": "guide/step-2.html"
+      },
+      {
+        "name": "step-3",
+        "title": "Step 3 · Era and moment pages built around their story",
+        "planStep": 3,
+        "kind": "step",
+        "src": "guide/step-3.html"
+      },
+      {
+        "name": "step-4",
+        "title": "Step 4 · Album and song pages: the album's player, its essay, a track list that opens in place",
+        "planStep": 4,
+        "kind": "step",
+        "src": "guide/step-4.html"
+      },
+      {
+        "name": "step-5",
+        "title": "Step 5 · The sides of a wide window (question 1)",
+        "planStep": 5,
+        "kind": "step",
+        "src": "guide/step-5.html"
+      },
+      {
+        "name": "step-6",
+        "title": "Step 6 · Links out, and checks that hold it",
+        "planStep": 6,
+        "kind": "step",
+        "src": "guide/step-6.html"
+      },
+      {
+        "name": "decisions",
+        "title": "Decisions in force",
+        "planStep": null,
+        "kind": "decisions",
+        "src": "guide/decisions.html"
+      },
+      {
+        "name": "what-changed",
+        "title": "What changed, in full",
+        "planStep": null,
+        "kind": "overview",
+        "src": "guide/what-changed.html"
+      },
+      {
+        "name": "choices",
+        "title": "Every choice the agent made",
+        "planStep": null,
+        "kind": "choices",
+        "src": "guide/choices.html"
+      }
+    ]
+  },
+  "plan": {
+    "title": "A fuller site: more to read, more to see, more to do on every page",
+    "problem": "The owner, reviewing the walkthrough of the desktop plan:\n\n> \"i also think that some on the desktop feels kind of bare; we might need more content. like the sides of the page\n> are still kind of empty, and especially the biogrpahy pages with no other contents. they should have links, photos,\n> etc. and same with album pages, some song pages. now i dont want it cluttered, i just want more informaiton, more\n> visuals, more interaction even. just so there's enough\"\n\n### What we have\n\nThe site from the plans `2026-10-06-dylan-site`, `2026-10-07-desktop` and `2026-10-07-every-song`: 11 eras, 41\nmoments, 39 albums and 538 songs, laid out for a computer in up to 1200 px (D-036). The pages are thin because the\nwriting and the pictures are thin:\n\n- **An era** has a story of about 48 words and 1 to 3 photographs (26 in all; Gospel and Back to the Roots have one).\n- **A moment** has 16 to 32 words, no photograph of its own, and a clip for 14 of the 41; the Newport 1965 page is a\n  black clip box, three sentences and two album covers.\n- **An album** has a \"why it matters\" of 15 to 56 words and its track list; no player for the album as a whole.\n- **A song** has its note, preview, summary, players and connections; on a 1440 px window the 120 px either side of\n  the content is empty, and a song with no connection has an empty right column under its words.\n- **Nothing links out:** no Wikipedia, no MusicBrainz, no other source to read on.",
+    "steps": [
+      {
+        "n": 1,
+        "title": "Longer writing for eras, moments and albums (question 3)",
+        "text": "*Stands alone.*\n\n**It lets you:** read an era's story in a few short sections, what a moment was and why it mattered, and how an album\nwas made and received, without leaving the site.\n\nThe writers who wrote the 271 new songs write, under the same brief (our own words, never a lyric, only facts they\nare sure of, a plainer true sentence over a vivid wrong one): an era's story in three short sections, \"what happened\",\n\"the music\", \"what it led to\" (about 250 words in all, question 3); a moment's story (about 120 words: what happened,\nwhy it mattered, what came after); an album's essay (about 150 words: how it was made, how it sounds, how it was\nreceived). They go into `data/sources/stories.json`, merged as `story` (eras), `long` (moments) and `essay` (albums);\nthe short texts stay as each page's opening line. The data check holds each to its length and fails on a quotation\nthat is not a title.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| An era | Going Electric | three sections, about 250 words, after its opening line | writers write: the story; check: length, no quote; you see: the era page |\n| A moment | Newport 1965 | about 120 words: the set, the reaction, what it changed | writers write; you see: the moment page |\n| An album | Blood on the Tracks | about 150 words: New York and Minneapolis sessions, its sound, its reception | writers write; you see: the album page |\n| A fact a writer is unsure of | a session date | left out | writer: leaves it out; you see: the plainer sentence |\n| A quoted lyric | any | the data check fails | check: a quotation that is not a title; prints: ✗ |\n\n#### Interface\n\n```\ndata/sources/stories.json    # { eras: { id: { happened, music, ledTo } }, moments: { id: \"…\" }, albums: { id: \"…\" } }\nera.story                    # three sections, about 250 words in all (question 3)\nmoment.long                  # about 120 words\nalbum.essay                  # about 150 words\nnode tools/check-data.mjs    # ✗ <file> \"<id>\" story is <n> words, not <from> to <to>\n```\n\n#### Example\n\nGoing Electric's page opens with its line (\"In 1965 Dylan traded solo acoustic folk for a rock band…\"), then three\nshort sections: how the switch happened, what the three albums sound like, and what it led to, from Newport to the\n1966 tour and the motorcycle accident.\n\n```diagram\nflow: From the writers to a page\nbrief = the writers' brief: our own words, no lyrics -> stories = stories.json | eras, moments, albums\nstories -> check = the data check: length, no quotation\ncheck -> page = the era, moment and album pages\n```"
+      },
+      {
+        "n": 2,
+        "title": "More photographs for eras and moments",
+        "text": "*Stands alone.*\n\n**It lets you:** see each era in three to five photographs and most moments in one of their own.\n\nThe photo search that found today's 26 runs again (D-006: Wikimedia Commons, free-licensed, credited): for each era\nup to five in all, a photograph of Dylan first, then the places and people of the era; for each moment one photograph\nof the event, its place or its people where Commons has one. Each keeps its licence, author and source, and the data\ncheck fails on a photograph without them.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| An era with one photo | Gospel | up to four more from the 1979–1981 tours | search: Commons; check: licence and credit; you see: a gallery |\n| A moment with a photo on Commons | Live Aid 1985 | its photograph on the moment page | search: Commons; you see: the photo with its credit |\n| A moment with none | a 1960s recording session | no photo; the era's photo stands in, as on the timeline | search: none found; you see: the era's photo |\n| A photo with no licence | any | not used | check: no licence; prints: ✗ |\n\n#### Interface\n\n```\ntools/find-photos.mjs     # Commons search for eras (up to 5) and moments (1 each); writes data/photos.json\nphoto.moment              # the moment a photo belongs to, when it is one\nnode tools/check-data.mjs  # ✗ photos.json \"<id>\" has no licence | no credit\n```\n\n#### Example\n\nGospel goes from one photograph (Toronto, 1980) to up to five, and Live Aid 1985 gets its own photograph with its\nauthor and licence under it.\n\n```diagram\nflow: Where a photo comes from\nsearch = Commons search -> photo = a photo with licence and credit | kept only with both\nphoto -> era = an era's gallery: up to 5\nphoto -> moment = a moment's own photo\nsearch --> none = no photo: the era's stands in\n```"
+      },
+      {
+        "n": 3,
+        "title": "Era and moment pages built around their story",
+        "text": "*Needs steps 1 and 2.*\n\n**It lets you:** move through an era as a short illustrated story, and open a moment as a page of its own with its\nphotograph or clip, its story and what was around it.\n\n- **An era**, below its full-screen spread (D-037): its story in its three sections beside a photo gallery (click a\n  photo to see it large, with its credit); its albums as a row of covers with their years; its moments as a dated\n  timeline, each with its photo or clip mark; \"songs to start with\", the era's six most connected songs with their\n  previews; and the threads that pass through it.\n- **A moment**: its photograph or clip large; its longer story; the moments just before and after on a small\n  timeline; the songs and records from that year; and the era it belongs to.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| An era page, scrolled | Going Electric | story and gallery, albums, moments, songs to start with, threads | you scroll: below the spread; you see: five bands |\n| A photo clicked | a Kramer photograph | it opens large over the page, with its credit; Esc closes it | you click; you see: the photo large |\n| A moment with a clip | Newport 1965 | the clip large, the story, 1965's moments either side | you open: the moment; you see: clip and story |\n| A moment with no photo or clip | a 1960s session | the era's photo stands in | you see: the era's photo, labelled as the era's |\n| On a phone | Going Electric | the same bands, one under another | you scroll; you see: the bands stacked |\n\n#### Interface\n\n```\nsrc/components/EraStory.astro    # the bands under an era's spread: story + gallery, albums, moments, songs, threads\nsrc/components/Gallery.astro     # photos in a row; click opens one large (Esc, ← → move between them)\nsrc/pages/moment/[id].astro      # photo or clip, long story, a timeline of the moments either side, the year's songs\n```\n\n#### Example\n\nYou scroll past Going Electric's spread. Its three sections sit beside four photographs; you click one and it opens\nlarge with \"1965 publicity photo · Daniel Kramer · Public domain\" under it. Below: the three albums, the four\nmoments from Newport to the motorcycle accident, and \"Like a Rolling Stone\" first among the songs to start with.\n\n```diagram\nflow: An era page on a computer\nspread = the full-screen spread -> story = story and gallery: you scroll\nstory -> albums = its albums\nalbums -> moments = its moments, dated\nmoments -> songs = songs to start with\nsongs -> threads = threads through it\n```"
+      },
+      {
+        "n": 4,
+        "title": "Album and song pages: the album's player, its essay, a track list that opens in place",
+        "text": "*Needs step 1.*\n\n**It lets you:** play a whole album on its page, read its essay, and open any track in place to read its preview and\nplay it, without leaving the album.\n\n- **An album** gets Spotify's album player (question 1 of the plan `2026-10-06-dylan-site` chose Spotify, D-005), its\n  essay beside \"why it matters\", a track list where clicking a row's arrow opens it in place (the song's preview, its\n  themes and its player; \"its page ›\" goes on), the connections that start from its songs (covers, borrowed tunes),\n  and the previous and next album of its era with their covers.\n- **A song** gets \"in threads\" (the threads it is in, linked) and \"the same year\" (his other songs of that year), so\n  a song with no connection still has a full right column.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| An album page | Blood on the Tracks | album player, essay, ten tracks, connections, previous and next album | you open: the album; you see: all of it |\n| A track opened in place | \"If You See Her, Say Hello\" | its preview, themes and player under the row; \"its page ›\" | you click: the row's arrow; you see: the row open |\n| A song with no connection | \"I Believe in You\" | in threads (Faith), the same year (1979) | you open: the song; you see: two bands on the right |\n| An album with no Spotify album id | none of the 39 should | the track players only | fetch: none; you see: no album player |\n\n#### Interface\n\n```\nalbum.spotifyAlbum           # Spotify's album id, kept by tools/fetch-spotify.mjs (it reads the album pages already)\nsrc/pages/album/[id].astro   # album player, essay, track rows that open in place, connections, previous / next\nsrc/pages/song/[id].astro    # \"In threads\" and \"The same year\"\n```\n\n#### Example\n\nOn Blood on the Tracks you press play on the album player at the top, read the essay, and click the arrow beside\n\"Meet Me in the Morning\": the row opens with its preview and its Spotify player; you play it there.\n\n```diagram\nstate: A track row on an album page\n[*] -> closed: you open the album\nclosed -> open: you click its arrow | its preview, themes and player\nopen -> closed: you click again\nopen -> song page: its page ›\n```"
+      },
+      {
+        "n": 5,
+        "title": "The sides of a wide window (question 1)",
+        "text": "*Stands alone.*\n\n**It lets you:** use the whole width of a large screen for things that help, not empty margins.\n\nFrom 1440 px wide (question 1, recommended A) a context rail sits beside the 1200 px content (D-036 kept): the era's\nbadge and years, a small timeline of the eras with this page's place lit, and quick links (this era, its albums, a\nthread from this song, the map); it stays in place as you scroll. Below 1440 px the rail is not shown; the content is\nas today.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A song at 1680 px | \"Like a Rolling Stone\" | the rail: Going Electric 1965–1966, the eras with Going Electric lit, four links | you open: the page; you see: the rail at the right |\n| At 1440 px | the same | the rail at 240 px beside the content | you see: content and rail |\n| At 1280 px | the same | no rail; as today | you see: today's page |\n\n#### Interface\n\n```\nsrc/components/Rail.astro      # era badge, era timeline, quick links; sticky\n@media (min-width: 1440px)     # the rail shows; the content stays up to 1200 px\n```\n\n#### Example\n\nOn a 1920 px monitor, Masters of War's page has the rail on its right: \"Greenwich Village 1961–1964\", the eleven eras\nwith Greenwich Village lit, and links to the era, The Freewheelin' Bob Dylan, a thread from Masters of War and the map.\n\n```diagram\nflow: What a wide window gets\nwindow -> today = up to 1439 px: as today\nwindow -> rail = 1440 px and up: content and the context rail | question 1, A\n```"
+      },
+      {
+        "n": 6,
+        "title": "Links out, and checks that hold it",
+        "text": "*Stands alone.*\n\n**It lets you:** go on reading elsewhere, from Wikipedia and MusicBrainz, and trust the build to fail when a page's\nnew parts go missing.\n\nEach era, album and song links to its Wikipedia article and its MusicBrainz page where MusicBrainz lists them\n(question 2, recommended A), found through MusicBrainz's own links for the album or recording and kept only when the\npage answers. The desktop check gains: an era page with fewer than three photographs, an album page with no essay or\nno player, and a moment page with neither a photo nor a clip, each named.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| An album | Highway 61 Revisited | \"Read on: Wikipedia ↗ · MusicBrainz ↗\" | fetch: MusicBrainz's links; check: the page answers; you see: two links |\n| A song with no Wikipedia article | \"Turkey Chase\" | MusicBrainz only | fetch: none for Wikipedia; you see: one link |\n| A page missing its new parts | an album with no essay | the desktop check fails, naming it | check: no essay; prints: ✗ |\n\n#### Interface\n\n```\ntools/find-links-out.mjs       # Wikipedia and MusicBrainz links from MusicBrainz's url relations; data/sources/links-out.json\nnode tools/check-desktop.mjs   # ✗ era \"<id>\": 2 photos, want 3 · ✗ album \"<id>\": no essay · ✗ moment \"<id>\": no photo or clip\n```\n\n#### Example\n\nHighway 61 Revisited's page ends with \"Read on: Wikipedia ↗ · MusicBrainz ↗\", both opening in a new tab.\n\n```diagram\nflow: Where a link out comes from\nmb = MusicBrainz's links for the album or recording -> wiki = Wikipedia: kept if it answers\nmb -> mbpage = MusicBrainz's own page\nmb --> none = no link: none listed\n```"
+      }
+    ]
+  },
+  "slug": "2026-10-07-fuller--walkthrough",
+  "prerequisites": [
+    {
+      "video": "2026-10-06-dylan-site",
+      "title": "video",
+      "gives": "decisions D-001, D-003, D-005, D-006, D-007, D-033: how should the site be built?; explains \"search\"",
+      "seconds": 341.4,
+      "terms": [
+        "index.html",
+        "app.css",
+        "app.js",
+        "static host",
+        "build step",
+        "route",
+        "JSON",
+        "id",
+        "TypeScript",
+        "Vite",
+        "Astro",
+        "npm",
+        "node_modules",
+        "library",
+        "placeholder",
+        "View Transitions",
+        "Cover Art Archive",
+        "Wikimedia Commons",
+        "licence",
+        "embedded player",
+        "tap target",
+        "headless Chrome",
+        "npm test",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "YouTube",
+        "Spotify",
+        "view",
+        "quick check",
+        "theme",
+        "every polish by hand",
+        "polish",
+        "package.json",
+        "dist/",
+        "public domain",
+        "CC BY 2.0",
+        "CC BY-SA 2.0",
+        "youtube-nocookie.com"
+      ],
+      "found": true
+    },
+    {
+      "video": "2026-10-07-desktop",
+      "title": "video",
+      "gives": "decisions D-052, D-036, D-037, D-038: q4",
+      "seconds": 307.4,
+      "terms": [
+        "pixels",
+        "720 pixels",
+        "the column",
+        "the era's look",
+        "op-art",
+        "Cards and Map button",
+        "the map",
+        "dot",
+        "pointer",
+        "grabs the pointer",
+        "mouse wheel",
+        "Control",
+        "zoom",
+        "phone check",
+        "desktop check",
+        "app shell",
+        "header",
+        "tab",
+        "search field",
+        "slash",
+        "tablet",
+        "desktop",
+        "layout",
+        "two columns",
+        "crossfade",
+        "address",
+        "timeline",
+        "era",
+        "thread",
+        "connection",
+        "the words",
+        "legend",
+        "panel",
+        "select",
+        "double click",
+        "view",
+        "sideways scroll",
+        "npm test",
+        "quick check",
+        "Back to the Roots",
+        "Going Electric",
+        "Hibbing",
+        "Rough and Rowdy",
+        "I Believe in You",
+        "Faith",
+        "moment",
+        "recommended",
+        "data check",
+        "era timeline",
+        "rock band",
+        "traditional",
+        "planned",
+        "the owner",
+        "note",
+        "players",
+        "375×812",
+        "12 views",
+        "checks/desktop/",
+        "N",
+        "landmark",
+        "YouTube",
+        "Spotify",
+        "themes",
+        "183 songs",
+        "public domain",
+        "PD",
+        "CC BY 2.0",
+        "clip",
+        "version"
+      ],
+      "found": true
+    }
+  ],
+  "terms": [
+    "pixels",
+    "header",
+    "era",
+    "full screen",
+    "spreads",
+    "home page",
+    "address",
+    "bands",
+    "gallery",
+    "moment",
+    "clip",
+    "caption",
+    "credit",
+    "records and moments band",
+    "songs to start with",
+    "thread",
+    "connections",
+    "In threads",
+    "Spotify player",
+    "essay",
+    "track list",
+    "opens in place",
+    "rail",
+    "quick links",
+    "Read on",
+    "Wikipedia",
+    "MusicBrainz",
+    "Wikimedia Commons",
+    "Big Pink",
+    "data check",
+    "desktop check",
+    "phone check",
+    "code check",
+    "fresh agent",
+    "gap",
+    "off-plan change",
+    "deviation",
+    "list",
+    "recommended",
+    "call",
+    "tag",
+    "Fallen Angels",
+    "search"
+  ],
+  "termMeanings": {
+    "pixels": "the dots a screen is made of (a laptop window is about 1440 wide)",
+    "header": "the bar across the top of every page on a computer",
+    "era": "a named stretch of Dylan's life, such as Going Electric",
+    "full screen": "an era's first view, filling the window, with its photo and title (the spread)",
+    "spreads": "each era's full-screen first view",
+    "home page": "the site's front page, the timeline of all the eras",
+    "address": "the part of a link after the site's name, such as /era/electric/",
+    "bands": "the rows under an era's full screen: story and gallery, records and moments, songs, threads",
+    "gallery": "an era's photographs in a grid",
+    "moment": "a dated event in his life that is not a record, such as Newport 1965",
+    "clip": "a short official video from YouTube",
+    "caption": "the line under a photo saying what and who",
+    "credit": "the photographer and licence of a photo",
+    "records and moments band": "an era's albums with their years, and its moments on a dated line",
+    "songs to start with": "an era's six most connected songs",
+    "thread": "a path through songs that share something, in time order",
+    "connections": "links between two songs, with a kind and a sentence of why",
+    "in threads": "the band on a song page listing the threads it is in",
+    "spotify player": "Spotify's own player, set in the page",
+    "essay": "an album's 150 words on why it matters",
+    "track list": "the album's tracks in order",
+    "opens in place": "the row grows to show more without leaving the page",
+    "rail": "the column at the right of a wide window",
+    "quick links": "the rail's links to the era, the album, a thread and the map",
+    "read on": "the line of links out at the end of a page",
+    "wikipedia": "the free encyclopedia",
+    "musicbrainz": "the open music database the site's albums come from",
+    "wikimedia commons": "the free photo library the site's photographs come from",
+    "big pink": "the house in West Saugerties where the basement tapes were made",
+    "data check": "the script that fails when the dataset is wrong",
+    "desktop check": "the script that opens every kind of page at computer sizes and fails when a page is missing its parts",
+    "phone check": "the same at phone size",
+    "code check": "a fresh agent reading the code against the plan",
+    "fresh agent": "one that has not seen this conversation",
+    "gap": "a page with fewer photos than the check wants",
+    "off-plan change": "something built other than the plan said",
+    "deviation": "an off-plan change",
+    "list": "the choices that do not pause the video, one line each",
+    "recommended": "the option I would pick, marked on its card",
+    "call": "a choice made while building that the plan did not settle",
+    "tag": "a label on a choice: visible, hard to undo, or close",
+    "fallen angels": "his 2016 album of standards",
+    "search": "a page of results for words you type, here on Spotify"
+  },
+  "glossary": [
+    {
+      "term": "A call",
+      "meaning": "A choice the agent made on its own while building, one the plan did not cover: one row in walkthrough.md",
+      "forms": [
+        "call",
+        "choice"
+      ],
+      "display": "choice",
+      "said": "A choice the agent made on its own while building, one the plan did not cover: one row in `walkthrough.md`.",
+      "definedIn": {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 2,
+        "title": "Step 1 · The map",
+        "start": 14.379,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    },
+    {
+      "term": "A tag",
+      "meaning": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end",
+      "forms": [
+        "tag",
+        "label"
+      ],
+      "display": "label",
+      "said": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end.",
+      "definedIn": {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 2,
+        "title": "Step 1 · The map",
+        "start": 14.379,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    },
+    {
+      "term": "A miss",
+      "meaning": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video",
+      "forms": [
+        "miss",
+        "late fix"
+      ],
+      "display": "late fix",
+      "said": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video."
+    },
+    {
+      "term": "A deviation",
+      "meaning": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video",
+      "forms": [
+        "deviation",
+        "off-plan change"
+      ],
+      "display": "off-plan change",
+      "said": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video.",
+      "definedIn": {
+        "video": "2026-10-07-every-song--walkthrough",
+        "frame": 3,
+        "title": "Off-plan change · the file name",
+        "start": 36.309,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    },
+    {
+      "term": "A beat",
+      "meaning": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene",
+      "forms": [
+        "beat",
+        "scene"
+      ],
+      "display": "scene",
+      "said": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene."
+    },
+    {
+      "term": "A chapter",
+      "meaning": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system",
+      "forms": [
+        "chapter"
+      ],
+      "said": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system."
+    },
+    {
+      "term": "An area",
+      "meaning": "One part of the system, drawn as a box, with an id in system.json (where it is called a component)",
+      "forms": [
+        "area",
+        "part of the system"
+      ],
+      "display": "part of the system",
+      "said": "One part of the system, drawn as a box, with an id in `system.json` (where it is called a component)."
+    },
+    {
+      "term": "The app shell",
+      "id": "shell",
+      "meaning": "The one page that holds the site: it reads the address and draws one view at a time, with the bottom bar",
+      "forms": [
+        "app shell"
+      ],
+      "said": "The one page that holds the site: it reads the address and draws one view at a time, with the bottom bar.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 3,
+        "title": "Step 1 · The app shell, now animated",
+        "start": 30.464,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The dataset",
+      "id": "dataset",
+      "meaning": "The JSON files in data/ that hold every era, moment, album, song, connection, thread and photo, written by hand era by era in data/parts/ and merged by a script",
+      "forms": [
+        "dataset"
+      ],
+      "said": "The JSON files in `data/` that hold every era, moment, album, song, connection, thread and photo, written by hand era by era in `data/parts/` and merged by a script.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The data check",
+      "id": "data-check",
+      "meaning": "A script that fails when the dataset has an id used twice, a connection to a song that does not exist, an album outside its era's years, a photo with no licence or credit, or a lyric excerpt over two lines",
+      "forms": [
+        "data check"
+      ],
+      "said": "A script that fails when the dataset has an id used twice, a connection to a song that does not exist, an album outside its era's years, a photo with no licence or credit, or a lyric excerpt over two lines.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 10,
+        "title": "Step 2 · The data check, now for credits",
+        "start": 134.559,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "An era",
+      "meaning": "A named stretch of Dylan's life with years and a colour, such as \"Going Electric, 1965–1966\"; the timeline shows one per panel",
+      "forms": [
+        "era"
+      ],
+      "said": "A named stretch of Dylan's life with years and a colour, such as \"Going Electric, 1965–1966\"; the timeline shows one per panel.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 2,
+        "title": "Three things that are wrong today",
+        "start": 11.52,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      }
+    },
+    {
+      "term": "A moment",
+      "meaning": "A dated event in his life that is not a record, such as the 1966 motorcycle accident",
+      "forms": [
+        "moment"
+      ],
+      "said": "A dated event in his life that is not a record, such as the 1966 motorcycle accident.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 20,
+        "title": "Step 4 · A song page in two columns",
+        "start": 206.446,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    },
+    {
+      "term": "A connection",
+      "meaning": "A link between two songs, with a kind (borrowed tune, answer, rewrite, covered by, re-recorded, same theme) and one sentence of why",
+      "forms": [
+        "connection"
+      ],
+      "said": "A link between two songs, with a kind (borrowed tune, answer, rewrite, covered by, re-recorded, same theme) and one sentence of why.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 6,
+        "title": "Step 2 · Three widths",
+        "start": 71.083,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    },
+    {
+      "term": "The era timeline",
+      "id": "timeline",
+      "meaning": "The home view: one full-width panel per era, swiped sideways, with a strip of all eras on top",
+      "forms": [
+        "era timeline"
+      ],
+      "said": "The home view: one full-width panel per era, swiped sideways, with a strip of all eras on top.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 12,
+        "title": "Step 3 · Each era its own look",
+        "start": 157.32,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "Album and song pages",
+      "id": "pages",
+      "meaning": "The page for one album (why it matters, its songs) and for one song (its note, themes and connections)",
+      "forms": [
+        "album and song pages"
+      ],
+      "said": "The page for one album (why it matters, its songs) and for one song (its note, themes and connections).",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 17,
+        "title": "Step 4 · The song page",
+        "start": 231.826,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "A thread",
+      "id": "threads",
+      "meaning": "A path through songs that share something, in time order, shown as cards you swipe through",
+      "forms": [
+        "thread"
+      ],
+      "said": "A path through songs that share something, in time order, shown as cards you swipe through.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 23,
+        "title": "Step 5 · The map, on a phone too",
+        "start": 300.713,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      }
+    },
+    {
+      "term": "Search",
+      "id": "search",
+      "meaning": "The view that finds eras, albums and songs as you type, in the page with no server",
+      "forms": [
+        "search"
+      ],
+      "said": "The view that finds eras, albums and songs as you type, in the page with no server.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The phone check",
+      "id": "phone-check",
+      "meaning": "A script that opens every view at phone width and fails on a sideways scroll, a tap target under 44 px or an error",
+      "forms": [
+        "phone check"
+      ],
+      "said": "A script that opens every view at phone width and fails on a sideways scroll, a tap target under 44 px or an error.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 25,
+        "title": "Step 6 · Listen and watch on the page",
+        "start": 330.785,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      }
+    },
+    {
+      "term": "The desktop check",
+      "id": "desktop-check",
+      "meaning": "A script that opens every kind of page at computer sizes (1440 × 900 and 1100 × 800) and fails on a sideways scroll, a control showing that does nothing at that width, an era's look that stops short of the window, content in a phone-width column, a map dot that does nothing when clicked, or an error",
+      "forms": [
+        "desktop check"
+      ],
+      "said": "A script that opens every kind of page at computer sizes (1440 × 900 and 1100 × 800) and fails on a sideways scroll, a control showing that does nothing at that width, an era's look that stops short of the window, content in a phone-width column, a map dot that does nothing when clicked, or an error.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 3,
+        "title": "Three changes, six steps",
+        "start": 23.765,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      }
+    },
+    {
+      "term": "A repo / repository",
+      "meaning": "A project's folder of code together with its whole history, kept with git",
+      "forms": [
+        "repo",
+        "repository"
+      ],
+      "said": "A project's folder of code together with its whole history, kept with git.",
+      "other": true
+    },
+    {
+      "term": "A branch",
+      "meaning": "A line of work kept apart from the main code until it is merged",
+      "forms": [
+        "branch"
+      ],
+      "said": "A line of work kept apart from the main code until it is merged.",
+      "other": true
+    },
+    {
+      "term": "Merge",
+      "meaning": "To bring a branch's changes into the main code. A pull request is merged when it is accepted",
+      "forms": [
+        "merge"
+      ],
+      "said": "To bring a branch's changes into the main code. A pull request is merged when it is accepted.",
+      "other": true
+    },
+    {
+      "term": "A commit",
+      "meaning": "One saved change to a repo, with a message saying what changed",
+      "forms": [
+        "commit"
+      ],
+      "said": "One saved change to a repo, with a message saying what changed.",
+      "other": true
+    },
+    {
+      "term": "A pull request / PR",
+      "meaning": "A change someone asks to have merged into a repo; others read it and comment before it goes in",
+      "forms": [
+        "pull request",
+        "pr"
+      ],
+      "said": "A change someone asks to have merged into a repo; others read it and comment before it goes in.",
+      "other": true
+    },
+    {
+      "term": "The agent",
+      "meaning": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos",
+      "forms": [
+        "agent"
+      ],
+      "said": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos.",
+      "other": true,
+      "definedIn": {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 16,
+        "title": "What ran",
+        "start": 200.098,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    }
+  ],
+  "ids": {
+    "A1": {
+      "kind": "choice",
+      "gloss": "(question 5) every era on the timeline gets its bands, under its own spread…"
+    },
+    "A10": {
+      "kind": "choice",
+      "gloss": "the rail: the era badge and years, the eras as a list of bars sized by their…"
+    },
+    "A11": {
+      "kind": "choice",
+      "gloss": "\"Read on: Wikipedia ↗ · MusicBrainz ↗\" at the end of album and song pages and…"
+    },
+    "A12": {
+      "kind": "choice",
+      "gloss": "each new desktop-check rule reads the built pages (the essay block, the album…"
+    },
+    "A13": {
+      "kind": "choice",
+      "gloss": "eras link only to Wikipedia, an article picked by hand for what the era is…"
+    },
+    "A14": {
+      "kind": "choice",
+      "gloss": "an era's gallery is up to five photographs of its own; a photo marked as a…"
+    },
+    "A15": {
+      "kind": "choice",
+      "gloss": "six of the first 26 photographs are now marked as a moment's, since each…"
+    },
+    "A16": {
+      "kind": "choice",
+      "gloss": "a moment's photograph is often its place or its people, and the caption says…"
+    },
+    "A17": {
+      "kind": "choice",
+      "gloss": "the desktop check names eight gaps the photo search could not fill and does…"
+    },
+    "A18": {
+      "kind": "choice",
+      "gloss": "the data check compares quoted titles loosely (curly and straight apostrophes…"
+    },
+    "A19": {
+      "kind": "choice",
+      "gloss": "the gallery is a grid (the first photo wide, then two a row) with one line…"
+    },
+    "A2": {
+      "kind": "choice",
+      "gloss": "on a phone the swiped row is as tall as the era in view (a ResizeObserver…"
+    },
+    "A20": {
+      "kind": "choice",
+      "gloss": "a song page's \"The same year\" lists up to 8 of his own songs from his records…"
+    },
+    "A21": {
+      "kind": "choice",
+      "gloss": "the data check holds each era section to 60–110 words, a moment to 80–150 and…"
+    },
+    "A22": {
+      "kind": "choice",
+      "gloss": "a song's \"MusicBrainz ↗\" opens the work (the song as written)"
+    },
+    "A23": {
+      "kind": "choice",
+      "gloss": "links out for the 452 album songs only; the 86 songs on no album of his (old…"
+    },
+    "A24": {
+      "kind": "choice",
+      "gloss": "(question 4) Fallen Angels has no album player: MusicBrainz lists no Spotify…"
+    },
+    "A25": {
+      "kind": "choice",
+      "gloss": "a song page's \"In threads\" also lists the thread made from the song (\"From…"
+    },
+    "A26": {
+      "kind": "choice",
+      "gloss": "an era's \"Threads through it\" shows at most six threads, those with the most…"
+    },
+    "A3": {
+      "kind": "choice",
+      "gloss": "the \"records and moments\" band shows only from 1100 px; phones and tablets get…"
+    },
+    "A4": {
+      "kind": "choice",
+      "gloss": "a moment page shows its clip first, its own photo under it when it has both…"
+    },
+    "A5": {
+      "kind": "choice",
+      "gloss": "album page: the cover and the Spotify album player on the left; Why it matters…"
+    },
+    "A6": {
+      "kind": "choice",
+      "gloss": "a track row's title stays a link to its song; a separate ▾ button opens the…"
+    },
+    "A7": {
+      "kind": "choice",
+      "gloss": "\"Where its songs lead\": at most six connections to songs off the album…"
+    },
+    "A8": {
+      "kind": "choice",
+      "gloss": "the rail is on album, song and moment pages only"
+    },
+    "A9": {
+      "kind": "choice",
+      "gloss": "from 1440 px the content starts under the header's left edge, up to 1200 px…"
+    },
+    "D1": {
+      "kind": "off-plan change",
+      "gloss": "removed the desktop-only \"Also in this era\" row; the previous and next album…"
+    },
+    "q4": {
+      "kind": "question",
+      "n": 4,
+      "gloss": "Fallen Angels has no Spotify album to embed: what goes in its place?"
+    },
+    "q5": {
+      "kind": "question",
+      "n": 5,
+      "gloss": "Bands on the front of the site as well?"
+    }
+  },
+  "termsCheck": "strict",
+  "changes": {
+    "against": "HEAD",
+    "baseline": false,
+    "build": "first",
+    "note": "no previous build to compare against"
+  },
+  "choiceCounts": {
+    "total": 27,
+    "pause": 18,
+    "list": 9,
+    "shown": 0,
+    "only": 0
+  }
+}

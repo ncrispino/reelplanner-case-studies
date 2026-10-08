@@ -1,0 +1,43 @@
+35a4250	2026-10-06T16:36:39+00:00	Plan: Bob Dylan explorer site (dylan-site)
+28e99a6	2026-10-06T17:32:31+00:00	Plan video for dylan-site: storyboard, script, narration, 41 frames
+5922d2e	2026-10-06T18:43:15+00:00	dylan-site plan video: fresh-eyes fixes, plan clarifications
+8ac51a5	2026-10-06T21:04:59+00:00	dylan-site plan: revise after first review
+2236da1	2026-10-06T21:42:43+00:00	dylan-site plan video v2: revised after review
+0a798f5	2026-10-06T22:06:39+00:00	dylan-site plan v2: fresh-eyes fixes; questions in order (photos q2, lyrics q3)
+4e93bb6	2026-10-07T00:45:27+00:00	dylan-site plan: approved; fold review comments into the steps
+e3ec349	2026-10-07T01:14:57+00:00	Build dylan-site: Astro shell, dataset, timeline, pages, threads, map, search, checks
+ea6d9ca	2026-10-07T01:44:22+00:00	dylan-site: 26 free-licensed era photos from Wikimedia Commons; caption fix
+ef9cb16	2026-10-07T01:46:22+00:00	dylan-site: search handles swapped letters; walkthrough written
+ce1eda4	2026-10-07T01:52:19+00:00	dylan-site: code-check fixes (base path, map drag and Cards return, lyrics links, phone check loads); walkthrough answers
+2b26d5a	2026-10-07T01:57:44+00:00	dylan-site: map labels stay on screen; walkthrough screenshots
+68c7925	2026-10-07T02:01:27+00:00	dylan-site: era panels fit the phone; phone check catches wide swipe panels; search orders groups by best match
+358e01d	2026-10-07T02:09:42+00:00	dylan-site walkthrough video: storyboard, script and 22 scenes from real screenshots
+e11fbc0	2026-10-07T02:29:05+00:00	dylan-site: long titles fit the phone; phone check catches overflowing headings; recaptured walkthrough shots
+1746cb5	2026-10-07T02:45:18+00:00	dylan-site walkthrough video: fresh-eyes fixes, narration and terms; glossary rows for dataset and data check
+16484b1	2026-10-07T03:43:26+00:00	dylan-site: walkthrough review fixes
+dabbe22	2026-10-07T03:47:00+00:00	dylan-site: track numbers in their own column; walkthrough counts
+03b0486	2026-10-07T04:10:48+00:00	dylan-site walkthrough video v2: fresh-eyes rounds 1 and 2 answered; scene fixes, shorter line 10, new terms
+072a4f2	2026-10-07T04:40:25+00:00	dylan-site: hand-added excerpts get their own file so a merge keeps them; second walkthrough review filed
+ce78a40	2026-10-07T06:33:23+00:00	dylan-site: every album song gets a summary of its words in our own words; lyrics summarised, not quoted (D-033)
+1eeb894	2026-10-07T07:24:19+00:00	plans: the site on a computer (6 steps, 3 questions) and every track a page (4 steps, 2 questions)
+89ba32d	2026-10-07T08:41:53+00:00	every-song plan video: 22 scenes, fresh eyes answered (2 rounds); plan fixes: 54 landmark tracks, data check scope, npm test
+cf8e982	2026-10-07T08:48:33+00:00	desktop plan video: 32 scenes, fresh eyes 3 rounds answered; step 1 vs question 3 made explicit
+40447f2	2026-10-07T18:21:25+00:00	every-song plan approved (D-034 all 277, D-035 same page); review comments folded into steps 2 and 3
+7b82bec	2026-10-07T18:37:01+00:00	desktop plan approved (D-036 1200 px, D-037 one era a screen, D-038 select a dot); review comments folded: scroll between eras, plainer steps 2 and 6
+63dbee5	2026-10-07T18:37:20+00:00	desktop plan: cite D-034 and D-035; answered questions recorded
+cadf678	2026-10-07T19:22:55+00:00	every-song steps 1-3: every album track mapped to a song (271 new, written and summarised), Spotify for all 452, bobdylan.com links, 30 new connections, threads extended
+1b32857	2026-10-07T19:23:05+00:00	desktop plan, all six steps: map clicks reach their dots; header and era look across the window from 1100 px; one era per screen with scroll snapping; two-column song, album and moment pages; threads along the years with the map below; map page panel and era filter; three-column search; desktop check (also carries every-song's album rows and song takes / words-by lines on the reworked pages)
+03bd77d	2026-10-07T19:26:22+00:00	every-song step 2: official clips for 364 of 452 album songs (snl-1979 kept dropped); clip check and npm test runs
+d993106	2026-10-07T19:31:45+00:00	walkthroughs for every-song and desktop; desktop question 4 (step 5)
+7fae7c0	2026-10-07T19:35:51+00:00	code checks for every-song and desktop, every finding answered; threads kept by hand (make-threads needs --force)
+66db1e0	2026-10-07T19:43:42+00:00	song page on a computer: cover above the title, so a long word (Stardust) no longer breaks mid-word
+f18db34	2026-10-07T20:37:46+00:00	walkthrough videos for every-song (12 scenes) and desktop (16 scenes, question 4), fresh eyes answered; words credits fixed for Stardust, Tomorrow Night, Trade Winds
+d94d01d	2026-10-07T20:53:33+00:00	every-song walkthrough review: co-writers credited (21 songs), Lyrics.com links for songs bobdylan.com lacks (22), SNL 1979 clip back
+e10926c	2026-10-07T21:10:17+00:00	desktop walkthrough review: map page links to a thread from its song (question 4: A); every thread in the list has covers; walkthrough scenes 9 and 11 rebuilt
+433df89	2026-10-07T21:10:46+00:00	plan: a fuller site (6 steps, 3 questions), from the desktop walkthrough review
+8cd2446	2026-10-07T21:34:35+00:00	fuller-site plan approved in chat (D-083 rail, D-084 links out, D-085 lengths); desktop walkthrough approved
+77595ec	2026-10-07T23:40:39+00:00	fuller site: era stories, moment stories and album essays; 38 more Commons photos; album player, track rows, era bands, context rail; links out
+d310eb2	2026-10-07T23:46:47+00:00	fuller walkthrough.md, code check (6 steps, 27 decisions hold; 6 answered), questions 4 and 5 asked during the build
+dcf918b	2026-10-08T03:08:03+00:00	fuller walkthrough video (18 scenes, two questions), fresh eyes answered (35 fixed, 17 kept)
+7017206	2026-10-08T04:11:27+00:00	fuller walkthrough review: every era links to its section of Wikipedia's Bob Dylan article; a drawn card for each moment with no photo or clip; thin galleries topped up with the era's covers; Find Fallen Angels on Spotify (question 4: B)
+4d1f29d	2026-10-08T04:41:14+00:00	README: how to run and check the site; open it at localhost, since label clips on YouTube refuse a bare IP address

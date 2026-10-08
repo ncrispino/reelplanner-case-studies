@@ -1,0 +1,71 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f10-q1-c-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f10-q1-c-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f10-q1-c-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f10-q1-c-card { position:absolute; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f10-q1-c-ttl { position:absolute; left:40px; top:30px; font:italic 400 48px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); white-space:nowrap; }
+  .f10-q1-c-cnt { position:absolute; right:40px; top:44px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.02em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f10-q1-c-hr { position:absolute; left:40px; right:40px; top:104px; height:1px; background:rgba(var(--rp-ink-rgb),0.14); }
+  .f10-q1-c-row { position:absolute; left:40px; right:40px; height:52px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.10); }
+  .f10-q1-c-row .no { position:absolute; left:0; top:12px; width:44px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f10-q1-c-row .ti { position:absolute; left:56px; top:11px; font:400 26px/1.1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f10-q1-c-row .dot { position:absolute; right:4px; top:16px; width:18px; height:18px; box-sizing:border-box; border-radius:9999px; border:2px solid rgba(var(--rp-ink-rgb),0.30); }
+  .f10-q1-c-row .dot .fill { position:absolute; left:-2px; top:-2px; width:18px; height:18px; border-radius:9999px; background:var(--rp-ink); opacity:0; }
+  .f10-q1-c-row .dot.on .fill { opacity:1; }
+  .f10-q1-c-row.dim .ti, .f10-q1-c-row.dim .no { opacity:0.32; }
+  .f10-q1-c-row .ti { font-size:30px; top:9px; }
+  .f10-q1-c-mark { position:absolute; left:96px; top:0; height:2px; background:var(--rp-coral); transform-origin:0 50%; }
+  .f10-q1-c-pin { position:absolute; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.02em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="10-q1-c" data-band="bottom" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f10-q1-c-bg" id="f10-q1-c-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f10-q1-c-scene" id="f10-q1-c-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f10-q1-c-place" id="f10-q1-c-place">If C · step 1</div>
+    <div class="f10-q1-c-card" id="f10-q1-c-bott" data-artifact="Blood on the Tracks track list" style="left:90px; top:160px; width:1100px; height:700px;">
+      <div class="f10-q1-c-ttl">Blood on the Tracks</div><div class="f10-q1-c-cnt">7 of 10</div><div class="f10-q1-c-hr"></div>
+      <div class="f10-q1-c-row " id="f10-q1-c-b1" style="top:128px"><span class="no">1</span><span class="ti">Tangled Up in Blue</span><span class="dot on"><span class="fill" id="f10-q1-c-bd1"></span></span></div>
+      <div class="f10-q1-c-row " id="f10-q1-c-b2" style="top:180px"><span class="no">2</span><span class="ti">Simple Twist of Fate</span><span class="dot on"><span class="fill" id="f10-q1-c-bd2"></span></span></div>
+      <div class="f10-q1-c-row dim" id="f10-q1-c-b3" style="top:232px"><span class="no">3</span><span class="ti">You’re a Big Girl Now</span><span class="dot"><span class="fill" id="f10-q1-c-bd3"></span></span></div>
+      <div class="f10-q1-c-row " id="f10-q1-c-b4" style="top:284px"><span class="no">4</span><span class="ti">Idiot Wind</span><span class="dot on"><span class="fill" id="f10-q1-c-bd4"></span></span></div>
+      <div class="f10-q1-c-row " id="f10-q1-c-b5" style="top:336px"><span class="no">5</span><span class="ti">You’re Gonna Make Me Lonesome When You Go</span><span class="dot on"><span class="fill" id="f10-q1-c-bd5"></span></span></div>
+      <div class="f10-q1-c-row dim" id="f10-q1-c-b6" style="top:388px"><span class="no">6</span><span class="ti">Meet Me in the Morning</span><span class="dot"><span class="fill" id="f10-q1-c-bd6"></span></span></div>
+      <div class="f10-q1-c-row " id="f10-q1-c-b7" style="top:440px"><span class="no">7</span><span class="ti">Lily, Rosemary and the Jack of Hearts</span><span class="dot on"><span class="fill" id="f10-q1-c-bd7"></span></span></div>
+      <div class="f10-q1-c-row dim" id="f10-q1-c-b8" style="top:492px"><span class="no">8</span><span class="ti">If You See Her, Say Hello</span><span class="dot"><span class="fill" id="f10-q1-c-bd8"></span></span></div>
+      <div class="f10-q1-c-row " id="f10-q1-c-b9" style="top:544px"><span class="no">9</span><span class="ti">Shelter From the Storm</span><span class="dot on"><span class="fill" id="f10-q1-c-bd9"></span></span></div>
+      <div class="f10-q1-c-row " id="f10-q1-c-b10" style="top:596px"><span class="no">10</span><span class="ti">Buckets of Rain</span><span class="dot on"><span class="fill" id="f10-q1-c-bd10"></span></span></div>
+      <div class="f10-q1-c-mark" id="f10-q1-c-mark" style="top:538px; width:352px"></div>
+    </div>
+    <div class="f10-q1-c-pin" id="f10-q1-c-pin" style="left:1230px; top:665px">← no page</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "10-q1-c";
+  var $ = function (s) { return document.getElementById("f10-q1-c-" + s); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+  // Scene 1: the list with rows 3, 6 and 8 dim; row 8 marked on its title, then "no page" pinned on "nothing behind it"; hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+  tl.fromTo($("bott"), { opacity: 0, y: 32 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.1);
+  for (var n = 1; n <= 10; n++) {
+    tl.fromTo($("b" + n), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, 0.2 + n * 0.04);
+  }
+  tl.fromTo($("mark"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0.4);
+  tl.fromTo($("pin"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 2.85);
+
+  tl.set({}, {}, 3.819);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

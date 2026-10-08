@@ -1,0 +1,12 @@
+$ curl -s -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0 (X11; Linux x86_64)' 'https://genius.com/api/search/multi?q=Bob%20Dylan%20Stardust'
+403
+exit 0
+$ curl -s -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0 (X11; Linux x86_64)' 'https://genius.com/Bob-dylan-stardust-lyrics'
+403
+exit 0
+$ curl -s -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0 (X11; Linux x86_64)' 'https://www.musixmatch.com/lyrics/Bob-Dylan/Stardust'
+403
+exit 0
+$ curl -s 'https://html.duckduckgo.com/html/?q=genius+bob+dylan+stardust+lyrics' | grep -io anomaly | head -1
+anomaly
+exit 0

@@ -1,0 +1,82 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  /* type sizes used: 76 (question), 40 (heading), 34 (chose), 30 (compact chose, tiles), 26 (labels, addresses, instead of, why) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f17-list-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f17-list-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f17-list-place { position:absolute; left:80px; top:70px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f17-list-win { position:absolute; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f17-list-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f17-list-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f17-list-addr { position:absolute; left:84px; right:12px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; overflow:hidden; }
+  .f17-list-crop { position:absolute; left:0; top:36px; overflow:hidden; }
+  .f17-list-crop img { position:absolute; display:block; max-width:none; }
+  .f17-list-ph { position:absolute; border:1px solid var(--rp-ink); border-radius:28px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f17-list-ph img { position:absolute; left:0; display:block; max-width:none; }
+  .f17-list-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; }
+  .f17-list-label { position:absolute; font:400 26px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f17-list-chip { position:absolute; padding:10px 18px; font:400 26px/1 "Inter"; color:var(--rp-ink); background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.18); border-radius:999px; white-space:nowrap; }
+  .f17-list-tile { position:absolute; box-sizing:border-box; padding:22px 28px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f17-list-tile b { display:block; font:700 30px/1.2 "Inter"; color:var(--rp-ink); margin-bottom:6px; }
+  .f17-list-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f17-list-txt { position:absolute; left:36px; right:28px; top:30px; }
+  .f17-list-card.compact .f17-list-txt { top:22px; }
+  .f17-list-kick { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-coral-deep); margin-bottom:14px; }
+  .f17-list-chose { font:700 34px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f17-list-card.compact .f17-list-chose { font-size:30px; }
+  .f17-list-inst { margin-top:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f17-list-card.compact .f17-list-inst { margin-top:8px; }
+  .f17-list-why { margin-top:8px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); white-space:nowrap; }
+  .f17-list-lc { position:absolute; width:880px; height:126px; box-sizing:border-box; padding:18px 26px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; }
+  .f17-list-lc .c { font:700 26px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f17-list-lc .i { margin-top:8px; font:400 26px/1.25 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="17-list" data-band="bottom" data-start="0" data-duration="12" data-width="1920" data-height="1080">
+  <div class="clip f17-list-bg" id="f17-list-bg" data-start="0" data-duration="12" data-track-index="0"></div>
+  <div class="clip f17-list-scene" id="f17-list-scene" data-start="0" data-duration="12" data-track-index="1">
+    <div class="f17-list-place" id="f17-list-place">The rest of the choices</div>
+    <div class="f17-list-lc" id="f17-list-k0" data-call="a18" style="left:60px;top:130px"><div class="c">data check: titles matched loosely; 7 songs off the albums allowed</div><div class="i">instead of: titles on the site only</div></div>
+    <div class="f17-list-lc" id="f17-list-k1" data-call="a21" style="left:60px;top:270px"><div class="c">data check: lengths of 60–110, 80–150, 100–180 words</div><div class="i">instead of: an exact length</div></div>
+    <div class="f17-list-lc" id="f17-list-k2" data-call="a15" style="left:60px;top:410px"><div class="c">photos: 6 of the first 26 marked a moment&#x27;s</div><div class="i">instead of: left as era photos</div></div>
+    <div class="f17-list-lc" id="f17-list-k3" data-call="a2" style="left:60px;top:550px"><div class="c">phone: the swiped era row as tall as the era shown</div><div class="i">instead of: as tall as the tallest era</div></div>
+    <div class="f17-list-lc" id="f17-list-k4" data-call="a6" style="left:60px;top:690px"><div class="c">album: a track&#x27;s ▾ opens it; its title links</div><div class="i">instead of: the whole row a toggle</div></div>
+    <div class="f17-list-lc" id="f17-list-k5" data-call="a20" style="left:980px;top:130px"><div class="c">song page, the same year: his own songs</div><div class="i">instead of: every song that year</div></div>
+    <div class="f17-list-lc" id="f17-list-k6" data-call="a10" style="left:980px;top:270px"><div class="c">rail: the eras as a list of bars</div><div class="i">instead of: a strip of colours</div></div>
+    <div class="f17-list-lc" id="f17-list-k7" data-call="a12" style="left:980px;top:410px"><div class="c">desktop check: reads the built pages</div><div class="i">instead of: reads the data only</div></div>
+    <div class="f17-list-lc" id="f17-list-k8" data-call="a22" style="left:980px;top:550px"><div class="c">MusicBrainz: a song links to the song as written</div><div class="i">instead of: one recording of it</div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f17-list-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var card = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, at); };
+  var coral = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, at); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+  rise(tl, $("place"), 0.10);
+  rise(tl, $("k0"), 0.40);
+  rise(tl, $("k1"), 1.30);
+  rise(tl, $("k2"), 2.20);
+  rise(tl, $("k3"), 3.10);
+  rise(tl, $("k4"), 4.00);
+  rise(tl, $("k5"), 4.90);
+  rise(tl, $("k6"), 5.80);
+  rise(tl, $("k7"), 6.70);
+  rise(tl, $("k8"), 7.60);
+  tl.set({}, {}, 11.500);
+  window.__timelines["17-list"] = tl;
+})();
+</script>
+</template>

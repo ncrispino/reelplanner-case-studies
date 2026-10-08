@@ -1,0 +1,29 @@
+---
+// An album cover: the real one from the Cover Art Archive (D-003), with a typographic cover drawn in the
+// era's theme underneath, shown when the real one fails to load (or has no id).
+import { coverUrl, type Album } from "../lib/data";
+// grow: a small cover that a wider layout shows larger (the song page from 1100 px) gets the 500 px image there
+interface Props { album: Album; size?: "s" | "m" | "l"; name?: string; grow?: string }
+const { album, size = "m", name, grow } = Astro.props;
+const src = coverUrl(album, size === "s" ? 250 : 500);
+const srcset = grow && album.cover ? `${coverUrl(album, 250)} 250w, ${coverUrl(album, 500)} 500w` : undefined;
+---
+<figure class:list={["cover", size]} data-era={album.era} transition:name={name}>
+  <div class="drawn" aria-hidden={src ? "true" : undefined}>
+    <span class="t">{album.title}</span><span class="y year">{album.year}</span>
+  </div>
+  {src && <img src={src} srcset={srcset} sizes={srcset ? grow : undefined} alt={`Cover of ${album.title}`} loading="lazy" decoding="async"
+    onerror="this.remove()" width="500" height="500" />}
+</figure>
+<style>
+  /* layout only: the drawn cover is dressed by its era in src/themes/<era>.css */
+  .cover { position: relative; margin: 0; aspect-ratio: 1; overflow: hidden; background: var(--card); }
+  .cover.s { width: 104px; } .cover.m { width: 100%; } .cover.l { width: min(100%, 360px); }
+  .cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .drawn { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 10%;
+    background: var(--texture), var(--accent); color: var(--accent-ink); overflow: hidden; }
+  .t { font-family: var(--display-alt, var(--display)); font-weight: var(--display-weight); text-transform: var(--display-case);
+    font-style: var(--display-style); letter-spacing: var(--display-track); line-height: 1.02; font-size: 1.15em; overflow-wrap: break-word; }
+  .s .t { font-size: 14px; } .l .t { font-size: 30px; }
+  .y { font: .8em/1 var(--label); opacity: .9; }
+</style>

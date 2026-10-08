@@ -1,0 +1,1814 @@
+{
+  "project": "video",
+  "title": "video",
+  "planDir": ".reelplanning/plans/2026-10-07-every-song",
+  "kind": "plan",
+  "totalSeconds": 238.608,
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Dead rows",
+      "fromFrame": 1,
+      "toFrame": 4,
+      "start": 0,
+      "end": 56.362,
+      "linearSeconds": 56.362,
+      "watchedSeconds": 56.362,
+      "decisions": []
+    },
+    {
+      "id": "ch2",
+      "title": "Every track a song",
+      "fromFrame": 5,
+      "toFrame": 15,
+      "start": 56.362,
+      "end": 156.805,
+      "linearSeconds": 100.443,
+      "watchedSeconds": 76.443,
+      "decisions": [
+        "q1",
+        "q2"
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Links and connections",
+      "fromFrame": 16,
+      "toFrame": 18,
+      "start": 156.805,
+      "end": 195.736,
+      "linearSeconds": 38.931,
+      "watchedSeconds": 38.931,
+      "decisions": []
+    },
+    {
+      "id": "ch4",
+      "title": "Part of the site",
+      "fromFrame": 19,
+      "toFrame": 22,
+      "start": 195.736,
+      "end": 238.608,
+      "linearSeconds": 42.872,
+      "watchedSeconds": 42.872,
+      "decisions": []
+    }
+  ],
+  "levels": null,
+  "quizzes": [
+    {
+      "id": "k1",
+      "frameIndex": 15,
+      "planStep": 1,
+      "question": "On Self Portrait, you click \"She Belongs to Me (live)\". Its song had no page before this plan. Where do you land?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A page of its own for the live take",
+          "why": "A live take never gets a page of its own; it links to its song."
+        },
+        {
+          "id": "b",
+          "label": "The new page of \"She Belongs to Me\"",
+          "why": "Right: the song gets its page from Bringing It All Back Home, and the live row links there."
+        },
+        {
+          "id": "c",
+          "label": "Nowhere: live takes have no page",
+          "why": "Every row links somewhere; a live take links to its song."
+        }
+      ],
+      "answer": "b",
+      "explain": "A live take links to its song's page, and \"She Belongs to Me\" gets its page in this plan, so the row links to that new page.",
+      "at": 156.755,
+      "explainedAt": 71.381,
+      "explainedFrame": 6,
+      "walkMeThrough": "\"She Belongs to Me\" is on Bringing It All Back Home, and had no page before this plan, so step one gives it one. Self Portrait's \"She Belongs to Me (live)\" is a live take of that song, so the script makes no page for it and links its row to the song. Clicking it opens the new \"She Belongs to Me\" page."
+    },
+    {
+      "id": "k2",
+      "frameIndex": 18,
+      "planStep": 2,
+      "question": "You open \"Stardust\". What is where the lyrics link would be?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A link to its words on bobdylan.com",
+          "why": "bobdylan.com has the songs he wrote; \"Stardust\" is Hoagy Carmichael's."
+        },
+        {
+          "id": "b",
+          "label": "Who wrote its words, and that it is not on bobdylan.com",
+          "why": "Right: \"Words by Hoagy Carmichael and Mitchell Parish; not on bobdylan.com\"."
+        },
+        {
+          "id": "c",
+          "label": "Two lines of its lyrics",
+          "why": "The site never quotes lyrics; it summarises them."
+        }
+      ],
+      "answer": "b",
+      "explain": "bobdylan.com lists the songs he wrote, so another writer's song shows who wrote its words instead of a link.",
+      "at": 195.686,
+      "explainedAt": 156.805,
+      "explainedFrame": 16,
+      "walkMeThrough": "The lyrics fetcher looks each new song up in bobdylan.com's index of the songs he wrote. \"Stardust\" is not there, because Hoagy Carmichael and Mitchell Parish wrote it. So its page shows who wrote the words, and says they are not on bobdylan.com, where a link would be."
+    },
+    {
+      "id": "k3",
+      "frameIndex": 20,
+      "planStep": 3,
+      "question": "\"Christmas Island\", on Christmas in the Heart, has nothing the writers are sure ties it to another song. What is on its page?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Its page, with no connection",
+          "why": "Right: the page is there, with its words and player, and no connection."
+        },
+        {
+          "id": "b",
+          "label": "A guessed connection, marked \"maybe\"",
+          "why": "A wrong connection is worse than a missing one, so none is guessed."
+        },
+        {
+          "id": "c",
+          "label": "No page until it has a connection",
+          "why": "Every track gets a page, connected or not."
+        }
+      ],
+      "answer": "a",
+      "explain": "A connection is written only when the writers are sure, so a song with none still gets its page, with its words and player and no connection cards.",
+      "at": 220.558,
+      "explainedAt": 171.909,
+      "explainedFrame": 17,
+      "walkMeThrough": "The pass across the catalogue writes a connection only when the writers are sure of it. Nothing ties \"Christmas Island\" to another song for certain, so it gets none. Its page still has its note, its summary and its player, with no connection cards."
+    },
+    {
+      "id": "k4",
+      "frameIndex": 21,
+      "planStep": 4,
+      "question": "A track is added to an album's list later, with no song. What happens the next time the checks run?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Nothing: the row shows with no link",
+          "why": "That is today's dead row; the check stops it coming back."
+        },
+        {
+          "id": "b",
+          "label": "The data check fails",
+          "why": "Right: the check fails and says which track has no song."
+        },
+        {
+          "id": "c",
+          "label": "A page is made for it with only its title",
+          "why": "Nothing writes a page by itself; the check asks for one."
+        }
+      ],
+      "answer": "b",
+      "explain": "The data check fails on any album track with no song, naming the album, the track's number and its title.",
+      "at": 229.558,
+      "explainedAt": 195.736,
+      "explainedFrame": 19,
+      "walkMeThrough": "After this plan, the data check reads every album's track list and looks for a song for each track; `npm test` runs it before the site is built. A track added later with no song breaks that, so the check fails and names the album, the track's number and its title. Someone then writes its song before the checks pass."
+    }
+  ],
+  "autonomy": [],
+  "watchedSeconds": 214.608,
+  "frames": [
+    {
+      "index": 1,
+      "title": "Rows with nothing behind them",
+      "compositionId": "01-dead-rows",
+      "type": "hook",
+      "durationSeconds": 14.144,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "Dead rows",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Blood on the Tracks has ten tracks, and seven of them have a page. \"You're a Big Girl Now\", \"Meet Me in the Morning\" and \"If You See Her, Say Hello\" are rows with nothing behind them. Across all thirty-nine albums, two hundred and seventy-seven tracks are like that.",
+      "start": 0,
+      "thumb": "snapshots/frame-00-at-7.32s.png",
+      "terms": [
+        "track",
+        "page",
+        "blood on the tracks"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "What the 277 are",
+      "compositionId": "02-groups",
+      "type": "problem",
+      "durationSeconds": 14.229,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "About a hundred and fifty are his own songs. About a hundred and ten are other writers' songs he recorded: standards, carols, folk and blues. About eight are The Band without him, on The Basement Tapes. And about ten are instrumentals and alternate takes.",
+      "start": 14.144,
+      "thumb": "snapshots/frame-01-at-21.51s.png",
+      "terms": [
+        "the band"
+      ],
+      "defines": [
+        "the band"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "Sixteen in full, not in full",
+      "compositionId": "03-short",
+      "type": "problem",
+      "durationSeconds": 13.056,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "This falls short of what you chose. You picked all thirty-nine albums, sixteen in full. The sixteen are not in full: each has seven or eight songs written, so fifty-four of their tracks have no page. That should have been flagged when it happened.",
+      "start": 28.373,
+      "thumb": "snapshots/frame-02-at-35.15s.png"
+    },
+    {
+      "index": 4,
+      "title": "Two changes, four steps",
+      "compositionId": "04-changes",
+      "type": "solution",
+      "durationSeconds": 14.933,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Two changes, in four steps. First, every track becomes a song, with its writing, its player and its links. Then every track becomes part of the site: connections, threads, album pages, search and the map, with a check that fails if a track ever loses its page.",
+      "start": 41.429,
+      "thumb": "snapshots/frame-03-at-48.9s.png",
+      "terms": [
+        "search"
+      ],
+      "defines": [
+        "search"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Step 1 · A record, then the writing",
+      "compositionId": "05-step1",
+      "type": "feature_showcase",
+      "durationSeconds": 15.019,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "Every track a song",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step one. A new script reads each album's track list and writes a record for every track that has no song yet. Then writers add each song's note, themes, preview and summary, in our own words, never quoting the lyrics, just as the hundred and eighty-one were written.",
+      "start": 56.362,
+      "thumb": "snapshots/frame-04-at-64.12s.png",
+      "terms": [
+        "our own words",
+        "track",
+        "script"
+      ],
+      "defines": [
+        "our own words"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "Step 1 · Tracks that need care",
+      "compositionId": "06-step1-odd",
+      "type": "feature_showcase",
+      "durationSeconds": 13.355,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Some tracks need care. On Pat Garrett, \"Billy 4\" and \"Billy 7\" join \"Billy 1\", which already has a page, as its takes. A live take of a song that already has a page links to that page. And a Band track says The Band, not Dylan.",
+      "start": 71.381,
+      "thumb": "snapshots/frame-05-at-78.31s.png",
+      "terms": [
+        "track"
+      ]
+    },
+    {
+      "index": 7,
+      "title": "Question 1 · Which tracks get a page?",
+      "compositionId": "07-q1",
+      "type": "cta",
+      "durationSeconds": 12.309,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": "q1",
+      "branch": null,
+      "question": "Which tracks get a page?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "The 54 missing from the 16 landmarks",
+          "why": "Makes \"16 in full\" true; about 120 new pages. Triplicate keeps 27 dead rows.",
+          "recommended": false
+        },
+        {
+          "id": "b",
+          "label": "All 277",
+          "why": "Every row of every album opens a page; about 600 new pages.",
+          "recommended": true
+        },
+        {
+          "id": "c",
+          "label": "None",
+          "why": "The track lists stay as they are.",
+          "recommended": false
+        }
+      ],
+      "narration": "Question one: which tracks get a page? A: the fifty-four missing from the sixteen landmarks, about a hundred and twenty new pages. B: all two hundred and seventy-seven, about six hundred. C: none. I recommend B.",
+      "start": 84.736,
+      "thumb": "snapshots/frame-06-at-91.14s.png",
+      "terms": [
+        "track",
+        "page"
+      ]
+    },
+    {
+      "index": 8,
+      "title": "If A: the landmarks in full",
+      "compositionId": "08-q1-a",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q1=a",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With A, Blood on the Tracks is complete, and Triplicate keeps its twenty-seven empty rows.",
+      "start": 97.045,
+      "thumb": "snapshots/frame-07-at-100.3s.png",
+      "terms": [
+        "track",
+        "blood on the tracks"
+      ]
+    },
+    {
+      "index": 9,
+      "title": "If B: all 277",
+      "compositionId": "09-q1-b",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q1=b",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With B, every row of every album opens a page.",
+      "start": 103.045,
+      "thumb": "snapshots/frame-08-at-106.3s.png",
+      "terms": [
+        "row",
+        "page"
+      ]
+    },
+    {
+      "index": 10,
+      "title": "If C: as it is",
+      "compositionId": "10-q1-c",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q1=c",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With C, \"If You See Her, Say Hello\" stays a row with nothing behind it.",
+      "start": 109.045,
+      "thumb": "snapshots/frame-09-at-112.3s.png",
+      "terms": [
+        "row"
+      ]
+    },
+    {
+      "index": 11,
+      "title": "Question 2 · Songs by other writers",
+      "compositionId": "11-q2",
+      "type": "cta",
+      "durationSeconds": 12.096,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": "q2",
+      "branch": null,
+      "question": "How much is written for a song by another writer?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "The same page as his own songs",
+          "why": "A note, a summary of the song and his recording, the player, who wrote the words.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "A shorter page: the note and the player",
+          "why": "One sentence and the player; thinner than his own songs.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "No page: the writer's name on the row",
+          "why": "Not a link; Triplicate stays mostly dead rows.",
+          "recommended": false
+        }
+      ],
+      "narration": "Question two: how much is written for a song by another writer? A: the same page as his own songs. B: a shorter page, the note and the player. C: no page, just the writer's name on the row. I recommend A.",
+      "start": 115.045,
+      "thumb": "snapshots/frame-10-at-121.34s.png",
+      "terms": [
+        "by"
+      ]
+    },
+    {
+      "index": 12,
+      "title": "If A: a full page",
+      "compositionId": "12-q2-a",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q2=a",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With A, \"Stardust\" gets a note naming Hoagy Carmichael, a summary, and its player.",
+      "start": 127.141,
+      "thumb": "snapshots/frame-11-at-130.39s.png",
+      "terms": [
+        "note",
+        "hoagy carmichael"
+      ]
+    },
+    {
+      "index": 13,
+      "title": "If B: a short page",
+      "compositionId": "13-q2-b",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q2=b",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With B, \"Stardust\" gets one sentence and the player.",
+      "start": 133.141,
+      "thumb": "snapshots/frame-12-at-136.39s.png"
+    },
+    {
+      "index": 14,
+      "title": "If C: a name on a row",
+      "compositionId": "14-q2-c",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q2=c",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With C, \"Stardust\" is a name in Triplicate's track list, and not a link.",
+      "start": 139.141,
+      "thumb": "snapshots/frame-13-at-142.14s.png",
+      "terms": [
+        "track",
+        "triplicate"
+      ]
+    },
+    {
+      "index": 15,
+      "title": "Quick check · A live take",
+      "compositionId": "15-k1",
+      "type": "social_proof",
+      "durationSeconds": 11.664,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": "On Self Portrait, you click \"She Belongs to Me (live)\". Its song had no page before this plan. Where do you land?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": "k1",
+      "answer": "b",
+      "explain": "A live take links to its song's page, and \"She Belongs to Me\" gets its page in this plan, so the row links to that new page.",
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "A page of its own for the live take",
+          "why": "",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "The new page of \"She Belongs to Me\"",
+          "why": "",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Nowhere: live takes have no page",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "narration": "A quick check, a question to see whether the plan does what you expect. This one's on step one. On Self Portrait, you click \"She Belongs to Me (live)\". Its song had no page before this plan. Where do you land?",
+      "start": 145.141,
+      "thumb": "snapshots/frame-14-at-150.97s.png",
+      "terms": [
+        "row",
+        "page",
+        "take",
+        "live take",
+        "quick check"
+      ]
+    },
+    {
+      "index": 16,
+      "title": "Step 2 · Players, clips and lyrics links",
+      "compositionId": "16-step2",
+      "type": "feature_showcase",
+      "durationSeconds": 15.104,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "Links and connections",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step two. The same three fetchers that found today's links run again for the new songs: Spotify, YouTube's official clips, and the lyrics on bobdylan.com. That site lists songs he wrote, so another writer's song shows who wrote its words instead of a lyrics link.",
+      "start": 156.805,
+      "thumb": "snapshots/frame-15-at-164.61s.png",
+      "terms": [
+        "fetcher"
+      ]
+    },
+    {
+      "index": 17,
+      "title": "Step 3 · Connections, only when sure",
+      "compositionId": "17-step3",
+      "type": "feature_showcase",
+      "durationSeconds": 14.827,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step three. A pass across the whole catalogue links the new songs to others, and only when it is sure. \"If You See Her, Say Hello\" joins \"You're Gonna Make Me Lonesome When You Go\", two songs about a love that has ended. Many standards will have no connection at all.",
+      "start": 171.909,
+      "thumb": "snapshots/frame-16-at-179.32s.png"
+    },
+    {
+      "index": 18,
+      "title": "Quick check · Stardust's words",
+      "compositionId": "18-k2",
+      "type": "social_proof",
+      "durationSeconds": 9,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": "You open \"Stardust\". What is where the lyrics link would be?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": "k2",
+      "answer": "b",
+      "explain": "bobdylan.com lists the songs he wrote, so another writer's song shows who wrote its words instead of a link.",
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "A link to its words on bobdylan.com",
+          "why": "",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Who wrote its words, and that it is not on bobdylan.com",
+          "why": "",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Two lines of its lyrics",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "narration": "A quick check on step two. You open \"Stardust\". What is where the lyrics link would be?",
+      "start": 186.736,
+      "thumb": "snapshots/frame-17-at-191.24s.png",
+      "terms": [
+        "bobdylan.com",
+        "lyrics link",
+        "quick check"
+      ]
+    },
+    {
+      "index": 19,
+      "title": "Step 4 · Every row a link",
+      "compositionId": "19-step4",
+      "type": "feature_showcase",
+      "durationSeconds": 15.872,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "Part of the site",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step four. On an album page every row becomes a link, so the \"its story\" marks go. Search finds every track, and the map gains their dots. The site grows from eight hundred and two pages to about fourteen hundred. And the data check fails on any album track with no song.",
+      "start": 195.736,
+      "thumb": "snapshots/frame-18-at-203.67s.png",
+      "terms": [
+        "data check",
+        "row",
+        "page"
+      ],
+      "defines": [
+        "data check"
+      ]
+    },
+    {
+      "index": 20,
+      "title": "Quick check · A carol with nothing to connect",
+      "compositionId": "20-k3",
+      "type": "social_proof",
+      "durationSeconds": 9,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": "\"Christmas Island\", on Christmas in the Heart, has nothing the writers are sure ties it to another song. What is on its page?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": "k3",
+      "answer": "a",
+      "explain": "A connection is written only when the writers are sure, so a song with none still gets its page, with its words and player and no connection cards.",
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "Its page, with no connection",
+          "why": "",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "A guessed connection, marked \"maybe\"",
+          "why": "",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "No page until it has a connection",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "narration": "A quick check on step three. \"Christmas Island\", on Christmas in the Heart, has nothing the writers are sure ties it to another song. What is on its page?",
+      "start": 211.608,
+      "thumb": "snapshots/frame-19-at-216.11s.png",
+      "terms": [
+        "connection",
+        "page",
+        "writers",
+        "quick check",
+        "christmas island",
+        "christmas in the heart"
+      ]
+    },
+    {
+      "index": 21,
+      "title": "Quick check · A track added later",
+      "compositionId": "21-k4",
+      "type": "social_proof",
+      "durationSeconds": 9,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": "A track is added to an album's list later, with no song. What happens the next time the checks run?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": "k4",
+      "answer": "b",
+      "explain": "The data check fails on any album track with no song, naming the album, the track's number and its title.",
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "Nothing: the row shows with no link",
+          "why": "",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "The data check fails",
+          "why": "",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "A page is made for it with only its title",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "narration": "And one on step four. A track is added to an album's list later, with no song. What happens the next time the checks run?",
+      "start": 220.608,
+      "thumb": "snapshots/frame-20-at-225.11s.png",
+      "terms": [
+        "data check",
+        "track"
+      ]
+    },
+    {
+      "index": 22,
+      "title": "The plan, with your choices",
+      "compositionId": "22-ending",
+      "type": "cta",
+      "durationSeconds": 9,
+      "planStep": null,
+      "planQuestions": [
+        1,
+        2
+      ],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "That's the plan: every track a song, and every song part of the site. Two questions: which tracks, and how much for other writers' songs.",
+      "start": 229.608,
+      "thumb": "snapshots/frame-21-at-234.11s.png"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "q1",
+      "kind": "one",
+      "frameIndex": 7,
+      "compositionId": "07-q1",
+      "planStep": 1,
+      "question": "Which tracks get a page?",
+      "questionMore": "You chose \"All 39 albums, 16 in full\"; the 16 are not in full today. This asks that again.",
+      "at": 96.995,
+      "resumeAt": 115.045,
+      "options": [
+        {
+          "id": "a",
+          "label": "The 54 missing from the 16 landmarks",
+          "why": "Makes \"16 in full\" true; about 120 new pages. Triplicate keeps 27 dead rows.",
+          "recommended": false,
+          "more": "Blood on the Tracks gets its three, Blonde on Blonde its seven. The other 23 albums keep their rows with nothing behind them, such as Tempest's 7 and Triplicate's 27.",
+          "branch": {
+            "frameIndex": 8,
+            "compositionId": "08-q1-a",
+            "start": 97.045,
+            "end": 103.045
+          }
+        },
+        {
+          "id": "b",
+          "label": "All 277",
+          "why": "Every row of every album opens a page; about 600 new pages.",
+          "recommended": true,
+          "more": "Most of the standards and carols get a page with no connections, and the most batches for the content filter to stop.",
+          "branch": {
+            "frameIndex": 9,
+            "compositionId": "09-q1-b",
+            "start": 103.045,
+            "end": 109.045
+          }
+        },
+        {
+          "id": "c",
+          "label": "None",
+          "why": "The track lists stay as they are.",
+          "recommended": false,
+          "more": "\"If You See Her, Say Hello\" stays a row with nothing behind it, and \"16 in full\" stays untrue.",
+          "branch": {
+            "frameIndex": 10,
+            "compositionId": "10-q1-c",
+            "start": 109.045,
+            "end": 115.045
+          }
+        }
+      ],
+      "summary": null
+    },
+    {
+      "id": "q2",
+      "kind": "one",
+      "frameIndex": 11,
+      "compositionId": "11-q2",
+      "planStep": 1,
+      "question": "How much is written for a song by another writer?",
+      "questionMore": "About 110 of the 277: standards, carols, folk and blues he recorded.",
+      "at": 127.091,
+      "resumeAt": 145.141,
+      "options": [
+        {
+          "id": "a",
+          "label": "The same page as his own songs",
+          "why": "A note, a summary of the song and his recording, the player, who wrote the words.",
+          "recommended": true,
+          "more": "\"Stardust\": a note naming Hoagy Carmichael, a summary, the player, \"Words by Hoagy Carmichael and Mitchell Parish\". The most writing.",
+          "branch": {
+            "frameIndex": 12,
+            "compositionId": "12-q2-a",
+            "start": 127.141,
+            "end": 133.141
+          }
+        },
+        {
+          "id": "b",
+          "label": "A shorter page: the note and the player",
+          "why": "One sentence and the player; thinner than his own songs.",
+          "recommended": false,
+          "more": "\"Stardust\": one sentence and the Spotify player.",
+          "branch": {
+            "frameIndex": 13,
+            "compositionId": "13-q2-b",
+            "start": 133.141,
+            "end": 139.141
+          }
+        },
+        {
+          "id": "c",
+          "label": "No page: the writer's name on the row",
+          "why": "Not a link; Triplicate stays mostly dead rows.",
+          "recommended": false,
+          "more": "\"Stardust · Hoagy Carmichael\" in the track list, not a link.",
+          "branch": {
+            "frameIndex": 14,
+            "compositionId": "14-q2-c",
+            "start": 139.141,
+            "end": 145.141
+          }
+        }
+      ],
+      "summary": null
+    }
+  ],
+  "details": [],
+  "guide": {
+    "parts": [
+      {
+        "name": "step-1",
+        "title": "Step 1 · Every track becomes a song: its record and its writing (questions 1 and 2)",
+        "planStep": 1,
+        "kind": "step",
+        "src": "guide/step-1.html"
+      },
+      {
+        "name": "step-2",
+        "title": "Step 2 · Players, clips and lyrics links for the new songs",
+        "planStep": 2,
+        "kind": "step",
+        "src": "guide/step-2.html"
+      },
+      {
+        "name": "step-3",
+        "title": "Step 3 · Connections and threads reach the new songs",
+        "planStep": 3,
+        "kind": "step",
+        "src": "guide/step-3.html"
+      },
+      {
+        "name": "step-4",
+        "title": "Step 4 · Album pages, search and the map with every track; the data check holds it",
+        "planStep": 4,
+        "kind": "step",
+        "src": "guide/step-4.html"
+      },
+      {
+        "name": "decisions",
+        "title": "Decisions in force",
+        "planStep": null,
+        "kind": "decisions",
+        "src": "guide/decisions.html"
+      }
+    ]
+  },
+  "plan": {
+    "title": "Every track a page: the 277 album tracks with no page of their own",
+    "problem": "The owner, opening an album on the built site:\n\n> \"i see songs like 'If You See Her, Say Hello' are in the main discography but have nothing there\"\n\n### What we have\n\nThe 39 albums have 458 tracks. 181 of them are songs with a page; 277 are rows in a track list with nothing\nbehind them. Blood on the Tracks has 10 tracks and 7 pages: \"You're a Big Girl Now\", \"Meet Me in the Morning\" and\n\"If You See Her, Say Hello\" have none.\n\nThis falls short of what the owner chose. D-002 is \"All 39 albums, 16 in full\". The 16 landmark albums are not in\nfull: the dataset's writers wrote 7 or 8 songs for each, so 54 of their 168 tracks have no page. The album page said\n\"Selected songs · 7 of 14\" at first, which hid it; the full track lists, added after the first walkthrough review,\nshow it. It was not flagged as an off-plan change when it happened.\n\nD-002 turned down \"every song on every album\" because \"most song pages hold only a title\". That is no longer so:\nevery song now gets a summary of three or four sentences in our own words (D-033), written and checked by the same\ntools that would write these.\n\n### What the 277 are\n\n- **His own songs, about 150:** \"If You See Her, Say Hello\", \"Million Dollar Bash\", \"Meet Me in the Morning\",\n  most of New Morning, Planet Waves, Street Legal, Empire Burlesque and Tempest.\n- **Songs by other writers that he recorded, about 110:** standards on Shadows in the Night, Fallen Angels and\n  Triplicate (27 tracks on Triplicate alone), carols on Christmas in the Heart, folk and blues on Bob Dylan, Self\n  Portrait, Good as I Been to You and World Gone Wrong.\n- **Tracks by The Band without him, about 8**, on The Basement Tapes: \"Yazoo Street Scandal\", \"Katie's Been Gone\".\n- **Instrumentals and alternate takes, about 10**: Pat Garrett's \"Turkey Chase\" and \"Billy 4\"/\"Billy 7\", Self\n  Portrait's \"Alberta #1\"/\"Alberta #2\" and \"Wigwam\".",
+    "steps": [
+      {
+        "n": 1,
+        "title": "Every track becomes a song: its record and its writing (questions 1 and 2)",
+        "text": "*Stands alone.*\n\n**It lets you:** open any track of any album and read what it is: when and where it was made, what it is about\nand how it sounds, in a note, a preview and a summary in our own words.\n\nA new script, `tools/add-tracks.mjs`, reads each album's MusicBrainz track list (`data/sources/musicbrainz.json`,\nalready fetched) and writes a record for every track that has no song yet: its id from its title\n(`if-you-see-her-say-hello`), title, album and year, and `by` when it is not Dylan's performance (\"The Band\").\nTakes of one song on one album become one song: \"Billy 4\" and \"Billy 7\" are takes of \"Billy 1\", which already has a\npage (`/song/billy-1/`); their rows link to it, and its page lists the three takes. A live track of a song that already has a page\n(\"Like a Rolling Stone (live)\" on Self Portrait) links to that page, and one whose song gets its page in this plan\nlinks to that new page.\n\nWriters then write each new song's note (one sentence of fact), themes, preview and summary, by album, as the 181\nwere (the brief and the content-filter rule in `data/BRIEF-songs.md`): never quoting lyrics, describing a song from\noutside, no chart or session facts beyond what is certain. A batch the content filter stops is retried in smaller\npieces, as the Highway 61 Revisited batch was. For another writer's song (question 2), the note says who wrote it\nand when, and the summary says what the song is about and what Dylan's recording does with it.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| His own song | \"If You See Her, Say Hello\", Blood on the Tracks | a song record, a note, themes, a preview, a summary | script writes: the record; writer writes: the text; you see: its page |\n| Another writer's song | \"Stardust\", Triplicate | the note names Hoagy Carmichael and 1927; the summary says what Dylan's version does | writer writes: note and summary; you see: its page |\n| The Band without him | \"Katie's Been Gone\", The Basement Tapes | `by: \"The Band\"`; the note says Dylan is not on it | script: `by` set; you see: \"The Band\" under the title |\n| Takes of one song | \"Billy 4\" and \"Billy 7\", Pat Garrett | no new song: both rows link to \"Billy 1\", whose page lists the three takes | script: matches the take; album rows: links to `/song/billy-1/` |\n| A live take of a song with a page | \"Like a Rolling Stone (live)\", Self Portrait | no new song: the row links to the existing page | script: matches the title; album row: a link |\n| An instrumental | \"Turkey Chase\", Pat Garrett | a song with a note and a summary of the music; no lyrics link | writer: describes the tune; you see: its page |\n| The filter stops a batch | a batch of eight Tempest songs | retried as smaller batches; a song still stopped is listed in the walkthrough | writer: stopped; retry: 2 songs at a time; walkthrough: names any left |\n\n#### Interface\n\n```\nnode tools/add-tracks.mjs   # a song record for every album track with none, into data/parts/tracks.json\n  ✓ <n> tracks: <n> new songs, <n> takes folded into their songs, <n> live takes linked to existing pages\ndata/parts/tracks.json      # the new songs' records: id, title, album, year, by, takes\ndata/sources/summaries.json  # each new song's summary (D-033), beside the 182 there now\ndata/BRIEF-songs.md         # the writers' brief: what to write and what never to (no lyrics)\nsong.takes                  # a song's takes on one album: [\"Billy 1\", \"Billy 4\", \"Billy 7\"] on billy-1\n```\n\n#### Example\n\n`node tools/add-tracks.mjs` finds Blood on the Tracks' three tracks with no song and writes\n`{ \"id\": \"if-you-see-her-say-hello\", \"title\": \"If You See Her, Say Hello\", \"album\": \"blood-on-the-tracks\", \"year\":\n1975, \"by\": null }`. A writer adds its note, themes (loss, love), its preview and a summary of a man asking a\nfriend to pass a message to a woman who left him. `/song/if-you-see-her-say-hello/` is built with them.\n\n```diagram\nflow: From a track to a song page\ntrack = a track in MusicBrainz's list -> record = a song record: tools/add-tracks.mjs | id, title, album, year, by\ntrack -> existing = an existing page: a live take of a song with one | the album row links there\nrecord -> text = note, themes, preview, summary: the writers | in our own words, no lyrics\ntext -> page = its song page | built with the rest\n```"
+      },
+      {
+        "n": 2,
+        "title": "Players, clips and lyrics links for the new songs",
+        "text": "*Needs step 1.*\n\n**It lets you:** play any track from its page, watch an official clip where one exists, and open its lyrics\nwhere bobdylan.com has them.\n\nThe three fetchers that found today's links run again for the new songs, with no change to how they match:\n`tools/fetch-spotify.mjs` (D-005: Spotify's own album pages, a track kept only when its title matches),\n`tools/find-youtube.mjs` (official uploads for songs, as the first walkthrough review's answer B kept), and\n`tools/find-lyrics-links.mjs` (bobdylan.com's song index). bobdylan.com lists songs he wrote, so another writer's\nsong has no lyrics link and its words card says so: \"Words by Hoagy Carmichael and Mitchell Parish; not on\nbobdylan.com\". `npm run check:clips` checks the new clips.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A song on Spotify | \"Meet Me in the Morning\" | a Spotify id; the player loads on its page | fetcher: matches the title; you see: the player |\n| A title spelled differently | a dropped apostrophe or subtitle, as with \"4th Time Around\" | the loose match finds it, as it found \"Fourth Time Around\" | fetcher: loose match; you see: the player |\n| No official clip | most of Triplicate | no clip; the Spotify player only | fetcher: no official upload; you see: one player |\n| Another writer's song | \"Stardust\" | no lyrics link; \"Words by Hoagy Carmichael and Mitchell Parish; not on bobdylan.com\" | lyrics fetcher: not in the index; you see: the line |\n| No Spotify match | a title Spotify lists under another name | listed in `runs/fetch-spotify.txt` for a hand fix | fetcher: no match; run log: names it |\n\n#### Interface\n\n```\nnode tools/fetch-spotify.mjs       # only songs with no Spotify id yet; prints \"N of M album songs have a Spotify id\"\nnode tools/find-youtube.mjs        # official clips for the new songs, moments unchanged\nnode tools/find-lyrics-links.mjs   # bobdylan.com links for the new songs\nnpm run check:clips                # every clip still plays\nsong.wordsBy                       # another writer's song: who wrote its words, shown in place of the link\n```\n\n#### Example\n\n`node tools/fetch-spotify.mjs` prints `blood-on-the-tracks: 10/10 songs` and, at the end, how many album songs have\na Spotify id; any it could not match are named in `runs/fetch-spotify.txt` for a hand fix.\n\n```diagram\nflow: Where a new song's links come from\nsong = a new song -> spotify = Spotify id: fetch-spotify | kept only when the title matches\nsong -> clip = official clip: find-youtube | Bob Dylan's own channel\nsong -> lyrics = lyrics link: find-lyrics-links | bobdylan.com's index\nsong --> wordsby = \"Words by …\": another writer's song | in place of the lyrics link\n```"
+      },
+      {
+        "n": 3,
+        "title": "Connections and threads reach the new songs",
+        "text": "*Needs step 1.*\n\n**It lets you:** follow a new song to the songs it is tied to, as cards and on the map, and meet it in a thread.\n\nA pass across the whole catalogue, as the one that added 86 connections after the first walkthrough review, links\nthe new songs: covers others made famous, tunes he borrowed, songs that share a theme, rewrites and re-recordings,\neach with its sentence of why. A connection is written only when it is a fact the writer is sure of (the rule from\nthe first build: a wrong connection is worse than a missing one), so many new songs, most of the standards, will\nhave none. The threads are read again: a new song joins a thread where it belongs (\"If You See Her, Say Hello\" in\n\"Love gone wrong\").\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A same-theme link | \"If You See Her, Say Hello\" ↔ \"You're Gonna Make Me Lonesome When You Go\" | a connection, \"same theme\", with its why | writer: writes it; data check: both ends exist; you see: a card on each page |\n| A borrowed tune | a Basement Tapes song on an older tune | a connection, \"borrowed tune\" | writer: writes it; you see: a card |\n| A standard with nothing to tie | \"Braggin'\", Triplicate | no connection; its page has the words and the player | writer: none sure; you see: no cards |\n| A thread gains a song | \"Love gone wrong\" | \"If You See Her, Say Hello\" joins it in time order | thread file: one step added; you see: 11 cards |\n\n#### Interface\n\n```\ndata/parts/connections-2.json   # the new connections: from, to, kind, why\ndata/threads.json               # a new song added where it belongs, in time order\nnode tools/check-data.mjs       # both ends of every connection exist; every kind is known\n```\n\n#### Example\n\nA writer links \"If You See Her, Say Hello\" to \"You're Gonna Make Me Lonesome When You Go\", same theme: \"Two Blood on\nthe Tracks songs about a love that has ended, one before the parting and one after.\" Both song pages show it, and\nboth dots on the map are joined by a line.\n\n```diagram\nflow: A new song's connections\nsong = a new song -> link = a connection: only when sure | with its kind and why\nlink -> check = the data check: both ends exist\ncheck -> cards = cards on both songs' pages\ncheck -> map = a line on the map\nsong --> thread = a thread, where it belongs\n```"
+      },
+      {
+        "n": 4,
+        "title": "Album pages, search and the map with every track; the data check holds it",
+        "text": "*Needs steps 1 and 2.*\n\n**It lets you:** click any row of any track list and land on its page, find any track in search, and trust\n`npm test` to fail if a track ever loses its page.\n\n- **The album page:** every row is a link, so the \"its story ›\" mark and the line counting the songs with a page\n  go; takes of one song (\"Billy 4\", \"Billy 7\") link to the song they are takes of, \"Billy 1\".\n- **Search** indexes the new songs.\n- **The map** gains a dot for each new song with a connection.\n- **The site** grows from 802 pages to about 1,400: each new song adds its page and its map page, and a \"thread\n  from here\" page when it has a connection.\n- **The data check** fails on an album track with no song (only on the tracks your answers give a page: every track with B and A, the landmarks' with A for question 1, his own songs with C for question 2), on a song\n  with no summary, and on a summary outside 45–90 words or quoting more than a title (D-033).\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| An album row | \"If You See Her, Say Hello\" on Blood on the Tracks | the whole row opens its page | you click: the row; you see: `/song/if-you-see-her-say-hello/` |\n| Search | \"say hello\" | \"If You See Her, Say Hello · Blood on the Tracks · 1975\" | you type; search: finds it; you see: one song |\n| A track with no song | a track added to an album's list later | the data check fails, naming it | check: track with no song; prints: ✗ albums.json \"<album>\" track <n> \"<title>\" has no song |\n| The phone and desktop checks | `npm test` | both pass on the new pages | you run: npm test; it prints: ✓ |\n\n#### Interface\n\n```\nsrc/pages/album/[id].astro   # every row a link; no \"its story ›\", no count of pages\nsrc/pages/search-index.json.ts   # the new songs in the index\nnode tools/check-data.mjs    # ✗ albums.json \"<album>\" track <n> \"<title>\" has no song\nnpm run build                # about 1,400 pages\n```\n\n#### Example\n\nYou open `/album/blood-on-the-tracks/`. All ten rows are links. You click \"If You See Her, Say Hello\", read its\nsummary, play it on Spotify, and click its connection to \"You're Gonna Make Me Lonesome When You Go\".\n\n```diagram\ncompare: Blood on the Tracks' track list\nbefore: 10 rows, 7 with \"its story ›\", 3 with nothing behind them\nafter: 10 rows, every one a link to its song's page\n```"
+      }
+    ]
+  },
+  "slug": "2026-10-07-every-song",
+  "prerequisites": [
+    {
+      "video": "2026-10-06-dylan-site",
+      "title": "video",
+      "gives": "decisions D-001, D-003, D-005, D-006, D-007, D-033, D-002: how should the site be built?; explains \"search\"",
+      "seconds": 341.4,
+      "terms": [
+        "index.html",
+        "app.css",
+        "app.js",
+        "static host",
+        "build step",
+        "route",
+        "JSON",
+        "id",
+        "TypeScript",
+        "Vite",
+        "Astro",
+        "npm",
+        "node_modules",
+        "library",
+        "placeholder",
+        "View Transitions",
+        "Cover Art Archive",
+        "Wikimedia Commons",
+        "licence",
+        "embedded player",
+        "tap target",
+        "headless Chrome",
+        "npm test",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "YouTube",
+        "Spotify",
+        "view",
+        "quick check",
+        "theme",
+        "every polish by hand",
+        "polish",
+        "package.json",
+        "dist/",
+        "public domain",
+        "CC BY 2.0",
+        "CC BY-SA 2.0",
+        "youtube-nocookie.com"
+      ],
+      "found": true
+    },
+    {
+      "video": "2026-10-07-desktop",
+      "title": "video",
+      "gives": "explains \"connection\"",
+      "seconds": 303.9,
+      "terms": [
+        "pixels",
+        "720 pixels",
+        "the column",
+        "the era's look",
+        "op-art",
+        "Cards and Map button",
+        "the map",
+        "dot",
+        "pointer",
+        "grabs the pointer",
+        "mouse wheel",
+        "Control",
+        "zoom",
+        "phone check",
+        "desktop check",
+        "app shell",
+        "header",
+        "tab",
+        "search field",
+        "slash",
+        "tablet",
+        "desktop",
+        "layout",
+        "two columns",
+        "crossfade",
+        "address",
+        "timeline",
+        "era",
+        "thread",
+        "connection",
+        "the words",
+        "legend",
+        "panel",
+        "select",
+        "double click",
+        "view",
+        "sideways scroll",
+        "npm test",
+        "quick check",
+        "Back to the Roots",
+        "Going Electric",
+        "Hibbing",
+        "Rough and Rowdy",
+        "I Believe in You",
+        "Faith",
+        "moment",
+        "recommended",
+        "data check",
+        "era timeline",
+        "rock band",
+        "traditional",
+        "planned",
+        "the owner",
+        "note",
+        "players",
+        "375×812",
+        "12 views",
+        "checks/desktop/",
+        "N",
+        "landmark",
+        "YouTube",
+        "Spotify",
+        "themes",
+        "183 songs",
+        "public domain",
+        "PD",
+        "CC BY 2.0",
+        "clip",
+        "version"
+      ],
+      "found": true
+    }
+  ],
+  "terms": [
+    "track",
+    "row",
+    "page",
+    "album songs",
+    "landmark",
+    "in full",
+    "record",
+    "writers",
+    "note",
+    "themes",
+    "preview",
+    "summary",
+    "take",
+    "live take",
+    "instrumental",
+    "standards",
+    "carols",
+    "The Band",
+    "script",
+    "fetcher",
+    "Spotify",
+    "YouTube",
+    "official clip",
+    "bobdylan.com",
+    "lyrics link",
+    "its story",
+    "search",
+    "the map",
+    "data check",
+    "build",
+    "Hoagy Carmichael",
+    "Pat Garrett",
+    "Triplicate",
+    "Blood on the Tracks",
+    "quick check",
+    "recommended",
+    "albums.json",
+    "the owner",
+    "by",
+    "Mitchell Parish",
+    "Christmas Island",
+    "Christmas in the Heart",
+    "npm test",
+    "fetch-spotify",
+    "find-youtube",
+    "find-lyrics-links",
+    "flag",
+    "our own words"
+  ],
+  "termMeanings": {
+    "track": "one recording on an album, a row in its track list",
+    "row": "one line of an album's track list",
+    "page": "a song's own page on the site, with its note, words, player and connections",
+    "album songs": "Dylan's songs on his albums that have a page, 181 today",
+    "landmark": "one of the 16 albums the dataset was to cover in full",
+    "in full": "with every track written",
+    "record": "a song's entry in the dataset: its id, title, album and year",
+    "writers": "the AI helpers that write the dataset's text, one batch of songs at a time",
+    "note": "one sentence of fact about a song",
+    "themes": "the subjects a song shares with others, such as loss or faith",
+    "preview": "one sentence in our own words on what a song says",
+    "summary": "three or four sentences in our own words on what a song is about and how it unfolds",
+    "take": "one recording of a song (an album can hold several takes of one song)",
+    "live take": "a recording made at a concert",
+    "instrumental": "a track with no words",
+    "standards": "popular songs of the 1930s to 1950s, like those Sinatra sang",
+    "carols": "Christmas songs",
+    "the band": "the group that backed Dylan from 1965 and recorded The Basement Tapes with him",
+    "script": "a small program run from the command line",
+    "fetcher": "a script that looks a song up on another site and keeps its link",
+    "spotify": "a music streaming service",
+    "youtube": "Google's video site",
+    "official clip": "a video posted by Bob Dylan's own channel",
+    "bobdylan.com": "Dylan's official site, with the words of the songs he wrote",
+    "lyrics link": "the button on a song page that opens its words on bobdylan.com",
+    "its story": "the mark on today's album rows that have a page",
+    "search": "the view that finds eras, albums and songs as you type",
+    "the map": "the view where every song is a dot and every connection a line",
+    "data check": "the script that fails when the dataset is wrong",
+    "build": "turning the site's source into its pages",
+    "hoagy carmichael": "the American songwriter who wrote \"Stardust\" in 1927",
+    "pat garrett": "Pat Garrett & Billy the Kid, the 1973 film soundtrack Dylan recorded",
+    "triplicate": "his 2017 album of thirty standards",
+    "blood on the tracks": "his 1975 album",
+    "quick check": "a question the video asks you, to see whether the plan does what you expect",
+    "recommended": "the option I would pick, marked on its card",
+    "albums.json": "the dataset file of albums and their track lists",
+    "the owner": "the person this site is built for, who asked for these plans",
+    "by": "the field on a song's record naming who recorded it when it is not Dylan, such as The Band",
+    "mitchell parish": "the lyricist who wrote the words of \"Stardust\" in 1929",
+    "christmas island": "a 1946 holiday song Dylan recorded on Christmas in the Heart",
+    "christmas in the heart": "his 2009 album of Christmas songs",
+    "npm test": "the one command that runs every check",
+    "fetch-spotify": "the fetcher that finds a song on Spotify",
+    "find-youtube": "the fetcher that finds an official clip on YouTube",
+    "find-lyrics-links": "the fetcher that finds a song's words on bobdylan.com",
+    "flag": "to mark something for the reviewer to look at",
+    "our own words": "written fresh, quoting nothing"
+  },
+  "glossary": [
+    {
+      "term": "A call",
+      "meaning": "A choice the agent made on its own while building, one the plan did not cover: one row in walkthrough.md",
+      "forms": [
+        "call",
+        "choice"
+      ],
+      "display": "choice",
+      "said": "A choice the agent made on its own while building, one the plan did not cover: one row in `walkthrough.md`."
+    },
+    {
+      "term": "A tag",
+      "meaning": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end",
+      "forms": [
+        "tag",
+        "label"
+      ],
+      "display": "label",
+      "said": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end."
+    },
+    {
+      "term": "A miss",
+      "meaning": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video",
+      "forms": [
+        "miss",
+        "late fix"
+      ],
+      "display": "late fix",
+      "said": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video."
+    },
+    {
+      "term": "A deviation",
+      "meaning": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video",
+      "forms": [
+        "deviation",
+        "off-plan change"
+      ],
+      "display": "off-plan change",
+      "said": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video."
+    },
+    {
+      "term": "A beat",
+      "meaning": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene",
+      "forms": [
+        "beat",
+        "scene"
+      ],
+      "display": "scene",
+      "said": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene."
+    },
+    {
+      "term": "A chapter",
+      "meaning": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system",
+      "forms": [
+        "chapter"
+      ],
+      "said": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system."
+    },
+    {
+      "term": "An area",
+      "meaning": "One part of the system, drawn as a box, with an id in system.json (where it is called a component)",
+      "forms": [
+        "area",
+        "part of the system"
+      ],
+      "display": "part of the system",
+      "said": "One part of the system, drawn as a box, with an id in `system.json` (where it is called a component)."
+    },
+    {
+      "term": "The app shell",
+      "id": "shell",
+      "meaning": "The one page that holds the site: it reads the address and draws one view at a time, with the bottom bar",
+      "forms": [
+        "app shell"
+      ],
+      "said": "The one page that holds the site: it reads the address and draws one view at a time, with the bottom bar.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 3,
+        "title": "Step 1 · The app shell, now animated",
+        "start": 30.464,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The dataset",
+      "id": "dataset",
+      "meaning": "The JSON files in data/ that hold every era, moment, album, song, connection, thread and photo, written by hand era by era in data/parts/ and merged by a script",
+      "forms": [
+        "dataset"
+      ],
+      "said": "The JSON files in `data/` that hold every era, moment, album, song, connection, thread and photo, written by hand era by era in `data/parts/` and merged by a script.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The data check",
+      "id": "data-check",
+      "meaning": "A script that fails when the dataset has an id used twice, a connection to a song that does not exist, an album outside its era's years, a photo with no licence or credit, or a lyric excerpt over two lines",
+      "forms": [
+        "data check"
+      ],
+      "said": "A script that fails when the dataset has an id used twice, a connection to a song that does not exist, an album outside its era's years, a photo with no licence or credit, or a lyric excerpt over two lines.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 10,
+        "title": "Step 2 · The data check, now for credits",
+        "start": 134.559,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "An era",
+      "meaning": "A named stretch of Dylan's life with years and a colour, such as \"Going Electric, 1965–1966\"; the timeline shows one per panel",
+      "forms": [
+        "era"
+      ],
+      "said": "A named stretch of Dylan's life with years and a colour, such as \"Going Electric, 1965–1966\"; the timeline shows one per panel.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 2,
+        "title": "Three things that are wrong today",
+        "start": 11.52,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      }
+    },
+    {
+      "term": "A moment",
+      "meaning": "A dated event in his life that is not a record, such as the 1966 motorcycle accident",
+      "forms": [
+        "moment"
+      ],
+      "said": "A dated event in his life that is not a record, such as the 1966 motorcycle accident.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 20,
+        "title": "Step 4 · A song page in two columns",
+        "start": 202.99,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    },
+    {
+      "term": "A connection",
+      "meaning": "A link between two songs, with a kind (borrowed tune, answer, rewrite, covered by, re-recorded, same theme) and one sentence of why",
+      "forms": [
+        "connection"
+      ],
+      "said": "A link between two songs, with a kind (borrowed tune, answer, rewrite, covered by, re-recorded, same theme) and one sentence of why.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 6,
+        "title": "Step 2 · Three widths",
+        "start": 67.627,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    },
+    {
+      "term": "The era timeline",
+      "id": "timeline",
+      "meaning": "The home view: one full-width panel per era, swiped sideways, with a strip of all eras on top",
+      "forms": [
+        "era timeline"
+      ],
+      "said": "The home view: one full-width panel per era, swiped sideways, with a strip of all eras on top.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 12,
+        "title": "Step 3 · Each era its own look",
+        "start": 157.32,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "Album and song pages",
+      "id": "pages",
+      "meaning": "The page for one album (why it matters, its songs) and for one song (its note, themes and connections)",
+      "forms": [
+        "album and song pages"
+      ],
+      "said": "The page for one album (why it matters, its songs) and for one song (its note, themes and connections).",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 17,
+        "title": "Step 4 · The song page",
+        "start": 231.826,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "A thread",
+      "id": "threads",
+      "meaning": "A path through songs that share something, in time order, shown as cards you swipe through",
+      "forms": [
+        "thread"
+      ],
+      "said": "A path through songs that share something, in time order, shown as cards you swipe through.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 23,
+        "title": "Step 5 · The map, on a phone too",
+        "start": 300.713,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      }
+    },
+    {
+      "term": "Search",
+      "id": "search",
+      "meaning": "The view that finds eras, albums and songs as you type, in the page with no server",
+      "forms": [
+        "search"
+      ],
+      "said": "The view that finds eras, albums and songs as you type, in the page with no server.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The phone check",
+      "id": "phone-check",
+      "meaning": "A script that opens every view at phone width and fails on a sideways scroll, a tap target under 44 px or an error",
+      "forms": [
+        "phone check"
+      ],
+      "said": "A script that opens every view at phone width and fails on a sideways scroll, a tap target under 44 px or an error.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 25,
+        "title": "Step 6 · Listen and watch on the page",
+        "start": 330.785,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      }
+    },
+    {
+      "term": "The desktop check",
+      "id": "desktop-check",
+      "meaning": "A script that opens every kind of page at computer sizes (1440 × 900 and 1100 × 800) and fails on a sideways scroll, a control showing that does nothing at that width, an era's look that stops short of the window, content in a phone-width column, a map dot that does nothing when clicked, or an error",
+      "forms": [
+        "desktop check"
+      ],
+      "said": "A script that opens every kind of page at computer sizes (1440 × 900 and 1100 × 800) and fails on a sideways scroll, a control showing that does nothing at that width, an era's look that stops short of the window, content in a phone-width column, a map dot that does nothing when clicked, or an error.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 3,
+        "title": "Three changes, six steps",
+        "start": 23.765,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      }
+    },
+    {
+      "term": "A repo / repository",
+      "meaning": "A project's folder of code together with its whole history, kept with git",
+      "forms": [
+        "repo",
+        "repository"
+      ],
+      "said": "A project's folder of code together with its whole history, kept with git.",
+      "other": true
+    },
+    {
+      "term": "A branch",
+      "meaning": "A line of work kept apart from the main code until it is merged",
+      "forms": [
+        "branch"
+      ],
+      "said": "A line of work kept apart from the main code until it is merged.",
+      "other": true
+    },
+    {
+      "term": "Merge",
+      "meaning": "To bring a branch's changes into the main code. A pull request is merged when it is accepted",
+      "forms": [
+        "merge"
+      ],
+      "said": "To bring a branch's changes into the main code. A pull request is merged when it is accepted.",
+      "other": true
+    },
+    {
+      "term": "A commit",
+      "meaning": "One saved change to a repo, with a message saying what changed",
+      "forms": [
+        "commit"
+      ],
+      "said": "One saved change to a repo, with a message saying what changed.",
+      "other": true
+    },
+    {
+      "term": "A pull request / PR",
+      "meaning": "A change someone asks to have merged into a repo; others read it and comment before it goes in",
+      "forms": [
+        "pull request",
+        "pr"
+      ],
+      "said": "A change someone asks to have merged into a repo; others read it and comment before it goes in.",
+      "other": true
+    },
+    {
+      "term": "The agent",
+      "meaning": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos",
+      "forms": [
+        "agent"
+      ],
+      "said": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos.",
+      "other": true
+    }
+  ],
+  "ids": {
+    "k1": {
+      "kind": "quick check",
+      "n": 1,
+      "gloss": "On Self Portrait, you click \"She Belongs to Me (live)\". Its song had no page…"
+    },
+    "k2": {
+      "kind": "quick check",
+      "n": 2,
+      "gloss": "You open \"Stardust\". What is where the lyrics link would be?"
+    },
+    "k3": {
+      "kind": "quick check",
+      "n": 3,
+      "gloss": "\"Christmas Island\", on Christmas in the Heart, has nothing the writers are…"
+    },
+    "k4": {
+      "kind": "quick check",
+      "n": 4,
+      "gloss": "A track is added to an album's list later, with no song. What happens the next…"
+    },
+    "q1": {
+      "kind": "question",
+      "n": 1,
+      "gloss": "Which tracks get a page?"
+    },
+    "q2": {
+      "kind": "question",
+      "n": 2,
+      "gloss": "How much is written for a song by another writer?"
+    }
+  },
+  "termsCheck": "strict",
+  "changes": {
+    "against": "HEAD",
+    "baseline": false,
+    "build": "first",
+    "note": "no previous build to compare against"
+  }
+}

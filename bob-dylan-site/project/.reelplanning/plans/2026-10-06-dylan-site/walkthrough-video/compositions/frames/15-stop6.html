@@ -1,0 +1,92 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 44 (choices), 26 (place label, lines, counts) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f15-stop6-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f15-stop6-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f15-stop6-place { position:absolute; left:90px; top:110px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f15-stop6-card { position:absolute; box-sizing:border-box; top:305px; width:830px; height:470px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f15-stop6-card .c { position:absolute; left:40px; top:44px; right:40px; font:700 44px/1.18 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); }
+  .f15-stop6-card .i { position:absolute; left:40px; right:40px; top:128px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f15-stop6-card .w { position:absolute; left:40px; right:40px; top:182px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+  .f15-stop6-card .w code { font:400 26px/1.35 "JetBrains Mono"; color:var(--rp-ink); font-variant-ligatures:none; }
+
+  /* counts on one bar: a8 177 + 4 now matched = 181 (177 = 733 px, 4 = 17 px); a9 166 song clips + 13 moments (750 px = 181 or 179) */
+  .f15-stop6-bar { position:absolute; left:40px; top:310px; width:750px; height:28px; box-sizing:border-box; border:1px solid rgba(var(--rp-ink-rgb),0.2); border-radius:6px; background:var(--rp-paper); }
+  .f15-stop6-seg { position:absolute; top:310px; height:28px; transform-origin:0 50%; }
+  .f15-stop6-lab { position:absolute; top:356px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="15-stop6" data-band="bottom" data-duration="15.744" data-width="1920" data-height="1080">
+
+  <div class="clip f15-stop6-bg" id="f15-stop6-bg" data-start="0" data-duration="15.744" data-track-index="0"></div>
+
+  <div class="clip f15-stop6-scene" id="f15-stop6-scene" data-start="0" data-duration="15.744" data-track-index="1">
+    <div class="f15-stop6-place" id="f15-stop6-place">Step 6 · Search, listening, checks</div>
+
+    <div class="f15-stop6-card" id="f15-stop6-a8" data-call="a8" style="left:90px">
+      <div class="c" id="f15-stop6-c8">181 of 181 songs on Spotify</div>
+      <div class="i" id="f15-stop6-i8">instead of: 177</div>
+      <div class="w" id="f15-stop6-w8">four titles Spotify spells differently now match</div>
+      <div class="f15-stop6-bar"></div>
+      <div class="f15-stop6-seg" id="f15-stop6-s8" style="left:40px;width:733px;border-radius:6px 0 0 6px;background:rgba(var(--rp-ink-rgb),0.72)"></div>
+      <div class="f15-stop6-seg" id="f15-stop6-s8b" style="left:773px;width:17px;border-radius:0 6px 6px 0;background:var(--rp-coral)"></div>
+      <div class="f15-stop6-lab" id="f15-stop6-l8" style="left:40px">177</div>
+      <div class="f15-stop6-lab" id="f15-stop6-l8b" style="left:450px;width:340px;text-align:right">4 now matched</div>
+    </div>
+
+    <div class="f15-stop6-card" id="f15-stop6-a9" data-call="a9" style="left:1000px">
+      <div class="c" id="f15-stop6-c9">179 clips, official and not</div>
+      <div class="i" id="f15-stop6-i9">instead of: 2</div>
+      <div class="w" id="f15-stop6-w9"><code>npm run check:clips</code> finds any taken down</div>
+      <div class="f15-stop6-bar"></div>
+      <!-- 166 of 179 = 696 px; 13 = 54 px -->
+      <div class="f15-stop6-seg" id="f15-stop6-s9a" style="left:40px;width:696px;border-radius:6px 0 0 6px;background:rgba(var(--rp-ink-rgb),0.72)"></div>
+      <div class="f15-stop6-seg" id="f15-stop6-s9b" style="left:736px;width:54px;border-radius:0 6px 6px 0;background:var(--rp-coral)"></div>
+      <div class="f15-stop6-lab" id="f15-stop6-l9a" style="left:40px">166 songs</div>
+      <div class="f15-stop6-lab" id="f15-stop6-l9b" style="left:590px;width:200px;text-align:right">13 moments</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "15-stop6";
+  var $ = function (s) { return document.getElementById("f15-stop6-" + s); };
+  var E = "power3.out";
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+  var slideUp = function (el, at) { tl.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, at); };
+  var riseAt = function (el, at) { tl.fromTo(el, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+  var growAt = function (el, at, d) { tl.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: d || 0.9, ease: E }, at); };
+
+  // Scene 1 (0-8s): card a8, the count: 177, then the 4 now matched
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 0.098);
+  slideUp($("a8"), 0.295);
+  riseAt($("i8"), 2.165);
+  growAt($("s8"), 2.952, 1.2);
+  riseAt($("l8"), 3.739);
+  growAt($("s8b"), 4.15, 0.5);
+  riseAt($("l8b"), 4.4);
+  riseAt($("w8"), 4.92);
+
+  // Scene 2 (8-16s): card a9, song clips then moments, the check that watches them; hold
+  slideUp($("a9"), 8.069);
+  riseAt($("i9"), 9.25);
+  growAt($("s9a"), 9.84, 1.0);
+  riseAt($("l9a"), 10.43);
+  growAt($("s9b"), 10.922, 0.5);
+  riseAt($("l9b"), 11.217);
+  riseAt($("w9"), 12.005);
+
+  tl.set({}, {}, 15.744);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

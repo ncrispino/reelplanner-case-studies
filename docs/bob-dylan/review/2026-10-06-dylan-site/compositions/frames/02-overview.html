@@ -1,0 +1,96 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f02-overview-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f02-overview-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  /* shared stage (positions from stage-snippet.html) */
+  .f02-overview-rail { position:absolute; height:640px; }
+  .f02-overview-ghost { position:absolute; left:0; width:500px; height:90px; border-radius:12px; border:1px dashed rgba(var(--rp-ink-rgb),0.18); box-sizing:border-box; }
+  .f02-overview-slot { position:absolute; left:0; width:500px; height:90px; border-radius:12px; border:1px dashed rgba(var(--rp-ink-rgb),0.18); box-sizing:border-box; }
+  .f02-overview-slot[data-filled] { border:1px solid rgba(var(--rp-ink-rgb),0.12); background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f02-overview-slot .n { position:absolute; left:24px; top:28px; font:500 26px/1 "JetBrains Mono"; color:var(--rp-ink); }
+  .f02-overview-slot .t { position:absolute; left:76px; top:27px; font:500 30px/1.2 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); white-space:nowrap; }
+  /* what is new beside each slot: a hairline tick + a serif label (three sizes: 26 mono, 30 sans, 60 serif) */
+  .f02-overview-kicker { position:absolute; left:720px; top:96px; font:500 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f02-overview-tick { position:absolute; left:604px; width:92px; height:2px; background:rgba(var(--rp-ink-rgb),0.35); transform-origin:0 50%; }
+  .f02-overview-tick.f02-overview-coral { background:var(--rp-coral); height:3px; }
+  .f02-overview-new { position:absolute; left:720px; font:400 60px/60px "EB Garamond"; letter-spacing:-0.014em; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="02-overview" data-band="bottom" data-start="0" data-duration="14.068" data-width="1920" data-height="1080">
+
+  <div class="clip f02-overview-bg" id="f02-overview-bg" data-start="0" data-duration="14.068" data-track-index="0"></div>
+
+  <div class="clip f02-overview-scene" id="f02-overview-scene" data-start="0" data-duration="14.068" data-track-index="1">
+  <div class="f02-overview-rail" id="f02-overview-rail" style="left:80px; top:150px; width:500px">
+    <div class="f02-overview-ghost" style="top:0px"></div>
+    <div class="f02-overview-ghost" style="top:110px"></div>
+    <div class="f02-overview-ghost" style="top:220px"></div>
+    <div class="f02-overview-ghost" style="top:330px"></div>
+    <div class="f02-overview-ghost" style="top:440px"></div>
+    <div class="f02-overview-ghost" style="top:550px"></div>
+    <div class="f02-overview-slot" id="f02-overview-slot-1" data-plan-step="1" data-filled style="top:0px"><span class="n">1</span><span class="t">The app shell</span></div>
+    <div class="f02-overview-slot" id="f02-overview-slot-2" data-plan-step="2" data-filled style="top:110px"><span class="n">2</span><span class="t">The dataset</span></div>
+    <div class="f02-overview-slot" id="f02-overview-slot-3" data-plan-step="3" data-filled style="top:220px"><span class="n">3</span><span class="t">The era timeline</span></div>
+    <div class="f02-overview-slot" id="f02-overview-slot-4" data-plan-step="4" data-filled style="top:330px"><span class="n">4</span><span class="t">Album and song pages</span></div>
+    <div class="f02-overview-slot" id="f02-overview-slot-5" data-plan-step="5" data-filled style="top:440px"><span class="n">5</span><span class="t">Threads and the map</span></div>
+    <div class="f02-overview-slot" id="f02-overview-slot-6" data-plan-step="6" data-filled style="top:550px"><span class="n">6</span><span class="t">Search, listening, checks</span></div>
+  </div>
+
+  <div class="f02-overview-kicker" id="f02-overview-kicker">new in version two</div>
+
+  <!-- slot centres: 195, 305, 415, 525, 635, 745 -->
+  <i class="f02-overview-tick" id="f02-overview-k1" style="top:194px"></i>
+  <div class="f02-overview-new" id="f02-overview-w1" style="top:165px">view transitions</div>
+  <i class="f02-overview-tick" id="f02-overview-k2" style="top:304px"></i>
+  <div class="f02-overview-new" id="f02-overview-w2" style="top:275px">photos, lyrics links, video ids</div>
+  <i class="f02-overview-tick f02-overview-coral" id="f02-overview-k3" style="top:413px"></i>
+  <div class="f02-overview-new" id="f02-overview-w3" style="top:385px">a theme and photos per era</div>
+  <i class="f02-overview-tick" id="f02-overview-k4" style="top:524px"></i>
+  <div class="f02-overview-new" id="f02-overview-w4" style="top:495px">real covers, lyrics</div>
+  <i class="f02-overview-tick" id="f02-overview-k5" style="top:634px"></i>
+  <div class="f02-overview-new" id="f02-overview-w5" style="top:605px">the map on phones</div>
+  <i class="f02-overview-tick" id="f02-overview-k6" style="top:744px"></i>
+  <div class="f02-overview-new" id="f02-overview-w6" style="top:715px">Spotify and YouTube<span style="color:rgba(var(--rp-ink-rgb),0.62)"> · search unchanged</span></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "02-overview";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f02-overview-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var label = function (tl, i, at) {
+    tl.fromTo($("k" + i), { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: E }, at);
+    tl.fromTo($("w" + i), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.55, ease: E }, at + 0.12);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-14s): the six slots fill, then what is new lands beside each in order; hold
+  pop(tl, $("slot-1"), 0.194);
+  pop(tl, $("slot-2"), 0.387);
+  pop(tl, $("slot-3"), 0.581);
+  pop(tl, $("slot-4"), 0.775);
+  pop(tl, $("slot-5"), 0.97);
+  pop(tl, $("slot-6"), 1.162);
+  tl.fromTo($("kicker"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 1.744);
+  label(tl, 1, 2.326);
+  label(tl, 2, 4.071);
+  label(tl, 3, 5.815);
+  label(tl, 4, 7.559);
+  label(tl, 5, 9.304);
+  label(tl, 6, 11.048);
+  tl.set({}, {}, 14);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

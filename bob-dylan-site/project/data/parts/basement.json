@@ -1,0 +1,504 @@
+{
+  "eras": [
+    {
+      "id": "basement",
+      "title": "Basement and Country",
+      "years": [
+        1967,
+        1970
+      ],
+      "theme": "basement",
+      "summary": "After his 1966 motorcycle accident Dylan stopped touring, settled with his family near Woodstock and recorded informally with the Band in a basement. He re-emerged with quiet, country-tinged records made in Nashville, trading the electric storm of the mid-sixties for plain songs about love, home and old America.",
+      "albums": [
+        "john-wesley-harding",
+        "nashville-skyline",
+        "self-portrait",
+        "new-morning"
+      ],
+      "moments": [
+        "motorcycle-accident",
+        "basement-sessions",
+        "isle-of-wight-1969",
+        "princeton-doctorate"
+      ],
+      "photos": []
+    }
+  ],
+  "moments": [
+    {
+      "id": "motorcycle-accident",
+      "year": 1966,
+      "title": "Motorcycle accident near Woodstock",
+      "text": "In late July 1966 Dylan crashed his Triumph motorcycle near his home in Woodstock, New York, and afterwards stopped touring for years.",
+      "era": "basement",
+      "youtube": null
+    },
+    {
+      "id": "basement-sessions",
+      "year": 1967,
+      "title": "Woodstock: basement sessions with the Hawks",
+      "text": "Through 1967 Dylan recorded dozens of informal songs with members of the Hawks, soon to be the Band, in the basement of a house called Big Pink near Woodstock.",
+      "era": "basement",
+      "youtube": null
+    },
+    {
+      "id": "isle-of-wight-1969",
+      "year": 1969,
+      "title": "Isle of Wight Festival",
+      "text": "On August 31, 1969, backed by the Band, he headlined the Isle of Wight Festival in England, his first full-length concert since 1966.",
+      "era": "basement",
+      "youtube": null
+    },
+    {
+      "id": "princeton-doctorate",
+      "year": 1970,
+      "title": "Honorary doctorate from Princeton",
+      "text": "In June 1970 Princeton University gave him an honorary Doctor of Music degree, a day he later turned into a song on New Morning.",
+      "era": "basement",
+      "youtube": null
+    }
+  ],
+  "albums": [
+    {
+      "id": "john-wesley-harding",
+      "title": "John Wesley Harding",
+      "year": 1967,
+      "era": "basement",
+      "why": "Released in late 1967 after more than a year of silence, it swapped the wild electric sound of 1966 for spare Nashville recordings with a tiny band. Its short, biblical parables about outlaws, drifters and saints set the quiet tone for the rest of his country years.",
+      "songs": [
+        "john-wesley-harding",
+        "as-i-went-out-one-morning",
+        "i-dreamed-i-saw-st-augustine",
+        "all-along-the-watchtower",
+        "drifters-escape",
+        "the-wicked-messenger",
+        "ill-be-your-baby-tonight"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "nashville-skyline",
+      "title": "Nashville Skyline",
+      "year": 1969,
+      "era": "basement",
+      "why": "Recorded in Nashville and released in 1969, it showed Dylan singing in a smooth croon few listeners recognized. Its brief country love songs, a duet with Johnny Cash and the hit Lay Lady Lay helped bring rock and country audiences together.",
+      "songs": [
+        "girl-from-the-north-country-with-johnny-cash",
+        "nashville-skyline-rag",
+        "to-be-alone-with-you",
+        "i-threw-it-all-away",
+        "lay-lady-lay",
+        "tell-me-that-it-isnt-true",
+        "tonight-ill-be-staying-here-with-you"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "self-portrait",
+      "title": "Self Portrait",
+      "year": 1970,
+      "era": "basement",
+      "why": "A 1970 double album made mostly of covers, traditional songs and a few live tracks, it baffled critics and fans expecting new Dylan songs. Later reissues of its sessions earned it a kinder reassessment.",
+      "songs": [
+        "all-the-tired-horses",
+        "copper-kettle",
+        "the-boxer"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "new-morning",
+      "title": "New Morning",
+      "year": 1970,
+      "era": "basement",
+      "why": "Arriving only months after Self Portrait, it was welcomed as a return to original songwriting with warm, domestic songs about family and country life.",
+      "songs": [
+        "if-not-for-you",
+        "day-of-the-locusts",
+        "the-man-in-me"
+      ],
+      "landmark": false,
+      "cover": null
+    }
+  ],
+  "songs": [
+    {
+      "id": "john-wesley-harding",
+      "title": "John Wesley Harding",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "The title track is loosely based on the Texas outlaw John Wesley Hardin, with an extra letter added to the name.",
+      "themes": [
+        "freedom",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/john-wesley-harding/",
+      "preview": "A brisk ballad painting an outlaw as a friend of the poor who was never pinned down by the law.",
+      "excerpt": null
+    },
+    {
+      "id": "as-i-went-out-one-morning",
+      "title": "As I Went Out One Morning",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "Like most of the album, it was cut in Nashville in late 1967 with just bass, drums and Dylan's guitar and harmonica.",
+      "themes": [
+        "freedom",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A walker meets a captive young woman who begs to go south with him, until a figure of authority intervenes.",
+      "excerpt": null
+    },
+    {
+      "id": "i-dreamed-i-saw-st-augustine",
+      "title": "I Dreamed I Saw St. Augustine",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "Its title and opening echo the labor ballad about the union organizer Joe Hill.",
+      "themes": [
+        "faith",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/i-dreamed-i-saw-st-augustine/",
+      "preview": "A dream of a grieving saint ends with the dreamer waking in shame over his own part in the saint's fate.",
+      "excerpt": null
+    },
+    {
+      "id": "all-along-the-watchtower",
+      "title": "All Along the Watchtower",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "It became Dylan's most performed song in concert, usually played in the hard-rock arrangement Hendrix gave it.",
+      "themes": [
+        "war",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/all-along-watchtower/",
+      "preview": "Two outsiders talk on the road while, from a high lookout, the powerful watch riders approaching through the wind.",
+      "excerpt": null
+    },
+    {
+      "id": "drifters-escape",
+      "title": "Drifter’s Escape",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "A three-minute parable that closes the first side of the original LP.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/drifters-escape/",
+      "preview": "A bewildered man on trial slips away when a bolt from the sky strikes the courthouse.",
+      "excerpt": null
+    },
+    {
+      "id": "the-wicked-messenger",
+      "title": "The Wicked Messenger",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "At about two minutes it is one of the shortest songs on the album.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/wicked-messenger/",
+      "preview": "A messenger who twists every report is told to bring only good news if he must speak at all.",
+      "excerpt": null
+    },
+    {
+      "id": "ill-be-your-baby-tonight",
+      "title": "I’ll Be Your Baby Tonight",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "Pete Drake's pedal steel on the closing track pointed toward the country sound of Nashville Skyline.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/ill-be-your-baby-tonight/",
+      "preview": "A relaxed invitation to drop all worries and spend the night together.",
+      "excerpt": null
+    },
+    {
+      "id": "girl-from-the-north-country-with-johnny-cash",
+      "title": "Girl From the North Country",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "Dylan re-recorded his 1963 song as a duet with Johnny Cash in Nashville, and it opens the album.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/girl-north-country/",
+      "preview": "Two old voices recall a lost love up north and ask a traveler to check that she is warm and well.",
+      "excerpt": null
+    },
+    {
+      "id": "nashville-skyline-rag",
+      "title": "Nashville Skyline Rag",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "An instrumental that lets the Nashville session players take the spotlight.",
+      "themes": [],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/nashville-skyline-rag/",
+      "preview": "A wordless, upbeat country romp built around picking solos.",
+      "excerpt": null
+    },
+    {
+      "id": "to-be-alone-with-you",
+      "title": "To Be Alone With You",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "A spoken aside from Dylan to producer Bob Johnston was left in at the start of the track.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/be-alone-you/",
+      "preview": "A cheerful song of counting down the day until the singer can be alone with his sweetheart.",
+      "excerpt": null
+    },
+    {
+      "id": "i-threw-it-all-away",
+      "title": "I Threw It All Away",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "Dylan sang it on the premiere episode of The Johnny Cash Show in 1969.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/i-threw-it-all-away/",
+      "preview": "A man admits he carelessly gave up the love he had and warns others not to do the same.",
+      "excerpt": null
+    },
+    {
+      "id": "lay-lady-lay",
+      "title": "Lay Lady Lay",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "Released as a single, it reached the US top ten in 1969.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/lay-lady-lay/",
+      "preview": "A soft, crooned plea for a lover to stay the night.",
+      "excerpt": null
+    },
+    {
+      "id": "tell-me-that-it-isnt-true",
+      "title": "Tell Me That It Isn't True",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "It was recorded in Nashville in February 1969 with Bob Johnston producing.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/tell-me-it-isnt-true/",
+      "preview": "A man hears rumors that his lover has left him for someone else and begs her to deny them.",
+      "excerpt": null
+    },
+    {
+      "id": "tonight-ill-be-staying-here-with-you",
+      "title": "Tonight I'll Be Staying Here With You",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "It closes the album and was also issued as a single.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/tonight-ill-be-staying-here-you/",
+      "preview": "A traveler throws away his ticket and decides to stay with the woman he loves instead of moving on.",
+      "excerpt": null
+    },
+    {
+      "id": "all-the-tired-horses",
+      "title": "All the Tired Horses",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "The album's opening track is sung entirely by female backing singers, with no lead vocal from Dylan.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/all-tired-horses/",
+      "preview": "A short, repeated chant about a rider unable to get going while the day passes.",
+      "excerpt": null
+    },
+    {
+      "id": "copper-kettle",
+      "title": "Copper Kettle",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A 1950s song by Albert Frank Beddoe about making moonshine, earlier recorded by Joan Baez.",
+      "themes": [
+        "America",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An old-timer praises brewing whiskey in the hills, far from tax collectors.",
+      "excerpt": null
+    },
+    {
+      "id": "the-boxer",
+      "title": "The Boxer",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "Dylan covered Paul Simon's song by harmonizing with his own overdubbed voice in two different singing styles.",
+      "themes": [
+        "the road",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/boxer/",
+      "preview": "A poor young man who came to the city looking for work tells of hard times while a fighter keeps going despite every blow.",
+      "excerpt": null
+    },
+    {
+      "id": "if-not-for-you",
+      "title": "If Not for You",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "George Harrison recorded it the same year for All Things Must Pass.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/if-not-you/",
+      "preview": "A grateful love song saying the world would be gray and empty without the beloved.",
+      "excerpt": null
+    },
+    {
+      "id": "day-of-the-locusts",
+      "title": "Day of the Locusts",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "It recalls the day he accepted an honorary degree at Princeton in June 1970, when cicadas filled the air.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/day-locusts/",
+      "preview": "An uneasy man sits through a stuffy ceremony and is glad to escape back to the hills with his love.",
+      "excerpt": null
+    },
+    {
+      "id": "the-man-in-me",
+      "title": "The Man in Me",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "It plays over the opening credits of the 1998 film The Big Lebowski.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/man-me/",
+      "preview": "A man says only the right woman can see past his defenses to who he really is.",
+      "excerpt": null
+    },
+    {
+      "id": "all-along-the-watchtower-jimi-hendrix",
+      "title": "All Along the Watchtower",
+      "year": 1968,
+      "album": null,
+      "by": "Jimi Hendrix",
+      "note": "The Jimi Hendrix Experience's version on Electric Ladyland became a hit single in 1968.",
+      "themes": [
+        "war",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "if-not-for-you-george-harrison",
+      "title": "If Not for You",
+      "year": 1970,
+      "album": null,
+      "by": "George Harrison",
+      "note": "George Harrison's version appeared on his 1970 triple album All Things Must Pass.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "all-along-the-watchtower",
+      "to": "all-along-the-watchtower-jimi-hendrix",
+      "kind": "covered-by",
+      "why": "Hendrix recorded his electric version within months of the original's release, and Dylan later adopted its arrangement on stage."
+    },
+    {
+      "from": "if-not-for-you",
+      "to": "if-not-for-you-george-harrison",
+      "kind": "covered-by",
+      "why": "George Harrison released his own version on All Things Must Pass in the same year Dylan put the song out."
+    }
+  ]
+}

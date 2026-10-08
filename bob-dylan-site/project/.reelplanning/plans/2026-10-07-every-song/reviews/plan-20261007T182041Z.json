@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "src": "2026-10-07-every-song/index.html",
+  "project": "video",
+  "exportedAt": "2026-10-07T18:20:41.895Z",
+  "watch": {
+    "firstPlayAt": "2026-10-07T18:17:39.868Z",
+    "maxTimeReached": 238.6,
+    "durationSeconds": 238.61,
+    "completion": 1,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 1
+      },
+      {
+        "id": "ch2",
+        "completion": 1
+      },
+      {
+        "id": "ch3",
+        "completion": 1
+      },
+      {
+        "id": "ch4",
+        "completion": 1
+      }
+    ],
+    "moments": [],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q1",
+      "option": "b",
+      "label": "All 277",
+      "recommended": true,
+      "planStep": 1,
+      "question": "Which tracks get a page?",
+      "t": 96.995,
+      "decidedAt": "2026-10-07T18:18:50.422Z"
+    },
+    {
+      "id": "q2",
+      "option": "a",
+      "label": "The same page as his own songs",
+      "recommended": true,
+      "planStep": 1,
+      "question": "How much is written for a song by another writer?",
+      "t": 127.091,
+      "decidedAt": "2026-10-07T18:19:01.392Z"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "k1",
+      "answer": "b",
+      "correct": true,
+      "t": 156.755,
+      "answeredAt": "2026-10-07T18:19:19.728Z"
+    },
+    {
+      "id": "k2",
+      "answer": "b",
+      "correct": true,
+      "t": 195.686,
+      "answeredAt": "2026-10-07T18:19:45.304Z",
+      "note": "another lyrics website will display though?"
+    },
+    {
+      "id": "k3",
+      "answer": "b",
+      "correct": false,
+      "t": 220.558,
+      "answeredAt": "2026-10-07T18:20:19.022Z",
+      "walked": true
+    },
+    {
+      "id": "k4",
+      "answer": "b",
+      "correct": true,
+      "t": 229.558,
+      "answeredAt": "2026-10-07T18:20:31.019Z"
+    }
+  ],
+  "checks": "on",
+  "autonomy": [],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-07-every-song",
+      "seen": "2026-10-07T18:19:40.466Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 1,
+    "walked": 1,
+    "termsOpened": 1,
+    "termsLookedUp": [
+      "call"
+    ],
+    "rewinds": 0,
+    "watchedPct": 100
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "amuyfnwn663zm",
+      "kind": "approve",
+      "t": 238.6,
+      "frame": {
+        "index": 22,
+        "compositionId": "22-ending",
+        "title": "The plan, with your choices"
+      },
+      "plan": {
+        "step": null,
+        "questions": [
+          1,
+          2
+        ],
+        "component": null
+      },
+      "comment": ""
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

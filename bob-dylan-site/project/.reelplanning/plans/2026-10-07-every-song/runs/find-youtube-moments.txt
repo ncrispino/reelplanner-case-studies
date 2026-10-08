@@ -1,0 +1,5 @@
+$ node tools/find-youtube.mjs --moments
+songs: 351 of 452 album songs have an official clip
+✓ snl-1979: "Bob Dylan - Saturday Night Live Performance (1979)" (Georgia Sam)
+done: 365 clips
+exit 0

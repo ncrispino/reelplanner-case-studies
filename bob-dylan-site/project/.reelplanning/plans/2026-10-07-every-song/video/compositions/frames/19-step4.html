@@ -1,0 +1,122 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f19-step4-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f19-step4-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f19-step4-place { position:absolute; left:80px; top:40px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f19-step4-lab { position:absolute; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.02em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* browser-window frame: radius 14, ink hairline, 36px title bar, three dots, the address in mono */
+  .f19-step4-win { position:absolute; top:136px; height:532px; border:1px solid rgba(var(--rp-ink-rgb),0.2); border-radius:14px; overflow:hidden; box-sizing:border-box; background:var(--rp-paper); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f19-step4-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f19-step4-bar i { position:absolute; top:13px; width:10px; height:10px; border-radius:5px; background:rgba(var(--rp-ink-rgb),0.2); }
+  .f19-step4-bar .a { position:absolute; left:80px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f19-step4-body { position:absolute; left:0; right:0; top:36px; bottom:0; padding:14px 26px 0; box-sizing:border-box; }
+  .f19-step4-h { font:italic 400 30px/1 "EB Garamond"; color:var(--rp-ink); letter-spacing:-0.01em; padding-bottom:12px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); }
+
+  /* today: small; three rows have no page */
+  .f19-step4-brow { position:relative; height:42px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); white-space:nowrap; }
+  .f19-step4-brow .n { position:absolute; left:2px; top:9px; font:400 24px/1 "EB Garamond"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f19-step4-brow .t { position:absolute; left:40px; top:9px; font:400 24px/1 "EB Garamond"; color:var(--rp-ink); }
+  .f19-step4-brow.dead .t { color:rgba(var(--rp-ink-rgb),0.5); }
+  .f19-step4-brow .s { position:absolute; right:0; top:9px; font:400 24px/1 "EB Garamond"; color:rgba(var(--rp-ink-rgb),0.7); }
+  .f19-step4-strike { position:absolute; left:-2px; right:-2px; top:12px; height:2px; background:rgba(var(--rp-ink-rgb),0.7); transform-origin:0 50%; transform:scaleX(0); }
+
+  /* planned: every row a link */
+  .f19-step4-arow { position:relative; height:42px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); white-space:nowrap; }
+  .f19-step4-arow .n { position:absolute; left:2px; top:7px; font:400 28px/1 "EB Garamond"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f19-step4-arow .t { position:absolute; left:52px; top:7px; font:400 28px/1 "EB Garamond"; color:var(--rp-ink); }
+  .f19-step4-arow .g { position:absolute; right:4px; top:6px; font:400 28px/1 "EB Garamond"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f19-step4-ul { position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--rp-coral); transform-origin:0 50%; transform:scaleX(0); }
+
+  /* counters */
+  .f19-step4-ctr { position:absolute; top:692px; width:568px; height:88px; box-sizing:border-box; border-radius:8px; border:1px solid rgba(var(--rp-ink-rgb),0.12); background:var(--rp-tile); white-space:nowrap; }
+  .f19-step4-ctr .k { position:absolute; left:24px; top:31px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f19-step4-ctr .v { position:absolute; left:170px; top:20px; font:400 44px/1 "EB Garamond"; letter-spacing:-0.015em; color:var(--rp-ink); }
+  .f19-step4-ctr .v span { display:inline-block; }
+
+  /* the planned data-check line on the slab */
+  .f19-step4-slab { position:absolute; left:80px; top:804px; width:1760px; height:76px; box-sizing:border-box; border-radius:8px; border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); background:var(--rp-slab); white-space:nowrap; }
+  .f19-step4-slab .c { position:absolute; left:28px; top:24px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-slab-ink); }
+  .f19-step4-slab .x { color:var(--rp-syn-del); }
+  .f19-step4-slab .s { color:var(--rp-syn-str); }
+  .f19-step4-slab .m { color:var(--rp-syn-num); }
+  .f19-step4-tag { position:absolute; right:22px; top:17px; padding:6px 14px; border-radius:6px; border:1px solid rgba(var(--rp-slab-ink-rgb),0.3); font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.78); }
+</style>
+
+<div id="root" data-composition-id="19-step4" data-band="bottom" data-start="0" data-duration="15.872" data-width="1920" data-height="1080">
+
+  <div class="clip f19-step4-bg" id="f19-step4-bg" data-start="0" data-duration="15.872" data-track-index="0"></div>
+
+  <div class="clip f19-step4-scene" id="f19-step4-scene" data-start="0" data-duration="15.872" data-track-index="1">
+    <div class="f19-step4-place" id="f19-step4-place">Step 4 · album pages</div>
+
+    <div class="f19-step4-lab" id="f19-step4-lab-b" style="left:80px">today</div>
+    <div class="f19-step4-win" id="f19-step4-before" data-artifact="today: /album/blood-on-the-tracks/ track list" style="left:80px; width:660px">
+      <div class="f19-step4-bar"><i style="left:16px"></i><i style="left:32px"></i><i style="left:48px"></i><span class="a">/album/blood-on-the-tracks/</span></div>
+      <div class="f19-step4-body">
+        <div class="f19-step4-h">Track list · 10 songs</div>
+        <div class="f19-step4-brow"><span class="n">1</span><span class="t">Tangled Up in Blue</span><span class="s">its story ›<i class="f19-step4-strike"></i></span></div><div class="f19-step4-brow"><span class="n">2</span><span class="t">Simple Twist of Fate</span><span class="s">its story ›<i class="f19-step4-strike"></i></span></div><div class="f19-step4-brow dead"><span class="n">3</span><span class="t">You’re a Big Girl Now</span></div><div class="f19-step4-brow"><span class="n">4</span><span class="t">Idiot Wind</span><span class="s">its story ›<i class="f19-step4-strike"></i></span></div><div class="f19-step4-brow"><span class="n">5</span><span class="t">You’re Gonna Make Me Lonesome When You Go</span><span class="s">its story ›<i class="f19-step4-strike"></i></span></div><div class="f19-step4-brow dead"><span class="n">6</span><span class="t">Meet Me in the Morning</span></div><div class="f19-step4-brow"><span class="n">7</span><span class="t">Lily, Rosemary and the Jack of Hearts</span><span class="s">its story ›<i class="f19-step4-strike"></i></span></div><div class="f19-step4-brow dead"><span class="n">8</span><span class="t">If You See Her, Say Hello</span></div><div class="f19-step4-brow"><span class="n">9</span><span class="t">Shelter From the Storm</span><span class="s">its story ›<i class="f19-step4-strike"></i></span></div><div class="f19-step4-brow"><span class="n">10</span><span class="t">Buckets of Rain</span><span class="s">its story ›<i class="f19-step4-strike"></i></span></div>
+      </div>
+    </div>
+
+    <div class="f19-step4-lab" id="f19-step4-lab-a" style="left:780px">planned · every row a link</div>
+    <div class="f19-step4-win" id="f19-step4-after" data-artifact="planned: /album/blood-on-the-tracks/ track list" style="left:780px; width:1060px">
+      <div class="f19-step4-bar"><i style="left:16px"></i><i style="left:32px"></i><i style="left:48px"></i><span class="a">/album/blood-on-the-tracks/</span></div>
+      <div class="f19-step4-body">
+        <div class="f19-step4-h">Track list · 10 songs</div>
+        <div class="f19-step4-arow"><span class="n">1</span><span class="t">Tangled Up in Blue<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">2</span><span class="t">Simple Twist of Fate<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">3</span><span class="t">You’re a Big Girl Now<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">4</span><span class="t">Idiot Wind<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">5</span><span class="t">You’re Gonna Make Me Lonesome When You Go<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">6</span><span class="t">Meet Me in the Morning<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">7</span><span class="t">Lily, Rosemary and the Jack of Hearts<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">8</span><span class="t">If You See Her, Say Hello<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">9</span><span class="t">Shelter From the Storm<i class="f19-step4-ul"></i></span><span class="g">›</span></div><div class="f19-step4-arow"><span class="n">10</span><span class="t">Buckets of Rain<i class="f19-step4-ul"></i></span><span class="g">›</span></div>
+      </div>
+    </div>
+
+    <div class="f19-step4-ctr" id="f19-step4-c1" style="left:80px"><span class="k">search</span><span class="v">every track</span></div>
+    <div class="f19-step4-ctr" id="f19-step4-c2" style="left:676px"><span class="k">the map</span><span class="v">+ their dots</span></div>
+    <div class="f19-step4-ctr" id="f19-step4-c3" style="left:1272px"><span class="k">pages</span><span class="v"><span id="f19-step4-p0">802</span> <span id="f19-step4-p1">→ about 1,400</span></span></div>
+
+    <div class="f19-step4-slab" id="f19-step4-slab" data-artifact="data check (planned)">
+      <span class="c" id="f19-step4-check"><span class="x">✗</span> albums.json <span class="s">"blood-on-the-tracks"</span> track <span class="m">8</span> <span class="s">"If You See Her, Say Hello"</span> has no song</span>
+      <span class="f19-step4-tag" id="f19-step4-tag">planned</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "19-step4";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f19-step4-" + s); };
+  var Q = function (s) { return document.querySelectorAll("#root ." + "f19-step4-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-5s): today's list, then the planned one; every row gets its link; the story marks go
+  pop(tl, $("place"), 0.05, 8);
+  pop(tl, $("lab-b"), 0.1, 8);
+  push(tl, $("before"), 0.15);
+  pop(tl, $("lab-a"), 1.15, 8);
+  push(tl, $("after"), 1.2);
+  tl.fromTo(Q("ul"), { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: E, stagger: 0.09 }, 2.0);
+  tl.fromTo(Q("strike"), { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: E, stagger: 0.05 }, 4.3);
+  // Scene 2 (5.5-12s): the counters, each on its word
+  pop(tl, $("c1"), 5.45);
+  pop(tl, $("c2"), 7.3);
+  pop(tl, $("c3"), 8.85);
+  tl.fromTo($("p0"), { opacity: 0 }, { opacity: 1, duration: 0.3, ease: E }, 8.85);
+  tl.fromTo($("p1"), { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 11.3);
+  // Scene 3 (13-15.9s): the planned data-check line, then hold
+  push(tl, $("slab"), 13.05);
+  tl.fromTo($("tag"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 13.75);
+  tl.set({}, {}, 15.872);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

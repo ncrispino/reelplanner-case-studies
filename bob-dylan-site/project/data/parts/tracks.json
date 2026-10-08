@@ -1,0 +1,704 @@
+{
+  "eras": [
+    {
+      "id": "tracks",
+      "title": "Blood on the Tracks",
+      "years": [
+        1973,
+        1978
+      ],
+      "theme": "tracks",
+      "summary": "After scoring a western and touring arenas again with the Band, Dylan made Blood on the Tracks in 1974 as his marriage was coming apart, and it became one of his most admired records. He then took a loose troupe of musicians on the road as the Rolling Thunder Revue and closed the decade with a big-band world tour.",
+      "albums": [
+        "pat-garrett",
+        "dylan-1973",
+        "planet-waves",
+        "blood-on-the-tracks",
+        "the-basement-tapes",
+        "desire",
+        "street-legal"
+      ],
+      "moments": [
+        "pat-garrett-film-1973",
+        "tour-1974",
+        "rolling-thunder-revue-1975",
+        "world-tour-1978"
+      ],
+      "photos": []
+    }
+  ],
+  "moments": [
+    {
+      "id": "pat-garrett-film-1973",
+      "year": 1973,
+      "title": "Acts in Pat Garrett and Billy the Kid",
+      "text": "Dylan took a small role as a character called Alias in Sam Peckinpah's western, filmed in Mexico, and wrote its score.",
+      "era": "tracks",
+      "youtube": null
+    },
+    {
+      "id": "tour-1974",
+      "year": 1974,
+      "title": "Back on the road with the Band",
+      "text": "In January and February 1974 he toured North American arenas with the Band, his first full tour since 1966, captured on the live album Before the Flood.",
+      "era": "tracks",
+      "youtube": null
+    },
+    {
+      "id": "rolling-thunder-revue-1975",
+      "year": 1975,
+      "title": "The Rolling Thunder Revue",
+      "text": "Starting in Plymouth, Massachusetts in October 1975, he led a travelling caravan of musicians including Joan Baez and Roger McGuinn at first through smaller halls in New England and Canada.",
+      "era": "tracks",
+      "youtube": null
+    },
+    {
+      "id": "world-tour-1978",
+      "year": 1978,
+      "title": "1978 world tour",
+      "text": "He spent most of 1978 touring Japan, Australia, Europe and North America with a large band and backing singers, recording the live album At Budokan in Tokyo.",
+      "era": "tracks",
+      "youtube": null
+    }
+  ],
+  "albums": [
+    {
+      "id": "pat-garrett",
+      "title": "Pat Garrett & Billy the Kid",
+      "year": 1973,
+      "era": "tracks",
+      "why": "His soundtrack for Sam Peckinpah's western is mostly instrumental, but it produced one of his most widely covered songs.",
+      "songs": [
+        "billy-1",
+        "knockin-on-heavens-door"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "dylan-1973",
+      "title": "Dylan",
+      "year": 1973,
+      "era": "tracks",
+      "why": "Columbia assembled this album of cover versions from old outtakes after Dylan left the label for Asylum, without his involvement.",
+      "songs": [
+        "lily-of-the-west",
+        "cant-help-falling-in-love"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "planet-waves",
+      "title": "Planet Waves",
+      "year": 1974,
+      "era": "tracks",
+      "why": "Recorded with the Band in Los Angeles, it was his first album for Asylum and his first to reach number one in the US.",
+      "songs": [
+        "on-a-night-like-this",
+        "forever-young",
+        "wedding-song"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "blood-on-the-tracks",
+      "title": "Blood on the Tracks",
+      "year": 1975,
+      "era": "tracks",
+      "why": "Written as his marriage was breaking down, these songs of love, regret and memory are often ranked among the best of his career. He recorded it in New York in September 1974, then re-cut five songs with local musicians in Minneapolis that December, and those versions made the final record.",
+      "songs": [
+        "tangled-up-in-blue",
+        "simple-twist-of-fate",
+        "idiot-wind",
+        "youre-gonna-make-me-lonesome-when-you-go",
+        "lily-rosemary-and-the-jack-of-hearts",
+        "shelter-from-the-storm",
+        "buckets-of-rain"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "the-basement-tapes",
+      "title": "The Basement Tapes",
+      "year": 1975,
+      "era": "tracks",
+      "why": "Columbia finally released these 1967 recordings made with the Band near Woodstock in 1975, adding some Band-only tracks to the Dylan songs that had circulated for years on bootlegs.",
+      "songs": [
+        "tears-of-rage",
+        "you-aint-goin-nowhere",
+        "this-wheels-on-fire"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "desire",
+      "title": "Desire",
+      "year": 1976,
+      "era": "tracks",
+      "why": "Made with lyricist Jacques Levy, a violinist named Scarlet Rivera and harmony singer Emmylou Harris, it mixes long story songs with deeply personal ones. It spent five weeks at number one in the US and many of its songs were played on the Rolling Thunder Revue.",
+      "songs": [
+        "hurricane",
+        "isis",
+        "one-more-cup-of-coffee",
+        "oh-sister",
+        "joey",
+        "black-diamond-bay",
+        "sara"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "street-legal",
+      "title": "Street-Legal",
+      "year": 1978,
+      "era": "tracks",
+      "why": "Recorded in his own Santa Monica studio with the large band from his 1978 tour, it pairs dense, symbolic songs with horns and gospel-style backing singers.",
+      "songs": [
+        "changing-of-the-guards",
+        "is-your-love-in-vain",
+        "senor-tales-of-yankee-power"
+      ],
+      "landmark": false,
+      "cover": null
+    }
+  ],
+  "songs": [
+    {
+      "id": "billy-1",
+      "title": "Billy 1",
+      "year": 1973,
+      "album": "pat-garrett",
+      "by": null,
+      "note": "One of several takes on the same ballad about Billy the Kid spread across the soundtrack.",
+      "themes": [
+        "the road",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/billy-1/",
+      "preview": "A ballad that follows the outlaw Billy as the law hunts him across the border country.",
+      "excerpt": null
+    },
+    {
+      "id": "knockin-on-heavens-door",
+      "title": "Knockin’ on Heaven’s Door",
+      "year": 1973,
+      "album": "pat-garrett",
+      "by": null,
+      "note": "Written for a death scene in the film, it was a US top-20 single in 1973.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/knockin-heavens-door/",
+      "preview": "A dying lawman asks to lay down his badge and guns as the end closes in.",
+      "excerpt": null
+    },
+    {
+      "id": "lily-of-the-west",
+      "title": "Lily of the West",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "A traditional folk ballad, recorded during the 1970 sessions that produced Self Portrait and New Morning.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/lily-west/",
+      "preview": "An old ballad of a man undone by a woman he loved.",
+      "excerpt": null
+    },
+    {
+      "id": "cant-help-falling-in-love",
+      "title": "Can't Help Falling in Love",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "His version of the song Elvis Presley made a hit in 1961.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/cant-help-falling-love/",
+      "preview": "A tender admission of falling in love despite better judgment.",
+      "excerpt": null
+    },
+    {
+      "id": "on-a-night-like-this",
+      "title": "On a Night Like This",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "The album's opening track, released as a single in 1974.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A warm welcome home on a cold winter night.",
+      "excerpt": null
+    },
+    {
+      "id": "forever-young",
+      "title": "Forever Young",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "The album includes two different recordings of it, one slow and one fast, and he has said he wrote it with one of his sons in mind.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/forever-young/",
+      "preview": "A parent's blessing wishing a child courage, truth and a lasting youthful spirit.",
+      "excerpt": null
+    },
+    {
+      "id": "wedding-song",
+      "title": "Wedding Song",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "It closes the album as a solo performance with acoustic guitar and harmonica.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/wedding-song/",
+      "preview": "A fervent declaration of devotion to a partner who saved him.",
+      "excerpt": null
+    },
+    {
+      "id": "tangled-up-in-blue",
+      "title": "Tangled Up in Blue",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "He re-recorded it in Minneapolis in December 1974, and that version opens the album.",
+      "themes": [
+        "love",
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man retraces a love affair across years, jobs and cities, with the story shifting between viewpoints.",
+      "excerpt": null
+    },
+    {
+      "id": "simple-twist-of-fate",
+      "title": "Simple Twist of Fate",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "It was recorded at the original New York sessions in September 1974.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/simple-twist-fate/",
+      "preview": "A brief encounter with a woman ends when she leaves, and he is left blaming chance.",
+      "excerpt": null
+    },
+    {
+      "id": "idiot-wind",
+      "title": "Idiot Wind",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "He replaced the quiet New York take with a harder full-band version cut in Minneapolis.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/idiot-wind/",
+      "preview": "A bitter, furious outpouring at a former lover and the gossip around them, which finally turns back on himself.",
+      "excerpt": null
+    },
+    {
+      "id": "youre-gonna-make-me-lonesome-when-you-go",
+      "title": "You’re Gonna Make Me Lonesome When You Go",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "A spare acoustic recording from the New York sessions.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/youre-gonna-make-me-lonesome-when-you-go/",
+      "preview": "A light-hearted song that already feels the loneliness ahead while a love is still in bloom.",
+      "excerpt": null
+    },
+    {
+      "id": "lily-rosemary-and-the-jack-of-hearts",
+      "title": "Lily, Rosemary and the Jack of Hearts",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "At close to nine minutes, it is the album's longest track and one of the five songs re-recorded in Minneapolis.",
+      "themes": [
+        "love",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A western caper in which a mysterious card player's arrival in a small town sets off robbery, jealousy and a killing.",
+      "excerpt": null
+    },
+    {
+      "id": "shelter-from-the-storm",
+      "title": "Shelter From the Storm",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "A solo performance from the New York sessions, later remade with a loud band arrangement on the live album Hard Rain.",
+      "themes": [
+        "love",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A weary man remembers a woman who once took him in and gave him refuge from a hostile world.",
+      "excerpt": null
+    },
+    {
+      "id": "buckets-of-rain",
+      "title": "Buckets of Rain",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "The album's closing track, a quiet acoustic blues.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/buckets-rain/",
+      "preview": "A playful, weary song about doing what you must and loving someone through hard times.",
+      "excerpt": null
+    },
+    {
+      "id": "tears-of-rage",
+      "title": "Tears of Rage",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "Dylan wrote the words and Richard Manuel of the Band wrote the music.",
+      "themes": [
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/tears-rage/",
+      "preview": "A parent laments being betrayed and forgotten by a child once cherished.",
+      "excerpt": null
+    },
+    {
+      "id": "you-aint-goin-nowhere",
+      "title": "You Ain’t Goin’ Nowhere",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "The Byrds released a cover of it in 1968, years before Dylan's own recording was officially issued.",
+      "themes": [
+        "the road",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/you-aint-goin-nowhere/",
+      "preview": "A cheerful, nonsense-laced song about waiting around until a loved one arrives.",
+      "excerpt": null
+    },
+    {
+      "id": "this-wheels-on-fire",
+      "title": "This Wheel’s on Fire",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "Dylan wrote the words and Rick Danko of the Band wrote the music.",
+      "themes": [
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An ominous warning that a reckoning is coming and cannot be escaped.",
+      "excerpt": null
+    },
+    {
+      "id": "hurricane",
+      "title": "Hurricane",
+      "year": 1975,
+      "album": "desire",
+      "by": null,
+      "note": "Co-written with Jacques Levy, it argues that boxer Rubin Carter was wrongly convicted of a 1966 triple murder.",
+      "themes": [
+        "protest",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/hurricane/",
+      "preview": "A narrative of how a boxer was framed for murder by police and a prejudiced justice system.",
+      "excerpt": null
+    },
+    {
+      "id": "isis",
+      "title": "Isis",
+      "year": 1976,
+      "album": "desire",
+      "by": null,
+      "note": "Co-written with Jacques Levy, it was a staple of the Rolling Thunder Revue shows.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/isis/",
+      "preview": "A man leaves his new wife for a strange quest through cold mountains and returns changed.",
+      "excerpt": null
+    },
+    {
+      "id": "one-more-cup-of-coffee",
+      "title": "One More Cup of Coffee",
+      "year": 1976,
+      "album": "desire",
+      "by": null,
+      "note": "Emmylou Harris sings harmony on the recording.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A farewell to a mysterious woman and her family before a journey down into the valley.",
+      "excerpt": null
+    },
+    {
+      "id": "oh-sister",
+      "title": "Oh, Sister",
+      "year": 1976,
+      "album": "desire",
+      "by": null,
+      "note": "Co-written with Jacques Levy and sung as a duet with Emmylou Harris.",
+      "themes": [
+        "love",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/oh-sister/",
+      "preview": "A plea to a woman for closeness, framed in terms of shared faith and a short life.",
+      "excerpt": null
+    },
+    {
+      "id": "joey",
+      "title": "Joey",
+      "year": 1976,
+      "album": "desire",
+      "by": null,
+      "note": "Co-written with Jacques Levy about the New York gangster Joey Gallo, killed in 1972.",
+      "themes": [
+        "death",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/joey/",
+      "preview": "A sympathetic ballad about a mobster's life and violent death.",
+      "excerpt": null
+    },
+    {
+      "id": "black-diamond-bay",
+      "title": "Black Diamond Bay",
+      "year": 1976,
+      "album": "desire",
+      "by": null,
+      "note": "Co-written with Jacques Levy, it is one of the album's long story songs.",
+      "themes": [
+        "death",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/black-diamond-bay/",
+      "preview": "A cast of strangers at an island hotel meets disaster, while a man watching the news far away barely notices.",
+      "excerpt": null
+    },
+    {
+      "id": "sara",
+      "title": "Sara",
+      "year": 1976,
+      "album": "desire",
+      "by": null,
+      "note": "Written by Dylan alone and named for his wife, Sara Lownds, it closes the album.",
+      "themes": [
+        "love",
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/sara/",
+      "preview": "A husband recalls the years and children he shared with his wife and begs her not to leave.",
+      "excerpt": null
+    },
+    {
+      "id": "changing-of-the-guards",
+      "title": "Changing of the Guards",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "The album's opening track, running more than six minutes.",
+      "themes": [
+        "faith",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/changing-guards/",
+      "preview": "A dense allegory of a long struggle, a lost lover and an old order about to fall.",
+      "excerpt": null
+    },
+    {
+      "id": "is-your-love-in-vain",
+      "title": "Is Your Love in Vain?",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "Released as a single in 1978.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/your-love-vain/",
+      "preview": "A wary man questions whether a new lover can really give him what he needs.",
+      "excerpt": null
+    },
+    {
+      "id": "senor-tales-of-yankee-power",
+      "title": "Señor (Tales of Yankee Power)",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "Like the rest of the album, it was recorded at his Rundown Studios in Santa Monica with his 1978 touring band.",
+      "themes": [
+        "the road",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A traveller asks a mysterious guide where they are heading and how long the ordeal will last.",
+      "excerpt": null
+    },
+    {
+      "id": "knockin-on-heavens-door-guns-n-roses",
+      "title": "Knockin’ on Heaven’s Door",
+      "year": 1991,
+      "album": null,
+      "by": "Guns N' Roses",
+      "note": "Guns N' Roses released their hard-rock version on Use Your Illusion II in 1991.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "you-aint-goin-nowhere-the-byrds",
+      "title": "You Ain’t Goin’ Nowhere",
+      "year": 1968,
+      "album": null,
+      "by": "The Byrds",
+      "note": "The Byrds put it on their 1968 country-rock album Sweetheart of the Rodeo and released it as a single.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "this-wheels-on-fire-julie-driscoll",
+      "title": "This Wheel’s on Fire",
+      "year": 1968,
+      "album": null,
+      "by": "Julie Driscoll, Brian Auger and the Trinity",
+      "note": "Their psychedelic version was a top-five hit in the UK in 1968.",
+      "themes": [
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "knockin-on-heavens-door",
+      "to": "knockin-on-heavens-door-guns-n-roses",
+      "kind": "covered-by",
+      "why": "Guns N' Roses recorded it for Use Your Illusion II in 1991 and it became a big hit in Britain."
+    },
+    {
+      "from": "you-aint-goin-nowhere",
+      "to": "you-aint-goin-nowhere-the-byrds",
+      "kind": "covered-by",
+      "why": "The Byrds released it in 1968 from the circulating basement demos, seven years before Dylan's version came out."
+    },
+    {
+      "from": "this-wheels-on-fire",
+      "to": "this-wheels-on-fire-julie-driscoll",
+      "kind": "covered-by",
+      "why": "Julie Driscoll, Brian Auger and the Trinity turned it into a UK hit in 1968."
+    },
+    {
+      "from": "hurricane",
+      "to": "joey",
+      "kind": "same-theme",
+      "why": "Both are long Desire ballads written with Jacques Levy about real men on the wrong side of the law."
+    },
+    {
+      "from": "idiot-wind",
+      "to": "simple-twist-of-fate",
+      "kind": "same-theme",
+      "why": "Both Blood on the Tracks songs look back on a broken relationship, one in anger and one in rueful wonder."
+    }
+  ]
+}

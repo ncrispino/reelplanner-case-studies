@@ -1,0 +1,93 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  /* type sizes used: 76 (question), 40 (heading), 34 (chose), 30 (compact chose, tiles), 26 (labels, addresses, instead of, why) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f12-q2-b-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f12-q2-b-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f12-q2-b-place { position:absolute; left:80px; top:70px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-q2-b-win { position:absolute; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f12-q2-b-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f12-q2-b-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f12-q2-b-addr { position:absolute; left:84px; right:12px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; overflow:hidden; }
+  .f12-q2-b-crop { position:absolute; left:0; top:36px; overflow:hidden; }
+  .f12-q2-b-crop img { position:absolute; display:block; max-width:none; }
+  .f12-q2-b-ph { position:absolute; border:1px solid var(--rp-ink); border-radius:28px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f12-q2-b-ph img { position:absolute; left:0; display:block; max-width:none; }
+  .f12-q2-b-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; }
+  .f12-q2-b-label { position:absolute; font:400 26px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f12-q2-b-chip { position:absolute; padding:10px 18px; font:400 26px/1 "Inter"; color:var(--rp-ink); background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.18); border-radius:999px; white-space:nowrap; }
+  .f12-q2-b-tile { position:absolute; box-sizing:border-box; padding:22px 28px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f12-q2-b-tile b { display:block; font:700 30px/1.2 "Inter"; color:var(--rp-ink); margin-bottom:6px; }
+  .f12-q2-b-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f12-q2-b-txt { position:absolute; left:36px; right:28px; top:30px; }
+  .f12-q2-b-card.compact .f12-q2-b-txt { top:22px; }
+  .f12-q2-b-kick { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-coral-deep); margin-bottom:14px; }
+  .f12-q2-b-chose { font:700 34px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f12-q2-b-card.compact .f12-q2-b-chose { font-size:30px; }
+  .f12-q2-b-inst { margin-top:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-q2-b-card.compact .f12-q2-b-inst { margin-top:8px; }
+  .f12-q2-b-why { margin-top:8px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); white-space:nowrap; }
+  .f12-q2-b-sk { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.18); border-radius:12px; }
+  .f12-q2-b-skl { position:absolute; font:400 26px/1.3 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f12-q2-b-skm { position:absolute; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-q2-b-bar { position:absolute; height:14px; border-radius:7px; background:rgba(var(--rp-ink-rgb),0.14); }
+  .f12-q2-b-tagsk { position:absolute; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-coral-deep); white-space:nowrap; }
+  .f12-q2-b-quote { position:absolute; font:400 40px/1.2 "EB Garamond"; color:var(--rp-ink); white-space:normal; }
+  .f12-q2-b-small { position:absolute; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-q2-b-code { position:absolute; box-sizing:border-box; background:var(--rp-slab); border-radius:14px; padding:26px 30px; font:400 26px/1.6 "JetBrains Mono"; color:var(--rp-slab-ink); white-space:pre; }
+  .f12-q2-b-code .k { color:var(--rp-coral); }
+  .f12-q2-b-code .s { color:rgba(var(--rp-slab-ink-rgb),0.72); }
+  .f12-q2-b-line { position:absolute; width:3px; background:rgba(var(--rp-ink-rgb),0.2); }
+  .f12-q2-b-dot { position:absolute; width:18px; height:18px; border-radius:50%; box-sizing:border-box; border:3px solid rgba(var(--rp-ink-rgb),0.45); background:var(--rp-paper); }
+  .f12-q2-b-dot.hot { border-color:var(--rp-coral); }
+  .f12-q2-b-shot { position:absolute; overflow:hidden; border-radius:8px; border:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f12-q2-b-shot img { position:absolute; left:0; top:0; display:block; max-width:none; }
+  .f12-q2-b-nm { font:inherit; font-family:"JetBrains Mono"; font-size:.9em; background:rgba(var(--rp-ink-rgb),0.07); padding:0 .2em; border-radius:4px; }
+  .f12-q2-b-x { position:absolute; font:700 30px/1 "Inter"; color:var(--rp-coral); }
+
+</style>
+
+<div id="root" data-composition-id="12-q2-b" data-band="bottom" data-start="0" data-duration="6.5" data-width="1920" data-height="1080">
+  <div class="clip f12-q2-b-bg" id="f12-q2-b-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+  <div class="clip f12-q2-b-scene" id="f12-q2-b-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f12-q2-b-place" id="f12-q2-b-place">If B · step 2</div>
+    <div class="f12-q2-b-shot" data-artifact="/bob-dylan/review/" id="f12-q2-b-rp" style="left:160px;top:260px;width:1600px;height:230px"><img src="assets/shots/d-review-open.png" alt="The review player&#x27;s controls: Mark, the comment box, Finish review" style="left:-125px;top:-912px;width:1800px;height:1125px"></div>
+    <div class="f12-q2-b-x" id="f12-q2-b-x0" style="left:190px;top:380px;font-size:64px">✕</div>
+    <div class="f12-q2-b-tagsk" id="f12-q2-b-n0" style="left:160px;top:520px;">Mark</div>
+    <div class="f12-q2-b-x" id="f12-q2-b-x1" style="left:900px;top:380px;font-size:64px">✕</div>
+    <div class="f12-q2-b-tagsk" id="f12-q2-b-n1" style="left:870px;top:520px;">the comment box</div>
+    <div class="f12-q2-b-x" id="f12-q2-b-x2" style="left:1620px;top:380px;font-size:64px">✕</div>
+    <div class="f12-q2-b-tagsk" id="f12-q2-b-n2" style="left:1590px;top:520px;">Finish review</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f12-q2-b-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var card = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, at); };
+  var coral = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, at); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+  rise(tl, $("place"), 0.10);
+  push(tl, $("rp"), 0.20);
+  rise(tl, $("n0"), 3.68);
+  rise(tl, $("n1"), 3.68);
+  rise(tl, $("n2"), 3.68);
+  rise(tl, $("x0"), 3.68);
+  rise(tl, $("x1"), 3.68);
+  rise(tl, $("x2"), 3.68);
+  tl.set({}, {}, 5.568);
+  window.__timelines["12-q2-b"] = tl;
+})();
+</script>
+</template>

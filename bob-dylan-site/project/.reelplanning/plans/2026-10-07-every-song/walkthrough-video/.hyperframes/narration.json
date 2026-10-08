@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "voice": "am_michael",
+  "speed": 1.25,
+  "model": "kokoro-v1.0 + whisper small.en",
+  "lines": {
+    "10": {
+      "key": "abd124a6a23faee7859b",
+      "text": "What ran: the data check, the build of fourteen hundred pages, the phone check and the desktop check, all passing, and the clip check. Not done: Genius links, and checking every sentence of the new notes.",
+      "sha256": "805af613dda910a71337bb105a74816d18031ba32f5340ad1b34cca6f03e6b32",
+      "duration_s": 11.008
+    },
+    "11": {
+      "key": "075ff4ba1fe3f0b7d36a",
+      "text": "The rest of the choices are on this list: the fetchers keep what they found, the Saturday Night Live clip stays dropped, and the cover versions stay out of their thread.",
+      "sha256": "c332ba1681c3575d14ecd74987afc28695d15766ce9fc3081e79ae7deb6f8783",
+      "duration_s": 8.64
+    },
+    "12": {
+      "key": "c7d003f1e9769b7beeda",
+      "text": "That's every track a page. Seeing it run, anything you'd change?",
+      "sha256": "e7ba5cf71820d0602a2c266443b99e845be829e62788c948aa9486ebd03dee48",
+      "duration_s": 3.221
+    },
+    "01": {
+      "key": "af1c821fa828cc44ee0c",
+      "text": "Every track now has a page. All four hundred and fifty-eight tracks on the thirty-nine albums link, two hundred and seventy-one of them to new songs. Every album song has a Spotify player, three hundred and fifty-one have an official clip, and four hundred and twenty-one link to their lyrics.",
+      "sha256": "524343d5f8307a97a878cbe0499befb15f195e8505d5c64c8464636c29f71314",
+      "duration_s": 16.32
+    },
+    "02": {
+      "key": "0892f4aeb6d3d7d7728b",
+      "text": "Step one. A script maps every track to its song, once, and the album pages read that map. Takes join their song: Billy 4 and Billy 7 are listed on Billy 1, and Alberta's two takes became one song. A live take with no page became a song under its plain title, like Minstrel Boy. And where Dylan co-wrote the words, the song counts as his own.",
+      "sha256": "340b8c45bfe2bd6731912cf52277ef02ef39119a10c8ce142bb323570ab9c0d3",
+      "duration_s": 19.989
+    },
+    "03": {
+      "key": "93bfc646c4043707cfc1",
+      "text": "One off-plan change: the new songs are in a file called album-tracks, not tracks, because tracks was already taken by the Blood on the Tracks era.",
+      "sha256": "c1c51c81a73202510ef9f82d09633c4bdb8ea1dbc8742492ab5c9dac605fb69f",
+      "duration_s": 8.064
+    },
+    "04": {
+      "key": "10fabecfd5e01f77d76b",
+      "text": "Step two. Another writer's song names who wrote its words, like Stardust, whose words are by Mitchell Parish. A traditional song says just that: a traditional song.",
+      "sha256": "fe8702eb90a893b93dd3129ad446d6d70966a31195a8b685ebeaf566482fc6e1",
+      "duration_s": 9.237
+    },
+    "05": {
+      "key": "6aaf06fe71a84e46ec58",
+      "text": "Off the plan: instrumentals keep their link to bobdylan.com, as Nashville Skyline Rag already had. The site lists a page for each, though there are no words on it.",
+      "said": "Off the plan: instrumentals keep their link to bobdylan dot com, as Nashville Skyline Rag already had. The site lists a page for each, though there are no words on it.",
+      "sha256": "7f066b222343cf73443834ab4a903f383a7910dd7c020aa5041d31e3e4c692f6",
+      "duration_s": 9.963
+    },
+    "06": {
+      "key": "5e203b5244fb6a23e379",
+      "text": "And no Genius links. Genius answers this machine with an error, and the search engines that could find its pages ask if it's a robot. Rather than guess at addresses that might be dead, there are none; you could add them by hand.",
+      "sha256": "ea1c68bb61d1cf54d7d01232069e71d6fe9f07861a88198386f7e3b7a99afb9e",
+      "duration_s": 12.48
+    },
+    "07": {
+      "key": "9637cc68f4ccf2c050db",
+      "text": "Step three. Thirty new connections reach the new songs, twelve of them famous covers. If You See Her, Say Hello now leads to Girl from the North Country, and it joins the Love gone wrong thread.",
+      "sha256": "9cfb727a3b257c262a3dbf0f7c30643373954641fca1bd1667f72e84fd486161",
+      "duration_s": 11.029
+    },
+    "08": {
+      "key": "685eed62a758cefa0690",
+      "text": "Off the plan: the threads are now kept by hand. The script that built them would choose ten new songs per theme and drop the ones placed here, so it refuses to run without force.",
+      "sha256": "1f5a9616900ccbe30536810bcb00095d4543c75e58d8187cd132bde3ea16e05c",
+      "duration_s": 9.685
+    },
+    "09": {
+      "key": "da5c6da34af02ee3d55a",
+      "text": "Step four. Every row of every album is a link. And a song page now names its live takes on other albums: She Belongs to Me shows its Self Portrait take.",
+      "sha256": "5e82071c54ad84c6021ad9f644b98f15b5cf5c9e6b685b20c488a4ac41b44f00",
+      "duration_s": 9.152
+    }
+  }
+}

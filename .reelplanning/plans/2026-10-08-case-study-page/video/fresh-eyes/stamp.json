@@ -1,0 +1,125 @@
+{
+  "id": "419d038f2ae0",
+  "scenes": [
+    {
+      "scene": 1,
+      "narration": "cb0f01b42d07",
+      "frame": "0c27a6d3b2d8"
+    },
+    {
+      "scene": 2,
+      "narration": "eaaeb6e381a3",
+      "frame": "0f48ac54f718"
+    },
+    {
+      "scene": 3,
+      "narration": "fbd9500e16c2",
+      "frame": "5d903ba820e2"
+    },
+    {
+      "scene": 4,
+      "narration": "8589270bdc8e",
+      "frame": "9845f2c0f37d"
+    },
+    {
+      "scene": 5,
+      "narration": "4722cfcfab54",
+      "frame": "ff3448621228"
+    },
+    {
+      "scene": 6,
+      "narration": "b04c0a4bea51",
+      "frame": "7d081a3f034c"
+    },
+    {
+      "scene": 7,
+      "narration": "c2028c6de18c",
+      "frame": "d99ad5c03afe"
+    },
+    {
+      "scene": 8,
+      "narration": "2fe6acf9d0a6",
+      "frame": "086e0dacf914"
+    },
+    {
+      "scene": 9,
+      "narration": "958d79dd3fd7",
+      "frame": "3b939b4f68cf"
+    },
+    {
+      "scene": 10,
+      "narration": "bb68bcb49e3d",
+      "frame": "78297f18ff57"
+    },
+    {
+      "scene": 11,
+      "narration": "eba78b9447b3",
+      "frame": "72bcdd833dc2"
+    },
+    {
+      "scene": 12,
+      "narration": "a7a4f3f1aaa5",
+      "frame": "610af424e489"
+    },
+    {
+      "scene": 13,
+      "narration": "8fe4ccf11243",
+      "frame": "6dfa8b729729"
+    },
+    {
+      "scene": 14,
+      "narration": "a2583fdb9fab",
+      "frame": "47f14f668099"
+    },
+    {
+      "scene": 15,
+      "narration": "ca50998997d2",
+      "frame": "778763649f32"
+    },
+    {
+      "scene": 16,
+      "narration": "f07f2d90c4eb",
+      "frame": "2fa0c641f3db"
+    },
+    {
+      "scene": 17,
+      "narration": "157ad251567f",
+      "frame": "1578f6f6daca"
+    },
+    {
+      "scene": 18,
+      "narration": "1e8b3d987a9e",
+      "frame": "86e7bc64cf49"
+    },
+    {
+      "scene": 19,
+      "narration": "2b500b21ebed",
+      "frame": "80552eddabcd"
+    },
+    {
+      "scene": 20,
+      "narration": "927ef5444a71",
+      "frame": "52551499c3db"
+    },
+    {
+      "scene": 21,
+      "narration": "31e14033e013",
+      "frame": "6c7b9d2eb047"
+    },
+    {
+      "scene": 22,
+      "narration": "a480b75491cb",
+      "frame": "7ce8f55b361a"
+    },
+    {
+      "scene": 23,
+      "narration": "8a58c74ad24c",
+      "frame": "0024a08e15ff"
+    }
+  ],
+  "round": 1,
+  "at": "2026-10-08T05:47:30.344Z",
+  "video": "2026-10-08-case-study-page",
+  "build": "first",
+  "scope": null
+}

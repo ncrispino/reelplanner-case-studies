@@ -1,0 +1,151 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 36 (column heads, era title), 26 (rows, year, credit), 22 (the phones' tab bars) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f42-q1-compare-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f42-q1-compare-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f42-q1-compare-head { position:absolute; top:76px; font:400 36px/1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f42-q1-compare-head b { font-weight:400; color:rgba(var(--rp-ink-rgb),0.55); margin-right:6px; }
+
+  /* the phone (a shorter crop of the shared phone so the table fits under it): Greenwich Village theme = paper, ink, typewriter mono */
+  .f42-q1-compare-phone { position:absolute; top:130px; width:320px; height:520px; box-sizing:border-box; border-radius:40px; border:1px solid var(--rp-ink); background:var(--rp-paper); overflow:hidden; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f42-q1-compare-speaker { position:absolute; left:124px; top:12px; width:72px; height:8px; border-radius:9999px; background:rgba(var(--rp-ink-rgb),0.18); }
+  .f42-q1-compare-et { position:absolute; left:18px; top:38px; font:400 36px/1.05 "JetBrains Mono"; letter-spacing:-0.02em; color:var(--rp-ink); }
+  .f42-q1-compare-ey { position:absolute; left:18px; top:122px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f42-q1-compare-frame { position:absolute; left:18px; top:166px; width:284px; height:276px; box-sizing:border-box; border-radius:6px; overflow:hidden; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.16); }
+  .f42-q1-compare-frame img { position:absolute; left:0; top:0; width:282px; height:274px; object-fit:cover; object-position:50% 28%; display:block; }
+  .f42-q1-compare-tabs { position:absolute; left:0; top:458px; width:320px; height:62px; box-sizing:border-box; border-top:1px solid rgba(var(--rp-ink-rgb),0.14); display:flex; justify-content:space-between; padding:18px 16px 0; }
+  .f42-q1-compare-tabs span { font:400 22px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.55); }
+  .f42-q1-compare-tabs span.on { color:var(--rp-ink); }
+
+  /* the defined word, pinned on the blurred copy in B */
+  .f42-q1-compare-gloss { position:absolute; left:14px; top:14px; font:400 26px/1 "Inter"; color:var(--rp-ink); background:var(--rp-paper); border:2px solid var(--rp-coral); border-radius:6px; padding:8px 12px; white-space:nowrap; }
+
+  .f42-q1-compare-credit { position:absolute; left:450px; width:1300px; text-align:center; top:664px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.55); white-space:nowrap; }
+
+  /* the table under the phones */
+  .f42-q1-compare-rule { position:absolute; left:90px; width:1740px; height:1px; background:rgba(var(--rp-ink-rgb),0.14); transform-origin:0 50%; }
+  .f42-q1-compare-rl { position:absolute; left:90px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f42-q1-compare-cell { position:absolute; font:400 26px/1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="42-q1-compare" data-band="bottom" data-duration="29.529" data-width="1920" data-height="1080">
+
+  <div class="clip f42-q1-compare-bg" id="f42-q1-compare-bg" data-start="0" data-duration="29.529" data-track-index="0"></div>
+
+  <div class="clip f42-q1-compare-scene" id="f42-q1-compare-scene" data-start="0" data-duration="29.529" data-track-index="1">
+
+    <!-- column heads -->
+    <div class="f42-q1-compare-head" id="f42-q1-compare-hA" style="left:450px"><b>A</b> Plain files</div>
+    <div class="f42-q1-compare-head" id="f42-q1-compare-hB" style="left:940px"><b>B</b> Vite</div>
+    <div class="f42-q1-compare-head" id="f42-q1-compare-hC" style="left:1430px"><b>C</b> Astro</div>
+
+    <!-- A: no placeholder, the full photo arrives late -->
+    <div class="f42-q1-compare-phone" id="f42-q1-compare-pA" style="left:450px" data-artifact="#/era/village · plain files">
+      <div class="f42-q1-compare-speaker"></div>
+      <div class="f42-q1-compare-et">Greenwich<br>Village</div>
+      <div class="f42-q1-compare-ey">1961–1964</div>
+      <div class="f42-q1-compare-frame"><img id="f42-q1-compare-imgA" src="assets/photos/1963-march-on-washington.jpg" alt="Bob Dylan at the March on Washington, 1963"></div>
+      <div class="f42-q1-compare-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+    </div>
+
+    <!-- B: blurred placeholder, then sharp -->
+    <div class="f42-q1-compare-phone" id="f42-q1-compare-pB" style="left:940px" data-artifact="#/era/village · Vite">
+      <div class="f42-q1-compare-speaker"></div>
+      <div class="f42-q1-compare-et">Greenwich<br>Village</div>
+      <div class="f42-q1-compare-ey">1961–1964</div>
+      <div class="f42-q1-compare-frame">
+        <img id="f42-q1-compare-imgB" src="assets/photos/1963-march-on-washington.jpg" alt="Bob Dylan at the March on Washington, 1963">
+        <div class="f42-q1-compare-gloss" id="f42-q1-compare-gloss" data-gloss="placeholder">placeholder</div>
+      </div>
+      <div class="f42-q1-compare-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+    </div>
+
+    <!-- C: blurred placeholder, then sharp -->
+    <div class="f42-q1-compare-phone" id="f42-q1-compare-pC" style="left:1430px" data-artifact="#/era/village · Astro">
+      <div class="f42-q1-compare-speaker"></div>
+      <div class="f42-q1-compare-et">Greenwich<br>Village</div>
+      <div class="f42-q1-compare-ey">1961–1964</div>
+      <div class="f42-q1-compare-frame"><img id="f42-q1-compare-imgC" src="assets/photos/1963-march-on-washington.jpg" alt="Bob Dylan at the March on Washington, 1963"></div>
+      <div class="f42-q1-compare-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+    </div>
+
+    <div class="f42-q1-compare-credit" id="f42-q1-compare-credit">Rowland Scherman, 1963 · public domain</div>
+
+    <!-- the table: one row per difference -->
+    <div class="f42-q1-compare-rule" id="f42-q1-compare-r1" style="top:704px"></div>
+    <div class="f42-q1-compare-rl" id="f42-q1-compare-l1" style="top:722px">photo</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c1A" style="left:450px; top:722px">full size, pops in late</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c1B" style="left:940px; top:722px">blurred, then sharp</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c1C" style="left:1430px; top:722px">blurred, then sharp</div>
+
+    <div class="f42-q1-compare-rule" id="f42-q1-compare-r2" style="top:766px"></div>
+    <div class="f42-q1-compare-rl" id="f42-q1-compare-l2" style="top:784px">between views</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c2A" style="left:450px; top:784px">by hand</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c2B" style="left:940px; top:784px">one page, keeps your place</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c2C" style="left:1430px; top:784px">a new page each time</div>
+
+    <div class="f42-q1-compare-rule" id="f42-q1-compare-r3" style="top:828px"></div>
+    <div class="f42-q1-compare-rl" id="f42-q1-compare-l3" style="top:846px">map and players</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c3A" style="left:450px; top:846px">by hand</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c3B" style="left:940px; top:846px">packages from npm</div>
+    <div class="f42-q1-compare-cell" id="f42-q1-compare-c3C" style="left:1430px; top:846px">packages from npm</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "42-q1-compare";
+  var $ = function (s) { return document.getElementById("f42-q1-compare-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at); };
+  var fadeIn = function (tl, el, at, dur) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: dur || 0.4, ease: "power3.out" }, at); };
+  var rule = function (tl, el, at) { tl.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, at); };
+  var row = function (tl, n, at) {
+    rule(tl, $("r" + n), at);
+    fadeIn(tl, $("l" + n), at + 0.1);
+    pop(tl, $("c" + n + "A"), at + 0.4, 8);
+    pop(tl, $("c" + n + "B"), at + 0.9, 8);
+    pop(tl, $("c" + n + "C"), at + 1.4, 8);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // every photo frame starts empty
+  tl.set([$("imgA"), $("imgB"), $("imgC"), $("gloss"), $("credit")], { opacity: 0 }, 0);
+
+  // Scene 1 (0-8s): three phones with their labels, each on the Greenwich Village panel, photo frames empty
+  pop(tl, $("pA"), 0.104, 20);
+  pop(tl, $("pB"), 0.362, 20);
+  pop(tl, $("pC"), 0.622, 20);
+  pop(tl, $("hA"), 1.244, 8);
+  pop(tl, $("hB"), 2.488, 8);
+  pop(tl, $("hC"), 3.732, 8);
+
+  // Scene 2 (8-16s): the same moment on all three phones.
+  // B and C show a blurred copy at once (CSS blur on the same image: the placeholder), sharpening at ~11s.
+  tl.fromTo([$("imgB"), $("imgC")], { opacity: 0, filter: "blur(10px)", scale: 1.08 }, { opacity: 1, filter: "blur(10px)", scale: 1.08, duration: 0.25, ease: "power3.out" }, 8.294);
+  fadeIn(tl, $("credit"), 8.502);
+  pop(tl, $("gloss"), 8.916, 8);
+  tl.to([$("imgB"), $("imgC")], { filter: "blur(0px)", scale: 1, duration: 0.9, ease: "power3.out" }, 11.404);
+  tl.to($("gloss"), { opacity: 0, duration: 0.4, ease: "power3.out" }, 11.715);
+  // A has no placeholder: its frame stays empty, then the full photo pops in at once
+  tl.fromTo($("imgA"), { opacity: 0 }, { opacity: 1, duration: 0.04, ease: "none" }, 13.478);
+  row(tl, 1, 14.1);
+
+  // Scene 3 (16-22s): between views
+  row(tl, 2, 16.796);
+
+  // Scene 4 (22-28s): map and players, then hold
+  row(tl, 3, 23.017);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 28.708);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

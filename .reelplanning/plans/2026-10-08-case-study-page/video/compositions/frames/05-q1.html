@@ -1,0 +1,96 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  /* type sizes used: 76 (question), 40 (heading), 34 (chose), 30 (compact chose, tiles), 26 (labels, addresses, instead of, why) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f05-q1-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f05-q1-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f05-q1-place { position:absolute; left:80px; top:70px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f05-q1-win { position:absolute; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-q1-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f05-q1-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f05-q1-addr { position:absolute; left:84px; right:12px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; overflow:hidden; }
+  .f05-q1-crop { position:absolute; left:0; top:36px; overflow:hidden; }
+  .f05-q1-crop img { position:absolute; display:block; max-width:none; }
+  .f05-q1-ph { position:absolute; border:1px solid var(--rp-ink); border-radius:28px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-q1-ph img { position:absolute; left:0; display:block; max-width:none; }
+  .f05-q1-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; }
+  .f05-q1-label { position:absolute; font:400 26px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f05-q1-chip { position:absolute; padding:10px 18px; font:400 26px/1 "Inter"; color:var(--rp-ink); background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.18); border-radius:999px; white-space:nowrap; }
+  .f05-q1-tile { position:absolute; box-sizing:border-box; padding:22px 28px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f05-q1-tile b { display:block; font:700 30px/1.2 "Inter"; color:var(--rp-ink); margin-bottom:6px; }
+  .f05-q1-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-q1-txt { position:absolute; left:36px; right:28px; top:30px; }
+  .f05-q1-card.compact .f05-q1-txt { top:22px; }
+  .f05-q1-kick { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-coral-deep); margin-bottom:14px; }
+  .f05-q1-chose { font:700 34px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f05-q1-card.compact .f05-q1-chose { font-size:30px; }
+  .f05-q1-inst { margin-top:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f05-q1-card.compact .f05-q1-inst { margin-top:8px; }
+  .f05-q1-why { margin-top:8px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); white-space:nowrap; }
+  .f05-q1-sk { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.18); border-radius:12px; }
+  .f05-q1-skl { position:absolute; font:400 26px/1.3 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f05-q1-skm { position:absolute; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f05-q1-bar { position:absolute; height:14px; border-radius:7px; background:rgba(var(--rp-ink-rgb),0.14); }
+  .f05-q1-tagsk { position:absolute; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-coral-deep); white-space:nowrap; }
+  .f05-q1-quote { position:absolute; font:400 40px/1.2 "EB Garamond"; color:var(--rp-ink); white-space:normal; }
+  .f05-q1-small { position:absolute; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f05-q1-code { position:absolute; box-sizing:border-box; background:var(--rp-slab); border-radius:14px; padding:26px 30px; font:400 26px/1.6 "JetBrains Mono"; color:var(--rp-slab-ink); white-space:pre; }
+  .f05-q1-code .k { color:var(--rp-coral); }
+  .f05-q1-code .s { color:rgba(var(--rp-slab-ink-rgb),0.72); }
+  .f05-q1-line { position:absolute; width:3px; background:rgba(var(--rp-ink-rgb),0.2); }
+  .f05-q1-dot { position:absolute; width:18px; height:18px; border-radius:50%; box-sizing:border-box; border:3px solid rgba(var(--rp-ink-rgb),0.45); background:var(--rp-paper); }
+  .f05-q1-dot.hot { border-color:var(--rp-coral); }
+  .f05-q1-shot { position:absolute; overflow:hidden; border-radius:8px; border:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f05-q1-shot img { position:absolute; left:0; top:0; display:block; max-width:none; }
+  .f05-q1-nm { font:inherit; font-family:"JetBrains Mono"; font-size:.9em; background:rgba(var(--rp-ink-rgb),0.07); padding:0 .2em; border-radius:4px; }
+  .f05-q1-x { position:absolute; font:700 30px/1 "Inter"; color:var(--rp-coral); }
+
+  .f05-q1-q { position:absolute; left:90px; top:150px; width:1740px; font:400 60px/1.12 "EB Garamond"; color:var(--rp-ink); }
+  .f05-q1-opt { position:absolute; top:380px; width:560px; height:400px; box-sizing:border-box; padding:36px 36px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); border-radius:14px; }
+  .f05-q1-opt .k { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.08em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f05-q1-opt .l { margin-top:22px; font:700 34px/1.22 "Inter"; color:var(--rp-ink); }
+  .f05-q1-opt .t { margin-top:20px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f05-q1-oring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; border:3px solid var(--rp-coral); border-radius:14px; }
+  .f05-q1-rec { color:var(--rp-coral-deep); }
+</style>
+
+<div id="root" data-composition-id="05-q1" data-band="bottom" data-start="0" data-duration="15.308" data-width="1920" data-height="1080">
+  <div class="clip f05-q1-bg" id="f05-q1-bg" data-start="0" data-duration="15.308" data-track-index="0"></div>
+  <div class="clip f05-q1-scene" id="f05-q1-scene" data-start="0" data-duration="15.308" data-track-index="1">
+    <div class="f05-q1-place" id="f05-q1-place">Question 1 · step 1</div>
+    <div class="f05-q1-q" data-question id="f05-q1-q" style="left:90px;top:150px;">What does the timeline say of the agent&#x27;s side?</div>
+    <div class="f05-q1-opt" id="f05-q1-oa" data-option="a" style="left:90px"><div class="f05-q1-oring" id="f05-q1-ring"></div><span class="k">A<span class="f05-q1-rec" id="f05-q1-rec"> · RECOMMENDED</span></span><div class="l">One line per event, from its commit message</div><div class="t">Short; the reasoning stays in the transcript.</div></div>
+    <div class="f05-q1-opt" id="f05-q1-ob" data-option="b" style="left:680px"><span class="k">B</span><div class="l">Also quote the agent&#x27;s chat replies</div><div class="t">Much longer; the replies are long.</div></div>
+    <div class="f05-q1-opt" id="f05-q1-oc" data-option="c" style="left:1270px"><span class="k">C</span><div class="l">Only the owner&#x27;s side</div><div class="t">What was built shows only as pictures.</div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f05-q1-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var card = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, at); };
+  var coral = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, at); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+  rise(tl, $("place"), 0.10);
+  rise(tl, $("q"), 0.30);
+  push(tl, $("oa"), 5.54);
+  push(tl, $("ob"), 8.94);
+  push(tl, $("oc"), 12.12);
+  coral(tl, $("rec"), 14.02);
+  coral(tl, $("ring"), 14.02);
+  tl.set({}, {}, 14.808);
+  window.__timelines["05-q1"] = tl;
+})();
+</script>
+</template>

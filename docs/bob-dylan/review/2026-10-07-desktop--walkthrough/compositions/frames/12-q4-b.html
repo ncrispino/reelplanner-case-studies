@@ -1,0 +1,102 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; container-type:size; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f12-q4-b-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f12-q4-b-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f12-q4-b-place { position:absolute; left:160px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f12-q4-b-step { position:absolute; top:170px; width:700px; height:660px; }
+  .f12-q4-b-lab { position:absolute; left:0; top:0; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; }
+  .f12-q4-b-box { position:absolute; left:0; top:50px; width:700px; height:610px; box-sizing:border-box; border-radius:12px; overflow:hidden; border:1px solid rgba(var(--rp-ink-rgb),0.3); background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+
+  /* step 1: a slice of the map, its panel on the right */
+  .f12-q4-b-map { position:absolute; left:0; top:0; width:300px; height:610px; background:var(--rp-slab); }
+  .f12-q4-b-d { position:absolute; width:14px; height:14px; margin:-7px 0 0 -7px; border-radius:50%; background:rgba(var(--rp-slab-ink-rgb),0.55); }
+  .f12-q4-b-sel { position:absolute; width:30px; height:30px; margin:-15px 0 0 -15px; border-radius:50%; box-sizing:border-box; border:2px solid var(--rp-slab-ink); }
+  .f12-q4-b-lnv { position:absolute; left:0; top:0; width:100%; height:100%; overflow:visible; }
+  .f12-q4-b-lnv line { stroke:rgba(var(--rp-slab-ink-rgb),0.35); stroke-width:1.5; }
+  .f12-q4-b-panel { position:absolute; left:300px; top:0; width:400px; height:610px; box-sizing:border-box; border-left:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f12-q4-b-panel .pk { position:absolute; left:36px; top:40px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.08em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f12-q4-b-panel .pt { position:absolute; left:36px; top:92px; width:330px; font:700 44px/1.1 "Inter"; color:var(--rp-ink); }
+  .f12-q4-b-btn { position:absolute; left:36px; bottom:48px; box-sizing:border-box; height:68px; padding:0 22px; border-radius:6px; border:1px solid rgba(var(--rp-ink-rgb),0.5); background:var(--rp-paper); font:400 30px/66px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+
+  /* step 2: the song page */
+  .f12-q4-b-page { position:absolute; left:0; top:0; width:700px; height:610px; background:var(--rp-paper); }
+  .f12-q4-b-page .pk { position:absolute; left:44px; top:44px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.08em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-q4-b-page .gt { position:absolute; left:44px; top:96px; font:700 56px/1 "Inter"; letter-spacing:-0.01em; color:var(--rp-ink); white-space:nowrap; }
+  .f12-q4-b-page .rule { position:absolute; left:44px; top:196px; width:612px; height:1px; background:rgba(var(--rp-ink-rgb),0.14); }
+  .f12-q4-b-page .f12-q4-b-btn { left:44px; bottom:auto; top:236px; }
+
+  .f12-q4-b-arr { position:absolute; left:900px; top:470px; width:120px; height:24px; }
+  .f12-q4-b-arr i { position:absolute; left:0; top:11px; width:104px; height:2px; background:var(--rp-coral); transform-origin:0 50%; }
+  .f12-q4-b-arr b { position:absolute; right:0; top:0; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:18px solid var(--rp-coral); }
+</style>
+
+<div id="root" data-composition-id="12-q4-b" data-band="bottom" data-start="0" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f12-q4-b-bg" id="f12-q4-b-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f12-q4-b-scene" id="f12-q4-b-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f12-q4-b-place" id="f12-q4-b-place">If B · step 5</div>
+
+    <div class="f12-q4-b-step" id="f12-q4-b-s1" style="left:160px">
+      <div class="f12-q4-b-lab">1 · the map's panel</div>
+      <div class="f12-q4-b-box" data-artifact="/map/ panel">
+        <div class="f12-q4-b-map" aria-hidden="true">
+          <svg class="f12-q4-b-lnv" aria-hidden="true"><line x1="70" y1="150" x2="185" y2="314"/></svg>
+          <svg class="f12-q4-b-lnv" aria-hidden="true"><line x1="184" y1="314" x2="122" y2="483"/></svg>
+          <div class="f12-q4-b-d" style="left:70px; top:150px"></div>
+          <div class="f12-q4-b-d" style="left:184px; top:314px; background:var(--rp-slab-ink)"></div>
+          <div class="f12-q4-b-sel" style="left:184px; top:314px"></div>
+          <div class="f12-q4-b-d" style="left:122px; top:483px"></div>
+          <div class="f12-q4-b-d" style="left:240px; top:80px"></div>
+        </div>
+        <div class="f12-q4-b-panel">
+          <div class="pk">THE MAP</div>
+          <div class="pt">Masters of War</div>
+          <div class="f12-q4-b-btn">Open the song ›</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="f12-q4-b-arr" id="f12-q4-b-arr" aria-hidden="true"><i id="f12-q4-b-arr-l"></i><b></b></div>
+
+    <div class="f12-q4-b-step" id="f12-q4-b-s2" style="left:1060px">
+      <div class="f12-q4-b-lab">2 · the song page</div>
+      <div class="f12-q4-b-box" data-artifact="/song/masters-of-war/">
+        <div class="f12-q4-b-page">
+          <div class="pk">SONG</div>
+          <div class="gt">Masters of War</div>
+          <div class="rule"></div>
+          <div class="f12-q4-b-btn">Start a thread from here</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "12-q4-b";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f12-q4-b-" + s); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: step one ("as built"), the arrow on "two clicks", step two on "song page"; hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.05);
+  tl.fromTo($("s1"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.1);
+  tl.fromTo($("arr"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, 1.4);
+  tl.fromTo($("s2"), { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 1.75);
+
+  tl.set({}, {}, 3.051);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

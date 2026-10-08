@@ -1,0 +1,6 @@
+---
+import Shell from "../layouts/Shell.astro";
+import Timeline from "../components/Timeline.astro";
+import { eras } from "../lib/data";
+---
+<Shell title="Bob Dylan, explored" era={eras[0].id} tab="eras" full><Timeline start={eras[0].id} /></Shell>

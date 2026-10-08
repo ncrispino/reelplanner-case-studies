@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "voice": "am_michael",
+  "speed": 1.25,
+  "model": "kokoro-v1.0 + whisper small.en",
+  "lines": {
+    "10": {
+      "key": "0781646ed53ec0ef1a79",
+      "text": "With C, \"If You See Her, Say Hello\" stays a row with nothing behind it.",
+      "sha256": "b0b79d74062e6b1f6573fe5b54921487132b79a13b33020eee65369b448217d5",
+      "duration_s": 3.819
+    },
+    "11": {
+      "key": "6e64993f634bd87503da",
+      "text": "Question two: how much is written for a song by another writer? A: the same page as his own songs. B: a shorter page, the note and the player. C: no page, just the writer's name on the row. I recommend A.",
+      "sha256": "5051944e8d71a46f2c7c8e44eaf3727d0a5462f596bd3bc3663a83841a3cc73f",
+      "duration_s": 12.096
+    },
+    "12": {
+      "key": "7865b2dfaee62fd1b952",
+      "text": "With A, \"Stardust\" gets a note naming Hoagy Carmichael, a summary, and its player.",
+      "sha256": "07d1efb16bdcb60c3a196a0288a5db09192c04fb3c77454744ba537858ea80b4",
+      "duration_s": 4.373
+    },
+    "13": {
+      "key": "1a49cdfa46d2727bf166",
+      "text": "With B, \"Stardust\" gets one sentence and the player.",
+      "sha256": "cd14335b62f2fbe54d910fde8921a799e08dc8c58183f7640eef7e0e01305dd0",
+      "duration_s": 2.688
+    },
+    "14": {
+      "key": "da0cca79073a3b785f90",
+      "text": "With C, \"Stardust\" is a name in Triplicate's track list, and not a link.",
+      "sha256": "da56c9a30e76589794708f7eb783e7e59acaabd9031baf403c1fbed6a5bcfd57",
+      "duration_s": 3.883
+    },
+    "15": {
+      "key": "ffcf6d52e16eef072e18",
+      "text": "A quick check, a question to see whether the plan does what you expect. This one's on step one. On Self Portrait, you click \"She Belongs to Me (live)\". Its song had no page before this plan. Where do you land?",
+      "sha256": "0ad683a7a9f712c12f93dbc39b1332657f8ac9b2768f3596ac3fd2a5cf4cda4a",
+      "duration_s": 11.264
+    },
+    "16": {
+      "key": "1a96fc3c02b1d5dcd6bf",
+      "text": "Step two. The same three fetchers that found today's links run again for the new songs: Spotify, YouTube's official clips, and the lyrics on bobdylan.com. That site lists songs he wrote, so another writer's song shows who wrote its words instead of a lyrics link.",
+      "said": "Step two. The same three fetchers that found today's links run again for the new songs: Spotify, YouTube's official clips, and the lyrics on bobdylan dot com. That site lists songs he wrote, so another writer's song shows who wrote its words instead of a lyrics link.",
+      "sha256": "6a8c027094021c70c5ffcc22539be74b7fde3c18e60e18bb2307fe1940405675",
+      "duration_s": 15.104
+    },
+    "17": {
+      "key": "cf1454f6622c6c2c2217",
+      "text": "Step three. A pass across the whole catalogue links the new songs to others, and only when it is sure. \"If You See Her, Say Hello\" joins \"You're Gonna Make Me Lonesome When You Go\", two songs about a love that has ended. Many standards will have no connection at all.",
+      "sha256": "08ffe8aedb4af8cb90da2680514d89d5316dcc1570e23f5f6999487c87408848",
+      "duration_s": 14.827
+    },
+    "18": {
+      "key": "d0b4a71b280b0db59cb7",
+      "text": "A quick check on step two. You open \"Stardust\". What is where the lyrics link would be?",
+      "sha256": "a05ed39599afef94668a92fb2fb33de4d27d5c8a16ade1c288591b1a17710d48",
+      "duration_s": 4.693
+    },
+    "19": {
+      "key": "1ec597fc6a6d38ed8c81",
+      "text": "Step four. On an album page every row becomes a link, so the \"its story\" marks go. Search finds every track, and the map gains their dots. The site grows from eight hundred and two pages to about fourteen hundred. And the data check fails on any album track with no song.",
+      "sha256": "aefae6f1f1bb1147c81dc0fe1a5225827a1a2ae8cea00d10d2dd08920e375205",
+      "duration_s": 15.872
+    },
+    "20": {
+      "key": "f900bbec3476d9a715e2",
+      "text": "A quick check on step three. \"Christmas Island\", on Christmas in the Heart, has nothing the writers are sure ties it to another song. What is on its page?",
+      "sha256": "89fc34de224b1214b12bed800fa236550f0a00534762bd3903cff3158f74d936",
+      "duration_s": 8.405
+    },
+    "21": {
+      "key": "96c69155331280da8798",
+      "text": "And one on step four. A track is added to an album's list later, with no song. What happens the next time the checks run?",
+      "sha256": "03d08974a5d2f5672620110c0df78efe4d2247e5599a96073411a7fbdff0c7ef",
+      "duration_s": 6.976
+    },
+    "22": {
+      "key": "d1b956276a82355ba970",
+      "text": "That's the plan: every track a song, and every song part of the site. Two questions: which tracks, and how much for other writers' songs.",
+      "sha256": "1f36f2cca9a213ce2a5377e71adeea98689a0cffe7c158f0fdc6e1b02372f40b",
+      "duration_s": 7.317
+    },
+    "01": {
+      "key": "516403b34ed2f2efd45e",
+      "text": "Blood on the Tracks has ten tracks, and seven of them have a page. \"You're a Big Girl Now\", \"Meet Me in the Morning\" and \"If You See Her, Say Hello\" are rows with nothing behind them. Across all thirty-nine albums, two hundred and seventy-seven tracks are like that.",
+      "sha256": "1ad3507e5bfd7802b64a357c2cf6952514ff93961ce8ef3686acdda180f62976",
+      "duration_s": 14.144
+    },
+    "02": {
+      "key": "c3d8258809b88906fde3",
+      "text": "About a hundred and fifty are his own songs. About a hundred and ten are other writers' songs he recorded: standards, carols, folk and blues. About eight are The Band without him, on The Basement Tapes. And about ten are instrumentals and alternate takes.",
+      "sha256": "e78dfd62165fab91950ec01f53146b3baaf3fc831d28162d2cf70c5d1880f929",
+      "duration_s": 14.229
+    },
+    "03": {
+      "key": "7f14fcb3bc92a911aff7",
+      "text": "This falls short of what you chose. You picked all thirty-nine albums, sixteen in full. The sixteen are not in full: each has seven or eight songs written, so fifty-four of their tracks have no page. That should have been flagged when it happened.",
+      "sha256": "62d7a7a540f4f4b3258feed8357459613fff0b9cb9d918e86b4dd7771f56930a",
+      "duration_s": 13.056
+    },
+    "04": {
+      "key": "52596a2099bb256706bb",
+      "text": "Two changes, in four steps. First, every track becomes a song, with its writing, its player and its links. Then every track becomes part of the site: connections, threads, album pages, search and the map, with a check that fails if a track ever loses its page.",
+      "sha256": "993546cf77fb55325cf3ebb65fcd0ab8f75e1cf24e91de04d1cda103cba79423",
+      "duration_s": 14.933
+    },
+    "05": {
+      "key": "49f19e196f02d2e515fb",
+      "text": "Step one. A new script reads each album's track list and writes a record for every track that has no song yet. Then writers add each song's note, themes, preview and summary, in our own words, never quoting the lyrics, just as the hundred and eighty-one were written.",
+      "sha256": "e3187249a798b6b37eef9a4813b4c9c4f6b664d582e35bb2b206ec6ccaacb3c5",
+      "duration_s": 15.019
+    },
+    "06": {
+      "key": "59d0d6dac649cbd20390",
+      "text": "Some tracks need care. On Pat Garrett, \"Billy 4\" and \"Billy 7\" join \"Billy 1\", which already has a page, as its takes. A live take of a song that already has a page links to that page. And a Band track says The Band, not Dylan.",
+      "sha256": "4b0fb0d0631cd0034cb64c7b08f0b5dc06ba7d405bd4d311a54822e024723333",
+      "duration_s": 13.355
+    },
+    "07": {
+      "key": "a09de80e037f94e065fe",
+      "text": "Question one: which tracks get a page? A: the fifty-four missing from the sixteen landmarks, about a hundred and twenty new pages. B: all two hundred and seventy-seven, about six hundred. C: none. I recommend B.",
+      "sha256": "9773ed89eba3e1bf05eff8585156da35e26c99f1ee3df89203d70a4ea29fc8d8",
+      "duration_s": 12.309
+    },
+    "08": {
+      "key": "aaf0a83b81088179d158",
+      "text": "With A, Blood on the Tracks is complete, and Triplicate keeps its twenty-seven empty rows.",
+      "sha256": "5ea6d97c561177679954c7781dd7776f206b0fb8f38fa2c89710b1167947a002",
+      "duration_s": 4.736
+    },
+    "09": {
+      "key": "917879d84b0fe3430cb6",
+      "text": "With B, every row of every album opens a page.",
+      "sha256": "c92b622a8505316125a1c752853272625c8560ac9223ee09039ddfa25fe7f04e",
+      "duration_s": 2.837
+    }
+  }
+}

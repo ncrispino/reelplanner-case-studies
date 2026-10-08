@@ -1,0 +1,52 @@
+@import "@fontsource/bebas-neue/latin-400.css";
+/* Going Electric, 1965–1966 — mod London and the Hawks at full volume.
+   Black and white at maximum contrast with a hot orange and a yellow, a tall condensed poster face, op-art rings,
+   and the white cue cards of Dont Look Back: titles, chips and cards are cards held up to the camera. */
+[data-era="electric"] { --paper:#0f0f0f; --ink:#f6f2e8; --soft:rgba(246,242,232,.76); --line:rgba(246,242,232,.26); --accent:#ff5a1f;
+  --accent-ink:#0f0f0f; --accent2:#f5d000; --card:#f8f5ec;
+  --display:"Bebas Neue",Impact,"Arial Narrow",sans-serif; --display-alt:"Bebas Neue",Impact,"Arial Narrow",sans-serif; --display-weight:400;
+  --display-case:uppercase; --display-track:.02em; --display-style:normal; --display-lh:.95;
+  --body:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --label:"Helvetica Neue",Helvetica,Arial,sans-serif; --label-weight:800; --label-track:.16em; --label-case:uppercase;
+  --texture:repeating-radial-gradient(circle at 105% -5%, rgba(246,242,232,.07) 0 9px, transparent 9px 20px) 0 0 / 100% 900px no-repeat;
+  --stamp:""; --dot:#ffd60a; }
+
+@scope ([data-era="electric"]) to ([data-era]) {
+  /* an op-art target, top right */
+  .stamp { top: 2px; right: 6px; }
+  .stamp::after { content: ""; display: block; width: 74px; height: 74px; border-radius: 50%;
+    background: repeating-radial-gradient(circle, var(--accent) 0 6px, #f6f2e8 6px 12px, #0f0f0f 12px 18px); box-shadow: 0 0 0 3px #0f0f0f; }
+  .photo .frame { border: 3px solid var(--ink); box-shadow: 10px 10px 0 -3px var(--paper), 10px 10px 0 0 var(--accent); }
+  .photo .frame img { filter: grayscale(1) contrast(1.25); }
+  .years { color: var(--accent2); font-size: 14px; }
+  /* the cue card */
+  :scope .etitle { display: inline-block; max-width: 100%; background: var(--card); color: #111; padding: 10px 14px 4px; rotate: -2deg;
+    box-shadow: 8px 8px 0 var(--accent); font-size: clamp(58px, 17vw, 96px); margin: 6px 0 8px 4px; }
+  .summary { font-size: 18px; }
+  .moments .year { color: var(--accent2); }
+  .moments, .moments a { border-color: rgba(246,242,232,.4); }
+  /* cue cards, held up one by one */
+  .chip { background: var(--card); color: #111; border: 0; font: 400 21px/1 "Bebas Neue", Impact, sans-serif; letter-spacing: .04em;
+    padding: 10px 14px 6px; rotate: -2deg; box-shadow: 4px 4px 0 var(--accent); }
+  .chip:nth-child(even) { rotate: 1.5deg; box-shadow: 4px 4px 0 var(--accent2); }
+  .button { background: var(--paper); color: var(--ink); border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--accent); }
+  .button.accent { background: var(--accent); color: #0f0f0f; border-color: var(--accent); box-shadow: 4px 4px 0 var(--ink); }
+  .card, :scope.card { --ink:#111; --soft:rgba(17,17,17,.74); --line:rgba(17,17,17,.24); --paper:#f8f5ec; background: var(--card); color: #111;
+    border: 0; rotate: -0.6deg; box-shadow: 6px 6px 0 var(--accent); padding: 18px 20px; }
+  .card .button { background: #111; color: #f8f5ec; border-color: #111; box-shadow: 4px 4px 0 var(--accent); }
+  .section-title { display: inline-block; background: var(--ink); color: var(--paper); padding: 6px 10px 5px; font-size: 13px; }
+  .list, .list li a, .list li > span { border-color: rgba(246,242,232,.35); }
+  :scope.tc { background: repeating-radial-gradient(circle at 100% 0, rgba(246,242,232,.08) 0 8px, transparent 8px 18px), #0f0f0f;
+    border: 3px solid var(--ink); }
+  .st { display: inline-block; max-width: 100%; background: var(--card); color: #111; padding: 8px 12px 2px; rotate: -1.5deg; box-shadow: 6px 6px 0 var(--accent); }
+  .big { color: var(--accent2); }
+  :scope .drawn { background: repeating-radial-gradient(circle at 70% 30%, #111 0 7px, #f6f2e8 7px 14px); color: #111; }
+  :scope .drawn .t { background: var(--accent); padding: 3px 6px 0; align-self: flex-start; font-family: "Bebas Neue", Impact, sans-serif; font-size: 1.5em; }
+  :scope.s .drawn .t { font-size: 20px; }
+  :scope .drawn .y { background: #111; color: #f6f2e8; padding: 2px 5px; align-self: flex-start; }
+  .pl { background: var(--card); border: 0; padding: 8px; rotate: -0.5deg; box-shadow: 6px 6px 0 var(--accent); }
+  .chart { border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--accent); }
+  .toggle { border-color: var(--ink); }
+  .toggle .on { background: var(--accent); color: #0f0f0f; }
+  .tabbar { border-top-color: var(--accent); }
+}

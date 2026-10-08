@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "src": "2026-10-06-dylan-site/index.html",
+  "project": "video",
+  "exportedAt": "2026-10-07T00:43:21.645Z",
+  "watch": {
+    "firstPlayAt": "2026-10-07T00:36:59.598Z",
+    "maxTimeReached": 377.4,
+    "durationSeconds": 377.41,
+    "completion": 1,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 1
+      },
+      {
+        "id": "ch2",
+        "completion": 1
+      },
+      {
+        "id": "ch3",
+        "completion": 1
+      }
+    ],
+    "moments": [
+      {
+        "kind": "rewind",
+        "t": 134.1,
+        "from": 136.43,
+        "planStep": 2,
+        "frameIndex": 9
+      }
+    ],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q1",
+      "option": "c",
+      "label": "Astro, a page per song",
+      "recommended": false,
+      "planStep": 1,
+      "question": "How should the site be built?",
+      "t": 99.272,
+      "decidedAt": "2026-10-07T00:38:16.681Z"
+    },
+    {
+      "id": "q2",
+      "option": "a",
+      "label": "Wikimedia Commons, free-licensed",
+      "recommended": true,
+      "planStep": 3,
+      "question": "Where should the era photographs come from?",
+      "t": 213.776,
+      "decidedAt": "2026-10-07T00:40:57.704Z",
+      "note": "but note that we can ue other images and shiould still make it completely visually full , even if we cant find licenses... like no photographs and just text will be bad"
+    },
+    {
+      "id": "q3",
+      "option": "c",
+      "label": "The link and a preview in our words",
+      "recommended": true,
+      "planStep": 4,
+      "question": "What should a song page show beside its lyrics link?",
+      "t": 282.663,
+      "decidedAt": "2026-10-07T00:41:39.749Z"
+    }
+  ],
+  "quizzes": [],
+  "checks": "on",
+  "autonomy": [],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-06-dylan-site",
+      "seen": "2026-10-06T20:49:38.354Z",
+      "sent": "2026-10-06T21:01:57.864Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 0,
+    "walked": 0,
+    "termsOpened": 0,
+    "termsLookedUp": [
+      "connection"
+    ],
+    "rewinds": 1,
+    "watchedPct": 100
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "amuxdqw3tpzsw",
+      "kind": "note",
+      "comment": "can we display lyrics in the page though? if you dont want to copy them we can cite, but should be able to put lyrics on if we attribute them to authors i believe? dont see why not? just dont list full lyrics, only part if you want",
+      "about": "",
+      "t": 134.13,
+      "frame": {
+        "index": 9,
+        "compositionId": "08-step2-dataset",
+        "title": "Step 2 · The dataset"
+      },
+      "plan": {
+        "step": 2,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxdv349kqbx",
+      "kind": "approve",
+      "t": 377.4,
+      "frame": {
+        "index": 28,
+        "compositionId": "41-ending",
+        "title": "The plan, with your choices"
+      },
+      "plan": {
+        "step": null,
+        "questions": [
+          1,
+          2,
+          3
+        ],
+        "component": null
+      },
+      "comment": ""
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

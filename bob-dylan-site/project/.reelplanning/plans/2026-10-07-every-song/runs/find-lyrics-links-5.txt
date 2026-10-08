@@ -1,0 +1,20 @@
+$ node tools/find-lyrics-links.mjs
+· alberta: not in the index
+· when-the-world-was-young: not in the index
+· these-foolish-things: not in the index
+· you-go-to-my-head: not in the index
+· stardust: not in the index
+· its-funny-to-everyone-but-me: not in the index
+· why-was-i-born: not in the index
+· september-of-my-years: not in the index
+· as-time-goes-by: not in the index
+· alberta: not on Lyrics.com either
+· when-the-world-was-young: not on Lyrics.com either
+· these-foolish-things: not on Lyrics.com either
+· you-go-to-my-head: not on Lyrics.com either
+· stardust: not on Lyrics.com either
+· its-funny-to-everyone-but-me: not on Lyrics.com either
+· why-was-i-born: not on Lyrics.com either
+· september-of-my-years: not on Lyrics.com either
+· as-time-goes-by: not on Lyrics.com either
+exit 0

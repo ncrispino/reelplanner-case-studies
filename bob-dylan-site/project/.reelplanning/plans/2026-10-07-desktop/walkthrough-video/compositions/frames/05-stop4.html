@@ -1,0 +1,97 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f05-stop4-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f05-stop4-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* thin browser window: radius 14, 1px ink hairline, 36px title bar, three dots, the address in mono */
+  .f05-stop4-win { position:absolute; box-sizing:border-box; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-stop4-bar { position:relative; height:36px; box-sizing:border-box; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); background:var(--rp-paper); display:flex; align-items:center; padding:0 14px; gap:7px; }
+  .f05-stop4-bar i { display:block; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.24); }
+  .f05-stop4-bar span { margin-left:14px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f05-stop4-view { position:relative; overflow:hidden; }
+  .f05-stop4-view img { position:absolute; display:block; max-width:none; }
+  .f05-stop4-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; pointer-events:none; }
+
+  .f05-stop4-place { position:absolute; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f05-stop4-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-stop4-txt { position:absolute; left:44px; top:40px; right:44px; }
+  .f05-stop4-tag { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); margin-bottom:16px; white-space:nowrap; }
+  .f05-stop4-chose { font:700 36px/1.22 "Inter"; color:var(--rp-ink); }
+  .f05-stop4-inst { margin-top:16px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f05-stop4-why { margin-top:10px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+</style>
+
+<div id="root" data-composition-id="05-stop4" data-band="bottom" data-start="0" data-duration="17.515" data-width="1920" data-height="1080">
+  <div class="clip f05-stop4-bg" id="f05-stop4-bg" data-start="0" data-duration="17.515" data-track-index="0"></div>
+
+  <div class="clip f05-stop4-scene" id="f05-stop4-scene" data-start="0" data-duration="17.515" data-track-index="1">
+    <div class="f05-stop4-place" id="f05-stop4-place" style="left:80px; top:96px">Step 4 · Two-column pages</div>
+    <div class="f05-stop4-win" id="f05-stop4-win" data-artifact="/song/like-a-rolling-stone/" style="left:80px; top:150px; width:924px; height:614px">
+      <div class="f05-stop4-bar"><i></i><i></i><i></i><span>/song/like-a-rolling-stone/</span></div>
+      <div class="f05-stop4-view" style="width:922px; height:576px">
+        <img src="assets/shots/d-song-lars.png" alt="Like a Rolling Stone at 1440: cover, note and players on the left; The words, Connections on the right" style="left:0.0px; top:0.0px; width:921.6px; height:576.0px">
+        <i class="f05-stop4-ring" id="f05-stop4-rl" style="left:68px; top:65px; width:251px; height:509px"></i>
+        <i class="f05-stop4-ring" id="f05-stop4-rr" style="left:330px; top:65px; width:524px; height:509px"></i>
+        <i class="f05-stop4-ring" id="f05-stop4-rc" style="left:72px; top:92px; width:228px; height:157px"></i>
+      </div>
+    </div>
+    <div class="f05-stop4-card" id="f05-stop4-a13" data-call="a13" style="left:1060px; top:150px; width:780px; height:290px">
+      <div class="f05-stop4-txt">
+        <div class="f05-stop4-chose" id="f05-stop4-a13c">The words card drawn twice, once per layout</div>
+        <div class="f05-stop4-inst" id="f05-stop4-a13i">instead of: moving it with script</div>
+        <div class="f05-stop4-why" id="f05-stop4-a13w">the phone page stays exactly as it was</div>
+      </div>
+    </div>
+    <div class="f05-stop4-card" id="f05-stop4-a14" data-call="a14" style="left:1060px; top:474px; width:780px; height:290px">
+      <div class="f05-stop4-txt">
+        <div class="f05-stop4-chose" id="f05-stop4-a14c">The cover small, above the title</div>
+        <div class="f05-stop4-inst" id="f05-stop4-a14i">instead of: beside it</div>
+        <div class="f05-stop4-why" id="f05-stop4-a14w">a long title never breaks inside a word</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f05-stop4-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+  // a short push: in from below and a touch small, landing at scale 1 (never past it)
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var slide = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6.8s): the page; a light outline on each column as it is named
+  rise(tl, $("place"), 0.05, 8);
+  push(tl, $("win"), 0.1);
+  ring(tl, $("rl"), 3.35);
+  ring(tl, $("rr"), 3.85);
+
+  // Scene 2 (6.8-17.5s): card a13 on "the words card", card a14 on "the cover"; hold
+  slide(tl, $("a13"), 6.8);
+  rise(tl, $("a13c"), 7.0);
+  rise(tl, $("a13i"), 9.0);
+  rise(tl, $("a13w"), 10.25);
+  slide(tl, $("a14"), 12.85);
+  rise(tl, $("a14c"), 13.15);
+  ring(tl, $("rc"), 13.5);
+  rise(tl, $("a14i"), 14.05);
+  rise(tl, $("a14w"), 15.1);
+
+  tl.set({}, {}, 17.515);
+  window.__timelines["05-stop4"] = tl;
+})();
+</script>
+</template>

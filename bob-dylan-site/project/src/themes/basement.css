@@ -1,0 +1,54 @@
+@import "@fontsource/rye/latin-400.css";
+/* Basement and Country, 1967–1970 — Big Pink in West Saugerties, then Nashville.
+   Kraft and pine, barn red and the house's own pink, a woodtype poster face, a heavy thick-and-thin letterpress
+   frame, an oval post-office stamp, stitched leather patches and wood-block buttons. */
+[data-era="basement"] { --paper:#efe0c3; --ink:#2b1b10; --soft:rgba(43,27,16,.78); --line:rgba(43,27,16,.28); --accent:#a3322a;
+  --accent-ink:#fff3df; --accent2:#eba2ae; --card:#f8ecd4;
+  --display:"Rye",Rockwell,Georgia,serif; --display-alt:"Rye",Rockwell,Georgia,serif; --display-weight:400;
+  --display-case:none; --display-track:.01em; --display-style:normal; --display-lh:1.12;
+  --body:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --label:Rockwell,"Roboto Slab","Courier New",serif; --label-weight:700; --label-track:.12em; --label-case:uppercase;
+  --texture:repeating-linear-gradient(91deg, rgba(110,66,26,.055) 0 2px, transparent 2px 13px, rgba(110,66,26,.035) 13px 14px, transparent 14px 29px);
+  --stamp:"West Saugerties · N.Y."; --dot:#ff8fb1; }
+
+@scope ([data-era="basement"]) to ([data-era]) {
+  /* the woodtype frame: a heavy rule and a hairline, with square corner blocks */
+  :scope.panel { padding: 30px 26px 34px; }
+  :scope.panel::before { content: ""; position: absolute; inset: 8px; z-index: -1; pointer-events: none; border: 5px solid var(--ink);
+    outline: 1.5px solid var(--ink); outline-offset: -11px;
+    background: linear-gradient(var(--accent2), var(--accent2)) 0 0 / 14px 14px no-repeat, linear-gradient(var(--accent2), var(--accent2)) 100% 0 / 14px 14px no-repeat,
+      linear-gradient(var(--accent2), var(--accent2)) 0 100% / 14px 14px no-repeat, linear-gradient(var(--accent2), var(--accent2)) 100% 100% / 14px 14px no-repeat; }
+  /* an oval post-office stamp */
+  .stamp { top: 34px; right: 28px; rotate: -12deg; }
+  .stamp::after { display: grid; place-items: center; width: 150px; height: 74px; border: 3px solid var(--accent); border-radius: 50%;
+    color: var(--accent); background: rgba(239,224,195,.82); font: 700 11px/1.2 Rockwell, "Courier New", serif; letter-spacing: .12em;
+    text-transform: uppercase; text-align: center; padding: 0 16px; box-shadow: inset 0 0 0 4px rgba(239,224,195,.82), inset 0 0 0 5px var(--accent); }
+  .photo .frame { border: 4px solid var(--ink); box-shadow: 9px 9px 0 var(--accent2); }
+  .photo .frame img { filter: sepia(.35) contrast(1.05); }
+  .years { display: table; background: var(--ink); color: var(--paper); padding: 5px 10px 4px; }
+  /* Big Pink behind the woodtype */
+  :scope .etitle { font-size: clamp(36px, 10.5vw, 58px); }
+  .display { background: linear-gradient(transparent 52%, var(--accent2) 52% 90%, transparent 90%); box-decoration-break: clone; -webkit-box-decoration-break: clone;
+    display: inline; padding: 0 4px; }
+  h1.display, h2.display { display: inline; }
+  .moments .year { color: var(--accent); }
+  /* a stitched leather patch */
+  .chip { background: #7b4a25; color: #fff3df; border: 0; outline: 1.5px dashed rgba(255,243,223,.7); outline-offset: -6px; padding: 8px 18px; }
+  .chip:nth-child(3n+2) { background: #5c3a1e; }
+  /* a wood block, inked pink */
+  .button { background: var(--accent2); color: var(--ink); border: 3px solid var(--ink); box-shadow: inset 0 -4px 0 rgba(43,27,16,.22);
+    font: 400 17px/1.1 "Rye", Georgia, serif; letter-spacing: .01em; text-transform: none; }
+  .button.accent { background: var(--accent); color: var(--accent-ink); border-color: var(--ink); }
+  .card, :scope.card { background: var(--card); border: 2px solid var(--ink); box-shadow: inset 0 0 0 5px var(--card), inset 0 0 0 6.5px rgba(43,27,16,.55);
+    padding: 20px 22px; }
+  .section-title { font: 400 21px/1.2 "Rye", Georgia, serif; letter-spacing: .01em; text-transform: none; color: var(--accent); }
+  .section-title::after { content: ""; display: block; height: 5px; margin-top: 6px; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); width: 72px; }
+  .list { border-top: 3px solid var(--ink); }
+  :scope.tc { border: 5px solid var(--ink); box-shadow: inset 0 0 0 4px var(--paper), inset 0 0 0 5.5px var(--ink); padding: 22px 22px 24px; }
+  .big { color: var(--accent); }
+  :scope .drawn { background: repeating-linear-gradient(91deg, rgba(43,27,16,.08) 0 2px, transparent 2px 11px), var(--accent2); color: var(--ink);
+    box-shadow: inset 0 0 0 5px var(--accent2), inset 0 0 0 8px var(--ink); }
+  .pl { background: var(--card); border: 4px solid var(--ink); padding: 8px; box-shadow: 7px 7px 0 var(--accent2); }
+  .chart { border: 5px solid var(--ink); outline: 1.5px solid var(--ink); outline-offset: 4px; }
+  .toggle .on { background: var(--accent2); color: var(--ink); }
+}

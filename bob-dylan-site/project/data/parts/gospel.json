@@ -1,0 +1,395 @@
+{
+  "eras": [
+    {
+      "id": "gospel",
+      "title": "Gospel",
+      "years": [
+        1979,
+        1981
+      ],
+      "theme": "gospel",
+      "summary": "After a born-again Christian conversion in the late 1970s, Dylan made three albums of faith-centred songs and for a time played only that new material in concert. The period won him a Grammy and also alienated many fans who wanted the old songs.",
+      "albums": [
+        "slow-train-coming",
+        "saved",
+        "shot-of-love"
+      ],
+      "moments": [
+        "snl-1979",
+        "warfield-gospel-shows-1979",
+        "grammy-1980",
+        "musical-retrospective-1980"
+      ],
+      "photos": []
+    }
+  ],
+  "moments": [
+    {
+      "id": "snl-1979",
+      "year": 1979,
+      "title": "Saturday Night Live: three gospel songs",
+      "text": "On October 20, 1979, he played three songs from Slow Train Coming as the musical guest on Saturday Night Live.",
+      "era": "gospel",
+      "youtube": null
+    },
+    {
+      "id": "warfield-gospel-shows-1979",
+      "year": 1979,
+      "title": "Gospel-only shows at the Warfield",
+      "text": "Starting November 1, 1979, he played a run of concerts at San Francisco's Fox Warfield Theatre made up only of new religious songs and none of his older hits.",
+      "era": "gospel",
+      "youtube": null
+    },
+    {
+      "id": "grammy-1980",
+      "year": 1980,
+      "title": "Grammy for Gotta Serve Somebody",
+      "text": "In February 1980 he won the Grammy for Best Rock Vocal Performance, Male, for Gotta Serve Somebody and performed the song at the ceremony.",
+      "era": "gospel",
+      "youtube": null
+    },
+    {
+      "id": "musical-retrospective-1980",
+      "year": 1980,
+      "title": "Older songs return to the set",
+      "text": "In November 1980 he returned to the Warfield for shows that brought some of his older songs back alongside the gospel material.",
+      "era": "gospel",
+      "youtube": null
+    }
+  ],
+  "albums": [
+    {
+      "id": "slow-train-coming",
+      "title": "Slow Train Coming",
+      "year": 1979,
+      "era": "gospel",
+      "why": "His first album after becoming a born-again Christian, it set evangelical lyrics to a polished R&B sound cut at Muscle Shoals with producers Jerry Wexler and Barry Beckett. Mark Knopfler's guitar and a Grammy-winning single made it a commercial success even as it divided longtime fans.",
+      "songs": [
+        "gotta-serve-somebody",
+        "precious-angel",
+        "i-believe-in-you",
+        "slow-train",
+        "gonna-change-my-way-of-thinking",
+        "when-you-gonna-wake-up",
+        "man-gave-names-to-all-the-animals",
+        "when-he-returns"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "saved",
+      "title": "Saved",
+      "year": 1980,
+      "era": "gospel",
+      "why": "A fuller gospel record, cut with his touring band and backing singers, that captures the fervor of the gospel-only concerts.",
+      "songs": [
+        "saved",
+        "solid-rock",
+        "pressing-on"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "shot-of-love",
+      "title": "Shot of Love",
+      "year": 1981,
+      "era": "gospel",
+      "why": "Mixing faith songs with secular ones, it closed the gospel period and ends with Every Grain of Sand.",
+      "songs": [
+        "shot-of-love",
+        "lenny-bruce",
+        "every-grain-of-sand"
+      ],
+      "landmark": false,
+      "cover": null
+    }
+  ],
+  "songs": [
+    {
+      "id": "gotta-serve-somebody",
+      "title": "Gotta Serve Somebody",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "It won Dylan the 1980 Grammy for Best Rock Vocal Performance, Male.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/gotta-serve-somebody/",
+      "preview": "Whoever you are and however high you rise, you will end up answering to one master or another.",
+      "excerpt": null
+    },
+    {
+      "id": "precious-angel",
+      "title": "Precious Angel",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "Mark Knopfler of Dire Straits plays the lead guitar on the track.",
+      "themes": [
+        "faith",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/precious-angel/",
+      "preview": "A thank-you to the woman who showed him the way to faith, mixed with warnings for a world he thinks has lost its bearings.",
+      "excerpt": null
+    },
+    {
+      "id": "i-believe-in-you",
+      "title": "I Believe in You",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "It was one of three songs he played on Saturday Night Live in October 1979.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/i-believe-you/",
+      "preview": "He holds to his belief even as friends turn away and treat him as a stranger.",
+      "excerpt": null
+    },
+    {
+      "id": "slow-train",
+      "title": "Slow Train",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "The album takes its name from this song.",
+      "themes": [
+        "faith",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/slow-train/",
+      "preview": "A survey of greed, false leaders and moral drift, with a reckoning steadily drawing closer.",
+      "excerpt": null
+    },
+    {
+      "id": "gonna-change-my-way-of-thinking",
+      "title": "Gonna Change My Way of Thinking",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "He recorded a reworked version as a duet with Mavis Staples for a 2003 tribute album of his gospel songs.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/gonna-change-my-way-thinking/",
+      "preview": "A vow to turn his life around and live by a new set of rules.",
+      "excerpt": null
+    },
+    {
+      "id": "when-you-gonna-wake-up",
+      "title": "When You Gonna Wake Up",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "He performed it on Saturday Night Live in October 1979.",
+      "themes": [
+        "faith",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/when-you-gonna-wake/",
+      "preview": "A list of society's hypocrisies, ending in a demand that the listener open their eyes.",
+      "excerpt": null
+    },
+    {
+      "id": "man-gave-names-to-all-the-animals",
+      "title": "Man Gave Names to All the Animals",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "It was published as an illustrated children's picture book in 2010.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/man-gave-names-all-animals/",
+      "preview": "A playful retelling of the first man naming each creature he meets in the garden.",
+      "excerpt": null
+    },
+    {
+      "id": "when-he-returns",
+      "title": "When He Returns",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "The album's closing track is just Dylan's voice and Barry Beckett's piano.",
+      "themes": [
+        "faith",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/when-he-returns/",
+      "preview": "A quiet hymn of surrender, waiting for a promised return that will set things right.",
+      "excerpt": null
+    },
+    {
+      "id": "saved",
+      "title": "Saved",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "The title track is co-credited to Dylan and bassist Tim Drummond.",
+      "themes": [
+        "faith",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/saved/",
+      "preview": "A jubilant testimony of being pulled out of a lost life.",
+      "excerpt": null
+    },
+    {
+      "id": "solid-rock",
+      "title": "Solid Rock",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "It was a driving fixture of the 1979–80 gospel concerts.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/solid-rock/",
+      "preview": "He declares he is holding on to an unshakable foundation no matter what the world throws at him.",
+      "excerpt": null
+    },
+    {
+      "id": "pressing-on",
+      "title": "Pressing On",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "In the 2007 film I'm Not There it is sung by John Doe.",
+      "themes": [
+        "faith",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/pressing/",
+      "preview": "A determined promise to keep moving toward a higher goal despite doubters.",
+      "excerpt": null
+    },
+    {
+      "id": "shot-of-love",
+      "title": "Shot of Love",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "The title track was produced by Bumps Blackwell, known for his work with Little Richard.",
+      "themes": [
+        "faith",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/shot-love/",
+      "preview": "A plea for the one kind of cure that can heal a troubled soul.",
+      "excerpt": null
+    },
+    {
+      "id": "lenny-bruce",
+      "title": "Lenny Bruce",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "It is a tribute to the comedian Lenny Bruce, who died in 1966.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/lenny-bruce/",
+      "preview": "A fond remembrance of a rule-breaking comic who was hounded in life and is missed now that he is gone.",
+      "excerpt": null
+    },
+    {
+      "id": "every-grain-of-sand",
+      "title": "Every Grain of Sand",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "It closes the album and is often counted among his finest songs.",
+      "themes": [
+        "faith",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/every-grain-sand/",
+      "preview": "A humble meditation on finding a guiding design in every small detail of an imperfect life.",
+      "excerpt": null
+    },
+    {
+      "id": "serve-yourself",
+      "title": "Serve Yourself",
+      "year": 1980,
+      "album": null,
+      "by": "John Lennon",
+      "note": "John Lennon recorded it as a home demo in 1980 and it was released after his death.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "every-grain-of-sand-emmylou-harris",
+      "title": "Every Grain of Sand",
+      "year": 1995,
+      "album": null,
+      "by": "Emmylou Harris",
+      "note": "Emmylou Harris recorded it for her 1995 album Wrecking Ball.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "serve-yourself",
+      "to": "gotta-serve-somebody",
+      "kind": "answer",
+      "why": "John Lennon wrote Serve Yourself as a sardonic rejoinder to Gotta Serve Somebody."
+    },
+    {
+      "from": "every-grain-of-sand",
+      "to": "every-grain-of-sand-emmylou-harris",
+      "kind": "covered-by",
+      "why": "Emmylou Harris recorded the song on her acclaimed 1995 album Wrecking Ball."
+    },
+    {
+      "from": "gotta-serve-somebody",
+      "to": "when-you-gonna-wake-up",
+      "kind": "same-theme",
+      "why": "Both songs from Slow Train Coming warn listeners that no one can avoid a moral choice."
+    }
+  ]
+}

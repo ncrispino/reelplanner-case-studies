@@ -1,0 +1,63 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes in this frame: 44 (question, option labels) and 26 (everything else) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f57-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f57-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f57-tag { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.16em; color:var(--rp-ink); white-space:nowrap; }
+  .f57-q { position:absolute; left:90px; top:150px; width:1120px; font:400 44px/1.12 "EB Garamond"; letter-spacing:-0.015em; color:var(--rp-ink); }
+  .f57-opt { position:absolute; top:330px; width:540px; height:400px; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f57-opt .k { position:absolute; left:32px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f57-opt .l { position:absolute; left:32px; top:84px; right:32px; font:400 44px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f57-thing { position:absolute; left:1290px; top:96px; width:540px; height:180px; }
+  .f57-song { position:absolute; left:0; top:0; font:400 26px/32px "Inter"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; }
+  .f57-song b { font-weight:700; color:var(--rp-ink); }
+  .f57-row { position:absolute; left:0; top:48px; width:400px; height:72px; box-sizing:border-box; padding:0 22px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.16); font:400 26px/70px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="57-k5" data-band="bottom" data-start="0" data-duration="9.8" data-width="1920" data-height="1080">
+  <div class="clip f57-bg" id="f57-bg" data-start="0" data-duration="9.8" data-track-index="0"></div>
+
+  <div class="clip f57-scene" id="f57-scene" data-start="0" data-duration="9.8" data-track-index="1">
+    <div class="f57-tag" id="f57-tag">QUICK CHECK · STEP 6</div>
+    <div class="f57-thing" id="f57-thing" data-artifact="#/song/tangled-up-in-blue">
+      <div class="f57-song" id="f57-song"><b>Tangled Up in Blue</b> · 1975</div>
+      <div class="f57-row" id="f57-row">▶ Play · Spotify</div>
+    </div>
+    <div class="f57-q" id="f57-q" data-question>You open Tangled Up in Blue's page and never tap Play. What does the page load from Spotify?</div>
+
+    <div class="f57-opt" id="f57-opt-a" data-option="a" style="left:90px"><span class="k">A</span><div class="l">The player, ready to go</div></div>
+    <div class="f57-opt" id="f57-opt-b" data-option="b" style="left:690px"><span class="k">B</span><div class="l">Nothing</div></div>
+    <div class="f57-opt" id="f57-opt-c" data-option="c" style="left:1290px"><span class="k">C</span><div class="l">A 30-second preview</div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "57-k5";
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out";
+
+  // Scene 1 (0-4s): the eyebrow and the thing the question is about
+  tl.fromTo("#f57-tag", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 0.052);
+  tl.fromTo("#f57-song", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 0.207);
+  tl.fromTo("#f57-row", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.52);
+
+  // Scene 2 (4-12s): the question, then the three cards; all at rest from 6.4 s (hold from 8 s)
+  tl.fromTo("#f57-q", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 2.085);
+  tl.fromTo("#f57-opt-a", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.55, ease: E }, 2.605);
+  tl.fromTo("#f57-opt-b", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.55, ease: E }, 2.812);
+  tl.fromTo("#f57-opt-c", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.55, ease: E }, 3.021);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 11.99);
+  window.__timelines = window.__timelines || {};
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,386 @@
+{
+ "songs": [
+  {
+   "id": "all-i-really-want-to-do-the-byrds",
+   "title": "All I Really Want to Do",
+   "year": 1965,
+   "album": null,
+   "by": "The Byrds",
+   "note": "The Byrds included it on their 1965 debut album Mr. Tambourine Man and released it as a single that summer.",
+   "themes": [
+    "love",
+    "freedom"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "all-i-really-want-to-do-cher",
+   "title": "All I Really Want to Do",
+   "year": 1965,
+   "album": null,
+   "by": "Cher",
+   "note": "Cher's version was her first solo hit, reaching the US top twenty in 1965.",
+   "themes": [
+    "love",
+    "freedom"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "spanish-harlem-incident-the-byrds",
+   "title": "Spanish Harlem Incident",
+   "year": 1965,
+   "album": null,
+   "by": "The Byrds",
+   "note": "The Byrds recorded it for their 1965 debut album Mr. Tambourine Man.",
+   "themes": [
+    "love"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "she-belongs-to-me-rick-nelson",
+   "title": "She Belongs to Me",
+   "year": 1969,
+   "album": null,
+   "by": "Rick Nelson",
+   "note": "Rick Nelson's country-rock version with the Stone Canyon Band brought him back to the US charts in 1969.",
+   "themes": [
+    "love",
+    "freedom"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "the-mighty-quinn-quinn-the-eskimo-manfred-mann",
+   "title": "The Mighty Quinn (Quinn the Eskimo)",
+   "year": 1968,
+   "album": null,
+   "by": "Manfred Mann",
+   "note": "Manfred Mann's version went to number one in the UK in early 1968.",
+   "themes": [
+    "freedom"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "too-much-of-nothing-peter-paul-and-mary",
+   "title": "Too Much of Nothing",
+   "year": 1967,
+   "album": null,
+   "by": "Peter, Paul and Mary",
+   "note": "Peter, Paul and Mary released it as a single in late 1967, years before Dylan's own recording came out.",
+   "themes": [
+    "time",
+    "loss"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "nothing-was-delivered-the-byrds",
+   "title": "Nothing Was Delivered",
+   "year": 1968,
+   "album": null,
+   "by": "The Byrds",
+   "note": "The Byrds recorded it for their 1968 country album Sweetheart of the Rodeo.",
+   "themes": [
+    "time",
+    "loss"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "million-dollar-bash-fairport-convention",
+   "title": "Million Dollar Bash",
+   "year": 1969,
+   "album": null,
+   "by": "Fairport Convention",
+   "note": "Fairport Convention recorded it for their 1969 album Unhalfbricking.",
+   "themes": [
+    "freedom"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "dear-landlord-joe-cocker",
+   "title": "Dear Landlord",
+   "year": 1969,
+   "album": null,
+   "by": "Joe Cocker",
+   "note": "Joe Cocker included it on his second album, Joe Cocker!, released in 1969.",
+   "themes": [
+    "freedom",
+    "time"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "i-pity-the-poor-immigrant-joan-baez",
+   "title": "I Pity the Poor Immigrant",
+   "year": 1968,
+   "album": null,
+   "by": "Joan Baez",
+   "note": "Joan Baez recorded it for Any Day Now, her 1968 double album of Dylan songs.",
+   "themes": [
+    "America",
+    "faith",
+    "loss"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "father-of-night-manfred-manns-earth-band",
+   "title": "Father of Night",
+   "year": 1973,
+   "album": null,
+   "by": "Manfred Mann's Earth Band",
+   "note": "Manfred Mann's Earth Band recorded a long, heavy version for their 1973 album Solar Fire.",
+   "themes": [
+    "faith"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  },
+  {
+   "id": "emotionally-yours-the-ojays",
+   "title": "Emotionally Yours",
+   "year": 1991,
+   "album": null,
+   "by": "The O'Jays",
+   "note": "The O'Jays made it the title track of their 1991 album Emotionally Yours.",
+   "themes": [
+    "love"
+   ],
+   "spotify": null,
+   "youtube": null,
+   "lyrics": null,
+   "preview": null,
+   "excerpt": null
+  }
+ ],
+ "links": [
+  {
+   "from": "all-i-really-want-to-do",
+   "to": "all-i-really-want-to-do-the-byrds",
+   "kind": "covered-by",
+   "why": "The Byrds put out their electric version as a single in 1965, a year after Dylan's own."
+  },
+  {
+   "from": "all-i-really-want-to-do",
+   "to": "all-i-really-want-to-do-cher",
+   "kind": "covered-by",
+   "why": "Cher turned it into her first solo hit in 1965, racing the Byrds' version up the charts."
+  },
+  {
+   "from": "spanish-harlem-incident",
+   "to": "spanish-harlem-incident-the-byrds",
+   "kind": "covered-by",
+   "why": "The Byrds gave it a jangling electric arrangement on their 1965 debut album."
+  },
+  {
+   "from": "she-belongs-to-me",
+   "to": "she-belongs-to-me-rick-nelson",
+   "kind": "covered-by",
+   "why": "Rick Nelson's 1969 country-rock version was his first chart single in years."
+  },
+  {
+   "from": "the-mighty-quinn-quinn-the-eskimo",
+   "to": "the-mighty-quinn-quinn-the-eskimo-manfred-mann",
+   "kind": "covered-by",
+   "why": "Manfred Mann took the song to number one in Britain in 1968, years before Dylan released a recording of his own."
+  },
+  {
+   "from": "too-much-of-nothing",
+   "to": "too-much-of-nothing-peter-paul-and-mary",
+   "kind": "covered-by",
+   "why": "Peter, Paul and Mary had it out as a single in 1967, long before the basement recording was released."
+  },
+  {
+   "from": "nothing-was-delivered",
+   "to": "nothing-was-delivered-the-byrds",
+   "kind": "covered-by",
+   "why": "The Byrds recorded it for Sweetheart of the Rodeo in 1968, from the basement demos."
+  },
+  {
+   "from": "million-dollar-bash",
+   "to": "million-dollar-bash-fairport-convention",
+   "kind": "covered-by",
+   "why": "Fairport Convention recorded it on Unhalfbricking in 1969, six years before Dylan's version was released."
+  },
+  {
+   "from": "dear-landlord",
+   "to": "dear-landlord-joe-cocker",
+   "kind": "covered-by",
+   "why": "Joe Cocker gave it a big soul treatment on his second album in 1969."
+  },
+  {
+   "from": "i-pity-the-poor-immigrant",
+   "to": "i-pity-the-poor-immigrant-joan-baez",
+   "kind": "covered-by",
+   "why": "Joan Baez sang it on Any Day Now, her 1968 album made entirely of Dylan songs."
+  },
+  {
+   "from": "father-of-night",
+   "to": "father-of-night-manfred-manns-earth-band",
+   "kind": "covered-by",
+   "why": "Manfred Mann's Earth Band stretched the short hymn into a long rock piece on Solar Fire in 1973."
+  },
+  {
+   "from": "emotionally-yours",
+   "to": "emotionally-yours-the-ojays",
+   "kind": "covered-by",
+   "why": "The O'Jays recorded it as a soul ballad and named their 1991 album after it."
+  },
+  {
+   "from": "apple-suckling-tree",
+   "to": "froggie-went-a-courtin",
+   "kind": "borrowed-tune",
+   "why": "Its nursery-rhyme melody and question-and-answer lines are modelled on the old children's song Froggie Went a-Courtin'."
+  },
+  {
+   "from": "ballad-in-plain-d",
+   "to": "dont-think-twice-its-all-right",
+   "kind": "same-theme",
+   "why": "Both come out of his relationship with Suze Rotolo, the first as it frayed and the second after it ended."
+  },
+  {
+   "from": "down-the-highway",
+   "to": "boots-of-spanish-leather",
+   "kind": "same-theme",
+   "why": "Both grew out of the months Suze Rotolo spent in Italy, one a lonesome blues about her going and the other a farewell to a lover sailing away."
+  },
+  {
+   "from": "north-country-blues",
+   "to": "union-sundown",
+   "kind": "same-theme",
+   "why": "Both tell of American working people losing their livelihoods when the work moves to cheaper places abroad."
+  },
+  {
+   "from": "talking-world-war-iii-blues",
+   "to": "with-god-on-our-side",
+   "kind": "same-theme",
+   "why": "Both reach the fear of a nuclear war, one as a comic dream of being its survivor and the other as the end of a long roll call of wars."
+  },
+  {
+   "from": "the-ballad-of-ira-hayes",
+   "to": "clean-cut-kid",
+   "kind": "same-theme",
+   "why": "Both follow a young American sent to war who comes home broken and is destroyed by what the country made of him."
+  },
+  {
+   "from": "in-the-garden",
+   "to": "when-he-returns",
+   "kind": "same-theme",
+   "why": "Both are gospel-era songs centred on Jesus himself, one retelling his life and resurrection and the other awaiting his return."
+  },
+  {
+   "from": "covenant-woman",
+   "to": "precious-angel",
+   "kind": "same-theme",
+   "why": "Both are love songs to a believing woman that double as thanks for her part in his conversion."
+  },
+  {
+   "from": "high-water-for-charley-patton",
+   "to": "the-levees-gonna-break",
+   "kind": "same-theme",
+   "why": "Both draw on the Delta blues written about the great Mississippi flood of 1927."
+  },
+  {
+   "from": "crash-on-the-levee-down-in-the-flood",
+   "to": "the-levees-gonna-break",
+   "kind": "same-theme",
+   "why": "Both take the old blues picture of a levee giving way as a sign that trouble is coming for everyone."
+  },
+  {
+   "from": "i-shall-be-free",
+   "to": "i-shall-be-free-no-10",
+   "kind": "same-theme",
+   "why": "The second is a comic sequel to the first, a year later, in the same rambling talking-blues style."
+  },
+  {
+   "from": "two-soldiers",
+   "to": "arthur-mcbride",
+   "kind": "same-theme",
+   "why": "Both are old ballads he recorded in the early 1990s that set ordinary young men against the cost of soldiering."
+  },
+  {
+   "from": "love-henry",
+   "to": "frankie-and-albert",
+   "kind": "same-theme",
+   "why": "Both are old murder ballads in which a woman kills the man who has been unfaithful to her."
+  },
+  {
+   "from": "little-sadie",
+   "to": "delia",
+   "kind": "same-theme",
+   "why": "Both are old murder ballads about a man who shoots a woman and is brought to trial for it."
+  },
+  {
+   "from": "jack-a-roe",
+   "to": "canadee-i-o",
+   "kind": "same-theme",
+   "why": "Both are old ballads of a young woman who dresses as a man to follow her love, one to war and one to sea."
+  },
+  {
+   "from": "lone-pilgrim",
+   "to": "death-is-not-the-end",
+   "kind": "same-theme",
+   "why": "Both are hymn-like songs of consolation that tell mourners death is not the last word."
+  },
+  {
+   "from": "if-you-see-her-say-hello",
+   "to": "girl-from-the-north-country",
+   "kind": "same-theme",
+   "why": "In both the singer asks someone else to carry his greetings to a woman he has lost."
+  },
+  {
+   "from": "blackjack-davey",
+   "to": "tin-angel",
+   "kind": "same-theme",
+   "why": "Both tell of a lady who rides away with another man and a husband who rides after her."
+  }
+ ]
+}

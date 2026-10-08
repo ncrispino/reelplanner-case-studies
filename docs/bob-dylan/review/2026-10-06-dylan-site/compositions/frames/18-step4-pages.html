@@ -1,0 +1,143 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* three type sizes: 26 (labels, page rows), 28 (body), 44 (titles) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f18-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f18-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* anchor */
+  .f18-step { position:absolute; left:120px; top:130px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f18-title { position:absolute; left:120px; top:172px; width:340px; font:400 44px/1.08 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* the phone (Video direction) */
+  .f18-phone { position:absolute; top:110px; width:400px; height:800px; box-sizing:border-box; border-radius:44px; border:1px solid var(--rp-ink); background:var(--rp-paper); overflow:hidden; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f18-tabs { position:absolute; left:0; bottom:0; width:398px; height:84px; box-sizing:border-box; padding:20px 24px 0; display:flex; justify-content:space-between; align-items:flex-start; border-top:1px solid rgba(var(--rp-ink-rgb),0.14); font:400 26px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.55); }
+  .f18-tabs .on { color:var(--rp-ink); }
+  .f18-era { position:absolute; left:28px; top:30px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* left phone (song page): Greenwich Village theme (paper, ink, typewriter mono display) */
+  .f18-s-title { position:absolute; left:28px; top:70px; width:344px; font:400 44px/50px "JetBrains Mono"; letter-spacing:-0.02em; color:var(--rp-ink); }
+  .f18-s-alb { position:absolute; left:28px; top:184px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); white-space:nowrap; }
+  .f18-s-note { position:absolute; left:28px; top:226px; width:344px; font:400 28px/38px "Inter"; color:var(--rp-ink); }
+  .f18-row { position:absolute; left:0; width:398px; height:68px; box-sizing:border-box; padding:0 28px; border-top:1px solid rgba(var(--rp-ink-rgb),0.2); font:700 26px/67px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f18-tri { display:inline-block; width:0; height:0; margin-right:14px; border-left:18px solid var(--rp-ink); border-top:11px solid transparent; border-bottom:11px solid transparent; vertical-align:-2px; }
+  .f18-rowend { position:absolute; left:0; top:502px; width:398px; height:1px; background:rgba(var(--rp-ink-rgb),0.2); transform-origin:0 50%; }
+  .f18-ring { position:absolute; left:10px; top:362px; width:378px; height:144px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:12px; }
+  .f18-s-conh { position:absolute; left:28px; top:530px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f18-card { position:absolute; left:20px; top:570px; width:358px; box-sizing:border-box; padding:14px 18px 16px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f18-card .k { display:block; font:400 26px/32px "Inter"; color:rgba(var(--rp-ink-rgb),0.66); }
+  .f18-card .t { display:block; margin-top:4px; font:700 28px/36px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+
+  /* right phone (album page): Basement and Country theme (warm tint, serif) */
+  .f18-alb { background:color-mix(in oklab, var(--rp-paper) 80%, var(--rp-coral-deep)); }
+  .f18-alb .f18-tabs { background:color-mix(in oklab, var(--rp-paper) 80%, var(--rp-coral-deep)); }
+  .f18-a-title { position:absolute; left:28px; top:68px; font:400 44px/1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); white-space:nowrap; }
+  .f18-a-yr { position:absolute; left:28px; top:124px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); }
+  .f18-cover { position:absolute; left:49px; top:168px; width:300px; height:300px; box-sizing:border-box; padding:26px 26px; border-radius:8px; background:color-mix(in oklab, var(--rp-coral-deep) 45%, var(--rp-slab)); }
+  .f18-cover .ct { font:400 44px/1.02 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-paper); }
+  .f18-cover .cy { position:absolute; left:26px; bottom:24px; font:400 26px/1 "JetBrains Mono"; color:color-mix(in oklab, var(--rp-paper) 80%, var(--rp-coral-deep)); }
+  .f18-cover .cr { position:absolute; left:26px; right:26px; top:136px; height:1px; background:rgba(var(--rp-on-ink-rgb),0.4); transform-origin:0 50%; }
+  .f18-a-songsh { position:absolute; left:28px; top:500px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f18-a-song { position:absolute; left:28px; width:344px; height:50px; box-sizing:border-box; border-top:1px solid rgba(var(--rp-ink-rgb),0.14); font:400 28px/50px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+
+  /* the label for the drawn cover */
+  .f18-lab { position:absolute; left:1470px; top:362px; width:300px; font:400 26px/34px "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f18-lead { position:absolute; left:1352px; top:396px; width:104px; height:1px; background:rgba(var(--rp-ink-rgb),0.5); transform-origin:0 50%; }
+</style>
+
+<div id="root" data-composition-id="18-step4-pages" data-band="bottom" data-start="0" data-duration="21.056" data-width="1920" data-height="1080">
+  <div class="clip f18-bg" id="f18-bg" data-start="0" data-duration="21.056" data-track-index="0"></div>
+
+  <div class="clip f18-scene" id="f18-scene" data-start="0" data-duration="21.056" data-track-index="1">
+    <div class="f18-step" id="f18-step">Step 4</div>
+    <div class="f18-title" id="f18-title">Album and song pages</div>
+
+    <!-- right phone: the album page, its cover drawn -->
+    <div class="f18-phone f18-alb" id="f18-p1" data-artifact="#/album/new-morning" style="left:1000px">
+      <div class="f18-era">Basement and Country</div>
+      <div class="f18-a-title" id="f18-a-title">New Morning</div>
+      <div class="f18-a-yr" id="f18-a-yr">1970</div>
+      <div class="f18-cover" id="f18-cover">
+        <div class="ct">New Morning</div>
+        <i class="cr" id="f18-cover-r"></i>
+        <div class="cy">1970</div>
+      </div>
+      <div class="f18-a-songsh" id="f18-a-songsh">Songs</div>
+      <div class="f18-a-song" id="f18-a-s1" style="top:536px">If Not for You</div>
+      <div class="f18-a-song" id="f18-a-s2" style="top:586px">Day of the Locusts</div>
+      <div class="f18-a-song" id="f18-a-s3" style="top:636px">Time Passes Slowly</div>
+      <div class="f18-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+    </div>
+
+    <!-- left phone: the song page (the real thing) -->
+    <div class="f18-phone" id="f18-p2" data-artifact="#/song/blowin-in-the-wind" style="left:520px">
+      <div class="f18-era" id="f18-s-era">Greenwich Village</div>
+      <div class="f18-s-title" id="f18-s-title">Blowin’ in the Wind</div>
+      <div class="f18-s-alb" id="f18-s-alb">Freewheelin’ · 1963</div>
+      <div class="f18-s-note" id="f18-s-note">Written in ten minutes at the Commons coffeehouse, April 1962.</div>
+      <div class="f18-row" id="f18-r-lyr" style="top:366px">Lyrics on bobdylan.com ↗</div>
+      <div class="f18-row" id="f18-r-play" style="top:434px"><span class="f18-tri"></span>Play · Spotify</div>
+      <i class="f18-rowend" id="f18-rowend"></i>
+      <div class="f18-ring" id="f18-ring"></div>
+      <div class="f18-s-conh" id="f18-s-conh">Connections</div>
+      <div class="f18-card" id="f18-card">
+        <span class="k">Borrowed the tune of</span>
+        <span class="t">No More Auction Block</span>
+      </div>
+      <div class="f18-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+    </div>
+
+    <div class="f18-lab" id="f18-lab">drawn when the real cover fails</div>
+    <i class="f18-lead" id="f18-lead"></i>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "18-step4-pages";
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out";
+  function up(sel, t, d) { tl.fromTo(sel, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: d || 0.5, ease: E }, t); }
+
+  // Scene 1 (0-8s): anchor; the left phone draws the song page
+  tl.fromTo("#f18-step", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 0.175);
+  tl.fromTo("#f18-title", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 0.307);
+  tl.fromTo("#f18-p2", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.264);
+  up("#f18-s-era", 0.877);
+  up("#f18-s-title", 1.228);
+  up("#f18-s-alb", 2.281);
+  up("#f18-s-note", 3.685, 0.6);
+
+  // Scene 2 (8-16s): the Lyrics row, the Play row, then the connection card
+  tl.fromTo("#f18-r-lyr", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 7.37);
+  tl.fromTo("#f18-r-play", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 8.95);
+  tl.fromTo("#f18-rowend", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: E }, 9.036);
+  tl.fromTo("#f18-ring", { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, 10.002);
+  up("#f18-s-conh", 11.23);
+  tl.fromTo("#f18-card", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 11.581);
+
+  // Scene 3 (16-24s): the right phone, New Morning with its drawn cover; then hold
+  tl.fromTo("#f18-p1", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 14.212);
+  up("#f18-a-title", 14.651);
+  up("#f18-a-yr", 14.914);
+  tl.fromTo("#f18-cover", { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.6, ease: E }, 15.617);
+  tl.fromTo("#f18-cover-r", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: E }, 16.055);
+  up("#f18-a-songsh", 16.318);
+  up("#f18-a-s1", 16.494, 0.4);
+  up("#f18-a-s2", 16.669, 0.4);
+  up("#f18-a-s3", 16.845, 0.4);
+  tl.fromTo("#f18-lab", { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 17.196);
+  tl.fromTo("#f18-lead", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: E }, 17.459);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 23.99);
+  window.__timelines = window.__timelines || {};
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

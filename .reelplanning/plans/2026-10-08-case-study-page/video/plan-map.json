@@ -1,0 +1,1644 @@
+{
+  "project": "video",
+  "title": "video",
+  "planDir": ".reelplanning/plans/2026-10-08-case-study-page",
+  "kind": "plan",
+  "totalSeconds": 263.72,
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Today",
+      "fromFrame": 1,
+      "toFrame": 3,
+      "start": 0,
+      "end": 45.768,
+      "linearSeconds": 45.768,
+      "watchedSeconds": 45.768,
+      "decisions": []
+    },
+    {
+      "id": "ch2",
+      "title": "One record",
+      "fromFrame": 4,
+      "toFrame": 8,
+      "start": 45.768,
+      "end": 99.744,
+      "linearSeconds": 53.976,
+      "watchedSeconds": 41.976,
+      "decisions": [
+        "q1"
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Videos to watch",
+      "fromFrame": 9,
+      "toFrame": 14,
+      "start": 99.744,
+      "end": 166.888,
+      "linearSeconds": 67.144,
+      "watchedSeconds": 55.144,
+      "decisions": [
+        "q2"
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "A page in order",
+      "fromFrame": 15,
+      "toFrame": 23,
+      "start": 166.888,
+      "end": 263.72,
+      "linearSeconds": 96.832,
+      "watchedSeconds": 84.832,
+      "decisions": [
+        "q3"
+      ]
+    }
+  ],
+  "levels": null,
+  "quizzes": [
+    {
+      "id": "k1",
+      "frameIndex": 14,
+      "planStep": 2,
+      "question": "On the watch page you click question 4 of the walkthrough of the site on a computer. What happens?",
+      "options": [
+        {
+          "id": "a",
+          "label": "The video jumps there and shows what the owner answered",
+          "why": "Right: it jumps, and shows the answer, A, a link to a thread."
+        },
+        {
+          "id": "b",
+          "label": "A form opens to answer it",
+          "why": "Nothing on the watch page takes an answer."
+        },
+        {
+          "id": "c",
+          "label": "The review page opens",
+          "why": "Watch links stay on the watch page."
+        }
+      ],
+      "answer": "a",
+      "explain": "The watch page only plays: a question in its list jumps the video there and shows what the owner answered.",
+      "at": 166.838,
+      "explainedAt": 99.744,
+      "explainedFrame": 9,
+      "walkMeThrough": "Question 4 of the walkthrough of the site on a computer asked whether the map page should link to a thread from its song. The owner answered A. On the watch page the chapter list has that question; clicking it jumps the video to it and shows the answer beside it, with nothing to fill in."
+    },
+    {
+      "id": "k2",
+      "frameIndex": 22,
+      "planStep": 5,
+      "question": "Someone tidies a quote, writing don't where the owner wrote dont. What does the check do?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Passes: the meaning is the same",
+          "why": "The check compares words, not meanings."
+        },
+        {
+          "id": "b",
+          "label": "It fails on that event",
+          "why": "Right: the quote is not in its source as written."
+        },
+        {
+          "id": "c",
+          "label": "Fixes the quote back",
+          "why": "The check only reports; it changes nothing."
+        }
+      ],
+      "answer": "b",
+      "explain": "A quote must be in its source word for word, so a tidied one fails the check, which names the event.",
+      "at": 254.67,
+      "explainedAt": 233.056,
+      "explainedFrame": 21,
+      "walkMeThrough": "The timeline quotes the owner exactly, typos and all. The check reads each quote's source and looks for the quote word for word. \"don't\" is not in the review, which says \"dont\", so the check fails and names that event."
+    }
+  ],
+  "autonomy": [],
+  "watchedSeconds": 227.72,
+  "frames": [
+    {
+      "index": 1,
+      "title": "Today's study page",
+      "compositionId": "01-today",
+      "type": "hook",
+      "durationSeconds": 11.304,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "Today",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Here's the case study page as it is. You said it doesn't explain anything. It tells reelplanning in general words, in cards, before it shows anything that happened, and its videos open in the review page.",
+      "start": 0,
+      "thumb": "snapshots/frame-00-at-5.9s.png",
+      "terms": [
+        "case study",
+        "study page",
+        "review page"
+      ],
+      "defines": [
+        "case study",
+        "study page",
+        "review page"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "What falls short",
+      "compositionId": "02-short",
+      "type": "problem",
+      "durationSeconds": 19.488,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Three things fall short. The order of events, which comment led to which video, has to be pieced together from four cards. A visitor gets the review page, with marks, comments and a finish button they can't use. And the record of what happened sits in four places: the transcript, the reviews, the commits and the plans.",
+      "start": 11.304,
+      "thumb": "snapshots/frame-01-at-21.3s.png",
+      "terms": [
+        "marks",
+        "finish button",
+        "transcript",
+        "review",
+        "commit",
+        "plan"
+      ],
+      "defines": [
+        "marks",
+        "finish button",
+        "transcript",
+        "review",
+        "commit",
+        "plan"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "Three changes, five steps",
+      "compositionId": "03-changes",
+      "type": "solution",
+      "durationSeconds": 14.976,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "So, three changes in five steps. One record of what happened, built from all four. Videos to watch, not review. And a page that tells it in order, with a check that every event has a source.",
+      "start": 30.792,
+      "thumb": "snapshots/frame-02-at-38.53s.png",
+      "terms": [
+        "step",
+        "source",
+        "watch page",
+        "timeline record"
+      ],
+      "defines": [
+        "step",
+        "source",
+        "watch page",
+        "timeline record"
+      ]
+    },
+    {
+      "index": 4,
+      "title": "Step 1 · The timeline",
+      "compositionId": "04-step1",
+      "type": "feature_showcase",
+      "durationSeconds": 21.168,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "One record",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step one. A script reads the transcript, every review and the project's commits, and writes one timeline. Each event keeps its time, the owner's own words, quoted exactly, its source, and what it led to. The first walkthrough review, for example, leads to the commit that gave each era its own look.",
+      "start": 45.768,
+      "thumb": "snapshots/frame-03-at-56.6s.png",
+      "terms": [
+        "event",
+        "timeline",
+        "agent",
+        "walkthrough",
+        "era",
+        "quote",
+        "own words",
+        "transcript",
+        "step"
+      ],
+      "defines": [
+        "event",
+        "timeline",
+        "agent",
+        "walkthrough",
+        "era",
+        "quote",
+        "own words"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Question 1 · What does the timeline say of the agent's side?",
+      "compositionId": "05-q1",
+      "type": "cta",
+      "durationSeconds": 14.808,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": "q1",
+      "branch": null,
+      "question": "What does the timeline say of the agent's side?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "One line per event, from its commit message",
+          "why": "Short; the agent's reasoning stays in the transcript.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Also quote the agent's chat replies",
+          "why": "Much longer; the replies are long.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Only the owner's side",
+          "why": "What was built shows only as pictures.",
+          "recommended": false
+        }
+      ],
+      "narration": "Question one, for step one: what does the timeline say of the agent's side? A: one line per event, from its commit message. B: also quote the agent's chat replies. C: only the owner's side. I recommend A.",
+      "start": 66.936,
+      "thumb": "snapshots/frame-04-at-74.59s.png",
+      "terms": [
+        "timeline record",
+        "agent",
+        "timeline",
+        "step",
+        "question"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "If A: a line per build",
+      "compositionId": "06-q1-a",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q1=a",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With A, each build reads in a line, like each era its own art direction.",
+      "start": 81.744,
+      "thumb": "snapshots/frame-05-at-84.99s.png"
+    },
+    {
+      "index": 7,
+      "title": "If B: the replies too",
+      "compositionId": "07-q1-b",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q1=b",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With B, every step also carries the agent's reply, which makes it much longer.",
+      "start": 87.744,
+      "thumb": "snapshots/frame-06-at-90.99s.png",
+      "terms": [
+        "agent",
+        "step"
+      ]
+    },
+    {
+      "index": 8,
+      "title": "If C: the owner only",
+      "compositionId": "08-q1-c",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q1=c",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With C, what was built shows only as pictures.",
+      "start": 93.744,
+      "thumb": "snapshots/frame-07-at-96.99s.png"
+    },
+    {
+      "index": 9,
+      "title": "Step 2 · The watch page",
+      "compositionId": "09-step2",
+      "type": "feature_showcase",
+      "durationSeconds": 15.216,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "Videos to watch",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step two. A watch page plays one video at a time, chosen from a list named by what each video is. Under it, its chapters and questions jump there, and each question shows what the owner answered. There's no mark, no comment box, no finish.",
+      "start": 99.744,
+      "thumb": "snapshots/frame-08-at-107.6s.png",
+      "terms": [
+        "chapters",
+        "watch page",
+        "step"
+      ],
+      "defines": [
+        "chapters"
+      ]
+    },
+    {
+      "index": 10,
+      "title": "Question 2 · How should a video play on the watch page?",
+      "compositionId": "10-q2",
+      "type": "cta",
+      "durationSeconds": 23.928,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": "q2",
+      "branch": null,
+      "question": "How should a video play on the watch page?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "A rendered video file, in the browser's own player",
+          "why": "Plays anywhere; rendering here is slow, so one is timed first.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "reelplanning's player in a watch-only mode",
+          "why": "A change to reelplanning itself first.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "The review player as it is, with better names",
+          "why": "The marking-up stays.",
+          "recommended": false
+        }
+      ],
+      "narration": "Question two: how should a video play there? A: a rendered video file, in the browser's own player. B: reelplanning's player in a watch-only mode. C: the review player as it is, with better names. I recommend A, though rendering is slow on this machine, so I'd time one first, and fall back to B if it's too slow.",
+      "start": 114.96,
+      "thumb": "snapshots/frame-09-at-127.17s.png",
+      "terms": [
+        "watch page",
+        "question"
+      ]
+    },
+    {
+      "index": 11,
+      "title": "If A: a plain video file",
+      "compositionId": "11-q2-a",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q2=a",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With A, each video is a plain file that plays anywhere, with nothing to fill in.",
+      "start": 138.888,
+      "thumb": "snapshots/frame-10-at-142.14s.png"
+    },
+    {
+      "index": 12,
+      "title": "If B: a watch-only player",
+      "compositionId": "12-q2-b",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q2=b",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With B, reelplanning itself changes first, and its player hides everything a reviewer uses.",
+      "start": 144.888,
+      "thumb": "snapshots/frame-11-at-148.14s.png"
+    },
+    {
+      "index": 13,
+      "title": "If C: the review page",
+      "compositionId": "13-q2-c",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q2=c",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With C, the review page stays, marks and all.",
+      "start": 150.888,
+      "thumb": "snapshots/frame-12-at-153.89s.png",
+      "terms": [
+        "review page",
+        "review"
+      ]
+    },
+    {
+      "index": 14,
+      "title": "Quick check · A question on the watch page",
+      "compositionId": "14-k1",
+      "type": "social_proof",
+      "durationSeconds": 10,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": "On the watch page you click question 4 of the walkthrough of the site on a computer. What happens?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": "k1",
+      "answer": "a",
+      "explain": "The watch page only plays: a question in its list jumps the video there and shows what the owner answered.",
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "The video jumps there and shows what the owner answered",
+          "why": "",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "A form opens to answer it",
+          "why": "",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "The review page opens",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "narration": "A quick check. On the watch page, you click question four of the walkthrough of the site on a computer. What happens?",
+      "start": 156.888,
+      "thumb": "snapshots/frame-13-at-162.14s.png",
+      "terms": [
+        "quick check",
+        "watch page",
+        "walkthrough",
+        "check",
+        "question"
+      ],
+      "defines": [
+        "quick check"
+      ]
+    },
+    {
+      "index": 15,
+      "title": "Step 3 · The timeline page",
+      "compositionId": "15-step3",
+      "type": "feature_showcase",
+      "durationSeconds": 17.904,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "A page in order",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step three. The study page becomes a vertical timeline over three days. Each plan is a stretch, headed by the words that started it. Along it come the messages, the plans, each video with a still and a watch link, each review, and what changed after, with before and after pictures.",
+      "start": 166.888,
+      "thumb": "snapshots/frame-14-at-176.09s.png",
+      "terms": [
+        "beat",
+        "study page",
+        "timeline record",
+        "timeline",
+        "step"
+      ],
+      "defines": [
+        "beat"
+      ]
+    },
+    {
+      "index": 16,
+      "title": "Question 3 · How much of the timeline is open at first?",
+      "compositionId": "16-q3",
+      "type": "cta",
+      "durationSeconds": 14.376,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": "q3",
+      "branch": null,
+      "question": "How much of the timeline is open at first?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "Each plan's videos and reviews open; the rest folded",
+          "why": "About 30 of some 70 events show; one click opens a fold.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Everything open",
+          "why": "A long page; the plans are harder to see.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Only each plan's heading",
+          "why": "The order stays hidden until a plan is opened.",
+          "recommended": false
+        }
+      ],
+      "narration": "Question three: how much of the timeline is open at first? A: each plan's videos and reviews open, with small messages and details folded. B: everything open. C: only each plan's heading. I recommend A.",
+      "start": 184.792,
+      "thumb": "snapshots/frame-15-at-192.23s.png",
+      "terms": [
+        "details",
+        "timeline record",
+        "timeline",
+        "question"
+      ],
+      "defines": [
+        "details"
+      ]
+    },
+    {
+      "index": 17,
+      "title": "If A: the main events open",
+      "compositionId": "17-q3-a",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q3=a",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With A, about thirty events show, and the rest open in place.",
+      "start": 199.168,
+      "thumb": "snapshots/frame-16-at-202.42s.png",
+      "terms": [
+        "event"
+      ]
+    },
+    {
+      "index": 18,
+      "title": "If B: everything open",
+      "compositionId": "18-q3-b",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q3=b",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With B, all of them show, and the plans get harder to see.",
+      "start": 205.168,
+      "thumb": "snapshots/frame-17-at-208.42s.png"
+    },
+    {
+      "index": 19,
+      "title": "If C: headings only",
+      "compositionId": "19-q3-c",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q3=c",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With C, the order of events stays hidden until you open a plan.",
+      "start": 211.168,
+      "thumb": "snapshots/frame-18-at-214.42s.png",
+      "terms": [
+        "event"
+      ]
+    },
+    {
+      "index": 20,
+      "title": "Step 4 · One real loop first",
+      "compositionId": "20-step4",
+      "type": "feature_showcase",
+      "durationSeconds": 15.888,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step four. The page opens with one real loop instead of a diagram: the request, the plan video's first question, the owner's own answer, the first build, the words boring and stock, and the themed site. Each links down to its place on the timeline.",
+      "start": 217.168,
+      "thumb": "snapshots/frame-19-at-225.36s.png",
+      "terms": [
+        "spread",
+        "folded",
+        "step"
+      ],
+      "defines": [
+        "spread",
+        "folded"
+      ]
+    },
+    {
+      "index": 21,
+      "title": "Step 5 · The check",
+      "compositionId": "21-step5",
+      "type": "feature_showcase",
+      "durationSeconds": 11.664,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step five. A check opens every page at phone and computer size. It fails on an error, a broken link, an event with no source, or a quote that isn't word for word.",
+      "start": 233.056,
+      "thumb": "snapshots/frame-20-at-238.89s.png",
+      "terms": [
+        "check",
+        "step"
+      ],
+      "defines": [
+        "check"
+      ]
+    },
+    {
+      "index": 22,
+      "title": "Quick check · A tidied quote",
+      "compositionId": "22-k2",
+      "type": "social_proof",
+      "durationSeconds": 10,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": "Someone tidies a quote, writing don't where the owner wrote dont. What does the check do?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": "k2",
+      "answer": "b",
+      "explain": "A quote must be in its source word for word, so a tidied one fails the check, which names the event.",
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "Passes: the meaning is the same",
+          "why": "",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "It fails on that event",
+          "why": "",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Fixes the quote back",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "narration": "Another quick check. Someone tidies a quote, writing don't where the owner wrote dont. What does the check do?",
+      "start": 244.72,
+      "thumb": "snapshots/frame-21-at-249.72s.png",
+      "terms": [
+        "event",
+        "source",
+        "quick check",
+        "quote",
+        "check"
+      ]
+    },
+    {
+      "index": 23,
+      "title": "The plan, with your choices",
+      "compositionId": "23-ending",
+      "type": "cta",
+      "durationSeconds": 9,
+      "planStep": null,
+      "planQuestions": [
+        1,
+        2,
+        3
+      ],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "That's the plan. Draw on any step to leave a note, or approve it.",
+      "start": 254.72,
+      "thumb": "snapshots/frame-22-at-259.22s.png",
+      "terms": [
+        "recommended",
+        "question",
+        "plan"
+      ],
+      "defines": [
+        "recommended",
+        "question"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "q1",
+      "kind": "one",
+      "frameIndex": 5,
+      "compositionId": "05-q1",
+      "planStep": 1,
+      "question": "What does the timeline say of the agent's side?",
+      "questionMore": "The transcript has every reply; the commits say what was built in a line each.",
+      "at": 81.694,
+      "resumeAt": 99.744,
+      "options": [
+        {
+          "id": "a",
+          "label": "One line per event, from its commit message",
+          "why": "Short; the agent's reasoning stays in the transcript.",
+          "recommended": true,
+          "more": "16484b1 reads \"Each era its own art direction\" beside the review that asked for it.",
+          "branch": {
+            "frameIndex": 6,
+            "compositionId": "06-q1-a",
+            "start": 81.744,
+            "end": 87.744
+          }
+        },
+        {
+          "id": "b",
+          "label": "Also quote the agent's chat replies",
+          "why": "Much longer; the replies are long.",
+          "recommended": false,
+          "more": "Each event also carries the agent's reply, often a screen of text.",
+          "branch": {
+            "frameIndex": 7,
+            "compositionId": "07-q1-b",
+            "start": 87.744,
+            "end": 93.744
+          }
+        },
+        {
+          "id": "c",
+          "label": "Only the owner's side",
+          "why": "What was built shows only as pictures.",
+          "recommended": false,
+          "more": "The review shows, then the next picture, with nothing in between.",
+          "branch": {
+            "frameIndex": 8,
+            "compositionId": "08-q1-c",
+            "start": 93.744,
+            "end": 99.744
+          }
+        }
+      ],
+      "summary": null
+    },
+    {
+      "id": "q2",
+      "kind": "one",
+      "frameIndex": 10,
+      "compositionId": "10-q2",
+      "planStep": 2,
+      "question": "How should a video play on the watch page?",
+      "questionMore": "Rendering on this 2-CPU machine is slow; the plan times one video, and if the seven would take more than a few hours it stops and asks, with B as the fallback.",
+      "at": 138.838,
+      "resumeAt": 156.888,
+      "options": [
+        {
+          "id": "a",
+          "label": "A rendered video file, in the browser's own player",
+          "why": "Plays anywhere; rendering here is slow, so one is timed first.",
+          "recommended": true,
+          "more": "Each of the seven is an MP4; a chapter jumps with #t=.",
+          "branch": {
+            "frameIndex": 11,
+            "compositionId": "11-q2-a",
+            "start": 138.888,
+            "end": 144.888
+          }
+        },
+        {
+          "id": "b",
+          "label": "reelplanning's player in a watch-only mode",
+          "why": "A change to reelplanning itself first.",
+          "recommended": false,
+          "more": "The player hides Mark, comments and Finish, and shows each answer.",
+          "branch": {
+            "frameIndex": 12,
+            "compositionId": "12-q2-b",
+            "start": 144.888,
+            "end": 150.888
+          }
+        },
+        {
+          "id": "c",
+          "label": "The review player as it is, with better names",
+          "why": "The marking-up stays.",
+          "recommended": false,
+          "more": "The list has good names; the player is unchanged.",
+          "branch": {
+            "frameIndex": 13,
+            "compositionId": "13-q2-c",
+            "start": 150.888,
+            "end": 156.888
+          }
+        }
+      ],
+      "summary": null
+    },
+    {
+      "id": "q3",
+      "kind": "one",
+      "frameIndex": 16,
+      "compositionId": "16-q3",
+      "planStep": 3,
+      "question": "How much of the timeline is open at first?",
+      "questionMore": "Small messages, like a port change, are kept but folded.",
+      "at": 199.118,
+      "resumeAt": 217.168,
+      "options": [
+        {
+          "id": "a",
+          "label": "Each plan's videos and reviews open; the rest folded",
+          "why": "About 30 of some 70 events show; one click opens a fold.",
+          "recommended": true,
+          "more": "The first walkthrough review shows open; \"pls put on 8005 instead\" sits in a folded line.",
+          "branch": {
+            "frameIndex": 17,
+            "compositionId": "17-q3-a",
+            "start": 199.168,
+            "end": 205.168
+          }
+        },
+        {
+          "id": "b",
+          "label": "Everything open",
+          "why": "A long page; the plans are harder to see.",
+          "recommended": false,
+          "more": "Every port and status message shows in full.",
+          "branch": {
+            "frameIndex": 18,
+            "compositionId": "18-q3-b",
+            "start": 205.168,
+            "end": 211.168
+          }
+        },
+        {
+          "id": "c",
+          "label": "Only each plan's heading",
+          "why": "The order stays hidden until a plan is opened.",
+          "recommended": false,
+          "more": "Four headings; open one to see its stretch.",
+          "branch": {
+            "frameIndex": 19,
+            "compositionId": "19-q3-c",
+            "start": 211.168,
+            "end": 217.168
+          }
+        }
+      ],
+      "summary": null
+    }
+  ],
+  "details": [],
+  "guide": {
+    "parts": [
+      {
+        "name": "step-1",
+        "title": "Step 1 · The timeline, from the transcript, the reviews and the commits (question 1)",
+        "planStep": 1,
+        "kind": "step",
+        "src": "guide/step-1.html"
+      },
+      {
+        "name": "step-2",
+        "title": "Step 2 · A watch-only viewer for the videos (question 2)",
+        "planStep": 2,
+        "kind": "step",
+        "src": "guide/step-2.html"
+      },
+      {
+        "name": "step-3",
+        "title": "Step 3 · The study page, told as a timeline (question 3)",
+        "planStep": 3,
+        "kind": "step",
+        "src": "guide/step-3.html"
+      },
+      {
+        "name": "step-4",
+        "title": "Step 4 · Open with one real loop, not a diagram",
+        "planStep": 4,
+        "kind": "step",
+        "src": "guide/step-4.html"
+      },
+      {
+        "name": "step-5",
+        "title": "Step 5 · A check that every page works and every event has a source",
+        "planStep": 5,
+        "kind": "step",
+        "src": "guide/step-5.html"
+      },
+      {
+        "name": "decisions",
+        "title": "Decisions in force",
+        "planStep": null,
+        "kind": "decisions",
+        "src": "guide/decisions.html"
+      }
+    ]
+  },
+  "plan": {
+    "title": "A case study page that shows how reelplanning was used",
+    "problem": "The owner, looking at the first study page:\n\n> \"yeah this case study website sucks it is not at all great at explaining anything... it is mostly claude slop\"\n>\n> \"the watch the seven videos should not open our own interactive reelplanning html but instead a version without\n> marking up just for video viewing (a simplified version that is just meant to be non-interactive for read-only like\n> this; and a better way to navigate videos).\"\n>\n> \"a timeline in the case study website would be great, it can be vertical too if you need more room. explaining\n> where we started, where we did a video, what feedback created each video (use the session jsonl!), that way ppl say\n> ok here's how reelplanning is fully used here!\"\n\n### What we have\n\n- **The study page** (`docs/bob-dylan/index.html`): a hero with five counts, six cards for \"the loop\", a strip of\n  screenshots per stage, one card per plan with its reviews folded, four \"lessons\", the commands, a file map. It says\n  what reelplanning does in general words before it shows anything that happened, and the order of events (which\n  comment led to which video) has to be pieced together from four separate cards.\n- **The videos** open in the review bundle (`docs/bob-dylan/review/`): reelplanning's review player, with Mark, a\n  comment box, \"Finish review\", decisions to pick and a \"Before you watch\" card. A visitor cannot leave a review there,\n  so all of that is in the way. The library names the videos \"video\" and \"walkthrough-video\".\n- **The record of what happened** is all there but in four places: the session transcript (9,999 events, 17 messages\n  the owner typed), the 11 reviews in each plan's `reviews/`, the project's 43 commits, and the plans themselves.",
+    "steps": [
+      {
+        "n": 1,
+        "title": "The timeline, from the transcript, the reviews and the commits (question 1)",
+        "text": "*Stands alone.*\n\n**It lets you:** see everything that happened in the study in order, with who said what and what came of it, and\ncheck any event against its source.\n\n`tools/timeline.mjs` reads the redacted transcript (`bob-dylan-site/transcript.jsonl.gz`), every review\n(`project/.reelplanning/plans/*/reviews/*.json`) and the project's commits (its git log, saved as\n`bob-dylan-site/commits.txt` when the project is archived), and writes `bob-dylan-site/timeline.json`: one event per\nthing that happened, of six kinds (the owner asked, a plan was written, a video was made, a review came back, a build\nlanded, a change followed a review). Each event keeps its time, the owner's own words when it has them, quoted exactly,\nand the event it led to. What the agent did is one line per event from the commit message (question 1); the agent's\nchat replies stay in the transcript. A message that only asks for a port, or a status, is kept but folded (step 3).\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A message the owner typed | 2026-10-07 06:58, \"we need a new plan to make this work better on a computer\" | an \"asked\" event, quoted exactly | read: transcript line; write: event `asked`; leads to: the desktop plan |\n| A review sent from the review page | 2026-10-07 03:10, the dylan-site walkthrough, changes asked | a \"review\" event with its verdict, answers and comments | read: `reviews/walkthrough-20261007T031032Z.json`; write: event `review` |\n| A commit that follows a review | 16484b1, \"Per-era art direction …\" | a \"change\" event, led to by that review | read: git log; link: the review before it, same plan |\n| A video built | 28e99a6, \"Plan video for dylan-site … 41 frames\" | a \"video\" event, with its link in the viewer | read: git log; write: event `video` |\n| A message with nothing to show | \"how is the status\" | an \"asked\" event marked small | write: `small: true`; you see: folded |\n\n#### Interface\n\n```\nnode tools/timeline.mjs bob-dylan-site     # writes bob-dylan-site/timeline.json\n  ✓ <n> events: <a> asked, 4 plans, 7 videos, 11 reviews, <b> builds, <c> changes   # about 70 expected\ntimeline.json                              # { events: [ { id, at, kind, plan, title, words, verdict, video, source, ledTo } ] }\nevent.source                               # \"transcript:1532\", \"reviews/walkthrough-20261007T031032Z.json\" or \"commit:16484b1\"\nevent.words                                # the owner's own words, quoted exactly, or null\n```\n\n#### Example\n\nThe event for the first walkthrough review: `{ at: \"2026-10-07T03:10\", kind: \"review\", plan: \"2026-10-06-dylan-site\",\nverdict: \"changes\", words: \"i think the fonts and styling can be much better, more individualistic; it's kind of\nboring and stock right now…\", source: \"reviews/walkthrough-20261007T031032Z.json\", ledTo: \"commit:16484b1\" }`.\n\n```diagram\nflow: Where an event comes from\ntranscript = the transcript: the owner's messages -> timeline = timeline.json\nreviews = each review: verdict, answers, comments -> timeline\ncommits = the project's commits: plans, videos, builds -> timeline\ntimeline -> page = the study page's timeline (step 3)\n```"
+      },
+      {
+        "n": 2,
+        "title": "A watch-only viewer for the videos (question 2)",
+        "text": "*Stands alone.*\n\n**It lets you:** watch any of the seven videos without anything to fill in, jump to a chapter or a question, and see\nwhat the owner answered at each question.\n\n`docs/bob-dylan/watch/` shows one video at a time, chosen from a list down the side (on a phone, above it) named by\nwhat the video is (\"Plan video · The site, from an empty folder\"), not its folder. Under the video, its chapters and\nits questions are links that jump there; a question shows the owner's answer beside it (\"Answered: Astro, a page per\nsong\"). How the video itself plays is question 2: a rendered MP4 (recommended), the review player in a watch-only\nmode, or the review player as it is.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A visitor opens a video | the desktop walkthrough | it plays with captions; no Mark, comment box or Finish | open: `watch/?v=desktop-walkthrough`; you see: the video and its chapters |\n| A question in a video | dylan-site plan video, question 1 | the chapter list shows \"Question 1 · answered: Astro, a page per song\" | click: the question; video: jumps to it |\n| A plan with no plan video | the fuller site | the list says \"approved in chat\" in its place | you see: one row, no video |\n| A phone | 390 px wide | the list sits above the video, one line a video | you see: the list, then the video |\n\n#### Interface\n\n```\ndocs/bob-dylan/watch/index.html     # the viewer: a list of the seven, the open video, its chapters and questions\nwatch/?v=<slug>                     # opens that video; with #t=<seconds>, at that moment\ndocs/bob-dylan/watch/videos.json    # each video's title, plan, length, chapters and questions with their answers\n```\n\n#### Example\n\nFrom the timeline's first walkthrough review, \"Watch it\" opens `watch/?v=dylan-site-walkthrough`: the video, and\nbeside it its chapters (\"What landed\", \"The eras\", …) and its one question, \"Which YouTube clips? · answered:\nofficial, plus well-known unofficial ones\".\n\n```diagram\nsequence: Watching a video\nvisitor -> list: picks the desktop walkthrough\nlist -> player: loads it\nvisitor -> chapters: clicks question 4\nchapters -> player: jumps to 1:43 | the answer shows beside it\n```"
+      },
+      {
+        "n": 3,
+        "title": "The study page, told as a timeline (question 3)",
+        "text": "*Needs steps 1 and 2.*\n\n**It lets you:** read the study top to bottom in the order it happened, and see at each video what caused it and what\nit changed.\n\nThe study page becomes a vertical timeline from `timeline.json`, in three days. Each plan is a stretch of it, headed by\nthe owner's words that started it. Along it: the owner's messages, each plan written, each video (a still, its length,\n\"Watch it\" opening the viewer at it), each review (its verdict, the owner's words, what they answered), and what\nchanged after (one line, with a before and after picture where the site changed). How much is open at first is\nquestion 3. A thin bar beside it marks the day and the plan you are in. The general account of reelplanning moves to\nthe end, short, after the visitor has seen it used.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A plan starts | the desktop plan | a heading with the owner's words: \"we need a new plan to make this work better on a computer\" | read: event `asked` → `plan`; you see: the stretch begins |\n| A video | the every-song plan video | a still, \"22 scenes · 3:36\", Watch it | click: Watch it; open: `watch/?v=every-song` |\n| A review that asked for changes | the dylan-site walkthrough | the verdict, the owner's words, and under it what changed, with the before and after shots | read: `review` → `change`; you see: plain → themed |\n| A small message | \"pls put on 8005 instead.\" | folded into a line, \"and two small asks\", open to read | you see: a folded line |\n| On a phone | 390 px | one column; the day bar becomes a heading per day | you see: Day 1, Day 2, Day 3 |\n\n#### Interface\n\n```\ndocs/bob-dylan/index.html     # the timeline page, built from timeline.json by tools/build-page.mjs\nnode tools/build-page.mjs bob-dylan-site   # writes the page from timeline.json\n  ✓ docs/bob-dylan/index.html: <n> events in 3 days, 4 plans, 7 videos, 11 reviews\n<article class=\"event\" data-kind=\"review\" data-source=\"…\">   # one per event, its source on it\n```\n\n#### Example\n\nDay 2, 03:10: \"Walkthrough review · changes asked\", the owner's words (\"…it's kind of boring and stock right now. each\nera should mean something…\"), then 03:43 \"Each era its own art direction\", with the first build's phone page beside the\nthemed one, and \"Watch the walkthrough\" opening it at the scene the comment was left on.\n\n```diagram\nflow: One stretch of the timeline\nask = the owner asks -> plan = the plan\nplan -> video = the plan video\nvideo -> review = the review: answers, words\nreview -> build = the build\nbuild --> change = a change, when the review asked for one\nchange -> next = the next video\n```"
+      },
+      {
+        "n": 4,
+        "title": "Open with one real loop, not a diagram",
+        "text": "*Needs step 3.*\n\n**It lets you:** understand what reelplanning is from one real example in the first screen, before the full timeline.\n\nThe page opens with the first loop of the study, told in five beats with its own pictures: the request; the plan video\nasking \"How should the site be built?\"; the owner's own answer (\"which can produce a sophisticated website…\"); the\nplan asked again, approved; the first walkthrough, and \"boring and stock\", and the themed site. Each beat links down\nto its place in the timeline. The six-card \"loop\" and the four \"lessons\" go; the commands and the file map stay, at\nthe end, folded.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A first-time visitor | someone who has never heard of reelplanning | reads five beats and a picture each, in one screen and a scroll | you see: the request → the question → the answer → the themed site |\n| A beat clicked | \"the owner's own answer\" | the timeline opens at that review | click: the beat; scroll: to the event |\n\n#### Interface\n\n```\n<section class=\"first-loop\">   # five beats, each a picture, a line and a link into the timeline\n```\n\n#### Example\n\nBeat 3 reads \"The owner wrote their own answer\", with the plan video's question 1 still and the quote, and links to\nthe 2026-10-06 21:01 review in the timeline.\n\n```diagram\nflow: The first screen\nrequest -> question = the plan video asks\nquestion -> answer = the owner's own answer\nanswer -> built = the first build\nbuilt -> boring = \"boring and stock\"\nboring -> themed = each era its own look\n```"
+      },
+      {
+        "n": 5,
+        "title": "A check that every page works and every event has a source",
+        "text": "*Needs steps 1 to 4.*\n\n**It lets you:** trust that the published pages work on a phone and a computer, and that nothing on the timeline is\nmade up.\n\n`tools/check-pages.mjs` serves `docs/` at its Pages path and opens the front page, the study page, the viewer with each\nvideo and the built site's first pages, at 390 × 844 and 1440 × 900. It fails on a console error, a link that does not\nresolve inside `docs/`, a page wider than the window, an event with no source, or a quoted line its source does not\nhold word for word.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A quote that is not in its source | a comment with a typo fixed | the check fails, naming the event | read: the source; compare: word for word; prints: ✗ |\n| A broken link | `watch/?v=fuller` with no such video | the check fails | open: the link; prints: ✗ |\n| All well | | the check passes | prints: ✓ 14 views, every event with its source |\n\n#### Interface\n\n```\nnode tools/check-pages.mjs     # ✓ 14 views at 390 × 844 and 1440 × 900 · <n> events, each with its source\n  ✗ event \"review-2026-10-07T03:10\": quote not found in reviews/walkthrough-20261007T031032Z.json\n```\n\n#### Example\n\nBefore a push, `node tools/check-pages.mjs` prints \"✓ 14 views … every event with its source\"; a quote retyped with\n\"don't\" for the owner's \"dont\" fails it.\n\n```diagram\nflow: What the check opens\ncheck -> pages = the front page, the study page, the viewer, the site\ncheck -> events = each event: its source, its quote\npages -x broken = a broken link or an error: fails\n```"
+      }
+    ]
+  },
+  "slug": "2026-10-08-case-study-page",
+  "prerequisites": [],
+  "terms": [
+    "case study",
+    "study page",
+    "review page",
+    "marks",
+    "finish button",
+    "transcript",
+    "review",
+    "commit",
+    "plan",
+    "event",
+    "timeline",
+    "source",
+    "agent",
+    "walkthrough",
+    "era",
+    "watch page",
+    "chapters",
+    "quick check",
+    "rendered video file",
+    "watch-only mode",
+    "spread",
+    "folded",
+    "quote",
+    "check",
+    "recommended",
+    "step",
+    "render",
+    "details",
+    "own words",
+    "question"
+  ],
+  "termMeanings": {
+    "case study": "a real project told start to finish, with its videos and reviews",
+    "study page": "the page a visitor reads first",
+    "review page": "reelplanning's page for reviewing a video: it stops on questions and takes marks and comments",
+    "marks": "drawings and notes a reviewer leaves on a scene",
+    "finish button": "the button that ends a review and sends it",
+    "transcript": "the record of the whole chat session, every message and tool call, one event a line",
+    "review": "what the owner sent back from the review page: answers, comments, approve or change",
+    "commit": "one saved change to a repo, with a message saying what changed",
+    "plan": "the written plan a video is made from, with its steps and questions",
+    "event": "one thing that happened, kept with its time",
+    "timeline": "every event in order",
+    "source": "the file and line an event comes from",
+    "agent": "the AI coding assistant that does the work",
+    "walkthrough": "the video made after a build, showing what landed",
+    "era": "a named stretch of Dylan's life on the site, such as Going Electric",
+    "watch page": "a page that plays the videos with nothing to fill in",
+    "chapters": "the titled stretches of a video",
+    "quick check": "a question to see whether the plan does what you expect",
+    "rendered video file": "the video saved as an ordinary MP4",
+    "watch-only mode": "the player with every reviewing control hidden",
+    "spread": "an era's first view, filling the window",
+    "folded": "shut, with a line saying what is inside",
+    "quote": "the owner's words, copied exactly",
+    "check": "a script that fails when something is wrong",
+    "recommended": "the option I would pick, marked on its card",
+    "step": "one part of the plan, numbered",
+    "render": "to play a video through once and save it as a file",
+    "details": "the smaller parts of an event, such as the commit's files, shown when opened",
+    "own words": "what the owner typed, exactly",
+    "question": "a choice for the reviewer, with options A, B, C"
+  },
+  "glossary": [
+    {
+      "term": "A call",
+      "meaning": "A choice the agent made on its own while building, one the plan did not cover: one row in walkthrough.md",
+      "forms": [
+        "call",
+        "choice"
+      ],
+      "display": "choice",
+      "said": "A choice the agent made on its own while building, one the plan did not cover: one row in `walkthrough.md`."
+    },
+    {
+      "term": "A tag",
+      "meaning": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end",
+      "forms": [
+        "tag",
+        "label"
+      ],
+      "display": "label",
+      "said": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end."
+    },
+    {
+      "term": "A miss",
+      "meaning": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video",
+      "forms": [
+        "miss",
+        "late fix"
+      ],
+      "display": "late fix",
+      "said": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video."
+    },
+    {
+      "term": "A deviation",
+      "meaning": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video",
+      "forms": [
+        "deviation",
+        "off-plan change"
+      ],
+      "display": "off-plan change",
+      "said": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video."
+    },
+    {
+      "term": "A beat",
+      "meaning": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene",
+      "forms": [
+        "beat",
+        "scene"
+      ],
+      "display": "scene",
+      "said": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene.",
+      "definedIn": {
+        "video": "2026-10-08-case-study-page",
+        "frame": 15,
+        "title": "Step 3 · The timeline page",
+        "start": 166.888,
+        "chapter": 4,
+        "chapterTitle": "A page in order"
+      }
+    },
+    {
+      "term": "A chapter",
+      "meaning": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system",
+      "forms": [
+        "chapter"
+      ],
+      "said": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system.",
+      "definedIn": {
+        "video": "2026-10-08-case-study-page",
+        "frame": 9,
+        "title": "Step 2 · The watch page",
+        "start": 99.744,
+        "chapter": 3,
+        "chapterTitle": "Videos to watch"
+      }
+    },
+    {
+      "term": "An area",
+      "meaning": "One part of the system, drawn as a box, with an id in system.json (where it is called a component)",
+      "forms": [
+        "area",
+        "part of the system"
+      ],
+      "display": "part of the system",
+      "said": "One part of the system, drawn as a box, with an id in `system.json` (where it is called a component)."
+    },
+    {
+      "term": "The study folder",
+      "meaning": "A study's own folder at the repo's root: its plain-text write-up, its session transcript and its project as committed",
+      "forms": [
+        "study folder"
+      ],
+      "said": "A study's own folder at the repo's root: its plain-text write-up, its session transcript and its project as committed."
+    },
+    {
+      "term": "The study page",
+      "meaning": "The page a visitor reads first: the write-up, its pictures and links to everything else",
+      "forms": [
+        "study page"
+      ],
+      "said": "The page a visitor reads first: the write-up, its pictures and links to everything else.",
+      "definedIn": {
+        "video": "2026-10-08-case-study-page",
+        "frame": 1,
+        "title": "Today's study page",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    },
+    {
+      "term": "The review bundle",
+      "meaning": "A study's videos packed with reelplanning's review player into one folder of static files",
+      "forms": [
+        "review bundle"
+      ],
+      "said": "A study's videos packed with reelplanning's review player into one folder of static files."
+    },
+    {
+      "term": "The built site",
+      "meaning": "The study's own site, built to work under its Pages address",
+      "forms": [
+        "built site"
+      ],
+      "said": "The study's own site, built to work under its Pages address."
+    },
+    {
+      "term": "The front page",
+      "meaning": "The list of studies, at the Pages root",
+      "forms": [
+        "front page"
+      ],
+      "said": "The list of studies, at the Pages root."
+    },
+    {
+      "term": "The watch page",
+      "meaning": "A page that plays a study's videos to watch, with nothing to fill in: a list of the videos, the open one, its chapters and questions",
+      "forms": [
+        "watch page"
+      ],
+      "said": "A page that plays a study's videos to watch, with nothing to fill in: a list of the videos, the open one, its chapters and questions.",
+      "definedIn": {
+        "video": "2026-10-08-case-study-page",
+        "frame": 3,
+        "title": "Three changes, five steps",
+        "start": 30.792,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    },
+    {
+      "term": "The timeline record",
+      "meaning": "One file listing everything that happened in a study, in order: each event's time, kind, the owner's own words, its source and what it led to",
+      "forms": [
+        "timeline record",
+        "timeline"
+      ],
+      "display": "the timeline",
+      "said": "One file listing everything that happened in a study, in order: each event's time, kind, the owner's own words, its source and what it led to.",
+      "definedIn": {
+        "video": "2026-10-08-case-study-page",
+        "frame": 3,
+        "title": "Three changes, five steps",
+        "start": 30.792,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    },
+    {
+      "term": "A repo / repository",
+      "meaning": "A project's folder of code together with its whole history, kept with git",
+      "forms": [
+        "repo",
+        "repository"
+      ],
+      "said": "A project's folder of code together with its whole history, kept with git.",
+      "other": true
+    },
+    {
+      "term": "A branch",
+      "meaning": "A line of work kept apart from the main code until it is merged",
+      "forms": [
+        "branch"
+      ],
+      "said": "A line of work kept apart from the main code until it is merged.",
+      "other": true
+    },
+    {
+      "term": "Merge",
+      "meaning": "To bring a branch's changes into the main code. A pull request is merged when it is accepted",
+      "forms": [
+        "merge"
+      ],
+      "said": "To bring a branch's changes into the main code. A pull request is merged when it is accepted.",
+      "other": true
+    },
+    {
+      "term": "A commit",
+      "meaning": "One saved change to a repo, with a message saying what changed",
+      "forms": [
+        "commit"
+      ],
+      "said": "One saved change to a repo, with a message saying what changed.",
+      "other": true,
+      "definedIn": {
+        "video": "2026-10-08-case-study-page",
+        "frame": 2,
+        "title": "What falls short",
+        "start": 11.304,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    },
+    {
+      "term": "A pull request / PR",
+      "meaning": "A change someone asks to have merged into a repo; others read it and comment before it goes in",
+      "forms": [
+        "pull request",
+        "pr"
+      ],
+      "said": "A change someone asks to have merged into a repo; others read it and comment before it goes in.",
+      "other": true
+    },
+    {
+      "term": "The agent",
+      "meaning": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos",
+      "forms": [
+        "agent"
+      ],
+      "said": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos.",
+      "other": true,
+      "definedIn": {
+        "video": "2026-10-08-case-study-page",
+        "frame": 4,
+        "title": "Step 1 · The timeline",
+        "start": 45.768,
+        "chapter": 2,
+        "chapterTitle": "One record"
+      }
+    }
+  ],
+  "ids": {
+    "k1": {
+      "kind": "quick check",
+      "n": 1,
+      "gloss": "On the watch page you click question 4 of the walkthrough of the site on a…"
+    },
+    "k2": {
+      "kind": "quick check",
+      "n": 2,
+      "gloss": "Someone tidies a quote, writing don't where the owner wrote dont. What does…"
+    },
+    "q1": {
+      "kind": "question",
+      "n": 1,
+      "gloss": "What does the timeline say of the agent's side?"
+    },
+    "q2": {
+      "kind": "question",
+      "n": 2,
+      "gloss": "How should a video play on the watch page?"
+    },
+    "q3": {
+      "kind": "question",
+      "n": 3,
+      "gloss": "How much of the timeline is open at first?"
+    }
+  },
+  "termsCheck": "strict",
+  "changes": {
+    "against": "HEAD",
+    "baseline": false,
+    "build": "first",
+    "note": "no previous build to compare against"
+  }
+}

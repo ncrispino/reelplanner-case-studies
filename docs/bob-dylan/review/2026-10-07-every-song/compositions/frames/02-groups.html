@@ -1,0 +1,123 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 104 (counts), 72 (title), 32 (titles of examples), 30 (part names), 26 (mono) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f02-groups-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f02-groups-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f02-groups-title { position:absolute; left:80px; top:100px; font:400 72px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f02-groups-scale { position:absolute; right:80px; top:136px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the bar: 1760 px for the 277, parts in proportion (150 / 110 / 8 / 10) */
+  .f02-groups-bar { position:absolute; left:80px; top:230px; width:1760px; height:110px; }
+  .f02-groups-seg { position:absolute; top:0; height:110px; box-sizing:border-box; border-right:3px solid var(--rp-paper); transform-origin:0 50%; }
+  .f02-groups-base { position:absolute; left:80px; top:340px; width:1760px; height:1px; background:rgba(var(--rp-ink-rgb),0.2); }
+
+  /* the four labels, one column each */
+  .f02-groups-col { position:absolute; top:400px; width:400px; height:420px; }
+  .f02-groups-sw { position:absolute; left:0; top:2px; width:24px; height:24px; border-radius:4px; box-sizing:border-box; }
+  .f02-groups-about { position:absolute; left:38px; top:0; font:400 26px/1.1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); white-space:nowrap; }
+  .f02-groups-fig { position:absolute; left:-4px; top:60px; font:400 104px/0.95 "EB Garamond"; letter-spacing:-0.025em; color:var(--rp-ink); white-space:nowrap; }
+  .f02-groups-name { position:absolute; left:0; top:180px; width:400px; font:400 30px/1.2 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f02-groups-rule { position:absolute; left:0; top:232px; width:360px; height:1px; background:rgba(var(--rp-ink-rgb),0.2); }
+  .f02-groups-ex { position:absolute; left:0; top:252px; width:400px; font:italic 400 32px/1.35 "EB Garamond"; letter-spacing:-0.006em; color:rgba(var(--rp-ink-rgb),0.85); }
+  .f02-groups-ex div { white-space:nowrap; }
+
+  /* the two thin parts at the right end: stacked, right-aligned to x 1720, each joined to its sliver by a leader */
+  .f02-groups-mini { position:absolute; left:1320px; width:400px; text-align:right; }
+  .f02-groups-mtop { white-space:nowrap; line-height:80px; height:80px; }
+  .f02-groups-mtop .f02-groups-sw2 { display:inline-block; width:24px; height:24px; border-radius:4px; margin-right:12px; vertical-align:middle; position:relative; top:-6px; }
+  .f02-groups-mtop .f02-groups-ab { font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); margin-right:14px; }
+  .f02-groups-mtop .f02-groups-mf { font:400 80px/1 "EB Garamond"; letter-spacing:-0.025em; color:var(--rp-ink); }
+  .f02-groups-mname { margin-top:6px; font:400 30px/1.2 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f02-groups-mex { margin-top:8px; font:italic 400 32px/1.35 "EB Garamond"; letter-spacing:-0.006em; color:rgba(var(--rp-ink-rgb),0.85); }
+  .f02-groups-mex div { white-space:nowrap; }
+  .f02-groups-lead { position:absolute; left:0; top:0; width:1920px; height:1080px; overflow:visible; }
+  .f02-groups-lead polyline { fill:none; stroke:rgba(var(--rp-ink-rgb),0.55); stroke-width:2; }
+
+  .f02-groups-c1 { background:var(--rp-coral); }
+  .f02-groups-c2 { background:var(--rp-ink); }
+  .f02-groups-c3 { background:rgba(var(--rp-ink-rgb),0.45); }
+  .f02-groups-c4 { background:rgba(var(--rp-ink-rgb),0.16); }
+</style>
+
+<div id="root" data-composition-id="02-groups" data-band="bottom" data-start="0" data-duration="14.729" data-width="1920" data-height="1080">
+
+  <div class="clip f02-groups-bg" id="f02-groups-bg" data-start="0" data-duration="14.729" data-track-index="0"></div>
+
+  <div class="clip f02-groups-scene" id="f02-groups-scene" data-start="0" data-duration="14.729" data-track-index="1">
+    <div class="f02-groups-title" id="f02-groups-title">The 277</div>
+    <div class="f02-groups-scale" id="f02-groups-scale">277 tracks with no page</div>
+
+    <div class="f02-groups-bar" id="f02-groups-bar">
+      <div class="f02-groups-seg f02-groups-c1" id="f02-groups-s1" style="left:0;width:950px"></div>
+      <div class="f02-groups-seg f02-groups-c2" id="f02-groups-s2" style="left:950px;width:696px"></div>
+      <div class="f02-groups-seg f02-groups-c3" id="f02-groups-s3" style="left:1646px;width:51px"></div>
+      <div class="f02-groups-seg f02-groups-c4" id="f02-groups-s4" style="left:1697px;width:63px;border-right:none"></div>
+    </div>
+    <div class="f02-groups-base" id="f02-groups-base"></div>
+
+    <div class="f02-groups-col" id="f02-groups-k1" style="left:80px">
+      <span class="f02-groups-sw f02-groups-c1"></span><span class="f02-groups-about">about</span>
+      <div class="f02-groups-fig">150</div>
+      <div class="f02-groups-name">his own songs</div>
+      <div class="f02-groups-rule"></div>
+      <div class="f02-groups-ex" id="f02-groups-e1"><div>If You See Her, Say Hello</div><div>Million Dollar Bash</div></div>
+    </div>
+    <div class="f02-groups-col" id="f02-groups-k2" style="left:1030px">
+      <span class="f02-groups-sw f02-groups-c2"></span><span class="f02-groups-about">about</span>
+      <div class="f02-groups-fig">110</div>
+      <div class="f02-groups-name">other writers’ songs</div>
+      <div class="f02-groups-rule"></div>
+      <div class="f02-groups-ex" id="f02-groups-e2"><div>Stardust</div><div>The First Noel</div></div>
+    </div>
+    <svg class="f02-groups-lead" id="f02-groups-l3" viewBox="0 0 1920 1080"><polyline points="1751,346 1751,432 1732,432"/></svg>
+    <svg class="f02-groups-lead" id="f02-groups-l4" viewBox="0 0 1920 1080"><polyline points="1808,346 1808,650 1732,650"/></svg>
+
+    <div class="f02-groups-mini" id="f02-groups-k3" style="top:392px">
+      <div class="f02-groups-mtop"><span class="f02-groups-sw2 f02-groups-c3"></span><span class="f02-groups-ab">about</span><span class="f02-groups-mf">8</span></div>
+      <div class="f02-groups-mname"><span data-gloss="The Band">The Band</span> without him</div>
+      <div class="f02-groups-mex" id="f02-groups-e3"><div>Katie’s Been Gone</div></div>
+    </div>
+    <div class="f02-groups-mini" id="f02-groups-k4" style="top:610px">
+      <div class="f02-groups-mtop"><span class="f02-groups-sw2 f02-groups-c4"></span><span class="f02-groups-ab">about</span><span class="f02-groups-mf">10</span></div>
+      <div class="f02-groups-mname">instrumentals and takes</div>
+      <div class="f02-groups-mex" id="f02-groups-e4"><div>Turkey Chase</div><div>Billy 4</div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "02-groups";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f02-groups-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var grow = function (tl, el, at) { tl.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-14.2s): each part grows as it is named, its count and examples under it; hold
+  pop(tl, $("title"), 0.0, 10);
+  tl.fromTo($("base"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.0);
+  pop(tl, $("scale"), 0.1, 6);
+  grow(tl, $("s1"), 0.25);    pop(tl, $("k1"), 0.3);    // "150"
+  pop(tl, $("e1"), 1.5, 8);                             // "his own songs"
+  grow(tl, $("s2"), 2.7);     pop(tl, $("k2"), 2.75);   // "110"
+  pop(tl, $("e2"), 5.6, 8);                             // "Standards, carols"
+  grow(tl, $("s3"), 8.55);    pop(tl, $("k3"), 8.6);    tl.fromTo($("l3"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 8.7);    // "eight"
+  pop(tl, $("e3"), 10.4, 8);                            // "basement tapes"
+  grow(tl, $("s4"), 11.8);    pop(tl, $("k4"), 11.85);  tl.fromTo($("l4"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 11.95);  // "10"
+  pop(tl, $("e4"), 12.6, 8);                            // "instrumentals"
+
+  tl.set({}, {}, 14.229);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

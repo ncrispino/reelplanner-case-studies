@@ -1,0 +1,67 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f07-q1-c-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f07-q1-c-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f07-q1-c-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f07-q1-c-page { position:absolute; box-sizing:border-box; top:190px; width:533px; height:420px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.16); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f07-q1-c-page .u { position:absolute; left:0; top:0; right:0; height:76px; box-sizing:border-box; padding:24px 28px 0; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.14); font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; overflow:hidden; }
+  .f07-q1-c-page .t { position:absolute; left:32px; right:32px; top:120px; font:400 60px/1.05 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f07-q1-c-page .s { position:absolute; left:32px; right:24px; top:330px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; }
+  .f07-q1-c-count { position:absolute; left:90px; top:690px; font:400 60px/1.05 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); white-space:nowrap; }
+  .f07-q1-c-rule { position:absolute; left:90px; top:780px; width:640px; height:2px; background:var(--rp-coral); transform-origin:0 50%; }
+</style>
+
+<div id="root" data-composition-id="07-q1-c" data-band="bottom" data-duration="6" data-width="1920" data-height="1080">
+
+  <div class="clip f07-q1-c-bg" id="f07-q1-c-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+  <div class="clip f07-q1-c-scene" id="f07-q1-c-scene" data-start="0" data-duration="6" data-track-index="1">
+    <div class="f07-q1-c-place" id="f07-q1-c-place">If C · step 1</div>
+    <div class="f07-q1-c-page" id="f07-q1-c-p3" data-artifact="a built album page" style="left:1236px; z-index:1">
+      <div class="u">/album/blonde-on-blonde/</div>
+      <div class="t">Blonde on Blonde</div>
+      <div class="s">1966 · 14 songs</div>
+    </div>
+    <div class="f07-q1-c-page" id="f07-q1-c-p2" data-artifact="a built song page" style="left:663px; z-index:2">
+      <div class="u">/song/tangled-up-in-blue/</div>
+      <div class="t">Tangled Up in Blue</div>
+      <div class="s">Blood on the Tracks · 1975</div>
+    </div>
+    <div class="f07-q1-c-page" id="f07-q1-c-p1" data-artifact="a built song page" style="left:90px; z-index:3">
+      <div class="u">/song/like-a-rolling-stone/</div>
+      <div class="t">Like a Rolling Stone</div>
+      <div class="s">Highway 61 Revisited · 1965</div>
+    </div>
+    <div class="f07-q1-c-count" id="f07-q1-c-count">a page per album and song</div>
+    <div class="f07-q1-c-rule" id="f07-q1-c-rule"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "07-q1-c";
+  var $ = function (s) { return document.getElementById("f07-q1-c-" + s); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6s): the pages fan out one after another from a stack, the line lands, then hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+  tl.fromTo($("p1"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.15);
+  tl.fromTo($("p2"), { opacity: 0, x: -573 }, { opacity: 1, x: 0, duration: 0.7, ease: "power3.out" }, 0.8);
+  tl.fromTo($("p3"), { opacity: 0, x: -1146 }, { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" }, 1.4);
+
+  // the line under the fan
+  tl.fromTo($("count"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.3);
+  tl.fromTo($("rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 3.0);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 5.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,141 @@
+---
+import Shell from "../../layouts/Shell.astro";
+import Player from "../../components/Player.astro";
+import Cover from "../../components/Cover.astro";
+import MomentCard from "../../components/MomentCard.astro";
+import { getImage } from "astro:assets";
+import { moments, eraById, songs, albums, albumById, degreeOf, photoOfMoment, creditOf, url } from "../../lib/data";
+export function getStaticPaths() { return moments.map((m) => ({ params: { id: m.id }, props: { moment: m } })); }
+const { moment } = Astro.props;
+const era = eraById.get(moment.era)!;
+// what the moment is tied to: the data has no moment-to-song links, so these are Dylan's songs the story names by
+// title, and the era's records from the moment's year
+const esc = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const told = `${moment.text} ${moment.long ?? ""}`;
+const named = songs.filter((s) => (!s.by || s.by === "Bob Dylan") && s.title.length >= 4 && new RegExp(`\\b${esc(s.title)}\\b`, "i").test(told));
+const records = albums.filter((a) => a.year === moment.year);
+// the year's songs (plan 2026-10-07-fuller, step 3): his songs from that year on his records, the most connected
+// first, at most eight, leaving out those the story already names
+const yearSongs = songs.filter((s) => s.year === moment.year && s.album && (!s.by || s.by === "Bob Dylan") && !named.includes(s))
+  .map((s, i) => ({ s, d: degreeOf(s.id), i })).sort((a, b) => b.d - a.d || a.i - b.i).slice(0, 8).map((x) => x.s);
+// the moments just before and after it, on a small timeline
+const i = moments.findIndex((m) => m.id === moment.id);
+const near = moments.slice(Math.max(0, i - 2), i + 3);
+// its own photograph (step 2); with neither it nor a clip, its drawn card (MomentCard, after the walkthrough review)
+const photo = photoOfMoment(moment);
+const files = import.meta.glob<{ default: ImageMetadata }>("../../assets/photos/*.{jpg,jpeg,png,webp}", { eager: true });
+const meta = photo && files[`../../assets/photos/${photo.file}`]?.default;
+let img;
+if (meta) {
+  const widths = [480, 800, 1200, 1600].filter((w) => w < meta.width);
+  if (meta.width <= 1600) widths.push(meta.width);
+  img = await getImage({ src: meta, widths, sizes: "(min-width: 1100px) 60vw, (min-width: 768px) 720px, 100vw", format: "webp", quality: 74 });
+}
+const long = moment.long && String(moment.long).trim() ? moment.long : null;
+---
+<Shell title={moment.title} era={era.id} description={moment.text} rail={{ era, year: moment.year, here: "moment" }}>
+  <a class="back" href={url.era(era.id)}>‹ {era.title}</a>
+  <!-- from 1100 px (plan 2026-10-07-desktop, step 4; plan 2026-10-07-fuller, step 3): the clip or the photograph large
+       on the left, the story on the right; under both, the moments either side and the year's songs and records. Below
+       1100 px .mo is display: contents and a phone gets one column -->
+  <div class:list={["mo", { noclip: !moment.youtube }]}>
+    <p class="kicker year">{moment.year}</p>
+    <h1 class="display" style="font-size:clamp(30px,9vw,48px)">{moment.title}</h1>
+    <p class="story lead">{moment.text}</p>
+    <div class="media">
+      <Player youtube={moment.youtube} title={moment.title} />
+      {img && photo ? (
+        <figure class="photo own">
+          <div class="frame"><img src={img.src} srcset={img.srcSet.attribute} sizes={img.attributes.sizes} alt={photo.caption} width={meta!.width} height={meta!.height} loading="eager" decoding="async" /></div>
+          <figcaption class="credit">{creditOf(photo)} · <a href={photo.source} rel="noopener">{photo.licence}</a></figcaption>
+        </figure>
+      ) : !moment.youtube && (
+        <MomentCard moment={moment} era={era} />
+      )}
+    </div>
+    {long && <div class="long">{String(long).split(/\n\s*\n/).map((para) => <p>{para}</p>)}</div>}
+  </div>
+  {near.length > 1 && (
+    <nav class="near" aria-label="The moments around it">
+      <h2 class="section-title">Around it</h2>
+      <ol class="nl">
+        {near.map((m) => m.id === moment.id
+          ? <li class="here" aria-current="true"><span class="ny year">{m.year}</span><span class="nt">{m.title}</span></li>
+          : <li><a href={url.moment(m.id)}><span class="ny year">{m.year}</span><span class="nt">{m.title}</span></a></li>)}
+      </ol>
+    </nav>
+  )}
+  {(named.length > 0 || yearSongs.length > 0 || records.length > 0) && (
+    <div class="ties">
+      {(named.length > 0 || yearSongs.length > 0) && (
+        <section aria-label="Songs">
+          {named.length > 0 && (
+            <>
+              <h2 class="section-title">Songs in this story</h2>
+              <ul class="list">{named.map((s) => <li><a href={url.song(s.id)}><span>{s.title}</span><span class="soft year">{s.year}</span></a></li>)}</ul>
+            </>
+          )}
+          {yearSongs.length > 0 && (
+            <>
+              <h2 class="section-title">His songs from {moment.year}</h2>
+              <ul class="list ys">{yearSongs.map((s) => <li><a href={url.song(s.id)}><span>{s.title}</span><span class="soft al">{albumById.get(s.album!)?.title}</span></a></li>)}</ul>
+            </>
+          )}
+        </section>
+      )}
+      {records.length > 0 && (
+        <section aria-label={`Records from ${moment.year}`}>
+          <h2 class="section-title">Records from {moment.year}</h2>
+          <div class="recs">{records.map((a) => <a class="rec" href={url.album(a.id)}><Cover album={a} size="m" /><span>{a.title}</span></a>)}</div>
+        </section>
+      )}
+    </div>
+  )}
+</Shell>
+<style>
+  .mo { display: contents; }
+  .lead { font-size: 18px; }
+  .long { margin-top: 22px; }
+  .long p { margin: 0 0 14px; line-height: 1.65; }
+  .media :global(.players) { margin-top: 18px; }
+  .own { margin: 18px 0 0; }
+  .own .frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--card); }
+  .own .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .pic { margin-top: 18px; }
+  .pic .eras { margin-bottom: 8px; }
+  .nl { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
+  .nl a, .nl .here { display: grid; grid-template-columns: 56px 1fr; gap: 10px; align-items: baseline; min-height: 48px; padding: 10px 2px;
+    border-bottom: 1px solid var(--line); text-decoration: none; }
+  .ny { color: var(--accent); font: 700 15px/1.5 var(--label); }
+  .here { font-weight: 700; }
+  .here .nt::after { content: " · this moment"; font-weight: 400; color: var(--soft); font-size: 14px; }
+  .al { font-size: 14px; text-align: right; }
+  .recs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .rec { text-decoration: none; font-size: 14px; line-height: 1.25; }
+  .rec span { display: block; margin-top: 8px; }
+  @media (min-width: 1100px) {
+    .mo { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); grid-template-rows: auto auto auto 1fr; column-gap: 56px; align-items: start; margin-top: 12px; }
+    .media { grid-column: 1; grid-row: 1 / -1; margin: 0; }
+    .media :global(.players) { margin-top: 0; }
+    .media :global(.players .section-title) { display: none; }
+    .own:first-child, .pic:first-child { margin-top: 0; }
+    .pic .eras { margin-top: 0; }
+    .mo > .kicker, .mo > h1, .lead, .long { grid-column: 2; }
+    .mo > .kicker { margin-top: 4px; }
+    .lead, .long { max-width: 60ch; }
+    .long { margin-top: 4px; }
+    .long p { font-size: 17px; }
+    /* the moments either side on a line, this one lit */
+    .near { margin-top: 72px; }
+    .nl { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); border-top: 0; border-bottom: 2px solid var(--ink); }
+    .nl a, .nl .here { position: relative; grid-template-columns: 1fr; gap: 4px; padding: 0 16px 22px 0; border-bottom: 0; align-content: start; }
+    .nl a::after, .nl .here::after { content: ""; position: absolute; left: 0; bottom: -7px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--paper); }
+    .nl .here::after { width: 18px; height: 18px; bottom: -10px; background: var(--ink); }
+    .here .nt::after { content: none; }
+    .nl a:hover .nt { text-decoration: underline; }
+    .nt { font-size: 16px; line-height: 1.3; }
+    .ties { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; margin-top: 56px; align-items: start; }
+    .ties > section > .section-title:first-child { margin-top: 0; }
+    .ys { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+  }
+</style>

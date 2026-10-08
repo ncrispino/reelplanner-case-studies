@@ -1,0 +1,8 @@
+---
+import Shell from "../../layouts/Shell.astro";
+import MapView from "../../components/MapView.astro";
+import { songs, eraOfSong } from "../../lib/data";
+export function getStaticPaths() { return songs.map((s) => ({ params: { id: s.id }, props: { song: s } })); }
+const { song } = Astro.props;
+---
+<Shell title={`${song.title} on the map`} era={eraOfSong(song).id} tab="map"><MapView focus={song.id} /></Shell>

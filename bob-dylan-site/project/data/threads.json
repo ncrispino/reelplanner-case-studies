@@ -1,0 +1,674 @@
+[
+  {
+    "id": "borrowed-tunes",
+    "title": "Borrowed tunes",
+    "intro": "Old melodies he made new: each song and the tune it came from.",
+    "steps": [
+      {
+        "song": "lord-franklin",
+        "why": "The source: A ballad lamenting Sir John Franklin's lost Arctic expedition, sung in the voice of his widow."
+      },
+      {
+        "song": "lord-randal",
+        "why": "The source: An old Child ballad in which a mother questions her son, who has been poisoned."
+      },
+      {
+        "song": "no-more-auction-block",
+        "why": "The source: A spiritual sung by formerly enslaved people, it was in Dylan's early repertoire."
+      },
+      {
+        "song": "nottamun-town",
+        "why": "The source: An English-derived folk song of topsy-turvy riddles, popularized in the folk revival by Jean Ritchie."
+      },
+      {
+        "song": "pretty-polly",
+        "why": "The source: An old murder ballad from Britain and Appalachia."
+      },
+      {
+        "song": "scarborough-fair",
+        "why": "The source: An English ballad of impossible tasks set for a former lover, which Martin Carthy taught Dylan in London."
+      },
+      {
+        "song": "the-parting-glass",
+        "why": "The source: A traditional Scottish and Irish song of farewell sung at the end of a gathering."
+      },
+      {
+        "song": "whos-gonna-buy-you-ribbons-when-im-gone",
+        "why": "The source: Folk singer Paul Clayton's adaptation of an older folk song."
+      },
+      {
+        "song": "the-lonesome-road",
+        "why": "The source: A ballad written by Gene Austin and Nathaniel Shilkret that became a standard."
+      },
+      {
+        "song": "down-on-pennys-farm",
+        "why": "The source: A song about a hard-hearted landlord that was later reissued on the Anthology of American Folk Music."
+      },
+      {
+        "song": "where-the-blue-of-the-night-meets-the-gold-of-the-day",
+        "why": "The source: Bing Crosby's theme song, which he co-wrote."
+      },
+      {
+        "song": "joe-hill",
+        "why": "The source: A song about the executed labor organizer Joe Hill, set by Earl Robinson to a poem by Alfred Hayes."
+      }
+    ]
+  },
+  {
+    "id": "others-made-famous",
+    "title": "Songs others made famous",
+    "intro": "His songs in other hands, from the Byrds to Adele.",
+    "steps": [
+      {
+        "song": "blowin-in-the-wind-peter-paul-and-mary",
+        "why": "Peter, Paul and Mary's 1963 single turned the song into a hit weeks after Freewheelin' came out."
+      },
+      {
+        "song": "dont-think-twice-its-all-right-peter-paul-and-mary",
+        "why": "Peter, Paul and Mary had a hit with the song the same year Dylan released it."
+      },
+      {
+        "song": "blowin-in-the-wind-sam-cooke",
+        "why": "Sam Cooke performed the song in his nightclub act and recorded it live at the Copa."
+      },
+      {
+        "song": "the-times-they-are-a-changin-simon-garfunkel",
+        "why": "Simon & Garfunkel recorded the song on their 1964 debut album."
+      },
+      {
+        "song": "chimes-of-freedom-the-byrds",
+        "why": "The Byrds put the song on their first album, next to their Mr. Tambourine Man hit."
+      },
+      {
+        "song": "it-aint-me-babe-the-turtles",
+        "why": "The Turtles made the song their first big hit in 1965."
+      },
+      {
+        "song": "it-aint-me-babe-johnny-cash-and-june-carter",
+        "why": "Johnny Cash and June Carter recorded it as a country duet in 1965."
+      },
+      {
+        "song": "its-all-over-now-baby-blue-joan-baez",
+        "why": "Joan Baez recorded the song in the same year Dylan released it."
+      },
+      {
+        "song": "mr-tambourine-man-byrds",
+        "why": "The Byrds took a shortened electric version of the song to number one in the US in 1965."
+      },
+      {
+        "song": "blowin-in-the-wind-stevie-wonder",
+        "why": "Stevie Wonder turned the song into a Motown hit three years after Dylan released it."
+      },
+      {
+        "song": "its-all-over-now-baby-blue-them",
+        "why": "Them, fronted by Van Morrison, released a recording of the song in 1966."
+      },
+      {
+        "song": "just-like-a-woman-manfred-mann",
+        "why": "Manfred Mann turned the song into a UK chart hit in 1966."
+      }
+    ]
+  },
+  {
+    "id": "protest",
+    "title": "Protest and after",
+    "intro": "From the civil-rights songs to the ones that came later.",
+    "steps": [
+      {
+        "song": "a-hard-rains-a-gonna-fall",
+        "why": "Dylan premiered it in 1962, and it borrows its question-and-answer frame from the old ballad \"Lord Randal\"."
+      },
+      {
+        "song": "blowin-in-the-wind",
+        "why": "Its melody adapts the spiritual \"No More Auction Block\", and it became a civil-rights anthem."
+      },
+      {
+        "song": "masters-of-war",
+        "why": "It sets a furious attack on arms makers to the tune of the traditional \"Nottamun Town\"."
+      },
+      {
+        "song": "north-country-blues",
+        "why": "A mining woman's account of her town dying as the work goes overseas."
+      },
+      {
+        "song": "its-alright-ma-im-only-bleeding",
+        "why": "Running about seven and a half minutes, it is the longest song on the album."
+      },
+      {
+        "song": "maggies-farm",
+        "why": "It was the opening number of his electric set at Newport in 1965."
+      },
+      {
+        "song": "the-ballad-of-ira-hayes",
+        "why": "Peter La Farge's protest ballad about the Pima Marine of Iwo Jima neglected by the country he fought for."
+      },
+      {
+        "song": "hurricane",
+        "why": "Co-written with Jacques Levy, it argues that boxer Rubin Carter was wrongly convicted of a 1966 triple murder."
+      },
+      {
+        "song": "license-to-kill",
+        "why": "Dylan played it on Late Night with David Letterman in March 1984 with the punk band the Plugz."
+      },
+      {
+        "song": "neighborhood-bully",
+        "why": "It is widely heard as a defense of the state of Israel."
+      },
+      {
+        "song": "union-sundown",
+        "why": "It targets the shift of American manufacturing to cheap labor overseas."
+      },
+      {
+        "song": "political-world",
+        "why": "The opening track sets the album's mood of a corrupt world."
+      }
+    ]
+  },
+  {
+    "id": "love",
+    "title": "Love songs",
+    "intro": "Love found, love lost, love remembered.",
+    "steps": [
+      {
+        "song": "ill-be-your-baby-tonight",
+        "why": "Pete Drake's pedal steel on the closing track pointed toward the country sound of Nashville Skyline."
+      },
+      {
+        "song": "girl-from-the-north-country-with-johnny-cash",
+        "why": "Dylan re-recorded his 1963 song as a duet with Johnny Cash in Nashville, and it opens the album."
+      },
+      {
+        "song": "i-threw-it-all-away",
+        "why": "Dylan sang it on the premiere episode of The Johnny Cash Show in 1969."
+      },
+      {
+        "song": "lay-lady-lay",
+        "why": "Released as a single, it reached the US top ten in 1969."
+      },
+      {
+        "song": "tell-me-that-it-isnt-true",
+        "why": "It was recorded in Nashville in February 1969 with Bob Johnston producing."
+      },
+      {
+        "song": "to-be-alone-with-you",
+        "why": "A spoken aside from Dylan to producer Bob Johnston was left in at the start of the track."
+      },
+      {
+        "song": "tonight-ill-be-staying-here-with-you",
+        "why": "It closes the album and was also issued as a single."
+      },
+      {
+        "song": "something-there-is-about-you",
+        "why": "A warm love song in which a new love takes him back to his boyhood in Duluth."
+      },
+      {
+        "song": "dont-fall-apart-on-me-tonight",
+        "why": "It closes the album."
+      },
+      {
+        "song": "sweetheart-like-you",
+        "why": "It was the album's first single."
+      },
+      {
+        "song": "emotionally-yours",
+        "why": "A slow piano ballad pledging himself wholly to the one he loves."
+      },
+      {
+        "song": "man-in-the-long-black-coat",
+        "why": "Its recording opens with the sound of crickets, adding to Lanois's swampy atmosphere."
+      },
+      {
+        "song": "moonlight",
+        "why": "An old-fashioned crooner's invitation to meet a lover in the moonlight."
+      }
+    ]
+  },
+  {
+    "id": "loss",
+    "title": "Love gone wrong",
+    "intro": "Partings, regrets, and songs written after the door closed.",
+    "steps": [
+      {
+        "song": "ballad-in-plain-d",
+        "why": "A long, raw account of the night his relationship with Suze Rotolo fell apart."
+      },
+      {
+        "song": "its-all-over-now-baby-blue",
+        "why": "The album's closing song, it was later recorded by Them with Van Morrison."
+      },
+      {
+        "song": "just-like-tom-thumbs-blues",
+        "why": "Set largely in Juarez, Mexico, it was recorded in the summer 1965 New York sessions."
+      },
+      {
+        "song": "like-a-rolling-stone",
+        "why": "Released as a single in July 1965 at over six minutes, it reached number two in the US."
+      },
+      {
+        "song": "queen-jane-approximately",
+        "why": "The song opens side two of the original LP."
+      },
+      {
+        "song": "i-dreamed-i-saw-st-augustine",
+        "why": "Its title and opening echo the labor ballad about the union organizer Joe Hill."
+      },
+      {
+        "song": "girl-from-the-north-country-with-johnny-cash",
+        "why": "Dylan re-recorded his 1963 song as a duet with Johnny Cash in Nashville, and it opens the album."
+      },
+      {
+        "song": "i-threw-it-all-away",
+        "why": "Dylan sang it on the premiere episode of The Johnny Cash Show in 1969."
+      },
+      {
+        "song": "tell-me-that-it-isnt-true",
+        "why": "It was recorded in Nashville in February 1969 with Bob Johnston producing."
+      },
+      {
+        "song": "youre-a-big-girl-now",
+        "why": "A Blood on the Tracks song of hurt and longing after a love has gone."
+      },
+      {
+        "song": "if-you-see-her-say-hello",
+        "why": "A message sent to a former lover through someone else, still aching after she has left."
+      },
+      {
+        "song": "man-in-the-long-black-coat",
+        "why": "Its recording opens with the sound of crickets, adding to Lanois's swampy atmosphere."
+      },
+      {
+        "song": "most-of-the-time",
+        "why": "It was used in the 2000 film High Fidelity."
+      }
+    ]
+  },
+  {
+    "id": "faith",
+    "title": "Faith",
+    "intro": "From early hymn-shaped songs to the gospel years and after.",
+    "steps": [
+      {
+        "song": "gates-of-eden",
+        "why": "A long acoustic song of surreal images, it was the B-side of the single Like a Rolling Stone."
+      },
+      {
+        "song": "i-dreamed-i-saw-st-augustine",
+        "why": "Its title and opening echo the labor ballad about the union organizer Joe Hill."
+      },
+      {
+        "song": "the-wicked-messenger",
+        "why": "At about two minutes it is one of the shortest songs on the album."
+      },
+      {
+        "song": "father-of-night",
+        "why": "A short piano hymn of praise addressed directly to God."
+      },
+      {
+        "song": "gotta-serve-somebody",
+        "why": "It won Dylan the 1980 Grammy for Best Rock Vocal Performance, Male."
+      },
+      {
+        "song": "i-believe-in-you",
+        "why": "It was one of three songs he played on Saturday Night Live in October 1979."
+      },
+      {
+        "song": "precious-angel",
+        "why": "Mark Knopfler of Dire Straits plays the lead guitar on the track."
+      },
+      {
+        "song": "in-the-garden",
+        "why": "A gospel song retelling the life of Jesus, often the closer of his gospel-era shows."
+      },
+      {
+        "song": "saving-grace",
+        "why": "A quiet, hymn-like song of thanks for grace he feels he did not earn."
+      },
+      {
+        "song": "i-and-i",
+        "why": "Its title borrows a Rastafarian expression for the self joined with God."
+      },
+      {
+        "song": "jokerman",
+        "why": "The opening track, it was also released as a single with a music video."
+      },
+      {
+        "song": "ring-them-bells",
+        "why": "A slow, hymn-like song built around piano."
+      },
+      {
+        "song": "what-good-am-i",
+        "why": "One of the album's quietest songs."
+      }
+    ]
+  },
+  {
+    "id": "the-road",
+    "title": "The road",
+    "intro": "Songs of leaving, travelling and never quite arriving.",
+    "steps": [
+      {
+        "song": "down-the-highway",
+        "why": "A solo blues of walking the highway after his love has gone away."
+      },
+      {
+        "song": "highway-61-revisited",
+        "why": "Named after the highway that runs from Minnesota down to New Orleans, it features a police siren whistle."
+      },
+      {
+        "song": "its-all-over-now-baby-blue",
+        "why": "The album's closing song, it was later recorded by Them with Van Morrison."
+      },
+      {
+        "song": "just-like-tom-thumbs-blues",
+        "why": "Set largely in Juarez, Mexico, it was recorded in the summer 1965 New York sessions."
+      },
+      {
+        "song": "mr-tambourine-man",
+        "why": "The Byrds' electric version reached number one in 1965 before many listeners had heard Dylan's own."
+      },
+      {
+        "song": "it-takes-a-lot-to-laugh-it-takes-a-train-to-cry",
+        "why": "A slow train-and-travel blues from Highway 61 Revisited."
+      },
+      {
+        "song": "stuck-inside-of-mobile-with-the-memphis-blues-again",
+        "why": "Cut in Nashville in early 1966, it runs about seven minutes."
+      },
+      {
+        "song": "tonight-ill-be-staying-here-with-you",
+        "why": "It closes the album and was also issued as a single."
+      },
+      {
+        "song": "highlands",
+        "why": "At more than sixteen minutes it closes the album and was then the longest studio track Dylan had released."
+      },
+      {
+        "song": "tryin-to-get-to-heaven",
+        "why": "Dylan reshaped the song often in concert in the years after the album came out."
+      },
+      {
+        "song": "dirt-road-blues",
+        "why": "A shuffle about walking a dirt road until someone gives him a ride."
+      },
+      {
+        "song": "mississippi",
+        "why": "Dylan first tried it during the Time Out of Mind sessions, and Sheryl Crow released a version before his own appeared."
+      },
+      {
+        "song": "po-boy",
+        "why": "A light, jazzy tune filled with old vaudeville-style jokes."
+      }
+    ]
+  },
+  {
+    "id": "death",
+    "title": "Songs about death",
+    "intro": "Mortality, from murder ballads to late reckonings.",
+    "steps": [
+      {
+        "song": "fixin-to-die",
+        "why": "Bukka White's blues of a man who knows he is dying, sung fiercely on his first album."
+      },
+      {
+        "song": "see-that-my-grave-is-kept-clean",
+        "why": "Blind Lemon Jefferson's last request about his own grave, which closes his first album."
+      },
+      {
+        "song": "desolation-row",
+        "why": "At over eleven minutes, it is the album's only acoustic track and its closer."
+      },
+      {
+        "song": "its-alright-ma-im-only-bleeding",
+        "why": "Running about seven and a half minutes, it is the longest song on the album."
+      },
+      {
+        "song": "lone-pilgrim",
+        "why": "An old hymn in which a dead pilgrim speaks from his grave to comfort the living."
+      },
+      {
+        "song": "not-dark-yet",
+        "why": "It was released as a single from the album and became one of its most praised songs."
+      },
+      {
+        "song": "high-water-for-charley-patton",
+        "why": "It is dedicated to the Delta blues pioneer Charley Patton."
+      },
+      {
+        "song": "aint-talkin",
+        "why": "At almost nine minutes it is the album's long, somber closer."
+      },
+      {
+        "song": "when-the-deal-goes-down",
+        "why": "A slow waltz in the style of the old crooner ballads."
+      },
+      {
+        "song": "false-prophet",
+        "why": "Released in May 2020, its music is built on Billy \"The Kid\" Emerson's 1954 Sun Records blues \"If Lovin' Is Believing\"."
+      },
+      {
+        "song": "goodbye-jimmy-reed",
+        "why": "It is a tribute to the Chicago blues singer and harmonica player Jimmy Reed."
+      },
+      {
+        "song": "i-contain-multitudes",
+        "why": "Its title comes from Walt Whitman's Song of Myself, and it was released as a single in April 2020."
+      },
+      {
+        "song": "my-own-version-of-you",
+        "why": "It imagines building a companion out of body parts, in the manner of Frankenstein."
+      }
+    ]
+  },
+  {
+    "id": "america",
+    "title": "America",
+    "intro": "The country as he sang it: its history, its myths, its outlaws.",
+    "steps": [
+      {
+        "song": "north-country-blues",
+        "why": "A portrait of a Minnesota iron-range town emptied when the mines close."
+      },
+      {
+        "song": "desolation-row",
+        "why": "At over eleven minutes, it is the album's only acoustic track and its closer."
+      },
+      {
+        "song": "highway-61-revisited",
+        "why": "Named after the highway that runs from Minnesota down to New Orleans, it features a police siren whistle."
+      },
+      {
+        "song": "its-alright-ma-im-only-bleeding",
+        "why": "Running about seven and a half minutes, it is the longest song on the album."
+      },
+      {
+        "song": "subterranean-homesick-blues",
+        "why": "It became his first Top 40 hit in the US, and its cue-card promo clip opens Dont Look Back."
+      },
+      {
+        "song": "tombstone-blues",
+        "why": "A fast electric blues featuring Mike Bloomfield on lead guitar."
+      },
+      {
+        "song": "as-i-went-out-one-morning",
+        "why": "Like most of the album, it was cut in Nashville in late 1967 with just bass, drums and Dylan's guitar and harmonica."
+      },
+      {
+        "song": "john-wesley-harding",
+        "why": "The title track is loosely based on the Texas outlaw John Wesley Hardin, with an extra letter added to the name."
+      },
+      {
+        "song": "days-of-49",
+        "why": "An old ballad of the California Gold Rush and the men it drew west."
+      },
+      {
+        "song": "the-ballad-of-ira-hayes",
+        "why": "The true story of a Marine in the famous Iwo Jima flag-raising and what became of him back home."
+      },
+      {
+        "song": "slow-train",
+        "why": "The album takes its name from this song."
+      },
+      {
+        "song": "when-you-gonna-wake-up",
+        "why": "He performed it on Saturday Night Live in October 1979."
+      },
+      {
+        "song": "union-sundown",
+        "why": "It targets the shift of American manufacturing to cheap labor overseas."
+      }
+    ]
+  },
+  {
+    "id": "time",
+    "title": "Time passing",
+    "intro": "Songs that watch the clock, the years and the changes.",
+    "steps": [
+      {
+        "song": "ballad-of-a-thin-man",
+        "why": "Built on Dylan's piano, it became a fixture of his 1966 live shows."
+      },
+      {
+        "song": "stuck-inside-of-mobile-with-the-memphis-blues-again",
+        "why": "Cut in Nashville in early 1966, it runs about seven minutes."
+      },
+      {
+        "song": "visions-of-johanna",
+        "why": "Dylan first tried it in New York with the Hawks before cutting the album version in Nashville."
+      },
+      {
+        "song": "all-along-the-watchtower",
+        "why": "It became Dylan's most performed song in concert, usually played in the hard-rock arrangement Hendrix gave it."
+      },
+      {
+        "song": "time-passes-slowly",
+        "why": "A quiet song about time slowing down in a peaceful country life."
+      },
+      {
+        "song": "when-he-returns",
+        "why": "The album's closing track is just Dylan's voice and Barry Beckett's piano."
+      },
+      {
+        "song": "everything-is-broken",
+        "why": "It was released as a single with a music video."
+      },
+      {
+        "song": "shooting-star",
+        "why": "It closes the album."
+      },
+      {
+        "song": "highlands",
+        "why": "At more than sixteen minutes it closes the album and was then the longest studio track Dylan had released."
+      },
+      {
+        "song": "not-dark-yet",
+        "why": "It was released as a single from the album and became one of its most praised songs."
+      },
+      {
+        "song": "mississippi",
+        "why": "Dylan first tried it during the Time Out of Mind sessions, and Sheryl Crow released a version before his own appeared."
+      },
+      {
+        "song": "long-and-wasted-years",
+        "why": "A late look back over years gone by and a marriage that went wrong."
+      }
+    ]
+  },
+  {
+    "id": "freedom",
+    "title": "Freedom",
+    "intro": "Songs that ask who gets to be free, and how.",
+    "steps": [
+      {
+        "song": "blowin-in-the-wind",
+        "why": "Its melody adapts the spiritual \"No More Auction Block\", and it became a civil-rights anthem."
+      },
+      {
+        "song": "gates-of-eden",
+        "why": "A long acoustic song of surreal images, it was the B-side of the single Like a Rolling Stone."
+      },
+      {
+        "song": "like-a-rolling-stone",
+        "why": "Released as a single in July 1965 at over six minutes, it reached number two in the US."
+      },
+      {
+        "song": "maggies-farm",
+        "why": "It was the opening number of his electric set at Newport in 1965."
+      },
+      {
+        "song": "mr-tambourine-man",
+        "why": "The Byrds' electric version reached number one in 1965 before many listeners had heard Dylan's own."
+      },
+      {
+        "song": "subterranean-homesick-blues",
+        "why": "It became his first Top 40 hit in the US, and its cue-card promo clip opens Dont Look Back."
+      },
+      {
+        "song": "rainy-day-women-12-35",
+        "why": "Recorded in Nashville with a raucous brass-band feel, it reached number two in the US."
+      },
+      {
+        "song": "as-i-went-out-one-morning",
+        "why": "Like most of the album, it was cut in Nashville in late 1967 with just bass, drums and Dylan's guitar and harmonica."
+      },
+      {
+        "song": "drifters-escape",
+        "why": "A three-minute parable that closes the first side of the original LP."
+      },
+      {
+        "song": "john-wesley-harding",
+        "why": "The title track is loosely based on the Texas outlaw John Wesley Hardin, with an extra letter added to the name."
+      },
+      {
+        "song": "if-dogs-run-free",
+        "why": "A half-recited jazz piece asking why people cannot live as freely as dogs."
+      }
+    ]
+  },
+  {
+    "id": "war",
+    "title": "War",
+    "intro": "Songs written against war, or in its shadow.",
+    "steps": [
+      {
+        "song": "masters-of-war",
+        "why": "It sets a furious attack on arms makers to the tune of the traditional \"Nottamun Town\"."
+      },
+      {
+        "song": "talking-world-war-iii-blues",
+        "why": "A comic talking blues about dreaming he has survived a nuclear war."
+      },
+      {
+        "song": "with-god-on-our-side",
+        "why": "Its melody follows Dominic Behan's \"The Patriot Game\"."
+      },
+      {
+        "song": "tombstone-blues",
+        "why": "A fast electric blues featuring Mike Bloomfield on lead guitar."
+      },
+      {
+        "song": "all-along-the-watchtower",
+        "why": "It became Dylan's most performed song in concert, usually played in the hard-rock arrangement Hendrix gave it."
+      },
+      {
+        "song": "senor-tales-of-yankee-power",
+        "why": "Like the rest of the album, it was recorded at his Rundown Studios in Santa Monica with his 1978 touring band."
+      },
+      {
+        "song": "neighborhood-bully",
+        "why": "It is widely heard as a defense of the state of Israel."
+      },
+      {
+        "song": "clean-cut-kid",
+        "why": "A sardonic song about an ordinary American boy sent to Vietnam and wrecked by it."
+      },
+      {
+        "song": "arthur-mcbride",
+        "why": "An Irish anti-recruiting song, which Dylan learned from Paul Brady's recording."
+      },
+      {
+        "song": "two-soldiers",
+        "why": "An old Civil War song of two soldiers who die in the same battle."
+      }
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; container-type:size; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f10-q4-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f10-q4-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f10-q4-place { position:absolute; left:90px; top:88px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.14em; text-transform:uppercase; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f10-q4-q { position:absolute; left:90px; top:140px; width:1740px; font:400 62px/1.08 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  .f10-q4-opt { position:absolute; box-sizing:border-box; top:330px; width:840px; height:510px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f10-q4-opt .k { position:absolute; left:32px; top:30px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f10-q4-opt .l { position:absolute; left:32px; top:72px; width:776px; font:400 42px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f10-q4-opt .t { position:absolute; left:32px; top:418px; width:776px; font:400 26px/1.32 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f10-q4-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:13px; }
+  .f10-q4-rec { color:var(--rp-coral-deep); }
+
+  /* tiny pictures, 776 x 210 */
+  .f10-q4-pic { position:absolute; left:32px; top:186px; width:776px; height:210px; border-radius:8px; overflow:hidden; border:1px solid rgba(var(--rp-ink-rgb),0.2); background:var(--rp-paper); }
+  .f10-q4-hd { position:absolute; left:0; top:0; width:100%; height:44px; box-sizing:border-box; background:var(--rp-tile-2); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.18); }
+  .f10-q4-hd .b { position:absolute; left:18px; top:10px; font:700 24px/24px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f10-q4-hd .tb { position:absolute; left:120px; top:10px; font:400 24px/24px "Inter"; letter-spacing:0.04em; text-transform:uppercase; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; }
+  .f10-q4-row { position:absolute; left:20px; top:62px; display:flex; align-items:baseline; gap:18px; white-space:nowrap; }
+  .f10-q4-row b { font:700 34px/1 "Inter"; letter-spacing:-0.01em; color:var(--rp-ink); }
+  .f10-q4-lk { font:400 24px/1 "Inter"; color:var(--rp-ink); text-decoration:underline; text-underline-offset:5px; }
+  .f10-q4-map { position:absolute; left:0; top:120px; width:776px; height:90px; background:var(--rp-slab); }
+  .f10-q4-d { position:absolute; width:10px; height:10px; margin:-5px 0 0 -5px; border-radius:50%; background:rgba(var(--rp-slab-ink-rgb),0.55); }
+  .f10-q4-lnv { position:absolute; left:0; top:0; width:100%; height:100%; overflow:visible; }
+  .f10-q4-lnv line { stroke:rgba(var(--rp-slab-ink-rgb),0.35); stroke-width:1.5; }
+
+  /* B: the map's panel, an arrow, then the song page with its button */
+  .f10-q4-bmap { position:absolute; left:0; top:0; width:360px; height:210px; background:var(--rp-slab); }
+  .f10-q4-bpanel { position:absolute; left:150px; top:0; width:210px; height:210px; box-sizing:border-box; background:var(--rp-tile); border-left:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f10-q4-bpanel .pt { position:absolute; left:16px; top:18px; width:180px; font:700 24px/1.15 "Inter"; color:var(--rp-ink); }
+  .f10-q4-bpanel .po { position:absolute; left:16px; bottom:18px; font:400 24px/1.15 "Inter"; color:var(--rp-ink); white-space:nowrap; text-decoration:underline; text-underline-offset:4px; }
+  .f10-q4-arr { position:absolute; left:364px; top:84px; width:44px; font:400 32px/1 "Inter"; text-align:center; color:rgba(var(--rp-ink-rgb),0.72); }
+  .f10-q4-bpage { position:absolute; left:412px; top:0; width:364px; height:210px; box-sizing:border-box; background:var(--rp-paper); border-left:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f10-q4-bpage .gt { position:absolute; left:18px; top:22px; font:700 30px/1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f10-q4-bpage .gm { position:absolute; left:18px; top:64px; font:400 24px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f10-q4-bpage .bt { position:absolute; left:18px; top:128px; box-sizing:border-box; padding:0 14px; height:52px; border-radius:6px; border:1px solid rgba(var(--rp-ink-rgb),0.5); background:var(--rp-tile); font:400 24px/50px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="10-q4" data-band="bottom" data-start="0" data-duration="15.156" data-width="1920" data-height="1080">
+
+  <div class="clip f10-q4-bg" id="f10-q4-bg" data-start="0" data-duration="15.156" data-track-index="0"></div>
+
+  <div class="clip f10-q4-scene" id="f10-q4-scene" data-start="0" data-duration="15.156" data-track-index="1">
+    <div class="f10-q4-place" id="f10-q4-place">Question 4 · step 5</div>
+    <div class="f10-q4-q" id="f10-q4-q" data-question>On a computer, should the full map offer a way to the thread cards?</div>
+
+    <div class="f10-q4-opt" id="f10-q4-opt-a" data-option="a" style="left:90px">
+      <div class="f10-q4-ring" id="f10-q4-ring"></div>
+      <span class="k">A<span class="f10-q4-rec" id="f10-q4-rec"> · RECOMMENDED</span></span>
+      <div class="l">Add “A thread from this song ›” to the map page</div>
+      <div class="f10-q4-pic" aria-hidden="true">
+        <div class="f10-q4-hd"><span class="b">Dylan</span> <span class="tb">Eras &#160;Threads &#160;Map &#160;About</span></div>
+        <div class="f10-q4-row"><b>Masters of War</b> <span class="f10-q4-lk" id="f10-q4-lk">A thread from Masters of War ›</span></div>
+        <div class="f10-q4-map">
+          <svg class="f10-q4-lnv" aria-hidden="true"><line x1="120" y1="30" x2="368" y2="65"/></svg>
+          <svg class="f10-q4-lnv" aria-hidden="true"><line x1="368" y1="65" x2="566" y2="37"/></svg>
+          <div class="f10-q4-d" style="left:120px; top:30px"></div>
+          <div class="f10-q4-d" style="left:368px; top:65px; background:var(--rp-slab-ink)"></div>
+          <div class="f10-q4-d" style="left:566px; top:37px"></div>
+          <div class="f10-q4-d" style="left:690px; top:70px"></div>
+          <div class="f10-q4-d" style="left:250px; top:72px"></div>
+        </div>
+      </div>
+      <div class="t">One link beside the title; one more control on a full map.</div>
+    </div>
+
+    <div class="f10-q4-opt" id="f10-q4-opt-b" data-option="b" style="left:990px">
+      <span class="k">B</span>
+      <div class="l">No link: open the song, then start a thread</div>
+      <div class="f10-q4-pic" aria-hidden="true">
+        <div class="f10-q4-bmap">
+          <svg class="f10-q4-lnv" aria-hidden="true"><line x1="30" y1="60" x2="108" y2="105"/></svg>
+          <div class="f10-q4-d" style="left:30px; top:60px"></div>
+          <div class="f10-q4-d" style="left:108px; top:105px; background:var(--rp-slab-ink)"></div>
+          <div class="f10-q4-d" style="left:60px; top:170px"></div>
+        </div>
+        <div class="f10-q4-bpanel">
+          <div class="pt">Masters of War</div>
+          <div class="po">Open the song ›</div>
+        </div>
+        <div class="f10-q4-arr" id="f10-q4-arr">→</div>
+        <div class="f10-q4-bpage" id="f10-q4-bpage">
+          <div class="gt">Masters of War</div>
+          <div class="gm">the song page</div>
+          <div class="bt">Start a thread from here</div>
+        </div>
+      </div>
+      <div class="t">As built; two clicks, through the song page.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "10-q4";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f10-q4-" + s); };
+  var slideUp = function (tl, el, at) {
+    tl.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: eyebrow and heading; card A on "A, add a link", its link on "link"
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.05);
+  tl.fromTo($("q"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.2);
+  slideUp(tl, $("opt-a"), 6.7);
+  tl.fromTo($("lk"), { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, 7.35);
+
+  // Scene 2: card B on "B, no link"; the arrow and the song page on "then start a thread"
+  slideUp(tl, $("opt-b"), 10.1);
+  tl.fromTo($("arr"), { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.4, ease: E }, 11.1);
+  tl.fromTo($("bpage"), { opacity: 0 }, { opacity: 1, duration: 0.45, ease: E }, 12.2);
+
+  // Scene 3: "I recommend A": the coral border and RECOMMENDED; hold still
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 13.6);
+  tl.fromTo($("rec"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 13.75);
+
+  tl.set({}, {}, 14.656);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

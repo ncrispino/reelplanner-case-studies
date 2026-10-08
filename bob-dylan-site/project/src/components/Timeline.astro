@@ -1,0 +1,157 @@
+---
+// The era timeline (step 3): one full-width panel per era, swiped sideways; a strip of all eras on top, sized by years.
+// From 1100 px (plan 2026-10-07-desktop, step 3, D-037): one era fills the screen, the eras one under another; the page
+// snaps to the next era as you scroll, and ‹ ›, the ← → keys and the timeline (each era's name under its stretch) move
+// to the era before or after. The address follows the era, /era/<id>/.
+import { eras, yearsLabel, url } from "../lib/data";
+import EraSpread from "./EraSpread.astro";
+interface Props { start: string }
+const { start } = Astro.props;
+const last = new Date().getFullYear();
+const span = (e: (typeof eras)[number]) => ((e.years[1] ?? last) - e.years[0] + 1);
+---
+<div class="timeline" data-start={start}>
+  <nav class="strip" aria-label="Jump to an era">
+    {eras.map((e) => (
+      <a href={url.era(e.id)} class="seg" data-era={e.id} style={`flex-grow:${span(e)}`} aria-label={`${e.title}, ${yearsLabel(e)}`} data-go={e.id}><span class="sl" aria-hidden="true">{e.title}</span></a>
+    ))}
+  </nav>
+  <p class="now kicker" aria-live="polite"></p>
+  <div class="panels" tabindex="0" aria-label="Eras: swipe or use the arrow keys">
+    {eras.map((e, i) => <EraSpread era={e} eager={e.id === start} next={eras[i + 1] ?? null} />)}
+  </div>
+  <button type="button" class="step prev desk" aria-label="The era before" data-step="-1">‹</button>
+  <button type="button" class="step next desk" aria-label="The era after" data-step="1">›</button>
+</div>
+<script>
+  // Snap to the starting era, keep the strip, the address and the page's theme in step with the panel in view.
+  // A phone or a tablet swipes the panels sideways; from 1100 px the page scrolls down through them.
+  const DESKTOP = "(min-width: 1100px)";
+  let onKey: ((ev: KeyboardEvent) => void) | null = null;
+  function setup() {
+    const root = document.querySelector<HTMLElement>(".timeline");
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = "1";
+    const desk = matchMedia(DESKTOP);
+    const reduce = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const panels = root.querySelector<HTMLElement>(".panels")!;
+    const list = [...root.querySelectorAll<HTMLElement>(".panel")];
+    const segs = [...root.querySelectorAll<HTMLElement>(".seg")];
+    const now = root.querySelector<HTMLElement>(".now")!;
+    let cur = "";
+    // a phone: the swiped row is as tall as the era in view (its panel and its bands), not as the tallest era
+    const block = (p: HTMLElement) => (p.closest<HTMLElement>(".eb") ?? p);
+    let fitting: HTMLElement | null = null;
+    const fit = () => { panels.style.height = !desk.matches && fitting ? `${fitting.offsetHeight}px` : ""; };
+    const ro = new ResizeObserver(fit);
+    desk.addEventListener("change", fit);
+    const show = (p: HTMLElement) => {
+      const id = p.dataset.era!;
+      if (fitting !== block(p)) { if (fitting) ro.unobserve(fitting); fitting = block(p); ro.observe(fitting); fit(); }
+      if (id === cur) return;
+      cur = id;
+      document.documentElement.dataset.era = id; document.body.dataset.era = id;
+      segs.forEach((s) => s.classList.toggle("on", s.dataset.go === id));
+      list.forEach((x) => x.classList.toggle("cur", x === p));
+      now.textContent = p.dataset.title!;
+      if (location.pathname !== p.dataset.href) history.replaceState(history.state, "", p.dataset.href);
+    };
+    const go = (p: HTMLElement, smooth = true) => {
+      if (desk.matches) {
+        // scroll-padding-top keeps the header and the timeline clear of the era's top
+        p.scrollIntoView({ block: "start", behavior: smooth && !reduce() ? "smooth" : "instant" as ScrollBehavior });
+        show(p);
+      } else panels.scrollTo({ left: p.offsetLeft, behavior: smooth && !reduce() ? "smooth" : "instant" as ScrollBehavior });
+    };
+    const step = (d: number) => {
+      const i = list.findIndex((p) => p.dataset.era === cur);
+      go(list[Math.max(0, Math.min(list.length - 1, i + d))]);
+    };
+    const start = list.find((p) => p.dataset.era === root.dataset.start) ?? list[0];
+    go(start, false);
+    show(start);
+    requestAnimationFrame(() => root.classList.add("live"));
+    // a phone: the panel most in view of the sideways scroller
+    const io = new IntersectionObserver((es) => es.forEach((e) => !desk.matches && e.isIntersecting && show(e.target as HTMLElement)), { root: panels, threshold: 0.6 });
+    list.forEach((p) => io.observe(p));
+    // a computer: the panel under the middle of the window
+    let ticking = false;
+    const onScroll = () => {
+      if (!desk.matches || ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        const mid = innerHeight * 0.5;
+        const p = list.find((x) => { const r = block(x).getBoundingClientRect(); return r.top <= mid && r.bottom > mid; });
+        if (p) show(p);
+      });
+    };
+    addEventListener("scroll", onScroll, { passive: true });
+    document.addEventListener("astro:before-swap", () => removeEventListener("scroll", onScroll), { once: true });
+    segs.forEach((s) => s.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      go(list.find((p) => p.dataset.era === s.dataset.go)!);
+    }));
+    root.querySelectorAll<HTMLElement>(".step").forEach((b) => b.addEventListener("click", () => step(+b.dataset.step!)));
+    panels.addEventListener("keydown", (ev) => {
+      if (desk.matches || (ev.key !== "ArrowRight" && ev.key !== "ArrowLeft")) return;
+      step(ev.key === "ArrowRight" ? 1 : -1);
+    });
+    // a computer: ← and → on the page, no focus needed (not while typing)
+    if (onKey) document.removeEventListener("keydown", onKey);
+    onKey = (ev) => {
+      if (!desk.matches || !document.body.contains(root) || (ev.key !== "ArrowRight" && ev.key !== "ArrowLeft")) return;
+      if ((ev.target as HTMLElement).closest("input, textarea, select, [contenteditable], dialog") || ev.altKey || ev.ctrlKey || ev.metaKey) return;
+      if (document.querySelector("dialog[open]")) return;
+      ev.preventDefault();
+      step(ev.key === "ArrowRight" ? 1 : -1);
+    };
+    document.addEventListener("keydown", onKey);
+  }
+  setup();
+  document.addEventListener("astro:page-load", setup);
+</script>
+<style>
+  /* layout only: each era dresses its own panel in src/themes/<era>.css */
+  .timeline { margin: -16px -16px 0; --strip-h: 60px; }
+  /* the time ribbon: every era a stretch of colour, sized by its years */
+  .strip { position: sticky; top: 0; z-index: 5; display: flex; gap: 3px; height: 44px; align-items: center; padding: 0 16px;
+    background: #12100d; box-shadow: 0 1px 0 rgba(255,255,255,.08); }
+  /* each segment is a full-height tap target; the bar is drawn inside it */
+  .seg { display: flex; align-items: center; height: 44px; min-width: 7px; }
+  .seg::before { content: ""; display: block; width: 100%; height: 8px; background: var(--dot); opacity: .55; transition: height .2s, opacity .2s; }
+  .seg.on::before { opacity: 1; height: 22px; box-shadow: 0 0 0 2px #12100d, 0 0 0 3px var(--dot); }
+  .sl { display: none; }
+  .now { padding: 8px 16px 0; margin: 0; min-height: 26px; }
+  .panels { display: flex; align-items: flex-start; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .panels::-webkit-scrollbar { display: none; }
+  @media (min-width: 768px) { .timeline { margin: -32px -24px 0; } }
+
+  @media (min-width: 1100px) {
+    :global(html:has(.timeline)) { scroll-snap-type: y mandatory; scroll-padding-top: calc(var(--head-h) + 60px); }
+    .timeline { margin: 0; }
+    /* the timeline across the whole width, 1941 to today, each era's name under its stretch */
+    .strip { top: var(--head-h); height: var(--strip-h); gap: 4px; align-items: stretch; padding: 0 max(48px, calc((100vw - var(--page-max)) / 2)); }
+    .seg { position: relative; flex-basis: 0; min-width: 64px; height: auto; flex-direction: column; align-items: stretch; justify-content: flex-start;
+      padding-top: 12px; text-decoration: none; }
+    .seg::before { height: 10px; flex: 0 0 auto; }
+    .seg.on::before { height: 14px; margin-top: -2px; }
+    .seg:hover::before { opacity: .9; }
+    .sl { display: block; margin-top: 8px; font: 600 11px/1.15 var(--mono); letter-spacing: .04em; text-transform: uppercase;
+      color: rgba(241,234,217,.62); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .seg:hover .sl { color: #f1ead9; }
+    /* the current era's name is written out in full, over its neighbours' if it must be */
+    .seg.on .sl { position: relative; z-index: 2; align-self: flex-start; overflow: visible; color: #fff; background: #12100d; padding-right: 8px; }
+    .seg:nth-last-child(-n+2).on .sl { align-self: flex-end; padding: 0 0 0 8px; }
+    .now { display: none; }
+    .panels { display: block; overflow: visible; height: auto !important; }
+    .panels:focus { outline: none; }
+    /* ‹ › at the window's sides */
+    .step { position: fixed; z-index: 20; top: calc(50% + (var(--head-h) + var(--strip-h)) / 2); translate: 0 -50%; width: 56px; height: 88px;
+      display: grid; place-items: center; padding: 0; cursor: pointer; font: 400 48px/1 Georgia, serif; color: #f1ead9;
+      background: rgba(18,16,13,.72); border: 1px solid rgba(241,234,217,.35); }
+    .step:hover { background: #12100d; }
+    .step.prev { left: 0; border-left: 0; }
+    .step.next { right: 0; border-right: 0; }
+  }
+</style>

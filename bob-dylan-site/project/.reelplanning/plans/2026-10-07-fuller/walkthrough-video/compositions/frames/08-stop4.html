@@ -1,0 +1,82 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  /* type sizes used: 76 (question), 40 (heading), 34 (chose), 30 (compact chose, tiles), 26 (labels, addresses, instead of, why) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f08-stop4-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f08-stop4-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f08-stop4-place { position:absolute; left:80px; top:70px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f08-stop4-win { position:absolute; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f08-stop4-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f08-stop4-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f08-stop4-addr { position:absolute; left:84px; right:12px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; overflow:hidden; }
+  .f08-stop4-crop { position:absolute; left:0; top:36px; overflow:hidden; }
+  .f08-stop4-crop img { position:absolute; display:block; max-width:none; }
+  .f08-stop4-ph { position:absolute; border:1px solid var(--rp-ink); border-radius:28px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f08-stop4-ph img { position:absolute; left:0; display:block; max-width:none; }
+  .f08-stop4-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; }
+  .f08-stop4-label { position:absolute; font:400 26px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f08-stop4-chip { position:absolute; padding:10px 18px; font:400 26px/1 "Inter"; color:var(--rp-ink); background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.18); border-radius:999px; white-space:nowrap; }
+  .f08-stop4-tile { position:absolute; box-sizing:border-box; padding:22px 28px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f08-stop4-tile b { display:block; font:700 30px/1.2 "Inter"; color:var(--rp-ink); margin-bottom:6px; }
+  .f08-stop4-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f08-stop4-txt { position:absolute; left:36px; right:28px; top:30px; }
+  .f08-stop4-card.compact .f08-stop4-txt { top:22px; }
+  .f08-stop4-kick { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-coral-deep); margin-bottom:14px; }
+  .f08-stop4-chose { font:700 34px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f08-stop4-card.compact .f08-stop4-chose { font-size:30px; }
+  .f08-stop4-inst { margin-top:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f08-stop4-card.compact .f08-stop4-inst { margin-top:8px; }
+  .f08-stop4-why { margin-top:8px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); white-space:nowrap; }
+
+</style>
+
+<div id="root" data-composition-id="08-stop4" data-band="bottom" data-start="0" data-duration="20.331" data-width="1920" data-height="1080">
+  <div class="clip f08-stop4-bg" id="f08-stop4-bg" data-start="0" data-duration="20.331" data-track-index="0"></div>
+  <div class="clip f08-stop4-scene" id="f08-stop4-scene" data-start="0" data-duration="20.331" data-track-index="1">
+    <div class="f08-stop4-place" id="f08-stop4-place">Step 4 · the album page</div>
+    <div class="f08-stop4-win" id="f08-stop4-al" data-artifact="/album/blood-on-the-tracks/" style="left:80px;top:130px;width:720px;height:454px"><div class="f08-stop4-bar"><span class="f08-stop4-dot" style="left:16px"></span><span class="f08-stop4-dot" style="left:34px"></span><span class="f08-stop4-dot" style="left:52px"></span><span class="f08-stop4-addr">/album/blood-on-the-tracks/</span></div><div class="f08-stop4-crop" style="width:720px;height:418px"><img src="assets/shots/d-album-open.png" alt="Blood on the Tracks: cover and Spotify player on the left, the essay and track list on the right, a row open" style="left:0.0px;top:-32.0px;width:720.0px;height:450.0px"></div></div>
+    <div class="f08-stop4-win" id="f08-stop4-cn" data-artifact="/song/like-a-rolling-stone/" style="left:80px;top:640px;width:441px;height:173px"><div class="f08-stop4-bar"><span class="f08-stop4-dot" style="left:16px"></span><span class="f08-stop4-dot" style="left:34px"></span><span class="f08-stop4-dot" style="left:52px"></span><span class="f08-stop4-addr">/song/like-a-rolling-stone/</span></div><div class="f08-stop4-crop" style="width:441px;height:137px"><img src="assets/shots/d-song-threads.png" alt="A song&#x27;s In threads band: Love gone wrong, Freedom, and From Like a Rolling Stone, its own thread" style="left:-336.0px;top:-325.5px;width:1008.0px;height:630.0px"></div></div>
+    <div class="f08-stop4-card compact" id="f08-stop4-c0" data-call="a5" style="left:1100px;top:130px;width:740px;height:168px"><div class="f08-stop4-txt"><div class="f08-stop4-chose" id="f08-stop4-c0c">Cover and player left, essay right</div><div class="f08-stop4-inst" id="f08-stop4-c0i">instead of: the essay on the left</div></div></div>
+    <div class="f08-stop4-card compact" id="f08-stop4-c1" data-call="a7" style="left:1100px;top:316px;width:740px;height:168px"><div class="f08-stop4-txt"><div class="f08-stop4-chose" id="f08-stop4-c1c">Six connections off the album</div><div class="f08-stop4-inst" id="f08-stop4-c1i">instead of: all of them</div></div></div>
+    <div class="f08-stop4-card compact" id="f08-stop4-c2" data-call="a25" style="left:1100px;top:502px;width:740px;height:168px"><div class="f08-stop4-txt"><div class="f08-stop4-chose" id="f08-stop4-c2c">In threads lists the song&#x27;s own thread</div><div class="f08-stop4-inst" id="f08-stop4-c2i">instead of: curated threads only</div></div></div>
+    <div class="f08-stop4-card compact" id="f08-stop4-c3" data-call="a24" style="left:1100px;top:688px;width:740px;height:168px"><div class="f08-stop4-txt"><div class="f08-stop4-chose" id="f08-stop4-c3c">Fallen Angels: no player</div><div class="f08-stop4-inst" id="f08-stop4-c3i">instead of: a guessed album</div></div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f08-stop4-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var card = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, at); };
+  var coral = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, at); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+  rise(tl, $("place"), 0.10);
+  push(tl, $("al"), 0.15);
+  card(tl, $("c0"), 2.08);
+  rise(tl, $("c0c"), 2.23);
+  rise(tl, $("c0i"), 2.68);
+  card(tl, $("c1"), 8.51);
+  rise(tl, $("c1c"), 8.66);
+  rise(tl, $("c1i"), 9.11);
+  card(tl, $("c2"), 12.49);
+  push(tl, $("cn"), 12.49);
+  rise(tl, $("c2c"), 12.64);
+  rise(tl, $("c2i"), 13.09);
+  card(tl, $("c3"), 15.54);
+  rise(tl, $("c3c"), 15.69);
+  rise(tl, $("c3i"), 16.14);
+  tl.set({}, {}, 20.331);
+  window.__timelines["08-stop4"] = tl;
+})();
+</script>
+</template>

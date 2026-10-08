@@ -1,0 +1,3 @@
+$ node tools/check-phone.mjs
+✓ 12 views at 375×812, screenshots in checks/; a tap on a map dot opens its song
+exit 0

@@ -1,0 +1,95 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* three type sizes: 26 (keys, page rows), 44 (option labels), 64 (question) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f49-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f49-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f49-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f49-q { position:absolute; left:90px; top:150px; width:1740px; font:400 64px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  .f49-opt { position:absolute; box-sizing:border-box; top:310px; width:540px; height:460px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f49-opt .k { position:absolute; left:32px; top:30px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f49-opt .l { position:absolute; left:32px; top:76px; right:32px; font:400 44px/1.08 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+
+  /* the Lyrics row as the song page would show it (Greenwich Village page: paper, ink) */
+  .f49-pg { position:absolute; left:24px; right:24px; top:214px; bottom:24px; box-sizing:border-box; padding:20px 22px; border-radius:8px; background:var(--rp-paper); border:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f49-link { position:absolute; left:22px; right:22px; bottom:20px; height:62px; box-sizing:border-box; border-top:1px solid rgba(var(--rp-ink-rgb),0.2); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); font:700 26px/60px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f49-slot { position:absolute; left:22px; right:22px; top:20px; height:104px; box-sizing:border-box; border:2px dashed rgba(var(--rp-ink-rgb),0.4); border-radius:8px; padding:16px 16px; font:400 26px/34px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); }
+  .f49-prev { position:absolute; left:22px; right:22px; top:20px; font:400 26px/34px "Inter"; color:var(--rp-ink); }
+
+  .f49-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:13px; }
+  .f49-rec { color:var(--rp-coral-deep); }
+  .f49-none { position:absolute; left:22px; right:22px; top:20px; height:104px; display:flex; align-items:center; justify-content:center; font:400 26px/34px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.5); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="49-q2-lyrics" data-band="bottom" data-start="0" data-duration="20.831" data-width="1920" data-height="1080">
+  <div class="clip f49-bg" id="f49-bg" data-start="0" data-duration="24" data-track-index="0"></div>
+
+  <div class="clip f49-scene" id="f49-scene" data-start="0" data-duration="24" data-track-index="1">
+    <div class="f49-place" id="f49-place">Question 3 · step 4</div>
+    <div class="f49-q" id="f49-q" data-question>What should a song page show beside its lyrics link?</div>
+
+    <div class="f49-opt" id="f49-opt-a" data-option="a" style="left:90px">
+      <span class="k">A</span>
+      <div class="l">The link only</div>
+      <div class="f49-pg" data-artifact="song page Lyrics row, link only">
+        <div class="f49-none">(nothing beside the link)</div>
+        <div class="f49-link">Lyrics on bobdylan.com ↗</div>
+      </div>
+    </div>
+
+    <div class="f49-opt" id="f49-opt-b" data-option="b" style="left:690px">
+      <span class="k">B</span>
+      <div class="l">The link and the first line</div>
+      <div class="f49-pg" data-artifact="song page Lyrics row, first line above">
+        <div class="f49-slot">first line, quoted · needs permission</div>
+        <div class="f49-link">Lyrics on bobdylan.com ↗</div>
+      </div>
+    </div>
+
+    <div class="f49-opt" id="f49-opt-c" data-option="c" style="left:1290px">
+      <div class="f49-ring" id="f49-ring"></div>
+      <span class="k">C<span class="f49-rec" id="f49-rec"> · RECOMMENDED</span></span>
+      <div class="l">The link and a preview in our words</div>
+      <div class="f49-pg" data-artifact="song page Lyrics row, preview above">
+        <div class="f49-prev">Nine questions about war and freedom, and an answer that won’t stay still.</div>
+        <div class="f49-link">Lyrics on bobdylan.com ↗</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "49-q2-lyrics";
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out";
+  function slideUp(sel, at) { tl.fromTo(sel, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, at); }
+
+  // Scene 1 (0-7s): the question, then card A
+  tl.fromTo("#f49-place", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.085);
+  tl.fromTo("#f49-q", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.243);
+  slideUp("#f49-opt-a", 2.55);
+
+  // Scene 2 (7-14s): card B, a labelled slot where the quoted line would sit
+  slideUp("#f49-opt-b", 6.289);
+
+  // Scene 3 (14-19s): card C, the preview in the site's own words
+  slideUp("#f49-opt-c", 12.237);
+
+  // Scene 4 (19-24s): C gets the coral border and the recommended key; hold still
+  tl.fromTo("#f49-ring", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 16.428);
+  tl.fromTo("#f49-rec", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 16.684);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 23.915);
+  window.__timelines = window.__timelines || {};
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

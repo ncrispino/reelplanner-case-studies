@@ -1,0 +1,426 @@
+{
+  "version": 1,
+  "src": "2026-10-06-dylan-site--walkthrough/index.html",
+  "project": "walkthrough-video",
+  "exportedAt": "2026-10-07T03:10:32.687Z",
+  "watch": {
+    "firstPlayAt": "2026-10-07T02:59:57.411Z",
+    "maxTimeReached": 261.99,
+    "durationSeconds": 261.99,
+    "completion": 1,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 1
+      }
+    ],
+    "moments": [
+      {
+        "kind": "rewind",
+        "t": 113.67,
+        "from": 128.3,
+        "planStep": 3,
+        "frameIndex": 9
+      },
+      {
+        "kind": "rewind",
+        "t": 158.64,
+        "from": 160.93,
+        "planStep": 5,
+        "frameIndex": 13
+      },
+      {
+        "kind": "rewind",
+        "t": 156.6,
+        "from": 159.4,
+        "planStep": 5,
+        "frameIndex": 12
+      },
+      {
+        "kind": "rewind",
+        "t": 174.8,
+        "from": 236.07,
+        "planStep": 6,
+        "frameIndex": 14
+      }
+    ],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q4",
+      "option": "b",
+      "label": "Official, plus well-known unofficial ones",
+      "recommended": false,
+      "planStep": 6,
+      "question": "Which songs and moments should get a YouTube clip?",
+      "t": 216.521,
+      "decidedAt": "2026-10-07T03:07:09.814Z"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "k1",
+      "answer": "b",
+      "correct": true,
+      "t": 107.165,
+      "answeredAt": "2026-10-07T03:02:46.110Z"
+    }
+  ],
+  "checks": "on",
+  "autonomy": [
+    {
+      "id": "a10",
+      "verdict": "accept",
+      "t": 48.419,
+      "planStep": 1,
+      "chose": "A mistyped address lands on the 404 page, which sends you on to search with the address's last part as the words (`/album/blonde-on-blond/` → search \"blonde on blond\")",
+      "shownAt": "2026-10-07T03:00:45.875Z",
+      "judgedAt": "2026-10-07T03:00:47.396Z"
+    },
+    {
+      "id": "a15",
+      "verdict": "accept",
+      "t": 48.419,
+      "planStep": 1,
+      "chose": "From 768 px the tab bar sits at the top of the screen",
+      "shownAt": "2026-10-07T03:00:45.875Z",
+      "judgedAt": "2026-10-07T03:00:48.361Z"
+    },
+    {
+      "id": "a18",
+      "verdict": "accept",
+      "t": 77.987,
+      "planStep": 2,
+      "chose": "Each photo names its era and kind (`dylan` or `place`) in `photos.json`, and the panel picks a Dylan photo first; `eras.json`'s `photos` lists stay empty",
+      "shownAt": "2026-10-07T03:01:19.752Z",
+      "judgedAt": "2026-10-07T03:01:25.877Z"
+    },
+    {
+      "id": "a6",
+      "verdict": "own",
+      "own": "can you explore more why we didnt fully fill the connections here?",
+      "t": 77.987,
+      "planStep": 2,
+      "chose": "49 connections, each one a fact the writers were sure of",
+      "shownAt": "2026-10-07T03:01:19.752Z",
+      "judgedAt": "2026-10-07T03:01:44.649Z"
+    },
+    {
+      "id": "d1",
+      "verdict": "own",
+      "own": "its fine if this is the only possibility but arfe you sure we dcant just quote some small parts? i dont undersand why we wouldnt be able to, this is common to cite a line from a song, even in popular culture",
+      "t": 94.904,
+      "planStep": 2,
+      "chose": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written",
+      "shownAt": "2026-10-07T03:02:01.695Z",
+      "judgedAt": "2026-10-07T03:02:31.521Z"
+    },
+    {
+      "id": "a5",
+      "verdict": "own",
+      "own": "i think the fonts and styling can be much better, more individualistic; it's kind of boring and stock right now. each era should mean something and visually be represented by that via the page. it shouldnt be standardized, it should evoke the creativity of bob dylan",
+      "t": 128.328,
+      "planStep": 3,
+      "chose": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks)",
+      "shownAt": "2026-10-07T03:03:17.113Z",
+      "judgedAt": "2026-10-07T03:03:50.644Z"
+    },
+    {
+      "id": "a11",
+      "verdict": "accept",
+      "t": 151.411,
+      "planStep": 4,
+      "chose": "\"Lyrics on bobdylan.com ↗\" opens in a new tab",
+      "shownAt": "2026-10-07T03:04:13.794Z",
+      "judgedAt": "2026-10-07T03:04:18.020Z"
+    },
+    {
+      "id": "a16",
+      "verdict": "accept",
+      "t": 151.411,
+      "planStep": 4,
+      "chose": "Song pages step to the album's previous and next song",
+      "shownAt": "2026-10-07T03:04:13.794Z",
+      "judgedAt": "2026-10-07T03:04:25.414Z"
+    },
+    {
+      "id": "a17",
+      "verdict": "own",
+      "own": "is this missing some songs do you mean?",
+      "t": 151.411,
+      "planStep": 4,
+      "chose": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks",
+      "shownAt": "2026-10-07T03:04:13.794Z",
+      "judgedAt": "2026-10-07T03:04:44.601Z"
+    },
+    {
+      "id": "a7",
+      "verdict": "accept",
+      "t": 167.859,
+      "planStep": 5,
+      "chose": "The threads are built by `tools/make-threads.mjs`: one per theme plus \"Borrowed tunes\" and \"Songs others made famous\", each card's sentence the song's note or the connection's why",
+      "shownAt": "2026-10-07T03:05:19.670Z",
+      "judgedAt": "2026-10-07T03:05:32.692Z"
+    },
+    {
+      "id": "a14",
+      "verdict": "accept",
+      "t": 193.822,
+      "planStep": 6,
+      "chose": "Search forgives a typo or two (one edit at 4–5 letters, two from 6; a swapped pair counts as one) and takes `theme:<name>`, which the theme chips on song pages use",
+      "shownAt": "2026-10-07T03:05:58.770Z",
+      "judgedAt": "2026-10-07T03:06:00.022Z"
+    },
+    {
+      "id": "a9",
+      "verdict": "own",
+      "own": "we should be able to view other videos here too i mean there should be a lot we can view and probably on more than two",
+      "t": 193.822,
+      "planStep": 6,
+      "chose": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment",
+      "shownAt": "2026-10-07T03:05:58.770Z",
+      "judgedAt": "2026-10-07T03:06:28.298Z"
+    },
+    {
+      "id": "a8",
+      "verdict": "own",
+      "own": "for the 4 that werent found we must find a replacement for it; can't leave dry",
+      "t": 193.822,
+      "planStep": 6,
+      "chose": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs)",
+      "shownAt": "2026-10-07T03:05:58.770Z",
+      "judgedAt": "2026-10-07T03:06:42.478Z"
+    },
+    {
+      "id": "a1",
+      "verdict": "listed",
+      "t": 255.94,
+      "planStep": 1,
+      "chose": "The site's base path is `/` (it lives at a domain's root)",
+      "shownAt": "2026-10-07T03:09:46.812Z",
+      "judgedAt": "2026-10-07T03:10:23.866Z"
+    },
+    {
+      "id": "a2",
+      "verdict": "listed",
+      "t": 255.94,
+      "planStep": 2,
+      "chose": "The parts of the dataset are written as `data/parts/*.json` and merged by `tools/merge-data.mjs` into the seven files",
+      "shownAt": "2026-10-07T03:09:46.812Z",
+      "judgedAt": "2026-10-07T03:10:23.875Z"
+    },
+    {
+      "id": "a13",
+      "verdict": "listed",
+      "t": 255.94,
+      "planStep": 3,
+      "chose": "Each era page (`/era/<id>/`) is the whole timeline, opened at that era",
+      "shownAt": "2026-10-07T03:09:46.812Z",
+      "judgedAt": "2026-10-07T03:10:23.881Z"
+    },
+    {
+      "id": "a4",
+      "verdict": "listed",
+      "t": 255.94,
+      "planStep": 5,
+      "chose": "The map's layout is d3-force, run in the browser",
+      "shownAt": "2026-10-07T03:09:46.812Z",
+      "judgedAt": "2026-10-07T03:10:23.884Z"
+    },
+    {
+      "id": "a3",
+      "verdict": "listed",
+      "t": 255.94,
+      "planStep": 6,
+      "chose": "The phone check drives the Chrome already on the machine (`CHROME_PATH`, else the HyperFrames cache)",
+      "shownAt": "2026-10-07T03:09:46.812Z",
+      "judgedAt": "2026-10-07T03:10:23.887Z"
+    },
+    {
+      "id": "a12",
+      "verdict": "listed",
+      "t": 255.94,
+      "planStep": 6,
+      "chose": "The phone check does not size-check links inside running text or the map's dots, and answers outside requests (covers, players) with an empty reply, so it sees the drawn covers",
+      "shownAt": "2026-10-07T03:09:46.812Z",
+      "judgedAt": "2026-10-07T03:10:23.891Z"
+    }
+  ],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-06-dylan-site",
+      "seen": "2026-10-06T20:49:38.354Z",
+      "sent": "2026-10-06T21:01:57.864Z"
+    },
+    {
+      "video": "2026-10-06-dylan-site--walkthrough",
+      "seen": "2026-10-07T03:07:02.405Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 0,
+    "walked": 0,
+    "termsOpened": 1,
+    "termsLookedUp": [
+      "wikimedia commons"
+    ],
+    "rewinds": 4,
+    "watchedPct": 100
+  },
+  "questions": [],
+  "verdict": "changes",
+  "annotations": [
+    {
+      "id": "amuxiu62xxyy2",
+      "kind": "note",
+      "comment": "can you explore more why we didnt fully fill the connections here?",
+      "about": "On what the agent decided: 49 connections, each one a fact the writers were sure of",
+      "t": 77.99,
+      "frame": {
+        "index": 5,
+        "compositionId": "05-stop2",
+        "title": "Step 2 · Two choices about the data"
+      },
+      "plan": {
+        "step": 2,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxiv68ypyjg",
+      "kind": "note",
+      "comment": "its fine if this is the only possibility but arfe you sure we dcant just quote some small parts? i dont undersand why we wouldnt be able to, this is common to cite a line from a song, even in popular culture",
+      "about": "On what the agent decided: Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written",
+      "t": 94.9,
+      "frame": {
+        "index": 6,
+        "compositionId": "06-d1",
+        "title": "An off-plan change · No lyric excerpts"
+      },
+      "plan": {
+        "step": 2,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxiwvaswi1n",
+      "kind": "note",
+      "comment": "i think the fonts and styling can be much better, more individualistic; it's kind of boring and stock right now. each era should mean something and visually be represented by that via the page. it shouldnt be standardized, it should evoke the creativity of bob dylan",
+      "about": "On what the agent decided: Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks)",
+      "t": 128.33,
+      "frame": {
+        "index": 9,
+        "compositionId": "09-stop3",
+        "title": "Step 3 · Basement and Country, and the fonts"
+      },
+      "plan": {
+        "step": 3,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxiy0xlua7t",
+      "kind": "note",
+      "comment": "is this missing some songs do you mean?",
+      "about": "On what the agent decided: The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks",
+      "t": 151.41,
+      "frame": {
+        "index": 11,
+        "compositionId": "11-stop4",
+        "title": "Step 4 · Three choices on the pages"
+      },
+      "plan": {
+        "step": 4,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxiyj40tj3l",
+      "kind": "note",
+      "comment": "yeah visually this needs much enhancement, it is very basic and even ugly",
+      "about": "",
+      "t": 157.2,
+      "frame": {
+        "index": 12,
+        "compositionId": "12-step5",
+        "title": "Step 5 · Threads and the map"
+      },
+      "plan": {
+        "step": 5,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxj08y3teas",
+      "kind": "note",
+      "comment": "we should be able to view other videos here too i mean there should be a lot we can view and probably on more than two",
+      "about": "On what the agent decided: Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment",
+      "t": 193.82,
+      "frame": {
+        "index": 15,
+        "compositionId": "15-stop6",
+        "title": "Step 6 · Three choices on search and players"
+      },
+      "plan": {
+        "step": 6,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxj0jvy43x9",
+      "kind": "note",
+      "comment": "for the 4 that werent found we must find a replacement for it; can't leave dry",
+      "about": "On what the agent decided: Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs)",
+      "t": 193.82,
+      "frame": {
+        "index": 15,
+        "compositionId": "15-stop6",
+        "title": "Step 6 · Three choices on search and players"
+      },
+      "plan": {
+        "step": 6,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxj1i2kufnz",
+      "kind": "box",
+      "path": [
+        [
+          0.585320126921517,
+          0.4700913306565628
+        ],
+        [
+          0.965621446237286,
+          0.7077560368715715
+        ]
+      ],
+      "t": 174.83,
+      "frame": {
+        "index": 14,
+        "compositionId": "14-step6",
+        "title": "Step 6 · Search, and players after a tap"
+      },
+      "plan": {
+        "step": 6,
+        "questions": [],
+        "component": null
+      },
+      "comment": "these should be loaded already; it looks much cleaner that way. also the rest of the page has ugly bubbles that need improving with the improvemnet of the rest of the themeing"
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

@@ -1,0 +1,92 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 104 (row numbers), 72 (title), 58 (row titles), 30 (steps), 28 (chips), 26 (dependency) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f04-changes-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f04-changes-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f04-changes-title { position:absolute; left:80px; top:96px; font:400 72px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  .f04-changes-row { position:absolute; left:80px; width:1760px; height:224px; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f04-changes-num { position:absolute; left:44px; top:30px; font:400 104px/1 "EB Garamond"; letter-spacing:-0.025em; color:var(--rp-ink); }
+  .f04-changes-t { position:absolute; left:150px; top:42px; font:400 58px/1.1 "EB Garamond"; letter-spacing:-0.014em; color:var(--rp-ink); white-space:nowrap; }
+  .f04-changes-steps { position:absolute; right:40px; top:58px; box-sizing:border-box; height:44px; padding:7px 16px 0; border-radius:6px; background:var(--rp-paper); border:1px solid rgba(var(--rp-ink-rgb),0.3); font:400 30px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; font-variant-ligatures:none; }
+  .f04-changes-chips { position:absolute; left:150px; top:140px; white-space:nowrap; }
+  .f04-changes-chip { display:inline-block; box-sizing:border-box; height:48px; margin-right:14px; padding:8px 18px 0; border-radius:6px; background:var(--rp-paper); border:1px solid rgba(var(--rp-ink-rgb),0.16); font:400 28px/1.1 "Inter"; color:var(--rp-ink); }
+  .f04-changes-gloss { border-bottom:2px solid var(--rp-ink); }
+
+  /* the dependency: a coral line from row 1 down to row 2 */
+  .f04-changes-dep { position:absolute; left:206px; top:466px; width:4px; height:80px; background:var(--rp-coral); transform-origin:50% 0; }
+  .f04-changes-head { position:absolute; left:198px; top:540px; width:0; height:0; border-left:10px solid transparent; border-right:10px solid transparent; border-top:14px solid var(--rp-coral); }
+  .f04-changes-deplab { position:absolute; left:240px; top:492px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.02em; color:var(--rp-ink); white-space:nowrap; font-variant-ligatures:none; }
+</style>
+
+<div id="root" data-composition-id="04-changes" data-band="bottom" data-start="0" data-duration="14.933" data-width="1920" data-height="1080">
+
+  <div class="clip f04-changes-bg" id="f04-changes-bg" data-start="0" data-duration="14.933" data-track-index="0"></div>
+
+  <div class="clip f04-changes-scene" id="f04-changes-scene" data-start="0" data-duration="14.933" data-track-index="1">
+    <div class="f04-changes-title" id="f04-changes-title">Two changes, four steps</div>
+
+    <div class="f04-changes-row" id="f04-changes-row1" style="top:232px">
+      <div class="f04-changes-num">1</div>
+      <div class="f04-changes-t">Every track becomes a song</div>
+      <div class="f04-changes-steps">steps 1–2</div>
+      <div class="f04-changes-chips">
+        <span class="f04-changes-chip" id="f04-changes-a1">its writing</span><span class="f04-changes-chip" id="f04-changes-a2">its player</span><span class="f04-changes-chip" id="f04-changes-a3">its links</span>
+      </div>
+    </div>
+
+    <div class="f04-changes-dep" id="f04-changes-dep"></div>
+    <div class="f04-changes-head" id="f04-changes-arrow"></div>
+    <div class="f04-changes-deplab" id="f04-changes-deplab">change 2 builds on change 1</div>
+
+    <div class="f04-changes-row" id="f04-changes-row2" style="top:566px">
+      <div class="f04-changes-num">2</div>
+      <div class="f04-changes-t">Every track is part of the site</div>
+      <div class="f04-changes-steps">steps 3–4</div>
+      <div class="f04-changes-chips">
+        <span class="f04-changes-chip" id="f04-changes-b1">connections</span><span class="f04-changes-chip" id="f04-changes-b2">threads</span><span class="f04-changes-chip" id="f04-changes-b3">album pages</span><span class="f04-changes-chip" id="f04-changes-b4"><span class="f04-changes-gloss" data-gloss="search">search</span></span><span class="f04-changes-chip" id="f04-changes-b6">the map</span><span class="f04-changes-chip" id="f04-changes-b5">a check</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "04-changes";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f04-changes-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var slideUp = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-14.9s): the rows land with the voice, each one's parts as named; hold
+  pop(tl, $("title"), 0.05, 10);                // "Two changes in four steps"
+  slideUp(tl, $("row1"), 1.95);                 // "First, every track becomes a song"
+  pop(tl, $("a1"), 4.25, 8);                    // "writing"
+  pop(tl, $("a2"), 4.92, 8);                    // "player"
+  pop(tl, $("a3"), 5.9, 8);                     // "links"
+  slideUp(tl, $("row2"), 6.3);                  // "Then every track becomes part of the site"
+  tl.fromTo($("dep"), { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: E }, 7.3);
+  tl.fromTo($("arrow"), { opacity: 0 }, { opacity: 1, duration: 0.3, ease: E }, 7.75);
+  pop(tl, $("deplab"), 7.6, 6);
+  pop(tl, $("b1"), 8.5, 8);                     // "Connections"
+  pop(tl, $("b2"), 9.4, 8);                     // "threads"
+  pop(tl, $("b3"), 9.92, 8);                    // "album pages"
+  pop(tl, $("b4"), 10.92, 8);                   // "search"
+  pop(tl, $("b6"), 11.45, 8);                   // "the map"
+  pop(tl, $("b5"), 12.25, 8);                   // "a check"
+
+  tl.set({}, {}, 14.933);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

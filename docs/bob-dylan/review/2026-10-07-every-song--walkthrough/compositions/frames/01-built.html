@@ -1,0 +1,80 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 64 (count figures), 26 (address, count labels) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f01-built-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f01-built-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* the album page, cropped at scale 1: window 1240 x 640 showing screenshot x 100-1340, y 100-740 */
+  .f01-built-win { position:absolute; left:80px; top:120px; width:1240px; height:676px; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f01-built-bar { position:absolute; left:0; top:0; width:1240px; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f01-built-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f01-built-addr { position:absolute; left:84px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f01-built-crop { position:absolute; left:0; top:36px; width:1240px; height:640px; overflow:hidden; }
+  .f01-built-crop img { position:absolute; left:-100px; top:-100px; display:block; width:1440px; height:900px; max-width:none; }
+
+  .f01-built-svg { position:absolute; left:0; top:0; width:1920px; height:900px; overflow:visible; pointer-events:none; }
+
+  /* the counts column */
+  .f01-built-count { position:absolute; left:1390px; width:470px; }
+  .f01-built-fig { font:400 64px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+  .f01-built-lab { margin-top:10px; font:400 26px/1.2 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; font-variant-ligatures:none; }
+</style>
+
+<div id="root" data-composition-id="01-built" data-band="bottom" data-start="0" data-duration="16.82" data-width="1920" data-height="1080">
+  <div class="clip f01-built-bg" id="f01-built-bg" data-start="0" data-duration="16.82" data-track-index="0"></div>
+
+  <div class="clip f01-built-scene" id="f01-built-scene" data-start="0" data-duration="16.82" data-track-index="1">
+    <div class="f01-built-win" id="f01-built-win" data-artifact="/album/blood-on-the-tracks/">
+      <div class="f01-built-bar"><span class="f01-built-dot" style="left:16px"></span><span class="f01-built-dot" style="left:34px"></span><span class="f01-built-dot" style="left:52px"></span><span class="f01-built-addr">/album/blood-on-the-tracks/</span></div>
+      <div class="f01-built-crop"><img src="assets/shots/d-album-bott.png" alt="The Blood on the Tracks album page: the drawn cover and the track list, ten rows, each with a link chevron"></div>
+    </div>
+
+    <!-- ticks by rows 3, 6 and 8 (screenshot x 624, y 321 / 477 / 581 -> screen x 604, y 377 / 533 / 637) -->
+    <svg class="f01-built-svg" viewBox="0 0 1920 900" aria-hidden="true">
+      <path id="f01-built-t1" d="M594 377 L602 386 L616 366" style="fill:none; stroke:var(--rp-coral); stroke-width:4; stroke-linecap:round; stroke-linejoin:round"/>
+      <path id="f01-built-t2" d="M594 533 L602 542 L616 522" style="fill:none; stroke:var(--rp-coral); stroke-width:4; stroke-linecap:round; stroke-linejoin:round"/>
+      <path id="f01-built-t3" d="M594 637 L602 646 L616 626" style="fill:none; stroke:var(--rp-coral); stroke-width:4; stroke-linecap:round; stroke-linejoin:round"/>
+    </svg>
+
+    <div class="f01-built-count" id="f01-built-k1" style="top:132px"><div class="f01-built-fig">458</div><div class="f01-built-lab">tracks · every one links</div></div>
+    <div class="f01-built-count" id="f01-built-k2" style="top:264px"><div class="f01-built-fig">271</div><div class="f01-built-lab">new songs</div></div>
+    <div class="f01-built-count" id="f01-built-k3" style="top:396px"><div class="f01-built-fig">452</div><div class="f01-built-lab">on Spotify</div></div>
+    <div class="f01-built-count" id="f01-built-k4" style="top:528px"><div class="f01-built-fig">351</div><div class="f01-built-lab">official clips</div></div>
+    <div class="f01-built-count" id="f01-built-k5" style="top:660px"><div class="f01-built-fig">421</div><div class="f01-built-lab">lyrics links</div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f01-built-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+  var draw = function (tl, el, at) { tl.fromTo(el, { opacity: 0, strokeDasharray: 60, strokeDashoffset: 60 }, { opacity: 1, strokeDashoffset: 0, duration: 0.45, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6s): the album window; ticks by rows 3, 6, 8 as "link" lands
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, 0.04);
+  rise(tl, $("k1"), 2.2);
+  draw(tl, $("t1"), 4.4);
+  draw(tl, $("t2"), 4.75);
+  draw(tl, $("t3"), 5.1);
+
+  // Scene 2 (6-16s): one count per number said; hold
+  rise(tl, $("k2"), 5.65);
+  rise(tl, $("k3"), 10.0);
+  rise(tl, $("k4"), 11.12);
+  rise(tl, $("k5"), 13.95);
+
+  tl.set({}, {}, 16.32);
+  window.__timelines["01-built"] = tl;
+})();
+</script>
+</template>

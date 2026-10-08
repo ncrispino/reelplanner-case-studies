@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "src": "2026-10-07-desktop/index.html",
+  "project": "video",
+  "exportedAt": "2026-10-07T18:28:44.866Z",
+  "watch": {
+    "firstPlayAt": "2026-10-07T18:23:46.510Z",
+    "maxTimeReached": 337.36,
+    "durationSeconds": 337.36,
+    "completion": 1,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 1
+      },
+      {
+        "id": "ch2",
+        "completion": 1
+      },
+      {
+        "id": "ch3",
+        "completion": 1
+      },
+      {
+        "id": "ch4",
+        "completion": 1
+      }
+    ],
+    "moments": [
+      {
+        "kind": "rewind",
+        "t": 182.66,
+        "from": 203,
+        "planStep": 3,
+        "frameIndex": 16
+      }
+    ],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q1",
+      "option": "a",
+      "label": "Up to 1200 px, two columns",
+      "recommended": true,
+      "planStep": 2,
+      "question": "How wide should the content go on a computer?",
+      "t": 111.481,
+      "decidedAt": "2026-10-07T18:25:03.712Z"
+    },
+    {
+      "id": "q2",
+      "option": "a",
+      "label": "One era fills the screen",
+      "recommended": true,
+      "planStep": 3,
+      "question": "On a computer, does the home page give one era at a time, or all of them at once?",
+      "t": 179.396,
+      "decidedAt": "2026-10-07T18:25:50.015Z",
+      "note": "actually maybe mixing this with scroll is good. i like how this is presented but if we scroll down, it should get us to the next era with a clean transition through scrolling, wihtout needing to click the arrow"
+    },
+    {
+      "id": "q3",
+      "option": "a",
+      "label": "Select it, and show its panel",
+      "recommended": true,
+      "planStep": 5,
+      "question": "On a computer, what should clicking a dot on the map do?",
+      "t": 272.164,
+      "decidedAt": "2026-10-07T18:27:43.314Z"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "k1",
+      "answer": "b",
+      "correct": true,
+      "t": 139.481,
+      "answeredAt": "2026-10-07T18:25:17.617Z"
+    },
+    {
+      "id": "k2",
+      "answer": "a",
+      "correct": false,
+      "t": 206.396,
+      "answeredAt": "2026-10-07T18:26:48.664Z",
+      "walked": true
+    },
+    {
+      "id": "k3",
+      "answer": "b",
+      "correct": true,
+      "t": 240.356,
+      "answeredAt": "2026-10-07T18:27:13.575Z"
+    },
+    {
+      "id": "k4",
+      "answer": "a",
+      "correct": true,
+      "t": 293.164,
+      "answeredAt": "2026-10-07T18:27:54.147Z"
+    },
+    {
+      "id": "k5",
+      "answer": "a",
+      "correct": true,
+      "t": 317.887,
+      "answeredAt": "2026-10-07T18:28:11.920Z"
+    },
+    {
+      "id": "k6",
+      "answer": "b",
+      "correct": false,
+      "t": 327.887,
+      "answeredAt": "2026-10-07T18:28:22.087Z",
+      "walked": true
+    }
+  ],
+  "checks": "on",
+  "autonomy": [],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-07-desktop",
+      "seen": "2026-10-07T18:27:33.885Z"
+    },
+    {
+      "video": "2026-10-07-every-song",
+      "seen": "2026-10-07T18:19:40.466Z",
+      "sent": "2026-10-07T18:20:41.979Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 2,
+    "walked": 2,
+    "termsOpened": 0,
+    "termsLookedUp": [],
+    "rewinds": 1,
+    "watchedPct": 100
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "amuyfy0mbtr0s",
+      "kind": "approve",
+      "t": 337.36,
+      "frame": {
+        "index": 32,
+        "compositionId": "32-ending",
+        "title": "The plan, with your choices"
+      },
+      "plan": {
+        "step": null,
+        "questions": [
+          1,
+          2,
+          3
+        ],
+        "component": null
+      },
+      "comment": ""
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

@@ -1,0 +1,4861 @@
+{
+  "songs": [
+    {
+      "id": "youre-no-good",
+      "title": "You’re No Good",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "Written by the Californian blues and one-man-band performer Jesse Fuller, it opens Dylan's first album, played on acoustic guitar and harmonica.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man complains, half in fun, about a woman who has done him nothing but wrong.",
+      "excerpt": null,
+      "wordsBy": "Jesse Fuller"
+    },
+    {
+      "id": "in-my-time-of-dyin",
+      "title": "In My Time of Dyin’",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "A traditional gospel blues best known from Blind Willie Johnson's 1927 recording, which Dylan sings with slide guitar on his first album.",
+      "themes": [
+        "death",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A dying man asks for the comfort of his faith and to be laid to rest in peace.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "man-of-constant-sorrow",
+      "title": "Man of Constant Sorrow",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "A traditional Appalachian song popularised by the Stanley Brothers; Dylan's early arrangement appears on his 1962 debut album.",
+      "themes": [
+        "loss",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A wanderer who has known nothing but trouble says farewell to his home and the people he loved.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "fixin-to-die",
+      "title": "Fixin’ to Die",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "A Delta blues written and first recorded by Bukka White in 1940, given a ferocious, gravel-voiced reading on Dylan's first album.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man who senses death is close worries less about himself than about the children he will leave behind.",
+      "excerpt": null,
+      "wordsBy": "Bukka White"
+    },
+    {
+      "id": "pretty-peggy-o",
+      "title": "Pretty Peggy‐O",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "A traditional ballad descended from the Scottish song The Bonnie Lass o' Fyvie, which Dylan sings in a playful, exaggerated style on his debut.",
+      "themes": [
+        "love",
+        "death",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A soldier courts a girl in a town his company passes through, and the story ends with his death.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "highway-51",
+      "title": "Highway 51",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "Adapted from Curtis Jones's 1938 Highway 51 Blues, it is a fast, hard-strummed road blues on Dylan's first album.",
+      "themes": [
+        "the road",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man stands by a long southern highway, thinking of the woman who left along it and the road that may carry him too.",
+      "excerpt": null,
+      "wordsBy": "Curtis Jones"
+    },
+    {
+      "id": "gospel-plow",
+      "title": "Gospel Plow",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "A traditional spiritual, also sung as Keep Your Hand on the Plow, given a fast, raucous treatment on Dylan's first album.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A short, driving spiritual urging the faithful to keep working toward heaven and not look back.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "baby-let-me-follow-you-down",
+      "title": "Baby, Let Me Follow You Down",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "A traditional blues Dylan says in its spoken introduction he learned from Ric Von Schmidt in Cambridge; he later played it electric with the Hawks in 1966.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man pleads with a woman to let him go wherever she goes, promising to do anything for her.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "freight-train-blues",
+      "title": "Freight Train Blues",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "An old country song recorded by Roy Acuff among others; on Dylan's first album it is a fast yodelling showcase with one famously long held note.",
+      "themes": [
+        "the road",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man born to the railroad says he cannot rest, because the sound of a passing freight train always calls him away.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "see-that-my-grave-is-kept-clean",
+      "title": "See That My Grave Is Kept Clean",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "Written and recorded by Blind Lemon Jefferson in the late 1920s, it closes Dylan's first album as a slow, solemn blues.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A dying man's single last request is that his grave be looked after once he is gone.",
+      "excerpt": null,
+      "wordsBy": "Blind Lemon Jefferson"
+    },
+    {
+      "id": "down-the-highway",
+      "title": "Down The Highway",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "A Dylan original on The Freewheelin' Bob Dylan, a solo acoustic blues written while his girlfriend Suze Rotolo was away studying in Italy.",
+      "themes": [
+        "loss",
+        "the road",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man whose lover has gone far across the sea takes to the highway, lonely and unsure she will return.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "bob-dylans-blues",
+      "title": "Bob Dylan's Blues",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "A short comic song on The Freewheelin' Bob Dylan, opened by a spoken introduction poking fun at songs written in Tin Pan Alley.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A light, rambling joke song about the singer going his own way and keeping clear of fads and fakes.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "talking-world-war-iii-blues",
+      "title": "Talking World War III Blues",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "A talking blues on The Freewheelin' Bob Dylan, in the comic spoken style of Woody Guthrie, about a dream of surviving a nuclear war.",
+      "themes": [
+        "war",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man tells a doctor about his dream of wandering an empty city after the bombs, and finds everyone else has the same dream.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "corrina-corrina",
+      "title": "Corrina, Corrina",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "A traditional blues first recorded in the late 1920s, it is the one track on The Freewheelin' Bob Dylan with a backing band.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man misses the woman who has gone and says he cannot rest until she comes back to him.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "honey-just-allow-me-one-more-chance",
+      "title": "Honey, Just Allow Me One More Chance",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "A fast, comic song on The Freewheelin' Bob Dylan, adapted from a 1920s recording by the songster Henry Thomas.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man begs a woman for just one more chance, in a lighthearted song that never quite sounds heartbroken.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "i-shall-be-free",
+      "title": "I Shall Be Free",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "The closing track of The Freewheelin' Bob Dylan, a rambling comic song loosely modelled on Lead Belly's We Shall Be Free.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A string of tall tales and jokes about politicians, women and celebrities from a singer who insists he will be free.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "all-i-really-want-to-do",
+      "title": "All I Really Want to Do",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "The opening track of Another Side of Bob Dylan; the Byrds and Cher both released versions in 1965.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man assures a woman that he wants nothing from her except friendship, with no demands and no games.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "black-crow-blues",
+      "title": "Black Crow Blues",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "A slow blues on Another Side of Bob Dylan, notable as one of the album's tracks on which Dylan plays piano rather than guitar.",
+      "themes": [
+        "loss",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely man waits and frets for a woman who has gone, uneasy and unable to settle.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "spanish-harlem-incident",
+      "title": "Spanish Harlem Incident",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "A short love song on Another Side of Bob Dylan, later recorded by the Byrds on their 1965 debut album.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man is dazzled by a gypsy woman he meets in the city and asks her to tell him who he is.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "i-shall-be-free-no-10",
+      "title": "I Shall Be Free No. 10",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "A comic follow-up to I Shall Be Free from Freewheelin', it sits in the middle of Another Side of Bob Dylan.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A rambling, joking song in which the singer mocks himself, his critics and the world around him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "to-ramona",
+      "title": "To Ramona",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "A gentle waltz on Another Side of Bob Dylan, with a lilting, Mexican-flavoured rhythm on acoustic guitar.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man tenderly tells a troubled woman she is being misled by others and should trust her own way.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "motorpsycho-nitemare",
+      "title": "Motorpsycho Nitemare",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "A comic talking song on Another Side of Bob Dylan that parodies the old farmer's daughter joke and Hitchcock's film Psycho.",
+      "themes": [
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A traveller asks for a bed at a farmhouse and ends up fleeing a farmer, his daughter and a shotgun.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "i-dont-believe-you-she-acts-like-we-never-have-met",
+      "title": "I Don’t Believe You (She Acts Like We Never Have Met)",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "A song from Another Side of Bob Dylan that he later transformed into a loud electric number on his 1966 tour with the Hawks.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man is baffled that a woman he spent a night with now behaves as though she has never seen him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "ballad-in-plain-d",
+      "title": "Ballad in Plain D",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "A long confessional ballad near the end of Another Side of Bob Dylan, about the end of his relationship with Suze Rotolo; he later said he regretted it.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man recounts the bitter end of a love affair, the quarrels around it, and the guilt and freedom left behind.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "one-too-many-mornings",
+      "title": "One Too Many Mornings",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "A quiet acoustic song from The Times They Are a-Changin' that Dylan later turned into a loud full-band number on his 1966 tour.",
+      "themes": [
+        "love",
+        "loss",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man stepping away from a lover at daybreak admits that neither of them is wrong, yet he cannot stay.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "north-country-blues",
+      "title": "North Country Blues",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "A ballad in the voice of a woman from an iron-mining town, drawing on the Minnesota iron range where Dylan grew up.",
+      "themes": [
+        "America",
+        "loss",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A miner's widow traces how her town and family fall apart as the mines close and the work goes overseas.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "she-belongs-to-me",
+      "title": "She Belongs to Me",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "The second track on Bringing It All Back Home, played softly by a small electric band; Rick Nelson recorded it in 1969.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A portrait of a self-possessed artist woman who belongs to no one, watched by a man half in awe.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "outlaw-blues",
+      "title": "Outlaw Blues",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "A rough electric blues on the first side of Bringing It All Back Home, the rock-and-roll half of the album.",
+      "themes": [
+        "freedom",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A restless, rough-edged blues in which the singer casts himself as a hunted man who trusts nobody.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "on-the-road-again",
+      "title": "On the Road Again",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "A fast electric blues near the end of side one of Bringing It All Back Home.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man lists the absurd horrors of his girlfriend's household and wonders why she expects him to move in.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "bob-dylans-115th-dream",
+      "title": "Bob Dylan's 115th Dream",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "Closes the first side of Bringing It All Back Home and opens with a false start that collapses into laughter before the band comes in.",
+      "themes": [
+        "America",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A sailor's absurd dream of landing in America and being met by a parade of rude, ridiculous Americans.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "it-takes-a-lot-to-laugh-it-takes-a-train-to-cry",
+      "title": "It Takes a Lot to Laugh, It Takes a Train to Cry",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "A slow piano blues on Highway 61 Revisited; an earlier, much faster version was recorded under the title Phantom Engineer.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A weary traveller, borne along by a train through the night, longs to be with the woman he loves.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "from-a-buick-6",
+      "title": "From a Buick 6",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "A fast twelve-bar blues near the end of the first side of Highway 61 Revisited.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man in a hard, dangerous life praises the one woman who looks after him and will stand by him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "pledging-my-time",
+      "title": "Pledging My Time",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "The second track on Blonde on Blonde, a slow Chicago-style blues led by harmonica.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man in a bad way promises his devotion to a woman and hopes she will come through for him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "one-of-us-must-know-sooner-or-later",
+      "title": "One of Us Must Know (Sooner or Later)",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "Closes the first side of Blonde on Blonde and was the only track on the album recorded in New York rather than Nashville.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man explains to a former lover that he never meant to hurt her and that their whole affair was a misunderstanding.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "leopard-skin-pill-box-hat",
+      "title": "Leopard-Skin Pill-Box Hat",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "A twelve-bar Chicago-style blues on side two of Blonde on Blonde, released as a single in 1967.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A jilted man mocks the trendy hat his former girlfriend wears and the new man she has taken up with.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "most-likely-you-go-your-way-and-ill-go-mine",
+      "title": "Most Likely You Go Your Way and I'll Go Mine",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "Opens the third side of Blonde on Blonde; Dylan and the Band played it to open their 1974 tour, heard on Before the Flood.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man tells a lover who has deceived him that they are better off going their separate ways.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "temporary-like-achilles",
+      "title": "Temporary Like Achilles",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "A slow piano blues on the third side of Blonde on Blonde.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man shut out by the woman he wants complains that she keeps him waiting while another stands guard over her.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "absolutely-sweet-marie",
+      "title": "Absolutely Sweet Marie",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "An upbeat organ-driven rocker on the third side of Blonde on Blonde.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man stuck waiting for an absent woman wonders where she is and why she has left him hanging.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "obviously-five-believers",
+      "title": "Obviously Five Believers",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "A fast Chicago-style blues that closes the third side of Blonde on Blonde, listed on the album as Obviously 5 Believers.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man pleads with his baby to come back to him as soon as she can, promising to be waiting.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "the-ballad-of-frankie-lee-and-judas-priest",
+      "title": "The Ballad of Frankie Lee and Judas Priest",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "The longest song on John Wesley Harding, a parable sung over a sparse acoustic backing that ends with a plainly stated moral.",
+      "themes": [
+        "faith",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Two friends, one a tempter, test each other over money and desire in a parable that ends in a death.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "dear-landlord",
+      "title": "Dear Landlord",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "Built around Dylan's piano, it sits on the second side of John Wesley Harding; Joe Cocker recorded it in 1969.",
+      "themes": [
+        "freedom",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man asks the landlord who holds power over him not to judge him too harshly or reduce him to what he owes.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "i-am-a-lonesome-hobo",
+      "title": "I Am a Lonesome Hobo",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "A short, sombre story-song on the second side of John Wesley Harding.",
+      "themes": [
+        "the road",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A wandering hobo confesses the greed and crimes that brought him low and warns others to live better.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "i-pity-the-poor-immigrant",
+      "title": "I Pity the Poor Immigrant",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "Its tune is close to the Scottish folk song Come All You Tramps and Hawkers; Joan Baez recorded it on her 1968 album Any Day Now.",
+      "themes": [
+        "America",
+        "faith",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A grave lament for a newcomer whose greed and selfishness leave him empty even in a land of plenty.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "down-along-the-cove",
+      "title": "Down Along the Cove",
+      "year": 1967,
+      "album": "john-wesley-harding",
+      "by": null,
+      "note": "The second-to-last track on John Wesley Harding, one of two bright country love songs that close the album with pedal steel guitar.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A happy man walks by the water with the woman he loves and everyone can see how good they are together.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "peggy-day",
+      "title": "Peggy Day",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "A light, jaunty love song that closes the first side of Nashville Skyline, sung in the soft croon that marks the whole album.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A playful, grinning tribute to a girl the singer is glad to spend his days and nights with.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "one-more-night",
+      "title": "One More Night",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "An upbeat country song on the second side of Nashville Skyline, following Lay Lady Lay, with a brisk shuffle under a lonely lyric.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man alone under the night sky mourns a woman who has left him and wonders how he failed her.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "country-pie",
+      "title": "Country Pie",
+      "year": 1969,
+      "album": "nashville-skyline",
+      "by": null,
+      "note": "One of the shortest songs on Nashville Skyline, running under two minutes, it sits just before the closing Tonight I'll Be Staying Here with You.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A rollicking celebration of simple pleasures, using a list of fruit pies as a happy stand-in for country music and life.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "time-passes-slowly",
+      "title": "Time Passes Slowly",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "One of the songs Dylan wrote in 1970 for Archibald MacLeish's play Scratch, it became the third track on New Morning.",
+      "themes": [
+        "time",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A reflection on quiet country days, where time seems to stand still and the singer is content to stay put.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "went-to-see-the-gypsy",
+      "title": "Went to See the Gypsy",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "A piano-led New Morning song set in a hotel, often read by listeners as a veiled account of a meeting with Elvis Presley.",
+      "themes": [
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A traveller goes to see a famous fortune-teller in a big hotel, but the encounter slips away like a dream.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "winterlude",
+      "title": "Winterlude",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "A crooned waltz on New Morning, its old-fashioned melody recalling the softer singing Dylan had used on Nashville Skyline.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A sweet, old-fashioned winter romance in which the singer invites his sweetheart to enjoy the snow and each other.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "if-dogs-run-free",
+      "title": "If Dogs Run Free",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "A jazzy New Morning track that Dylan half-recites over a loose cocktail-lounge band, with a woman's wordless scat singing weaving around him.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A musing on freedom and acceptance, asking why we should not let all creatures, and ourselves, live as we please.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "new-morning",
+      "title": "New Morning",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "The title track of the album, written for Archibald MacLeish's play Scratch, it is one of the most joyful songs Dylan recorded in this period.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Waking to a bright country morning, the singer rejoices in nature, renewal and simply being with the one he loves.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "sign-on-the-window",
+      "title": "Sign on the Window",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "A slow piano ballad near the middle of New Morning, often counted among the album's finest and most personal songs.",
+      "themes": [
+        "love",
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "After a lonely winter and a broken romance, the singer imagines settling down to a quiet family life.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "one-more-weekend",
+      "title": "One More Weekend",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "A bluesy, good-natured rocker on New Morning, one of the album's few uptempo numbers.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A husband begs his wife to slip away with him for a weekend alone, leaving the children and everyday life behind.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "three-angels",
+      "title": "Three Angels",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "A spoken-word piece on New Morning, Dylan reciting rather than singing over organ and a soft gospel-style chorus.",
+      "themes": [
+        "faith",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Three angel decorations look down over a busy city street while ordinary people hurry past without noticing them.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "father-of-night",
+      "title": "Father of Night",
+      "year": 1970,
+      "album": "new-morning",
+      "by": null,
+      "note": "The closing track of New Morning, a short piano hymn also written for Archibald MacLeish's play Scratch; Manfred Mann's Earth Band later recorded an extended version.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A brief, intense prayer praising God as the maker of night and day, of love and of the whole natural world.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "alberta",
+      "title": "Alberta",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A traditional folk blues that Dylan recorded in two versions, Alberta #1 opening Self Portrait and Alberta #2 closing it.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man calls out to a woman named Alberta, longing for her and wondering where she has gone.",
+      "excerpt": null,
+      "wordsBy": "traditional",
+      "takes": [
+        "Alberta",
+        "Alberta #1",
+        "Alberta #2"
+      ]
+    },
+    {
+      "id": "i-forgot-more-than-youll-ever-know",
+      "title": "I Forgot More Than You’ll Ever Know",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A country song written by Cecil Null and a 1953 hit for the Davis Sisters, which Dylan recorded in Nashville for Self Portrait.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A jilted lover tells the new partner of his former sweetheart that he knows her far better than they ever will.",
+      "excerpt": null,
+      "wordsBy": "Cecil Null"
+    },
+    {
+      "id": "days-of-49",
+      "title": "Days of 49",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A traditional ballad of the California Gold Rush, credited on Self Portrait as arranged by Alan Lomax, John Lomax and Frank Warner.",
+      "themes": [
+        "America",
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An old prospector looks back on the wild days of the gold rush and the rough companions now long gone.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "early-mornin-rain",
+      "title": "Early Mornin’ Rain",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "Written by Gordon Lightfoot and recorded by Ian and Sylvia and Peter, Paul and Mary before Dylan cut it for Self Portrait.",
+      "themes": [
+        "the road",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A broke, stranded man at an airport watches a plane take off toward home, unable to follow it.",
+      "excerpt": null,
+      "wordsBy": "Gordon Lightfoot"
+    },
+    {
+      "id": "in-search-of-little-sadie",
+      "title": "In Search of Little Sadie",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "The first of two versions of the traditional murder ballad on Self Portrait, its tempo and key lurching unpredictably from verse to verse.",
+      "themes": [
+        "death",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man shoots a woman named Sadie, flees across the country, and is caught and brought to trial.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "let-it-be-me",
+      "title": "Let It Be Me",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "An English version of Gilbert Bécaud's French song Je t'appartiens, made famous by the Everly Brothers in 1960 and recorded by Dylan for Self Portrait.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A tender plea from a lover who asks to be the one person their beloved always turns to.",
+      "excerpt": null,
+      "wordsBy": "Pierre Delanoë and Mann Curtis"
+    },
+    {
+      "id": "little-sadie",
+      "title": "Little Sadie",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "The second, straightforward version of the traditional murder ballad on Self Portrait, played at a brisk, even pace.",
+      "themes": [
+        "death",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The killer of a woman named Sadie tells of his crime, his flight and his capture and sentence.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "woogie-boogie",
+      "title": "Woogie Boogie",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A short instrumental on Self Portrait, a loose boogie-woogie jam credited to Dylan.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A brisk, good-time boogie-woogie romp led by rolling piano and a bright, bouncing band.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "belle-isle",
+      "title": "Belle Isle",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A traditional ballad from the British Isles and Newfoundland, recorded by Dylan for Self Portrait with strings added afterwards.",
+      "themes": [
+        "love",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A returning young man tests his sweetheart's faithfulness while in disguise, then reveals himself when she stays true.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "living-the-blues",
+      "title": "Living the Blues",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A Dylan original that he performed on The Johnny Cash Show in 1969 before recording it for Self Portrait.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man left behind by his love confesses that he has been sinking into sadness ever since she went away.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "gotta-travel-on",
+      "title": "Gotta Travel On",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A folk song adapted by Paul Clayton and a 1959 hit for Billy Grammer, recorded by Dylan for Self Portrait.",
+      "themes": [
+        "the road",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A restless man feels the pull of the road and knows he must leave town and keep moving.",
+      "excerpt": null,
+      "wordsBy": "Paul Clayton"
+    },
+    {
+      "id": "blue-moon",
+      "title": "Blue Moon",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "Written by Richard Rodgers and Lorenz Hart in 1934 and recorded by countless singers before Dylan crooned it on Self Portrait.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely singer sees his life changed when the moon that watched over his solitude suddenly brings him love.",
+      "excerpt": null,
+      "wordsBy": "Lorenz Hart"
+    },
+    {
+      "id": "take-me-as-i-am-or-let-me-go",
+      "title": "Take Me as I Am (or Let Me Go)",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A country ballad written by Boudleaux Bryant and a hit for Ray Price, which Dylan sings in a soft Nashville style on Self Portrait.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man asks his lover to accept him exactly as he is, or else to set him free.",
+      "excerpt": null,
+      "wordsBy": "Boudleaux Bryant"
+    },
+    {
+      "id": "take-a-message-to-mary",
+      "title": "Take a Message to Mary",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "Written by Felice and Boudleaux Bryant and first a hit for the Everly Brothers, it appears on Self Portrait as a close-harmony country cover.",
+      "themes": [
+        "love",
+        "loss",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man locked away for his crimes asks a friend to hide the truth from the woman he loved.",
+      "excerpt": null,
+      "wordsBy": "Felice and Boudleaux Bryant"
+    },
+    {
+      "id": "it-hurts-me-too",
+      "title": "It Hurts Me Too",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "An old blues long associated with Tampa Red and Elmore James, which Dylan recorded for Self Portrait as a quiet, mostly acoustic performance.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man watches the woman he loves suffer at the hands of another, and feels her pain as his own.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "wigwam",
+      "title": "Wigwam",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A Dylan instrumental on Self Portrait, carried by a wordless hummed vocal and a slow horn arrangement, later heard in the film \"The Royal Tenenbaums\".",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lazy, hummed melody drifts over brass, a song without words that feels like a half-remembered tune.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "sarah-jane",
+      "title": "Sarah Jane",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "A traditional-based song recorded in Dylan's 1970 sessions and released on the 1973 album \"Dylan\", with female backing singers.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A cheerful man sings of his devotion to Sarah Jane and the happy, crowded home they share.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "mr-bojangles",
+      "title": "Mr. Bojangles",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "Written by Jerry Jeff Walker and later a hit for the Nitty Gritty Dirt Band, it was released on \"Dylan\", the album Columbia assembled from outtakes.",
+      "themes": [
+        "time",
+        "loss",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A narrator remembers meeting an old wandering dancer in a jail cell who told the story of his life.",
+      "excerpt": null,
+      "wordsBy": "Jerry Jeff Walker"
+    },
+    {
+      "id": "the-ballad-of-ira-hayes",
+      "title": "The Ballad of Ira Hayes",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "Written by Peter La Farge and made famous by Johnny Cash, it tells the true story of a Pima Marine who helped raise the flag on Iwo Jima.",
+      "themes": [
+        "war",
+        "America",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A Native American war hero comes home to neglect and drink, and dies forgotten by the country that praised him.",
+      "excerpt": null,
+      "wordsBy": "Peter La Farge"
+    },
+    {
+      "id": "mary-ann",
+      "title": "Mary Ann",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "A traditional folk song of a sailor's farewell, recorded by Dylan around 1970 and released on the 1973 Columbia album \"Dylan\".",
+      "themes": [
+        "love",
+        "loss",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man about to sail away mourns the woman he must leave behind on the shore.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "big-yellow-taxi",
+      "title": "Big Yellow Taxi",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "A cover of Joni Mitchell's 1970 song, recorded by Dylan in his sessions of that era and released on the 1973 album \"Dylan\".",
+      "themes": [
+        "loss",
+        "time",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A bright, catchy complaint that we only value the natural world, and the people we love, once they are gone.",
+      "excerpt": null,
+      "wordsBy": "Joni Mitchell"
+    },
+    {
+      "id": "a-fool-such-as-i",
+      "title": "A Fool Such as I",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "Written by Bill Trader and a hit for both Hank Snow and Elvis Presley, it was recorded by Dylan around Self Portrait and released on \"Dylan\".",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A jilted man admits he is still devoted to the woman who left him and will go on loving her.",
+      "excerpt": null,
+      "wordsBy": "Bill Trader"
+    },
+    {
+      "id": "spanish-is-the-loving-tongue",
+      "title": "Spanish Is the Loving Tongue",
+      "year": 1973,
+      "album": "dylan-1973",
+      "by": null,
+      "note": "A cowboy song set to a poem by Charles Badger Clark, which Dylan recorded more than once; this version is on the 1973 album \"Dylan\".",
+      "themes": [
+        "love",
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A cowboy remembers a Mexican girl he once loved and lost, and still hears her tender words.",
+      "excerpt": null,
+      "wordsBy": "Charles Badger Clark"
+    },
+    {
+      "id": "main-title-theme-billy",
+      "title": "Main Title Theme (Billy)",
+      "year": 1973,
+      "album": "pat-garrett",
+      "by": null,
+      "note": "The instrumental that opens the soundtrack to Sam Peckinpah's film \"Pat Garrett and Billy the Kid\", built on the melody of the album's song \"Billy\".",
+      "themes": [
+        "the road",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A spare acoustic theme sets a lonesome frontier mood, circling slowly as if over open country.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "cantina-theme-workin-for-the-law",
+      "title": "Cantina Theme (Workin’ for the Law)",
+      "year": 1973,
+      "album": "pat-garrett",
+      "by": null,
+      "note": "An instrumental from the \"Pat Garrett and Billy the Kid\" soundtrack, its subtitle pointing to Garrett's turn from outlaw to lawman in the film.",
+      "themes": [
+        "the road",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A relaxed, slightly uneasy groove plays like music heard in a frontier saloon.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "bunkhouse-theme",
+      "title": "Bunkhouse Theme",
+      "year": 1973,
+      "album": "pat-garrett",
+      "by": null,
+      "note": "A short acoustic instrumental from the soundtrack to \"Pat Garrett and Billy the Kid\".",
+      "themes": [
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Gentle interlocking acoustic guitars play a quiet, homely tune, like evening music in a cowboy bunkhouse.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "river-theme",
+      "title": "River Theme",
+      "year": 1973,
+      "album": "pat-garrett",
+      "by": null,
+      "note": "An instrumental from the \"Pat Garrett and Billy the Kid\" soundtrack, featuring wordless voices over a slow, flowing accompaniment.",
+      "themes": [
+        "time",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Wordless singing floats over a slow, gentle melody that moves like water drifting past.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "turkey-chase",
+      "title": "Turkey Chase",
+      "year": 1973,
+      "album": "pat-garrett",
+      "by": null,
+      "note": "A lively instrumental from the \"Pat Garrett and Billy the Kid\" soundtrack, driven by fiddle and banjo in an old-time country style.",
+      "themes": [
+        "freedom",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Fiddle and banjo race along in a bright, rollicking old-time tune full of chase and fun.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "final-theme",
+      "title": "Final Theme",
+      "year": 1973,
+      "album": "pat-garrett",
+      "by": null,
+      "note": "The instrumental that closes the soundtrack album for \"Pat Garrett and Billy the Kid\", returning to the film's mournful main melody.",
+      "themes": [
+        "death",
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A slow, stately farewell melody brings the story to a sorrowful close.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "going-going-gone",
+      "title": "Going, Going, Gone",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "A slow song from Planet Waves, recorded with The Band, notable for Robbie Robertson's stinging guitar answering Dylan's voice.",
+      "themes": [
+        "loss",
+        "freedom",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man who has reached the end of something resolves to walk away and leave it all behind.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "tough-mama",
+      "title": "Tough Mama",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "A driving rock song on Planet Waves, recorded with The Band in Los Angeles in late 1973.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man pays tribute to a strong, earthy woman who inspires him and pulls him back into the world.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "hazel",
+      "title": "Hazel",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "A short love song from Planet Waves, recorded with The Band, which Dylan also performed with them in \"The Last Waltz\".",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man longs for a woman named Hazel and asks her to give him a little of her love.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "something-there-is-about-you",
+      "title": "Something There Is About You",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "A love song from Planet Waves, recorded with The Band, in which Dylan refers to his boyhood in Duluth, Minnesota.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A woman stirs up memories of his youth and a feeling he cannot name, and he pledges himself to her.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "dirge",
+      "title": "Dirge",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "One of the starkest songs on Planet Waves, performed only by Dylan on piano and Robbie Robertson on acoustic guitar.",
+      "themes": [
+        "loss",
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man looks back with bitterness and self-disgust on a consuming attachment he is finally ready to leave.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "you-angel-you",
+      "title": "You Angel You",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "A cheerful, mid-tempo love song from Planet Waves, recorded with The Band.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man is so smitten with a woman that he can think of nothing else and calls her an angel.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "never-say-goodbye",
+      "title": "Never Say Goodbye",
+      "year": 1974,
+      "album": "planet-waves",
+      "by": null,
+      "note": "A tender love song from Planet Waves, recorded with The Band, set against an image of a wintry northern landscape.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Amid a frozen winter scene, a man asks the woman he loves never to leave him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "youre-a-big-girl-now",
+      "title": "You’re a Big Girl Now",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "The third track on Blood on the Tracks, and one of the five songs he re-recorded in Minneapolis in December 1974 for the final album.",
+      "themes": [
+        "love",
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man tells a woman who has moved on without him that he sees her growing and wishes he could change.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "meet-me-in-the-morning",
+      "title": "Meet Me in the Morning",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "A slow twelve-bar blues that opens the second side of Blood on the Tracks, kept from the New York sessions of September 1974.",
+      "themes": [
+        "love",
+        "the road",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A weary man asks a woman to meet him at dawn so they can leave together, though he senses she may not come.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "if-you-see-her-say-hello",
+      "title": "If You See Her, Say Hello",
+      "year": 1975,
+      "album": "blood-on-the-tracks",
+      "by": null,
+      "note": "The eighth track on Blood on the Tracks, re-recorded in Minneapolis in December 1974; the earlier New York take had a harsher, more wounded tone.",
+      "themes": [
+        "love",
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man asks a friend to pass his greetings to the woman who left him, hiding how much he still misses her.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "odds-and-ends",
+      "title": "Odds and Ends",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "The opening track of The Basement Tapes, a short, fast rocker recorded with the Band near Woodstock in 1967.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man gives up on a careless partner whose broken promises and wasted chances have finally worn out his patience.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "orange-juice-blues-blues-for-breakfast",
+      "title": "Orange Juice Blues (Blues for Breakfast)",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": "The Band",
+      "note": "A Richard Manuel song performed by the Band without Dylan, one of the Band-only tracks added to the 1975 release of The Basement Tapes.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely man nurses the blues over breakfast, missing a woman who has gone and dreading the long day ahead.",
+      "excerpt": null,
+      "wordsBy": "Richard Manuel"
+    },
+    {
+      "id": "million-dollar-bash",
+      "title": "Million Dollar Bash",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "A Basement Tapes party song recorded with the Band in 1967; Fairport Convention released a cover on their 1969 album Unhalfbricking.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A crowd of oddballs and misfits all gather and stumble toward one wild, enormous party.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "yazoo-street-scandal",
+      "title": "Yazoo Street Scandal",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": "The Band",
+      "note": "A Robbie Robertson song performed by the Band without Dylan, added to the 1975 release of The Basement Tapes.",
+      "themes": [
+        "love",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A rowdy tale of a young man drawn into trouble by a dangerous woman on a disreputable street.",
+      "excerpt": null,
+      "wordsBy": "Robbie Robertson"
+    },
+    {
+      "id": "goin-to-acapulco",
+      "title": "Goin’ to Acapulco",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "A slow, mournful song from the 1967 Woodstock sessions with the Band, first released on The Basement Tapes in 1975.",
+      "themes": [
+        "love",
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A tired man heads off to Acapulco to see a woman for some fun, though his voice carries more sorrow than pleasure.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "katies-been-gone",
+      "title": "Katie’s Been Gone",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": "The Band",
+      "note": "A Richard Manuel and Robbie Robertson song performed by the Band without Dylan, added to the 1975 release of The Basement Tapes.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man mourns a woman who has left, wondering how long he can stand her absence.",
+      "excerpt": null,
+      "wordsBy": "Richard Manuel and Robbie Robertson"
+    },
+    {
+      "id": "lo-and-behold",
+      "title": "Lo and Behold!",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "A comic travelling song from the 1967 Woodstock sessions with the Band, first officially released on The Basement Tapes in 1975.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A restless traveller hops from town to town, meeting strange people and leaving each place with a shout.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "bessie-smith",
+      "title": "Bessie Smith",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": "The Band",
+      "note": "A Rick Danko and Robbie Robertson song performed by the Band without Dylan, added to the 1975 release of The Basement Tapes.",
+      "themes": [
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A tribute to the great blues singer Bessie Smith, looking back at her world with affection and longing.",
+      "excerpt": null,
+      "wordsBy": "Rick Danko and Robbie Robertson"
+    },
+    {
+      "id": "clothes-line-saga",
+      "title": "Clothes Line Saga",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "A deadpan story song from the 1967 Woodstock sessions, often heard as a reply to Bobbie Gentry's \"Ode to Billie Joe\".",
+      "themes": [
+        "America",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A family takes in the washing and trades flat small talk while big news passes by almost unnoticed.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "apple-suckling-tree",
+      "title": "Apple Suckling Tree",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "A nonsense song in nursery-rhyme style, recorded with the Band near Woodstock in 1967 and released on The Basement Tapes in 1975.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A playful, nonsensical rhyme about meeting someone under a tree, sung for the joy of the sound.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "please-mrs-henry",
+      "title": "Please, Mrs. Henry",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "A comic barroom song from the 1967 Woodstock sessions with the Band, first officially released on The Basement Tapes in 1975.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A drunk, broke man begs a woman named Mrs. Henry to help him out of his sorry state.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "too-much-of-nothing",
+      "title": "Too Much of Nothing",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "Written and recorded at the 1967 Woodstock sessions with the Band; Peter, Paul and Mary released it as a single later that year.",
+      "themes": [
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A brooding warning that emptiness and idleness can make people cruel, restless and lost.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "yea-heavy-and-a-bottle-of-bread",
+      "title": "Yea! Heavy and a Bottle of Bread",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "A nonsense song from the 1967 Woodstock sessions with the Band, first officially released on The Basement Tapes in 1975.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A jumble of absurd images about packing up and setting off, sung with a straight face.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "aint-no-more-cane",
+      "title": "Ain’t No More Cane",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": "The Band",
+      "note": "A traditional prison work song about convict labour, performed by the Band without Dylan on the 1975 release of The Basement Tapes.",
+      "themes": [
+        "freedom",
+        "America",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Prisoners describe the brutal, endless labour of cutting cane under guard, and long for it to be over.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "crash-on-the-levee-down-in-the-flood",
+      "title": "Crash on the Levee (Down in the Flood)",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "Recorded with the Band in 1967; he re-recorded it as \"Down in the Flood\" for Bob Dylan's Greatest Hits Vol. II in 1971.",
+      "themes": [
+        "loss",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "With the water rising and the levee about to break, a man warns a woman she will have to fend for herself.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "ruben-remus",
+      "title": "Ruben Remus",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": "The Band",
+      "note": "A Richard Manuel and Robbie Robertson song performed by the Band without Dylan, added to the 1975 release of The Basement Tapes.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An upbeat, good-time Band number built around a colourful, restless character.",
+      "excerpt": null,
+      "wordsBy": "Richard Manuel and Robbie Robertson"
+    },
+    {
+      "id": "tiny-montgomery",
+      "title": "Tiny Montgomery",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "One of the earliest songs from the 1967 Woodstock sessions with the Band, first officially released on The Basement Tapes in 1975.",
+      "themes": [
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A roll call of oddball characters, all told to pass the word that Tiny Montgomery is coming back.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "dont-ya-tell-henry",
+      "title": "Don’t Ya Tell Henry",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": "The Band",
+      "note": "A Dylan song performed by the Band without him on the 1975 release of The Basement Tapes.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A comic, rowdy tale of a night of mischief that the singer keeps insisting must be hidden from Henry.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "nothing-was-delivered",
+      "title": "Nothing Was Delivered",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "Recorded with the Band near Woodstock in 1967; the Byrds recorded it for their 1968 album Sweetheart of the Rodeo.",
+      "themes": [
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man demands that someone explain why nothing they promised ever arrived, and own up to it.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "open-the-door-homer",
+      "title": "Open the Door, Homer",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": null,
+      "note": "A loose, rambling song from the 1967 Woodstock sessions with the Band, first officially released on The Basement Tapes in 1975.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man asks a friend to let him in while sharing odd bits of advice about living and forgiving.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "long-distance-operator",
+      "title": "Long Distance Operator",
+      "year": 1975,
+      "album": "the-basement-tapes",
+      "by": "The Band",
+      "note": "A Dylan blues performed by the Band without him on the 1975 release of The Basement Tapes.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A desperate man pleads with a telephone operator to put his call through to the woman he loves.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "mozambique",
+      "title": "Mozambique",
+      "year": 1976,
+      "album": "desire",
+      "by": null,
+      "note": "Written with Jacques Levy, this short, breezy song sits in the middle of Desire and was also released as a single.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A light invitation to a sunny faraway coast where couples dance and fall in love.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "romance-in-durango",
+      "title": "Romance in Durango",
+      "year": 1976,
+      "album": "desire",
+      "by": null,
+      "note": "Written with Jacques Levy, it is one of the long story songs on Desire, with a chorus sung partly in Spanish.",
+      "themes": [
+        "the road",
+        "love",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An outlaw flees across Mexico with the woman he loves, haunted by the man he has killed.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "new-pony",
+      "title": "New Pony",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "The opening track of Street-Legal, a heavy blues with the album's gospel-style backing singers answering him throughout.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A sultry, menacing blues in which a man sings about a pony as a thinly veiled stand-in for a lover.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "no-time-to-think",
+      "title": "No Time to Think",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "One of the longest songs on Street-Legal, a slow waltz packed with abstract nouns and symbolic figures.",
+      "themes": [
+        "time",
+        "freedom",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man caught among temptations, duties and lost loves finds he never has a moment to stop and reflect.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "baby-stop-crying",
+      "title": "Baby Stop Crying",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "Released as a single from Street-Legal, it is a slow ballad with the album's gospel-style backing singers.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man tries to comfort a heartbroken woman and offers to help her if she will let him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "true-love-tends-to-forget",
+      "title": "True Love Tends to Forget",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "A mid-tempo song on the second side of Street-Legal, built around a hooky chorus with the backing singers.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man worn down by an unsteady love asks his partner not to deceive him or let him go.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "we-better-talk-this-over",
+      "title": "We Better Talk This Over",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "A late track on Street-Legal, a brisk breakup song set to the album's horns and backing singers.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man suggests to his partner that their relationship is over and they should part without bitterness.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "where-are-you-tonight-journey-through-dark-heat",
+      "title": "Where Are You Tonight? (Journey Through Dark Heat)",
+      "year": 1978,
+      "album": "street-legal",
+      "by": null,
+      "note": "The closing track of Street-Legal, a long, dense song that ends the album on a note of hard-won survival.",
+      "themes": [
+        "love",
+        "loss",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man searching for a lost lover through a dark, dreamlike night comes out the other side changed.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "do-right-to-me-baby-do-unto-others",
+      "title": "Do Right to Me Baby (Do Unto Others)",
+      "year": 1979,
+      "album": "slow-train-coming",
+      "by": null,
+      "note": "A gentle, mid-tempo song on Slow Train Coming built around the Golden Rule from the Gospels.",
+      "themes": [
+        "faith",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The singer refuses to judge or harm others and asks only to be treated the way he treats them.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "a-satisfied-mind",
+      "title": "A Satisfied Mind",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "Written by Red Hayes and Jack Rhodes and a 1955 country hit for Porter Wagoner, it opens Saved as a short gospel-style performance.",
+      "themes": [
+        "faith",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Wealth cannot buy contentment, and a peaceful heart is the only thing worth taking to the grave.",
+      "excerpt": null,
+      "wordsBy": "Red Hayes and Jack Rhodes"
+    },
+    {
+      "id": "covenant-woman",
+      "title": "Covenant Woman",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "A slow ballad on Saved that blends a love song with a song of faith.",
+      "themes": [
+        "faith",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The singer thanks a woman who has shared his faith and stands beside him in a covenant with God.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "what-can-i-do-for-you",
+      "title": "What Can I Do for You?",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "A slow gospel song on Saved, notable for an extended harmonica solo, one of the few on his gospel records.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A grateful believer, aware of all that has been given to him, asks God what he can offer in return.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "in-the-garden",
+      "title": "In the Garden",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "A dramatic gospel song on Saved about the life of Jesus, often used to close his gospel-era concerts.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Retelling moments from the life of Jesus, the song asks whether the people around him truly saw who he was.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "saving-grace",
+      "title": "Saving Grace",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "A slow, hymn-like song on the second side of Saved.",
+      "themes": [
+        "faith",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A humble believer marvels that he has been kept alive and rescued by grace he did not earn.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "are-you-ready",
+      "title": "Are You Ready",
+      "year": 1980,
+      "album": "saved",
+      "by": null,
+      "note": "The closing track of Saved, a gospel song with a call-and-response between Dylan and his backing singers.",
+      "themes": [
+        "faith",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The singer asks, again and again, whether the listener is prepared to meet God when the end comes.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "heart-of-mine",
+      "title": "Heart of Mine",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "Released as a single from Shot of Love, it is a loose, rolling love song rather than a gospel one.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man warns his own heart not to give itself away to a woman who will only hurt him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "property-of-jesus",
+      "title": "Property of Jesus",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "A hard-edged rock song on Shot of Love, mixing the album's faith themes with sharp defiance.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The singer defends a believer from the mockers around him, insisting he belongs to Jesus and cannot be bought.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "watered-down-love",
+      "title": "Watered‐Down Love",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "An upbeat song on Shot of Love, with a light, bouncy groove and backing singers.",
+      "themes": [
+        "love",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "True love is pure, patient and selfless, quite unlike the weak and grasping imitation people settle for.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "the-grooms-still-waiting-at-the-altar",
+      "title": "The Groom's Still Waiting at the Altar",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "First issued as a B-side, this hard-rocking song was added to later editions of Shot of Love.",
+      "themes": [
+        "love",
+        "faith",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man searches for a vanished woman in a world that seems to be falling apart around him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "dead-man-dead-man",
+      "title": "Dead Man, Dead Man",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "A mid-tempo song on Shot of Love with a lightly reggae-flavored rhythm.",
+      "themes": [
+        "faith",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The singer confronts a spiritually dead man, perhaps his own old self, and asks when he will finally rise.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "in-the-summertime",
+      "title": "In the Summertime",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "A gentle, reflective ballad near the end of Shot of Love, with harmonica.",
+      "themes": [
+        "love",
+        "time",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Looking back on a summer long ago, the singer remembers a love or grace that changed him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "trouble",
+      "title": "Trouble",
+      "year": 1981,
+      "album": "shot-of-love",
+      "by": null,
+      "note": "A blues on Shot of Love, placed just before the closing song, Every Grain of Sand.",
+      "themes": [
+        "America",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Trouble is everywhere, in every street, home and institution, and nobody can escape it.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "man-of-peace",
+      "title": "Man of Peace",
+      "year": 1983,
+      "album": "infidels",
+      "by": null,
+      "note": "A Dylan original that opens the second side of Infidels, set to a loping, bluesy groove carried by the Sly Dunbar and Robbie Shakespeare rhythm section.",
+      "themes": [
+        "faith",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A warning that evil rarely announces itself and may arrive looking like a gentle, trustworthy peacemaker.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "seeing-the-real-you-at-last",
+      "title": "Seeing the Real You at Last",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "The opening track of Empire Burlesque, a Dylan original that sets the album's bright, horn-and-drum-machine production from its first bars.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lover who has finally seen through a partner's act and feels relieved, even liberated, to be done with the illusion.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "ill-remember-you",
+      "title": "I'll Remember You",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "The second track on Empire Burlesque, a Dylan original and one of the album's slower, more tender songs, later a regular in his concerts.",
+      "themes": [
+        "love",
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A promise to keep a lost lover in memory long after everything else has faded and the road has moved on.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "clean-cut-kid",
+      "title": "Clean Cut Kid",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "A Dylan original first tried during the Infidels sessions and finished for Empire Burlesque, a sardonic rocker about a young American soldier of the Vietnam era.",
+      "themes": [
+        "war",
+        "America",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An ordinary, all-American boy is sent to war and comes home a broken stranger whom no one understands.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "never-gonna-be-the-same-again",
+      "title": "Never Gonna Be the Same Again",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "A Dylan original from Empire Burlesque, a soft soul-pop ballad built around backing singers and a smooth mid-1980s production.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A brief encounter with someone has changed the singer for good, and he admits there is no going back.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "trust-yourself",
+      "title": "Trust Yourself",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "A Dylan original from Empire Burlesque, a funky, chant-like rocker driven by a repeated title hook and loud mid-1980s drums.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Advice to rely on your own judgment rather than on preachers, lovers, experts or anyone else claiming to know best.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "emotionally-yours",
+      "title": "Emotionally Yours",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "A Dylan original from Empire Burlesque, a slow piano-led love ballad later recorded by the O'Jays as the title track of a 1991 album.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A heartfelt declaration that, whatever happens, the singer belongs to his lover body and soul and will stay that way.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "somethings-burning-baby",
+      "title": "Something's Burning, Baby",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "A Dylan original from Empire Burlesque, a dark, slow-marching song that stands out on the album for its ominous drum-led arrangement.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lover senses that something has gone badly wrong between them and pleads for honesty before it is too late.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "you-wanna-ramble",
+      "title": "You Wanna Ramble",
+      "year": 1986,
+      "album": "knocked-out-loaded",
+      "by": null,
+      "note": "The opening track of Knocked Out Loaded, a cover of a rhythm and blues number credited to Herman Parker Jr., the Memphis singer known as Junior Parker.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man warns a restless lover that if she wants to run around, she should not expect him to wait at home.",
+      "excerpt": null,
+      "wordsBy": "Junior Parker"
+    },
+    {
+      "id": "precious-memories",
+      "title": "Precious Memories",
+      "year": 1986,
+      "album": "knocked-out-loaded",
+      "by": null,
+      "note": "A gospel hymn written by J. B. F. Wright in the 1920s and widely sung in Southern churches; Dylan recasts it with a lilting, Caribbean-flavoured rhythm.",
+      "themes": [
+        "faith",
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Memories of loved ones and of the faith they passed on return unbidden and bring comfort in the night.",
+      "excerpt": null,
+      "wordsBy": "J. B. F. Wright"
+    },
+    {
+      "id": "maybe-someday",
+      "title": "Maybe Someday",
+      "year": 1986,
+      "album": "knocked-out-loaded",
+      "by": null,
+      "note": "A Dylan original from Knocked Out Loaded, a fast, crowded rock song with backing singers, one of the few songs on the album he wrote alone.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A spurned lover imagines that someday his former partner will understand what she gave up, though he hardly believes it.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "got-my-mind-made-up",
+      "title": "Got My Mind Made Up",
+      "year": 1986,
+      "album": "knocked-out-loaded",
+      "by": null,
+      "note": "Co-written by Dylan and Tom Petty and recorded with Petty and the Heartbreakers, with whom Dylan was touring in 1986.",
+      "themes": [
+        "the road",
+        "freedom",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man has decided to leave, and nothing his lover says will talk him out of taking off.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "under-your-spell",
+      "title": "Under Your Spell",
+      "year": 1986,
+      "album": "knocked-out-loaded",
+      "by": null,
+      "note": "The closing track of Knocked Out Loaded, co-written by Dylan and the pop lyricist Carole Bayer Sager.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man under a lover's spell is torn between devotion and the need to break away before he is lost.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "lets-stick-together",
+      "title": "Let's Stick Together",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "Written and first recorded by Wilbert Harrison in 1962, later remade by Bryan Ferry; Dylan's version opens Down in the Groove.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man urges his wife not to break up their marriage but to stay together for better or worse.",
+      "excerpt": null,
+      "wordsBy": "Wilbert Harrison"
+    },
+    {
+      "id": "when-did-you-leave-heaven",
+      "title": "When Did You Leave Heaven?",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "A 1936 popular song by Richard Whiting with words by Walter Bullock, introduced in a Hollywood film; Dylan sings it as a slow, crooning ballad.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An admirer marvels at a woman so lovely that she must have come down from heaven, and wonders how.",
+      "excerpt": null,
+      "wordsBy": "Walter Bullock"
+    },
+    {
+      "id": "sally-sue-brown",
+      "title": "Sally Sue Brown",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "A rhythm and blues song first recorded by Arthur Alexander, who co-wrote it; Dylan cut it with a rowdy rock band for Down in the Groove.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man is completely smitten with a girl called Sally Sue Brown and can think of nothing and no one else.",
+      "excerpt": null,
+      "wordsBy": "Arthur Alexander, Earl Montgomery and Tom Stafford"
+    },
+    {
+      "id": "had-a-dream-about-you-baby",
+      "title": "Had a Dream About You, Baby",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "A Dylan original written for the 1987 film Hearts of Fire, in which he also acted, and included on Down in the Groove.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man cannot shake the dream he had about a woman and is restless with wanting her.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "ugliest-girl-in-the-world",
+      "title": "Ugliest Girl in the World",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "Music by Dylan with words by Robert Hunter, the Grateful Dead lyricist, one of two Hunter collaborations on Down in the Groove.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man cheerfully admits his girlfriend is no beauty, yet he is devoted to her and cannot live without her.",
+      "excerpt": null,
+      "wordsBy": "Robert Hunter"
+    },
+    {
+      "id": "ninety-miles-an-hour-down-a-dead-end-street",
+      "title": "Ninety Miles an Hour (Down a Dead End Street)",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "A country song by Hal Blair and Don Robertson, recorded by Hank Snow in 1963; Dylan sings it as a slow, hushed duet-style ballad.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Two people know their forbidden affair can only end badly, yet they keep racing toward it anyway.",
+      "excerpt": null,
+      "wordsBy": "Hal Blair and Don Robertson"
+    },
+    {
+      "id": "shenandoah",
+      "title": "Shenandoah",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "A traditional American folk song dating from the nineteenth century, often sung as a sea shanty; it closes Down in the Groove.",
+      "themes": [
+        "America",
+        "the road",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A wanderer far from home longs for a river, a valley and a love he has left behind across the wide country.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "where-teardrops-fall",
+      "title": "Where Teardrops Fall",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "The second track on Oh Mercy, a slow and tender ballad set apart by its soft saxophone and accordion.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man offers comfort and devotion to someone in a place of sorrow, promising to meet her there.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "disease-of-conceit",
+      "title": "Disease of Conceit",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "A slow, piano-led song near the end of Oh Mercy, close in spirit to a sermon.",
+      "themes": [
+        "faith",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Pride is pictured as an epidemic sweeping the land, wrecking lives and blinding people to their own ruin.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "what-was-it-you-wanted",
+      "title": "What Was It You Wanted",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "The ninth and penultimate track on Oh Mercy, a murky, slow-moving song of suspicion with drifting harmonica.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man keeps asking someone what they really want from him, never quite trusting the answer.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "unbelievable",
+      "title": "Unbelievable",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "The third track on Under the Red Sky, a brisk rock song issued as a single from the album.",
+      "themes": [
+        "America",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A narrator marvels at a world where greed and wrongdoing go unpunished and nothing makes sense anymore.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "t-v-talkin-song",
+      "title": "T.V. Talkin' Song",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "The fifth track on Under the Red Sky, a story song delivered in a half-spoken style over a loping groove.",
+      "themes": [
+        "America",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "At a London speakers' corner, a man rails against television until the crowd turns ugly and the scene ends up on the news.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "10-000-men",
+      "title": "10,000 Men",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "The sixth track on Under the Red Sky, a slow blues built from repeated, nursery-rhyme style lines.",
+      "themes": [
+        "war",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An army of ten thousand men passes by in a series of strange, fable-like images.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "2-x-2",
+      "title": "2 X 2",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "The seventh track on Under the Red Sky, a counting song that echoes the story of Noah's ark.",
+      "themes": [
+        "faith",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Pairs, then larger groups, march forward in a counting rhyme that hints at the flood and the end of things.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "god-knows",
+      "title": "God Knows",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "The eighth track on Under the Red Sky, a song of faith that builds from quiet to a full band.",
+      "themes": [
+        "faith",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The singer finds comfort in the belief that God sees everything, including the troubles between people.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "handy-dandy",
+      "title": "Handy Dandy",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "The ninth track on Under the Red Sky, a character sketch carried by a prominent organ and a swinging band groove.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A portrait of a charming, careless man surrounded by admirers, whose easy life hides something hollow.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "cats-in-the-well",
+      "title": "Cat's in the Well",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "The closing track of Under the Red Sky, a driving blues that ends the album on an apocalyptic note.",
+      "themes": [
+        "death",
+        "faith",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A nursery-rhyme image of a cat in a well opens a vision of a world sliding toward ruin.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "jim-jones",
+      "title": "Jim Jones",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "A traditional Australian convict ballad, the second track on Good as I Been to You, sung over intricate fingerpicked guitar.",
+      "themes": [
+        "freedom",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A convict sentenced to transportation to Australia vows to break free and take revenge on his jailers.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "blackjack-davey",
+      "title": "Blackjack Davey",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "A version of the old British ballad also known as Gypsy Davy, the third track on Good as I Been to You.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A married woman leaves her home and husband to ride away with a wandering gypsy.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "canadee-i-o",
+      "title": "Canadee-i-o",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "A traditional sailing ballad, the fourth track on Good as I Been to You, performed with voice and fingerpicked guitar.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A young woman disguises herself as a sailor to cross the sea, and wins a surprising fortune.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "sittin-on-top-of-the-world",
+      "title": "Sittin’ on Top of the World",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "A blues first recorded by the Mississippi Sheiks in 1930, which Dylan sings solo on Good as I Been to You.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man whose lover has left him insists he is doing just fine without her.",
+      "excerpt": null,
+      "wordsBy": "Walter Vinson and Lonnie Chatmon"
+    },
+    {
+      "id": "little-maggie",
+      "title": "Little Maggie",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "A traditional Appalachian song, usually played on banjo, that Dylan adapts to solo guitar on Good as I Been to You.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man watches the woman he loves drink, gamble and give her heart to someone else.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "hard-times",
+      "title": "Hard Times",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "Stephen Foster wrote this parlour song, known in full as \"Hard Times Come Again No More\", in the 1850s.",
+      "themes": [
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A plea on behalf of the poor and suffering, asking that hard times stop coming back.",
+      "excerpt": null,
+      "wordsBy": "Stephen Foster"
+    },
+    {
+      "id": "step-it-up-and-go",
+      "title": "Step It Up and Go",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "An upbeat Piedmont blues associated with Blind Boy Fuller, one of the liveliest tracks on Good as I Been to You.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A good-humoured blues full of comic scenes, urging everyone to quicken their step and get moving.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "tomorrow-night",
+      "title": "Tomorrow Night",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "Written by Sam Coslow and Will Grosz in 1939, it became a hit for Lonnie Johnson and was later recorded by Elvis Presley.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lover wonders whether tonight's tenderness will still be there tomorrow.",
+      "excerpt": null,
+      "wordsBy": "Sam Coslow"
+    },
+    {
+      "id": "youre-gonna-quit-me",
+      "title": "You’re Gonna Quit Me",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "A country blues recorded by Blind Blake in the 1920s, sung by Dylan with guitar on Good as I Been to You.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man senses that the woman he loves is about to leave him and asks her not to.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "diamond-joe",
+      "title": "Diamond Joe",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "A traditional cowboy song, near the end of Good as I Been to You, which Dylan also sang in the film Masked and Anonymous.",
+      "themes": [
+        "the road",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A hired hand complains about working for a stingy, cruel boss and longs to get away from him.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "love-henry",
+      "title": "Love Henry",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "A traditional murder ballad descended from the old British ballad known as \"Young Hunting\", it is the second track on World Gone Wrong.",
+      "themes": [
+        "love",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A jealous woman kills the man who means to leave her for another, and a bird witnesses the crime.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "ragged-and-dirty",
+      "title": "Ragged & Dirty",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "A country blues sung to his own acoustic guitar, it is the third track on World Gone Wrong.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A down-and-out man, turned away and left with nothing, asks a woman to take him in anyway.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "blood-in-my-eyes",
+      "title": "Blood in My Eyes",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "A song first recorded by the Mississippi Sheiks in the early 1930s; Dylan's version on World Gone Wrong was given a black-and-white video filmed in London.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man burns with desire for a woman and keeps trying to win her, even as she slips away.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "broke-down-engine",
+      "title": "Broke Down Engine",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "A blues by Blind Willie McTell, who recorded it in the early 1930s; Dylan sings it alone with acoustic guitar on World Gone Wrong.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man compares himself to a worn-out engine that no longer runs, abandoned and begging his woman to return.",
+      "excerpt": null,
+      "wordsBy": "Blind Willie McTell"
+    },
+    {
+      "id": "two-soldiers",
+      "title": "Two Soldiers",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "A traditional song from the time of the American Civil War, sung by Dylan to acoustic guitar on World Gone Wrong.",
+      "themes": [
+        "war",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Two young soldiers, one leaving people behind and one with no one, march into battle, and neither returns.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "jack-a-roe",
+      "title": "Jack‐a‐Roe",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "An old ballad, also known as Jackaroe, that Joan Baez and the Grateful Dead also recorded; it is the second-to-last track on World Gone Wrong.",
+      "themes": [
+        "love",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A wealthy merchant's daughter disguises herself as a man and follows her sweetheart to war.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "lone-pilgrim",
+      "title": "Lone Pilgrim",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "An old American hymn that Doc Watson had recorded, it closes World Gone Wrong.",
+      "themes": [
+        "faith",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A traveler finds the grave of a pilgrim who died far from home, and the dead man speaks of peace.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "dirt-road-blues",
+      "title": "Dirt Road Blues",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "The second track on Time Out of Mind, a short, rockabilly-tinged shuffle that follows the opener \"Love Sick\".",
+      "themes": [
+        "the road",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man walks a dusty road looking for a lost love, hoping something will change.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "million-miles",
+      "title": "Million Miles",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "A slow, smoky blues near the middle of Time Out of Mind, the album's fourth track.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man feels endlessly far from the woman he loves, even as he tries to get closer.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "til-i-fell-in-love-with-you",
+      "title": "'til I Fell in Love With You",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "A heavy, stomping blues that is the sixth track on Time Out of Mind.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man says love has wrecked him, leaving him sleepless, sick and unable to go on as before.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "cant-wait",
+      "title": "Can't Wait",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "A slow, brooding blues near the end of Time Out of Mind; alternate versions were later released on Tell Tale Signs.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man consumed by longing for a woman says he cannot keep waiting for her much longer.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "bye-and-bye",
+      "title": "Bye and Bye",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "A light, crooning swing number, the fourth track on \"Love and Theft\", in the style of prewar popular song.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man woos a woman in a gentle, easygoing way, though a hint of menace hides under the charm.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "lonesome-day-blues",
+      "title": "Lonesome Day Blues",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "A long, driving electric blues, the fifth track on \"Love and Theft\".",
+      "themes": [
+        "loss",
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely, embittered man moves through a bleak day, nursing grief and threatening those who wronged him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "floater-too-much-to-ask",
+      "title": "Floater (Too Much to Ask)",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "A gently swinging song on \"Love and Theft\" that later drew attention for borrowing lines from Junichi Saga's book Confessions of a Yakuza.",
+      "themes": [
+        "time",
+        "love",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An aging man drifts through memories of family, love and small-town life with dry, rambling humor.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "moonlight",
+      "title": "Moonlight",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "A soft, old-fashioned crooner's ballad, the eighth track on \"Love and Theft\".",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man gently invites a woman to come and meet him under the moon.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "cry-a-while",
+      "title": "Cry a While",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "A blues near the end of \"Love and Theft\" that switches between a slow, swaggering pace and a fast, driving shuffle.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man who once wept over a woman now tells her it is her turn to suffer.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "beyond-the-horizon",
+      "title": "Beyond the Horizon",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "A lilting love song on Modern Times whose melody draws on the 1930s popular song \"Red Sails in the Sunset\".",
+      "themes": [
+        "love",
+        "faith",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man promises that love and peace wait somewhere past the horizon, beyond the troubles of now.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "nettie-moore",
+      "title": "Nettie Moore",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "A slow, solemn song on Modern Times whose refrain draws on the 1857 parlour song \"Gentle Nettie Moore\".",
+      "themes": [
+        "love",
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man mourns a lost love while moving through a hard, disordered world of trouble and judgment.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "the-levees-gonna-break",
+      "title": "The Levee’s Gonna Break",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "A rocking blues on Modern Times based on \"When the Levee Breaks\", the 1929 song by Kansas Joe McCoy and Memphis Minnie.",
+      "themes": [
+        "loss",
+        "America",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man warns that the floodwaters are rising and the levee is about to give way.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "do-you-hear-what-i-hear",
+      "title": "Do You Hear What I Hear?",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "Written in 1962 by Noël Regney and Gloria Shayne as a plea for peace during the Cuban missile crisis, it is the second track on Christmas in the Heart.",
+      "themes": [
+        "faith",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "News of a newborn child passes from the night wind to a lamb, a shepherd and a king, until it reaches everyone.",
+      "excerpt": null,
+      "wordsBy": "Noël Regney"
+    },
+    {
+      "id": "winter-wonderland",
+      "title": "Winter Wonderland",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "A 1934 standard with words by Richard B. Smith and music by Felix Bernard, here played as a bright, bouncy number early on Christmas in the Heart.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A couple walks through a snowy landscape, building a snowman and dreaming happily about their future together.",
+      "excerpt": null,
+      "wordsBy": "Richard B. Smith"
+    },
+    {
+      "id": "hark-the-herald-angels-sing",
+      "title": "Hark the Herald Angels Sing",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "An eighteenth-century hymn with words by Charles Wesley, sung to a melody adapted from Felix Mendelssohn, it is one of the album's traditional carols.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Angels announce the birth of Christ and call on every nation to join their song of praise.",
+      "excerpt": null,
+      "wordsBy": "Charles Wesley"
+    },
+    {
+      "id": "ill-be-home-for-christmas",
+      "title": "I'll Be Home for Christmas",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "Written in 1943 by Kim Gannon and Walter Kent and made famous by Bing Crosby, it spoke for soldiers away from home during the Second World War.",
+      "themes": [
+        "the road",
+        "loss",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Someone far away promises to come home for the holiday, then admits it may only happen in a dream.",
+      "excerpt": null,
+      "wordsBy": "Kim Gannon"
+    },
+    {
+      "id": "little-drummer-boy",
+      "title": "Little Drummer Boy",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "A carol written by Katherine Kennison Davis in 1941 and popularised by the Harry Simeone Chorale, it sits near the middle of Christmas in the Heart.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A poor boy with nothing to give the newborn Christ offers the only gift he has: his drumming.",
+      "excerpt": null,
+      "wordsBy": "Katherine Kennison Davis"
+    },
+    {
+      "id": "o-come-all-ye-faithful-adeste-fideles",
+      "title": "O' Come All Ye Faithful (Adeste Fideles)",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "An old Latin hymn, usually credited to John Francis Wade in the eighteenth century, which Dylan sings partly in Latin before switching to English.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The faithful are invited to come to Bethlehem, see the newborn Christ and worship him.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "have-yourself-a-merry-little-christmas",
+      "title": "Have Yourself a Merry Little Christmas",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "Written by Hugh Martin and Ralph Blane for the 1944 film Meet Me in St. Louis, where Judy Garland sang it, it became a holiday standard.",
+      "themes": [
+        "time",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A wish that this Christmas may be bright, with troubles set aside and friends gathered close again.",
+      "excerpt": null,
+      "wordsBy": "Hugh Martin and Ralph Blane"
+    },
+    {
+      "id": "silver-bells",
+      "title": "Silver Bells",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "Written by Jay Livingston and Ray Evans for the 1951 film The Lemon Drop Kid, it is a Christmas song about the city rather than the countryside.",
+      "themes": [
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Busy city streets fill with shoppers, lights and the sound of bells as Christmas draws near.",
+      "excerpt": null,
+      "wordsBy": "Jay Livingston and Ray Evans"
+    },
+    {
+      "id": "the-first-noel",
+      "title": "The First Noel",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "A traditional English carol of uncertain age, first printed in the early nineteenth century, sung here with a choir late in Christmas in the Heart.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Shepherds watch their flocks and wise men follow a star to find the newborn king.",
+      "excerpt": null,
+      "wordsBy": "traditional"
+    },
+    {
+      "id": "christmas-island",
+      "title": "Christmas Island",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "Written by Lyle Moraine and recorded in 1946 by the Andrews Sisters with Guy Lombardo, it is a lighthearted island novelty near the end of the album.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "The singer invites someone to spend Christmas on a tropical island, swapping snow for sunshine and palm trees.",
+      "excerpt": null,
+      "wordsBy": "Lyle Moraine"
+    },
+    {
+      "id": "the-christmas-song",
+      "title": "The Christmas Song",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "Written in 1945 by Mel Tormé and Bob Wells and made famous by Nat King Cole, it is the penultimate track on Christmas in the Heart.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Familiar winter comforts and children's excitement make up a simple, warm wish for a merry Christmas.",
+      "excerpt": null,
+      "wordsBy": "Mel Tormé and Bob Wells"
+    },
+    {
+      "id": "o-little-town-of-bethlehem",
+      "title": "O' Little Town of Bethlehem",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "A hymn written by Phillips Brooks in 1868, it closes Christmas in the Heart on a quiet, reverent note.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A quiet town sleeps under the stars on the night a holy child is born there.",
+      "excerpt": null,
+      "wordsBy": "Phillips Brooks"
+    },
+    {
+      "id": "my-wifes-home-town",
+      "title": "My Wife's Home Town",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "Written with Robert Hunter and credited also to Willie Dixon, since it is built on his blues \"I Just Want to Make Love to You\".",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man grumbles, half in jest, that his wife's home town is the root of all his troubles.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "if-you-ever-go-to-houston",
+      "title": "If You Ever Go to Houston",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "Written with Robert Hunter, it is a mid-tempo Texas song driven by accordion, the album's border-town sound at its plainest.",
+      "themes": [
+        "the road",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A traveler offers advice to anyone heading to Houston and other Texas towns, remembering people and places he knew.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "forgetful-heart",
+      "title": "Forgetful Heart",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "Written with Robert Hunter, it is a slow, minor-key ballad and one of the darkest songs on Together Through Life.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man speaks to his own heart, which has let go of a love he still cannot forget.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "jolene",
+      "title": "Jolene",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "Written with Robert Hunter and not the Dolly Parton song of the same name, it is a stomping blues number in the middle of the album.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A swaggering man declares his devotion to a woman named Jolene and boasts of his own power.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "this-dream-of-you",
+      "title": "This Dream of You",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "The only song on Together Through Life that Dylan wrote without Robert Hunter, it has a Tex-Mex lilt with accordion and violin.",
+      "themes": [
+        "love",
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely man clings to a dream of the woman he loves, the one thing keeping him going.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "shake-shake-mama",
+      "title": "Shake Shake Mama",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "Written with Robert Hunter, it is a raw, fast blues shuffle in the second half of Together Through Life.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A restless man urges a woman to dance and shake, mixing lust with grumbling about his troubles.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "its-all-good",
+      "title": "It's All Good",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "Written with Robert Hunter, it closes Together Through Life with a jaunty tune that turns a cheerful catchphrase into irony.",
+      "themes": [
+        "America",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Amid broken homes, corruption and decay, the singer keeps insisting with a straight face that everything is fine.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "soon-after-midnight",
+      "title": "Soon After Midnight",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The second track on Tempest, a slow and gentle ballad with a lilting, old-fashioned doo-wop feel.",
+      "themes": [
+        "love",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A late-night love song from a man who sounds tender and patient, though a quiet menace keeps slipping in.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "narrow-way",
+      "title": "Narrow Way",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The third track on Tempest, a long, hard-driving blues built on a repeating riff.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A weary, stubborn man insists that one day he and the woman he wants will finally meet halfway.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "long-and-wasted-years",
+      "title": "Long and Wasted Years",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The fourth track on Tempest, a mid-tempo song delivered in a rough, half-spoken voice over a circling guitar figure.",
+      "themes": [
+        "love",
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man talks to a former partner about the years they let slip away and the distance now between them.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "pay-in-blood",
+      "title": "Pay in Blood",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The fifth track on Tempest, a snarling mid-tempo rocker driven by piano and guitar.",
+      "themes": [
+        "death",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A furious, vengeful voice declares that he settles every debt with violence rather than with money.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "scarlet-town",
+      "title": "Scarlet Town",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The sixth track on Tempest; Scarlet Town is the setting of the old ballad \"Barbara Allen\".",
+      "themes": [
+        "death",
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A portrait of a decaying, haunted town where love, sin and death sit side by side.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "early-roman-kings",
+      "title": "Early Roman Kings",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The seventh track on Tempest, a heavy blues built on the stop-time riff familiar from Muddy Waters' \"Mannish Boy\".",
+      "themes": [
+        "war",
+        "death",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A swaggering portrait of brutal, powerful men who rule by force and fear no one.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "tin-angel",
+      "title": "Tin Angel",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The eighth track on Tempest, a long narrative ballad that runs for roughly nine minutes.",
+      "themes": [
+        "love",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A husband pursues his runaway wife and her lover, and the confrontation ends in death for all three.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "the-night-we-called-it-a-day",
+      "title": "The Night We Called It a Day",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "Written by Matt Dennis and Tom Adair in 1941 and recorded by Frank Sinatra in 1942; the second track on Shadows in the Night.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lover remembers the night a romance ended and how the whole world seemed to darken with it.",
+      "excerpt": null,
+      "wordsBy": "Tom Adair"
+    },
+    {
+      "id": "stay-with-me",
+      "title": "Stay With Me",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "Written by Jerome Moross and Carolyn Leigh for the 1963 film \"The Cardinal\" and recorded by Frank Sinatra; the third track on Shadows in the Night.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A humble prayer asking God for guidance, comfort and companionship through doubt and darkness.",
+      "excerpt": null,
+      "wordsBy": "Carolyn Leigh"
+    },
+    {
+      "id": "autumn-leaves",
+      "title": "Autumn Leaves",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "A French song by Joseph Kosma and Jacques Prévert, with English words by Johnny Mercer; the fourth track on Shadows in the Night.",
+      "themes": [
+        "loss",
+        "time",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Falling leaves in autumn bring back memories of a summer love that is now gone for good.",
+      "excerpt": null,
+      "wordsBy": "Johnny Mercer and Jacques Prévert"
+    },
+    {
+      "id": "why-try-to-change-me-now",
+      "title": "Why Try to Change Me Now",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "Written by Cy Coleman and Joseph McCarthy and recorded by Frank Sinatra in 1952; the fifth track on Shadows in the Night.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A dreamy, unconventional man asks the woman he loves to accept him as he is rather than reform him.",
+      "excerpt": null,
+      "wordsBy": "Joseph McCarthy"
+    },
+    {
+      "id": "some-enchanted-evening",
+      "title": "Some Enchanted Evening",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "Written by Richard Rodgers and Oscar Hammerstein II for the 1949 Broadway musical \"South Pacific\"; the sixth track on Shadows in the Night.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Advice to seize love the moment you meet it, because such a chance may never come again.",
+      "excerpt": null,
+      "wordsBy": "Oscar Hammerstein II"
+    },
+    {
+      "id": "where-are-you",
+      "title": "Where Are You?",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "Written by Jimmy McHugh and Harold Adamson in 1937 and the title song of a 1957 Frank Sinatra album; eighth on Shadows in the Night.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An abandoned lover asks where the one who left has gone and why their love came to nothing.",
+      "excerpt": null,
+      "wordsBy": "Harold Adamson"
+    },
+    {
+      "id": "what-ill-do",
+      "title": "What'll I Do",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "Written by Irving Berlin in 1923 and recorded by Frank Sinatra; the ninth track on Shadows in the Night.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely lover wonders how to go on now that the person who mattered most is gone.",
+      "excerpt": null,
+      "wordsBy": "Irving Berlin"
+    },
+    {
+      "id": "maybe-youll-be-there",
+      "title": "Maybe You'll Be There",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "A 1940s ballad by Rube Bloom and Sammy Gallop; the second track on Fallen Angels.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely singer clings to the hope that a lost love might be waiting somewhere ahead.",
+      "excerpt": null,
+      "wordsBy": "Sammy Gallop"
+    },
+    {
+      "id": "polka-dots-and-moonbeams",
+      "title": "Polka Dots and Moonbeams",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written by Jimmy Van Heusen and Johnny Burke in 1940 and recorded by Frank Sinatra with Tommy Dorsey; the third track on Fallen Angels.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A sweet story of a young man meeting a girl at a country dance and falling in love.",
+      "excerpt": null,
+      "wordsBy": "Johnny Burke"
+    },
+    {
+      "id": "skylark",
+      "title": "Skylark",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written by Hoagy Carmichael with words by Johnny Mercer in 1941; the fifth track on Fallen Angels.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely singer asks a skylark whether it has seen anywhere the love they are longing for.",
+      "excerpt": null,
+      "wordsBy": "Johnny Mercer"
+    },
+    {
+      "id": "nevertheless",
+      "title": "Nevertheless",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written by Bert Kalmar and Harry Ruby in 1931 and recorded by Frank Sinatra in 1950; the sixth track on Fallen Angels.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Someone admits that falling in love may end badly, but chooses to fall anyway.",
+      "excerpt": null,
+      "wordsBy": "Bert Kalmar"
+    },
+    {
+      "id": "all-or-nothing-at-all",
+      "title": "All or Nothing at All",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written by Arthur Altman and Jack Lawrence and first recorded by Frank Sinatra with Harry James in 1939; the seventh track on Fallen Angels.",
+      "themes": [
+        "love",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lover refuses to settle for half a romance: it must be complete devotion or nothing.",
+      "excerpt": null,
+      "wordsBy": "Jack Lawrence"
+    },
+    {
+      "id": "on-a-little-street-in-singapore",
+      "title": "On a Little Street in Singapore",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written by Peter DeRose and Billy Hill in 1938 and recorded by Frank Sinatra with Harry James; the eighth track on Fallen Angels.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A secret romance unfolds in a far-off port city, where two lovers meet in hiding.",
+      "excerpt": null,
+      "wordsBy": "Billy Hill"
+    },
+    {
+      "id": "it-had-to-be-you",
+      "title": "It Had to Be You",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written by Isham Jones and Gus Kahn in 1924, one of the most recorded songs of its era; the ninth track on Fallen Angels.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Only one person, flaws and all, could ever win this singer's heart.",
+      "excerpt": null,
+      "wordsBy": "Gus Kahn"
+    },
+    {
+      "id": "that-old-black-magic",
+      "title": "That Old Black Magic",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written by Harold Arlen and Johnny Mercer for the 1942 film \"Star Spangled Rhythm\"; the eleventh track on Fallen Angels.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Falling in love feels like being under a spell the singer cannot and does not want to break.",
+      "excerpt": null,
+      "wordsBy": "Johnny Mercer"
+    },
+    {
+      "id": "come-rain-or-come-shine",
+      "title": "Come Rain or Come Shine",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written by Harold Arlen and Johnny Mercer for the 1946 Broadway musical \"St. Louis Woman\"; it closes Fallen Angels.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A promise of lasting love, whatever luck, weather or fortune may bring to the couple.",
+      "excerpt": null,
+      "wordsBy": "Johnny Mercer"
+    },
+    {
+      "id": "i-guess-ill-have-to-change-my-plans",
+      "title": "I Guess I’ll Have to Change My Plans",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Arthur Schwartz and Howard Dietz in 1929, it opens the first of Triplicate's three discs.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man who had his future mapped out with someone learns she is gone and must start over.",
+      "excerpt": null,
+      "wordsBy": "Howard Dietz"
+    },
+    {
+      "id": "i-could-have-told-you",
+      "title": "I Could Have Told You",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "A torch ballad from the 1950s songbook that Frank Sinatra recorded, sitting early on the first disc of Triplicate.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Someone who watched a lover leave says he saw it coming all along and was hurt anyway.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "once-upon-a-time",
+      "title": "Once Upon a Time",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Charles Strouse and Lee Adams for the 1962 Broadway musical All American, later recorded by Tony Bennett and Frank Sinatra.",
+      "themes": [
+        "time",
+        "loss",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An older man remembers a youthful, carefree love and the world it belonged to, both now long gone.",
+      "excerpt": null,
+      "wordsBy": "Lee Adams"
+    },
+    {
+      "id": "this-nearly-was-mine",
+      "title": "This Nearly Was Mine",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "A Rodgers and Hammerstein song from South Pacific (1949), where the French planter Emile de Becque sings it; here a slow waltz on Triplicate.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man mourns a love he held almost in his hands before it slipped away.",
+      "excerpt": null,
+      "wordsBy": "Oscar Hammerstein II"
+    },
+    {
+      "id": "that-old-feeling",
+      "title": "That Old Feeling",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Sammy Fain and Lew Brown in 1937 for the film Vogues of 1938, it became a standard sung by many jazz and pop singers.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Seeing a former love again, a man finds the old attraction comes straight back.",
+      "excerpt": null,
+      "wordsBy": "Lew Brown"
+    },
+    {
+      "id": "it-gets-lonely-early",
+      "title": "It Gets Lonely Early",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Jimmy Van Heusen and Sammy Cahn and recorded by Frank Sinatra on his 1965 album September of My Years.",
+      "themes": [
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man living alone after a breakup finds the evenings start too soon and stretch too long.",
+      "excerpt": null,
+      "wordsBy": "Sammy Cahn"
+    },
+    {
+      "id": "my-one-and-only-love",
+      "title": "My One and Only Love",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Guy Wood and Robert Mellin in the early 1950s, famously recorded by Frank Sinatra and later by John Coltrane with Johnny Hartman.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man tells the woman he loves that she is the only one, and describes how she moves him.",
+      "excerpt": null,
+      "wordsBy": "Robert Mellin"
+    },
+    {
+      "id": "trade-winds",
+      "title": "Trade Winds",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Cliff Friend and Charles Tobias and a 1940 hit for Bing Crosby; it closes the first disc of Triplicate.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "On a tropical shore, the warm winds bring back memories of a lover who is no longer there.",
+      "excerpt": null,
+      "wordsBy": "Charles Tobias"
+    },
+    {
+      "id": "braggin",
+      "title": "Braggin’",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "A little-known 1940s swing number, Braggin' opens the second disc of Triplicate at a jaunty tempo.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man playfully boasts about his sweetheart while admitting he may be bragging a bit too much.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "imagination",
+      "title": "Imagination",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Jimmy Van Heusen and Johnny Burke in 1940, it was a hit for the Tommy Dorsey Orchestra with Frank Sinatra and for Glenn Miller.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man reflects on how the imagination can make a lover seem perfect, and wonders if it is fooling him.",
+      "excerpt": null,
+      "wordsBy": "Johnny Burke"
+    },
+    {
+      "id": "how-deep-is-the-ocean",
+      "title": "How Deep Is the Ocean",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Irving Berlin in 1932, it has been recorded by countless singers and is one of his best-known ballads.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lover answers the question of how much he cares by pointing to the depth of the sea and the height of the sky.",
+      "excerpt": null,
+      "wordsBy": "Irving Berlin"
+    },
+    {
+      "id": "p-s-i-love-you",
+      "title": "P.S. I Love You",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Gordon Jenkins with words by Johnny Mercer in 1934; not the Beatles song of the same name.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man away from home writes a letter to the woman he loves, filling it with small news and his longing.",
+      "excerpt": null,
+      "wordsBy": "Johnny Mercer"
+    },
+    {
+      "id": "the-best-is-yet-to-come",
+      "title": "The Best Is Yet to Come",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Cy Coleman and Carolyn Leigh in 1959 and made famous by Frank Sinatra with Count Basie's orchestra in 1964.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man courting someone promises that their romance has only just begun and its best days lie ahead.",
+      "excerpt": null,
+      "wordsBy": "Carolyn Leigh"
+    },
+    {
+      "id": "but-beautiful",
+      "title": "But Beautiful",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Jimmy Van Heusen and Johnny Burke for the 1947 Bing Crosby and Bob Hope film Road to Rio.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Love is described as a tangle of opposites, funny and sad, calm and wild, but always beautiful.",
+      "excerpt": null,
+      "wordsBy": "Johnny Burke"
+    },
+    {
+      "id": "heres-that-rainy-day",
+      "title": "Here’s That Rainy Day",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Jimmy Van Heusen and Johnny Burke for the 1953 Broadway musical Carnival in Flanders, later a jazz standard.",
+      "themes": [
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Someone who once laughed off talk of hard times finds that the hard times have finally arrived.",
+      "excerpt": null,
+      "wordsBy": "Johnny Burke"
+    },
+    {
+      "id": "where-is-the-one",
+      "title": "Where Is the One",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Alec Wilder and Edwin Finckel and recorded by Frank Sinatra on his 1957 album Where Are You?",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lonely man asks where the person meant for him is, and whether he will ever find her.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "theres-a-flaw-in-my-flue",
+      "title": "There’s a Flaw in My Flue",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Jimmy Van Heusen and Johnny Burke; Frank Sinatra recorded it in 1956, and it closes the second disc of Triplicate.",
+      "themes": [
+        "loss",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man alone by a smoky fireplace keeps seeing the face of a lost love whenever the chimney acts up.",
+      "excerpt": null,
+      "wordsBy": "Johnny Burke"
+    },
+    {
+      "id": "day-in-day-out",
+      "title": "Day In, Day Out",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Rube Bloom with words by Johnny Mercer in 1939, it opens the third disc of Triplicate.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Every day the same overwhelming feeling returns, the thrill of being in love that never wears off.",
+      "excerpt": null,
+      "wordsBy": "Johnny Mercer"
+    },
+    {
+      "id": "i-couldnt-sleep-a-wink-last-night",
+      "title": "I Couldn’t Sleep a Wink Last Night",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Jimmy McHugh and Harold Adamson for Higher and Higher (1943), a film in which Frank Sinatra sang it.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "After a quarrel with his sweetheart, a man lies awake all night until he can set things right.",
+      "excerpt": null,
+      "wordsBy": "Harold Adamson"
+    },
+    {
+      "id": "sentimental-journey",
+      "title": "Sentimental Journey",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Les Brown, Ben Homer and Bud Green; Doris Day's 1945 recording with Les Brown's band became a symbol of soldiers coming home.",
+      "themes": [
+        "the road",
+        "time",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A traveller sets off by train for home, eager to return to the places and people of the past.",
+      "excerpt": null,
+      "wordsBy": "Bud Green"
+    },
+    {
+      "id": "somewhere-along-the-way",
+      "title": "Somewhere Along the Way",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Kurt Adams with words by Sammy Gallop; Nat King Cole had a hit with it in 1952.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man realises that at some point on the road of life he lost the person he loved.",
+      "excerpt": null,
+      "wordsBy": "Sammy Gallop"
+    },
+    {
+      "id": "when-the-world-was-young",
+      "title": "When the World Was Young",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Based on a French song by Philippe-Gérard, with English words by Johnny Mercer; Frank Sinatra and Peggy Lee recorded it.",
+      "themes": [
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A worldly, older man looks back with longing on the innocent days of his youth.",
+      "excerpt": null,
+      "wordsBy": "Johnny Mercer"
+    },
+    {
+      "id": "these-foolish-things",
+      "title": "These Foolish Things",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written in 1936 by Jack Strachey with words by Eric Maschwitz, it is a British song that became an American standard.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Small everyday objects and moments keep reminding a man of a lover who is gone.",
+      "excerpt": null,
+      "wordsBy": "Eric Maschwitz"
+    },
+    {
+      "id": "you-go-to-my-head",
+      "title": "You Go to My Head",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by J. Fred Coots with words by Haven Gillespie in 1938, it was recorded by Billie Holiday and many others.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A lover compares the giddy effect of the person he adores to being intoxicated.",
+      "excerpt": null,
+      "wordsBy": "Haven Gillespie"
+    },
+    {
+      "id": "stardust",
+      "title": "Stardust",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Hoagy Carmichael's 1927 melody, later given words by Mitchell Parish, became one of the most recorded songs of the century; Dylan sings it near the end of Triplicate.",
+      "themes": [
+        "love",
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Alone at nightfall, a man remembers a love that has ended and finds the memory itself is all he has left.",
+      "excerpt": null,
+      "wordsBy": "Mitchell Parish"
+    },
+    {
+      "id": "its-funny-to-everyone-but-me",
+      "title": "It’s Funny to Everyone but Me",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "A 1939 ballad by Jack Lawrence, recorded early on by Frank Sinatra with Harry James; Dylan places it next to last on Triplicate.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man whose heart has been broken notices that his misery amuses everyone around him except himself.",
+      "excerpt": null,
+      "wordsBy": "Jack Lawrence"
+    },
+    {
+      "id": "why-was-i-born",
+      "title": "Why Was I Born",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Written by Jerome Kern and Oscar Hammerstein II for the 1929 Broadway show Sweet Adeline, it closes Triplicate and with it Dylan's run of standards albums.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Someone devoted to a lover who does not return the feeling asks what the point of their own life can be.",
+      "excerpt": null,
+      "wordsBy": "Oscar Hammerstein II"
+    },
+    {
+      "id": "ive-made-up-my-mind-to-give-myself-to-you",
+      "title": "I’ve Made Up My Mind to Give Myself to You",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "The fourth track on Rough and Rowdy Ways, a gentle, slow love song that stands apart from the darker, wordier pieces around it.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An older man, having travelled and seen enough, decides calmly to commit himself completely to the one he loves.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "black-rider",
+      "title": "Black Rider",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "The fifth track on Rough and Rowdy Ways, one of the sparest arrangements on the album, built mostly on quiet guitar.",
+      "themes": [
+        "death",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man speaks to a dark, shadowy rider who stalks him and tells him to keep his distance.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "mother-of-muses",
+      "title": "Mother of Muses",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "The seventh track on Rough and Rowdy Ways, a slow hymn-like invocation of the muse that also salutes Second World War generals.",
+      "themes": [
+        "war",
+        "time",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "An aging singer calls on the mother of the muses for inspiration and honours those who fought and marched before him.",
+      "excerpt": null,
+      "wordsBy": null
+    },
+    {
+      "id": "the-mighty-quinn-quinn-the-eskimo",
+      "title": "The Mighty Quinn (Quinn the Eskimo)",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "Written during the 1967 Basement Tapes sessions and a 1968 hit for Manfred Mann; Self Portrait has it live from the 1969 Isle of Wight festival with the Band.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Everyone is restless and stuck until the mysterious Quinn arrives, and then the whole crowd comes joyfully alive.",
+      "excerpt": null,
+      "wordsBy": null,
+      "takes": [
+        "The Mighty Quinn (Quinn the Eskimo)",
+        "The Mighty Quinn (Quinn the Eskimo) (live)"
+      ]
+    },
+    {
+      "id": "minstrel-boy",
+      "title": "Minstrel Boy",
+      "year": 1970,
+      "album": "self-portrait",
+      "by": null,
+      "note": "A Dylan song from the 1967 basement period, not the old Irish ballad; Self Portrait's version is live from the 1969 Isle of Wight festival with the Band.",
+      "themes": [
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A worn-out travelling minstrel keeps rolling on, and the song asks whether anyone will help or reward him.",
+      "excerpt": null,
+      "wordsBy": null,
+      "takes": [
+        "Minstrel Boy",
+        "Minstrel Boy (live)"
+      ]
+    }
+  ]
+}

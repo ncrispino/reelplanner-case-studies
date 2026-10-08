@@ -1,0 +1,344 @@
+{
+ "videos": [
+  {
+   "slug": "dylan-site",
+   "plan": "2026-10-06-dylan-site",
+   "kind": "plan",
+   "title": "Plan video · The site, from an empty folder",
+   "planTitle": "The site, from an empty folder",
+   "scenes": 28,
+   "length": 377.41,
+   "lengthLabel": "6:17",
+   "src": "../review/2026-10-06-dylan-site/index.html",
+   "chapters": [
+    {
+     "t": 0,
+     "title": "What changed, and how it is built"
+    },
+    {
+     "t": 117.32,
+     "title": "Data, eras and pages"
+    },
+    {
+     "t": 300.71,
+     "title": "Connections, listening, checks"
+    }
+   ],
+   "questions": [
+    {
+     "t": 79.78,
+     "id": "q1",
+     "question": "How should the site be built?",
+     "answer": "Astro, a page per song",
+     "own": false
+    },
+    {
+     "t": 190.81,
+     "id": "q2",
+     "question": "Where should the era photographs come from?",
+     "answer": "Wikimedia Commons, free-licensed",
+     "own": false
+    },
+    {
+     "t": 262.38,
+     "id": "q3",
+     "question": "What should a song page show beside its lyrics link?",
+     "answer": "The link and a preview in our words",
+     "own": false
+    }
+   ]
+  },
+  {
+   "slug": "dylan-site-walkthrough",
+   "plan": "2026-10-06-dylan-site",
+   "kind": "walkthrough",
+   "title": "Walkthrough · The site, from an empty folder",
+   "planTitle": "The site, from an empty folder",
+   "scenes": 11,
+   "length": 131.87,
+   "lengthLabel": "2:11",
+   "src": "../review/2026-10-06-dylan-site--walkthrough/index.html",
+   "chapters": [
+    {
+     "t": 0,
+     "title": "What changed"
+    },
+    {
+     "t": 119.72,
+     "title": "What ran"
+    }
+   ],
+   "questions": []
+  },
+  {
+   "slug": "desktop",
+   "plan": "2026-10-07-desktop",
+   "kind": "plan",
+   "title": "Plan video · The site on a computer",
+   "planTitle": "The site on a computer",
+   "scenes": 32,
+   "length": 337.36,
+   "lengthLabel": "5:37",
+   "src": "../review/2026-10-07-desktop/index.html",
+   "chapters": [
+    {
+     "t": 0,
+     "title": "On a computer today"
+    },
+    {
+     "t": 39.04,
+     "title": "The map, fixed"
+    },
+    {
+     "t": 71.08,
+     "title": "A layout for wide screens"
+    },
+    {
+     "t": 240.41,
+     "title": "Threads, the map and checks"
+    }
+   ],
+   "questions": [
+    {
+     "t": 95.72,
+     "id": "q1",
+     "question": "How wide should the content go on a computer?",
+     "answer": "Up to 1200 px, two columns",
+     "own": false
+    },
+    {
+     "t": 165.26,
+     "id": "q2",
+     "question": "On a computer, does the home page give one era at a time, or all of them at once?",
+     "answer": "One era fills the screen",
+     "own": false
+    },
+    {
+     "t": 261.7,
+     "id": "q3",
+     "question": "On a computer, what should clicking a dot on the map do?",
+     "answer": "Select it, and show its panel",
+     "own": false
+    }
+   ]
+  },
+  {
+   "slug": "desktop-walkthrough",
+   "plan": "2026-10-07-desktop",
+   "kind": "walkthrough",
+   "title": "Walkthrough · The site on a computer",
+   "planTitle": "The site on a computer",
+   "scenes": 16,
+   "length": 183.49,
+   "lengthLabel": "3:03",
+   "src": "../review/2026-10-07-desktop--walkthrough/index.html",
+   "chapters": [
+    {
+     "t": 0,
+     "title": "What landed"
+    },
+    {
+     "t": 14.38,
+     "title": "Step 1 · The map"
+    },
+    {
+     "t": 28.22,
+     "title": "Step 2 · The header, and the tablet"
+    },
+    {
+     "t": 40.36,
+     "title": "Step 3 · Each era a screen"
+    },
+    {
+     "t": 59.54,
+     "title": "Step 4 · Two-column pages"
+    },
+    {
+     "t": 77.06,
+     "title": "Off-plan change · a moment's songs"
+    },
+    {
+     "t": 85.4,
+     "title": "Step 5 · Threads and the map"
+    },
+    {
+     "t": 100.05,
+     "title": "Off-plan change · the tablet's toggle"
+    },
+    {
+     "t": 108.91,
+     "title": "Off-plan change · the threads list's covers"
+    },
+    {
+     "t": 117.63,
+     "title": "Question 4 · A way to the thread cards"
+    },
+    {
+     "t": 144.29,
+     "title": "Step 6 · Search, and the desktop check"
+    },
+    {
+     "t": 153.87,
+     "title": "What ran"
+    },
+    {
+     "t": 165.49,
+     "title": "The rest of the choices"
+    }
+   ],
+   "questions": [
+    {
+     "t": 117.63,
+     "id": "q4",
+     "question": "On a computer, should the full map offer a way to the thread cards?",
+     "answer": "Add \"A thread from this song ›\" to the map page",
+     "own": false
+    }
+   ]
+  },
+  {
+   "slug": "every-song",
+   "plan": "2026-10-07-every-song",
+   "kind": "plan",
+   "title": "Plan video · Every track a page",
+   "planTitle": "Every track a page",
+   "scenes": 22,
+   "length": 238.61,
+   "lengthLabel": "3:58",
+   "src": "../review/2026-10-07-every-song/index.html",
+   "chapters": [
+    {
+     "t": 0,
+     "title": "Dead rows"
+    },
+    {
+     "t": 56.36,
+     "title": "Every track a song"
+    },
+    {
+     "t": 156.81,
+     "title": "Links and connections"
+    },
+    {
+     "t": 195.74,
+     "title": "Part of the site"
+    }
+   ],
+   "questions": [
+    {
+     "t": 84.74,
+     "id": "q1",
+     "question": "Which tracks get a page?",
+     "answer": "All 277",
+     "own": false
+    },
+    {
+     "t": 115.05,
+     "id": "q2",
+     "question": "How much is written for a song by another writer?",
+     "answer": "The same page as his own songs",
+     "own": false
+    }
+   ]
+  },
+  {
+   "slug": "every-song-walkthrough",
+   "plan": "2026-10-07-every-song",
+   "kind": "walkthrough",
+   "title": "Walkthrough · Every track a page",
+   "planTitle": "Every track a page",
+   "scenes": 12,
+   "length": 131.57,
+   "lengthLabel": "2:11",
+   "src": "../review/2026-10-07-every-song--walkthrough/index.html",
+   "chapters": [
+    {
+     "t": 0,
+     "title": "What landed"
+    },
+    {
+     "t": 16.32,
+     "title": "Step 1 · Takes, live takes, co-writes"
+    },
+    {
+     "t": 36.31,
+     "title": "Off-plan change · the file name"
+    },
+    {
+     "t": 44.37,
+     "title": "Step 2 · Who wrote the words"
+    },
+    {
+     "t": 53.61,
+     "title": "Off-plan change · instrumentals' links"
+    },
+    {
+     "t": 63.57,
+     "title": "Off-plan change · no Genius links"
+    },
+    {
+     "t": 76.05,
+     "title": "Step 3 · Connections and threads"
+    },
+    {
+     "t": 87.08,
+     "title": "Off-plan change · threads kept by hand"
+    },
+    {
+     "t": 96.77,
+     "title": "Step 4 · Every row a link, and live takes named"
+    },
+    {
+     "t": 105.92,
+     "title": "What ran"
+    },
+    {
+     "t": 116.93,
+     "title": "The rest of the choices"
+    }
+   ],
+   "questions": []
+  },
+  {
+   "slug": "fuller-walkthrough",
+   "plan": "2026-10-07-fuller",
+   "kind": "walkthrough",
+   "title": "Walkthrough · A fuller site",
+   "planTitle": "A fuller site",
+   "scenes": 18,
+   "length": 232.71,
+   "lengthLabel": "3:52",
+   "src": "../review/2026-10-07-fuller--walkthrough/index.html",
+   "chapters": [
+    {
+     "t": 0,
+     "title": "What landed"
+    },
+    {
+     "t": 103.08,
+     "title": "Albums and songs"
+    },
+    {
+     "t": 155.66,
+     "title": "Wide windows and links out"
+    }
+   ],
+   "questions": [
+    {
+     "t": 76.05,
+     "id": "q5",
+     "question": "Bands on the front of the site as well?",
+     "answer": "Yes, as built: every era's bands on the home page too",
+     "own": false
+    },
+    {
+     "t": 131.14,
+     "id": "q4",
+     "question": "Fallen Angels has no Spotify album to embed: what goes in its place?",
+     "answer": "A line: Find Fallen Angels on Spotify ↗",
+     "own": false
+    }
+   ]
+  }
+ ]
+}

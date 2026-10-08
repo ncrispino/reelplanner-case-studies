@@ -1,0 +1,70 @@
+@import "@fontsource/monoton/latin-400.css";
+@import "@fontsource/oswald/latin-500.css";
+/* The '80s, 1983–1990 — MTV, stadiums and the VHS shelf, kept tasteful.
+   Night blue with a pink neon tube and a cyan grid floor, an inline neon face for the era's name and a tall
+   condensed face for everything else, a hi-fi badge, VHS spine labels and glowing tube buttons. */
+[data-era="eighties"] { --paper:#0c0f1f; --ink:#eef0ff; --soft:rgba(238,240,255,.78); --line:rgba(46,230,214,.3); --accent:#ff3d8b;
+  --accent-ink:#0c0f1f; --accent2:#2ee6d6; --card:#151a37;
+  --display:"Oswald","Arial Narrow",Impact,sans-serif; --display-alt:"Oswald","Arial Narrow",sans-serif; --display-weight:500;
+  --display-case:uppercase; --display-track:.03em; --display-style:normal; --display-lh:1.06;
+  --body:"Avenir Next","Century Gothic",Futura,system-ui,sans-serif;
+  --label:"Oswald","Arial Narrow",sans-serif; --label-weight:500; --label-track:.16em; --label-case:uppercase;
+  --texture:linear-gradient(rgba(46,230,214,.07) 1px, transparent 1px) 0 0 / 100% 32px, linear-gradient(90deg, rgba(255,61,139,.06) 1px, transparent 1px) 0 0 / 32px 100%,
+    radial-gradient(600px 300px at 50% 0, rgba(255,61,139,.16), transparent 70%) no-repeat;
+  --stamp:"Hi-Fi · Stereo"; --dot:#2ee6d6; }
+
+@scope ([data-era="eighties"]) to ([data-era]) {
+  /* the floor: a perspective grid under the panel */
+  :scope.panel::after { content: ""; position: absolute; z-index: -1; left: -30%; right: -30%; bottom: 0; height: 260px; pointer-events: none;
+    background: linear-gradient(rgba(46,230,214,.35) 1.5px, transparent 1.5px) 0 0 / 100% 26px, linear-gradient(90deg, rgba(46,230,214,.35) 1.5px, transparent 1.5px) 0 0 / 40px 100%;
+    transform: perspective(240px) rotateX(58deg); transform-origin: 50% 100%;
+    -webkit-mask: linear-gradient(transparent, #000 70%); mask: linear-gradient(transparent, #000 70%); }
+  /* a hi-fi badge with spectrum bars */
+  .stamp { top: 30px; right: 22px; rotate: -4deg; }
+  .stamp::after { display: block; padding: 6px 10px 6px 30px; background: linear-gradient(90deg, #ff3d8b 0 4px, transparent 4px 6px, #ffb13d 6px 10px, transparent 10px 12px, #2ee6d6 12px 16px, transparent 16px) 8px 50% / 16px 60% no-repeat, #0c0f1f;
+    border: 1.5px solid var(--ink); color: var(--ink); font: 500 12px/1 "Oswald", sans-serif; letter-spacing: .22em; text-transform: uppercase; }
+  .photo .frame { border: 2px solid var(--accent2); box-shadow: 0 0 0 1px rgba(46,230,214,.4), 0 0 22px rgba(46,230,214,.45); }
+  .photo .frame::after { background: repeating-linear-gradient(transparent 0 2px, rgba(12,15,31,.22) 2px 3px), linear-gradient(160deg, rgba(255,61,139,.22), transparent 50%, rgba(46,230,214,.18));
+    mix-blend-mode: normal; }
+  .years { color: var(--accent2); }
+  /* the era's name in neon tubing, underlined by a second tube */
+  :scope .etitle { font-family: "Monoton", "Oswald", sans-serif; font-weight: 400; color: var(--accent); letter-spacing: .02em; line-height: 1.12;
+    font-size: clamp(46px, 14vw, 80px); text-shadow: 0 0 6px rgba(255,61,139,.85), 0 0 22px rgba(255,61,139,.5); }
+  .display:not(.etitle) { color: var(--ink); text-shadow: 0 0 14px rgba(255,61,139,.45); }
+  .ehead::after, .page > .display::after { content: ""; display: block; height: 3px; width: 64%; margin-top: 10px; background: var(--accent2);
+    border-radius: 3px; box-shadow: 0 0 8px var(--accent2), 0 0 18px rgba(46,230,214,.6); }
+  .moments .year { color: var(--accent2); }
+  /* a VHS spine label */
+  .chip { background: linear-gradient(90deg, var(--accent) 0 6px, transparent 6px), var(--card); color: var(--ink); border: 0; border-bottom: 2px solid var(--accent2);
+    padding: 8px 14px 8px 16px; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); }
+  /* a glowing tube */
+  .button { background: transparent; color: var(--ink); border: 2px solid var(--accent); border-radius: 6px;
+    box-shadow: 0 0 10px rgba(255,61,139,.5), inset 0 0 8px rgba(255,61,139,.35); text-shadow: 0 0 6px rgba(255,61,139,.6); }
+  .button.accent { border-color: var(--accent2); background: rgba(46,230,214,.1); box-shadow: 0 0 10px rgba(46,230,214,.5), inset 0 0 8px rgba(46,230,214,.35); color: var(--ink);
+    text-shadow: 0 0 6px rgba(46,230,214,.6); }
+  .card, :scope.card { background: linear-gradient(90deg, var(--accent), #ffb13d, var(--accent2)) 0 0 / 100% 4px no-repeat,
+      linear-gradient(rgba(46,230,214,.06) 1px, transparent 1px) 0 0 / 100% 22px, var(--card);
+    border: 1px solid rgba(46,230,214,.35); padding: 20px 18px 18px; }
+  .section-title { color: var(--accent2); text-shadow: 0 0 8px rgba(46,230,214,.55); font-size: 15px; }
+  .section-title::after { content: ""; display: block; width: 48px; height: 3px; margin-top: 8px; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+  .list, .list li a, .list li > span { border-color: rgba(46,230,214,.25); }
+  :scope.tc { background: linear-gradient(transparent 55%, rgba(46,230,214,.12)), var(--texture), var(--paper); border: 1px solid rgba(255,61,139,.55);
+    box-shadow: inset 0 0 26px rgba(255,61,139,.18), 0 0 14px rgba(255,61,139,.2); }
+  .big { color: var(--accent); text-shadow: 0 0 10px rgba(255,61,139,.7); }
+  .st { text-shadow: 0 0 12px rgba(255,61,139,.45); }
+  :scope.tc .mark { background: var(--accent2); box-shadow: 0 0 0 3px var(--paper), 0 0 10px var(--accent2); }
+  :scope .drawn { background: repeating-linear-gradient(transparent 0 6px, #0c0f1f 6px 9px) 0 42% / 100% 16% no-repeat,
+      linear-gradient(#ff3d8b, #ffb13d 55%, #0c0f1f 55%); color: #eef0ff; }
+  :scope .drawn .t { font-family: "Oswald", sans-serif; text-shadow: 0 1px 2px rgba(0,0,0,.6); }
+  .pl { background: var(--card); border: 1.5px solid var(--accent); border-radius: 8px; padding: 8px; box-shadow: 0 0 16px rgba(255,61,139,.35); }
+  .chart { border: 2px solid var(--accent2); box-shadow: 0 0 0 1px rgba(46,230,214,.3), 0 0 26px rgba(46,230,214,.35); }
+  .toggle { border-color: var(--accent); }
+  .toggle .on { background: var(--accent); color: #0c0f1f; }
+  .tab.on { box-shadow: inset 0 4px 0 var(--accent), 0 -6px 14px -6px var(--accent); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @scope ([data-era="eighties"]) to ([data-era]) {
+    .etitle { animation: neon 6s steps(1) infinite; }
+  }
+  @keyframes neon { 0%, 91%, 95% { opacity: 1; } 92%, 94% { opacity: .55; } }
+}

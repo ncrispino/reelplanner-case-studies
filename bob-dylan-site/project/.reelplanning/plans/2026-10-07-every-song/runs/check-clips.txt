@@ -1,0 +1,7 @@
+$ npm run check:clips
+
+> dylan-site@0.1.0 check:clips
+> node tools/check-clips.mjs
+
+✓ 364 clips still play
+exit 0

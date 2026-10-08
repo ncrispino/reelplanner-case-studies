@@ -1,0 +1,377 @@
+{
+  "version": 1,
+  "src": "2026-10-07-desktop--walkthrough/index.html",
+  "project": "walkthrough-video",
+  "exportedAt": "2026-10-07T20:54:29.899Z",
+  "watch": {
+    "firstPlayAt": "2026-10-07T20:47:41.591Z",
+    "maxTimeReached": 180.07,
+    "durationSeconds": 181.23,
+    "completion": 0.994,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 0.994
+      }
+    ],
+    "moments": [],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q4",
+      "option": "a",
+      "label": "Add \"A thread from this song ›\" to the map page",
+      "recommended": true,
+      "planStep": 5,
+      "question": "On a computer, should the full map offer a way to the thread cards?",
+      "t": 129.977,
+      "decidedAt": "2026-10-07T20:51:08.121Z"
+    }
+  ],
+  "quizzes": [],
+  "autonomy": [
+    {
+      "id": "a2",
+      "verdict": "accept",
+      "t": 28.174,
+      "planStep": 1,
+      "chose": "the + / − buttons show from 768 px, not on phones",
+      "shownAt": "2026-10-07T20:48:05.437Z",
+      "judgedAt": "2026-10-07T20:48:07.714Z"
+    },
+    {
+      "id": "a4",
+      "verdict": "accept",
+      "t": 28.174,
+      "planStep": 1,
+      "chose": "the hover label replaces the dot's SVG <title> tooltip; each dot gets an aria-label instead",
+      "shownAt": "2026-10-07T20:48:05.437Z",
+      "judgedAt": "2026-10-07T20:49:02.174Z"
+    },
+    {
+      "id": "a7",
+      "verdict": "accept",
+      "t": 40.313,
+      "planStep": 2,
+      "chose": "the tablet band keeps today's 672→720 px column with 48 px side margins (max-width 816 px)",
+      "shownAt": "2026-10-07T20:49:10.394Z",
+      "judgedAt": "2026-10-07T20:49:12.418Z"
+    },
+    {
+      "id": "a5",
+      "verdict": "accept",
+      "t": 40.313,
+      "planStep": 2,
+      "chose": "the header is sticky (stays at the top as you scroll), 64 px, on the era's paper",
+      "shownAt": "2026-10-07T20:49:10.394Z",
+      "judgedAt": "2026-10-07T20:49:13.217Z"
+    },
+    {
+      "id": "a9",
+      "verdict": "accept",
+      "t": 59.492,
+      "planStep": 3,
+      "chose": "the desktop spread is the same markup as the phone panel (new EraSpread.astro used at every width), laid out by CSS grid from 1100 px",
+      "shownAt": "2026-10-07T20:49:26.067Z",
+      "judgedAt": "2026-10-07T20:49:27.996Z"
+    },
+    {
+      "id": "a11",
+      "verdict": "accept",
+      "t": 59.492,
+      "planStep": 3,
+      "chose": "the crossfade is the header and window colour fading (0.5 s) plus the leaving era's text dimming to 25 %",
+      "shownAt": "2026-10-07T20:49:26.067Z",
+      "judgedAt": "2026-10-07T20:49:29.300Z"
+    },
+    {
+      "id": "a12",
+      "verdict": "accept",
+      "t": 59.492,
+      "planStep": 3,
+      "chose": "timeline names are clipped with an ellipsis on short eras (each stretch at least 64 px); the current era's name is written out in full over its neighbours",
+      "shownAt": "2026-10-07T20:49:26.067Z",
+      "judgedAt": "2026-10-07T20:49:38.530Z"
+    },
+    {
+      "id": "a14",
+      "verdict": "accept",
+      "t": 77.007,
+      "planStep": 4,
+      "chose": "the song page's left column holds the cover at 150 px above the title (changed in `66db1e0`: beside a 150 px cover, \"Stardust\" broke mid-word at 1440 px), and scrolls on its own if taller than the window",
+      "shownAt": "2026-10-07T20:49:50.290Z",
+      "judgedAt": "2026-10-07T20:49:51.247Z"
+    },
+    {
+      "id": "a13",
+      "verdict": "accept",
+      "t": 77.007,
+      "planStep": 4,
+      "chose": "the song page's words card is rendered twice (Words.astro): once in the phone position, once in the right column, each hidden at the other width",
+      "shownAt": "2026-10-07T20:49:50.290Z",
+      "judgedAt": "2026-10-07T20:49:53.691Z"
+    },
+    {
+      "id": "d1",
+      "verdict": "accept",
+      "t": 85.348,
+      "planStep": 4,
+      "chose": "a moment's \"songs it is tied to\" are the Dylan songs its story names by title, plus the era's records from that year",
+      "shownAt": "2026-10-07T20:49:59.270Z",
+      "judgedAt": "2026-10-07T20:50:16.057Z"
+    },
+    {
+      "id": "a20",
+      "verdict": "accept",
+      "t": 100.004,
+      "planStep": 5,
+      "chose": "on /map/<song>/ the panel opens already showing that song; /map/ opens on \"Click a dot…\"",
+      "shownAt": "2026-10-07T20:50:25.918Z",
+      "judgedAt": "2026-10-07T20:50:28.708Z"
+    },
+    {
+      "id": "a18",
+      "verdict": "accept",
+      "t": 100.004,
+      "planStep": 5,
+      "chose": "from 1100 px a thread's map opens on its first song's neighbourhood (as a phone's does), and hovering a card lights its dot and glides the map to it when it is out of view; a song's map pages and small map also open on the neighbourhood; /map/ shows everything",
+      "shownAt": "2026-10-07T20:50:25.918Z",
+      "judgedAt": "2026-10-07T20:50:31.694Z"
+    },
+    {
+      "id": "a17",
+      "verdict": "accept",
+      "t": 100.004,
+      "planStep": 5,
+      "chose": "the line of years puts each card's year on the line and writes the gap to the next card on the line between them (\"2 yrs →\"); the cards are evenly spaced",
+      "shownAt": "2026-10-07T20:50:25.918Z",
+      "judgedAt": "2026-10-07T20:50:33.048Z"
+    },
+    {
+      "id": "d2",
+      "verdict": "accept",
+      "t": 108.857,
+      "planStep": 5,
+      "chose": "The tablet band (768–1099 px) also hides the map's own Cards / Map toggle beside a thread's cards",
+      "shownAt": "2026-10-07T20:50:38.974Z",
+      "judgedAt": "2026-10-07T20:50:41.286Z"
+    },
+    {
+      "id": "d3",
+      "verdict": "own",
+      "own": "i would like to give some visuals for these as well",
+      "t": 115.321,
+      "planStep": 5,
+      "chose": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers",
+      "shownAt": "2026-10-07T20:50:45.711Z",
+      "judgedAt": "2026-10-07T20:50:56.372Z"
+    },
+    {
+      "id": "a23",
+      "verdict": "accept",
+      "t": 151.556,
+      "planStep": 6,
+      "chose": "the desktop check also fails when the phone's bottom bar or no header shows, when › beside an era or › beside a thread's cards moves nothing, and it presses ← to come back",
+      "shownAt": "2026-10-07T20:51:18.505Z",
+      "judgedAt": "2026-10-07T20:51:20.615Z"
+    },
+    {
+      "id": "a16",
+      "verdict": "flag",
+      "t": 175.183,
+      "planStep": 4,
+      "chose": "the album page's left column is not sticky",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:55.318Z"
+    },
+    {
+      "id": "a1",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 1,
+      "chose": "each dot's invisible hit ring is 28 map units across (r 14)",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.007Z"
+    },
+    {
+      "id": "a3",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 1,
+      "chose": "the phone check tries a touch tap and a pointer press-release on a dot, both must open the song",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.012Z"
+    },
+    {
+      "id": "a6",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 2,
+      "chose": "the header search is a plain GET form to /search/?q=… (works without script); \"/\" focuses it only when the header shows (from 1100 px)",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.017Z"
+    },
+    {
+      "id": "a8",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 2,
+      "chose": "map pages light \"Map\" in the header but still \"Threads\" in the phone's bottom bar (it has no Map tab)",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.019Z"
+    },
+    {
+      "id": "a10",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 3,
+      "chose": "scrolling keeps replaceState for the address (/era/<id>/), as today; ‹ ›, keys and the timeline do the same",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.022Z"
+    },
+    {
+      "id": "a15",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 4,
+      "chose": "the small map on a song page is the right column's full width × 300 px, under the connections",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.026Z"
+    },
+    {
+      "id": "a25",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 5,
+      "chose": "The map panel's rows are one built file, `/map-panel.json`, fetched on the first click, and a song with no preview shows its note",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.029Z"
+    },
+    {
+      "id": "a19",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 5,
+      "chose": "the era filter is the legend turned into buttons by script from 1100 px (role=button, 44 px tall, one era at a time, click again to clear)",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.032Z"
+    },
+    {
+      "id": "a21",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 6,
+      "chose": "search's three columns are placed by CSS on group sections (Eras and Moments stacked in the first column); on a phone the groups keep today's order, best match first",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.036Z"
+    },
+    {
+      "id": "a22",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 6,
+      "chose": "\"content narrower than 60 %\" is measured as the horizontal span of everything showing inside <main>; the 404 page is exempt; the era-background test reads the colour behind the window's right edge, 85 % down (clear of the ‹ › buttons), against the body era's --paper",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.039Z"
+    },
+    {
+      "id": "a24",
+      "verdict": "listed",
+      "t": 175.183,
+      "planStep": 6,
+      "chose": "`npm test` runs the data check, the build, the phone check and the desktop check; `npm run check:desktop` runs the last alone; `--shots <dir>` also writes the 1440 × 900 screenshots there",
+      "shownAt": "2026-10-07T20:51:36.402Z",
+      "judgedAt": "2026-10-07T20:51:58.043Z"
+    }
+  ],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-07-desktop",
+      "seen": "2026-10-07T18:27:33.885Z",
+      "sent": "2026-10-07T18:28:44.960Z"
+    },
+    {
+      "video": "2026-10-07-desktop--walkthrough",
+      "seen": "2026-10-07T20:51:14.179Z"
+    },
+    {
+      "video": "2026-10-07-every-song",
+      "seen": "2026-10-07T18:19:40.466Z",
+      "sent": "2026-10-07T18:20:41.979Z"
+    },
+    {
+      "video": "2026-10-07-every-song--walkthrough",
+      "seen": "2026-10-07T20:46:39.847Z",
+      "sent": "2026-10-07T20:47:37.358Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 0,
+    "walked": 0,
+    "termsOpened": 0,
+    "termsLookedUp": [],
+    "rewinds": 0,
+    "watchedPct": 99
+  },
+  "questions": [],
+  "verdict": "changes",
+  "annotations": [
+    {
+      "id": "amuyl15v9dzva",
+      "kind": "note",
+      "comment": "i would like to give some visuals for these as well",
+      "about": "On what the agent decided: the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers",
+      "t": 115.32,
+      "frame": {
+        "index": 9,
+        "compositionId": "09-d3",
+        "title": "Off-plan change · the threads list's covers"
+      },
+      "plan": {
+        "step": 5,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuyl2fcmb77u",
+      "kind": "flag",
+      "comment": "Flagged: the album page's left column is not sticky",
+      "t": 175.18,
+      "frame": {
+        "index": 15,
+        "compositionId": "15-list",
+        "title": "The rest of the choices"
+      },
+      "plan": {
+        "step": 4,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuyl5n2781tg",
+      "kind": "note",
+      "comment": "i also think that some on the desktop feels kind of bare; we might need more content. like the sides of the page are still kind of empty, and especially the biogrpahy pages with no other contents. they should have links, photos, etc. and same with album pages, some song pages. now i dont want it cluttered, i just want more informaiton, more visuals, more interaction even. just so there's enough",
+      "about": "",
+      "t": 180.07,
+      "frame": {
+        "index": 16,
+        "compositionId": "16-ending",
+        "title": "Anything you'd change?"
+      },
+      "plan": {
+        "step": null,
+        "questions": [],
+        "component": null
+      }
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

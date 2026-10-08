@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "voice": "am_michael",
+  "speed": 1.25,
+  "model": "kokoro-v1.0 + whisper small.en",
+  "lines": {
+    "10": {
+      "key": "fb5d137279f5a4c864e2",
+      "text": "Fallen Angels is question four. A: nothing takes the player's place, and its songs keep their own players. B: one line, Find Fallen Angels on Spotify, that opens a Spotify search for it. I recommend B.",
+      "sha256": "890c400af02577dbcd3c7b1a00de5ffed5266825d5b35a5c92e2fb1e45061c13",
+      "duration_s": 12.523
+    },
+    "11": {
+      "key": "5355888ce589ecc8e7b1",
+      "text": "With A, the album page stays as built.",
+      "sha256": "c9692412fe55a533f27b72cfc0cf5fc2f019631db090f65903386692b19a5ffa",
+      "duration_s": 2.027
+    },
+    "12": {
+      "key": "6ccdc99ae59660bf5f7b",
+      "text": "With B, one link sits where the player would be.",
+      "sha256": "9d33043fd10d5d46354ae187e9d6ada3a9d84fd938f8dce46c0b2f61d8aa63b6",
+      "duration_s": 2.389
+    },
+    "13": {
+      "key": "aea3af747651b9d522c5",
+      "text": "Step five. From fourteen hundred and forty pixels, a rail sits at the right of album, song and moment pages: the era, a bar for each era with this one lit, and quick links. The content lines up with the header, so at fourteen forty it is nine hundred and eighty-four pixels wide, and the full twelve hundred from about nineteen hundred.",
+      "sha256": "81871e0a96a0ef74d856a1f7793829a666622dcb970361cc2a1135fb04356f47",
+      "duration_s": 18.923
+    },
+    "14": {
+      "key": "1e762d55159d8ba2d200",
+      "text": "Step six. Read on, with Wikipedia and MusicBrainz, ends each page. Eras are not in MusicBrainz, so seven eras got a Wikipedia article picked by hand, and four have none. And songs that are not on his albums get no links.",
+      "sha256": "613d455cac74653745a8e5a28ba029ad270a75940dde0ac4e1e49713dad18b5c",
+      "duration_s": 13.824
+    },
+    "15": {
+      "key": "daa4bdb9dcef0c0067d6",
+      "text": "And eight gaps the photo search could not fill: Back to the Roots has two photographs, and seven moments have no photo or clip. The desktop check names them and does not fail on them; any new gap fails.",
+      "sha256": "5d16b44a1c0b4487c01496568b27e681acb55639c5d7b87cb32989af88c37710",
+      "duration_s": 11.691
+    },
+    "16": {
+      "key": "d5fed140befe0a4c4386",
+      "text": "What ran: the data check, the build, the phone check, and the desktop check at two sizes, all passing; and a code check by a fresh agent, whose six findings are answered. Not done: questions four and five, the eight gaps, and checking every sentence of the new writing.",
+      "sha256": "240491dc05ba2cfcb686428597ffae285f5eec5c0f8ce0c88351521b74b5f2d7",
+      "duration_s": 14.613
+    },
+    "17": {
+      "key": "ec0807ff42b278fbee8f",
+      "text": "The rest of the choices are on this list, nine of them, one line each.",
+      "sha256": "89ab0349d2e7864c648ced4f5018f3a670c0ead58a6ef46740b8f84e17e77547",
+      "duration_s": 3.541
+    },
+    "18": {
+      "key": "79d66b032993b1c75aae",
+      "text": "That's the fuller site. Seeing it run, anything you'd change?",
+      "sha256": "acdbb3f0ea70a2b41d0bf0dfd0fb8ce3c5c02a4e19d21a98f9d3bbd154b3d726",
+      "duration_s": 2.901
+    },
+    "01": {
+      "key": "50158afeb8a2d54c8500",
+      "text": "The site has more on every page now. Each era tells its story beside a gallery of photographs, most moments have a page with a picture of their own, and every album has its player, an essay, and a track list that opens in place. Wide windows get a rail at the side, and pages link out to Wikipedia and MusicBrainz.",
+      "sha256": "94e87f9a3e03af14b5c6055b9040f0008fb2f49b69a36a5c60aa0af47b74163c",
+      "duration_s": 18.368
+    },
+    "02": {
+      "key": "28fe1e26cffe0d52ef7d",
+      "text": "Step one. Every era now has three short sections, of about eighty words each: what happened, the music, and what it led to. Each moment has about a hundred and twenty words, and each album an essay of about a hundred and fifty. None of it quotes a lyric, and the data check holds each text to its length.",
+      "sha256": "1fa1f5b7abb9d87518ed9b3997ff1b950408d49a5ba2d6aba2d2bde7f69f6c6d",
+      "duration_s": 16.491
+    },
+    "03": {
+      "key": "81f93533f618d6392d24",
+      "text": "Step two. Thirty-eight more photographs from Wikimedia Commons, sixty-four in all. Two choices: a moment's photo belongs to its moment, and only tops up an era's gallery when the gallery has fewer than three. And many moment photos show the place, not the event, like Big Pink for the basement sessions; the caption says so.",
+      "sha256": "dfeea66907bf51ded35c39ba5cac23d5aaf95f2ad13474a9477f608f86517a33",
+      "duration_s": 18.453
+    },
+    "04": {
+      "key": "466fdc2dc174f129e490",
+      "text": "Step three. Under every era's full screen come its bands: the story and gallery, records and moments, songs to start with, and threads. Five choices. Every era gets them, the home page too. The records and moments band shows only on a computer. A moment with no clip or photo shows the era's photograph, labelled. The gallery is a grid, with each credit when a photo opens. And an era lists at most six threads.",
+      "sha256": "3b1d970ba697d30a774ea2a76458733025f585448032a18a07d881ebe2e12c5b",
+      "duration_s": 22.741
+    },
+    "05": {
+      "key": "222e87f3912660b098c9",
+      "text": "That first choice is question five. A: the bands stay on the home page too, so scrolling down from any era opens its story. B: they show only at an era's own address, and the home page keeps each era's full screen alone. I recommend A.",
+      "sha256": "93863388fbc8d8f32660f9fdbedcd0697b213e3687983a807c4ec882059c8560",
+      "duration_s": 14.507
+    },
+    "06": {
+      "key": "9a77894a2278144cd302",
+      "text": "With A, the home page stays as built: a long page, with every era's story under it.",
+      "sha256": "6dbbcb8ae306120c224d22812a8ed33f482ee699c47f19e40cc0a2611ce5b522",
+      "duration_s": 4.693
+    },
+    "07": {
+      "key": "532ecea0629a8f0c0465",
+      "text": "With B, the home page loses the bands, and the home page and the era pages become two versions to keep.",
+      "sha256": "84e60e67798182b36f318224d91ec2790a54bdd807ac184687f107faf5cddef4",
+      "duration_s": 6.123
+    },
+    "08": {
+      "key": "9d0a8c2ec18a64729037",
+      "text": "Step four. An album page has the cover and its Spotify player on the left, and the essay and track list on the right. Three choices: under the tracks, six connections that lead off the album, not all of them; a song's In threads band also lists the thread made from that song; and Fallen Angels has no player, because MusicBrainz lists no Spotify album for it.",
+      "sha256": "387b7b3ce47072d0360bfc2f9cebaee25e654c66128382a610ad405d6eba3dcd",
+      "duration_s": 20.331
+    },
+    "09": {
+      "key": "66576ae4d4c673693b38",
+      "text": "Off the plan: the Also in this era row is gone, because the previous and next album, with their covers, show the same era just below.",
+      "sha256": "0ebb44dd1cab0cec8370026f9a0302f8a067d28ade55c336cb161239270892b9",
+      "duration_s": 7.723
+    }
+  }
+}

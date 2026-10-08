@@ -1,0 +1,130 @@
+---
+// A thread as a stack of cards you swipe up through (step 5), with a Cards | Map toggle that opens the map
+// on the card you are on. From 1100 px (plan 2026-10-07-desktop, step 5): the cards run in a row along a line of years,
+// four on screen, with ‹ › to move along, and the map is under them, the full width; the toggle goes (both show), and
+// hovering a card lights its dot.
+import { eraOfSong, albumById, url, type Song } from "../lib/data";
+import MapView from "./MapView.astro";
+interface Props { title: string; intro?: string; steps: { song: Song; why: string }[]; thread?: string }
+const { title, intro, steps, thread } = Astro.props;
+---
+<div class="split">
+<div class="thread">
+  <div class="top">
+    <div><p class="kicker">Thread · {steps.length} songs</p><h1 class="display tt">{title}</h1></div>
+    <div class="pager desk"><button type="button" class="pg" data-d="-1" aria-label="Earlier songs">‹</button><button type="button" class="pg" data-d="1" aria-label="Later songs">›</button></div>
+    <div class="toggle" role="tablist" aria-label="View">
+      <span class="on" role="tab" aria-selected="true">Cards</span>
+      <a role="tab" aria-selected="false" class="tomap" href={url.map(steps[0]?.song.id)} data-base={url.map()} data-thread={thread ?? ""}>Map</a>
+    </div>
+  </div>
+  {intro && <p class="soft">{intro}</p>}
+  <ol class="cards">
+    {steps.map(({ song, why }, i) => {
+      const era = eraOfSong(song);
+      // where the song sits on a 1930–2025 ruler, and how far it moved on from the card before (decoration only)
+      const pos = song.year == null ? 0 : Math.max(0, Math.min(1, (song.year - 1930) / 95));
+      const prevYear = i > 0 ? steps[i - 1].song.year : null;
+      const gap = i === 0 || song.year == null || prevYear == null ? null : song.year - prevYear;
+      // on the line of years (from 1100 px): the gap to the next card, written on the line between the two
+      const nextSong = steps[i + 1]?.song;
+      const ahead = nextSong && nextSong.year != null && song.year != null ? nextSong.year - song.year : null;
+      return (
+        <li class="step">
+        <p class="yl desk" aria-hidden="true"><span class="yd year">{song.year ?? "Trad."}</span>{nextSong && <span class="yg">{ahead == null ? "then" : ahead === 0 ? "same year" : ahead > 0 ? `${ahead} yr${ahead === 1 ? "" : "s"} →` : `${-ahead} yr${ahead === -1 ? "" : "s"} back`}</span>}</p>
+        <div class="tc" data-era={era.id} data-song={song.id} style={`--t:${pos.toFixed(3)}`}>
+          <p class="gap kicker">{i === 0 ? "Start here" : gap == null ? "↓ next" : gap === 0 ? "↓ the same year" : gap > 0 ? `↓ ${gap} year${gap === 1 ? "" : "s"} later` : `↑ ${-gap} year${gap === -1 ? "" : "s"} earlier`}</p>
+          <div class="when">
+            <span class="big year">{song.year ?? "Trad."}</span>
+            <span class="where kicker">{era.title}<br />{i + 1} of {steps.length}</span>
+          </div>
+          <div class="ruler" aria-hidden="true"><span class="mark"></span></div>
+          <h2 class="display st"><a href={url.song(song.id)}>{song.title}</a></h2>
+          <p class="soft by">{song.by && song.by !== "Bob Dylan" ? song.by : song.album ? albumById.get(song.album)?.title : ""}</p>
+          <p class="why">{why}</p>
+        </div>
+        </li>
+      );
+    })}
+  </ol>
+</div>
+<aside class="side" aria-label="The map beside the cards"><MapView focus={steps[0]?.song.id ?? null} mode="thread" /></aside>
+</div>
+<script>
+  // The Map tab follows the card in view.
+  function setup() {
+    const cards = [...document.querySelectorAll<HTMLElement>(".thread .tc")];
+    const link = document.querySelector<HTMLAnchorElement>(".thread .tomap");
+    const root = document.querySelector<HTMLElement>(".thread");
+    if (!cards.length || !link || !root || root.dataset.ready) return;
+    root.dataset.ready = "1";
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) link.href = `${link.dataset.base}${(e.target as HTMLElement).dataset.song}/${link.dataset.thread ? `?thread=${link.dataset.thread}` : ""}`;
+    }), { threshold: 0.6 });
+    cards.forEach((c) => io.observe(c));
+    // a computer: ‹ › move the row by a card; hovering a card lights its dot on the map below
+    const row = document.querySelector<HTMLElement>(".thread .cards")!;
+    document.querySelectorAll<HTMLElement>(".thread .pg").forEach((b) => b.addEventListener("click", () => {
+      const w = row.querySelector<HTMLElement>(".step")?.getBoundingClientRect().width ?? 300;
+      row.scrollBy({ left: +b.dataset.d! * (w + 24), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" as ScrollBehavior : "smooth" });
+    }));
+    const map = () => (document.querySelector(".split .map[data-map]") as (HTMLElement & { mapApi?: { light: (id: string | null) => void; show: (id: string) => void } }) | null)?.mapApi;
+    cards.forEach((c) => {
+      // the map opens on the first song's neighbourhood; a hovered card's dot lights, and the map glides to it if it is out of view
+      c.addEventListener("mouseenter", () => map()?.show(c.dataset.song!));
+      c.addEventListener("mouseleave", () => map()?.light(null));
+    });
+  }
+  setup();
+  document.addEventListener("astro:page-load", setup);
+</script>
+<style>
+  /* layout only: each card is dressed by its own song's era (src/themes/<era>.css) */
+  .side { display: none; }
+  @media (min-width: 768px) { .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; } .side { display: block; } .split .toggle { display: none; } .split .side :global(.toggle) { display: none; } }
+  .step { display: contents; }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+  .top > div { min-width: 0; }
+  .tt { font-size: clamp(28px, 8vw, 44px); }
+  .cards { list-style: none; padding: 4px 6px 0; margin: 16px -6px 0; height: 64dvh; overflow-y: auto; scroll-snap-type: y mandatory; }
+  .tc { position: relative; isolation: isolate; overflow: clip; scroll-snap-align: start; min-height: 60dvh; margin-bottom: 16px; padding: 18px 18px 22px; }
+  .gap { margin: 0 0 10px; }
+  .when { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+  .big { font: var(--display-weight) 54px/0.9 var(--display-alt, var(--display)); font-style: var(--display-style); letter-spacing: -0.01em; }
+  .where { text-align: right; margin: 0; }
+  /* the ruler: 1930 to 2025, a tick every decade, the song's year marked */
+  .ruler { position: relative; height: 16px; margin: 10px 0 18px; border-bottom: 2px solid currentColor;
+    background: repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px 10.526%) 0 100% / 100% 7px no-repeat; opacity: .9; }
+  .mark { position: absolute; bottom: -7px; left: calc(var(--t) * (100% - 12px)); width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 0 3px var(--paper); }
+  .st { font-size: clamp(30px, 9vw, 46px); }
+  .st a { text-decoration: none; display: inline-block; min-height: 44px; }
+  .by { margin: 8px 0 0; }
+  .why { font-size: 18px; margin-top: 16px; }
+  .pager { display: flex; gap: 8px; }
+  .pg { width: 48px; height: 48px; padding: 0; display: grid; place-items: center; cursor: pointer; font: 400 30px/1 Georgia, serif;
+    color: var(--ink); background: var(--paper); border: 2px solid var(--ink); }
+  .pg:hover { background: var(--ink); color: var(--paper); }
+
+  /* a computer: the cards in a row along a line of years, the map under them */
+  @media (min-width: 1100px) {
+    .split { display: block; }
+    .side { margin-top: 40px; }
+    .cards { display: flex; gap: 24px; height: auto; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; margin: 18px 0 0; padding: 0 0 14px;
+      scrollbar-width: thin; }
+    .step { display: flex; flex-direction: column; flex: 0 0 calc((100% - 72px) / 4); min-width: 0; scroll-snap-align: start; }
+    /* the line of years: a dot and the year, and the gap to the next card written on the line between them */
+    .yl { position: relative; display: flex; align-items: center; justify-content: space-between; height: 40px; margin: 0 0 12px; }
+    .yl::before { content: ""; position: absolute; left: 0; right: -24px; top: 50%; border-top: 2px solid var(--ink); }
+    .step:last-child .yl::before { right: 0; }
+    .yd { position: relative; padding: 2px 10px; font: 700 15px/1.2 var(--label); background: var(--ink); color: var(--paper); }
+    .yg { position: relative; margin-right: -12px; padding: 2px 8px; font: var(--label-weight) 12px/1.2 var(--label); letter-spacing: var(--label-track);
+      text-transform: var(--label-case); color: var(--soft); background: var(--paper); }
+    .tc { flex: 1; min-height: 0; margin: 0; padding: 18px 18px 20px; }
+    .tc .gap { display: none; }
+    .big { font-size: 44px; }
+    .st { font-size: clamp(24px, 2vw, 30px); }
+    .why { font-size: 16px; }
+    .tc:hover { outline: 3px solid var(--accent); outline-offset: -8px; }
+  }
+</style>

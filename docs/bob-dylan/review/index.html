@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Plan Review Player</title>
+<link rel="icon" href="data:,">
+<style>
+  /* the page is the ground the paper frame sits on: a shade darker than the paper, in both themes */
+  /* the same tokens as the player's (reelplanning-player.js STYLE): three solid inks for text, and the
+     darker coral (D-142) only for what needs you */
+  :root { --ground: #F1EFE8; --paper: #FAF9F5; --ink: #141413; --ink-2: #3D3B37; --ink-3: #5C5953; --ink-rgb: 20,20,19; --accent: #B8552E; --accent-text: #9C4524; }
+  /* The player tells the page which theme it is in (its own chrome is inside a shadow root, so the
+     page has to be told). Without this a dark video sits in a cream hole. */
+  :root[data-rp-theme="dark"] { --ground: #0E0D0B; --paper: #141310; --ink: #F2EFE8; --ink-2: #CFCAC1; --ink-3: #A6A196; --ink-rgb: 242,239,232; --accent: #D2693F; --accent-text: #E3A184; }
+  :root { --ink-20: rgba(var(--ink-rgb),.2); --ink-12: rgba(var(--ink-rgb),.12); --ink-06: rgba(var(--ink-rgb),.06); color-scheme: light dark; }
+  /* the faces: the player declares them from packages/player/fonts/faces.json and names them in --rp-sans, --rp-serif, --rp-mono */
+  :root { --sans: var(--rp-sans, ui-sans-serif, system-ui, sans-serif); --serif: var(--rp-serif, Georgia, serif); --mono: var(--rp-mono, ui-monospace, monospace); }
+  body { margin: 0; padding: 0 24px; background: var(--ground); color: var(--ink); font: 15px/1.45 var(--sans); }
+  /* one 56 px bar: the title (and, on a bundled page, what to do here) on the left, the way to the other videos on the right */
+  header { position: relative; display: flex; align-items: center; gap: 16px; min-height: 56px; margin-bottom: 8px; }
+  header .ttl { flex: 1 1 auto; min-width: 0; }
+  h1 { margin: 0; font: 400 20px/1.3 var(--serif); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  button.lnk { flex: none; display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 10px; margin-right: -10px; font: 13px/1 var(--sans); color: var(--ink-2); background: none; border: 0; border-radius: 6px; cursor: pointer; white-space: nowrap; }
+  button.lnk:hover, button.lnk[aria-expanded="true"] { background: var(--ink-06); color: var(--ink); }
+  button.lnk::after { content: ""; width: 5px; height: 5px; margin: -3px 0 0 2px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
+  form { position: absolute; right: 0; top: 52px; z-index: 30; display: flex; gap: 8px; width: min(420px, 100%); padding: 12px; background: var(--paper); border-radius: 8px; box-shadow: 0 0 0 1px var(--ink-12), 0 12px 32px -12px rgba(20,20,19,.25); }
+  form[hidden] { display: none; }
+  input { flex: 1; min-width: 0; font: 13px/1.4 var(--mono); padding: 6px 8px; border: 1px solid var(--ink-20); border-radius: 6px; background: var(--paper); color: var(--ink); }
+  form button { font: inherit; padding: 6px 12px; border: 1px solid var(--ink-20); border-radius: 6px; background: var(--paper); color: var(--ink); cursor: pointer; }
+  /* the player sizes its stage to the height left under this bar */
+  reelplanning-player { display: block; --rp-above: 64px; }
+  /* on a phone the video runs edge to edge, so the page keeps no side padding of its own;
+     the player pads its own chrome, and the header keeps the gutter. */
+  @media (max-width: 600px) { body { padding: 0; } header { min-height: 44px; padding: 0 16px; margin-bottom: 0; gap: 8px; } h1 { font-size: 17px; } form { right: 16px; top: 44px; width: calc(100% - 32px); } reelplanning-player { --rp-above: 44px; } }
+  /* a detail open beside the player takes the right of the window; the header gives it that room */
+  html[data-rp-panel="beside"] header { padding-right: min(560px, 44vw); }
+</style>
+<script type="application/json" id="rp-faces">{"about":"The review page's typefaces: the one list. The player declares these faces in the page's head (a face declared inside its shadow root does not apply), and sets --sans, --serif and --mono from `roles`; bundle-player copies the files and licences beside the page and preloads them. To change the page's look, put the new woff2 files and their licences in this folder and change this file: nothing else names a family. Files are the latin subset of each family's variable (wght) woff2, from fontsource; each licence is named .txt so a host serves it as text/plain.","roles":{"sans":{"family":"Inter","fallback":"ui-sans-serif, system-ui, sans-serif"},"serif":{"family":"EB Garamond","fallback":"Georgia, serif"},"mono":{"family":"JetBrains Mono","fallback":"ui-monospace, SFMono-Regular, Menlo, monospace"}},"faces":[{"family":"Inter","file":"inter-latin-wght-normal.woff2","weight":"100 900","style":"normal","unicodeRange":"latin","licence":"OFL-inter.txt","from":"@fontsource-variable/inter 5.3.0"},{"family":"EB Garamond","file":"eb-garamond-latin-wght-normal.woff2","weight":"400 800","style":"normal","unicodeRange":"latin","licence":"OFL-eb-garamond.txt","from":"@fontsource-variable/eb-garamond 5.3.0"},{"family":"JetBrains Mono","file":"jetbrains-mono-latin-wght-normal.woff2","weight":"100 800","style":"normal","unicodeRange":"latin","licence":"OFL-jetbrains-mono.txt","from":"@fontsource-variable/jetbrains-mono 5.3.0"}],"ranges":{"latin":"U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"}}</script>
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/eb-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<header>
+  <div class="ttl"><h1 id="title"></h1><p id="here" hidden></p></div><nav id="pb" hidden aria-label="The plan, or what was built"></nav>
+  <button class="lnk" id="switch" type="button">Open another…</button>
+  
+<style>
+  /* One bar: the title and one quiet line of what to do here on the left; "Videos" on the right opens
+     a popover whose first section is what needs you, and whose second is every video in the repo. */
+  #here { margin: 1px 0 0; font-size: 14px; font-weight: 500; line-height: 1.35; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #here[hidden] { display: none; }
+  #here b { font-weight: 600; color: var(--ink); }
+  .sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  #switch .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  /* The popover: what needs you, then every video, one row each: a plan is one row (its short name, its
+     date, one word for where it stands, its Plan | Built switch); the row you are on is tinted and ruled in
+     ink (coral is only for what needs you). */
+  #videos { position: absolute; right: 0; top: 52px; z-index: 30; width: min(560px, calc(100vw - 32px)); max-height: calc(100vh - 80px); max-height: calc(100dvh - 80px); overflow: auto; overscroll-behavior: contain; padding: 8px 0 12px; background: var(--paper); border-radius: 10px; box-shadow: 0 0 0 1px var(--ink-12), 0 16px 40px -16px rgba(20,20,19,.3); }
+  #videos[hidden] { display: none; }
+  #videos h2 { margin: 14px 20px 6px; font: 600 13px/1.3 var(--sans); color: var(--ink-2); }
+  #videos section:first-child h2 { margin-top: 8px; }
+  #todo { display: block; }
+  #todo[hidden] { display: none; }
+  #todo .none { margin: 0 20px 4px; font-size: 13px; color: var(--ink-3); }
+  #library { display: block; margin-top: 12px; border-top: 1px solid var(--ink-12); }
+  #library .row { display: flex; align-items: center; gap: 12px; min-height: 36px; margin: 0 8px; padding: 0 12px; border-radius: 6px; font-size: 14px; color: var(--ink-2); text-decoration: none; }
+  #library a.row:hover { background: var(--ink-06); color: var(--ink); }
+  #library .row .k { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #library .row .wd { color: var(--ink-3); }
+  #library .row .st { flex: none; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-3); }
+  #library .row .st[data-need] { color: var(--accent-text); }
+  #library .row .st[data-need]::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  #library a.row[aria-current="page"] { color: var(--ink); }
+  #library a.row[aria-current="page"] .st { color: var(--ink); font-weight: 600; }
+  #library a.row[aria-current="page"] .st::before { display: none; }
+  #library .row.none { color: var(--ink-3); }
+  /* walkthroughs-that-help step 5 (D-224): one row per plan, on one line: its short name, its date, one word
+     for where it stands, and its Plan | Built switch; what needs you first, then the recent plans, the rest
+     behind "Earlier plans (N)" */
+  .prow { display: flex; align-items: center; gap: 10px; min-height: 40px; margin: 0 8px; padding: 6px 12px; border-radius: 6px; }
+  .prow[data-here] { background: var(--ink-06); box-shadow: inset 2px 0 0 var(--ink); border-radius: 0 6px 6px 0; }
+  .prow .pn { flex: 1 1 auto; min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow-wrap: anywhere; font-size: 15px; font-weight: 500; line-height: 1.3; color: var(--ink); }
+  .prow .off { flex: none; font-size: 13px; color: var(--ink-3); white-space: nowrap; }
+  .prow .pd { flex: none; font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+  .prow .ps { flex: none; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-3); white-space: nowrap; }
+  .prow .ps[data-need] { color: var(--accent-text); }
+  .prow .ps[data-need]::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .seg { flex: none; display: inline-flex; padding: 2px; border-radius: 7px; background: var(--ink-06); box-shadow: inset 0 0 0 1px var(--ink-12); }
+  .seg > a, .seg > span { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-width: 44px; height: 26px; padding: 0 10px; border-radius: 5px; font: 500 13px/1 var(--sans); color: var(--ink-2); text-decoration: none; white-space: nowrap; }
+  .seg > a:hover { color: var(--ink); background: var(--ink-06); }
+  .seg > a[aria-current="page"] { background: var(--paper); color: var(--ink); box-shadow: 0 0 0 1px var(--ink-20), 0 1px 2px rgba(var(--ink-rgb),.12); }
+  .seg > span[aria-disabled] { color: var(--ink-3); opacity: .55; cursor: default; }
+  .seg > a[data-need]::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .seg > a:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
+  /* the plan guide (prototype v5): the plan's guide, beside its Plan | Built */
+  .prow .gl { flex: none; display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 5px; font: 500 13px/1 var(--sans); color: var(--ink-2); text-decoration: none; box-shadow: inset 0 0 0 1px var(--ink-12); }
+  .prow .gl:hover { color: var(--ink); background: var(--ink-06); }
+  .prow .gl:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
+  /* the guide under the video (D-264): the open video's guide under the player, edge to edge; the page scrolls to it,
+     so its scroll bar's room is kept from the first draw (it would otherwise narrow the video when the guide arrives) */
+  html { scrollbar-gutter: stable; background: var(--ground); }
+  reelplanning-guide { margin: 32px -24px 0; }
+  /* at the guide, the page's scroll bar's room is the guide's paper, not a stripe of the page's ground beside it (the
+     frame is the whole window then; <reelplanning-guide> marks it) */
+  html[data-rp-at-guide] { background: var(--paper); scrollbar-color: var(--ink-20) var(--paper); }
+  /* a phone-wide window: the guide runs the window's full width (a desktop scroll bar's kept room left it 375 px of 390);
+     the page scrolls by touch or wheel as before */
+  @media (max-width: 600px) { html { scrollbar-gutter: auto; scrollbar-width: none; } reelplanning-guide { margin: 24px 0 0; } }
+  /* an explainer's row (explain-first step 2): the same row, its kind said before its title */
+  .xrow .xk { font-size: 12px; font-weight: 600; color: var(--ink-3); letter-spacing: .02em; }
+  .xrow .pn { flex: 1 1 45%; }
+  .xrow .ps { flex: 0 1 45%; min-width: 0; white-space: normal; line-height: 1.3; }
+  #videos details.earlier { margin: 8px 0 0; border-top: 1px solid var(--ink-12); }
+  #videos details.earlier > summary { list-style: none; display: flex; align-items: center; gap: 8px; min-height: 40px; margin: 4px 8px 0; padding: 0 12px; border-radius: 6px; font: 600 13px/1.3 var(--sans); color: var(--ink-2); cursor: pointer; }
+  #videos details.earlier > summary::-webkit-details-marker { display: none; }
+  #videos details.earlier > summary::before { content: ""; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform .15s; }
+  #videos details.earlier[open] > summary::before { transform: rotate(45deg); }
+  #videos details.earlier > summary:hover { background: var(--ink-06); color: var(--ink); }
+  /* the page's own Plan | Built switch, by the title */
+  #pb { flex: none; display: flex; align-items: center; gap: 10px; }
+  #pb[hidden] { display: none; }
+  #pb .seg > a, #pb .seg > span { height: 30px; min-width: 56px; font-size: 14px; }
+  #pb .pbnote { font-size: 13px; color: var(--ink-3); white-space: nowrap; }
+  #pb .pbnote:empty { display: none; }
+  @media (hover: none) { #library .row { min-height: 44px; } .prow { min-height: 48px; } .seg > a, .seg > span { height: 36px; } }
+  /* a phone: the name gets the row's width, and the word for where it stands sits under it */
+  @media (max-width: 600px) { .prow .pd { display: none; } .prow { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; margin: 0 4px; padding: 6px 12px; }
+    .prow .pn { grid-column: 1; grid-row: 1; } .prow .ps { grid-column: 1; grid-row: 2; font-size: 12px; } .prow .ps:empty { display: none; } .prow .seg, .prow .off { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+    #pb .pbnote { display: none; } #pb .seg > a, #pb .seg > span { min-width: 48px; padding: 0 8px; }
+    .prow:has(.gl) .seg, .prow:has(.gl) .off { grid-row: 1; } .prow .gl { grid-column: 2; grid-row: 2; justify-self: end; height: 30px; } }
+  @media (max-width: 600px) { #here { white-space: normal; font-size: 13px; } #switch .long { display: none; } #videos { top: 44px; right: 16px; } #videos h2, #todo .none { margin-left: 16px; margin-right: 16px; } #library .row { margin-left: 4px; margin-right: 4px; } }
+</style>
+<div id="videos" hidden role="dialog" aria-label="Videos">
+<section id="todo" aria-label="What needs you"></section>
+<nav id="library" aria-label="Every video in this repo"></nav>
+</div>
+</header>
+<reelplanning-player id="rp"></reelplanning-player>
+<reelplanning-guide id="rp-guide" for="rp"></reelplanning-guide>
+<script type="module">
+  import "./reelplanning-player.js";
+  const BUNDLED = ["2026-10-06-dylan-site","2026-10-06-dylan-site--walkthrough","2026-10-07-every-song","2026-10-07-every-song--walkthrough","2026-10-07-desktop","2026-10-07-desktop--walkthrough","2026-10-07-fuller--walkthrough"];
+  const FIRST = "2026-10-07-fuller--walkthrough";
+  const project = BUNDLED.includes(new URLSearchParams(location.search).get("project")) ? new URLSearchParams(location.search).get("project") : (FIRST || BUNDLED[0]);
+  const slug = project.replace(/\/+$/, "").split("/").pop();
+  const title = document.getElementById("title"); title.textContent = slug; document.title = `${slug} · review`; // the slug until the plan map gives its title
+  
+  const LIBRARY = {"system":null,"plans":[{"plan":"2026-10-07-fuller","date":"2026-10-07","title":"A fuller site: more to read, more to see, more to do on every page","video":null,"walkthrough":"2026-10-07-fuller--walkthrough","status":"fixing","guide":"2026-10-07-fuller--walkthrough","stages":{"decided":true,"built":true,"reviewed":true,"stage":"fixes to make"}},{"plan":"2026-10-07-every-song","date":"2026-10-07","title":"Every track a page: the 277 album tracks with no page of their own","video":"2026-10-07-every-song","walkthrough":"2026-10-07-every-song--walkthrough","status":"fixing","guide":"2026-10-07-every-song--walkthrough","steps":{"plan":{"1":56.362,"2":156.805,"3":171.909,"4":195.736},"built":{"1":16.32,"2":44.373,"3":76.053,"4":96.767}},"stages":{"decided":true,"built":true,"reviewed":true,"stage":"fixes to make"}},{"plan":"2026-10-07-desktop","date":"2026-10-07","title":"The Dylan site on a computer: full-window eras, two-column pages, and a map you can click","video":"2026-10-07-desktop","walkthrough":"2026-10-07-desktop--walkthrough","status":"approved","guide":"2026-10-07-desktop--walkthrough","steps":{"plan":{"1":39.04,"2":71.083,"3":139.531,"4":206.446,"5":240.406,"6":293.214},"built":{"1":14.379,"2":28.224,"3":40.363,"4":59.542,"5":85.398,"6":144.288}},"stages":{"decided":true,"built":true,"reviewed":true,"stage":"accepted"}},{"plan":"2026-10-06-dylan-site","date":"2026-10-06","title":"Bob Dylan, explored: a phone-first site of eras, albums, songs and how they connect","video":"2026-10-06-dylan-site","walkthrough":"2026-10-06-dylan-site--walkthrough","status":"fixing","guide":"2026-10-06-dylan-site--walkthrough","steps":{"plan":{"1":30.464,"2":117.322,"3":157.32,"4":231.826,"5":300.713,"6":330.785},"built":{"2":54.101,"3":15.019,"4":71.317,"5":40.896,"6":80.106}},"stages":{"decided":true,"built":true,"reviewed":true,"stage":"fixes to make"}}],"explainers":[],"other":[]};
+  const pop = document.getElementById("videos"), lib = document.getElementById("library"), sw = document.getElementById("switch");
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  // what needs you: every video still open for the reviewer, one row each, what to do in its tooltip
+  const TO_REVIEW = [], STATUS = {"2026-10-07-fuller--walkthrough":{"calls":27,"reviewed":true,"open":[],"replies":[]},"2026-10-07-every-song--walkthrough":{"calls":13,"reviewed":true,"open":[],"replies":[]},"2026-10-07-desktop--walkthrough":{"calls":28,"reviewed":true,"open":[],"replies":[]},"2026-10-06-dylan-site--walkthrough":{"calls":6,"reviewed":true,"open":[],"replies":[]}};
+  const sent = (t) => { try { const r = JSON.parse(localStorage.getItem("reelplanning:annotations:" + t.slug + "/index.html:round") || "null"); return !!(r && r.sig === t.sig); } catch { return false; } };
+  const items = TO_REVIEW.map((t) => ({ ...t, done: sent(t) }));
+  // only what is still open; every video, optional ones included, is in the library under it
+  const need = items.filter((t) => !t.optional && !t.done);
+  const todoEl = document.getElementById("todo");
+  // "Deep dives: the video opens…" → "Deep dives", and the rest for the line under it
+  const split = (s) => { const i = String(s).indexOf(": "); return i > 0 ? [s.slice(0, i), s.slice(i + 2)] : [String(s), ""]; };
+  const short = (s) => split(s)[0];
+  // every video: a plan is one row (walkthroughs-that-help step 5): its short name, its date, one word, and its Plan | Built switch
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const day = (d) => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || ""); if (!m) return ""; return `${Number(m[3])} ${MON[Number(m[2]) - 1]}${Number(m[1]) === new Date().getFullYear() ? "" : ` ${m[1]}`}`; };
+  const needs = (slug) => need.find((t) => t.slug === slug) || null;
+  // watched, as the player marks it (80 % seen, or a review sent): the same word "Before you watch" shows
+  const watched = (slug) => { try { const w = JSON.parse(localStorage.getItem("rp:watched:" + slug) || "null"); return !!(w && (w.seen || w.sent)); } catch { return false; } };
+  const cell = (slug, label, title) => `<a href="?project=${encodeURIComponent(slug)}"${slug === project ? ' aria-current="page"' : ""}${needs(slug) ? " data-need" : ""} title="${esc(title + (needs(slug) ? " · needs you" : watched(slug) ? " · watched" : ""))}">${esc(label)}</a>`;
+  // the switch only where there is something to open: both videos on this page, a Plan | Built switch; one, its
+  // one link; neither, a short "not on this page"
+  const seg = (p) => !p.video && !p.walkthrough ? '<span class="off">not on this page</span>'
+    : `<span class="seg" role="group" aria-label="${esc(split(p.title)[0])}: the plan, or what was built">${p.video ? cell(p.video, "Plan", "The plan video") : ""}${p.walkthrough ? cell(p.walkthrough, "Built", "The walkthrough: the change running") : ""}</span>`;
+  const ONYOU = new Set(["plan to review", "walkthrough to review", "questions to answer"]);
+  // where a plan stands, one word, and whether it waits on you: a video of it on this page still to review says
+  // which; one sent from this browser is "sent"; else the plan's own stage, on you whether its video is here or not
+  const stateOf = (p) => { const mine = TO_REVIEW.filter((t) => !t.optional && [p.video, p.walkthrough].includes(t.slug)), open = mine.filter((t) => !sent(t));
+    if (open.length) return { word: /^Walkthrough/.test(open[0].kind) ? "walkthrough to review" : "plan to review", needs: true, time: open.map((t) => t.time).join(" + "), why: open.map((t) => `${t.kind}: ${t.what}`).join("\n") };
+    if (mine.length) return { word: "sent", needs: false };
+    return { word: p.status || "", needs: ONYOU.has(p.status) }; };
+  const waitingOf = (p) => (stateOf(p).needs ? [p] : []);
+  const prow = (p) => { const s = stateOf(p), here = [p.video, p.walkthrough].includes(project);
+    return `<div class="prow" data-plan="${esc(p.plan)}"${here ? " data-here" : ""}><span class="pn" title="${esc(p.title)}">${esc(split(p.title)[0])}</span><span class="pd">${esc(day(p.date))}</span><span class="ps"${s.needs ? " data-need" : ""} title="${esc(s.why || "")}">${esc(s.word)}${s.time ? ` · ${esc(s.time)}` : ""}</span>${seg(p)}${p.explainedFirst ? (p.explainedFirst.slug ? `<a class="gl" href="?project=${encodeURIComponent(p.explainedFirst.slug)}" title="Explained first: ${esc(p.explainedFirst.name)}, the explainer this plan starts from">Explainer</a>` : `<span class="off" title="Explained first: ${esc(p.explainedFirst.name)}">from an explainer</span>`) : ""}${p.guide ? `<a class="gl" href="?project=${encodeURIComponent(p.guide)}#guide" title="The plan's guide, under its video: every part of it, each with Watch this moment, the video going on small in the corner">Guide</a>` : ""}</div>`; };
+  // the system video and any other video: a row with its one video
+  const vrow = (slug, name, title, date = "") => { const t = needs(slug);
+    return `<div class="prow"${slug === project ? " data-here" : ""}><span class="pn" title="${esc(title || name)}">${esc(name)}</span><span class="pd">${esc(date)}</span><span class="ps"${t ? " data-need" : ""} title="${esc(t ? t.what : "")}">${t ? `to review · ${esc(t.time)}` : ""}</span><span class="seg">${cell(slug, "Watch", title || name)}</span></div>`; };
+  // an explainer (explain-first step 2): its title, its date, the commit it explains and how many since, what came of it
+  const xrow = (e) => { const t = needs(e.slug), came = e.planned.length ? `planned: ${e.planned.map((p) => p.replace(/^\d{4}-\d{2}-\d{2}-/, "")).join(", ")}` : e.end || "";
+    const r = Math.round(e.seconds || 0), len = r ? `${Math.floor(r / 60)}:${String(r % 60).padStart(2, "0")}` : "";
+    const at = e.at ? `explained at ${e.at}${e.since != null ? `, ${e.since} commit${e.since === 1 ? "" : "s"} since` : ""}` : "";
+    return `<div class="prow xrow"${e.slug === project ? " data-here" : ""} data-explainer="${esc(e.name)}"><span class="pn" title="${esc(e.title)}"><span class="xk">Explainer</span> ${esc(e.title)}</span><span class="pd">${esc(day(e.date))}</span><span class="ps"${t ? " data-need" : ""} title="${esc(t ? t.what : at)}">${esc(t ? `to review · ${t.time}` : [len, at, came].filter(Boolean).join(" · "))}</span><span class="seg">${cell(e.slug, "Watch", e.title)}</span></div>`; };
+  const waitingX = LIBRARY.explainers.filter((e) => needs(e.slug)), restX = LIBRARY.explainers.filter((e) => !needs(e.slug));
+  // first what needs you, then the recent plans, then the rest behind one "Earlier plans (N)"
+  const RECENT = 5;
+  const waitingPlans = LIBRARY.plans.filter((p) => waitingOf(p).length), restPlans = LIBRARY.plans.filter((p) => !waitingOf(p).length);
+  const sysNeeds = LIBRARY.system && needs(LIBRARY.system.slug), otherNeeds = LIBRARY.other.filter((o) => needs(o.slug));
+  const sysRow = LIBRARY.system ? vrow(LIBRARY.system.slug, "The system video", LIBRARY.system.title) : "";
+  const needN = waitingPlans.length + (sysNeeds ? 1 : 0) + otherNeeds.length + waitingX.length;
+  todoEl.innerHTML = needN ? `<h2>Needs you</h2>${sysNeeds ? sysRow : ""}${waitingPlans.map(prow).join("")}${waitingX.map(xrow).join("")}${otherNeeds.map((o) => vrow(o.slug, o.title, o.title)).join("")}`
+    : '<h2>Nothing needs you</h2><p class="none">Every video here is reviewed.</p>';
+  let html = "<h2>All videos</h2>";
+  if (LIBRARY.system && !sysNeeds) html += sysRow;
+  else if (!LIBRARY.system) html += '<p class="row none">No system video yet</p>';
+  const recent = restPlans.slice(0, RECENT), earlier = restPlans.slice(RECENT), others = LIBRARY.other.filter((o) => !needs(o.slug));
+  html += recent.map(prow).join("");
+  // the rest, folded: opened already when the video playing is in it
+  const inEarlier = earlier.some((p) => [p.video, p.walkthrough].includes(project)) || others.some((o) => o.slug === project);
+  if (restX.length) html += `<h2>Explainers</h2>${restX.map(xrow).join("")}`;
+  if (earlier.length) html += `<details class="earlier"${inEarlier ? " open" : ""}><summary>Earlier plans (${earlier.length})</summary>${earlier.map(prow).join("")}</details>`;
+  if (others.length) html += `<details class="earlier"${others.some((o) => o.slug === project) ? " open" : ""}><summary>Other videos (${others.length})</summary>${others.map((o) => vrow(o.slug, o.title, o.title)).join("")}</details>`;
+  lib.innerHTML = html;
+  // The page's own Plan | Built switch, by the title (step 5): on a plan video it goes to what was built, at the
+  // same step's running scene ("See it built"); on a walkthrough, back to that step in the plan ("See the plan").
+  // A step the walkthrough runs nothing for says "Nothing to run for this step".
+  const mine = LIBRARY.plans.find((p) => [p.video, p.walkthrough].includes(project)), pb = document.getElementById("pb");
+  if (mine && mine.video && mine.walkthrough && pb) {
+    const onBuilt = project === mine.walkthrough;
+    pb.innerHTML = `${seg(mine)}<span class="pbnote" aria-live="polite"></span>`; pb.hidden = false;
+    const other = pb.querySelector(`.seg > a:not([aria-current])`), note = pb.querySelector(".pbnote");
+    const stepNow = () => { const el = document.getElementById("rp"), m = el.planMap, t = el.player?.currentTime ?? 0; if (!m) return null; const f = (m.frames || []).find((x) => t >= x.start && t < x.start + (x.durationSeconds || 0)) || null; return f?.planStep > 0 ? f.planStep : null; };
+    // (a tenth of a second into the scene: the player seeks to a frame, and the frame before its start is the scene before)
+    const sync = () => { if (!other) return;
+      const st = stepNow(), table = mine.steps ? (onBuilt ? mine.steps.plan : mine.steps.built) : null, at = st != null && table ? table[st] : undefined;
+      const slug = onBuilt ? mine.video : mine.walkthrough;
+      other.href = `?project=${encodeURIComponent(slug)}${at != null ? `&t=${(Math.max(0, at) + 0.1).toFixed(2)}` : ""}`;
+      other.title = onBuilt ? (at != null ? `See the plan: step ${st}` : "See the plan video") : at != null ? `See it built: step ${st}, running` : "See it built: the walkthrough";
+      note.textContent = !onBuilt && st != null && table && at === undefined ? "Nothing to run for this step" : ""; };
+    sync(); setInterval(sync, 500);
+  }
+  // what to do in the video that is open, in one quiet line under the title
+  const here = document.getElementById("here");
+  document.getElementById("rp").addEventListener("plan", (e) => {
+    // (a revised video says so in one line above the frame, with its Play just the changes; not here too)
+    // the calls to judge: not the list's (walkthroughs-that-help step 2), which are flagged or left
+    // (counted once, as the guide counts them: the player's choiceCounts, from the plan map bundle-player packed)
+    const m = e.detail || {}, rp = document.getElementById("rp"), cc = rp.choiceCounts(), a = cc.pause + cc.list + cc.shown, q = (m.decisions || []).length;
+    const lead = '<span class="sr">What to do here: </span>';
+    const st = STATUS[project], mineOpen = need.some((t) => t.slug === project);
+    const ids = (xs) => xs.join(", ");
+    here.innerHTML = lead + (project === "system" ? "Nothing to decide. Watch it; the quick checks along the way are for you."
+      : m.kind === "explainer" ? "Nothing to decide. Watch it, comment or <b>Ask about this</b> where it is unclear, then <b>Finish</b>: Done, Explain more, or Plan this."
+      : st?.reviewed && mineOpen ? `Still open: ${[st.open.length ? `${st.open.length} call${st.open.length > 1 ? "s" : ""} (${ids(st.open)})` : "", st.replies.length ? `the agent's reply on ${ids(st.replies)}` : ""].filter(Boolean).join(" and ")}. It stops at each call: <b>A</b> accept, <b>B</b> flag. Then <b>Finish review</b>.`
+      : st?.reviewed ? `Reviewed; nothing is open here. If you watch it again, ${cc.pause ? `it still stops on its ${cc.pause} choice${cc.pause > 1 ? "s" : ""}` : "its choices are on its list again"}.`
+      : a ? `${rp.choiceWords({ long: true })}: <b>A</b> accept, <b>B</b> flag. Then <b>Finish review</b>.`
+      : q ? `${q} question${q > 1 ? "s" : ""} to answer as it stops: <b>A–D</b> to pick. Then <b>Finish review</b>.`
+      : `Watch it, comment where you disagree, then <b>Finish review</b>.`);
+    const mine = TO_REVIEW.find((t) => t.slug === project);
+    if (mine && sent(mine)) here.innerHTML = '<span class="sr">Done here: </span>Your review was sent. Nothing more to do until the video changes.';
+    here.title = here.textContent.replace(/^(What to do here|Done here): /, "");
+    here.hidden = false;
+  });
+  const many = BUNDLED.length > 1 || LIBRARY.plans.length > 1 || LIBRARY.explainers.length > 0;
+  sw.innerHTML = needN ? `<span class="dot" aria-hidden="true"></span>Videos<span class="long">· ${needN} need${needN > 1 ? "" : "s"} you</span>` : "Videos";
+  sw.setAttribute("aria-expanded", "false"); sw.setAttribute("aria-haspopup", "dialog"); sw.hidden = !many;
+  // closed by default: the video gets the room, and every video is one click away
+  const show = (on) => { pop.hidden = !on; sw.setAttribute("aria-expanded", String(on)); };
+  sw.addEventListener("click", () => show(pop.hidden));
+  document.addEventListener("pointerdown", (e) => { if (!pop.hidden && !pop.contains(e.target) && !sw.contains(e.target)) show(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !pop.hidden) { show(false); sw.focus(); } });
+  // a Guide link to the video already open: the same page, down to its guide (reelplanning-guide); the list goes away
+  addEventListener("hashchange", () => { if (location.hash === "#guide") show(false); });
+  const rp = document.getElementById("rp");
+  // ?part=N opens the video at that part (a "Before you watch" row that names one)
+  { const part = new URLSearchParams(location.search).get("part"); if (part) rp.setAttribute("start-part", part); }
+  // ?t=<seconds> opens it at that moment (a word's meaning: "Play that scene")
+  { const t = new URLSearchParams(location.search).get("t"); if (t && Number(t) >= 0) rp.setAttribute("start-t", t); }
+  rp.setAttribute("runtime-src", "vendor/hyperframe.runtime.iife.js"); // bundled; offline-safe
+  const map = new URLSearchParams(location.search).get("map"); // test hook: an alternate plan-map
+  rp.setAttribute("plan-map", `${project}/plan-map.json`);
+  rp.setAttribute("src", `${project}/index.html`);
+  rp.addEventListener("plan", (e) => { if (e.detail?.title) { title.textContent = e.detail.title; document.title = `${e.detail.title} · review`; } });
+  rp.addEventListener("annotations", (e) => console.log("annotations", e.detail));
+</script>
+</body>
+</html>

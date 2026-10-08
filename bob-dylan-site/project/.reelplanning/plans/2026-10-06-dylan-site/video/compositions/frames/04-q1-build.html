@@ -1,0 +1,77 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f04-q1-build-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f04-q1-build-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f04-q1-build-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.14em; text-transform:uppercase; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f04-q1-build-q { position:absolute; left:90px; top:160px; width:1740px; font:400 76px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f04-q1-build-opt { position:absolute; box-sizing:border-box; top:340px; width:540px; height:400px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f04-q1-build-opt .k { position:absolute; left:32px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f04-q1-build-opt .l { position:absolute; left:32px; top:92px; right:32px; font:400 52px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f04-q1-build-opt .t { position:absolute; left:32px; bottom:40px; right:20px; font:400 26px/1.2 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); white-space:nowrap; }
+  .f04-q1-build-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:13px; }
+  .f04-q1-build-rec { color:var(--rp-coral-deep); }
+</style>
+
+<div id="root" data-composition-id="04-q1-build" data-band="bottom" data-duration="20.041" data-width="1920" data-height="1080">
+
+  <div class="clip f04-q1-build-bg" id="f04-q1-build-bg" data-start="0" data-duration="26" data-track-index="0"></div>
+
+  <div class="clip f04-q1-build-scene" id="f04-q1-build-scene" data-start="0" data-duration="26" data-track-index="1">
+    <div class="f04-q1-build-place" id="f04-q1-build-place">Question 1 · step 1</div>
+    <div class="f04-q1-build-q" id="f04-q1-build-q" data-question>How should the site be built?</div>
+
+    <div class="f04-q1-build-opt" id="f04-q1-build-opt-a" data-option="a" style="left:90px">
+      <span class="k">A</span>
+      <div class="l">Plain files, no build step</div>
+      <div class="t">photos pop in late</div>
+    </div>
+    <div class="f04-q1-build-opt" id="f04-q1-build-opt-b" data-option="b" style="left:690px">
+      <div class="f04-q1-build-ring" id="f04-q1-build-ring"></div>
+      <span class="k">B<span class="f04-q1-build-rec" id="f04-q1-build-rec"> · RECOMMENDED</span></span>
+      <div class="l">Vite with TypeScript</div>
+      <div class="t">placeholders, npm packages</div>
+    </div>
+    <div class="f04-q1-build-opt" id="f04-q1-build-opt-c" data-option="c" style="left:1290px">
+      <span class="k">C</span>
+      <div class="l">Astro, a page per song</div>
+      <div class="t">found by search engines</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "04-q1-build";
+  var $ = function (s) { return document.getElementById("f04-q1-build-" + s); };
+  var slideUp = function (tl, el, at) {
+    tl.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8s): eyebrow and heading, then card A
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.075);
+  tl.fromTo($("q"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.225);
+  slideUp(tl, $("opt-a"), 1.879);
+
+  // Scene 2 (8-15s): card B
+  slideUp(tl, $("opt-b"), 6.012);
+
+  // Scene 3 (15-21s): card C
+  slideUp(tl, $("opt-c"), 11.274);
+
+  // Scene 4 (21-26s): B gets the coral border and the recommended key; then hold still
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power3.out" }, 17.3);
+  tl.fromTo($("rec"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power3.out" }, 17.55);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 25.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

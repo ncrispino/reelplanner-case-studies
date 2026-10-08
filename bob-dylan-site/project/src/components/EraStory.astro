@@ -1,0 +1,164 @@
+---
+// The bands under an era's spread (plan 2026-10-07-fuller, step 3, D-037 kept): its story in three short sections
+// beside a gallery of its photographs; its records and its moments, dated; songs to start with (the era's six most
+// connected songs that have a preview); the threads that pass through it; and where to read on. Each band renders
+// only when it has something to show, so an era whose new writing has not landed yet shows only what it has.
+// On a phone and a tablet the bands sit one under another under the era's panel; the records and moments band is a
+// computer's only, since the panel just above already lists both there.
+import { albumById, momentById, songs, threads, eraOfSong, degreeOf, photosOfEra, photoOfMoment, url, type Era } from "../lib/data";
+import Gallery from "./Gallery.astro";
+import Cover from "./Cover.astro";
+import ReadOn from "./ReadOn.astro";
+interface Props { era: Era }
+const { era } = Astro.props;
+const story = era.story ?? null;
+const sections = ([["What happened", story?.happened], ["The music", story?.music], ["What it led to", story?.ledTo]] as [string, string | null | undefined][])
+  .filter(([, t]) => !!t && String(t).trim());
+const pics = photosOfEra(era);
+const recs = era.albums.map((a) => albumById.get(a)!).filter(Boolean);
+const topup = pics.length < 3 ? recs.slice(0, 4 - pics.length) : [];
+const showStory = sections.length > 0 || pics.length >= 2;
+// a gallery of fewer than three photographs is topped up with the era's record covers, so every era shows at least
+// three pictures (the walkthrough review of plan 2026-10-07-fuller: Back to the Roots had two)
+const moms = era.moments.map((m) => momentById.get(m)!).filter(Boolean);
+const own = new Set(era.albums);
+const start = songs.filter((s) => s.album && own.has(s.album) && s.preview)
+  .map((s, i) => ({ s, d: degreeOf(s.id), i })).sort((a, b) => b.d - a.d || a.i - b.i).slice(0, 6).map((x) => x.s);
+const through = threads.map((t) => {
+  const steps = t.steps.map((st) => songs.find((s) => s.id === st.song)).filter((s) => !!s);
+  const here = steps.filter((s) => eraOfSong(s!).id === era.id);
+  return { t, n: here.length, of: steps.length, first: here[0] };
+}).filter((x) => x.n > 0).sort((a, b) => b.n - a.n).slice(0, 6);
+---
+<div class="bands" id={`bands-${era.id}`}>
+  {showStory && (
+    <section class:list={["band story", { solo: sections.length === 0, bare: pics.length === 0 && topup.length === 0 }]} aria-label={`The story of ${era.title}`}>
+      {sections.length > 0 && (
+        <div class="sects">
+          <h2 class="section-title">The story</h2>
+          {sections.map(([h, t]) => (<><h3 class="sh">{h}</h3><p class="stx">{t}</p></>))}
+        </div>
+      )}
+      {(pics.length > 0 || topup.length > 0) && (
+        <div class="gal">
+          {pics.length > 0 && <Gallery photos={pics} label={`Photographs from ${era.title}`} />}
+          {topup.length > 0 && (
+            <ul class="gtc" aria-label={`Records of ${era.title}`}>
+              {topup.map((a) => <li><a href={url.album(a.id)}><Cover album={a} /><span class="credit">{a.title} · {a.year}</span></a></li>)}
+            </ul>
+          )}
+        </div>
+      )}
+    </section>
+  )}
+  {(recs.length > 0 || moms.length > 0) && (
+    <section class="band rm desk" aria-label={`Records and moments of ${era.title}`}>
+      {recs.length > 0 && (
+        <div>
+          <h2 class="section-title">The records</h2>
+          <div class="recs">
+            {recs.map((a) => (
+              <a class="rec" href={url.album(a.id)}><Cover album={a} size="m" /><span class="rt">{a.title}</span><span class="year soft">{a.year}{a.landmark ? " · a landmark" : ""}</span></a>
+            ))}
+          </div>
+        </div>
+      )}
+      {moms.length > 0 && (
+        <div>
+          <h2 class="section-title">The moments</h2>
+          <ol class="line">
+            {moms.map((m) => {
+              const mark = m.youtube ? "clip" : photoOfMoment(m) ? "photo" : null;
+              return <li><a href={url.moment(m.id)}><span class="ly year">{m.year}</span><span class="lt">{m.title}{mark && <span class="mk">{mark === "clip" ? "▶ clip" : "◼ photo"}</span>}</span></a></li>;
+            })}
+          </ol>
+        </div>
+      )}
+    </section>
+  )}
+  {start.length > 0 && (
+    <section class="band songs" aria-label="Songs to start with">
+      <h2 class="section-title">Songs to start with</h2>
+      <div class="sg">
+        {start.map((s) => (
+          <a class="card sc" href={url.song(s.id)}>
+            <span class="kicker">{albumById.get(s.album!)?.title}{s.year ? <> · <span class="year">{s.year}</span></> : null}</span>
+            <span class="stt">{s.title}</span>
+            <span class="pv">{s.preview}</span>
+            <span class="go kicker" aria-hidden="true">Its page ›</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+  {through.length > 0 && (
+    <section class="band thr" aria-label={`Threads through ${era.title}`}>
+      <h2 class="section-title">Threads through it</h2>
+      <ul class="tl">
+        {through.map(({ t, n, of, first }) => (
+          <li><a href={url.thread(t.id)}><span class="tt">{t.title}</span><span class="soft tn">{n} of its {of} songs here{first ? `, from “${first.title}”` : ""}</span><span class="more" aria-hidden="true">›</span></a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+  <ReadOn out={era.out} class="band-ro" />
+</div>
+<style>
+  .bands { padding: 8px 16px 40px; }
+  .band { margin-top: 40px; }
+  .band:first-child { margin-top: 24px; }
+  .band > .section-title:first-child, .sects > .section-title:first-child, .rm .section-title { margin-top: 0; }
+  .sh { font: var(--label-weight) 13px/1.3 var(--label); letter-spacing: var(--label-track); text-transform: var(--label-case); color: var(--accent); margin: 22px 0 6px; }
+  .sects .section-title + .sh { margin-top: 14px; }
+  .stx { margin: 0; font-size: 17px; line-height: 1.65; }
+  .gal { margin-top: 24px; }
+  .gtc { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0 0; padding: 0; list-style: none; }
+  .gtc a { display: flex; flex-direction: column; gap: 6px; color: var(--ink); text-decoration: none; }
+  .gtc a:hover .credit { text-decoration: underline; }
+  .sects + .gal { margin-top: 28px; }
+  .sg { display: grid; gap: 16px; }
+  .sc { display: flex; flex-direction: column; gap: 6px; text-decoration: none; margin: 0; }
+  .sc .kicker { margin: 0; }
+  .stt { font: var(--display-weight) 24px/1.1 var(--display-alt, var(--display)); font-style: var(--display-style); text-transform: var(--display-case);
+    letter-spacing: var(--display-track); }
+  .pv { font-style: italic; font-size: 16px; line-height: 1.5; }
+  .go { margin: 4px 0 0; text-align: right; }
+  .tl { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .tl a { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; align-items: center; min-height: 56px; padding: 10px 2px;
+    border-bottom: 1px solid var(--line); text-decoration: none; }
+  .tt { font-size: 18px; }
+  .tn { grid-column: 1; font-size: 14px; }
+  .more { grid-column: 2; grid-row: 1 / 3; color: var(--accent); }
+  .band-ro { margin-top: 40px; }
+  @media (min-width: 768px) { .bands { padding: 8px 28px 48px; } .sg { grid-template-columns: 1fr 1fr; } }
+  /* a computer: the bands under the spread, the content up to --page-max wide, generous space between them */
+  @media (min-width: 1100px) {
+    .bands { max-width: calc(var(--page-max) + 96px); margin: 0 auto; padding: 24px 48px 88px; }
+    .band { margin-top: 96px; }
+    .band:first-child { margin-top: 72px; }
+    .story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 64px; align-items: start; }
+    .story.solo { grid-template-columns: minmax(0, 1fr); max-width: 900px; }
+    .story.bare { grid-template-columns: minmax(0, 1fr); }
+    .story.bare .sects { max-width: 70ch; }
+    .gal, .sects + .gal { margin-top: 0; }
+    .stx { font-size: 18px; max-width: 62ch; }
+    .rm { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+    .recs { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 24px; }
+    .rec { text-decoration: none; }
+    .rt { display: block; margin-top: 10px; font-size: 16px; line-height: 1.25; }
+    .rec .year { font-size: 14px; }
+    /* the moments on a dated line */
+    .line { list-style: none; margin: 0; padding: 0 0 0 18px; border-left: 2px solid var(--ink); }
+    .line a { position: relative; display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: baseline; padding: 12px 0; min-height: 48px; text-decoration: none; }
+    .line a::before { content: ""; position: absolute; left: -25px; top: 19px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent);
+      box-shadow: 0 0 0 3px var(--paper); }
+    .line a:hover .lt { text-decoration: underline; }
+    .ly { color: var(--accent); font: 700 15px/1.5 var(--label); }
+    .lt { font-size: 17px; }
+    .mk { display: inline-block; margin-left: 10px; font: 600 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--soft);
+      border: 1px solid var(--line); padding: 3px 6px; vertical-align: 2px; }
+    .sg { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+    .stt { font-size: 26px; }
+    .tl { display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; }
+  }
+</style>

@@ -1,0 +1,91 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  /* type sizes used: 76 (question), 40 (heading), 34 (chose), 30 (compact chose, tiles), 26 (labels, addresses, instead of, why) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f16-ran-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f16-ran-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f16-ran-place { position:absolute; left:80px; top:70px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f16-ran-win { position:absolute; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f16-ran-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f16-ran-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f16-ran-addr { position:absolute; left:84px; right:12px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; overflow:hidden; }
+  .f16-ran-crop { position:absolute; left:0; top:36px; overflow:hidden; }
+  .f16-ran-crop img { position:absolute; display:block; max-width:none; }
+  .f16-ran-ph { position:absolute; border:1px solid var(--rp-ink); border-radius:28px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f16-ran-ph img { position:absolute; left:0; display:block; max-width:none; }
+  .f16-ran-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; }
+  .f16-ran-label { position:absolute; font:400 26px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f16-ran-chip { position:absolute; padding:10px 18px; font:400 26px/1 "Inter"; color:var(--rp-ink); background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.18); border-radius:999px; white-space:nowrap; }
+  .f16-ran-tile { position:absolute; box-sizing:border-box; padding:22px 28px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f16-ran-tile b { display:block; font:700 30px/1.2 "Inter"; color:var(--rp-ink); margin-bottom:6px; }
+  .f16-ran-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f16-ran-txt { position:absolute; left:36px; right:28px; top:30px; }
+  .f16-ran-card.compact .f16-ran-txt { top:22px; }
+  .f16-ran-kick { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-coral-deep); margin-bottom:14px; }
+  .f16-ran-chose { font:700 34px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f16-ran-card.compact .f16-ran-chose { font-size:30px; }
+  .f16-ran-inst { margin-top:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f16-ran-card.compact .f16-ran-inst { margin-top:8px; }
+  .f16-ran-why { margin-top:8px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); white-space:nowrap; }
+  .f16-ran-h { position:absolute; top:110px; font:700 40px/1 "Inter"; color:var(--rp-ink); }
+  .f16-ran-term { position:absolute; left:80px; top:190px; width:1240px; height:560px; background:var(--rp-slab); border-radius:14px; overflow:hidden; }
+  .f16-ran-tbar { height:44px; padding:0 22px; font:400 26px/44px "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.6); border-bottom:1px solid rgba(var(--rp-slab-ink-rgb),0.15); }
+  .f16-ran-ln { position:absolute; left:108px; font:400 26px/1.3 "JetBrains Mono"; color:var(--rp-slab-ink); white-space:nowrap; }
+  .f16-ran-ok { color:var(--rp-coral); }
+  .f16-ran-nd { position:absolute; left:1400px; width:440px; font:400 30px/1.25 "Inter"; color:var(--rp-ink); }
+</style>
+
+<div id="root" data-composition-id="16-ran" data-band="bottom" data-start="0" data-duration="14.613" data-width="1920" data-height="1080">
+  <div class="clip f16-ran-bg" id="f16-ran-bg" data-start="0" data-duration="14.613" data-track-index="0"></div>
+  <div class="clip f16-ran-scene" id="f16-ran-scene" data-start="0" data-duration="14.613" data-track-index="1">
+    <div class="f16-ran-h" id="f16-ran-h1" style="left:80px;top:110px;">Ran</div>
+    <div class="f16-ran-term" id="f16-ran-term" data-artifact="runs/npm-test.txt" style="height:520px"><div class="f16-ran-tbar">runs/npm-test.txt</div></div>
+    <span class="f16-ran-ln" id="f16-ran-l0" style="top:260px">$ npm test</span>
+    <span class="f16-ran-ln" id="f16-ran-l1" style="top:330px">data check <span class="f16-ran-ok">✓</span> 11 eras, 39 albums, 538 songs, 64 photos</span>
+    <span class="f16-ran-ln" id="f16-ran-l2" style="top:400px">build <span class="f16-ran-ok">✓</span> every page</span>
+    <span class="f16-ran-ln" id="f16-ran-l3" style="top:470px">phone check <span class="f16-ran-ok">✓</span> 12 views at 375×812</span>
+    <span class="f16-ran-ln" id="f16-ran-l4" style="top:540px">desktop check <span class="f16-ran-ok">✓</span> 24 views at 1440 × 900 and 1100 × 800</span>
+    <span class="f16-ran-ln" id="f16-ran-l5" style="top:610px">desktop check · known gaps: era "roots" and 7 moments</span>
+    <div class="f16-ran-label" id="f16-ran-cc" style="left:80px;top:790px;">code check, by a fresh agent: 6 steps ✓ · 27 decisions ✓ · 6 findings answered</div>
+    <div class="f16-ran-h" id="f16-ran-h2" style="left:1400px;top:110px;">Not done</div>
+    <div class="f16-ran-nd" id="f16-ran-n0" style="left:1400px;top:200px;">questions 4 and 5</div>
+    <div class="f16-ran-nd" id="f16-ran-n1" style="left:1400px;top:320px;">the 8 photo gaps</div>
+    <div class="f16-ran-nd" id="f16-ran-n2" style="left:1400px;top:440px;">every sentence checked against a source</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f16-ran-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var card = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, at); };
+  var coral = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, at); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+  rise(tl, $("h1"), 0.10);
+  push(tl, $("term"), 0.20);
+  rise(tl, $("l0"), 1.15);
+  rise(tl, $("l1"), 1.20);
+  rise(tl, $("l2"), 1.84);
+  rise(tl, $("l3"), 2.21);
+  rise(tl, $("l4"), 3.16);
+  rise(tl, $("l5"), 3.21);
+  rise(tl, $("cc"), 5.93);
+  rise(tl, $("h2"), 9.57);
+  rise(tl, $("n0"), 10.45);
+  rise(tl, $("n1"), 12.20);
+  rise(tl, $("n2"), 13.31);
+  tl.set({}, {}, 14.613);
+  window.__timelines["16-ran"] = tl;
+})();
+</script>
+</template>

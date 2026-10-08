@@ -1,0 +1,82 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 48 (question, option labels), 40 (song title in the drawing), 26 (eyebrow, mono labels, letters), 24 (sans labels in the drawing) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f15-k1-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f15-k1-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f15-k1-kicker { position:absolute; left:90px; top:120px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.16em; text-transform:uppercase; color:var(--rp-ink); white-space:nowrap; }
+  .f15-k1-ill { position:absolute; left:90px; top:166px; width:1100px; height:168px; }
+  .f15-k1-q { position:absolute; left:90px; top:362px; width:1700px; font:400 48px/1.1 "EB Garamond"; letter-spacing:-0.015em; color:var(--rp-ink); }
+  .f15-k1-opt { position:absolute; top:512px; width:560px; height:260px; box-sizing:border-box; border-radius:12px; background:var(--rp-paper); border:1px solid rgba(var(--rp-ink-rgb),0.2); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f15-k1-opt .k { position:absolute; left:32px; top:30px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.16em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f15-k1-opt .l { position:absolute; left:32px; top:76px; right:32px; font:400 48px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  /* the drawing: a small tile list (rows of 40px with hairlines) */
+  .f15-k1-list { position:absolute; left:0; top:0; width:700px; height:168px; box-sizing:border-box; border-radius:10px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.35); overflow:hidden; }
+  .f15-k1-row { position:absolute; left:0; width:100%; height:40px; box-sizing:border-box; }
+  .f15-k1-head { position:absolute; left:0; top:0; width:100%; height:44px; box-sizing:border-box; padding:9px 20px 0; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.35); background:rgba(var(--rp-ink-rgb),0.05); font:400 26px/26px "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f15-k1-row + .f15-k1-row { border-top:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f15-k1-row .n { position:absolute; left:20px; top:7px; width:44px; font:400 26px/26px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); text-align:right; }
+  .f15-k1-row .t { position:absolute; left:84px; top:8px; right:16px; font:400 24px/24px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f15-k1-hl { position:absolute; left:0; top:84px; width:100%; height:40px; background:rgba(var(--rp-ink-rgb),0.07); }
+  .f15-k1-ptr { position:absolute; left:560px; top:110px; width:30px; height:40px; }
+</style>
+
+<div id="root" data-composition-id="15-k1" data-band="bottom" data-duration="11.664" data-width="1920" data-height="1080">
+
+  <div class="clip f15-k1-bg" id="f15-k1-bg" data-start="0" data-duration="11.664" data-track-index="0"></div>
+
+  <div class="clip f15-k1-scene" id="f15-k1-scene" data-start="0" data-duration="11.664" data-track-index="1">
+    <div class="f15-k1-kicker" id="f15-k1-kicker">Quick check · Step 1</div>
+
+    <div class="f15-k1-ill" data-artifact="Self Portrait's track list, the pointer on She Belongs to Me (live)">
+      <div class="f15-k1-list" id="f15-k1-list">
+        <div class="f15-k1-head" id="f15-k1-side">Self Portrait · 1970</div>
+        <div class="f15-k1-hl" id="f15-k1-hl"></div>
+        <div class="f15-k1-row" style="top:44px"><span class="n">21</span><span class="t">Minstrel Boy (live)</span></div>
+        <div class="f15-k1-row" style="top:84px"><span class="n">22</span><span class="t">She Belongs to Me (live)</span></div>
+        <div class="f15-k1-row" style="top:124px"><span class="n">23</span><span class="t">Wigwam</span></div>
+      </div>
+      <svg class="f15-k1-ptr" id="f15-k1-ptr" viewBox="0 0 30 40" aria-hidden="true"><path d="M2 2 L2 32 L10 25 L15 37 L20 35 L15 23 L26 23 Z" style="fill:var(--rp-coral);stroke:var(--rp-paper);stroke-width:2;stroke-linejoin:round"/></svg>
+      
+    </div>
+
+    <div class="f15-k1-q" id="f15-k1-q" data-question>On Self Portrait, you click “She Belongs to Me (live)”. Its song had no page before this plan. Where do you land?</div>
+
+    <div class="f15-k1-opt" id="f15-k1-opt-a" data-option="a" style="left:90px"><span class="k">A</span><span class="l">A page of its own for the live take</span></div>
+    <div class="f15-k1-opt" id="f15-k1-opt-b" data-option="b" style="left:680px"><span class="k">B</span><span class="l">The new page of “She Belongs to Me”</span></div>
+    <div class="f15-k1-opt" id="f15-k1-opt-c" data-option="c" style="left:1270px"><span class="k">C</span><span class="l">Nowhere: live takes have no page</span></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "15-k1";
+  var $ = function (s) { return document.getElementById("f15-k1-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at); };
+  var fade = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power3.out" }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the eyebrow and the small list; the pointer comes to row 22
+  pop(tl, $("kicker"), 0.04, 8);
+  pop(tl, $("list"), 0.45, 10);
+  tl.fromTo($("ptr"), { opacity: 0, x: 120, y: 40 }, { opacity: 1, x: 0, y: 0, duration: 0.7, ease: "power3.out" }, 5.6);
+  fade(tl, $("hl"), 6.2);
+
+  // Scene 2: the question, then the cards; all at rest from about 6.7 s
+  pop(tl, $("q"), 7.9, 10);
+  pop(tl, $("opt-a"), 9.6, 12);
+  pop(tl, $("opt-b"), 9.9, 12);
+  pop(tl, $("opt-c"), 10.2, 12);
+
+  tl.set({}, {}, 11.264);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

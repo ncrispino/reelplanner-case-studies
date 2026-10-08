@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "src": "2026-10-07-fuller--walkthrough/index.html",
+  "project": "walkthrough-video",
+  "exportedAt": "2026-10-08T04:02:21.200Z",
+  "watch": {
+    "firstPlayAt": "2026-10-08T03:51:00.107Z",
+    "maxTimeReached": 232.7,
+    "durationSeconds": 232.71,
+    "completion": 1,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 1
+      },
+      {
+        "id": "ch2",
+        "completion": 1
+      },
+      {
+        "id": "ch3",
+        "completion": 1
+      }
+    ],
+    "moments": [],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q5",
+      "option": "a",
+      "label": "Yes, as built: every era's bands on the home page too",
+      "recommended": true,
+      "planStep": 3,
+      "question": "Bands on the front of the site as well?",
+      "t": 90.51,
+      "decidedAt": "2026-10-08T03:56:55.130Z"
+    },
+    {
+      "id": "q4",
+      "option": "b",
+      "label": "A line: Find Fallen Angels on Spotify ↗",
+      "recommended": true,
+      "planStep": 4,
+      "question": "Fallen Angels has no Spotify album to embed: what goes in its place?",
+      "t": 143.61,
+      "decidedAt": "2026-10-08T03:59:46.336Z"
+    }
+  ],
+  "quizzes": [],
+  "autonomy": [
+    {
+      "id": "a14",
+      "verdict": "accept",
+      "t": 53.262,
+      "planStep": 2,
+      "chose": "an era's gallery is up to five photographs of its own; a photo marked as a moment's belongs to that moment, and tops up a gallery with fewer than three (Basement and Blood on the Tracks: 2 of their own and 1 from a moment)",
+      "shownAt": "2026-10-08T03:56:15.726Z",
+      "judgedAt": "2026-10-08T03:56:17.532Z"
+    },
+    {
+      "id": "a16",
+      "verdict": "accept",
+      "t": 53.262,
+      "planStep": 2,
+      "chose": "a moment's photograph is often its place or its people, and the caption says so: Big Pink for the Basement sessions, the Warfield for the gospel shows, Roy Orbison for the Wilburys",
+      "shownAt": "2026-10-08T03:56:15.726Z",
+      "judgedAt": "2026-10-08T03:56:18.268Z"
+    },
+    {
+      "id": "a1",
+      "verdict": "accept",
+      "t": 76.003,
+      "planStep": 3,
+      "chose": "(question 5) every era on the timeline gets its bands, under its own spread, inside a new wrapper (`article.eb`) that a phone swipes and a computer snaps to; the home page's timeline gets them too",
+      "shownAt": "2026-10-08T03:56:31.354Z",
+      "judgedAt": "2026-10-08T03:56:34.387Z"
+    },
+    {
+      "id": "a3",
+      "verdict": "accept",
+      "t": 76.003,
+      "planStep": 3,
+      "chose": "the \"records and moments\" band shows only from 1100 px; phones and tablets get the story and gallery, songs to start with, threads and Read on, stacked",
+      "shownAt": "2026-10-08T03:56:31.354Z",
+      "judgedAt": "2026-10-08T03:56:37.498Z"
+    },
+    {
+      "id": "a4",
+      "verdict": "accept",
+      "t": 76.003,
+      "planStep": 3,
+      "chose": "a moment page shows its clip first, its own photo under it when it has both; with neither, the era's lead photo, headed \"The era's photograph · &lt;era&gt;\"; \"Around it\" is the two moments either side; \"His songs from &lt;year&gt;\" up to 8, the most connected first",
+      "shownAt": "2026-10-08T03:56:31.354Z",
+      "judgedAt": "2026-10-08T03:56:38.942Z"
+    },
+    {
+      "id": "a19",
+      "verdict": "accept",
+      "t": 76.003,
+      "planStep": 3,
+      "chose": "the gallery is a grid (the first photo wide, then two a row) with one line naming the photographers; each photo's credit and licence show when it opens large",
+      "shownAt": "2026-10-08T03:56:31.354Z",
+      "judgedAt": "2026-10-08T03:56:39.755Z"
+    },
+    {
+      "id": "a26",
+      "verdict": "accept",
+      "t": 76.003,
+      "planStep": 3,
+      "chose": "an era's \"Threads through it\" shows at most six threads, those with the most of the era's songs first",
+      "shownAt": "2026-10-08T03:56:31.354Z",
+      "judgedAt": "2026-10-08T03:56:40.498Z"
+    },
+    {
+      "id": "a24",
+      "verdict": "accept",
+      "t": 123.364,
+      "planStep": 4,
+      "chose": "(question 4) Fallen Angels has no album player: MusicBrainz lists no Spotify album whose title matches it, and the desktop check only asks for a player where an album has a Spotify id",
+      "shownAt": "2026-10-08T03:57:10.192Z",
+      "judgedAt": "2026-10-08T03:57:11.542Z"
+    },
+    {
+      "id": "a25",
+      "verdict": "accept",
+      "t": 123.364,
+      "planStep": 4,
+      "chose": "a song page's \"In threads\" also lists the thread made from the song (\"From &lt;song&gt;\"), so a song in no curated thread still has one",
+      "shownAt": "2026-10-08T03:57:10.192Z",
+      "judgedAt": "2026-10-08T03:57:13.618Z"
+    },
+    {
+      "id": "a7",
+      "verdict": "accept",
+      "t": 123.364,
+      "planStep": 4,
+      "chose": "\"Where its songs lead\": at most six connections to songs off the album, covers, borrowed tunes, answers and rewrites before shared themes",
+      "shownAt": "2026-10-08T03:57:10.192Z",
+      "judgedAt": "2026-10-08T03:57:15.423Z"
+    },
+    {
+      "id": "a5",
+      "verdict": "accept",
+      "t": 123.364,
+      "planStep": 4,
+      "chose": "album page: the cover and the Spotify album player on the left; Why it matters with the essay, the track list and \"Where its songs lead\" on the right; previous and next album under both",
+      "shownAt": "2026-10-08T03:57:10.192Z",
+      "judgedAt": "2026-10-08T03:57:22.050Z"
+    },
+    {
+      "id": "d1",
+      "verdict": "accept",
+      "t": 131.087,
+      "planStep": 4,
+      "chose": "removed the desktop-only \"Also in this era\" row; the previous and next album of the era, with covers, replace it at every width",
+      "shownAt": "2026-10-08T03:57:26.573Z",
+      "judgedAt": "2026-10-08T03:59:38.116Z"
+    },
+    {
+      "id": "a9",
+      "verdict": "accept",
+      "t": 174.533,
+      "planStep": 5,
+      "chose": "from 1440 px the content starts under the header's left edge, up to 1200 px, with the rail (240 px and a 48 px gap) in the right margin: the content is 984 px at 1440, the full 1200 from about 1900",
+      "shownAt": "2026-10-08T04:00:00.578Z",
+      "judgedAt": "2026-10-08T04:00:02.385Z"
+    },
+    {
+      "id": "a8",
+      "verdict": "accept",
+      "t": 174.533,
+      "planStep": 5,
+      "chose": "the rail is on album, song and moment pages only",
+      "shownAt": "2026-10-08T04:00:00.578Z",
+      "judgedAt": "2026-10-08T04:00:03.288Z"
+    },
+    {
+      "id": "a11",
+      "verdict": "accept",
+      "t": 188.357,
+      "planStep": 6,
+      "chose": "\"Read on: Wikipedia ↗ · MusicBrainz ↗\" at the end of album and song pages and of each era's bands, in a new tab, and nothing when there are no links",
+      "shownAt": "2026-10-08T04:00:11.265Z",
+      "judgedAt": "2026-10-08T04:00:21.839Z"
+    },
+    {
+      "id": "a13",
+      "verdict": "own",
+      "own": "maybe every era should have something it links to, for consistency",
+      "t": 188.357,
+      "planStep": 6,
+      "chose": "eras link only to Wikipedia, an article picked by hand for what the era is most about (Hibbing, Greenwich Village, the Electric Dylan controversy, The Basement Tapes, the Rolling Thunder Revue, the Traveling Wilburys, the 2016 Nobel Prize in Literature), each kept only when it answers; Gospel, Back to the Roots, the Standards and Rough and Rowdy have none",
+      "shownAt": "2026-10-08T04:00:11.265Z",
+      "judgedAt": "2026-10-08T04:00:46.605Z"
+    },
+    {
+      "id": "a23",
+      "verdict": "accept",
+      "t": 188.357,
+      "planStep": 6,
+      "chose": "links out for the 452 album songs only; the 86 songs on no album of his (old tunes, other artists' versions) have none",
+      "shownAt": "2026-10-08T04:00:57.041Z",
+      "judgedAt": "2026-10-08T04:00:58.090Z"
+    },
+    {
+      "id": "a17",
+      "verdict": "own",
+      "own": "is there something else we can put here? be creative but also consistent",
+      "t": 200.048,
+      "planStep": 6,
+      "chose": "the desktop check names eight gaps the photo search could not fill and does not fail on them: Back to the Roots (2 photos) and seven moments with no photo or clip (the Shelton review, marrying Sara Lownds, the motorcycle accident, Pat Garrett, the 1980 retrospective shows, Chronicles, The Philosophy of Modern Song); any other gap fails",
+      "shownAt": "2026-10-08T04:01:16.807Z",
+      "judgedAt": "2026-10-08T04:01:28.216Z"
+    },
+    {
+      "id": "a18",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 1,
+      "chose": "the data check compares quoted titles loosely (curly and straight apostrophes, hyphens, a bracketed subtitle) and accepts seven real songs on none of the site's albums (\"Dignity\", \"Blind Willie McTell\", \"Series of Dreams\", \"Things Have Changed\", \"I Shall Be Released\", \"This Wheel's on Fire\", \"Handle with Care\")",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.168Z"
+    },
+    {
+      "id": "a21",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 1,
+      "chose": "the data check holds each era section to 60–110 words, a moment to 80–150 and an album essay to 100–180",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.175Z"
+    },
+    {
+      "id": "a15",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 2,
+      "chose": "six of the first 26 photographs are now marked as a moment's, since each already shows it (the March on Washington, Isle of Wight 1969, Chicago 1974, Ginsberg on the Rolling Thunder Revue, Rotterdam 1978, the American Reunion of 1993)",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.179Z"
+    },
+    {
+      "id": "a2",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 3,
+      "chose": "on a phone the swiped row is as tall as the era in view (a ResizeObserver follows it)",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.181Z"
+    },
+    {
+      "id": "a6",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 4,
+      "chose": "a track row's title stays a link to its song; a separate ▾ button opens the row in place (preview, themes, its Spotify player, \"Its page ›\"), and the player loads the first time the row opens",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.184Z"
+    },
+    {
+      "id": "a20",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 4,
+      "chose": "a song page's \"The same year\" lists up to 8 of his own songs from his records that year, the most connected first, leaving out covers and other artists' songs",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.187Z"
+    },
+    {
+      "id": "a10",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 5,
+      "chose": "the rail: the era badge and years, the eras as a list of bars sized by their years with this one lit and a pin at the page's year, and quick links (the era, the album, a thread, the map)",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.191Z"
+    },
+    {
+      "id": "a12",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 6,
+      "chose": "each new desktop-check rule reads the built pages (the essay block, the album player's address, the moment's own photo or a clip) and only fails once its data exists",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.194Z"
+    },
+    {
+      "id": "a22",
+      "verdict": "listed",
+      "t": 226.661,
+      "planStep": 6,
+      "chose": "a song's \"MusicBrainz ↗\" opens the work (the song as written)",
+      "shownAt": "2026-10-08T04:01:43.485Z",
+      "judgedAt": "2026-10-08T04:02:12.197Z"
+    }
+  ],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-07-desktop",
+      "seen": "2026-10-07T18:27:33.885Z",
+      "sent": "2026-10-07T18:28:44.960Z"
+    },
+    {
+      "video": "2026-10-07-desktop--walkthrough",
+      "seen": "2026-10-07T20:51:14.179Z",
+      "sent": "2026-10-07T20:54:29.986Z"
+    },
+    {
+      "video": "2026-10-07-every-song",
+      "seen": "2026-10-07T18:19:40.466Z",
+      "sent": "2026-10-07T18:20:41.979Z"
+    },
+    {
+      "video": "2026-10-07-every-song--walkthrough",
+      "seen": "2026-10-07T20:46:39.847Z",
+      "sent": "2026-10-07T20:47:37.358Z"
+    },
+    {
+      "video": "2026-10-07-fuller--walkthrough",
+      "seen": "2026-10-08T04:00:10.014Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 0,
+    "walked": 0,
+    "termsOpened": 0,
+    "termsLookedUp": [],
+    "rewinds": 0,
+    "watchedPct": 100
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "amuz0dxqlxt6q",
+      "kind": "note",
+      "comment": "maybe every era should have something it links to, for consistency",
+      "about": "On what the agent decided: eras link only to Wikipedia, an article picked by hand for what the era is most about (Hibbing, Greenwich Village, the Electric Dylan controversy, The Basement Tapes, the Rolling Thunder Revue, the Traveling Wilburys, the 2016 Nobel Prize in Literature), each kept only when it answers; Gospel, Back to the Roots, the Standards and Rough and Rowdy have none",
+      "t": 188.36,
+      "frame": {
+        "index": 14,
+        "compositionId": "14-stop6",
+        "title": "Step 6 · Read on"
+      },
+      "plan": {
+        "step": 6,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuz0etukxvu0",
+      "kind": "note",
+      "comment": "is there something else we can put here? be creative but also consistent",
+      "about": "On what the agent decided: the desktop check names eight gaps the photo search could not fill and does not fail on them: Back to the Roots (2 photos) and seven moments with no photo or clip (the Shelton review, marrying Sara Lownds, the motorcycle accident, Pat Garrett, the 1980 retrospective shows, Chronicles, The Philosophy of Modern Song); any other gap fails",
+      "t": 200.05,
+      "frame": {
+        "index": 15,
+        "compositionId": "15-gaps",
+        "title": "The gaps"
+      },
+      "plan": {
+        "step": 6,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuz0fy2at7ma",
+      "kind": "approve",
+      "t": 232.7,
+      "frame": {
+        "index": 18,
+        "compositionId": "18-ending",
+        "title": "Anything you'd change?"
+      },
+      "plan": {
+        "step": null,
+        "questions": [],
+        "component": null
+      },
+      "comment": ""
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

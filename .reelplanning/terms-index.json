@@ -1,0 +1,309 @@
+{
+  "note": "Written by finish-project (reelplanning terms-index): which video explains each word, from every storyboard's `- defines:` lines. The system video's beats come first.",
+  "words": {
+    "agent": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 4,
+        "title": "Step 1 · The timeline",
+        "start": 45.768,
+        "chapter": 2,
+        "chapterTitle": "One record"
+      }
+    ],
+    "beat": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 15,
+        "title": "Step 3 · The timeline page",
+        "start": 166.888,
+        "chapter": 4,
+        "chapterTitle": "A page in order"
+      }
+    ],
+    "case study": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 1,
+        "title": "Today's study page",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "chapter": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 9,
+        "title": "Step 2 · The watch page",
+        "start": 99.744,
+        "chapter": 3,
+        "chapterTitle": "Videos to watch"
+      }
+    ],
+    "check": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 21,
+        "title": "Step 5 · The check",
+        "start": 233.056,
+        "chapter": 4,
+        "chapterTitle": "A page in order"
+      }
+    ],
+    "commit": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 2,
+        "title": "What falls short",
+        "start": 11.304,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "details": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 16,
+        "title": "Question 3 · How much of the timeline is open at first?",
+        "start": 184.792,
+        "chapter": 4,
+        "chapterTitle": "A page in order"
+      }
+    ],
+    "era": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 4,
+        "title": "Step 1 · The timeline",
+        "start": 45.768,
+        "chapter": 2,
+        "chapterTitle": "One record"
+      }
+    ],
+    "event": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 4,
+        "title": "Step 1 · The timeline",
+        "start": 45.768,
+        "chapter": 2,
+        "chapterTitle": "One record"
+      }
+    ],
+    "finish button": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 2,
+        "title": "What falls short",
+        "start": 11.304,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "folded": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 20,
+        "title": "Step 4 · One real loop first",
+        "start": 217.168,
+        "chapter": 4,
+        "chapterTitle": "A page in order"
+      }
+    ],
+    "marks": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 2,
+        "title": "What falls short",
+        "start": 11.304,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "own words": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 4,
+        "title": "Step 1 · The timeline",
+        "start": 45.768,
+        "chapter": 2,
+        "chapterTitle": "One record"
+      }
+    ],
+    "plan": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 2,
+        "title": "What falls short",
+        "start": 11.304,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "question": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 23,
+        "title": "The plan, with your choices",
+        "start": 254.72,
+        "chapter": 4,
+        "chapterTitle": "A page in order"
+      }
+    ],
+    "quick check": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 14,
+        "title": "Quick check · A question on the watch page",
+        "start": 156.888,
+        "chapter": 3,
+        "chapterTitle": "Videos to watch"
+      }
+    ],
+    "quote": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 4,
+        "title": "Step 1 · The timeline",
+        "start": 45.768,
+        "chapter": 2,
+        "chapterTitle": "One record"
+      }
+    ],
+    "recommended": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 23,
+        "title": "The plan, with your choices",
+        "start": 254.72,
+        "chapter": 4,
+        "chapterTitle": "A page in order"
+      }
+    ],
+    "review": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 2,
+        "title": "What falls short",
+        "start": 11.304,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "review page": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 1,
+        "title": "Today's study page",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "source": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 3,
+        "title": "Three changes, five steps",
+        "start": 30.792,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "spread": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 20,
+        "title": "Step 4 · One real loop first",
+        "start": 217.168,
+        "chapter": 4,
+        "chapterTitle": "A page in order"
+      }
+    ],
+    "step": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 3,
+        "title": "Three changes, five steps",
+        "start": 30.792,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "study page": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 1,
+        "title": "Today's study page",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "timeline record": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 3,
+        "title": "Three changes, five steps",
+        "start": 30.792,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      },
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 4,
+        "title": "Step 1 · The timeline",
+        "start": 45.768,
+        "chapter": 2,
+        "chapterTitle": "One record"
+      }
+    ],
+    "transcript": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 2,
+        "title": "What falls short",
+        "start": 11.304,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ],
+    "walkthrough": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 4,
+        "title": "Step 1 · The timeline",
+        "start": 45.768,
+        "chapter": 2,
+        "chapterTitle": "One record"
+      }
+    ],
+    "watch page": [
+      {
+        "video": "2026-10-08-case-study-page",
+        "frame": 3,
+        "title": "Three changes, five steps",
+        "start": 30.792,
+        "chapter": 1,
+        "chapterTitle": "Today"
+      }
+    ]
+  },
+  "undefined": [
+    "call",
+    "tag",
+    "miss",
+    "deviation",
+    "beat",
+    "chapter",
+    "area",
+    "study folder",
+    "study page",
+    "review bundle",
+    "built site",
+    "front page",
+    "watch page",
+    "timeline record"
+  ]
+}

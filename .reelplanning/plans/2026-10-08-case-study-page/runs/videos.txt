@@ -1,0 +1,9 @@
+$ node tools/videos.mjs bob-dylan-site docs/bob-dylan/watch
+✓ dylan-site: 28 scenes, 6:17, 3 chapters, 3 questions (3 answered)
+✓ dylan-site-walkthrough: 11 scenes, 2:11, 2 chapters, 0 questions (0 answered)
+✓ every-song: 22 scenes, 3:58, 4 chapters, 2 questions (2 answered)
+✓ every-song-walkthrough: 12 scenes, 2:11, 11 chapters, 0 questions (0 answered)
+✓ desktop: 32 scenes, 5:37, 4 chapters, 3 questions (3 answered)
+✓ desktop-walkthrough: 16 scenes, 3:03, 13 chapters, 1 questions (1 answered)
+✓ fuller-walkthrough: 18 scenes, 3:52, 3 chapters, 2 questions (2 answered)
+exit 0

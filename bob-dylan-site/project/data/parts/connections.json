@@ -1,0 +1,1170 @@
+{
+  "songs": [
+    {
+      "id": "blowin-in-the-wind-stevie-wonder",
+      "title": "Blowin' in the Wind",
+      "year": 1966,
+      "album": null,
+      "by": "Stevie Wonder",
+      "note": "Stevie Wonder's soul single of the song reached the US top ten.",
+      "themes": [
+        "protest",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "blowin-in-the-wind-sam-cooke",
+      "title": "Blowin' in the Wind",
+      "year": 1964,
+      "album": null,
+      "by": "Sam Cooke",
+      "note": "Sam Cooke sang the song on his live album Sam Cooke at the Copa.",
+      "themes": [
+        "protest",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "dont-think-twice-its-all-right-peter-paul-and-mary",
+      "title": "Don't Think Twice, It's All Right",
+      "year": 1963,
+      "album": null,
+      "by": "Peter, Paul and Mary",
+      "note": "The trio's version was a US top-ten single in 1963.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "it-aint-me-babe-the-turtles",
+      "title": "It Ain't Me Babe",
+      "year": 1965,
+      "album": null,
+      "by": "The Turtles",
+      "note": "The Turtles' folk-rock single of the song reached the US top ten.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "it-aint-me-babe-johnny-cash-and-june-carter",
+      "title": "It Ain't Me Babe",
+      "year": 1965,
+      "album": null,
+      "by": "Johnny Cash and June Carter",
+      "note": "The couple sang it as a duet on Cash's album Orange Blossom Special.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "a-hard-rains-a-gonna-fall-bryan-ferry",
+      "title": "A Hard Rain's a-Gonna Fall",
+      "year": 1973,
+      "album": null,
+      "by": "Bryan Ferry",
+      "note": "Bryan Ferry's glam reworking was his first solo single.",
+      "themes": [
+        "protest",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "the-times-they-are-a-changin-simon-garfunkel",
+      "title": "The Times They Are a-Changin'",
+      "year": 1964,
+      "album": null,
+      "by": "Simon & Garfunkel",
+      "note": "The duo included it on their first album, Wednesday Morning, 3 A.M.",
+      "themes": [
+        "protest",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "just-like-tom-thumbs-blues-nina-simone",
+      "title": "Just Like Tom Thumb’s Blues",
+      "year": 1969,
+      "album": null,
+      "by": "Nina Simone",
+      "note": "Nina Simone recorded it on her album To Love Somebody.",
+      "themes": [
+        "the road",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "just-like-a-woman-nina-simone",
+      "title": "Just Like a Woman",
+      "year": 1971,
+      "album": null,
+      "by": "Nina Simone",
+      "note": "Nina Simone recorded it on her album Here Comes the Sun.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "knockin-on-heavens-door-eric-clapton",
+      "title": "Knockin’ on Heaven’s Door",
+      "year": 1975,
+      "album": null,
+      "by": "Eric Clapton",
+      "note": "Eric Clapton released a reggae-tinged single of the song.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "knockin-on-heavens-door-warren-zevon",
+      "title": "Knockin’ on Heaven’s Door",
+      "year": 2003,
+      "album": null,
+      "by": "Warren Zevon",
+      "note": "Warren Zevon recorded it on The Wind, made while he was terminally ill.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "make-you-feel-my-love-billy-joel",
+      "title": "To Make You Feel My Love",
+      "year": 1997,
+      "album": null,
+      "by": "Billy Joel",
+      "note": "Billy Joel released it as To Make You Feel My Love on his third greatest-hits set.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "make-you-feel-my-love-garth-brooks",
+      "title": "To Make You Feel My Love",
+      "year": 1998,
+      "album": null,
+      "by": "Garth Brooks",
+      "note": "Garth Brooks recorded it for the film Hope Floats, and it topped the country chart.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "all-along-the-watchtower-u2",
+      "title": "All Along the Watchtower",
+      "year": 1988,
+      "album": null,
+      "by": "U2",
+      "note": "U2's live version appears on Rattle and Hum.",
+      "themes": [
+        "war",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "like-a-rolling-stone-jimi-hendrix",
+      "title": "Like a Rolling Stone",
+      "year": 1967,
+      "album": null,
+      "by": "Jimi Hendrix",
+      "note": "Jimi Hendrix played the song at the Monterey Pop Festival.",
+      "themes": [
+        "loss",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "lay-lady-lay-the-isley-brothers",
+      "title": "Lay Lady Lay",
+      "year": 1971,
+      "album": null,
+      "by": "The Isley Brothers",
+      "note": "The Isley Brothers stretched it into a long soul track on Givin' It Back.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "if-not-for-you-olivia-newton-john",
+      "title": "If Not for You",
+      "year": 1971,
+      "album": null,
+      "by": "Olivia Newton-John",
+      "note": "It was Olivia Newton-John's first hit single.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "its-all-over-now-baby-blue-joan-baez",
+      "title": "It's All Over Now, Baby Blue",
+      "year": 1965,
+      "album": null,
+      "by": "Joan Baez",
+      "note": "Joan Baez recorded it on her album Farewell, Angelina.",
+      "themes": [
+        "loss",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "simple-twist-of-fate-joan-baez",
+      "title": "Simple Twist of Fate",
+      "year": 1975,
+      "album": null,
+      "by": "Joan Baez",
+      "note": "Joan Baez recorded it on Diamonds & Rust.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "sad-eyed-lady-of-the-lowlands-joan-baez",
+      "title": "Sad-Eyed Lady of the Lowlands",
+      "year": 1968,
+      "album": null,
+      "by": "Joan Baez",
+      "note": "Joan Baez recorded it on Any Day Now, an album entirely of Dylan songs.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "chimes-of-freedom-the-byrds",
+      "title": "Chimes of Freedom",
+      "year": 1965,
+      "album": null,
+      "by": "The Byrds",
+      "note": "The Byrds recorded it on their debut album Mr. Tambourine Man.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "chimes-of-freedom-bruce-springsteen",
+      "title": "Chimes of Freedom",
+      "year": 1988,
+      "album": null,
+      "by": "Bruce Springsteen",
+      "note": "Bruce Springsteen released a live version on an EP tied to the Amnesty International tour.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "the-wicked-messenger-faces",
+      "title": "The Wicked Messenger",
+      "year": 1970,
+      "album": null,
+      "by": "Faces",
+      "note": "Faces opened their first album, First Step, with the song.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "ill-be-your-baby-tonight-robert-palmer-and-ub40",
+      "title": "I’ll Be Your Baby Tonight",
+      "year": 1990,
+      "album": null,
+      "by": "Robert Palmer and UB40",
+      "note": "The duet was a UK top-ten hit.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "tears-of-rage-the-band",
+      "title": "Tears of Rage",
+      "year": 1968,
+      "album": null,
+      "by": "The Band",
+      "note": "The Band opened Music from Big Pink with the song, which Dylan wrote with Richard Manuel.",
+      "themes": [
+        "loss",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "this-wheels-on-fire-the-band",
+      "title": "This Wheel’s on Fire",
+      "year": 1968,
+      "album": null,
+      "by": "The Band",
+      "note": "The Band recorded it on Music from Big Pink; Rick Danko co-wrote the music.",
+      "themes": [
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "one-more-cup-of-coffee-the-white-stripes",
+      "title": "One More Cup of Coffee",
+      "year": 1999,
+      "album": null,
+      "by": "The White Stripes",
+      "note": "The White Stripes included it on their first album.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "changing-of-the-guards-patti-smith",
+      "title": "Changing of the Guards",
+      "year": 2007,
+      "album": null,
+      "by": "Patti Smith",
+      "note": "Patti Smith recorded it on Twelve, her album of covers.",
+      "themes": [
+        "faith",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "with-god-on-our-side-the-neville-brothers",
+      "title": "With God on Our Side",
+      "year": 1989,
+      "album": null,
+      "by": "The Neville Brothers",
+      "note": "The Neville Brothers recorded it on Yellow Moon.",
+      "themes": [
+        "war",
+        "faith",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "youre-gonna-make-me-lonesome-when-you-go-madeleine-peyroux",
+      "title": "You’re Gonna Make Me Lonesome When You Go",
+      "year": 2004,
+      "album": null,
+      "by": "Madeleine Peyroux",
+      "note": "Madeleine Peyroux recorded it on Careless Love.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "whos-gonna-buy-you-ribbons-when-im-gone",
+      "title": "Who's Gonna Buy You Ribbons (When I'm Gone)",
+      "year": null,
+      "album": null,
+      "by": "Paul Clayton",
+      "note": "Folk singer Paul Clayton's adaptation of an older folk song.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "joe-hill",
+      "title": "Joe Hill",
+      "year": 1936,
+      "album": null,
+      "by": "Alfred Hayes and Earl Robinson",
+      "note": "A song about the executed labor organizer Joe Hill, set by Earl Robinson to a poem by Alfred Hayes.",
+      "themes": [
+        "protest",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "pretty-polly",
+      "title": "Pretty Polly",
+      "year": null,
+      "album": null,
+      "by": "traditional",
+      "note": "An old murder ballad from Britain and Appalachia.",
+      "themes": [
+        "death",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "down-on-pennys-farm",
+      "title": "Down on Penny's Farm",
+      "year": 1929,
+      "album": null,
+      "by": "The Bentley Boys",
+      "note": "A song about a hard-hearted landlord that was later reissued on the Anthology of American Folk Music.",
+      "themes": [
+        "protest",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "trouble-no-more",
+      "title": "Trouble No More",
+      "year": 1955,
+      "album": null,
+      "by": "Muddy Waters",
+      "note": "Muddy Waters' Chess single, itself reworked from Sleepy John Estes' Someday Baby Blues.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "all-your-love-i-miss-loving",
+      "title": "All Your Love (I Miss Loving)",
+      "year": 1958,
+      "album": null,
+      "by": "Otis Rush",
+      "note": "A Chicago blues single by Otis Rush on the Cobra label.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "the-lonesome-road",
+      "title": "The Lonesome Road",
+      "year": 1927,
+      "album": null,
+      "by": "Gene Austin",
+      "note": "A ballad written by Gene Austin and Nathaniel Shilkret that became a standard.",
+      "themes": [
+        "the road",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "where-the-blue-of-the-night-meets-the-gold-of-the-day",
+      "title": "Where the Blue of the Night (Meets the Gold of the Day)",
+      "year": 1931,
+      "album": null,
+      "by": "Bing Crosby",
+      "note": "Bing Crosby's theme song, which he co-wrote.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "new-danville-girl",
+      "title": "New Danville Girl",
+      "year": 1984,
+      "album": null,
+      "by": "Bob Dylan",
+      "note": "An unreleased song Dylan wrote with playwright Sam Shepard and recorded during the Empire Burlesque sessions.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "blowin-in-the-wind",
+      "to": "blowin-in-the-wind-stevie-wonder",
+      "kind": "covered-by",
+      "why": "Stevie Wonder turned the song into a Motown hit three years after Dylan released it."
+    },
+    {
+      "from": "blowin-in-the-wind",
+      "to": "blowin-in-the-wind-sam-cooke",
+      "kind": "covered-by",
+      "why": "Sam Cooke performed the song in his nightclub act and recorded it live at the Copa."
+    },
+    {
+      "from": "dont-think-twice-its-all-right",
+      "to": "dont-think-twice-its-all-right-peter-paul-and-mary",
+      "kind": "covered-by",
+      "why": "Peter, Paul and Mary had a hit with the song the same year Dylan released it."
+    },
+    {
+      "from": "it-aint-me-babe",
+      "to": "it-aint-me-babe-the-turtles",
+      "kind": "covered-by",
+      "why": "The Turtles made the song their first big hit in 1965."
+    },
+    {
+      "from": "it-aint-me-babe",
+      "to": "it-aint-me-babe-johnny-cash-and-june-carter",
+      "kind": "covered-by",
+      "why": "Johnny Cash and June Carter recorded it as a country duet in 1965."
+    },
+    {
+      "from": "a-hard-rains-a-gonna-fall",
+      "to": "a-hard-rains-a-gonna-fall-bryan-ferry",
+      "kind": "covered-by",
+      "why": "Bryan Ferry launched his solo career with a dramatic version of the song."
+    },
+    {
+      "from": "the-times-they-are-a-changin",
+      "to": "the-times-they-are-a-changin-simon-garfunkel",
+      "kind": "covered-by",
+      "why": "Simon & Garfunkel recorded the song on their 1964 debut album."
+    },
+    {
+      "from": "just-like-tom-thumbs-blues",
+      "to": "just-like-tom-thumbs-blues-nina-simone",
+      "kind": "covered-by",
+      "why": "Nina Simone included the song on a 1969 album built largely on contemporary songwriters."
+    },
+    {
+      "from": "just-like-a-woman",
+      "to": "just-like-a-woman-nina-simone",
+      "kind": "covered-by",
+      "why": "Nina Simone gave the song a slow, searching reading on Here Comes the Sun."
+    },
+    {
+      "from": "knockin-on-heavens-door",
+      "to": "knockin-on-heavens-door-eric-clapton",
+      "kind": "covered-by",
+      "why": "Eric Clapton released a reggae-flavoured single of the song two years after the original."
+    },
+    {
+      "from": "knockin-on-heavens-door",
+      "to": "knockin-on-heavens-door-warren-zevon",
+      "kind": "covered-by",
+      "why": "Warren Zevon sang it on his final album, recorded as he faced his own death."
+    },
+    {
+      "from": "make-you-feel-my-love",
+      "to": "make-you-feel-my-love-billy-joel",
+      "kind": "covered-by",
+      "why": "Billy Joel released his version before Dylan's own album came out."
+    },
+    {
+      "from": "make-you-feel-my-love",
+      "to": "make-you-feel-my-love-garth-brooks",
+      "kind": "covered-by",
+      "why": "Garth Brooks took the song to number one on the country chart."
+    },
+    {
+      "from": "all-along-the-watchtower",
+      "to": "all-along-the-watchtower-u2",
+      "kind": "covered-by",
+      "why": "U2 played the song live and released it on Rattle and Hum."
+    },
+    {
+      "from": "like-a-rolling-stone",
+      "to": "like-a-rolling-stone-jimi-hendrix",
+      "kind": "covered-by",
+      "why": "Jimi Hendrix performed the song at Monterey Pop in June 1967."
+    },
+    {
+      "from": "lay-lady-lay",
+      "to": "lay-lady-lay-the-isley-brothers",
+      "kind": "covered-by",
+      "why": "The Isley Brothers recorded an extended soul version on their 1971 covers album."
+    },
+    {
+      "from": "if-not-for-you",
+      "to": "if-not-for-you-olivia-newton-john",
+      "kind": "covered-by",
+      "why": "Olivia Newton-John's first hit was her version of this song."
+    },
+    {
+      "from": "its-all-over-now-baby-blue",
+      "to": "its-all-over-now-baby-blue-joan-baez",
+      "kind": "covered-by",
+      "why": "Joan Baez recorded the song in the same year Dylan released it."
+    },
+    {
+      "from": "simple-twist-of-fate",
+      "to": "simple-twist-of-fate-joan-baez",
+      "kind": "covered-by",
+      "why": "Joan Baez recorded the song on Diamonds & Rust in the year it came out."
+    },
+    {
+      "from": "sad-eyed-lady-of-the-lowlands",
+      "to": "sad-eyed-lady-of-the-lowlands-joan-baez",
+      "kind": "covered-by",
+      "why": "Joan Baez gave the long song a place on her all-Dylan double album."
+    },
+    {
+      "from": "chimes-of-freedom",
+      "to": "chimes-of-freedom-the-byrds",
+      "kind": "covered-by",
+      "why": "The Byrds put the song on their first album, next to their Mr. Tambourine Man hit."
+    },
+    {
+      "from": "chimes-of-freedom",
+      "to": "chimes-of-freedom-bruce-springsteen",
+      "kind": "covered-by",
+      "why": "Bruce Springsteen released a live version to promote the Human Rights Now! tour."
+    },
+    {
+      "from": "the-wicked-messenger",
+      "to": "the-wicked-messenger-faces",
+      "kind": "covered-by",
+      "why": "Faces, with Rod Stewart singing, opened their debut album with it."
+    },
+    {
+      "from": "ill-be-your-baby-tonight",
+      "to": "ill-be-your-baby-tonight-robert-palmer-and-ub40",
+      "kind": "covered-by",
+      "why": "Robert Palmer and UB40 had a British hit with a reggae version in 1990."
+    },
+    {
+      "from": "tears-of-rage",
+      "to": "tears-of-rage-the-band",
+      "kind": "covered-by",
+      "why": "The Band opened their first album with this song from the basement sessions."
+    },
+    {
+      "from": "this-wheels-on-fire",
+      "to": "this-wheels-on-fire-the-band",
+      "kind": "covered-by",
+      "why": "The Band, who played on the basement sessions, recorded it for their debut album."
+    },
+    {
+      "from": "one-more-cup-of-coffee",
+      "to": "one-more-cup-of-coffee-the-white-stripes",
+      "kind": "covered-by",
+      "why": "The White Stripes recorded the song on their 1999 debut album."
+    },
+    {
+      "from": "changing-of-the-guards",
+      "to": "changing-of-the-guards-patti-smith",
+      "kind": "covered-by",
+      "why": "Patti Smith chose the song for her 2007 covers album Twelve."
+    },
+    {
+      "from": "with-god-on-our-side",
+      "to": "with-god-on-our-side-the-neville-brothers",
+      "kind": "covered-by",
+      "why": "The Neville Brothers recorded the song on their 1989 album Yellow Moon."
+    },
+    {
+      "from": "youre-gonna-make-me-lonesome-when-you-go",
+      "to": "youre-gonna-make-me-lonesome-when-you-go-madeleine-peyroux",
+      "kind": "covered-by",
+      "why": "Madeleine Peyroux recorded a jazz version on her breakthrough album Careless Love."
+    },
+    {
+      "from": "dont-think-twice-its-all-right",
+      "to": "whos-gonna-buy-you-ribbons-when-im-gone",
+      "kind": "borrowed-tune",
+      "why": "Dylan built the song on a melody and phrase from his friend Paul Clayton's folk song."
+    },
+    {
+      "from": "boots-of-spanish-leather",
+      "to": "scarborough-fair",
+      "kind": "borrowed-tune",
+      "why": "Like Girl from the North Country, it draws its melody from the Scarborough Fair ballad Dylan learned from Martin Carthy."
+    },
+    {
+      "from": "i-dreamed-i-saw-st-augustine",
+      "to": "joe-hill",
+      "kind": "borrowed-tune",
+      "why": "The song follows the melody and dream framing of the labor song Joe Hill."
+    },
+    {
+      "from": "ballad-of-hollis-brown",
+      "to": "pretty-polly",
+      "kind": "borrowed-tune",
+      "why": "Its circling modal melody is taken from the Appalachian murder ballad Pretty Polly."
+    },
+    {
+      "from": "maggies-farm",
+      "to": "down-on-pennys-farm",
+      "kind": "borrowed-tune",
+      "why": "Dylan modeled the song on the old farmhand's complaint Down on Penny's Farm."
+    },
+    {
+      "from": "someday-baby",
+      "to": "trouble-no-more",
+      "kind": "borrowed-tune",
+      "why": "The song follows the tune of Muddy Waters' Trouble No More and its older Sleepy John Estes source."
+    },
+    {
+      "from": "beyond-here-lies-nothin",
+      "to": "all-your-love-i-miss-loving",
+      "kind": "borrowed-tune",
+      "why": "The song's riff and melody are taken from Otis Rush's All Your Love (I Miss Loving)."
+    },
+    {
+      "from": "sugar-baby",
+      "to": "the-lonesome-road",
+      "kind": "borrowed-tune",
+      "why": "The melody of Sugar Baby closely follows Gene Austin's The Lonesome Road."
+    },
+    {
+      "from": "when-the-deal-goes-down",
+      "to": "where-the-blue-of-the-night-meets-the-gold-of-the-day",
+      "kind": "borrowed-tune",
+      "why": "The song borrows the melody of Bing Crosby's theme song."
+    },
+    {
+      "from": "new-danville-girl",
+      "to": "brownsville-girl",
+      "kind": "rewrite",
+      "why": "Dylan and Sam Shepard reworked this earlier recording into the long Brownsville Girl."
+    },
+    {
+      "from": "sad-eyed-lady-of-the-lowlands",
+      "to": "sara",
+      "kind": "same-theme",
+      "why": "A decade later, Sara recalls writing Sad-Eyed Lady for her at the Chelsea Hotel."
+    },
+    {
+      "from": "wedding-song",
+      "to": "sara",
+      "kind": "same-theme",
+      "why": "Both are addressed to his wife Sara, one in devotion and one as the marriage was failing."
+    },
+    {
+      "from": "only-a-pawn-in-their-game",
+      "to": "murder-most-foul",
+      "kind": "same-theme",
+      "why": "Both turn on assassinations of 1963: Medgar Evers in June and John F. Kennedy in November."
+    },
+    {
+      "from": "roll-on-john",
+      "to": "murder-most-foul",
+      "kind": "same-theme",
+      "why": "Both are late elegies for a murdered public figure named John, Lennon and Kennedy."
+    },
+    {
+      "from": "lenny-bruce",
+      "to": "roll-on-john",
+      "kind": "same-theme",
+      "why": "Both are tributes to famous men he admired who died at forty."
+    },
+    {
+      "from": "they-killed-him",
+      "to": "murder-most-foul",
+      "kind": "same-theme",
+      "why": "Both reflect on public figures who were assassinated."
+    },
+    {
+      "from": "song-to-woody",
+      "to": "goodbye-jimmy-reed",
+      "kind": "same-theme",
+      "why": "Nearly sixty years apart, both pay tribute to a musical hero by name."
+    },
+    {
+      "from": "high-water-for-charley-patton",
+      "to": "goodbye-jimmy-reed",
+      "kind": "same-theme",
+      "why": "Both name a blues hero in the title and draw on that man's music."
+    },
+    {
+      "from": "john-wesley-harding",
+      "to": "billy-1",
+      "kind": "same-theme",
+      "why": "Both portray real Old West outlaws, John Wesley Hardin and Billy the Kid."
+    },
+    {
+      "from": "all-along-the-watchtower",
+      "to": "jokerman",
+      "kind": "same-theme",
+      "why": "Both place a joker figure amid biblical imagery."
+    },
+    {
+      "from": "all-along-the-watchtower",
+      "to": "slow-train",
+      "kind": "same-theme",
+      "why": "Both draw on biblical prophecy, years before and during his gospel period."
+    },
+    {
+      "from": "knockin-on-heavens-door",
+      "to": "tryin-to-get-to-heaven",
+      "kind": "same-theme",
+      "why": "Both face death through the image of reaching heaven, twenty-four years apart."
+    },
+    {
+      "from": "knockin-on-heavens-door",
+      "to": "not-dark-yet",
+      "kind": "same-theme",
+      "why": "Both are slow songs about a man sensing his life is ending."
+    },
+    {
+      "from": "every-grain-of-sand",
+      "to": "ring-them-bells",
+      "kind": "same-theme",
+      "why": "Both are hymn-like prayers, one closing the gospel years and one after them."
+    },
+    {
+      "from": "chimes-of-freedom",
+      "to": "ring-them-bells",
+      "kind": "same-theme",
+      "why": "Both use ringing bells as a call on behalf of the suffering, a quarter century apart."
+    },
+    {
+      "from": "when-he-returns",
+      "to": "death-is-not-the-end",
+      "kind": "same-theme",
+      "why": "Both offer religious consolation, one in the gospel years and one soon after."
+    },
+    {
+      "from": "like-a-rolling-stone",
+      "to": "idiot-wind",
+      "kind": "same-theme",
+      "why": "Both are long, furious songs aimed at a single person."
+    },
+    {
+      "from": "like-a-rolling-stone",
+      "to": "ballad-of-a-thin-man",
+      "kind": "same-theme",
+      "why": "Both put a character on the spot for not understanding a changing world."
+    },
+    {
+      "from": "dont-think-twice-its-all-right",
+      "to": "it-aint-me-babe",
+      "kind": "same-theme",
+      "why": "Both are bitter farewells to a lover, written in his early folk years."
+    },
+    {
+      "from": "the-times-they-are-a-changin",
+      "to": "my-back-pages",
+      "kind": "same-theme",
+      "why": "Critics read My Back Pages as stepping back from the protest certainty of The Times They Are a-Changin'."
+    },
+    {
+      "from": "bob-dylans-dream",
+      "to": "my-back-pages",
+      "kind": "same-theme",
+      "why": "Both look back with regret on lost youthful friendships and ideals."
+    },
+    {
+      "from": "the-times-they-are-a-changin",
+      "to": "when-the-ship-comes-in",
+      "kind": "same-theme",
+      "why": "Both prophesy a coming day when the powerful are brought low."
+    },
+    {
+      "from": "oxford-town",
+      "to": "only-a-pawn-in-their-game",
+      "kind": "same-theme",
+      "why": "Both respond to civil-rights violence in Mississippi in 1962 and 1963."
+    },
+    {
+      "from": "masters-of-war",
+      "to": "with-god-on-our-side",
+      "kind": "same-theme",
+      "why": "Both attack the people and beliefs that drive nations into war."
+    },
+    {
+      "from": "masters-of-war",
+      "to": "a-hard-rains-a-gonna-fall",
+      "kind": "same-theme",
+      "why": "Both were written in 1962 under the fear of nuclear war."
+    },
+    {
+      "from": "arthur-mcbride",
+      "to": "masters-of-war",
+      "kind": "same-theme",
+      "why": "Both side with young men against those who would send them to fight."
+    },
+    {
+      "from": "union-sundown",
+      "to": "workingmans-blues-2",
+      "kind": "same-theme",
+      "why": "Both lament the American worker losing out to a global economy."
+    },
+    {
+      "from": "that-lucky-old-sun",
+      "to": "workingmans-blues-2",
+      "kind": "same-theme",
+      "why": "Both are sung from the view of a worn-out laboring man."
+    },
+    {
+      "from": "a-hard-rains-a-gonna-fall",
+      "to": "gates-of-eden",
+      "kind": "same-theme",
+      "why": "Both are long catalogs of apocalyptic visions."
+    },
+    {
+      "from": "lily-rosemary-and-the-jack-of-hearts",
+      "to": "brownsville-girl",
+      "kind": "same-theme",
+      "why": "Both are long story-songs built like Western films."
+    },
+    {
+      "from": "billy-1",
+      "to": "brownsville-girl",
+      "kind": "same-theme",
+      "why": "Both come out of Western films, Peckinpah's Pat Garrett and Billy the Kid and Gregory Peck's The Gunfighter."
+    },
+    {
+      "from": "man-gave-names-to-all-the-animals",
+      "to": "under-the-red-sky",
+      "kind": "same-theme",
+      "why": "Both are fable-like songs written in the manner of children's songs."
+    },
+    {
+      "from": "subterranean-homesick-blues",
+      "to": "tombstone-blues",
+      "kind": "same-theme",
+      "why": "Both rattle off surreal images at high speed over a rock band."
+    },
+    {
+      "from": "stuck-inside-of-mobile-with-the-memphis-blues-again",
+      "to": "just-like-tom-thumbs-blues",
+      "kind": "same-theme",
+      "why": "Both strand a narrator in a strange town far from home."
+    },
+    {
+      "from": "world-gone-wrong",
+      "to": "everything-is-broken",
+      "kind": "same-theme",
+      "why": "Both survey a world falling apart, the old Mississippi Sheiks song echoing his own Oh Mercy track."
+    },
+    {
+      "from": "political-world",
+      "to": "slow-train",
+      "kind": "same-theme",
+      "why": "Both survey a society corrupted by money and power."
+    },
+    {
+      "from": "sad-eyed-lady-of-the-lowlands",
+      "to": "highlands",
+      "kind": "same-theme",
+      "why": "Both are very long album closers, with titles that answer each other."
+    },
+    {
+      "from": "highlands",
+      "to": "aint-talkin",
+      "kind": "same-theme",
+      "why": "Both close their albums with a long walk through a bleak landscape."
+    },
+    {
+      "from": "restless-farewell",
+      "to": "its-all-over-now-baby-blue",
+      "kind": "same-theme",
+      "why": "Both close their albums as farewells to an old way of life."
+    },
+    {
+      "from": "cant-help-falling-in-love",
+      "to": "im-a-fool-to-want-you",
+      "kind": "same-theme",
+      "why": "Decades before his Sinatra albums, he sang an Elvis ballad on Dylan (1973)."
+    },
+    {
+      "from": "forever-young",
+      "to": "young-at-heart",
+      "kind": "same-theme",
+      "why": "Both wish for a spirit that stays young as the years pass."
+    },
+    {
+      "from": "september-of-my-years",
+      "to": "not-dark-yet",
+      "kind": "same-theme",
+      "why": "Both are sung by a man looking back from late in life."
+    },
+    {
+      "from": "black-diamond-bay",
+      "to": "tempest",
+      "kind": "same-theme",
+      "why": "Both follow a cast of characters swept away in a disaster, an island eruption and the Titanic."
+    },
+    {
+      "from": "ill-be-your-baby-tonight",
+      "to": "lay-lady-lay",
+      "kind": "same-theme",
+      "why": "The country closer of John Wesley Harding pointed toward the sound of Nashville Skyline."
+    },
+    {
+      "from": "ill-be-your-baby-tonight",
+      "to": "make-you-feel-my-love",
+      "kind": "same-theme",
+      "why": "Both are plainspoken love songs that became hits for other singers."
+    },
+    {
+      "from": "mr-tambourine-man",
+      "to": "chimes-of-freedom",
+      "kind": "same-theme",
+      "why": "Both are long visionary songs of 1964 that the Byrds recorded on their first album."
+    }
+  ]
+}

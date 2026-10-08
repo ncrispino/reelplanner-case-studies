@@ -1,0 +1,85 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 36 (change rows), 30 (accepted line) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f01-built-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f01-built-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* one change row: a tile card, a real screenshot crop on its left, the change on its right */
+  .f01-built-row { position:absolute; width:840px; height:200px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  /* the crop: the 750 x 1624 shot at 0.4 (300 x 650), seen through a 280 x 176 window, never stretched */
+  .f01-built-crop { position:absolute; left:12px; top:12px; width:280px; height:176px; overflow:hidden; border-radius:8px; border:1px solid rgba(var(--rp-ink-rgb),0.22); box-sizing:border-box; background:var(--rp-tile-2); }
+  .f01-built-crop img { position:absolute; left:-10px; display:block; width:300px; height:650px; max-width:none; }
+  .f01-built-lbl { position:absolute; left:324px; top:0; width:490px; height:198px; display:flex; align-items:center; font:400 36px/1.22 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); }
+
+  .f01-built-acc { position:absolute; left:0; top:818px; width:1920px; text-align:center; white-space:nowrap; font:400 30px/1 "JetBrains Mono"; letter-spacing:0.02em; color:rgba(var(--rp-ink-rgb),0.72); }
+  .f01-built-rule { position:absolute; left:810px; top:866px; width:300px; height:2px; background:var(--rp-coral); transform-origin:50% 50%; }
+</style>
+
+<div id="root" data-composition-id="01-built" data-band="bottom" data-start="0" data-duration="15.519" data-width="1920" data-height="1080">
+
+  <div class="clip f01-built-bg" id="f01-built-bg" data-start="0" data-duration="16" data-track-index="0"></div>
+
+  <div class="clip f01-built-scene" id="f01-built-scene" data-start="0" data-duration="16" data-track-index="1">
+
+    <div class="f01-built-row" id="f01-built-r1" data-artifact="/era/electric/" style="left:100px; top:110px">
+      <div class="f01-built-crop"><img src="assets/shots/era-electric.png" style="top:-314px" alt="The Going Electric era title, set on a tilted cue card"></div>
+      <div class="f01-built-lbl">A look for each era</div>
+    </div>
+    <div class="f01-built-row" id="f01-built-r2" data-artifact="/thread/faith/" style="left:980px; top:110px">
+      <div class="f01-built-crop"><img src="assets/shots/thread-faith.png" style="top:-120px" alt="The Faith thread card: 1965, Gates of Eden"></div>
+      <div class="f01-built-lbl">Threads and the map, redrawn</div>
+    </div>
+    <div class="f01-built-row" id="f01-built-r3" data-artifact="/map/masters-of-war/" style="left:100px; top:340px">
+      <div class="f01-built-crop"><img src="assets/shots/map.png" style="top:0px" alt="The map header: 183 songs, 135 connections, Masters of War"></div>
+      <div class="f01-built-lbl">135 connections</div>
+    </div>
+    <div class="f01-built-row" id="f01-built-r4" data-artifact="/album/blonde-on-blonde/" style="left:980px; top:340px">
+      <div class="f01-built-crop"><img src="assets/shots/album-bob-songs.png" style="top:-8px" alt="Blonde on Blonde: track list, 14 songs"></div>
+      <div class="f01-built-lbl">Full track lists</div>
+    </div>
+    <div class="f01-built-row" id="f01-built-r5" data-artifact="/song/like-a-rolling-stone/" style="left:100px; top:570px">
+      <div class="f01-built-crop"><img src="assets/shots/song-lars.png" style="top:-440px" alt="Like a Rolling Stone: the Listen and watch frame"></div>
+      <div class="f01-built-lbl">A player on every song, loaded</div>
+    </div>
+    <div class="f01-built-row" id="f01-built-r6" data-artifact="/song/subterranean-homesick-blues/" style="left:980px; top:570px">
+      <div class="f01-built-crop"><img src="assets/shots/song-shs.png" style="top:-100px" alt="Subterranean Homesick Blues: its listen and watch frames"></div>
+      <div class="f01-built-lbl">179 clips</div>
+    </div>
+
+    <div class="f01-built-acc" id="f01-built-acc">accepted: 7 choices · listed: 6</div>
+    <div class="f01-built-rule" id="f01-built-rule"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "01-built";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f01-built-" + s); };
+  // a short push: in from below and a touch small, landing at scale 1 (never past it)
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 24, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-12s): the six change rows land one by one
+  push(tl, $("r1"), 0.282);
+  push(tl, $("r2"), 2.065);
+  push(tl, $("r3"), 3.849);
+  push(tl, $("r4"), 5.632);
+  push(tl, $("r5"), 7.416);
+  push(tl, $("r6"), 9.199);
+
+  // Scene 2 (12-16s): the accepted line, a coral rule under it; hold
+  tl.fromTo($("acc"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 11.452);
+  tl.fromTo($("rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 11.828);
+  tl.set({}, {}, 16);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

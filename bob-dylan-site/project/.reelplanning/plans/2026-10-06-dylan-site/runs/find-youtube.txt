@@ -1,0 +1,18 @@
+$ node tools/find-youtube.mjs
+songs: 166 of 181 album songs have an official clip
+✓ newport-1963: "Bob Dylan - North Country Blues (Live At Newport Folk Festival - 1963) - 4K Restoration" (Levi Weiss)
+✓ march-on-washington: "Bob Dylan - Only A Pawn In Their Game (March On Washington 1963) [BEST QUALITY]" (Swingin’ Pig)
+✓ dont-look-back-tour-1965: "Bob Dylan Don't Look Back Trailer" (cifilmman)
+✓ newport-1965: "Bob Dylan - Maggie's Farm (Live At Newport Folk Festival - 1965) - 4K Restoration" (Levi Weiss)
+✓ judas-manchester-1966: "Bob Dylan - Like a Rolling Stones Judas" (Duke Bill)
+✓ isle-of-wight-1969: "Bob Dylan Isle Of Wight Show" (PianoMan's Bird)
+✓ rolling-thunder-revue-1975: "Bob Dylan's First Rolling Thunder Revue Concert - 30 October 1975 Plymouth, Massachusetts" (neverending Bobfan)
+✓ snl-1979: "Bob Dylan - Gotta Serve Somebody" (Natsukashii)
+✓ live-aid-1985: "Bob Dylan / Keith Richards / Ron Wood - Blowin' In The Wind (Live Aid 1985)" (Live Aid)
+✓ traveling-wilburys-1988: "The Traveling Wilburys - Handle With Care" (OfficialWilburyVEVO)
+✓ bobfest-1992: "Bob Dylan - My Back Pages (From the 30th Anniversary Concert) (Version 2)" (BobDylanVEVO)
+✓ oscar-things-have-changed: "Bob Dylan - Things Have Changed (Official Video)" (BobDylanVEVO)
+✓ nobel-lecture-2017: "Bob Dylan 2016 Nobel Lecture in Literature" (Nobel Prize)
+✓ shadow-kingdom-2021: "Bob Dylan: Shadow Kingdom" (Front Row Music)
+done: 180 clips
+exit 0

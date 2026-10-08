@@ -1,0 +1,141 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 32 (block names), 26 (eyebrow, address, measures) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f10-q1-b-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f10-q1-b-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f10-q1-b-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* measures above the window (real pixels of a 1920 window drawn at 0.9, so 1728 on screen): 160 | 1600 | 160 */
+  .f10-q1-b-dims { position:absolute; left:96px; top:150px; width:1728px; height:44px; }
+  .f10-q1-b-dims svg { position:absolute; left:0; top:0; width:1728px; height:44px; overflow:visible; }
+  /* a ghost of A's 1200 px (1080 on screen at the same 0.9), centred, for scale */
+  .f10-q1-b-ghost { position:absolute; left:420px; top:96px; width:1080px; height:104px; }
+  .f10-q1-b-ghost svg { position:absolute; left:0; top:0; width:1080px; height:104px; overflow:visible; }
+  .f10-q1-b-gl { position:absolute; left:0; top:0; width:1080px; text-align:center; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.45); white-space:nowrap; }
+  .f10-q1-b-dim { position:absolute; top:0; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); white-space:nowrap; text-align:center; }
+
+  /* the window: a 1920 px window drawn at 0.9 (1728 on screen), the thin browser frame */
+  .f10-q1-b-win { position:absolute; left:96px; top:200px; width:1728px; height:660px; box-sizing:border-box; border:1px solid rgba(var(--rp-ink-rgb),0.5); border-radius:14px; overflow:hidden; background:var(--rp-paper); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f10-q1-b-bar { position:absolute; left:0; top:0; width:1726px; height:36px; box-sizing:border-box; background:var(--rp-tile-2); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.16); }
+  .f10-q1-b-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.3); }
+  .f10-q1-b-addr { position:absolute; left:80px; top:0; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f10-q1-b-era { position:absolute; top:36px; width:144px; height:624px; background:repeating-radial-gradient(circle at 50% 40%, rgba(var(--rp-slab-ink-rgb),0.2) 0 6px, rgba(var(--rp-slab-ink-rgb),0) 6px 20px), var(--rp-slab); }
+
+  .f10-q1-b-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:9px; }
+
+  /* the song page's real words (Like a Rolling Stone), drawn in the window: a page mock, not stand-in boxes */
+  .f10-q1-b-blk { position:absolute; box-sizing:border-box; }
+  .f10-q1-b-ttl { position:absolute; display:flex; align-items:baseline; gap:22px; white-space:nowrap; }
+  .f10-q1-b-ttl .t { font:700 40px/1.1 "Inter"; letter-spacing:-0.015em; text-transform:uppercase; color:var(--rp-ink); }
+  .f10-q1-b-ttl .a, .f10-q1-b-k { font:700 24px/1 "Inter"; letter-spacing:0.1em; text-transform:uppercase; color:rgba(var(--rp-ink-rgb),0.6); white-space:nowrap; }
+  .f10-q1-b-cv { position:absolute; box-sizing:border-box; border:1px solid rgba(var(--rp-slab-ink-rgb),0.3); background:color-mix(in oklab, var(--rp-syn-num) 75%, var(--rp-slab)); }
+  .f10-q1-b-cv span { position:absolute; left:14px; top:14px; right:12px; font:700 24px/1.08 "Inter"; text-transform:uppercase; letter-spacing:-0.005em; color:var(--rp-slab); }
+  .f10-q1-b-chips { position:absolute; display:flex; gap:12px; }
+  .f10-q1-b-chips.v { flex-direction:column; align-items:flex-start; }
+  .f10-q1-b-chips span { padding:9px 14px; background:var(--rp-slab); font:700 24px/1 "Inter"; letter-spacing:0.08em; color:var(--rp-slab-ink); }
+  .f10-q1-b-note { font:400 26px/1.3 "Inter"; color:var(--rp-ink); }
+  .f10-q1-b-pl { margin-top:12px; height:48px; box-sizing:border-box; padding-left:18px; border-radius:6px; background:var(--rp-tile-2); border:1px solid rgba(var(--rp-ink-rgb),0.16); font:700 26px/46px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f10-q1-b-card { border-radius:8px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.16); padding:20px 24px; overflow:hidden; }
+  .f10-q1-b-card .pv { margin-top:12px; font:italic 400 28px/1.28 "Inter"; color:var(--rp-ink); }
+  .f10-q1-b-card .tx { margin-top:12px; font:400 24px/1.4 "Inter"; color:rgba(var(--rp-ink-rgb),0.7); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:var(--tx-lines,2); overflow:hidden; }
+  .f10-q1-b-cn { display:flex; justify-content:space-between; gap:16px; height:40px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.14); font:400 26px/40px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f10-q1-b-cn i { font-style:normal; font-size:24px; color:rgba(var(--rp-ink-rgb),0.6); }
+  .f10-q1-b-map { border-radius:8px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.16); padding:20px 24px; }
+  .f10-q1-b-map svg { position:absolute; left:0; top:0; width:400px; height:490px; }
+  .f10-q1-b-mn { position:absolute; font:400 24px/1.15 "Inter"; color:var(--rp-ink); }
+  .f10-q1-b-mn.c { font-weight:700; text-align:center; }
+</style>
+
+<div id="root" data-composition-id="10-q1-b" data-band="bottom" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f10-q1-b-bg" id="f10-q1-b-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f10-q1-b-scene" id="f10-q1-b-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f10-q1-b-place" id="f10-q1-b-place">If B · step 2</div>
+
+    <div class="f10-q1-b-ghost" id="f10-q1-b-ghost">
+      <div class="f10-q1-b-gl">A · 1200 px</div>
+      <svg viewBox="0 0 1080 104" aria-hidden="true">
+        <g style="stroke:rgba(var(--rp-ink-rgb),0.4); stroke-width:1.5; fill:none; stroke-dasharray:6 6">
+          <line x1="1" y1="40" x2="1" y2="104"/><line x1="1079" y1="40" x2="1079" y2="104"/>
+          <line x1="1" y1="40" x2="1079" y2="40"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="f10-q1-b-dims" id="f10-q1-b-dims">
+      <svg viewBox="0 0 1728 44" aria-hidden="true">
+        <g stroke="rgba(var(--rp-ink-rgb),0.45)" stroke-width="1" fill="none">
+          <line x1="1" y1="34" x2="1" y2="44"/><line x1="144" y1="34" x2="144" y2="44"/><line x1="1584" y1="34" x2="1584" y2="44"/><line x1="1727" y1="34" x2="1727" y2="44"/>
+          <line x1="164" y1="39" x2="1564" y2="39"/>
+        </g>
+      </svg>
+      <div class="f10-q1-b-dim" style="left:0; width:144px">160</div>
+      <div class="f10-q1-b-dim" style="left:144px; width:1440px; top:0"><span style="padding:0 14px; background:var(--rp-paper)">1600 px</span></div>
+      <div class="f10-q1-b-dim" style="left:1584px; width:144px">160</div>
+    </div>
+
+    <div class="f10-q1-b-win" id="f10-q1-b-win" data-artifact="a song page in a 1920 px window, option B">
+      <div class="f10-q1-b-bar">
+        <span class="f10-q1-b-dot" style="left:18px"></span><span class="f10-q1-b-dot" style="left:36px"></span><span class="f10-q1-b-dot" style="left:54px"></span>
+        <span class="f10-q1-b-addr">a song page · 1920 px window</span>
+      </div>
+      <div class="f10-q1-b-era" style="left:0"></div>
+      <div class="f10-q1-b-era" style="left:1582px"></div>
+
+      <div class="f10-q1-b-ttl" style="left:174px; top:58px"><span class="t">Like a Rolling Stone</span><span class="a">Highway 61 Revisited · 1965</span></div>
+      <!-- column 1: cover, players -->
+      <div class="f10-q1-b-blk" id="f10-q1-b-cover" style="left:174px; top:126px; width:400px; height:190px"><div class="f10-q1-b-cv" style="left:0px; top:0px; width:190px; height:190px"><span>Highway 61 Revisited</span></div><div class="f10-q1-b-chips v" style="left:212px; top:0px"><span>LOSS</span><span>FREEDOM</span></div></div>
+      <div class="f10-q1-b-blk" id="f10-q1-b-players" style="left:174px; top:336px; width:400px; height:284px"><div class="f10-q1-b-note">Released as a single in July 1965 at over six minutes, it reached number two in the US.</div><div style="height:18px"></div><div class="f10-q1-b-k">Listen and watch</div><div class="f10-q1-b-pl">&#9654; Spotify</div><div class="f10-q1-b-pl">&#9654; YouTube</div></div>
+
+      <!-- column 2: words, connections -->
+      <div class="f10-q1-b-blk f10-q1-b-card" id="f10-q1-b-words" style="left:604px; top:126px; width:520px; height:250px; --tx-lines:2"><div class="f10-q1-b-k">The words</div><div class="pv">A sneering address to a once-privileged woman who has fallen and must now fend for herself.</div><div class="tx">The singer turns on a woman who once lived in comfort and looked down on others, and who now finds herself alone, broke and without a home. Verse after verse he lists the friends and privileges she relied on and shows how each has failed her.</div></div>
+      <div class="f10-q1-b-blk" id="f10-q1-b-conn" style="left:604px; top:396px; width:520px; height:224px"><span class="f10-q1-b-k">Connections</span><div style="height:12px"></div><div class="f10-q1-b-cn"><span>Jimi Hendrix's version</span><i>covered by</i></div><div class="f10-q1-b-cn"><span>Idiot Wind</span><i>same theme</i></div><div class="f10-q1-b-cn"><span>Ballad of a Thin Man</span><i>same theme</i></div><div class="f10-q1-b-cn"><span>The Rolling Stones' version</span><i>covered by</i></div></div>
+
+      <!-- column 3: the song's map -->
+      <div class="f10-q1-b-blk f10-q1-b-map" id="f10-q1-b-map" style="left:1154px; top:126px; width:400px; height:494px">
+        <span class="f10-q1-b-k">The song's map</span>
+        <svg viewBox="0 0 400 490" aria-hidden="true"><g style="stroke:rgba(var(--rp-ink-rgb),0.45); stroke-width:2; fill:none"><path d="M38 100 V 430"/><path d="M38 214 h 12 M38 286 h 12 M38 358 h 12 M38 430 h 12"/></g><g style="fill:var(--rp-ink)"><circle cx="38" cy="100" r="14"/><circle cx="38" cy="214" r="9"/><circle cx="38" cy="286" r="9"/><circle cx="38" cy="358" r="9"/><circle cx="38" cy="430" r="9"/></g></svg>
+        <div class="f10-q1-b-mn c" style="left:64px; top:86px; text-align:left">Like a Rolling Stone</div>
+        <div class="f10-q1-b-mn" style="left:60px; top:200px; width:320px">Jimi Hendrix's version</div><div class="f10-q1-b-mn" style="left:60px; top:272px; width:320px">Idiot Wind</div><div class="f10-q1-b-mn" style="left:60px; top:344px; width:320px">Ballad of a Thin Man</div><div class="f10-q1-b-mn" style="left:60px; top:416px; width:320px">The Rolling Stones' version</div>
+        <div class="f10-q1-b-ring" id="f10-q1-b-ring"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "10-q1-b";
+  var DUR = 3.477;
+  var $ = function (s) { return document.getElementById("f10-q1-b-" + s); };
+  var pop = function (tl, el, at) {
+    tl.fromTo(el, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the wide window, the two familiar columns, then the third column on "third column, the song's map"; hold still
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+  tl.fromTo($("win"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+  tl.fromTo($("dims"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.35);  // "a wide monitor"
+  tl.fromTo($("ghost"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.5);   // A's 1200, for scale
+  pop(tl, $("cover"), 0.55);
+  pop(tl, $("players"), 0.7);
+  pop(tl, $("words"), 0.9);
+  pop(tl, $("conn"), 1.05);
+  tl.fromTo($("map"), { opacity: 0, x: 32 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 1.62);  // "third"
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 2.6);             // "the song's map"
+
+  tl.set({}, {}, DUR);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

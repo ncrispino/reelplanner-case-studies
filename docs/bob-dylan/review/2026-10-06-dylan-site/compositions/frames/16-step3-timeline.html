@@ -1,0 +1,182 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f16-step3-timeline-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f16-step3-timeline-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* anchor */
+  .f16-step3-timeline-anchor { position:absolute; left:112px; top:58px; display:flex; align-items:baseline; gap:18px; white-space:nowrap; }
+  .f16-step3-timeline-anchor .p { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f16-step3-timeline-anchor .h { font:400 44px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* four phones: the shared 400 x 800 phone, drawn at 0.85 so four sit in a row with their names under them */
+  .f16-step3-timeline-slot { position:absolute; top:150px; width:340px; height:680px; }
+  .f16-step3-timeline-phone { position:absolute; left:0; top:0; width:400px; height:800px; transform:scale(0.85); transform-origin:0 0; border-radius:44px; border:1px solid var(--rp-ink); overflow:hidden; box-sizing:border-box; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04);
+    --e-ground:var(--rp-paper); --e-ink:var(--rp-ink); --e-soft:rgba(var(--rp-ink-rgb),0.62); --e-accent:var(--rp-ink); --e-line:rgba(var(--rp-ink-rgb),0.16);
+    background:var(--e-ground); color:var(--e-ink); }
+  .f16-step3-timeline-strip { position:absolute; left:24px; top:22px; width:352px; height:12px; }
+  .f16-step3-timeline-strip i { position:absolute; top:0; height:12px; border-radius:3px; background:var(--e-line); }
+  .f16-step3-timeline-strip i.on { background:var(--e-accent); }
+  .f16-step3-timeline-photo { position:absolute; overflow:hidden; }
+  .f16-step3-timeline-photo img { display:block; width:100%; height:100%; object-fit:cover; }
+  .f16-step3-timeline-credit { position:absolute; left:24px; top:366px; width:352px; font:400 26px/30px "JetBrains Mono"; color:var(--e-soft); white-space:nowrap; }
+  .f16-step3-timeline-ttl { position:absolute; left:24px; top:448px; width:352px; font:400 44px/1.08 "EB Garamond"; color:var(--e-accent); white-space:nowrap; }
+  .f16-step3-timeline-yrs { position:absolute; left:24px; width:352px; font:400 26px/1 "JetBrains Mono"; color:var(--e-soft); }
+  .f16-step3-timeline-mom { position:absolute; left:24px; top:604px; width:352px; border-top:1px solid var(--e-line); padding-top:16px; }
+  .f16-step3-timeline-mom .my { display:block; font:400 26px/1 "JetBrains Mono"; color:var(--e-accent); }
+  .f16-step3-timeline-mom .mt { display:block; margin-top:10px; font:400 26px/1.15 "Inter"; color:var(--e-ink); white-space:nowrap; }
+  .f16-step3-timeline-tabs { position:absolute; left:0; top:716px; width:400px; height:84px; border-top:1px solid var(--e-line); display:flex; justify-content:space-between; padding:22px 24px 0; box-sizing:border-box; background:var(--e-ground); }
+  .f16-step3-timeline-tabs span { font:400 26px/1 "Inter"; color:var(--e-soft); }
+  .f16-step3-timeline-tabs span.on { color:var(--e-accent); }
+
+  /* Greenwich Village: paper and ink, a typewriter face */
+  .f16-step3-timeline-village .f16-step3-timeline-photo { border-bottom:1px solid var(--rp-ink); }
+  .f16-step3-timeline-village .f16-step3-timeline-ttl { font:400 44px/1.1 "JetBrains Mono"; letter-spacing:-0.02em; color:var(--rp-ink); }
+  .f16-step3-timeline-village .f16-step3-timeline-mom .mt { font-family:"JetBrains Mono"; letter-spacing:-0.02em; }
+
+  /* Going Electric: near-black and amber, condensed bold caps, no photo */
+  .f16-step3-timeline-electric { --e-ground:var(--rp-slab); --e-ink:var(--rp-slab-ink); --e-soft:rgba(var(--rp-slab-ink-rgb),0.66); --e-accent:var(--rp-syn-num); --e-line:rgba(var(--rp-slab-ink-rgb),0.16); }
+  .f16-step3-timeline-big { position:absolute; left:24px; top:104px; width:352px; }
+  .f16-step3-timeline-bl { position:relative; height:118px; overflow:hidden; }
+  .f16-step3-timeline-bi { position:absolute; left:0; top:0; width:352px; height:118px; }
+  .f16-step3-timeline-bi span { display:block; transform:scaleX(0.6); transform-origin:0 50%; font:700 124px/118px "Inter"; letter-spacing:-0.02em; color:var(--rp-slab-ink); white-space:nowrap; }
+  .f16-step3-timeline-bi.amber span { color:var(--rp-syn-num); }
+  .f16-step3-timeline-bar { position:absolute; left:24px; top:372px; width:352px; height:14px; background:var(--rp-syn-num); transform-origin:0 50%; }
+  .f16-step3-timeline-electric .f16-step3-timeline-yrs { color:var(--rp-syn-num); }
+  .f16-step3-timeline-electric .f16-step3-timeline-tabs span.on { font-weight:700; }
+
+  /* Gospel: deep red and gold, a revival-poster serif, centred */
+  .f16-step3-timeline-gospel { --e-ground:color-mix(in oklab, var(--rp-syn-del) 50%, var(--rp-slab)); --e-ink:var(--rp-slab-ink); --e-soft:rgba(var(--rp-slab-ink-rgb),0.74); --e-accent:var(--rp-syn-num); --e-line:rgba(var(--rp-slab-ink-rgb),0.2); }
+  .f16-step3-timeline-gospel .f16-step3-timeline-photo { outline:2px solid var(--rp-syn-num); outline-offset:6px; }
+  .f16-step3-timeline-gospel .f16-step3-timeline-credit,
+  .f16-step3-timeline-gospel .f16-step3-timeline-ttl,
+  .f16-step3-timeline-gospel .f16-step3-timeline-yrs,
+  .f16-step3-timeline-gospel .f16-step3-timeline-mom { text-align:center; }
+  .f16-step3-timeline-gospel .f16-step3-timeline-credit { top:372px; }
+  .f16-step3-timeline-gospel .f16-step3-timeline-ttl { letter-spacing:0.16em; }
+  .f16-step3-timeline-gospel .f16-step3-timeline-mom { border-top-color:var(--rp-syn-num); }
+  .f16-step3-timeline-gospel .f16-step3-timeline-mom .mt { font-family:"EB Garamond"; }
+
+  /* Rough and Rowdy: shadow and brass, a worn italic serif */
+  .f16-step3-timeline-rough { --e-ground:var(--rp-slab); --e-ink:color-mix(in oklab, var(--rp-syn-num) 60%, var(--rp-tile-2)); --e-soft:color-mix(in oklab, color-mix(in oklab, var(--rp-syn-num) 60%, var(--rp-tile-2)) 70%, var(--rp-slab)); --e-accent:color-mix(in oklab, var(--rp-syn-num) 60%, var(--rp-tile-2)); --e-line:color-mix(in oklab, color-mix(in oklab, var(--rp-syn-num) 60%, var(--rp-tile-2)) 35%, var(--rp-slab)); }
+  .f16-step3-timeline-rough .f16-step3-timeline-photo { border:1px solid var(--e-accent); box-sizing:border-box; padding:6px; }
+  .f16-step3-timeline-rough .f16-step3-timeline-ttl { font-style:italic; letter-spacing:0.01em; }
+  .f16-step3-timeline-rough .f16-step3-timeline-mom .mt { font-family:"EB Garamond"; font-style:italic; }
+  .f16-step3-timeline-rough .f16-step3-timeline-yrs { font-style:normal; }
+
+</style>
+
+<div id="root" data-composition-id="16-step3-timeline" data-band="bottom" data-duration="33.987" data-width="1920" data-height="1080">
+
+  <div class="clip f16-step3-timeline-bg" id="f16-step3-timeline-bg" data-start="0" data-duration="33.987" data-track-index="0"></div>
+
+  <div class="clip f16-step3-timeline-scene" id="f16-step3-timeline-scene" data-start="0" data-duration="33.987" data-track-index="1">
+    <div class="f16-step3-timeline-anchor" id="f16-step3-timeline-anchor"><span class="p">Step 3 ·</span><span class="h">The era timeline</span></div>
+
+    <div class="f16-step3-timeline-slot" id="f16-step3-timeline-slot1" style="left:112px" data-artifact="#/era/village">
+      <div class="f16-step3-timeline-phone f16-step3-timeline-village">
+        <div class="f16-step3-timeline-strip"><i class="seg" style="left:0.0px; width:75.0px"></i><i class="seg on" style="left:77.9px; width:15.0px"></i><i class="seg" style="left:95.9px; width:7.5px"></i><i class="seg" style="left:106.4px; width:15.0px"></i><i class="seg" style="left:124.3px; width:30.0px"></i><i class="seg" style="left:157.2px; width:11.2px"></i><i class="seg" style="left:171.4px; width:30.0px"></i><i class="seg" style="left:204.4px; width:26.3px"></i><i class="seg" style="left:233.6px; width:33.7px"></i><i class="seg" style="left:270.3px; width:52.5px"></i><i class="seg" style="left:325.7px; width:26.3px"></i></div>
+        <div class="f16-step3-timeline-photo" id="f16-step3-timeline-ph1" style="left:0; top:52px; width:400px; height:300px"><img src="assets/photos/1963-march-on-washington.jpg" alt="Bob Dylan, 1963" style="object-position:50% 30%"></div>
+        <div class="f16-step3-timeline-credit" id="f16-step3-timeline-cr1">Rowland Scherman, 1963<br>public domain</div>
+        <div class="f16-step3-timeline-ttl" id="f16-step3-timeline-t1"><span class="f16-step3-timeline-ch1">G</span><span class="f16-step3-timeline-ch1">r</span><span class="f16-step3-timeline-ch1">e</span><span class="f16-step3-timeline-ch1">e</span><span class="f16-step3-timeline-ch1">n</span><span class="f16-step3-timeline-ch1">w</span><span class="f16-step3-timeline-ch1">i</span><span class="f16-step3-timeline-ch1">c</span><span class="f16-step3-timeline-ch1">h</span><br><span class="f16-step3-timeline-ch1">V</span><span class="f16-step3-timeline-ch1">i</span><span class="f16-step3-timeline-ch1">l</span><span class="f16-step3-timeline-ch1">l</span><span class="f16-step3-timeline-ch1">a</span><span class="f16-step3-timeline-ch1">g</span><span class="f16-step3-timeline-ch1">e</span></div>
+        <div class="f16-step3-timeline-yrs" id="f16-step3-timeline-y1" style="top:556px">1961–1964</div>
+        <div class="f16-step3-timeline-mom" id="f16-step3-timeline-m1"><span class="my">1963</span><span class="mt">March on Washington</span></div>
+        <div class="f16-step3-timeline-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+      </div>
+    </div>
+    <div class="f16-step3-timeline-slot" id="f16-step3-timeline-slot2" style="left:564px" data-artifact="#/era/electric">
+      <div class="f16-step3-timeline-phone f16-step3-timeline-electric">
+        <div class="f16-step3-timeline-strip"><i class="seg" style="left:0.0px; width:75.0px"></i><i class="seg" style="left:77.9px; width:15.0px"></i><i class="seg on" style="left:95.9px; width:7.5px"></i><i class="seg" style="left:106.4px; width:15.0px"></i><i class="seg" style="left:124.3px; width:30.0px"></i><i class="seg" style="left:157.2px; width:11.2px"></i><i class="seg" style="left:171.4px; width:30.0px"></i><i class="seg" style="left:204.4px; width:26.3px"></i><i class="seg" style="left:233.6px; width:33.7px"></i><i class="seg" style="left:270.3px; width:52.5px"></i><i class="seg" style="left:325.7px; width:26.3px"></i></div>
+        <div class="f16-step3-timeline-big">
+          <div class="f16-step3-timeline-bl"><div class="f16-step3-timeline-bi" id="f16-step3-timeline-e1"><span>GOING</span></div></div>
+          <div class="f16-step3-timeline-bl"><div class="f16-step3-timeline-bi amber" id="f16-step3-timeline-e2"><span>ELECTRIC</span></div></div>
+        </div>
+        <div class="f16-step3-timeline-bar" id="f16-step3-timeline-bar2"></div>
+        <div class="f16-step3-timeline-yrs" id="f16-step3-timeline-y2" style="top:448px">1965–1966</div>
+        <div class="f16-step3-timeline-mom" id="f16-step3-timeline-m2"><span class="my">1965</span><span class="mt">Newport: plays electric</span></div>
+        <div class="f16-step3-timeline-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+      </div>
+    </div>
+    <div class="f16-step3-timeline-slot" id="f16-step3-timeline-slot3" style="left:1016px" data-artifact="#/era/gospel">
+      <div class="f16-step3-timeline-phone f16-step3-timeline-gospel">
+        <div class="f16-step3-timeline-strip"><i class="seg" style="left:0.0px; width:75.0px"></i><i class="seg" style="left:77.9px; width:15.0px"></i><i class="seg" style="left:95.9px; width:7.5px"></i><i class="seg" style="left:106.4px; width:15.0px"></i><i class="seg" style="left:124.3px; width:30.0px"></i><i class="seg on" style="left:157.2px; width:11.2px"></i><i class="seg" style="left:171.4px; width:30.0px"></i><i class="seg" style="left:204.4px; width:26.3px"></i><i class="seg" style="left:233.6px; width:33.7px"></i><i class="seg" style="left:270.3px; width:52.5px"></i><i class="seg" style="left:325.7px; width:26.3px"></i></div>
+        <div class="f16-step3-timeline-photo" id="f16-step3-timeline-ph3" style="left:24px; top:56px; width:352px; height:296px"><img src="assets/photos/1980-gospel-tour.jpg" alt="Bob Dylan, 1980" style="object-position:50% 18%"></div>
+        <div class="f16-step3-timeline-credit" id="f16-step3-timeline-cr3">Jean-Luc Ourlin, 1980<br>CC BY-SA 2.0</div>
+        <div class="f16-step3-timeline-ttl" id="f16-step3-timeline-t3">Gospel</div>
+        <div class="f16-step3-timeline-yrs" id="f16-step3-timeline-y3" style="top:512px">1979–1981</div>
+        <div class="f16-step3-timeline-mom" id="f16-step3-timeline-m3"><span class="my">1980</span><span class="mt">Gospel tour, Toronto</span></div>
+        <div class="f16-step3-timeline-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+      </div>
+    </div>
+    <div class="f16-step3-timeline-slot" id="f16-step3-timeline-slot4" style="left:1468px" data-artifact="#/era/late-renaissance">
+      <div class="f16-step3-timeline-phone f16-step3-timeline-rough">
+        <div class="f16-step3-timeline-strip"><i class="seg" style="left:0.0px; width:75.0px"></i><i class="seg" style="left:77.9px; width:15.0px"></i><i class="seg" style="left:95.9px; width:7.5px"></i><i class="seg" style="left:106.4px; width:15.0px"></i><i class="seg" style="left:124.3px; width:30.0px"></i><i class="seg" style="left:157.2px; width:11.2px"></i><i class="seg" style="left:171.4px; width:30.0px"></i><i class="seg" style="left:204.4px; width:26.3px"></i><i class="seg" style="left:233.6px; width:33.7px"></i><i class="seg on" style="left:270.3px; width:52.5px"></i><i class="seg" style="left:325.7px; width:26.3px"></i></div>
+        <div class="f16-step3-timeline-photo" id="f16-step3-timeline-ph4" style="left:24px; top:56px; width:352px; height:296px"><img src="assets/photos/2010-azkena.jpg" alt="Bob Dylan, 2010" style="object-position:50% 22%"></div>
+        <div class="f16-step3-timeline-credit" id="f16-step3-timeline-cr4">Alberto Cabello, 2010<br>CC BY 2.0</div>
+        <div class="f16-step3-timeline-ttl" id="f16-step3-timeline-t4">Late Renaissance</div>
+        <div class="f16-step3-timeline-yrs" id="f16-step3-timeline-y4" style="top:512px">1997–2012</div>
+        <div class="f16-step3-timeline-mom" id="f16-step3-timeline-m4"><span class="my">2001</span><span class="mt">Oscar, "Things Have Changed"</span></div>
+        <div class="f16-step3-timeline-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "16-step3-timeline";
+  var P = "f16-step3-timeline-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var all = function (s) { return document.querySelectorAll("." + P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+  var fade = function (tl, el, at, dur) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: dur || 0.6, ease: E }, at); };
+  var phoneIn = function (tl, n, at) { tl.fromTo($("slot" + n), { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.8, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-7s): the anchor; phone 1, Greenwich Village: the photo, its credit, the title typed
+  rise(tl, $("anchor"), 0.111, 10);
+  tl.fromTo($("slot1"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.223);
+  fade(tl, $("ph1"), 1.005, 0.9);
+  rise(tl, $("cr1"), 2.232, 8);
+  tl.fromTo(all("ch1"), { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.07, ease: "none" }, 3.125);
+  rise(tl, $("y1"), 4.689, 8);
+  rise(tl, $("m1"), 5.358, 10);
+
+  // Scene 2 (7-14s): phone 2 slides in, Going Electric: no photo, its title set huge
+  phoneIn(tl, 2, 7.813);
+  tl.fromTo($("e1"), { y: 118 }, { y: 0, duration: 0.6, ease: E }, 8.706);
+  tl.fromTo($("e2"), { y: 118 }, { y: 0, duration: 0.6, ease: E }, 9.153);
+  tl.fromTo($("bar2"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 10.046);
+  rise(tl, $("y2"), 10.939, 8);
+  rise(tl, $("m2"), 11.832, 10);
+
+  // Scene 3 (14-21s): phone 3, Gospel: the 1980 photo in its gold frame, the credit, the serif title
+  phoneIn(tl, 3, 15.627);
+  fade(tl, $("ph3"), 16.408, 0.9);
+  rise(tl, $("cr3"), 17.636, 8);
+  rise(tl, $("t3"), 18.53, 12);
+  rise(tl, $("y3"), 19.422, 8);
+  rise(tl, $("m3"), 20.315, 10);
+
+  // Scene 4 (21-30s): phone 4, Rough and Rowdy: shadow and brass, the 2010 photo, worn italic; then hold
+  phoneIn(tl, 4, 23.441);
+  fade(tl, $("ph4"), 24.222, 0.9);
+  rise(tl, $("cr4"), 25.45, 8);
+  tl.fromTo($("t4"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.7, ease: E }, 26.343);
+  rise(tl, $("y4"), 27.236, 8);
+  rise(tl, $("m4"), 27.905, 10);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 29.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,177 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 46 (song title), 32 (cover title), 28 (words, card names), 26 (labels, note, chips, mono), 24 (pin, map names) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f20s4-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f20s4-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f20s4-place { position:absolute; left:160px; top:26px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the mock window: 1600 x 812 at (160, 72), bottom 884 */
+  .f20s4-win { position:absolute; left:160px; top:72px; width:1600px; height:812px; box-sizing:border-box; border-radius:14px; border:1px solid var(--rp-ink); overflow:hidden; background:var(--rp-slab); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f20s4-bar { position:absolute; left:0; top:0; width:100%; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f20s4-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f20s4-addr { position:absolute; left:110px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); white-space:nowrap; font-variant-ligatures:none; }
+
+  /* Going Electric: slab ground with op-art rings, condensed caps, amber accent */
+  .f20s4-view { position:absolute; left:0; top:37px; width:1598px; height:773px; overflow:hidden;
+    background: repeating-radial-gradient(circle at 78% 46%, rgba(var(--rp-slab-ink-rgb),0.07) 0 3px, rgba(var(--rp-slab-ink-rgb),0) 3px 30px), var(--rp-slab); color:var(--rp-slab-ink); }
+  .f20s4-cond { display:inline-block; transform:scaleX(0.8); transform-origin:0 0; white-space:nowrap; }
+
+  /* the desktop header bar under the address bar: the site name, the tabs (lowercase text, shown in capitals), the search field */
+  .f20s4-hdr { position:absolute; left:0; top:0; width:100%; height:48px; box-sizing:border-box; background:var(--rp-slab); border-bottom:1px solid rgba(var(--rp-slab-ink-rgb),0.18); color:var(--rp-slab-ink); z-index:1; }
+  .f20s4-hdr .lg { position:absolute; left:22px; top:0; font:700 26px/48px "Inter"; letter-spacing:-0.01em; white-space:nowrap; }
+  .f20s4-hdr .tabs { position:absolute; left:0; right:0; top:0; height:48px; display:flex; justify-content:center; gap:34px; }
+  .f20s4-hdr .tab { position:relative; font:400 26px/48px "Inter"; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap; color:rgba(var(--rp-slab-ink-rgb),0.78); }
+  .f20s4-hdr .tab.on { color:var(--rp-slab-ink); font-weight:700; }
+  .f20s4-hdr .tab.on:after { content:""; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--rp-slab-ink); }
+  .f20s4-hdr .sf { position:absolute; right:16px; top:7px; height:34px; box-sizing:border-box; padding:0 12px; border-radius:6px; border:1px solid rgba(var(--rp-slab-ink-rgb),0.4); font:400 26px/32px "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.7); white-space:nowrap; }
+  /* left column: stays as you scroll */
+  .f20s4-left { position:absolute; left:48px; top:68px; width:560px; height:636px; box-sizing:border-box; border-radius:8px; background:color-mix(in oklab, var(--rp-slab) 94%, var(--rp-slab-ink)); border:1px solid rgba(var(--rp-slab-ink-rgb),0.16); }
+  /* drawn cover: the shared style (frame 13) and Highway 61 Revisited's colour */
+  .f20s4-cover { position:absolute; left:28px; top:28px; width:200px; height:200px; box-sizing:border-box; border:1px solid rgba(var(--rp-slab-ink-rgb),0.3); background:color-mix(in oklab, var(--rp-syn-num) 75%, var(--rp-slab)); }
+  .f20s4-cover .t { position:absolute; left:14px; top:14px; right:12px; font:700 24px/1.08 "Inter"; text-transform:uppercase; letter-spacing:-0.005em; color:var(--rp-slab); }
+  .f20s4-title { position:absolute; left:254px; top:30px; font:700 46px/1.02 "Inter"; text-transform:uppercase; letter-spacing:-0.01em; color:var(--rp-syn-num); }
+  .f20s4-sub { position:absolute; left:254px; top:192px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.7); white-space:nowrap; }
+  .f20s4-note { position:absolute; left:28px; top:258px; width:504px; font:400 26px/1.42 "Inter"; color:var(--rp-slab-ink); }
+  .f20s4-chips { position:absolute; left:28px; top:404px; display:flex; gap:12px; }
+  .f20s4-chips span { display:block; height:44px; box-sizing:border-box; padding:0 18px; border-radius:9999px; border:1px solid var(--rp-syn-num); font:400 26px/42px "JetBrains Mono"; color:var(--rp-syn-num); }
+  .f20s4-spot { position:absolute; left:28px; top:476px; width:504px; height:132px; box-sizing:border-box; border-radius:8px; background:var(--rp-slab-bar); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); }
+  .f20s4-spot .lbl { position:absolute; left:104px; top:26px; font:700 26px/1 "Inter"; color:var(--rp-slab-ink); }
+  .f20s4-spot .sn { position:absolute; left:104px; top:66px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.7); white-space:nowrap; }
+  .f20s4-spot .pl { position:absolute; left:24px; top:34px; width:64px; height:64px; border-radius:50%; background:var(--rp-syn-add); }
+  .f20s4-spot .pl:after { content:""; position:absolute; left:25px; top:20px; border-left:20px solid var(--rp-slab); border-top:12px solid transparent; border-bottom:12px solid transparent; }
+
+  /* the pin: the one coral moment */
+  .f20s4-ring { position:absolute; left:40px; top:60px; width:576px; height:652px; box-sizing:border-box; border-radius:12px; border:2px solid var(--rp-coral); }
+  .f20s4-pin { position:absolute; left:48px; top:722px; height:42px; box-sizing:border-box; padding:0 16px; border-radius:6px; background:var(--rp-coral); font:400 24px/42px "Inter"; color:var(--rp-on-ink); white-space:nowrap; }
+
+  /* right column: scrolls */
+  .f20s4-right { position:absolute; left:648px; top:48px; width:904px; height:725px; overflow:hidden; }
+  .f20s4-rin { position:absolute; left:0; top:20px; width:904px; height:800px; }
+  .f20s4-guide { position:absolute; left:0; top:0; width:904px; height:636px; box-sizing:border-box; border-radius:8px; border:1px dashed rgba(var(--rp-slab-ink-rgb),0.3); }
+  .f20s4-words { position:absolute; left:0; top:0; width:904px; height:196px; box-sizing:border-box; padding:24px 28px; border-radius:8px; background:var(--rp-slab-bar); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); }
+  .f20s4-h { font:700 26px/1 "Inter"; text-transform:uppercase; letter-spacing:0.06em; color:var(--rp-syn-num); }
+  .f20s4-words p { margin:18px 0 0; font:400 28px/1.42 "Inter"; color:var(--rp-slab-ink); }
+  .f20s4-ch { position:absolute; left:0; top:224px; }
+  .f20s4-card { position:absolute; width:440px; height:104px; box-sizing:border-box; padding:18px 18px; border-radius:8px; background:var(--rp-slab-bar); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); }
+  .f20s4-card .n { font:700 26px/1.1 "Inter"; letter-spacing:-0.01em; color:var(--rp-slab-ink); white-space:nowrap; }
+  .f20s4-card .r { margin-top:12px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.66); white-space:nowrap; }
+  .f20s4-map { position:absolute; left:0; top:488px; width:904px; height:249px; box-sizing:border-box; border-radius:8px; background:color-mix(in oklab, var(--rp-slab) 80%, var(--rp-ink)); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); overflow:hidden; }
+  .f20s4-map svg { position:absolute; left:0; top:-26px; width:904px; height:300px; }
+  .f20s4-mn { position:absolute; font:400 24px/1 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.85); white-space:nowrap; }
+  .f20s4-mn.c { color:var(--rp-syn-num); font-weight:700; padding:2px 8px; background:color-mix(in oklab, var(--rp-slab) 80%, var(--rp-ink)); }
+</style>
+
+<div id="root" data-composition-id="20-step4" data-band="bottom" data-start="0" data-duration="16.479" data-width="1920" data-height="1080">
+
+  <div class="clip f20s4-bg" id="f20s4-bg" data-start="0" data-duration="16.479" data-track-index="0"></div>
+
+  <div class="clip f20s4-scene" id="f20s4-scene" data-start="0" data-duration="16.479" data-track-index="1">
+    <div class="f20s4-place" id="f20s4-place">Step 4 · a song page, two columns</div>
+
+    <div class="f20s4-win" id="f20s4-win" data-artifact="/song/like-a-rolling-stone/">
+      <div class="f20s4-bar">
+        <div class="f20s4-dot" style="left:18px"></div><div class="f20s4-dot" style="left:36px"></div><div class="f20s4-dot" style="left:54px"></div>
+        <div class="f20s4-addr">/song/like-a-rolling-stone/</div>
+      </div>
+      <div class="f20s4-view">
+        <div class="f20s4-hdr"><span class="lg">Dylan</span><div class="tabs"><span class="tab">eras</span><span class="tab">threads</span><span class="tab">map</span><span class="tab">about</span></div><span class="sf">Search /</span></div>
+
+        <!-- left column -->
+        <div class="f20s4-left" id="f20s4-left">
+          <div class="f20s4-cover" id="f20s4-cover"><div class="t">Highway 61 Revisited</div></div>
+          <div class="f20s4-title" id="f20s4-title"><span class="f20s4-cond">Like a<br>Rolling<br>Stone</span></div>
+          <div class="f20s4-sub" id="f20s4-sub">1965</div>
+          <div class="f20s4-note" id="f20s4-note">Released as a single in July 1965 at over six minutes, it reached number two in the US.</div>
+          <div class="f20s4-chips" id="f20s4-chips"><span>LOSS</span><span>FREEDOM</span></div>
+          <div class="f20s4-spot" id="f20s4-spot"><div class="pl"></div><div class="lbl">Spotify</div><div class="sn">Like a Rolling Stone</div></div>
+        </div>
+        <div class="f20s4-ring" id="f20s4-ring"></div>
+        <div class="f20s4-pin" id="f20s4-pin">stays as you scroll</div>
+
+        <!-- right column -->
+        <div class="f20s4-right" id="f20s4-right">
+          <div class="f20s4-rin" id="f20s4-rin">
+            <div class="f20s4-guide" id="f20s4-guide"></div>
+            <div class="f20s4-words" id="f20s4-words"><div class="f20s4-h">The words</div><p>A sneering address to a once-privileged woman who has fallen and must now fend for herself.</p></div>
+            <div class="f20s4-ch">
+              <div class="f20s4-card" id="f20s4-c1" style="left:0; top:0"><div class="n">Jimi Hendrix&#39;s version</div><div class="r">covered by</div></div>
+              <div class="f20s4-card" id="f20s4-c2" style="left:464px; top:0"><div class="n">Idiot Wind</div><div class="r">same theme</div></div>
+              <div class="f20s4-card" id="f20s4-c3" style="left:0; top:128px"><div class="n">Ballad of a Thin Man</div><div class="r">same theme</div></div>
+              <div class="f20s4-card" id="f20s4-c4" style="left:464px; top:128px"><div class="n">The Rolling Stones&#39; version</div><div class="r">covered by</div></div>
+            </div>
+            <div class="f20s4-map" id="f20s4-map">
+              <svg viewBox="0 0 904 300" aria-hidden="true">
+                <g style="stroke:rgba(var(--rp-slab-ink-rgb),0.35); stroke-width:1.5">
+                  <line x1="452" y1="150" x2="170" y2="70"/><line x1="452" y1="150" x2="734" y2="70"/>
+                  <line x1="452" y1="150" x2="170" y2="230"/><line x1="452" y1="150" x2="734" y2="230"/>
+                </g>
+                <g style="fill:rgba(var(--rp-slab-ink-rgb),0.85)">
+                  <circle cx="170" cy="70" r="7"/><circle cx="734" cy="70" r="7"/><circle cx="170" cy="230" r="7"/><circle cx="734" cy="230" r="7"/>
+                </g>
+                <g style="fill:rgba(var(--rp-slab-ink-rgb),0.25)">
+                  <circle cx="60" cy="40" r="2"/><circle cx="320" cy="30" r="2"/><circle cx="600" cy="268" r="2"/><circle cx="860" cy="150" r="2"/><circle cx="300" cy="270" r="2"/><circle cx="580" cy="36" r="2"/><circle cx="40" cy="190" r="2"/>
+                </g>
+                <circle cx="452" cy="150" r="11" style="fill:var(--rp-syn-num)"/>
+              </svg>
+              <!-- above the dot, in the wedge between the two upward lines, so no line crosses it -->
+              <div class="f20s4-mn c" style="left:329px; top:52px">Like a Rolling Stone</div>
+              <div class="f20s4-mn" style="left:70px; top:6px">Jimi Hendrix</div>
+              <div class="f20s4-mn" style="left:660px; top:6px">Idiot Wind</div>
+              <div class="f20s4-mn" style="left:70px; top:214px">Ballad of a Thin Man</div>
+              <div class="f20s4-mn" style="left:610px; top:214px">The Rolling Stones</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "20-step4";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f20s4-" + s); };
+  var pop = function (el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8.3s): the window; the two columns; the left column fills; the pin
+  pop($("place"), 0.05, 8);
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, 0.08);
+  // "in two columns": both column boxes
+  tl.fromTo($("left"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 2.6);
+  tl.fromTo($("guide"), { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 2.75);
+  // "on a song page, the cover, the note and the players"
+  pop($("title"), 4.05);
+  pop($("sub"), 4.2);
+  tl.fromTo($("cover"), { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, 4.7);
+  pop($("note"), 5.4);
+  pop($("chips"), 5.65);
+  pop($("spot"), 5.95);
+  // "stay on the left as you scroll"
+  tl.fromTo($("ring"), { opacity: 0, scale: 0.985 }, { opacity: 1, scale: 1, duration: 0.45, ease: E }, 6.35);
+  tl.fromTo($("pin"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.45, ease: E }, 6.55);
+
+  // Scene 2 (8.3-13s): the words card; the connections two across; the right side scrolls to the map
+  pop($("words"), 9.15);
+  tl.to($("guide"), { opacity: 0, duration: 0.4, ease: E }, 9.2);
+  pop($("c1"), 9.7); pop($("c2"), 9.85); pop($("c3"), 10.0); pop($("c4"), 10.15);
+  // "and a small map": the right column scrolls; the left stays
+  // the right column stays put (the words card must not slide under the header)
+  tl.fromTo($("map"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 11.35);
+
+  // Scene 3: hold
+  tl.set({}, {}, 15.979);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

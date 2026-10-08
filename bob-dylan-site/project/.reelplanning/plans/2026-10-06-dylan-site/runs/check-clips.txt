@@ -1,0 +1,3 @@
+$ node tools/check-clips.mjs
+✓ 179 clips still play
+exit 0

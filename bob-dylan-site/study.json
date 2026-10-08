@@ -1,0 +1,287 @@
+{
+  "slug": "bob-dylan",
+  "title": "Bob Dylan, explored",
+  "label": "Case study · 6–8 October 2026",
+  "dek": "One person and Claude Code built an interactive Bob Dylan site over three days (about 36 hours), starting from an empty folder. Most of its plans were reviewed as narrated videos. Below: the site as it changed, then every step in order.",
+  "summary": [
+    "The owner asked for an interactive site about Bob Dylan's life and music that works well on a phone. <a href=\"https://github.com/ncrispino/reelplanning\">reelplanning</a> turned three of the four plans into narrated videos that paused at each open question for the owner to answer, and after each build a second video showed the finished pages. The fourth plan came from a comment on one of those videos, and was approved in chat."
+  ],
+  "project": "dylan-site",
+  "days": {
+    "2026-10-06": "Day 1 · Tue 6 Oct",
+    "2026-10-07": "Day 2 · Wed 7 Oct",
+    "2026-10-08": "Day 3 · Thu 8 Oct"
+  },
+  "plans": [
+    {
+      "id": "2026-10-06-dylan-site",
+      "title": "The site, from an empty folder",
+      "kind": "new project",
+      "match": "dylan-site|explorer site|^build dylan-site"
+    },
+    {
+      "id": "2026-10-07-desktop",
+      "title": "The site on a computer",
+      "kind": "changes to the site",
+      "match": "desktop|on a computer"
+    },
+    {
+      "id": "2026-10-07-every-song",
+      "title": "Every track a page",
+      "kind": "changes to the site",
+      "match": "every-song|every track"
+    },
+    {
+      "id": "2026-10-07-fuller",
+      "title": "A fuller site",
+      "kind": "changes to the site",
+      "match": "fuller"
+    }
+  ],
+  "starts": [
+    [
+      "Use reelplanning to plan: Build an interactive website about Bob Dylan",
+      "2026-10-06-dylan-site"
+    ],
+    [
+      "ok also i know this is a little different",
+      "2026-10-07-every-song"
+    ],
+    [
+      "we need a new plan to make this work better on a computer",
+      "2026-10-07-desktop"
+    ]
+  ],
+  "approves": [
+    [
+      "ok i approved walkthrough. then sure i approve this",
+      "2026-10-07-fuller"
+    ]
+  ],
+  "startedByReview": {
+    "plan": "2026-10-07-fuller",
+    "review": "2026-10-07-desktop",
+    "comment": "bare"
+  },
+  "videos": [
+    {
+      "slug": "dylan-site",
+      "plan": "2026-10-06-dylan-site",
+      "sub": "video",
+      "still": "v-dylan-site-video"
+    },
+    {
+      "slug": "dylan-site-walkthrough",
+      "plan": "2026-10-06-dylan-site",
+      "sub": "walkthrough-video",
+      "still": "v-dylan-site-walkthrough-video"
+    },
+    {
+      "slug": "desktop",
+      "plan": "2026-10-07-desktop",
+      "sub": "video",
+      "still": "v-desktop-video"
+    },
+    {
+      "slug": "desktop-walkthrough",
+      "plan": "2026-10-07-desktop",
+      "sub": "walkthrough-video",
+      "still": "v-desktop-walkthrough-video"
+    },
+    {
+      "slug": "every-song",
+      "plan": "2026-10-07-every-song",
+      "sub": "video",
+      "still": "v-every-song-video"
+    },
+    {
+      "slug": "every-song-walkthrough",
+      "plan": "2026-10-07-every-song",
+      "sub": "walkthrough-video",
+      "still": "v-every-song-walkthrough-video"
+    },
+    {
+      "slug": "fuller-walkthrough",
+      "plan": "2026-10-07-fuller",
+      "sub": "walkthrough-video",
+      "still": "v-fuller-walkthrough-video"
+    }
+  ],
+  "stages": [
+    {
+      "img": "s1-phone-first",
+      "caption": "Day 1 · the first build",
+      "event": "build-2026-10-07T01:14",
+      "kind": "phone"
+    },
+    {
+      "img": "s2-phone-themed",
+      "caption": "Day 2 · after “boring and stock”",
+      "event": "change-2026-10-07T03:43",
+      "kind": "phone"
+    },
+    {
+      "img": "s3-desk-before",
+      "caption": "Day 2 · on a computer, before",
+      "event": "asked-2026-10-07T06:58",
+      "kind": "desk"
+    },
+    {
+      "img": "s4-desk-after",
+      "caption": "Day 2 · on a computer, after",
+      "event": "build-2026-10-07T19:23",
+      "kind": "desk"
+    },
+    {
+      "img": "s5-album-top",
+      "caption": "Day 3 · added to every album page: a player for the whole album, and an essay",
+      "event": "build-2026-10-07T23:40",
+      "kind": "desk",
+      "badge": "added"
+    }
+  ],
+  "pictures": {
+    "change-2026-10-07T03:43": [
+      [
+        "s1-phone-first",
+        "Before: the first build",
+        "phone"
+      ],
+      [
+        "s2-phone-themed",
+        "After: each era its own look",
+        "phone"
+      ]
+    ],
+    "build-2026-10-07T19:23": [
+      [
+        "s3-desk-before",
+        "Before: the phone's column at 1440 px",
+        "desk"
+      ],
+      [
+        "s4-desk-after",
+        "After: one era across the window",
+        "desk"
+      ]
+    ],
+    "build-2026-10-07T23:40": [
+      [
+        "s5-album-top",
+        "Added to every album page: a player for the whole album, and an essay (each song's page already had its own player)",
+        "desk"
+      ],
+      [
+        "s5-era-bands",
+        "Added under every era: its story beside a gallery of photographs",
+        "desk"
+      ]
+    ],
+    "change-2026-10-08T04:11": [
+      [
+        "s5-moment-card",
+        "A drawn card where no free photo exists",
+        "desk"
+      ]
+    ]
+  },
+  "facts": [
+    [
+      "Plan videos",
+      "Three of the four plans were made into narrated videos. Each paused at an open question for the owner to answer. The fourth was approved in chat."
+    ],
+    [
+      "Quick checks",
+      "A plan video also asks a few multiple-choice questions, to check the viewer is following. They decide nothing."
+    ],
+    [
+      "Saved decisions",
+      "The owner's answers were saved as numbered decisions in <a href=\"https://github.com/ncrispino/reelplanning-case-studies/blob/main/bob-dylan-site/project/.reelplanning/decisions.md\">decisions.md</a>. Each later plan lists the ones it must keep, as in <a href=\"https://github.com/ncrispino/reelplanning-case-studies/blob/main/bob-dylan-site/project/.reelplanning/plans/2026-10-07-fuller/plan.md#decisions-in-force\">the fuller plan</a>."
+    ],
+    [
+      "Walkthrough videos",
+      "After each build, a video of the built pages paused on choices the agent made without asking. It stopped where a choice showed on the site or would be hard to undo. A walkthrough's questions continue the plan's numbering."
+    ],
+    [
+      "Fresh eyes",
+      "Before the owner saw a video, two agents that never saw the chat watched it: one as a newcomer, one as a designer. Each of their notes has a written answer, fixed or kept, as in <a href=\"https://github.com/ncrispino/reelplanning-case-studies/blob/main/bob-dylan-site/project/.reelplanning/plans/2026-10-07-fuller/walkthrough-video/fresh-eyes/designer.md\">this designer's notes</a>."
+    ],
+    [
+      "In the timeline",
+      "A video fix is a commit that changes a video after it was first made. A follow-up commit answers a review or a check. A build commit adds to the site."
+    ]
+  ],
+  "pages": [
+    "site/",
+    "site/era/electric/"
+  ],
+  "heading": "Building a Bob Dylan website with reelplanning",
+  "stripLabel": "The finished site as it changed, from the first build to the last. Click a picture to see it larger, then step through the rest with ‹ › or the arrow keys.",
+  "card": "s4-desk-after",
+  "blurb": "An interactive Bob Dylan site, built from an empty folder by one person and Claude Code over three days. Most of its plans were reviewed as narrated videos; the owner's comments shaped what came next.",
+  "together": [
+    [
+      "2026-10-07-desktop",
+      "2026-10-07-every-song"
+    ]
+  ],
+  "togetherNote": "Asked for nineteen minutes apart and planned together, so their steps interleave.",
+  "videoNote": "Each video is shown as it was last built. Three were rebuilt after a review asked for changes: the first plan video, its walkthrough, and the walkthrough of the site on a computer. Their first versions were not kept; the timeline quotes what the owner said about them.",
+  "versions": {
+    "dylan-site": "video-2026-10-06T21:42",
+    "dylan-site-walkthrough": "video-2026-10-07T04:10",
+    "desktop-walkthrough": "change-2026-10-07T21:10"
+  },
+  "ranWith": {
+    "model": "claude-opus-5-5",
+    "modelName": "Claude Opus 5.5",
+    "claudeCode": "2.1.291",
+    "reelplanning": "0.2.0",
+    "hyperframes": "0.8.52"
+  },
+  "plainCommits": {
+    "35a4250": "The first plan: an explorer site about Bob Dylan.",
+    "28e99a6": "The plan video: a storyboard, a script, narration and 41 frames.",
+    "5922d2e": "The plan video fixed after the fresh eyes' notes, and the plan made clearer.",
+    "8ac51a5": "The plan revised after the owner's first review.",
+    "2236da1": "The plan video rebuilt from the revised plan.",
+    "0a798f5": "The revised plan fixed after the fresh eyes' notes, with its questions in order: photos second, lyrics third.",
+    "4e93bb6": "The plan approved, and the review's comments folded into its steps.",
+    "e3ec349": "The site built in Astro: the dataset, a timeline of eras, the pages, threads, a map, search and checks.",
+    "ea6d9ca": "26 free-licensed era photos from Wikimedia Commons added, and a caption fixed.",
+    "ef9cb16": "Search copes with swapped letters, and the walkthrough is written.",
+    "ce1eda4": "Fixes from the code check (the base path, dragging the map, lyrics links, the phone check), and the walkthrough's answers.",
+    "2b26d5a": "Map labels stay on screen, and the walkthrough's screenshots are taken.",
+    "68c7925": "Era panels fit a phone, the phone check catches panels that are too wide, and search lists the best matches first.",
+    "358e01d": "The walkthrough video: a storyboard, a script and scenes made from real screenshots.",
+    "e11fbc0": "Long titles fit a phone, the phone check catches headings that overflow, and the screenshots are retaken.",
+    "1746cb5": "The walkthrough video fixed after the fresh eyes' notes, with its narration and two new glossary terms.",
+    "16484b1": "The changes the owner asked for in the walkthrough review.",
+    "dabbe22": "Track numbers get their own column, and the walkthrough's counts are updated.",
+    "03b0486": "The walkthrough video rebuilt after two more rounds of fresh eyes.",
+    "072a4f2": "Excerpts added by hand move to their own file, so a data merge keeps them; the second walkthrough review is filed.",
+    "ce78a40": "Every album song gets a summary of its words, in our own words: lyrics are summarised, not quoted (decision D-033).",
+    "1eeb894": "Two plans written together: the site on a computer (6 steps, 3 questions) and every track a page (4 steps, 2 questions).",
+    "89ba32d": "The every-song plan video (22 scenes), with two rounds of fresh eyes answered and the plan tightened.",
+    "cf8e982": "The desktop plan video (32 scenes), with three rounds of fresh eyes answered.",
+    "40447f2": "The every-song plan approved: all 277 tracks get a page (D-034), and another writer's song gets the same page (D-035).",
+    "63dbee5": "The desktop plan cites those two decisions and records its answered questions.",
+    "7b82bec": "The desktop plan approved: content up to 1200 px (D-036), one era per screen (D-037), a map dot selects its song (D-038).",
+    "cadf678": "Every album track mapped to a song (271 new ones), with Spotify for all 452, bobdylan.com links and 30 new connections.",
+    "1b32857": "The site on a computer: map clicks reach their dots, eras fill the window one per screen, pages in two columns, threads along the years, and a desktop check.",
+    "03bd77d": "Official clips for 351 of the 452 album songs, and a check for them (the commit's 364 also counted 13 moments' clips).",
+    "d993106": "The walkthroughs written for both plans, with a new question for the desktop plan.",
+    "7fae7c0": "The code checks for both plans, every finding answered.",
+    "66db1e0": "A long word in a song title (Stardust) no longer breaks mid-word on a computer.",
+    "f18db34": "Both walkthrough videos (12 and 16 scenes) with the fresh eyes answered; songwriter credits fixed for three songs.",
+    "d94d01d": "From the every-song walkthrough review: co-writers credited on 21 songs, Lyrics.com links for 22 songs, and the 1979 Saturday Night Live clip back.",
+    "433df89": "The plan for a fuller site (6 steps, 3 questions), written from the owner's comment on the desktop walkthrough.",
+    "e10926c": "From the desktop walkthrough review: the map page links a song to its thread, every thread shows covers, and two scenes of the video rebuilt.",
+    "8cd2446": "The fuller-site plan approved in chat with its recommended answers (D-083 to D-085), and the desktop walkthrough approved.",
+    "77595ec": "The fuller site: stories for eras, moments and albums, 38 more photos, an album player, track rows, era bands, a side rail and links out.",
+    "d310eb2": "The fuller site's walkthrough and code check written; two questions came up during the build.",
+    "dcf918b": "The walkthrough video (18 scenes, two questions), with the fresh eyes answered: 35 notes fixed, 17 kept.",
+    "7017206": "From the walkthrough review: each era links to Wikipedia, a drawn card for each moment with no photo, fuller galleries, and a Spotify link for Fallen Angels.",
+    "4d1f29d": "The README says how to run the site, and to open it at localhost so YouTube clips play."
+  }
+}

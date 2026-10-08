@@ -1,0 +1,79 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 36 (chose), 26 (address, place label, instead of, why) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f04-stop2-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f04-stop2-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f04-stop2-place { position:absolute; left:340px; top:58px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the Stardust page cropped at scale 1: window 1240 x 400 showing screenshot x 100-1340, y 100-500 */
+  .f04-stop2-win { position:absolute; left:340px; top:100px; width:1240px; height:436px; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f04-stop2-bar { position:absolute; left:0; top:0; width:1240px; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f04-stop2-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f04-stop2-addr { position:absolute; left:84px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f04-stop2-crop { position:absolute; left:0; top:36px; width:1240px; height:400px; overflow:hidden; }
+  .f04-stop2-crop img { position:absolute; left:-100px; top:-100px; display:block; width:1440px; height:900px; max-width:none; }
+  /* ring on "Words by Mitchell Parish" (screenshot x 541-931, y 440-476 -> screen x 781-1171, y 476-512) */
+  .f04-stop2-ring { position:absolute; left:777px; top:472px; width:214px; height:44px; box-sizing:border-box; border:2px solid var(--rp-coral); border-radius:10px; }
+
+  .f04-stop2-card { position:absolute; left:340px; top:580px; width:1240px; height:236px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f04-stop2-txt { position:absolute; left:48px; top:40px; width:1144px; }
+  .f04-stop2-chose { font:700 36px/1.22 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f04-stop2-inst { margin-top:16px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f04-stop2-why { margin-top:8px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="04-stop2" data-band="bottom" data-start="0" data-duration="9.237" data-width="1920" data-height="1080">
+  <div class="clip f04-stop2-bg" id="f04-stop2-bg" data-start="0" data-duration="9.237" data-track-index="0"></div>
+
+  <div class="clip f04-stop2-scene" id="f04-stop2-scene" data-start="0" data-duration="9.237" data-track-index="1">
+    <div class="f04-stop2-place" id="f04-stop2-place">Step 2</div>
+
+    <div class="f04-stop2-win" id="f04-stop2-win" data-artifact="/song/stardust/">
+      <div class="f04-stop2-bar"><span class="f04-stop2-dot" style="left:16px"></span><span class="f04-stop2-dot" style="left:34px"></span><span class="f04-stop2-dot" style="left:52px"></span><span class="f04-stop2-addr">/song/stardust/</span></div>
+      <div class="f04-stop2-crop"><img src="assets/shots/d-song-stardust.png" alt="The Stardust page: the drawn Triplicate cover, the title, and The words card ending in Words by Hoagy Carmichael and Mitchell Parish"></div>
+    </div>
+    <i class="f04-stop2-ring" id="f04-stop2-ring"></i>
+
+    <div class="f04-stop2-card" id="f04-stop2-ca8" data-call="a8">
+      <div class="f04-stop2-txt">
+        <div class="f04-stop2-chose" id="f04-stop2-c1">A traditional song says 'A traditional song'</div>
+        <div class="f04-stop2-inst" id="f04-stop2-i1">instead of: Words by traditional, or no line</div>
+        <div class="f04-stop2-why" id="f04-stop2-w1">25 songs have no named writer</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f04-stop2-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the Stardust crop; the ring as the writers are named
+  rise(tl, $("place"), 0.1, 8);
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, 0.12);
+  tl.fromTo($("ring"), { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, 4.126);
+
+  // Scene 2: card a8 on "A traditional song"; hold
+  tl.fromTo($("ca8"), { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.7, ease: E }, 6.049);
+  rise(tl, $("c1"), 6.26);
+  rise(tl, $("i1"), 7.072);
+  rise(tl, $("w1"), 7.734);
+
+  tl.set({}, {}, 9.236);
+  window.__timelines["04-stop2"] = tl;
+})();
+</script>
+</template>

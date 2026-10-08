@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "src": "2026-10-07-every-song--walkthrough/index.html",
+  "project": "walkthrough-video",
+  "exportedAt": "2026-10-07T20:47:37.273Z",
+  "watch": {
+    "firstPlayAt": "2026-10-07T20:42:33.976Z",
+    "maxTimeReached": 131.57,
+    "durationSeconds": 131.57,
+    "completion": 1,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 1
+      }
+    ],
+    "moments": [
+      {
+        "kind": "rewind",
+        "t": 114.53,
+        "from": 119.7,
+        "planStep": null,
+        "frameIndex": 10
+      }
+    ],
+    "details": []
+  },
+  "decisions": [],
+  "quizzes": [],
+  "autonomy": [
+    {
+      "id": "a1",
+      "verdict": "accept",
+      "t": 36.259,
+      "planStep": 1,
+      "chose": "Every album track is mapped to its song once, by `tools/add-tracks.mjs`, into `data/sources/track-map.json` (`{ album: [song id per track] }`); album pages and the data check read that map",
+      "shownAt": "2026-10-07T20:43:39.083Z",
+      "judgedAt": "2026-10-07T20:43:58.000Z"
+    },
+    {
+      "id": "a2",
+      "verdict": "accept",
+      "t": 36.259,
+      "planStep": 1,
+      "chose": "Takes on one album that have no song between them become one song under the shared title: \"Alberta #1\" and \"Alberta #2\" are the song \"Alberta\"; \"Forever Young (continued)\" on Planet Waves maps to \"Forever Young\"",
+      "shownAt": "2026-10-07T20:43:39.083Z",
+      "judgedAt": "2026-10-07T20:44:04.388Z"
+    },
+    {
+      "id": "a3",
+      "verdict": "accept",
+      "t": 36.259,
+      "planStep": 1,
+      "chose": "A live take whose song had no page anywhere becomes a song under its plain title, with the live take as its track: \"The Mighty Quinn (Quinn the Eskimo)\" and \"Minstrel Boy\", both on Self Portrait",
+      "shownAt": "2026-10-07T20:43:39.083Z",
+      "judgedAt": "2026-10-07T20:44:10.953Z"
+    },
+    {
+      "id": "a4",
+      "verdict": "own",
+      "own": "probably want to give each writer credit",
+      "t": 36.259,
+      "planStep": 1,
+      "chose": "Where Dylan co-wrote the words (with Robert Hunter, Jacques Levy, Tom Petty, Carole Bayer Sager), the song counts as his own: no \"Words by\" line, the co-writer named in the note",
+      "shownAt": "2026-10-07T20:44:50.002Z",
+      "judgedAt": "2026-10-07T20:45:05.719Z"
+    },
+    {
+      "id": "d1",
+      "verdict": "accept",
+      "t": 44.323,
+      "planStep": 1,
+      "chose": "The new songs' records are in `data/parts/album-tracks.json`",
+      "shownAt": "2026-10-07T20:45:12.590Z",
+      "judgedAt": "2026-10-07T20:45:16.415Z"
+    },
+    {
+      "id": "a8",
+      "verdict": "accept",
+      "t": 53.56,
+      "planStep": 2,
+      "chose": "A traditional song's words card says \"A traditional song\"",
+      "shownAt": "2026-10-07T20:45:23.397Z",
+      "judgedAt": "2026-10-07T20:45:25.723Z"
+    },
+    {
+      "id": "d4",
+      "verdict": "accept",
+      "t": 63.523,
+      "planStep": 2,
+      "chose": "An instrumental keeps its bobdylan.com page as its link (9 songs, such as \"Turkey Chase\"), as \"Nashville Skyline Rag\" had from the first build",
+      "shownAt": "2026-10-07T20:45:32.481Z",
+      "judgedAt": "2026-10-07T20:45:33.841Z"
+    },
+    {
+      "id": "d2",
+      "verdict": "own",
+      "own": "are there other lyrics providers not blocked?",
+      "t": 76.003,
+      "planStep": 2,
+      "chose": "No Genius links: another writer's song shows \"Words by …\" alone",
+      "shownAt": "2026-10-07T20:45:42.996Z",
+      "judgedAt": "2026-10-07T20:45:53.530Z"
+    },
+    {
+      "id": "d3",
+      "verdict": "accept",
+      "t": 96.717,
+      "planStep": 3,
+      "chose": "`data/threads.json` is kept by hand from now on: the 26 new songs were placed into it, and `tools/make-threads.mjs` refuses to overwrite it without `--force`",
+      "shownAt": "2026-10-07T20:46:30.318Z",
+      "judgedAt": "2026-10-07T20:46:34.061Z"
+    },
+    {
+      "id": "a9",
+      "verdict": "accept",
+      "t": 105.869,
+      "planStep": 4,
+      "chose": "A song page names its live takes on other albums: \"Also on Self Portrait: She Belongs to Me (live)\"",
+      "shownAt": "2026-10-07T20:46:40.292Z",
+      "judgedAt": "2026-10-07T20:46:48.320Z"
+    },
+    {
+      "id": "a6",
+      "verdict": "flag",
+      "t": 125.517,
+      "planStep": 2,
+      "chose": "The 1979 Saturday Night Live moment stays without a clip: the YouTube finder found the same unofficial upload the first build dropped, and now skips it",
+      "shownAt": "2026-10-07T20:47:17.412Z",
+      "judgedAt": "2026-10-07T20:47:19.167Z"
+    },
+    {
+      "id": "a5",
+      "verdict": "listed",
+      "t": 125.517,
+      "planStep": 2,
+      "chose": "The three fetchers now keep what earlier runs found (`lyrics.json` was rewritten from scratch each run, which would have dropped 8 links found in the first build) and know a few other spellings (Talkin' World War III Blues, Motorpsycho Nightmare, What'll I Do, Quinn the Eskimo)",
+      "shownAt": "2026-10-07T20:47:17.412Z",
+      "judgedAt": "2026-10-07T20:47:27.440Z"
+    },
+    {
+      "id": "a7",
+      "verdict": "listed",
+      "t": 125.517,
+      "planStep": 3,
+      "chose": "Covers others made famous are added as their own version songs (12, such as Manfred Mann's \"Mighty Quinn\"), as the first build's connections were, and are not added to the \"Songs others made famous\" thread",
+      "shownAt": "2026-10-07T20:47:17.412Z",
+      "judgedAt": "2026-10-07T20:47:27.444Z"
+    }
+  ],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-07-desktop",
+      "seen": "2026-10-07T18:27:33.885Z",
+      "sent": "2026-10-07T18:28:44.960Z"
+    },
+    {
+      "video": "2026-10-07-every-song",
+      "seen": "2026-10-07T18:19:40.466Z",
+      "sent": "2026-10-07T18:20:41.979Z"
+    },
+    {
+      "video": "2026-10-07-every-song--walkthrough",
+      "seen": "2026-10-07T20:46:39.847Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 0,
+    "walked": 0,
+    "termsOpened": 0,
+    "termsLookedUp": [],
+    "rewinds": 1,
+    "watchedPct": 100
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "amuyktnaxqk76",
+      "kind": "note",
+      "comment": "probably want to give each writer credit",
+      "about": "On what the agent decided: Where Dylan co-wrote the words (with Robert Hunter, Jacques Levy, Tom Petty, Carole Bayer Sager), the song counts as his own: no \"Words by\" line, the co-writer named in the note",
+      "t": 36.26,
+      "frame": {
+        "index": 2,
+        "compositionId": "02-stop1",
+        "title": "Step 1 · Takes, live takes, co-writes"
+      },
+      "plan": {
+        "step": 1,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuykuo6zfsqp",
+      "kind": "note",
+      "comment": "are there other lyrics providers not blocked?",
+      "about": "On what the agent decided: No Genius links: another writer's song shows \"Words by …\" alone",
+      "t": 76,
+      "frame": {
+        "index": 6,
+        "compositionId": "06-d2",
+        "title": "Off-plan change · no Genius links"
+      },
+      "plan": {
+        "step": 2,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuykwi9rk1s1",
+      "kind": "flag",
+      "comment": "Flagged: The 1979 Saturday Night Live moment stays without a clip: the YouTube finder found the same unofficial upload the first build dropped, and now skips it",
+      "t": 125.52,
+      "frame": {
+        "index": 11,
+        "compositionId": "11-list",
+        "title": "The rest of the choices"
+      },
+      "plan": {
+        "step": 2,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuykwt92cq0t",
+      "kind": "approve",
+      "t": 131.57,
+      "frame": {
+        "index": 12,
+        "compositionId": "12-ending",
+        "title": "Anything you'd change?"
+      },
+      "plan": {
+        "step": null,
+        "questions": [],
+        "component": null
+      },
+      "comment": ""
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

@@ -1,0 +1,116 @@
+$ node tools/find-photos.mjs search <scratch dir>   (the Commons search, previews saved for review)
+era:hibbing: 18 free, credited candidates
+era:village: 34 free, credited candidates
+era:electric: 23 free, credited candidates
+era:basement: 49 free, credited candidates
+era:tracks: 34 free, credited candidates
+file:///root/reel-case-study/ours/dylan-site/tools/find-photos.mjs:29
+  throw new Error(`gave up: ${url}`);
+        ^
+
+Error: gave up: https://upload.wikimedia.org/wikipedia/commons/5/56/BobDylanClydieKing1981_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled
+    at get (file:///root/reel-case-study/ours/dylan-site/tools/find-photos.mjs:29:9)
+    at async search (file:///root/reel-case-study/ours/dylan-site/tools/find-photos.mjs:136:50)
+    at async file:///root/reel-case-study/ours/dylan-site/tools/find-photos.mjs:178:3
+
+Node.js v22.23.3
+era:gospel: 44 free, credited candidates
+era:eighties: 15 free, credited candidates
+era:roots: 25 free, credited candidates
+era:renaissance: 49 free, credited candidates
+era:standards: 29 free, credited candidates
+era:rough: 47 free, credited candidates
+moment:born-in-duluth: 0 free, credited candidates
+moment:move-to-hibbing: 10 free, credited candidates
+moment:hibbing-high-graduation: 4 free, credited candidates
+moment:university-of-minnesota: 18 free, credited candidates
+moment:arrives-in-new-york: 21 free, credited candidates
+moment:shelton-review: 10 free, credited candidates
+moment:newport-1963: 16 free, credited candidates
+moment:march-on-washington: 12 free, credited candidates
+moment:dont-look-back-tour-1965: 16 free, credited candidates
+moment:newport-1965: 18 free, credited candidates
+moment:marries-sara-lownds: 10 free, credited candidates
+moment:motorcycle-accident: 10 free, credited candidates
+moment:judas-manchester-1966: 15 free, credited candidates
+moment:basement-sessions: 11 free, credited candidates
+moment:isle-of-wight-1969: 10 free, credited candidates
+moment:princeton-doctorate: 15 free, credited candidates
+moment:pat-garrett-film-1973: 14 free, credited candidates
+moment:tour-1974: 17 free, credited candidates
+moment:rolling-thunder-revue-1975: 10 free, credited candidates
+moment:world-tour-1978: 7 free, credited candidates
+moment:snl-1979: 10 free, credited candidates
+moment:warfield-gospel-shows-1979: 12 free, credited candidates
+moment:grammy-1980: 13 free, credited candidates
+moment:musical-retrospective-1980: 11 free, credited candidates
+moment:live-aid-1985: 17 free, credited candidates
+moment:hall-of-fame-1988: 4 free, credited candidates
+moment:never-ending-tour-begins: 14 free, credited candidates
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/3/38/Bins%2C_Cromwell_Road_-_geogr)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/3/3f/Catalog_number_925_796-1_%28W)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/b/b5/Roy_Orbison_cropped.jpg?utm_s)
+moment:traveling-wilburys-1988: 28 free, credited candidates
+moment:bobfest-1992: 13 free, credited candidates
+moment:clinton-inaugural-1993: 7 free, credited candidates
+moment:grammy-album-of-the-year-1998: 20 free, credited candidates
+moment:oscar-things-have-changed: 15 free, credited candidates
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/c/cf/Stamp_of_Israel_-_Tribes_-_12)
+moment:chronicles-volume-one: 11 free, credited candidates
+moment:presidential-medal-of-freedom: 2 free, credited candidates
+moment:musicares-2015: 0 free, credited candidates
+moment:nobel-prize-2016: 24 free, credited candidates
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/1/18/Stamp_of_Albania_-_2015_-_Col)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/9/93/Stamp_of_Albania_-_2015_-_Col)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/7/71/Neruda_1971.png?utm_source=co)
+moment:nobel-lecture-2017: 15 free, credited candidates
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/1/19/%22Positively_4th_Street%22_O)
+moment:murder-most-foul-release: 20 free, credited candidates
+moment:catalog-sale-2020: 18 free, credited candidates
+moment:shadow-kingdom-2021: 13 free, credited candidates
+moment:philosophy-of-modern-song: 19 free, credited candidates
+dylan:hibbing: 3 free, credited candidates
+dylan:village: 6 free, credited candidates
+dylan:electric: 12 free, credited candidates
+dylan:basement: 13 free, credited candidates
+dylan:tracks: 10 free, credited candidates
+dylan:gospel: 5 free, credited candidates
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/3/3f/Catalog_number_925_796-1_%28W)
+dylan:eighties: 10 free, credited candidates
+dylan:roots: 1 free, credited candidates
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/3/30/Bob_Dylan_in_Norwich_Connecti)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/4/4f/Bob_Dylan_in_Norwich_Connecti)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/6/6e/Bob_Dylan_in_Norwich_Connecti)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/d/d9/Paparazzo_Presents_Bob_Dylan.)
+dylan:renaissance: 26 free, credited candidates
+dylan:standards: 25 free, credited candidates
+dylan:rough: 14 free, credited candidates
+venue:shelton-review: 10 free, credited candidates
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/f/f7/Brett_Dennen_Newport_Folk_Fes)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/0/0a/St_Paul_%26_the_Broken_Bones_)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/3/3f/St_Paul_%26_the_Broken_Bones_)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/0/06/St_Paul_%26_the_Broken_Bones_)
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/0/03/St_Paul_%26_the_Broken_Bones_)
+venue:newport-1963: 13 free, credited candidates
+  (no preview: gave up: https://upload.wikimedia.org/wikipedia/commons/8/88/Dom_-_albert_hall_%289076601%)
+venue:dont-look-back-tour-1965: 49 free, credited candidates
+venue:snl-1979: 9 free, credited candidates
+venue:hall-of-fame-1988: 9 free, credited candidates
+venue:bobfest-1992: 10 free, credited candidates
+venue:grammy-album-of-the-year-1998: 18 free, credited candidates
+venue:oscar-things-have-changed: 4 free, credited candidates
+venue:musicares-2015: 10 free, credited candidates
+
+$ node tools/find-photos.mjs   (the reviewed list appended; log not kept, result below)
+64 photos, 31 a moment's
+hibbing 3 gallery 4 moment
+village 4 gallery 2 moment
+electric 5 gallery 3 moment
+basement 2 gallery 3 moment
+tracks 2 gallery 3 moment
+gospel 3 gallery 3 moment
+eighties 3 gallery 4 moment
+roots 0 gallery 2 moment
+renaissance 5 gallery 2 moment
+standards 3 gallery 3 moment
+rough 3 gallery 2 moment

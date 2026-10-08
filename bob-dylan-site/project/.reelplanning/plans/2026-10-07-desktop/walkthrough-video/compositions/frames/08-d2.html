@@ -1,0 +1,80 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f08-d2-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f08-d2-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* thin browser window: radius 14, 1px ink hairline, 36px title bar, three dots, the address in mono */
+  .f08-d2-win { position:absolute; box-sizing:border-box; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f08-d2-bar { position:relative; height:36px; box-sizing:border-box; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); background:var(--rp-paper); display:flex; align-items:center; padding:0 14px; gap:7px; }
+  .f08-d2-bar i { display:block; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.24); }
+  .f08-d2-bar span { margin-left:14px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f08-d2-view { position:relative; overflow:hidden; }
+  .f08-d2-view img { position:absolute; display:block; max-width:none; }
+  .f08-d2-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; pointer-events:none; }
+
+  .f08-d2-place { position:absolute; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f08-d2-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f08-d2-txt { position:absolute; left:44px; top:40px; right:44px; }
+  .f08-d2-tag { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); margin-bottom:16px; white-space:nowrap; }
+  .f08-d2-chose { font:700 36px/1.22 "Inter"; color:var(--rp-ink); }
+  .f08-d2-inst { margin-top:16px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f08-d2-why { margin-top:10px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+</style>
+
+<div id="root" data-composition-id="08-d2" data-band="bottom" data-start="0" data-duration="8.853" data-width="1920" data-height="1080">
+  <div class="clip f08-d2-bg" id="f08-d2-bg" data-start="0" data-duration="8.853" data-track-index="0"></div>
+
+  <div class="clip f08-d2-scene" id="f08-d2-scene" data-start="0" data-duration="8.853" data-track-index="1">
+    <div class="f08-d2-place" id="f08-d2-place" style="left:960px; top:246px">Step 5 · 900 px wide</div>
+    <div class="f08-d2-win" id="f08-d2-win" data-artifact="/thread/faith/ at 900 px" style="left:140px; top:44px; width:722px; height:838px">
+      <div class="f08-d2-bar"><i></i><i></i><i></i><span>/thread/faith/</span></div>
+      <div class="f08-d2-view" style="width:720px; height:800px">
+        <img src="assets/shots/t-thread-faith.png" alt="The Faith thread at 900 px: the thread's first card beside its map, no Cards and Map button" style="left:0.0px; top:0.0px; width:720.0px; height:800.0px">
+      </div>
+    </div>
+    <div class="f08-d2-card" id="f08-d2-d2" data-call="d2" style="left:960px; top:300px; width:860px; height:300px">
+      <div class="f08-d2-txt">
+        <div class="f08-d2-tag" id="f08-d2-d2t">Off-plan change</div>
+        <div class="f08-d2-chose" id="f08-d2-d2c">The tablet hides the map's toggle too</div>
+        <div class="f08-d2-inst" id="f08-d2-d2i">instead of: the tablet exactly as before</div>
+        <div class="f08-d2-why" id="f08-d2-d2w">the same leftover button this plan removes</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f08-d2-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+  // a short push: in from below and a touch small, landing at scale 1 (never past it)
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var slide = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8.9s): the page, then the card on "the tablet"; hold
+  push(tl, $("win"), 0.1);
+  rise(tl, $("place"), 0.3, 8);
+  slide(tl, $("d2"), 1.25);
+  rise(tl, $("d2t"), 1.4, 8);
+  rise(tl, $("d2c"), 1.6);
+  rise(tl, $("d2i"), 3.6);
+  rise(tl, $("d2w"), 5.75);
+
+  tl.set({}, {}, 8.853);
+  window.__timelines["08-d2"] = tl;
+})();
+</script>
+</template>

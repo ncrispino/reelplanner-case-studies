@@ -1,0 +1,4 @@
+$ node tools/check-data.mjs  [in a scratch copy: links.json #1 points at "blowin-in-the-wnd", photos.json #1 has no licence]
+✗ links.json #1: "blowin-in-the-wnd" is not a song id
+✗ photos.json #1: "basement-isle-of-wight-crowd-1969" has no licence
+exit 1

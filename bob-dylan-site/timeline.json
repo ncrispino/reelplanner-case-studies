@@ -1,0 +1,1424 @@
+{
+ "study": "bob-dylan-site",
+ "plans": [
+  {
+   "id": "2026-10-06-dylan-site",
+   "title": "The site, from an empty folder",
+   "kind": "new project"
+  },
+  {
+   "id": "2026-10-07-desktop",
+   "title": "The site on a computer",
+   "kind": "changes to the site"
+  },
+  {
+   "id": "2026-10-07-every-song",
+   "title": "Every track a page",
+   "kind": "changes to the site"
+  },
+  {
+   "id": "2026-10-07-fuller",
+   "title": "A fuller site",
+   "kind": "changes to the site"
+  }
+ ],
+ "events": [
+  {
+   "id": "asked-2026-10-06T16:30",
+   "words": "Use reelplanning to plan: Build an interactive website about Bob Dylan. I want someone to be able to explore his life and music — the different eras, the albums, the songs and how they connect — in a way that's more engaging than reading a Wikipedia article, and it should work well on a phone. Start from scratch in this empty folder.",
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": "plan-2026-10-06T16:36",
+   "small": false,
+   "kind": "asked",
+   "at": "2026-10-06T16:30",
+   "source": "transcript:5",
+   "starts": true,
+   "approves": false
+  },
+  {
+   "id": "plan-2026-10-06T16:36",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "plan",
+   "at": "2026-10-06T16:36",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "Plan: Bob Dylan explorer site (dylan-site)",
+   "source": "commit:35a4250"
+  },
+  {
+   "id": "video-2026-10-06T17:32",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-06T17:32",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "Plan video for dylan-site: storyboard, script, narration, 41 frames",
+   "source": "commit:28e99a6"
+  },
+  {
+   "id": "video-2026-10-06T18:43",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-06T18:43",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site plan video: fresh-eyes fixes, plan clarifications",
+   "source": "commit:5922d2e"
+  },
+  {
+   "id": "asked-2026-10-06T19:20",
+   "words": "pls put on 8005 instead.",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-06T19:20",
+   "source": "transcript:1317",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "review-2026-10-06T21:01",
+   "words": "which can produce a sophisticated website that is graceful and visually appealing, while fully featured? can you detail more visually the deferences?",
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site",
+   "ledTo": "change-2026-10-06T21:04",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-06T21:01",
+   "of": "plan",
+   "verdict": "changes",
+   "comments": [
+    {
+     "scene": "Question 1 · How is the site built?",
+     "words": "which can produce a sophisticated website that is graceful and visually appealing, while fully featured? can you detail more visually the deferences?",
+     "t": 100.3
+    },
+    {
+     "scene": "Step 2 · The dataset",
+     "words": "can we link to a website with lyrics and give a preview?",
+     "t": 162.2
+    },
+    {
+     "scene": "Step 3 · The era timeline",
+     "words": "are there any visuals here? is this sample plain on purpose? we are going to want good per-era themeing, as well as real images. else the cite is too plain, just procedural",
+     "t": 259.3
+    },
+    {
+     "scene": "If C: both",
+     "words": "actually wondering if we *can* access the map on phone too if we want; just the default will be the cards, but we can toggle. we wont see all the dots by default, we might see only a subset of it but we can maneovure",
+     "t": 431.7
+    },
+    {
+     "scene": "If B: embedded player",
+     "words": "and also we might want youtube videos for particular osngs or events that arent on spotify or that we want to explicitly show due to some importantce in the video for example",
+     "t": 507.3
+    }
+   ],
+   "answers": [
+    {
+     "q": "q1",
+     "question": "How should the site be built?",
+     "answer": "which can produce a sophisticated website that is graceful and visually appealing, while fully featured? can you detail more visually the deferences?",
+     "own": true
+    },
+    {
+     "q": "q2",
+     "question": "How much of the catalogue should go in?",
+     "answer": "All 39 albums, 16 in full",
+     "own": false
+    },
+    {
+     "q": "q3",
+     "question": "How should album covers look?",
+     "answer": "The real covers",
+     "own": false
+    },
+    {
+     "q": "q4",
+     "question": "How should connections be explored?",
+     "answer": "Threads, plus a map on wide screens",
+     "own": false
+    },
+    {
+     "q": "q5",
+     "question": "How should someone listen?",
+     "answer": "An embedded Spotify player",
+     "own": false
+    }
+   ],
+   "flags": [],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-06-dylan-site/reviews/plan-20261006T210157Z.json"
+  },
+  {
+   "id": "change-2026-10-06T21:04",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-06T21:04",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site plan: revise after first review",
+   "source": "commit:8ac51a5"
+  },
+  {
+   "id": "video-2026-10-06T21:42",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-06T21:42",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site plan video v2: revised after review",
+   "source": "commit:2236da1"
+  },
+  {
+   "id": "change-2026-10-06T22:06",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-06T22:06",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site plan v2: fresh-eyes fixes; questions in order (photos q2, lyrics q3)",
+   "source": "commit:0a798f5"
+  },
+  {
+   "id": "review-2026-10-07T00:43",
+   "words": "can we display lyrics in the page though? if you dont want to copy them we can cite, but should be able to put lyrics on if we attribute them to authors i believe? dont see why not? just dont list full lyrics, only part if you want",
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site",
+   "ledTo": "change-2026-10-07T00:45",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T00:43",
+   "of": "plan",
+   "verdict": "approve",
+   "comments": [
+    {
+     "scene": "Step 2 · The dataset",
+     "words": "can we display lyrics in the page though? if you dont want to copy them we can cite, but should be able to put lyrics on if we attribute them to authors i believe? dont see why not? just dont list full lyrics, only part if you want",
+     "t": 134.1
+    },
+    {
+     "scene": "Question 2 · Where should the era photographs come from?",
+     "words": "but note that we can ue other images and shiould still make it completely visually full , even if we cant find licenses... like no photographs and just text will be bad",
+     "t": 213.8
+    }
+   ],
+   "answers": [
+    {
+     "q": "q1",
+     "question": "How should the site be built?",
+     "answer": "Astro, a page per song",
+     "own": false
+    },
+    {
+     "q": "q2",
+     "question": "Where should the era photographs come from?",
+     "answer": "Wikimedia Commons, free-licensed",
+     "own": false
+    },
+    {
+     "q": "q3",
+     "question": "What should a song page show beside its lyrics link?",
+     "answer": "The link and a preview in our words",
+     "own": false
+    }
+   ],
+   "flags": [],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-06-dylan-site/reviews/plan-20261007T004321Z.json"
+  },
+  {
+   "id": "change-2026-10-07T00:45",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T00:45",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site plan: approved; fold review comments into the steps",
+   "source": "commit:4e93bb6"
+  },
+  {
+   "id": "asked-2026-10-07T00:54",
+   "words": "yes, start building it",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-07T00:54",
+   "source": "transcript:2088",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "build-2026-10-07T01:14",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T01:14",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "Build dylan-site: Astro shell, dataset, timeline, pages, threads, map, search, checks",
+   "source": "commit:e3ec349"
+  },
+  {
+   "id": "build-2026-10-07T01:44",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T01:44",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: 26 free-licensed era photos from Wikimedia Commons; caption fix",
+   "source": "commit:ea6d9ca"
+  },
+  {
+   "id": "build-2026-10-07T01:46",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T01:46",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: search handles swapped letters; walkthrough written",
+   "source": "commit:ef9cb16"
+  },
+  {
+   "id": "change-2026-10-07T01:52",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T01:52",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: code-check fixes (base path, map drag and Cards return, lyrics links, phone check loads); walkthrough answers",
+   "source": "commit:ce1eda4"
+  },
+  {
+   "id": "build-2026-10-07T01:57",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T01:57",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: map labels stay on screen; walkthrough screenshots",
+   "source": "commit:2b26d5a"
+  },
+  {
+   "id": "build-2026-10-07T02:01",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T02:01",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: era panels fit the phone; phone check catches wide swipe panels; search orders groups by best match",
+   "source": "commit:68c7925"
+  },
+  {
+   "id": "video-2026-10-07T02:09",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site-walkthrough",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-07T02:09",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site walkthrough video: storyboard, script and 22 scenes from real screenshots",
+   "source": "commit:358e01d"
+  },
+  {
+   "id": "build-2026-10-07T02:29",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T02:29",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: long titles fit the phone; phone check catches overflowing headings; recaptured walkthrough shots",
+   "source": "commit:e11fbc0"
+  },
+  {
+   "id": "video-2026-10-07T02:45",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site-walkthrough",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-07T02:45",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site walkthrough video: fresh-eyes fixes, narration and terms; glossary rows for dataset and data check",
+   "source": "commit:1746cb5"
+  },
+  {
+   "id": "review-2026-10-07T03:10",
+   "words": "can you explore more why we didnt fully fill the connections here?",
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site-walkthrough",
+   "ledTo": "change-2026-10-07T03:43",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T03:10",
+   "of": "walkthrough",
+   "verdict": "changes",
+   "comments": [
+    {
+     "scene": "Step 2 · Two choices about the data",
+     "words": "can you explore more why we didnt fully fill the connections here?",
+     "t": 78
+    },
+    {
+     "scene": "An off-plan change · No lyric excerpts",
+     "words": "its fine if this is the only possibility but arfe you sure we dcant just quote some small parts? i dont undersand why we wouldnt be able to, this is common to cite a line from a song, even in popular culture",
+     "t": 94.9
+    },
+    {
+     "scene": "Step 3 · Basement and Country, and the fonts",
+     "words": "i think the fonts and styling can be much better, more individualistic; it's kind of boring and stock right now. each era should mean something and visually be represented by that via the page. it shouldnt be standardized, it should evoke the creativity of bob dylan",
+     "t": 128.3
+    },
+    {
+     "scene": "Step 4 · Three choices on the pages",
+     "words": "is this missing some songs do you mean?",
+     "t": 151.4
+    },
+    {
+     "scene": "Step 5 · Threads and the map",
+     "words": "yeah visually this needs much enhancement, it is very basic and even ugly",
+     "t": 157.2
+    },
+    {
+     "scene": "Step 6 · Three choices on search and players",
+     "words": "we should be able to view other videos here too i mean there should be a lot we can view and probably on more than two",
+     "t": 193.8
+    },
+    {
+     "scene": "Step 6 · Three choices on search and players",
+     "words": "for the 4 that werent found we must find a replacement for it; can't leave dry",
+     "t": 193.8
+    },
+    {
+     "scene": "Step 6 · Search, and players after a tap",
+     "words": "these should be loaded already; it looks much cleaner that way. also the rest of the page has ugly bubbles that need improving with the improvemnet of the rest of the themeing",
+     "t": 174.8
+    }
+   ],
+   "answers": [
+    {
+     "q": "q4",
+     "question": "Which songs and moments should get a YouTube clip?",
+     "answer": "Official, plus well-known unofficial ones",
+     "own": false
+    }
+   ],
+   "flags": [
+    {
+     "call": "a6",
+     "verdict": "own",
+     "words": "can you explore more why we didnt fully fill the connections here?"
+    },
+    {
+     "call": "d1",
+     "verdict": "own",
+     "words": "its fine if this is the only possibility but arfe you sure we dcant just quote some small parts? i dont undersand why we wouldnt be able to, this is common to cite a line from a song, even in popular culture"
+    },
+    {
+     "call": "a5",
+     "verdict": "own",
+     "words": "i think the fonts and styling can be much better, more individualistic; it's kind of boring and stock right now. each era should mean something and visually be represented by that via the page. it shouldnt be standardized, it should evoke the creativity of bob dylan"
+    },
+    {
+     "call": "a17",
+     "verdict": "own",
+     "words": "is this missing some songs do you mean?"
+    },
+    {
+     "call": "a9",
+     "verdict": "own",
+     "words": "we should be able to view other videos here too i mean there should be a lot we can view and probably on more than two"
+    },
+    {
+     "call": "a8",
+     "verdict": "own",
+     "words": "for the 4 that werent found we must find a replacement for it; can't leave dry"
+    }
+   ],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-06-dylan-site/reviews/walkthrough-20261007T031032Z.json"
+  },
+  {
+   "id": "change-2026-10-07T03:43",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T03:43",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: walkthrough review fixes",
+   "source": "commit:16484b1"
+  },
+  {
+   "id": "build-2026-10-07T03:47",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T03:47",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: track numbers in their own column; walkthrough counts",
+   "source": "commit:dabbe22"
+  },
+  {
+   "id": "video-2026-10-07T04:10",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site-walkthrough",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-07T04:10",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site walkthrough video v2: fresh-eyes rounds 1 and 2 answered; scene fixes, shorter line 10, new terms",
+   "source": "commit:03b0486"
+  },
+  {
+   "id": "review-2026-10-07T04:39",
+   "words": "So are you saying it is empty right now? that is what im concerned about",
+   "plan": "2026-10-06-dylan-site",
+   "video": "dylan-site-walkthrough",
+   "ledTo": "change-2026-10-07T04:40",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T04:39",
+   "of": "walkthrough",
+   "verdict": "approve",
+   "comments": [
+    {
+     "scene": "Lyric excerpts, kept as they were",
+     "words": "So are you saying it is empty right now? that is what im concerned about",
+     "t": 119.7
+    }
+   ],
+   "answers": [],
+   "flags": [
+    {
+     "call": "d1",
+     "verdict": "own",
+     "words": "So are you saying it is empty right now? that is what im concerned about"
+    }
+   ],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-06-dylan-site/reviews/walkthrough-20261007T043925Z.json"
+  },
+  {
+   "id": "change-2026-10-07T04:40",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T04:40",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: hand-added excerpts get their own file so a merge keeps them; second walkthrough review filed",
+   "source": "commit:072a4f2"
+  },
+  {
+   "id": "asked-2026-10-07T04:43",
+   "words": "ok i think its fine to just have AI fill in the lyrics?",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-07T04:43",
+   "source": "transcript:4093",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "asked-2026-10-07T04:43-2",
+   "words": "ok i think its fine to just have AI fill in the lyrics summary?",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-07T04:43",
+   "source": "transcript:4097",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "asked-2026-10-07T06:27",
+   "words": "yes do both",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-07T06:27",
+   "source": "transcript:4113",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "build-2026-10-07T06:33",
+   "words": null,
+   "plan": "2026-10-06-dylan-site",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T06:33",
+   "plans": [
+    "2026-10-06-dylan-site"
+   ],
+   "title": "dylan-site: every album song gets a summary of its words in our own words; lyrics summarised, not quoted (D-033)",
+   "source": "commit:ce78a40"
+  },
+  {
+   "id": "asked-2026-10-07T06:50",
+   "words": "can you host the website now on that 8005 and i can open?",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-07T06:50",
+   "source": "transcript:4376",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "asked-2026-10-07T06:58",
+   "words": "we need a new plan to make this work better on a computer. right now there is poor formatting (e.g., themes not going on full page, the side by side threads and map) and functionality (e.g., can't press a dot on the thread map, still a button to change cards that can be clicked), as a lot was meant for a phone. we need to fill in more and fix it so it looks great on a computer too",
+   "plan": "2026-10-07-desktop",
+   "video": null,
+   "ledTo": "plan-2026-10-07T07:24",
+   "small": false,
+   "kind": "asked",
+   "at": "2026-10-07T06:58",
+   "source": "transcript:4396",
+   "starts": true,
+   "approves": false
+  },
+  {
+   "id": "asked-2026-10-07T07:17",
+   "words": "ok also i know this is a little different but do you recommend including this here as part of hte refactor? i see songs like 'If You See Her, Say Hello' are in the main discogrophy but have nothing there",
+   "plan": "2026-10-07-every-song",
+   "video": null,
+   "ledTo": "plan-2026-10-07T07:24",
+   "small": false,
+   "kind": "asked",
+   "at": "2026-10-07T07:17",
+   "source": "transcript:4727",
+   "starts": true,
+   "approves": false
+  },
+  {
+   "id": "asked-2026-10-07T07:18",
+   "words": "yes write the second plan now, both reviewed together",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-07T07:18",
+   "source": "transcript:4746",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "plan-2026-10-07T07:24",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "plan",
+   "at": "2026-10-07T07:24",
+   "plans": [
+    "2026-10-07-desktop",
+    "2026-10-07-every-song"
+   ],
+   "title": "plans: the site on a computer (6 steps, 3 questions) and every track a page (4 steps, 2 questions)",
+   "source": "commit:1eeb894"
+  },
+  {
+   "id": "video-2026-10-07T08:41",
+   "words": null,
+   "plan": "2026-10-07-every-song",
+   "video": "every-song",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-07T08:41",
+   "plans": [
+    "2026-10-07-every-song"
+   ],
+   "title": "every-song plan video: 22 scenes, fresh eyes answered (2 rounds); plan fixes: 54 landmark tracks, data check scope, npm test",
+   "source": "commit:89ba32d"
+  },
+  {
+   "id": "video-2026-10-07T08:48",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": "desktop",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-07T08:48",
+   "plans": [
+    "2026-10-07-desktop"
+   ],
+   "title": "desktop plan video: 32 scenes, fresh eyes 3 rounds answered; step 1 vs question 3 made explicit",
+   "source": "commit:cf8e982"
+  },
+  {
+   "id": "review-2026-10-07T18:20",
+   "words": "another lyrics website will display though?",
+   "plan": "2026-10-07-every-song",
+   "video": "every-song",
+   "ledTo": "change-2026-10-07T18:21",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T18:20",
+   "of": "plan",
+   "verdict": "approve",
+   "comments": [
+    {
+     "scene": "Quick check 2",
+     "words": "another lyrics website will display though?"
+    }
+   ],
+   "answers": [
+    {
+     "q": "q1",
+     "question": "Which tracks get a page?",
+     "answer": "All 277",
+     "own": false
+    },
+    {
+     "q": "q2",
+     "question": "How much is written for a song by another writer?",
+     "answer": "The same page as his own songs",
+     "own": false
+    }
+   ],
+   "flags": [],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-07-every-song/reviews/plan-20261007T182041Z.json"
+  },
+  {
+   "id": "change-2026-10-07T18:21",
+   "words": null,
+   "plan": "2026-10-07-every-song",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T18:21",
+   "plans": [
+    "2026-10-07-every-song"
+   ],
+   "title": "every-song plan approved (D-034 all 277, D-035 same page); review comments folded into steps 2 and 3",
+   "source": "commit:40447f2"
+  },
+  {
+   "id": "review-2026-10-07T18:28",
+   "words": "actually maybe mixing this with scroll is good. i like how this is presented but if we scroll down, it should get us to the next era with a clean transition through scrolling, wihtout needing to click the arrow",
+   "plan": "2026-10-07-desktop",
+   "video": "desktop",
+   "ledTo": "build-2026-10-07T18:37",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T18:28",
+   "of": "plan",
+   "verdict": "approve",
+   "comments": [
+    {
+     "scene": "Question 2 · On a computer, does the home page give one era at a time, or all of them at once?",
+     "words": "actually maybe mixing this with scroll is good. i like how this is presented but if we scroll down, it should get us to the next era with a clean transition through scrolling, wihtout needing to click the arrow",
+     "t": 179.4
+    }
+   ],
+   "answers": [
+    {
+     "q": "q1",
+     "question": "How wide should the content go on a computer?",
+     "answer": "Up to 1200 px, two columns",
+     "own": false
+    },
+    {
+     "q": "q2",
+     "question": "On a computer, does the home page give one era at a time, or all of them at once?",
+     "answer": "One era fills the screen",
+     "own": false
+    },
+    {
+     "q": "q3",
+     "question": "On a computer, what should clicking a dot on the map do?",
+     "answer": "Select it, and show its panel",
+     "own": false
+    }
+   ],
+   "flags": [],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-07-desktop/reviews/plan-20261007T182844Z.json"
+  },
+  {
+   "id": "build-2026-10-07T18:37",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T18:37",
+   "plans": [
+    "2026-10-07-desktop"
+   ],
+   "title": "desktop plan: cite D-034 and D-035; answered questions recorded",
+   "source": "commit:63dbee5"
+  },
+  {
+   "id": "change-2026-10-07T18:37",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T18:37",
+   "plans": [
+    "2026-10-07-desktop"
+   ],
+   "title": "desktop plan approved (D-036 1200 px, D-037 one era a screen, D-038 select a dot); review comments folded: scroll between eras, plainer steps 2 and 6",
+   "source": "commit:7b82bec"
+  },
+  {
+   "id": "build-2026-10-07T19:22",
+   "words": null,
+   "plan": "2026-10-07-every-song",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T19:22",
+   "plans": [
+    "2026-10-07-every-song"
+   ],
+   "title": "every-song steps 1-3: every album track mapped to a song (271 new, written and summarised), Spotify for all 452, bobdylan.com links, 30 new connections, threads extended",
+   "source": "commit:cadf678"
+  },
+  {
+   "id": "build-2026-10-07T19:23",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T19:23",
+   "plans": [
+    "2026-10-07-desktop",
+    "2026-10-07-every-song"
+   ],
+   "title": "desktop plan, all six steps: map clicks reach their dots; header and era look across the window from 1100 px; one era per screen with scroll snapping; two-column song, album and moment pages; threads along the years with the map below; map page panel and era filter; three-column search; desktop check (also carries every-song's album rows and song takes / words-by lines on the reworked pages)",
+   "source": "commit:1b32857"
+  },
+  {
+   "id": "build-2026-10-07T19:26",
+   "words": null,
+   "plan": "2026-10-07-every-song",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T19:26",
+   "plans": [
+    "2026-10-07-every-song"
+   ],
+   "title": "every-song step 2: official clips for 364 of 452 album songs (snl-1979 kept dropped); clip check and npm test runs",
+   "source": "commit:03bd77d"
+  },
+  {
+   "id": "build-2026-10-07T19:31",
+   "words": null,
+   "plan": "2026-10-07-every-song",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T19:31",
+   "plans": [
+    "2026-10-07-desktop",
+    "2026-10-07-every-song"
+   ],
+   "title": "walkthroughs for every-song and desktop; desktop question 4 (step 5)",
+   "source": "commit:d993106"
+  },
+  {
+   "id": "change-2026-10-07T19:35",
+   "words": null,
+   "plan": "2026-10-07-every-song",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T19:35",
+   "plans": [
+    "2026-10-07-desktop",
+    "2026-10-07-every-song"
+   ],
+   "title": "code checks for every-song and desktop, every finding answered; threads kept by hand (make-threads needs --force)",
+   "source": "commit:7fae7c0"
+  },
+  {
+   "id": "build-2026-10-07T19:43",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T19:43",
+   "plans": [
+    "2026-10-07-desktop"
+   ],
+   "title": "song page on a computer: cover above the title, so a long word (Stardust) no longer breaks mid-word",
+   "source": "commit:66db1e0"
+  },
+  {
+   "id": "video-2026-10-07T20:37",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": "desktop-walkthrough",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-07T20:37",
+   "plans": [
+    "2026-10-07-desktop",
+    "2026-10-07-every-song"
+   ],
+   "title": "walkthrough videos for every-song (12 scenes) and desktop (16 scenes, question 4), fresh eyes answered; words credits fixed for Stardust, Tomorrow Night, Trade Winds",
+   "source": "commit:f18db34"
+  },
+  {
+   "id": "video-2026-10-07T20:37-2",
+   "words": null,
+   "plan": "2026-10-07-every-song",
+   "video": "every-song-walkthrough",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-07T20:37",
+   "plans": [
+    "2026-10-07-desktop",
+    "2026-10-07-every-song"
+   ],
+   "title": "walkthrough videos for every-song (12 scenes) and desktop (16 scenes, question 4), fresh eyes answered; words credits fixed for Stardust, Tomorrow Night, Trade Winds",
+   "source": "commit:f18db34"
+  },
+  {
+   "id": "review-2026-10-07T20:47",
+   "words": "probably want to give each writer credit",
+   "plan": "2026-10-07-every-song",
+   "video": "every-song-walkthrough",
+   "ledTo": "change-2026-10-07T20:53",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T20:47",
+   "of": "walkthrough",
+   "verdict": "approve",
+   "comments": [
+    {
+     "scene": "Step 1 · Takes, live takes, co-writes",
+     "words": "probably want to give each writer credit",
+     "t": 36.3
+    },
+    {
+     "scene": "Off-plan change · no Genius links",
+     "words": "are there other lyrics providers not blocked?",
+     "t": 76
+    },
+    {
+     "scene": "The rest of the choices",
+     "words": "Flagged: The 1979 Saturday Night Live moment stays without a clip: the YouTube finder found the same unofficial upload the first build dropped, and now skips it",
+     "t": 125.5
+    }
+   ],
+   "answers": [],
+   "flags": [
+    {
+     "call": "a4",
+     "verdict": "own",
+     "words": "probably want to give each writer credit"
+    },
+    {
+     "call": "d2",
+     "verdict": "own",
+     "words": "are there other lyrics providers not blocked?"
+    },
+    {
+     "call": "a6",
+     "verdict": "flag",
+     "words": null
+    }
+   ],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-07-every-song/reviews/walkthrough-20261007T204737Z.json"
+  },
+  {
+   "id": "change-2026-10-07T20:53",
+   "words": null,
+   "plan": "2026-10-07-every-song",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T20:53",
+   "plans": [
+    "2026-10-07-every-song"
+   ],
+   "title": "every-song walkthrough review: co-writers credited (21 songs), Lyrics.com links for songs bobdylan.com lacks (22), SNL 1979 clip back",
+   "source": "commit:d94d01d"
+  },
+  {
+   "id": "asked-2026-10-07T20:54",
+   "words": "i just sent the desktop, can you see?",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-07T20:54",
+   "source": "transcript:7735",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "review-2026-10-07T20:54",
+   "words": "i would like to give some visuals for these as well",
+   "plan": "2026-10-07-desktop",
+   "video": "desktop-walkthrough",
+   "ledTo": "plan-2026-10-07T21:10",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T20:54",
+   "of": "walkthrough",
+   "verdict": "changes",
+   "comments": [
+    {
+     "scene": "Off-plan change · the threads list's covers",
+     "words": "i would like to give some visuals for these as well",
+     "t": 115.3
+    },
+    {
+     "scene": "The rest of the choices",
+     "words": "Flagged: the album page's left column is not sticky",
+     "t": 175.2
+    },
+    {
+     "scene": "Anything you'd change?",
+     "words": "i also think that some on the desktop feels kind of bare; we might need more content. like the sides of the page are still kind of empty, and especially the biogrpahy pages with no other contents. they should have links, photos, etc. and same with album pages, some song pages. now i dont want it cluttered, i just want more informaiton, more visuals, more interaction even. just so there's enough",
+     "t": 180.1
+    }
+   ],
+   "answers": [
+    {
+     "q": "q4",
+     "question": "On a computer, should the full map offer a way to the thread cards?",
+     "answer": "Add \"A thread from this song ›\" to the map page",
+     "own": false
+    }
+   ],
+   "flags": [
+    {
+     "call": "d3",
+     "verdict": "own",
+     "words": "i would like to give some visuals for these as well"
+    },
+    {
+     "call": "a16",
+     "verdict": "flag",
+     "words": null
+    }
+   ],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-07-desktop/reviews/walkthrough-20261007T205429Z.json",
+   "startsPlan": "2026-10-07-fuller"
+  },
+  {
+   "id": "plan-2026-10-07T21:10",
+   "words": null,
+   "plan": "2026-10-07-fuller",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "plan",
+   "at": "2026-10-07T21:10",
+   "plans": [
+    "2026-10-07-desktop",
+    "2026-10-07-fuller"
+   ],
+   "title": "plan: a fuller site (6 steps, 3 questions), from the desktop walkthrough review",
+   "source": "commit:433df89"
+  },
+  {
+   "id": "change-2026-10-07T21:10",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T21:10",
+   "plans": [
+    "2026-10-07-desktop"
+   ],
+   "title": "desktop walkthrough review: map page links to a thread from its song (question 4: A); every thread in the list has covers; walkthrough scenes 9 and 11 rebuilt",
+   "source": "commit:e10926c"
+  },
+  {
+   "id": "asked-2026-10-07T21:33",
+   "words": "ok i approved walkthrough. then sure i approve this, you can do it in chat",
+   "plan": "2026-10-07-fuller",
+   "video": null,
+   "ledTo": "review-2026-10-07T21:34",
+   "small": false,
+   "kind": "asked",
+   "at": "2026-10-07T21:33",
+   "source": "transcript:7931",
+   "starts": false,
+   "approves": true
+  },
+  {
+   "id": "review-2026-10-07T21:33",
+   "words": null,
+   "plan": "2026-10-07-desktop",
+   "video": "desktop-walkthrough",
+   "ledTo": null,
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T21:33",
+   "of": "walkthrough",
+   "verdict": "approve",
+   "comments": [],
+   "answers": [
+    {
+     "q": "q4",
+     "question": "On a computer, should the full map offer a way to the thread cards?",
+     "answer": "Add \"A thread from this song ›\" to the map page",
+     "own": false
+    }
+   ],
+   "flags": [],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-07-desktop/reviews/walkthrough-20261007T213318Z.json"
+  },
+  {
+   "id": "review-2026-10-07T21:34",
+   "words": null,
+   "plan": "2026-10-07-fuller",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-07T21:34",
+   "of": "plan",
+   "verdict": "approve",
+   "comments": [],
+   "answers": [
+    {
+     "q": "q1",
+     "question": "What fills the sides of a wide window?",
+     "answer": "A context rail from 1440 px, the content kept at 1200 px",
+     "own": false
+    },
+    {
+     "q": "q2",
+     "question": "Read on elsewhere: Wikipedia and MusicBrainz, or nothing?",
+     "answer": "Wikipedia and MusicBrainz, where MusicBrainz lists them",
+     "own": false
+    },
+    {
+     "q": "q3",
+     "question": "How long should the new writing be?",
+     "answer": "An era about 250 words, a moment about 120, an album about 150",
+     "own": false
+    }
+   ],
+   "flags": [],
+   "inChat": true,
+   "source": "project/.reelplanning/plans/2026-10-07-fuller/reviews/plan-20261007T213423Z.json"
+  },
+  {
+   "id": "change-2026-10-07T21:34",
+   "words": null,
+   "plan": "2026-10-07-fuller",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-07T21:34",
+   "plans": [
+    "2026-10-07-desktop",
+    "2026-10-07-fuller"
+   ],
+   "title": "fuller-site plan approved in chat (D-083 rail, D-084 links out, D-085 lengths); desktop walkthrough approved",
+   "source": "commit:8cd2446"
+  },
+  {
+   "id": "build-2026-10-07T23:40",
+   "words": null,
+   "plan": "2026-10-07-fuller",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T23:40",
+   "plans": [
+    "2026-10-07-fuller"
+   ],
+   "title": "fuller site: era stories, moment stories and album essays; 38 more Commons photos; album player, track rows, era bands, context rail; links out",
+   "source": "commit:77595ec"
+  },
+  {
+   "id": "build-2026-10-07T23:46",
+   "words": null,
+   "plan": "2026-10-07-fuller",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-07T23:46",
+   "plans": [
+    "2026-10-07-fuller"
+   ],
+   "title": "fuller walkthrough.md, code check (6 steps, 27 decisions hold; 6 answered), questions 4 and 5 asked during the build",
+   "source": "commit:d310eb2"
+  },
+  {
+   "id": "asked-2026-10-08T02:36",
+   "words": "how is the status",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-08T02:36",
+   "source": "transcript:8963",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "video-2026-10-08T03:08",
+   "words": null,
+   "plan": "2026-10-07-fuller",
+   "video": "fuller-walkthrough",
+   "ledTo": null,
+   "small": false,
+   "kind": "video",
+   "at": "2026-10-08T03:08",
+   "plans": [
+    "2026-10-07-fuller"
+   ],
+   "title": "fuller walkthrough video (18 scenes, two questions), fresh eyes answered (35 fixed, 17 kept)",
+   "source": "commit:dcf918b"
+  },
+  {
+   "id": "review-2026-10-08T04:02",
+   "words": "maybe every era should have something it links to, for consistency",
+   "plan": "2026-10-07-fuller",
+   "video": "fuller-walkthrough",
+   "ledTo": "change-2026-10-08T04:11",
+   "small": false,
+   "kind": "review",
+   "at": "2026-10-08T04:02",
+   "of": "walkthrough",
+   "verdict": "approve",
+   "comments": [
+    {
+     "scene": "Step 6 · Read on",
+     "words": "maybe every era should have something it links to, for consistency",
+     "t": 188.4
+    },
+    {
+     "scene": "The gaps",
+     "words": "is there something else we can put here? be creative but also consistent",
+     "t": 200.1
+    }
+   ],
+   "answers": [
+    {
+     "q": "q5",
+     "question": "Bands on the front of the site as well?",
+     "answer": "Yes, as built: every era's bands on the home page too",
+     "own": false
+    },
+    {
+     "q": "q4",
+     "question": "Fallen Angels has no Spotify album to embed: what goes in its place?",
+     "answer": "A line: Find Fallen Angels on Spotify ↗",
+     "own": false
+    }
+   ],
+   "flags": [
+    {
+     "call": "a13",
+     "verdict": "own",
+     "words": "maybe every era should have something it links to, for consistency"
+    },
+    {
+     "call": "a17",
+     "verdict": "own",
+     "words": "is there something else we can put here? be creative but also consistent"
+    }
+   ],
+   "inChat": false,
+   "source": "project/.reelplanning/plans/2026-10-07-fuller/reviews/walkthrough-20261008T040221Z.json"
+  },
+  {
+   "id": "change-2026-10-08T04:11",
+   "words": null,
+   "plan": "2026-10-07-fuller",
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "change",
+   "at": "2026-10-08T04:11",
+   "plans": [
+    "2026-10-07-fuller"
+   ],
+   "title": "fuller walkthrough review: every era links to its section of Wikipedia's Bob Dylan article; a drawn card for each moment with no photo or clip; thin galleries topped up with the era's covers; Find Fallen Angels on Spotify (question 4: B)",
+   "source": "commit:7017206"
+  },
+  {
+   "id": "asked-2026-10-08T04:33",
+   "words": "yeah i dont see youtube in there, i wonder if thats just bc we doing localhosting and that might address itself later?",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "asked",
+   "at": "2026-10-08T04:33",
+   "source": "transcript:9526",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "asked-2026-10-08T04:40",
+   "words": "ok great i see it, maybe we should note this somewhere thoug",
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": true,
+   "kind": "asked",
+   "at": "2026-10-08T04:40",
+   "source": "transcript:9561",
+   "starts": false,
+   "approves": false
+  },
+  {
+   "id": "build-2026-10-08T04:41",
+   "words": null,
+   "plan": null,
+   "video": null,
+   "ledTo": null,
+   "small": false,
+   "kind": "build",
+   "at": "2026-10-08T04:41",
+   "plans": [],
+   "title": "README: how to run and check the site; open it at localhost, since label clips on YouTube refuse a bare IP address",
+   "source": "commit:4d1f29d"
+  }
+ ]
+}

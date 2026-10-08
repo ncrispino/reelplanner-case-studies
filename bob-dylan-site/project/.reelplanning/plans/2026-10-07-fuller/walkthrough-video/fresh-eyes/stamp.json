@@ -1,0 +1,100 @@
+{
+  "id": "f0c6dc2b2512",
+  "scenes": [
+    {
+      "scene": 1,
+      "narration": "2abbd91e7c32",
+      "frame": "5c35d61906e4"
+    },
+    {
+      "scene": 2,
+      "narration": "ada2b4ca1e4c",
+      "frame": "e507d90bda34"
+    },
+    {
+      "scene": 3,
+      "narration": "83494db5579a",
+      "frame": "591b2bc6cd6e"
+    },
+    {
+      "scene": 4,
+      "narration": "0facb0c75228",
+      "frame": "b2500886bd41"
+    },
+    {
+      "scene": 5,
+      "narration": "ebc83475f77a",
+      "frame": "7c72ed463b9b"
+    },
+    {
+      "scene": 6,
+      "narration": "e7a7fbab8827",
+      "frame": "8d50085789eb"
+    },
+    {
+      "scene": 7,
+      "narration": "23d55050c60f",
+      "frame": "6a69a99ac303"
+    },
+    {
+      "scene": 8,
+      "narration": "025c0352373a",
+      "frame": "e875ec6465c4"
+    },
+    {
+      "scene": 9,
+      "narration": "a602056064f8",
+      "frame": "061426978718"
+    },
+    {
+      "scene": 10,
+      "narration": "6eb079ddd0ef",
+      "frame": "f17c63b20908"
+    },
+    {
+      "scene": 11,
+      "narration": "7b56f324461e",
+      "frame": "f6a45da33788"
+    },
+    {
+      "scene": 12,
+      "narration": "64eda0201566",
+      "frame": "e6109def14fc"
+    },
+    {
+      "scene": 13,
+      "narration": "4cced4e1d96c",
+      "frame": "77f14a97b57c"
+    },
+    {
+      "scene": 14,
+      "narration": "c3faa03f7fea",
+      "frame": "0f61f8046e69"
+    },
+    {
+      "scene": 15,
+      "narration": "1c69a1460f12",
+      "frame": "89f252e9389b"
+    },
+    {
+      "scene": 16,
+      "narration": "4be7732dfe29",
+      "frame": "a0142b2e6a04"
+    },
+    {
+      "scene": 17,
+      "narration": "9f7c91b995e9",
+      "frame": "cfe340bc46c0"
+    },
+    {
+      "scene": 18,
+      "narration": "b5ff8081f3a5",
+      "frame": "8576bf6ea4cb"
+    }
+  ],
+  "round": 1,
+  "at": "2026-10-08T02:49:17.871Z",
+  "video": "2026-10-07-fuller--walkthrough",
+  "build": "first",
+  "scope": null
+}

@@ -1,0 +1,88 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 72 (column titles), 30 (commands), 28 (not-done rows), 26 (result lines, as the runs printed them) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f10-ran-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f10-ran-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f10-ran-h { position:absolute; top:100px; font:400 72px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f10-ran-rule { position:absolute; top:196px; height:1px; background:rgba(var(--rp-ink-rgb),0.2); transform-origin:0 50%; }
+  .f10-ran-rule.hot { height:2px; background:var(--rp-coral); }
+
+  .f10-ran-col { position:absolute; top:228px; }
+  .f10-ran-row { position:absolute; left:0; box-sizing:border-box; border-radius:8px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f10-ran-row .t { position:absolute; left:26px; top:22px; font:400 30px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:pre; font-variant-ligatures:none; }
+  .f10-ran-row .r { position:absolute; left:26px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); white-space:pre; font-variant-ligatures:none; }
+  .f10-ran-row .s { position:absolute; left:28px; top:22px; width:350px; font:400 28px/1.3 "Inter"; color:var(--rp-ink); }
+  .f10-ran-nd { background:var(--rp-paper); border:1px dashed rgba(var(--rp-ink-rgb),0.3); }
+</style>
+
+<div id="root" data-composition-id="10-ran" data-band="bottom" data-duration="11.008" data-width="1920" data-height="1080">
+
+  <div class="clip f10-ran-bg" id="f10-ran-bg" data-start="0" data-duration="11.008" data-track-index="0"></div>
+
+  <div class="clip f10-ran-scene" id="f10-ran-scene" data-start="0" data-duration="11.008" data-track-index="1">
+
+    <!-- left: what ran, each command with the lines it printed (runs/npm-test.txt, runs/check-clips.txt) -->
+    <div class="f10-ran-h" id="f10-ran-h1" style="left:60px">Ran</div>
+    <div class="f10-ran-rule" id="f10-ran-r1" style="left:60px;width:1344px"></div>
+    <div class="f10-ran-col" id="f10-ran-left" style="left:60px;width:1344px;height:620px" data-artifact="the runs">
+      <div class="f10-ran-row" id="f10-ran-l1" style="top:0;width:1344px;height:276px">
+        <span class="t">npm test</span>
+        <span class="r" id="f10-ran-o1" style="top:74px">✓ 11 eras, 39 albums, 538 songs, 165 connections, 12 threads, 26 photos</span>
+        <span class="r" id="f10-ran-o2" style="top:120px">19:24:40 [build] 1415 page(s) built in 12.00s</span>
+        <span class="r" id="f10-ran-o3" style="top:166px">✓ 12 views at 375×812, screenshots in checks/; a tap on a map dot opens its song</span>
+        <span class="r" id="f10-ran-o4" style="top:212px">✓ 24 views at 1440 × 900 and 1100 × 800, screenshots in checks/desktop/</span>
+      </div>
+      <div class="f10-ran-row" id="f10-ran-l2" style="top:300px;width:1344px;height:120px">
+        <span class="t">npm run check:clips</span>
+        <span class="r" style="top:72px">✓ 364 clips still play</span>
+      </div>
+    </div>
+
+    <!-- right: not done -->
+    <div class="f10-ran-h" id="f10-ran-h2" style="left:1450px">Not done</div>
+    <div class="f10-ran-rule hot" id="f10-ran-r2" style="left:1450px;width:410px"></div>
+    <div class="f10-ran-col" id="f10-ran-right" style="left:1450px;width:410px;height:620px">
+      <div class="f10-ran-row f10-ran-nd" id="f10-ran-n1" style="top:0;width:410px;height:80px"><span class="s">Genius links</span></div>
+      <div class="f10-ran-row f10-ran-nd" id="f10-ran-n2" style="top:100px;width:410px;height:118px"><span class="s">every sentence of the new notes checked</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "10-ran";
+  var $ = function (s) { return document.getElementById("f10-ran-" + s); };
+  var E = "power3.out";
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-7.4s): the left column; each printed line on the check that made it
+  pop(tl, $("h1"), 0.05);
+  tl.fromTo($("r1"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 0.2);
+  pop(tl, $("l1"), 0.9);          // "The data check"
+  pop(tl, $("o1"), 1.0, 8);
+  pop(tl, $("o2"), 1.7, 8);       // "the build of 1400 pages"
+  pop(tl, $("o3"), 3.55, 8);      // "the phone check"
+  pop(tl, $("o4"), 4.1, 8);       // "the desktop check"
+  pop(tl, $("l2"), 6.2);          // "the clip check"
+
+  // Scene 2 (7.4-11s): the right column, what is not done; hold
+  pop(tl, $("h2"), 7.4);
+  tl.fromTo($("r2"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 7.55);   // the one coral
+  pop(tl, $("n1"), 8.05);         // "Genius links"
+  pop(tl, $("n2"), 8.85);         // "checking every sentence"
+
+  tl.set({}, {}, 11.008);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

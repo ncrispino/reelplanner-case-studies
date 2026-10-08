@@ -1,0 +1,66 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes in this frame: 44 (question, option labels) and 26 (everything else) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f56-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f56-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f56-tag { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.16em; color:var(--rp-ink); white-space:nowrap; }
+  .f56-q { position:absolute; left:90px; top:150px; width:1120px; font:400 44px/1.12 "EB Garamond"; letter-spacing:-0.015em; color:var(--rp-ink); }
+  .f56-opt { position:absolute; top:330px; width:540px; height:400px; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f56-opt .k { position:absolute; left:32px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f56-opt .l { position:absolute; left:32px; top:84px; right:32px; font:400 44px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f56-thing { position:absolute; left:1290px; top:96px; width:540px; height:180px; }
+  .f56-card { position:absolute; left:0; top:0; width:330px; height:160px; box-sizing:border-box; padding:22px 24px; border-radius:12px; border:1px solid rgba(var(--rp-ink-rgb),0.12); background:color-mix(in oklab, var(--rp-paper) 80%, var(--rp-syn-str)); }
+  .f56-card i { display:block; font:400 26px/32px "JetBrains Mono"; font-style:normal; color:rgba(var(--rp-ink-rgb),0.72); }
+  .f56-card b { display:block; margin-top:16px; font:700 26px/32px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f56-tog { position:absolute; left:350px; top:54px; width:190px; height:52px; box-sizing:border-box; border-radius:9999px; border:1px solid rgba(var(--rp-ink-rgb),0.3); background:var(--rp-paper); overflow:hidden; }
+  .f56-tog span { position:absolute; top:0; width:95px; height:50px; text-align:center; font:400 26px/50px "Inter"; color:var(--rp-ink); }
+  .f56-tog span.on { background:var(--rp-ink); color:var(--rp-on-ink); }
+</style>
+
+<div id="root" data-composition-id="56-k4" data-band="bottom" data-start="0" data-duration="9.8" data-width="1920" data-height="1080">
+  <div class="clip f56-bg" id="f56-bg" data-start="0" data-duration="9.8" data-track-index="0"></div>
+
+  <div class="clip f56-scene" id="f56-scene" data-start="0" data-duration="9.8" data-track-index="1">
+    <div class="f56-tag" id="f56-tag">QUICK CHECK · STEP 5</div>
+    <div class="f56-thing" id="f56-thing" data-artifact="#/thread/borrowed-tunes, card 2 of 9">
+      <div class="f56-card" id="f56-card"><i>2 of 9</i><b>Blowin' in the Wind</b></div>
+      <div class="f56-tog" id="f56-tog"><span class="on" style="left:0">Cards</span><span style="left:93px">Map</span></div>
+    </div>
+    <div class="f56-q" id="f56-q" data-question>On a phone you're on Blowin' in the Wind's card in a thread. You tap Map. Where does the map open?</div>
+
+    <div class="f56-opt" id="f56-opt-a" data-option="a" style="left:90px"><span class="k">A</span><div class="l">The whole map, every song at once</div></div>
+    <div class="f56-opt" id="f56-opt-b" data-option="b" style="left:690px"><span class="k">B</span><div class="l">Centred on Blowin' in the Wind and its neighbours</div></div>
+    <div class="f56-opt" id="f56-opt-c" data-option="c" style="left:1290px"><span class="k">C</span><div class="l">On the first song of the thread</div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "56-k4";
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out";
+
+  // Scene 1 (0-4s): the eyebrow and the thing the question is about
+  tl.fromTo("#f56-tag", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 0.053);
+  tl.fromTo("#f56-card", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.209);
+  tl.fromTo("#f56-tog", { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 0.734);
+
+  // Scene 2 (4-12s): the question, then the three cards; all at rest from 6.4 s (hold from 8 s)
+  tl.fromTo("#f56-q", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 2.098);
+  tl.fromTo("#f56-opt-a", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.55, ease: E }, 2.622);
+  tl.fromTo("#f56-opt-b", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.55, ease: E }, 2.832);
+  tl.fromTo("#f56-opt-c", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.55, ease: E }, 3.042);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 11.99);
+  window.__timelines = window.__timelines || {};
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

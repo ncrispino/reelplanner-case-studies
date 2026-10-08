@@ -1,0 +1,108 @@
+---
+// A row of photographs (plan 2026-10-07-fuller, step 3): click one and it opens large over the page with its credit;
+// Esc closes it, ← → move between them. The large view is one <dialog> per gallery; each photo's button carries its
+// large image and credit. Renders nothing when there are no photos.
+import { getImage } from "astro:assets";
+import { creditOf, type Photo } from "../lib/data";
+interface Props { photos: Photo[]; label: string }
+const { photos: list, label } = Astro.props;
+const files = import.meta.glob<{ default: ImageMetadata }>("../assets/photos/*.{jpg,jpeg,png,webp}", { eager: true });
+const items = (await Promise.all(list.map(async (p) => {
+  const meta = files[`../assets/photos/${p.file}`]?.default;
+  if (!meta) return null;
+  const tw = [360, 720].filter((w) => w < meta.width); if (meta.width <= 720) tw.push(meta.width);
+  const bw = [1200, 2000].filter((w) => w < meta.width); if (meta.width <= 2000) bw.push(meta.width);
+  const thumb = await getImage({ src: meta, widths: tw, sizes: "(min-width: 1100px) 320px, 50vw", format: "webp", quality: 70 });
+  const big = await getImage({ src: meta, widths: bw, sizes: "92vw", format: "webp", quality: 78 });
+  return { p, meta, thumb, big };
+}))).filter((x) => x !== null);
+const names = [...new Set(items.map((i) => i.p.photographer))];
+---
+{items.length > 0 && (
+  <div class:list={["gallery", `n${Math.min(items.length, 5)}`]} data-gallery>
+    <ul class="gl" aria-label={label}>
+      {items.map((it, i) => (
+        <li>
+          <button type="button" class="gthumb" data-i={i} data-src={it.big.src} data-srcset={it.big.srcSet.attribute}
+            data-w={it.meta.width} data-h={it.meta.height} data-alt={it.p.caption} data-credit={creditOf(it.p)}
+            data-licence={it.p.licence} data-source={it.p.source} aria-label={`Open the photograph: ${it.p.caption}`}>
+            <img src={it.thumb.src} srcset={it.thumb.srcSet.attribute} sizes={it.thumb.attributes.sizes} alt=""
+              width={it.meta.width} height={it.meta.height} loading="lazy" decoding="async" />
+          </button>
+        </li>
+      ))}
+    </ul>
+    <p class="credit gcredit">{items.length > 1 ? `${items.length} photographs` : "A photograph"} by {names.join(", ")} · open one for its credit and licence</p>
+    <dialog class="lb" aria-label={label}>
+      <figure class="lbf">
+        <img class="lbimg" alt="" />
+        <figcaption class="credit lbcap"><span class="lbc"></span> · <a class="lbsrc" rel="noopener" target="_blank"></a> <span class="lbn"></span></figcaption>
+      </figure>
+      <button type="button" class="lbb lbx" aria-label="Close" data-close autofocus>×</button>
+      {items.length > 1 && <button type="button" class="lbb lbp" aria-label="The photograph before" data-d="-1">‹</button>}
+      {items.length > 1 && <button type="button" class="lbb lbnx" aria-label="The photograph after" data-d="1">›</button>}
+    </dialog>
+  </div>
+)}
+<script>
+  function setup() {
+    document.querySelectorAll<HTMLElement>("[data-gallery]").forEach((g) => {
+      if (g.dataset.ready) return;
+      g.dataset.ready = "1";
+      const thumbs = [...g.querySelectorAll<HTMLButtonElement>(".gthumb")];
+      const dlg = g.querySelector<HTMLDialogElement>("dialog.lb")!;
+      const img = dlg.querySelector<HTMLImageElement>(".lbimg")!;
+      let at = 0;
+      const show = (i: number) => {
+        at = (i + thumbs.length) % thumbs.length;
+        const d = thumbs[at].dataset;
+        img.src = d.src!; img.srcset = d.srcset!; img.sizes = "92vw"; img.alt = d.alt!;
+        img.width = +d.w!; img.height = +d.h!;
+        dlg.querySelector(".lbc")!.textContent = d.credit!;
+        const a = dlg.querySelector<HTMLAnchorElement>(".lbsrc")!; a.href = d.source!; a.textContent = `${d.licence} ↗`;
+        dlg.querySelector(".lbn")!.textContent = thumbs.length > 1 ? `· ${at + 1} of ${thumbs.length}` : "";
+      };
+      thumbs.forEach((b, i) => b.addEventListener("click", () => { show(i); dlg.showModal(); }));
+      dlg.querySelectorAll<HTMLElement>("[data-d]").forEach((b) => b.addEventListener("click", () => show(at + +b.dataset.d!)));
+      dlg.querySelector("[data-close]")!.addEventListener("click", () => dlg.close());
+      // a click on the dark around the photo closes it
+      dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+      dlg.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+        e.preventDefault(); e.stopPropagation();
+        show(at + (e.key === "ArrowRight" ? 1 : -1));
+      });
+      dlg.addEventListener("close", () => thumbs[at]?.focus({ preventScroll: true }));
+    });
+  }
+  setup();
+  document.addEventListener("astro:page-load", setup);
+</script>
+<style>
+  .gl { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gl li:first-child { grid-column: 1 / -1; }
+  .n2 .gl li:first-child { grid-column: auto; }
+  .gthumb { display: block; width: 100%; padding: 0; border: 0; background: var(--card); cursor: zoom-in; aspect-ratio: 4 / 3; overflow: hidden; }
+  .gl li:first-child .gthumb { aspect-ratio: 16 / 10; }
+  .n2 .gl li:first-child .gthumb { aspect-ratio: 4 / 3; }
+  .gthumb img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transition: transform .4s ease; }
+  .gthumb:hover img { transform: scale(1.03); }
+  .gthumb:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .gcredit { margin-top: 10px; }
+  /* the large view: the photo on the dark, its credit under it */
+  .lb { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: rgba(10,9,8,.94); color: #f1ead9; }
+  .lb::backdrop { background: rgba(10,9,8,.6); }
+  .lb[open] { display: grid; place-items: center; }
+  .lbf { margin: 0; display: grid; justify-items: center; gap: 10px; padding: 56px 16px 20px; max-width: 100%; }
+  .lbimg { max-width: min(92vw, 1600px); max-height: calc(100dvh - 140px); width: auto; height: auto; object-fit: contain; }
+  .lbcap { color: rgba(241,234,217,.8); text-align: center; max-width: 80ch; margin: 0; }
+  .lbcap a { color: #f1ead9; }
+  .lbn { white-space: nowrap; }
+  .lbb { position: absolute; display: grid; place-items: center; width: 52px; height: 52px; padding: 0; cursor: pointer;
+    font: 400 34px/1 Georgia, serif; color: #f1ead9; background: rgba(18,16,13,.7); border: 1px solid rgba(241,234,217,.35); }
+  .lbb:hover { background: #12100d; }
+  .lbx { top: 12px; right: 12px; }
+  .lbp { left: 12px; top: 50%; translate: 0 -50%; height: 80px; }
+  .lbnx { right: 12px; top: 50%; translate: 0 -50%; height: 80px; }
+  @media (min-width: 1100px) { .lbb { width: 60px; } .lbp, .lbnx { height: 96px; } }
+</style>

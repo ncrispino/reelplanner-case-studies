@@ -1,0 +1,1207 @@
+{
+  "project": "walkthrough-video",
+  "title": "walkthrough-video",
+  "planDir": ".reelplanning/plans/2026-10-06-dylan-site",
+  "kind": "walkthrough",
+  "totalSeconds": 131.866,
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "What changed",
+      "fromFrame": 1,
+      "toFrame": 11,
+      "start": 0,
+      "end": 131.866,
+      "linearSeconds": 131.866,
+      "watchedSeconds": 131.866,
+      "decisions": []
+    }
+  ],
+  "levels": null,
+  "quizzes": [],
+  "autonomy": [
+    {
+      "id": "a5",
+      "frameIndex": 3,
+      "planStep": 3,
+      "chose": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks) [visible, close] (changed after review: \"it should evoke the creativity of bob dylan\" — each era now has its own art direction: its own free typeface from `@fontsource` (Alfa Slab One, Courier Prime, Bebas Neue, Rye, DM Serif Display, Abril Fatface, Monoton with Oswald, IM Fell English, Oswald Light, Limelight, Cinzel), palette, CSS texture and a gesture on its panel and pages: a taped flyer and rubber stamp for the Village, a Dont Look Back cue card for Going Electric, a woodtype frame for Basement and Country, a revival handbill for Gospel, neon tubes for the '80s, a 78 label for Back to the Roots, film frames for the Late Renaissance, a deco frame for the Standards, brass for Rough and Rowdy; the chips, buttons and cards became era objects)",
+      "insteadOf": "loading web fonts per era",
+      "why": "no font downloads and no flash of unstyled text; the look varies a little by phone",
+      "check": "src/themes/*.css",
+      "at": 40.846
+    },
+    {
+      "id": "a6",
+      "frameIndex": 5,
+      "planStep": 2,
+      "chose": "49 connections, each one a fact the writers were sure of [visible] (changed after review: 135 connections. The first writers worked one era at a time and could only link songs inside their own era, so almost nothing crossed eras; a pass over the whole catalogue added 86: 46 same-theme pairs across eras, 30 famous covers, 9 source tunes, 1 rewrite)",
+      "insteadOf": "about 140, as the plan estimated",
+      "why": "a wrong connection is worse than a missing one; more can be added to `data/parts/*.json` and merged",
+      "check": "data/links.json",
+      "at": 71.267
+    },
+    {
+      "id": "a17",
+      "frameIndex": 6,
+      "planStep": 4,
+      "chose": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks [visible] (changed after review: the album page shows the full track list from MusicBrainz, numbered; the songs with their own page are marked \"its story ›\", and a line says how many)",
+      "insteadOf": "the full track list, or an unlabelled selection",
+      "why": "the dataset writes 7–8 songs per landmark and 2–3 per other album (D-002); the label says so (added after the code check)",
+      "check": "src/pages/album/[id].astro",
+      "at": 80.056
+    },
+    {
+      "id": "d1",
+      "frameIndex": 9,
+      "planStep": 2,
+      "chose": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written [deviation, visible] (kept after review: short credited quotation is common, and may well be fair use; the limit is the AI's output, which a filter stopped every time it wrote lyric lines. Lines added by hand to `excerpt` in `data/songs.json` show, credited; a script that copies lyrics from another site would get round that filter, so the build does not use one)",
+      "insteadOf": "two-line credited excerpts on landmark songs, as the plan allows",
+      "why": "the writers were stopped by a content filter when quoting lyrics, so the build quotes none; an excerpt can be added to `data/songs.json` by hand and the page shows it",
+      "check": "data/songs.json, src/pages/song/[id].astro",
+      "at": 119.672
+    }
+  ],
+  "autonomyGroups": [
+    {
+      "id": "stop-8",
+      "stop": true,
+      "frameIndex": 8,
+      "planStep": 6,
+      "ids": [
+        "a8",
+        "a9"
+      ],
+      "calls": [
+        {
+          "id": "a8",
+          "planStep": 6,
+          "chose": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs) [visible] (changed after review: 181 of 181. Spotify spells two titles differently, \"Fourth Time Around\" and \"Love Minus Zero\"; the match now drops subtitles and reads 4th as fourth, still by title)",
+          "insteadOf": "ids typed in by hand",
+          "why": "a wrong id plays the wrong song; four songs whose titles did not match have no player",
+          "check": "tools/fetch-spotify.mjs, data/sources/spotify.json"
+        },
+        {
+          "id": "a9",
+          "planStep": 6,
+          "chose": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment [visible, close] (changed after review, question 4 answered B: 166 album songs have a clip from Bob Dylan's official channel, and 13 moments have footage, some posted by others, each kept only when its title names the event; `npm run check:clips` fails on any clip taken down)",
+          "insteadOf": "clips for Newport 1965 and live songs",
+          "why": "no official upload of the Newport footage turned up; unofficial uploads come and go; \"official audio\" uploads would only repeat Spotify",
+          "check": "tools/find-youtube.mjs, data/sources/youtube.json"
+        }
+      ],
+      "at": 104.589
+    }
+  ],
+  "openQuestion": {
+    "question": "Seeing it run, anything you'd change?",
+    "frameIndex": 11,
+    "at": 131.816
+  },
+  "watchedSeconds": 131.866,
+  "frames": [
+    {
+      "index": 1,
+      "title": "What changed after your review",
+      "compositionId": "01-built",
+      "type": "hook",
+      "durationSeconds": 15.019,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "What changed",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "This is the walkthrough again, after your review. Six things changed: a look for each era, threads and the map redrawn, many more connections, full track lists, a loaded player on every song, and many more clips. The seven choices you accepted stay as they were.",
+      "start": 0,
+      "thumb": "snapshots/frame-00-at-7.76s.png",
+      "terms": [
+        "walkthrough"
+      ],
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 1
+      }
+    },
+    {
+      "index": 2,
+      "title": "Each era its own look",
+      "compositionId": "08-step3",
+      "type": "feature_showcase",
+      "durationSeconds": 12.565,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Each era now has its own look. Greenwich Village is a typed flyer with a rubber stamp. Going Electric is a Dont Look Back cue card. Gospel is a revival handbill in gold and red. The eighties are neon tubes.",
+      "start": 15.019,
+      "thumb": "snapshots/frame-01-at-21.3s.png",
+      "terms": [
+        "era"
+      ],
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 8
+      }
+    },
+    {
+      "index": 3,
+      "title": "The choice behind it",
+      "compositionId": "09-stop3",
+      "type": "cta",
+      "durationSeconds": 13.312,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "a5",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "The choice changed: each era has its own typeface, eleven free fonts chosen from its records and posters, instead of the fonts already on the phone. Back to the Roots is a seventy-eight label; the Standards, an art deco frame.",
+      "start": 27.584,
+      "thumb": "snapshots/frame-02-at-34.49s.png",
+      "terms": [
+        "call"
+      ],
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 9
+      }
+    },
+    {
+      "index": 4,
+      "title": "Threads and the map, redrawn",
+      "compositionId": "12-step5",
+      "type": "feature_showcase",
+      "durationSeconds": 13.205,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Threads and the map are redrawn. Each thread card wears its song's era, with the year large and how far it moved from the card before. The map is a night chart, each dot coloured by its era, and no label overlaps another.",
+      "start": 40.896,
+      "thumb": "snapshots/frame-03-at-47.5s.png",
+      "terms": [
+        "thread",
+        "the map"
+      ],
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 12
+      }
+    },
+    {
+      "index": 5,
+      "title": "135 connections",
+      "compositionId": "05-stop2",
+      "type": "cta",
+      "durationSeconds": 17.216,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "a6",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "You asked why there were so few connections. The first writers worked one era at a time, and could only link songs inside their own era. A pass across the whole catalogue added eighty-six: famous covers, the tunes he borrowed, and songs that share a theme across the years. There are a hundred and thirty-five now.",
+      "start": 54.101,
+      "thumb": "snapshots/frame-04-at-62.71s.png",
+      "terms": [
+        "connection"
+      ],
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 5
+      }
+    },
+    {
+      "index": 6,
+      "title": "Full track lists",
+      "compositionId": "11-stop4",
+      "type": "cta",
+      "durationSeconds": 8.789,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "a17",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "And you asked whether songs were missing. They were only unlisted. An album page now shows every track, numbered, and marks the songs that have their own page.",
+      "start": 71.317,
+      "thumb": "snapshots/frame-05-at-75.96s.png",
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 11
+      }
+    },
+    {
+      "index": 7,
+      "title": "Players, loaded",
+      "compositionId": "14-step6",
+      "type": "feature_showcase",
+      "durationSeconds": 8.789,
+      "planStep": 6,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "On a song page, the players are loaded with the page now, in a frame that matches the era. They play from Spotify and YouTube on the site; here they are blank.",
+      "start": 80.106,
+      "thumb": "snapshots/frame-06-at-84.5s.png",
+      "terms": [
+        "loaded"
+      ],
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 14
+      }
+    },
+    {
+      "index": 8,
+      "title": "Every song has a player, and the clips",
+      "compositionId": "15-stop6",
+      "type": "cta",
+      "durationSeconds": 15.744,
+      "planStep": 6,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "No song is left without a player: all a hundred and eighty-one album songs match on Spotify now. And there are a hundred and seventy-nine clips: an official one for most songs, and footage of moments like Newport, some posted by others. A clip check finds any that are taken down.",
+      "start": 88.895,
+      "thumb": "snapshots/frame-07-at-96.77s.png",
+      "autonomyStop": [
+        "a8",
+        "a9"
+      ],
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 15
+      }
+    },
+    {
+      "index": 9,
+      "title": "Lyric excerpts, kept as they were",
+      "compositionId": "06-d1",
+      "type": "cta",
+      "durationSeconds": 15.083,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "d1",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "You asked whether we really can't quote a line. Quoting a line or two with credit is common, and may well be allowed. The limit is the AI itself: a filter stopped it every time it wrote lyric lines. So none are written, but lines you add by hand show on the page, credited.",
+      "start": 104.639,
+      "thumb": "snapshots/frame-08-at-112.18s.png",
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 6
+      }
+    },
+    {
+      "index": 10,
+      "title": "What ran",
+      "compositionId": "20-ran",
+      "type": "benefit_highlight",
+      "durationSeconds": 6.144,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "What ran: the data check, the build, the phone check and the clip check, all passing. Not done: excerpts, and hosting.",
+      "start": 119.722,
+      "thumb": "snapshots/frame-09-at-122.79s.png",
+      "change": {
+        "status": "edited",
+        "said": false,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 20
+      }
+    },
+    {
+      "index": 11,
+      "title": "Anything you'd change?",
+      "compositionId": "22-ending",
+      "type": "cta",
+      "durationSeconds": 6,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "That's what changed. Seeing it run, anything you'd change?",
+      "start": 125.866,
+      "thumb": "snapshots/frame-10-at-128.87s.png",
+      "change": {
+        "status": "edited",
+        "said": true,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 22
+      }
+    }
+  ],
+  "decisions": [],
+  "details": [],
+  "guide": {
+    "parts": [
+      {
+        "name": "step-1",
+        "title": "Step 1 · The app shell: an Astro site for a phone, a real page per album and song",
+        "planStep": 1,
+        "kind": "step",
+        "src": "guide/step-1.html"
+      },
+      {
+        "name": "step-2",
+        "title": "Step 2 · The dataset: what is in it, and what each record points to",
+        "planStep": 2,
+        "kind": "step",
+        "src": "guide/step-2.html"
+      },
+      {
+        "name": "step-3",
+        "title": "Step 3 · The era timeline: each era with its own look (question 2)",
+        "planStep": 3,
+        "kind": "step",
+        "src": "guide/step-3.html"
+      },
+      {
+        "name": "step-4",
+        "title": "Step 4 · Album and song pages: covers, lyrics links, and connections (question 3)",
+        "planStep": 4,
+        "kind": "step",
+        "src": "guide/step-4.html"
+      },
+      {
+        "name": "step-5",
+        "title": "Step 5 · Threads and the map: follow connections as cards, or see them all",
+        "planStep": 5,
+        "kind": "step",
+        "src": "guide/step-5.html"
+      },
+      {
+        "name": "step-6",
+        "title": "Step 6 · Search, listening and watching, and checking it on a phone",
+        "planStep": 6,
+        "kind": "step",
+        "src": "guide/step-6.html"
+      },
+      {
+        "name": "decisions",
+        "title": "Decisions in force",
+        "planStep": null,
+        "kind": "decisions",
+        "src": "guide/decisions.html"
+      },
+      {
+        "name": "what-changed",
+        "title": "What changed, in full",
+        "planStep": null,
+        "kind": "overview",
+        "src": "guide/what-changed.html"
+      },
+      {
+        "name": "site",
+        "title": "The site",
+        "planStep": null,
+        "kind": "category",
+        "src": "guide/site.html"
+      },
+      {
+        "name": "data",
+        "title": "The dataset",
+        "planStep": 2,
+        "kind": "category",
+        "src": "guide/data.html"
+      },
+      {
+        "name": "tools",
+        "title": "The tools",
+        "planStep": null,
+        "kind": "category",
+        "src": "guide/tools.html"
+      },
+      {
+        "name": "choices",
+        "title": "Every choice the agent made",
+        "planStep": null,
+        "kind": "choices",
+        "src": "guide/choices.html"
+      }
+    ]
+  },
+  "plan": {
+    "title": "Bob Dylan, explored: a phone-first site of eras, albums, songs and how they connect",
+    "problem": "The owner:\n\n> \"I want someone to be able to explore his life and music — the different eras, the albums, the songs and how\n> they connect — in a way that's more engaging than reading a Wikipedia article, and it should work well on a\n> phone. Start from scratch in this empty folder.\"\n\nAnd from the first review of this plan:\n\n> \"which can produce a sophisticated website that is graceful and visually appealing, while fully featured? can\n> you detail more visually the differences?\"\n\n> \"we are going to want good per-era theming, as well as real images. else the site is too plain, just\n> procedural\"\n\n> \"can we link to a website with lyrics and give a preview?\"\n\n> \"actually wondering if we *can* access the map on phone too if we want; just the default will be the cards,\n> but we can toggle\"\n\n> \"we might want youtube videos for particular songs or events that aren't on spotify or that we want to\n> explicitly show\"\n\n### What we have\n\nNothing built: the folder holds `git` and `.reelplanning/`. Four answers from the first review are now decided:\nall 39 studio albums with 16 in full (D-002), the real album covers (D-003), threads plus a map (D-004, widened\nbelow), and an embedded Spotify player (D-005).\n\n### What a Wikipedia article does badly\n\n- **It is one long page.** Sixty-five years, 39 studio albums and hundreds of songs, read top to bottom. You\n  cannot see the shape of a career at a glance.\n- **Connections are buried in prose.** That \"Blowin' in the Wind\" takes its tune from the slave song \"No More\n  Auction Block\" sits in a paragraph on one page and is never linked to the other end.\n- **It all looks the same.** 1963 and 1979 get the same grey page; nothing tells you the gospel years felt\n  different from the electric ones.\n- **On a phone it is a wall of text** with tables that scroll sideways.",
+    "steps": [
+      {
+        "n": 1,
+        "title": "The app shell: an Astro site for a phone, a real page per album and song",
+        "text": "*Stands alone.*\n\n**It lets you:** open the site on a phone, move between its views with a bottom bar and the back button, and see\neach view slide or morph into the next instead of blinking.\n\nThe **app shell** is the layout every page shares: the bottom bar, the era theme, and the transitions. The site\nis built with **Astro** (your answer to question 1, in the review of 2026-10-07): every era, album and song is a\nreal page at its own address, `/album/blonde-on-blonde/`, `/song/like-a-rolling-stone/`, so the back button, a\nshared link and search engines all work. The timeline's swipe, the map and the players are interactive pieces\n(Astro \"islands\") placed on those pages.\n\nMoving between pages is animated with Astro's View Transitions: tap an album cover on the timeline and the cover\ngrows into the album page's header; go back and it shrinks home. Phones that ask for less motion get a plain\ncross-fade. The timeline keeps the era you were on when you come back (`/era/<id>/`).\n\nThe layout is designed at 375 px wide first. A bar fixed at the bottom has four tabs (**Eras**, **Threads**,\n**Search**, **About**), each at least 44 px tall. Nothing scrolls sideways except the era timeline, which is\nmeant to.\n\n`npm run build` writes `dist/`: one HTML page per era, album and song, about 260 in all, plus their images in\nthree sizes with blurred placeholders. Plain files that go on GitHub Pages; no server runs.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| First visit | open `https://…/` | the timeline, at the first era | you open: `/`; you see: the Eras tab, first panel |\n| A shared link | open `…/song/like-a-rolling-stone/` | the song page, directly | you open: the link; host serves: that page; you see: its song page |\n| Tap a cover | *Blonde on Blonde* on the Going Electric panel | the cover grows into the album page's header | you tap: the cover; shell: a view transition; you see: the album page |\n| Back button | album page → song page → back | the album page again, where it was | you press: back; shell reads: the old route; you see: the album page |\n| Less motion | the phone asks for reduced motion | views cross-fade, nothing grows or slides | you tap: a cover; you see: a fade |\n| A page that does not exist | `/album/blonde-on-blond/` | the site's 404 page, with search open on \"blonde on blond\" | host: no such page; you see: not found and results |\n\n#### Interface\n\n```\nastro.config.mjs      # the Astro project; output: static\nsrc/layouts/Shell.astro   # the shared layout: bottom bar, era theme, View Transitions\nsrc/pages/                # one file per kind of page, each built once per record\nsrc/islands/*.ts      # the interactive pieces: timeline swipe, map, players, search\nnpm run dev           # the site on a local address, reloading as you edit\nnpm run build         # writes dist/: one HTML page per era, album and song\n  /                   # the era timeline (step 3)\n  /era/<id>/          # the timeline, opened at that era\n  /album/<id>/        # an album page (step 4)\n  /song/<id>/         # a song page (step 4)\n  /moment/<id>/       # a moment, with its clip if it has one (step 6)\n  /threads/           # the list of threads (step 5)\n  /thread/<id>/       # one thread, at its first song\n  /map/[<song-id>/]   # the connection map, centred on a song (step 5)\n  /search/?q=<text>   # search (step 6)\n  /about/             # sources, credits, and what the site does not include\n  /404.html           # not found, with search\n```\n\n#### Example\n\nOn a phone you open `…/era/electric/`. The panel shows *Highway 61 Revisited*'s real cover. You tap it; the\ncover grows into the header of `/album/highway-61-revisited/`. You tap \"Like a Rolling Stone\"; the address\nbecomes `/song/like-a-rolling-stone/`. You press back twice and the cover shrinks back into the panel you started on.\n\n```diagram\nflow: How a page is reached and shown\nyou open a link -> page = the host serves its page: it exists | one HTML page per era, album and song, built ahead\nyou open a link --> notfound = 404 + search: no such page | a typo in a shared link still leads somewhere\npage -> island = interactive pieces start: swipe, map, players | only where the page has one\npage -> transition = a view transition: you tap | the cover you tapped grows into the next page\ntransition -> page\n```"
+      },
+      {
+        "n": 2,
+        "title": "The dataset: what is in it, and what each record points to",
+        "text": "*Needs step 1 (its project).*\n\n**It lets you:** trust that every era, song, photo and video the site shows comes from one checked place, with\nits source and credit.\n\nAll the content lives in `data/` as JSON files written by hand. Each kind of thing has its own file:\n\n- **eras** (`eras.json`): a named stretch of his life with years, eleven of them, from \"Duluth and Hibbing,\n  1941–1960\" to \"Rough and Rowdy, 2020–\". Each also names its **theme** (step 3) and its photographs.\n- **moments** (`moments.json`): a dated thing that happened that is not a record: \"1965, Newport Folk\n  Festival: plays electric\". A moment can carry a YouTube id when there is footage worth showing.\n- **albums** (`albums.json`): year, era, why it matters, its songs, and its cover's id in the Cover Art Archive\n  (D-003).\n- **songs** (`songs.json`): album, year, a short note, themes, a Spotify id (D-005), an optional YouTube id, and\n  a link to its official lyrics page on bobdylan.com. A song by someone else that a connection needs (a\n  traditional tune, a cover) is a song too, marked `by`.\n- **connections** (`links.json`): two songs, a kind (`borrowed-tune`, `answer`, `rewrite`, `covered-by`,\n  `re-recorded`, `same-theme`) and one sentence of why.\n- **threads** (`threads.json`): step 5's hand-written paths.\n- **photos** (`photos.json`): each photograph's file, caption, photographer, licence and source page (step 3).\n\nHow much of the catalogue goes in is decided: all 39 studio albums, the 16 landmarks written in full (D-002).\n\n**Lyrics: a link, a preview, and a short excerpt.** Each song links to its official lyrics page on bobdylan.com,\nwith a one-sentence preview written for the site (D-007). From the review of 2026-10-07, a song page may also\nshow a short excerpt of the words, at most two lines, attributed under it (\"Words and music by Bob Dylan ·\n© <publisher>\") and linked to the official page; never the full lyrics. Song words are under copyright, and a\nshort attributed quote is often accepted but not guaranteed: the publisher can still ask for it to come down. So\nexcerpts live in one field, `excerpt`, and can be taken out of every page in one change.\n\n**The data check** (`tools/check-data.mjs`) fails when a record points at an id that does not exist, an id is\nused twice, an album's year falls outside its era, a photo has no licence or credit, or a lyric excerpt runs past two\nlines or has no credit.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A Dylan song | \"Masters of War\", 1963 | a song on *The Freewheelin' Bob Dylan*, with a Spotify id and a lyrics link | you write: `songs.json`; check: album lists it; you see: its page |\n| Someone else's song | \"Nottamun Town\", traditional | a song with `by: \"traditional\"`, no album | you write: `by`; check: no album needed; you see: it at the end of a connection |\n| A moment with footage | Newport, 1965 | the moment carries a YouTube id | you write: `youtube`; you see: the clip on the moment |\n| A photo with no licence | `photos.json` entry without `licence` | the check fails and names it | it prints: the photo's id; exit 1 |\n| A broken connection | `to: \"blowin-in-the-wnd\"` | the check fails and names the line | it prints: the bad id; exit 1 |\n\n#### Interface\n\n```\ndata/eras.json      # [{ id, title, years: [from, to], theme, summary, albums: [ids], moments: [ids], photos: [ids] }]\ndata/moments.json   # [{ id, year, title, text, era, youtube? }]\ndata/albums.json    # [{ id, title, year, era, why, songs: [ids], landmark, cover: <Cover Art Archive release id> }]\ndata/songs.json     # [{ id, title, year, album?, by?, note, themes, spotify?, youtube?, lyrics?, preview?, excerpt? }]\ndata/links.json     # [{ from, to, kind, why }]\ndata/threads.json   # [{ id, title, intro, steps: [{ song, why }] }]\ndata/photos.json    # [{ id, file, caption, year, photographer, licence, source }]\ntools/check-data.mjs  # node tools/check-data.mjs\n    ✓ 11 eras, 39 albums, 212 songs, 140 connections, 12 threads, 31 photos\n    ✗ photos.json #7: \"newport-1965\" has no licence      (exit 1)\n```\n\n#### Example\n\n`songs.json` has `{ \"id\": \"blowin-in-the-wind\", \"title\": \"Blowin' in the Wind\", \"year\": 1963, \"album\":\n\"freewheelin\", \"themes\": [\"protest\"], \"spotify\": \"…\", \"lyrics\": \"https://www.bobdylan.com/songs/blowin-wind/\" }`.\n`links.json` joins it to \"No More Auction Block\" (`borrowed-tune`, \"a spiritual sung by freed slaves; he said\nso himself in 1978\"). The check finds every id and passes.\n\n```diagram\nflow: What the dataset holds\nera -> album: lists\nera -> moment: lists\nera -> photo: shows\nalbum -> song: lists\nsong -> song: connection | a kind and one sentence of why\nsong -> lyrics = the official lyrics page: links to\ncheck = tools/check-data.mjs -x broken: a missing id or credit | the check stops the commit\n```"
+      },
+      {
+        "n": 3,
+        "title": "The era timeline: each era with its own look (question 2)",
+        "text": "*Needs step 2.*\n\n**It lets you:** swipe through his life as eleven panels and feel each era change: its colours, its type, its\nphotographs.\n\nThe **era timeline** is the home view. Each era is one full-width panel; you swipe sideways between them. A\nstrip on top shows all eleven eras, sized by their years; tap one to jump.\n\n**Each era has its own theme**, kept in `src/themes/<era>.css`: a palette, a display typeface, and a texture,\ndrawn from the look of its records. For example:\n\n- **Greenwich Village, 1961–1964:** off-white paper, black ink, a typewriter-style face, like a folk club flyer.\n- **Going Electric, 1965–1966:** high-contrast black and amber, a condensed sans, a little blur on photos.\n- **Gospel, 1979–1981:** warm red and gold, a serif with a revival-poster feel.\n- **Rough and Rowdy, 2020–:** deep shadow and brass, a worn serif.\n\nThe theme follows you: an album or song page from that era wears its era's theme.\n\n**Real photographs, and never a bare panel.** Each panel opens on a full-width photograph of Dylan from that era,\nwith its caption and credit underneath, from Wikimedia Commons (D-006). Covers come from the Cover Art Archive\n(D-003). From the review of 2026-10-07, no panel is text alone: where Commons has no free photo of Dylan for an\nera, the panel is filled, in this order, by\n1. a free photograph of the place or the moment (Greenwich Village streets in the early 1960s, the Newport Folk\n   Festival grounds, a 1970s tour bus), credited the same way;\n2. the era's album covers set as a collage across the panel;\n3. an illustration drawn for the site in the era's style: a folk-club flyer for 1961–64, a tour poster for\n   the Rolling Thunder years, a revival handbill for the gospel years.\n\nImages whose licence does not allow a public site are not used, even when they would look better: a photo\nagency or a newspaper archive can and does ask for those to come down. The three fillers above keep every panel\nfull without them.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| Swipe | Greenwich Village → left | \"Going Electric, 1965–1966\" snaps in, its colours and type replace the last | you swipe: left; you see: the next panel in its own theme |\n| Jump | tap the \"Gospel\" segment | the timeline scrolls to it | you tap: the segment; you see: the gospel panel |\n| A photo | Greenwich Village | a 1963 photograph, credit under it | you see: the photo, caption and credit |\n| An era with no photo of Dylan | Going Electric, 1965–1966 | a free photo of Newport's grounds, else the covers as a collage, else a drawn tour poster | panel: no Dylan photo; you see: the next filler, full width |\n| Less motion | reduced motion | panels change without sliding | you see: an instant change |\n\n#### Interface\n\n```\n/  and  /era/<id>/          # the timeline, at the first era or at <id>\nsrc/themes/<era>.css        # one theme per era: --era-ink, --era-paper, --era-accent, --era-display-font, texture\nstrip                       # eleven segments, width by years, tap to jump\npanel                       # photograph + credit, title, years, summary, moments, album covers\n```\n\n#### Example\n\nYou open the site and swipe twice. The page turns black and amber; a 1965 photograph fills the top of the\npanel, credited under it; \"Going Electric, 1965–1966\" is set in a condensed face; below it, \"1965 · Newport:\nplays electric\" and three real covers.\n\n```diagram\nstate: Where you are on the timeline\n[*] -> panel: you open the site\npanel -> panel: you swipe | the next era snaps in in its own theme\npanel -> panel: you tap the strip\npanel -> album page: you tap a cover | the page keeps the era's theme\nalbum page -> panel: back | the same era, where you left it\n```"
+      },
+      {
+        "n": 4,
+        "title": "Album and song pages: covers, lyrics links, and connections (question 3)",
+        "text": "*Needs step 2.*\n\n**It lets you:** tap any album to see its real cover and why it matters, and tap any song to read about it, open\nits lyrics, and follow everything it connects to.\n\nAn **album page** shows the real cover (D-003), title, year and era, why it matters, and its songs. If the cover\nfails to load, the page draws a typographic cover in the era's theme instead, so nothing shows broken.\n\nA **song page** shows the title, album and year, the note, its themes, a **Lyrics** row that links to the\nofficial lyrics page with the preview in our words (D-007) and, where one is set, a two-line excerpt credited\nunder it, the player (step 6), and then **Connections**:\none card per connection, its kind in plain words and its why, the other song tappable.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A landmark album | *Highway 61 Revisited* | real cover, why it matters, 8 songs | you tap: the cover; you see: its page |\n| A cover that fails | the archive does not answer | a typographic cover in the era's theme | page: the image fails; you see: the drawn cover |\n| Lyrics | \"Visions of Johanna\" | a Lyrics row linking to bobdylan.com | you tap: Lyrics; you see: the official page, in a new tab |\n| A song with connections | \"All Along the Watchtower\" | \"Covered by Jimi Hendrix, 1968\" and \"He played it Hendrix's way, from 1974\" | you open: the song; you see: 2 cards |\n| Someone else's song | \"No More Auction Block\" | a short page with the connection back | you tap: the card; you see: its page |\n\n#### Interface\n\n```\n/album/<id>/    # real cover (or the drawn one), title, year, era, why, songs\n/song/<id>/     # title, album, year, note, themes, Lyrics row, player, Connections, Start a thread\nlyrics row        # the preview in our words, an optional two-line credited excerpt, \"Lyrics on bobdylan.com ↗\"\nconnection card   # one per connection: its kind in words, the other song, the why; tap opens the other song\n```\n\n#### Example\n\nYou open \"Blowin' in the Wind\". It reads: *The Freewheelin' Bob Dylan*, 1963, in the Greenwich Village theme;\nthe note; a Lyrics row, \"Lyrics on bobdylan.com ↗\"; the Spotify player; and one card, \"Borrowed the tune of —\nNo More Auction Block (traditional)\". You tap the card; its page lists the one connection back.\n\n```diagram\nflow: From album to song to its connections\nalbum page -> song page: tap a song\nsong page -> lyrics = bobdylan.com: Lyrics | opens the official page\nsong page -> other song: tap a connection card\nsong page -> thread: Start a thread from here\n```"
+      },
+      {
+        "n": 5,
+        "title": "Threads and the map: follow connections as cards, or see them all",
+        "text": "*Needs step 2.*\n\n**It lets you:** follow one idea, like \"songs he borrowed\", through his career one song at a time, or switch to a\nmap of how songs connect and move around it, on a phone too.\n\nA **thread** is a path through songs that share something, in time order, shown as cards you swipe up through.\nAbout twelve are written by hand in `data/threads.json`: \"Borrowed tunes\", \"The protest years and after\",\n\"Love gone wrong\", \"Faith\", \"The road\", \"America\". \"Start a thread from here\" on a song page makes one from that\nsong's connections.\n\n**The map** draws every song as a dot and every connection as a line (D-004). On a wide screen it sits beside\nthe cards. On a phone, cards are the default and a **Cards | Map** toggle switches; the phone's map opens on the\ncurrent song and its neighbours (two connections out, about 15 dots), and you pinch and drag to see more. Tap a\ndot to open its song.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A written thread | \"Borrowed tunes\" | 9 cards from \"Song to Woody\" (1962) to \"Rollin' and Tumblin'\" (2006) | you open: `/thread/borrowed-tunes/`; you see: card 1 of 9 |\n| Map on a phone | the toggle on \"Masters of War\" | the map, centred on it, about 15 dots | you tap: Map; you see: its neighbourhood |\n| Move on the map | drag left | more songs come into view | you drag; you see: the next songs |\n| Map on a laptop | 1280 px wide | cards and the map side by side | you see: both |\n| A thread from a song | \"Start a thread\" on \"Girl from the North Country\" | Scarborough Fair → the song → the 1969 duet with Johnny Cash | you tap: the button; you see: 3 cards |\n\n#### Interface\n\n```\n/threads/                 # the list, each with its length and years\n/thread/<id>/             # one card per step; swipe up for the next\n/thread/from/<song-id>/   # a thread made from that song's connections\n/map/[<song-id>/]         # the map, centred on a song\ntoggle                    # Cards | Map, on phones; both side by side above 768 px\n```\n\n#### Example\n\nOn a phone you are on card 3 of \"Borrowed tunes\", \"Masters of War\". You tap **Map**: the screen shows Masters of\nWar in the middle, Nottamun Town joined to it, and the 1963 songs around it. You drag right and the 1962 songs\ncome in; you tap \"Song to Woody\" and its page opens.\n\n```diagram\nstate: Cards and map on a phone\n[*] -> cards: you open a thread\ncards -> map: you tap Map | the map opens on the song you were on\nmap -> map: you pinch or drag | more songs come into view\nmap -> song page: you tap a dot\nmap -> cards: you tap Cards\n```"
+      },
+      {
+        "n": 6,
+        "title": "Search, listening and watching, and checking it on a phone",
+        "text": "*Needs step 2.*\n\n**It lets you:** find any song, album, era or moment by typing, hear a song on its page, watch the footage that\nmatters, and know the site was checked at phone width before it shipped.\n\n**Search** matches titles, albums, years and themes as you type, in the page. Results are grouped (Eras,\nMoments, Albums, Songs).\n\n**Listening** is Spotify's embedded player on each song page (D-005). It loads only when you tap Play, so a page\nwith no tap loads nothing from Spotify.\n\n**Watching**: a song or moment with a YouTube id shows YouTube's player from `youtube-nocookie.com`, also only\nafter a tap: Newport 1965, \"Subterranean Homesick Blues\" from *Dont Look Back*, a live \"Hurricane\" from 1975.\nThese are chosen by hand where the footage matters or the song is not on Spotify.\n\n**The phone check** (`tools/check-phone.mjs`) opens every view in headless Chrome at 375 × 812, saves a\nscreenshot of each to `checks/`, and fails on a sideways scroll, a tap target under 44 px, or a console error.\nWith the data check, it is what `npm test` runs.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A title | type \"tangled\" | \"Tangled Up in Blue\", 1975 | you type: `tangled`; you see: 1 song |\n| Play a song | \"Like a Rolling Stone\", tap Play | Spotify's player loads and plays | you tap: Play; page: loads the player; you hear: the song |\n| Footage | the Newport 1965 moment | a YouTube player, after a tap | you tap: the clip; you see: the footage |\n| A song not on Spotify | a song with only a YouTube id | the YouTube player in its place | you see: the YouTube player |\n| A wide page | a view scrolls sideways at 375 px | the phone check fails and names it | it prints: the view and its width; exit 1 |\n\n#### Interface\n\n```\n/search/?q=<text>        # results grouped: Eras, Moments, Albums, Songs\nplayer row               # Spotify embed (D-005) after a tap; YouTube (youtube-nocookie.com) where an id is set\ntools/check-phone.mjs    # node tools/check-phone.mjs\n    ✓ 10 views at 375×812, screenshots in checks/\n    ✗ /album/blonde-on-blonde/: page is 412 px wide      (exit 1)\nnpm test                 # check-data, then check-phone\n```\n\n#### Example\n\nYou type \"newport\". Results: the moment \"1965 · Newport Folk Festival: plays electric\". You open it; its page\nhas the clip. You tap it, and YouTube's player plays the footage in the page.\n\n```diagram\nflow: What runs before a commit\nnpm test -> data = check-data.mjs\ndata -> phone = check-phone.mjs: data is good\ndata -x stop: a broken id or a missing credit\nphone -x stop: a sideways scroll or a small target | names the view\nphone -> commit: all views pass\n```"
+      }
+    ]
+  },
+  "slug": "2026-10-06-dylan-site--walkthrough",
+  "prerequisites": [
+    {
+      "video": "2026-10-06-dylan-site",
+      "title": "video",
+      "gives": "the plan you approved: its six steps and your answers",
+      "seconds": 341.4,
+      "terms": [
+        "index.html",
+        "app.css",
+        "app.js",
+        "static host",
+        "build step",
+        "route",
+        "JSON",
+        "id",
+        "TypeScript",
+        "Vite",
+        "Astro",
+        "npm",
+        "node_modules",
+        "library",
+        "placeholder",
+        "View Transitions",
+        "Cover Art Archive",
+        "Wikimedia Commons",
+        "licence",
+        "embedded player",
+        "tap target",
+        "headless Chrome",
+        "npm test",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "YouTube",
+        "Spotify",
+        "view",
+        "quick check",
+        "theme",
+        "every polish by hand",
+        "polish",
+        "package.json",
+        "dist/",
+        "public domain",
+        "CC BY 2.0",
+        "CC BY-SA 2.0",
+        "youtube-nocookie.com"
+      ],
+      "found": true
+    }
+  ],
+  "terms": [
+    "404",
+    "base path",
+    "system fonts",
+    "JSON",
+    "MusicBrainz",
+    "Cover Art Archive",
+    "Wikimedia Commons",
+    "licence",
+    "Spotify",
+    "YouTube",
+    "Spotify id",
+    "official channel",
+    "unofficial upload",
+    "d3-force",
+    "edit",
+    "view",
+    "content filter",
+    "quick check",
+    "phone check",
+    "data check",
+    "code check",
+    "npm",
+    "npm run check:clips",
+    "GitHub Pages",
+    "flag",
+    "walkthrough",
+    "exit 0",
+    "song id",
+    "preview",
+    "note",
+    "the map",
+    "Cytoscape",
+    "precomputed",
+    "Manchester",
+    "youtube-nocookie.com",
+    "try-search",
+    "tab bar",
+    "Dont Look Back",
+    "op-art",
+    "seventy-eight label",
+    "night chart",
+    "the first writers",
+    "loaded",
+    "album songs",
+    "the other songs in the dataset are other artists' versions and the tunes he borrowed",
+    "listed",
+    "802 pages",
+    "375×812",
+    "checks/",
+    "node",
+    "12 views",
+    "CC BY 2.0",
+    "CC BY-SA 2.0",
+    "public domain"
+  ],
+  "termMeanings": {
+    "404": "the page a site shows when an address does not exist",
+    "base path": "the folder a site lives under on its host, such as /dylan-site/",
+    "system fonts": "the typefaces already on the phone, so nothing is downloaded",
+    "json": "a plain-text format for lists and fields of data",
+    "musicbrainz": "a free online database of recordings and albums",
+    "cover art archive": "a free online library of album cover images",
+    "wikimedia commons": "a free online library of photographs others may reuse under their licence",
+    "licence": "the terms under which a photo may be reused",
+    "spotify": "a music streaming service",
+    "youtube": "Google's video site",
+    "spotify id": "the code that names one track on Spotify",
+    "official channel": "the YouTube channel run for Bob Dylan himself",
+    "unofficial upload": "a clip posted by someone else, which YouTube may take down",
+    "d3-force": "a code library that spreads dots out so connected ones sit close",
+    "edit": "one letter changed, added, removed or swapped",
+    "view": "one screen of the site, such as an album page or search",
+    "content filter": "a safety check on the AI's own output that stopped it quoting lyrics",
+    "quick check": "a question the video asks you, to see whether the build does what you expect",
+    "phone check": "the script that opens every kind of page at phone size and fails on a sideways scroll, a small button or an error",
+    "data check": "the script that fails when the dataset is wrong",
+    "code check": "a second AI that read the code against the plan, knowing nothing of how it was written",
+    "npm": "the tool that installs and runs a project's packages and scripts",
+    "npm run check:clips": "the clip check: it asks YouTube whether each clip still plays",
+    "github pages": "a free service that hosts a site made of plain files",
+    "flag": "to mark a choice you'd have made the other way, so it gets changed",
+    "walkthrough": "this file and video: what landed, and the choices made while building",
+    "exit 0": "how a script says it passed, and exit 1 that it failed",
+    "song id": "the short name a song is found by, as in its address: like-a-rolling-stone",
+    "preview": "one sentence in our own words on what a song says",
+    "note": "one sentence of fact about a song",
+    "the map": "the view where every song is a dot and every connection a line",
+    "cytoscape": "another code library for drawing networks of dots",
+    "precomputed": "worked out once when the site is built, not in the browser",
+    "manchester": "the 1966 concert where a fan shouted \"Judas\"",
+    "youtube-nocookie.com": "YouTube's player that sets no tracking cookies until you play",
+    "try-search": "a script that types searches into the built site and prints what it finds",
+    "tab bar": "the row of Eras, Threads, Search and About",
+    "dont look back": "the 1967 documentary of his 1965 English tour, which opens with him flipping cue cards",
+    "op-art": "1960s art made of bold black-and-white patterns that seem to move",
+    "seventy-eight label": "the paper label on an old 78 rpm record",
+    "night chart": "a dark map like a star chart",
+    "the first writers": "the AI helpers that wrote the dataset one era each",
+    "loaded": "there when the page opens, not after a tap",
+    "album songs": "Dylan's own songs on his albums, 181 of them",
+    "listed": "a choice shown on a list, not judged one by one",
+    "802 pages": "one per era, album, song and moment, plus a map and a thread page for each song",
+    "375×812": "a phone screen's width and height in pixels",
+    "checks/": "the folder where the phone check saves its screenshots",
+    "node": "the program that runs a project's JavaScript scripts",
+    "12 views": "one page of each kind, which the phone check opens at phone size",
+    "cc by 2.0": "a Creative Commons licence: reuse with credit",
+    "cc by-sa 2.0": "the same, and changes are shared under it too",
+    "public domain": "free of copyright, reusable by anyone"
+  },
+  "glossary": [
+    {
+      "term": "A call",
+      "meaning": "A choice the agent made on its own while building, one the plan did not cover: one row in walkthrough.md",
+      "forms": [
+        "call",
+        "choice"
+      ],
+      "display": "choice",
+      "said": "A choice the agent made on its own while building, one the plan did not cover: one row in `walkthrough.md`."
+    },
+    {
+      "term": "A tag",
+      "meaning": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end",
+      "forms": [
+        "tag",
+        "label"
+      ],
+      "display": "label",
+      "said": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end."
+    },
+    {
+      "term": "A miss",
+      "meaning": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video",
+      "forms": [
+        "miss",
+        "late fix"
+      ],
+      "display": "late fix",
+      "said": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video."
+    },
+    {
+      "term": "A deviation",
+      "meaning": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video",
+      "forms": [
+        "deviation",
+        "off-plan change"
+      ],
+      "display": "off-plan change",
+      "said": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video."
+    },
+    {
+      "term": "A beat",
+      "meaning": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene",
+      "forms": [
+        "beat",
+        "scene"
+      ],
+      "display": "scene",
+      "said": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene."
+    },
+    {
+      "term": "A chapter",
+      "meaning": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system",
+      "forms": [
+        "chapter"
+      ],
+      "said": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system."
+    },
+    {
+      "term": "An area",
+      "meaning": "One part of the system, drawn as a box, with an id in system.json (where it is called a component)",
+      "forms": [
+        "area",
+        "part of the system"
+      ],
+      "display": "part of the system",
+      "said": "One part of the system, drawn as a box, with an id in `system.json` (where it is called a component)."
+    },
+    {
+      "term": "The app shell",
+      "id": "shell",
+      "meaning": "The one page that holds the site: it reads the address and draws one view at a time, with the bottom bar",
+      "forms": [
+        "app shell"
+      ],
+      "said": "The one page that holds the site: it reads the address and draws one view at a time, with the bottom bar.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 3,
+        "title": "Step 1 · The app shell, now animated",
+        "start": 30.464,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The dataset",
+      "id": "dataset",
+      "meaning": "The JSON files in data/ that hold every era, moment, album, song, connection, thread and photo, written by hand era by era in data/parts/ and merged by a script",
+      "forms": [
+        "dataset"
+      ],
+      "said": "The JSON files in `data/` that hold every era, moment, album, song, connection, thread and photo, written by hand era by era in `data/parts/` and merged by a script.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The data check",
+      "id": "data-check",
+      "meaning": "A script that fails when the dataset has an id used twice, a connection to a song that does not exist, an album outside its era's years, a photo with no licence or credit, or a lyric excerpt over two lines",
+      "forms": [
+        "data check"
+      ],
+      "said": "A script that fails when the dataset has an id used twice, a connection to a song that does not exist, an album outside its era's years, a photo with no licence or credit, or a lyric excerpt over two lines.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 10,
+        "title": "Step 2 · The data check, now for credits",
+        "start": 134.559,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "An era",
+      "meaning": "A named stretch of Dylan's life with years and a colour, such as \"Going Electric, 1965–1966\"; the timeline shows one per panel",
+      "forms": [
+        "era"
+      ],
+      "said": "A named stretch of Dylan's life with years and a colour, such as \"Going Electric, 1965–1966\"; the timeline shows one per panel."
+    },
+    {
+      "term": "A moment",
+      "meaning": "A dated event in his life that is not a record, such as the 1966 motorcycle accident",
+      "forms": [
+        "moment"
+      ],
+      "said": "A dated event in his life that is not a record, such as the 1966 motorcycle accident."
+    },
+    {
+      "term": "A connection",
+      "meaning": "A link between two songs, with a kind (borrowed tune, answer, rewrite, covered by, re-recorded, same theme) and one sentence of why",
+      "forms": [
+        "connection"
+      ],
+      "said": "A link between two songs, with a kind (borrowed tune, answer, rewrite, covered by, re-recorded, same theme) and one sentence of why."
+    },
+    {
+      "term": "The era timeline",
+      "id": "timeline",
+      "meaning": "The home view: one full-width panel per era, swiped sideways, with a strip of all eras on top",
+      "forms": [
+        "era timeline"
+      ],
+      "said": "The home view: one full-width panel per era, swiped sideways, with a strip of all eras on top.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 12,
+        "title": "Step 3 · Each era its own look",
+        "start": 157.32,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "Album and song pages",
+      "id": "pages",
+      "meaning": "The page for one album (why it matters, its songs) and for one song (its note, themes and connections)",
+      "forms": [
+        "album and song pages"
+      ],
+      "said": "The page for one album (why it matters, its songs) and for one song (its note, themes and connections).",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 17,
+        "title": "Step 4 · The song page",
+        "start": 231.826,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "A thread",
+      "id": "threads",
+      "meaning": "A path through songs that share something, in time order, shown as cards you swipe through",
+      "forms": [
+        "thread"
+      ],
+      "said": "A path through songs that share something, in time order, shown as cards you swipe through.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 23,
+        "title": "Step 5 · The map, on a phone too",
+        "start": 300.713,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      }
+    },
+    {
+      "term": "Search",
+      "id": "search",
+      "meaning": "The view that finds eras, albums and songs as you type, in the page with no server",
+      "forms": [
+        "search"
+      ],
+      "said": "The view that finds eras, albums and songs as you type, in the page with no server.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The phone check",
+      "id": "phone-check",
+      "meaning": "A script that opens every view at phone width and fails on a sideways scroll, a tap target under 44 px or an error",
+      "forms": [
+        "phone check"
+      ],
+      "said": "A script that opens every view at phone width and fails on a sideways scroll, a tap target under 44 px or an error.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 25,
+        "title": "Step 6 · Listen and watch on the page",
+        "start": 330.785,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      }
+    },
+    {
+      "term": "A repo / repository",
+      "meaning": "A project's folder of code together with its whole history, kept with git",
+      "forms": [
+        "repo",
+        "repository"
+      ],
+      "said": "A project's folder of code together with its whole history, kept with git.",
+      "other": true
+    },
+    {
+      "term": "A branch",
+      "meaning": "A line of work kept apart from the main code until it is merged",
+      "forms": [
+        "branch"
+      ],
+      "said": "A line of work kept apart from the main code until it is merged.",
+      "other": true
+    },
+    {
+      "term": "Merge",
+      "meaning": "To bring a branch's changes into the main code. A pull request is merged when it is accepted",
+      "forms": [
+        "merge"
+      ],
+      "said": "To bring a branch's changes into the main code. A pull request is merged when it is accepted.",
+      "other": true
+    },
+    {
+      "term": "A commit",
+      "meaning": "One saved change to a repo, with a message saying what changed",
+      "forms": [
+        "commit"
+      ],
+      "said": "One saved change to a repo, with a message saying what changed.",
+      "other": true
+    },
+    {
+      "term": "A pull request / PR",
+      "meaning": "A change someone asks to have merged into a repo; others read it and comment before it goes in",
+      "forms": [
+        "pull request",
+        "pr"
+      ],
+      "said": "A change someone asks to have merged into a repo; others read it and comment before it goes in.",
+      "other": true
+    },
+    {
+      "term": "The agent",
+      "meaning": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos",
+      "forms": [
+        "agent"
+      ],
+      "said": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos.",
+      "other": true
+    }
+  ],
+  "ids": {
+    "A17": {
+      "kind": "choice",
+      "gloss": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\"…"
+    },
+    "A5": {
+      "kind": "choice",
+      "gloss": "Each era's theme uses fonts already on the phone (system serif, condensed and…"
+    },
+    "A6": {
+      "kind": "choice",
+      "gloss": "49 connections, each one a fact the writers were sure of [visible] (changed…"
+    },
+    "A8": {
+      "kind": "choice",
+      "gloss": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's…"
+    },
+    "A9": {
+      "kind": "choice",
+      "gloss": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean…"
+    },
+    "D1": {
+      "kind": "off-plan change",
+      "gloss": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and…"
+    }
+  },
+  "termsCheck": "strict",
+  "changes": {
+    "against": "HEAD",
+    "baseline": true,
+    "at": "2026-10-07T04:08:41.819Z",
+    "build": "73e459cabe51",
+    "added": 0,
+    "edited": 11,
+    "restyled": 0,
+    "retimed": 0,
+    "same": 0,
+    "removed": [
+      {
+        "index": 2,
+        "title": "Step 1 · A page per album, and the cover grows"
+      },
+      {
+        "index": 3,
+        "title": "Step 1 · Two choices you'd notice"
+      },
+      {
+        "index": 4,
+        "title": "Step 2 · The dataset, checked"
+      },
+      {
+        "index": 7,
+        "title": "Quick check · An era with no photo of Dylan"
+      },
+      {
+        "index": 10,
+        "title": "Step 4 · Album and song pages"
+      },
+      {
+        "index": 13,
+        "title": "Step 5 · How the threads were made"
+      },
+      {
+        "index": 16,
+        "title": "A new question · Which clips?"
+      },
+      {
+        "index": 17,
+        "title": "If A: official only"
+      },
+      {
+        "index": 18,
+        "title": "If B: unofficial too"
+      },
+      {
+        "index": 19,
+        "title": "If C: no clips"
+      },
+      {
+        "index": 21,
+        "title": "The rest of the choices"
+      }
+    ],
+    "changedFrames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "restyledFrames": [],
+    "changedSeconds": 131.86,
+    "totalSeconds": 131.866
+  }
+}

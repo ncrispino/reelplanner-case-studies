@@ -1,0 +1,8 @@
+---
+import Shell from "../../layouts/Shell.astro";
+import Timeline from "../../components/Timeline.astro";
+import { eras } from "../../lib/data";
+export function getStaticPaths() { return eras.map((e) => ({ params: { id: e.id }, props: { era: e } })); }
+const { era } = Astro.props;
+---
+<Shell title={era.title} era={era.id} tab="eras" description={era.summary} full><Timeline start={era.id} /></Shell>

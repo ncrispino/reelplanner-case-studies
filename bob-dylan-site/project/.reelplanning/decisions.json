@@ -1,0 +1,4283 @@
+{
+  "decisions": [
+    {
+      "id": "D-001",
+      "date": "2026-10-06",
+      "plan": "2026-10-06-dylan-site",
+      "step": 1,
+      "stepTitle": "The app shell: a static site, laid out for a phone (question 1)",
+      "questionId": "q1",
+      "question": "How should the site be built?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Plain files, no build step",
+          "why": "The folder is the site: nothing to install to run it, and the data check covers what types would.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Vite with TypeScript",
+          "why": "Types catch a wrong field early, but a build runs before anyone sees a page.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Astro, a page per song",
+          "why": "Each album and song is a real page that search engines index, at the cost of a framework.",
+          "recommended": false
+        }
+      ],
+      "chosen": "which can produce a sophisticated website that is graceful and visually appealing, while fully featured? can you detail more visually the deferences?",
+      "chosenId": "own",
+      "recommended": false,
+      "why": "",
+      "components": [
+        "shell",
+        "dataset",
+        "timeline",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-002",
+      "date": "2026-10-06",
+      "plan": "2026-10-06-dylan-site",
+      "step": 2,
+      "stepTitle": "The dataset: eras, moments, albums, songs, connections (question 2)",
+      "questionId": "q2",
+      "question": "How much of the catalogue should go in?",
+      "options": [
+        {
+          "id": "a",
+          "label": "All 39 albums, 16 in full",
+          "why": "The timeline has no holes, and the writing goes where people will tap.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "The 16 landmark albums only",
+          "why": "About 110 songs, faster to write, but albums like Oh Mercy and Tempest are missing.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Every song on every album",
+          "why": "About 450 songs, complete, but most song pages hold only a title.",
+          "recommended": false
+        }
+      ],
+      "chosen": "All 39 albums, 16 in full",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "The timeline has no holes, and the writing goes where people will tap.",
+      "components": [
+        "dataset",
+        "data-check",
+        "pages"
+      ],
+      "status": "superseded",
+      "supersedes": [],
+      "supersededOn": "2026-10-07",
+      "supersededBy": "D-034"
+    },
+    {
+      "id": "D-003",
+      "date": "2026-10-06",
+      "plan": "2026-10-06-dylan-site",
+      "step": 4,
+      "stepTitle": "Album and song pages (question 3)",
+      "questionId": "q3",
+      "question": "How should album covers look?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Drawn in the page",
+          "why": "Title and year in the era's colour: nothing to license, nothing loaded from elsewhere.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "The real covers",
+          "why": "Recognisable at a glance, but copyrighted images loaded from the Cover Art Archive.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "No covers",
+          "why": "Titles only; the timeline's album row becomes plain text.",
+          "recommended": false
+        }
+      ],
+      "chosen": "The real covers",
+      "chosenId": "b",
+      "recommended": false,
+      "why": "Recognisable at a glance, but copyrighted images loaded from the Cover Art Archive.",
+      "components": [
+        "timeline",
+        "pages",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-004",
+      "date": "2026-10-06",
+      "plan": "2026-10-06-dylan-site",
+      "step": 5,
+      "stepTitle": "Threads: follow a connection from song to song (question 4)",
+      "questionId": "q4",
+      "question": "How should connections be explored?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Threads only",
+          "why": "Cards you swipe through, one song at a time; works with a thumb.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "A connection map",
+          "why": "Every song a dot and every connection a line; striking on a laptop, too small to tap on a phone.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Threads, plus a map on wide screens",
+          "why": "Both, at the cost of a graph library of about 90 KB and a second view to keep working.",
+          "recommended": false
+        }
+      ],
+      "chosen": "Threads, plus a map on wide screens",
+      "chosenId": "c",
+      "recommended": false,
+      "why": "Both, at the cost of a graph library of about 90 KB and a second view to keep working.",
+      "components": [
+        "threads"
+      ],
+      "status": "superseded",
+      "supersedes": [],
+      "supersededOn": "2026-10-07",
+      "supersededByPlan": "2026-10-06-dylan-site"
+    },
+    {
+      "id": "D-005",
+      "date": "2026-10-06",
+      "plan": "2026-10-06-dylan-site",
+      "step": 6,
+      "stepTitle": "Search, listening links, and checking it on a phone (question 5)",
+      "questionId": "q5",
+      "question": "How should someone listen?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Links out",
+          "why": "Spotify, Apple Music and YouTube links per song; nothing loads until tapped.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "An embedded Spotify player",
+          "why": "You hear it without leaving, but it needs a Spotify id per song, cookies, and previews when not logged in.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "No listening",
+          "why": "The most natural next tap goes nowhere.",
+          "recommended": false
+        }
+      ],
+      "chosen": "An embedded Spotify player",
+      "chosenId": "b",
+      "recommended": false,
+      "why": "You hear it without leaving, but it needs a Spotify id per song, cookies, and previews when not logged in.",
+      "components": [
+        "dataset",
+        "data-check",
+        "search",
+        "phone-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-006",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 3,
+      "stepTitle": "The era timeline: each era with its own look (question 2)",
+      "questionId": "q2",
+      "question": "Where should the era photographs come from?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Wikimedia Commons, free-licensed",
+          "why": "Free to use with credit shown; coverage is uneven, and some eras get one photo or none.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Licensed press photographs",
+          "why": "Every era covered, but a fee per image, often yearly, and a licence that may not allow a public site.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "No photographs",
+          "why": "Each era's theme alone, with the covers; the plainer look the review asked to avoid.",
+          "recommended": false
+        }
+      ],
+      "chosen": "Wikimedia Commons, free-licensed",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "Free to use with credit shown; coverage is uneven, and some eras get one photo or none.",
+      "note": "but note that we can ue other images and shiould still make it completely visually full , even if we cant find licenses... like no photographs and just text will be bad",
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-007",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 4,
+      "stepTitle": "Album and song pages: covers, lyrics links, and connections (question 3)",
+      "questionId": "q3",
+      "question": "What should a song page show beside its lyrics link?",
+      "options": [
+        {
+          "id": "a",
+          "label": "The link only",
+          "why": "Nothing quoted; the official page has the words.",
+          "recommended": false
+        },
+        {
+          "id": "b",
+          "label": "The link and the first line",
+          "why": "A real taste of the song, but quoting a lyric needs the publisher's permission.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "The link and a preview in our words",
+          "why": "A one-sentence preview written for the site; no lyric is quoted.",
+          "recommended": true
+        }
+      ],
+      "chosen": "The link and a preview in our words",
+      "chosenId": "c",
+      "recommended": true,
+      "why": "A one-sentence preview written for the site; no lyric is quoted.",
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-008",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 1,
+      "stepTitle": "The app shell: an Astro site for a phone, a real page per album and song",
+      "questionId": "autonomy-a10",
+      "kind": "autonomy",
+      "question": "A mistyped address lands on the 404 page, which sends you on to search with the address's last part as the words (`/album/blonde-on-blond/` → search \"blonde on blond\"), or showing results on the 404 page itself? (the agent's own call A10, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "A mistyped address lands on the 404 page, which sends you on to search with the address's last part as the words (`/album/blonde-on-blond/` → search \"blonde on blond\")",
+          "why": "one search page to keep working; the step it adds is a redirect, not a tap",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "showing results on the 404 page itself",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "A mistyped address lands on the 404 page, which sends you on to search with the address's last part as the words (`/album/blonde-on-blond/` → search \"blonde on blond\")",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "one search page to keep working; the step it adds is a redirect, not a tap",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "shell",
+        "timeline",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-009",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 1,
+      "stepTitle": "The app shell: an Astro site for a phone, a real page per album and song",
+      "questionId": "autonomy-a15",
+      "kind": "autonomy",
+      "question": "From 768 px the tab bar sits at the top of the screen, or the bottom bar on every width? (the agent's own call A15, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "From 768 px the tab bar sits at the top of the screen",
+          "why": "on a laptop a top bar is where a reader looks; on a phone it stays at the bottom, as the plan says",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the bottom bar on every width",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "From 768 px the tab bar sits at the top of the screen",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "on a laptop a top bar is where a reader looks; on a phone it stays at the bottom, as the plan says",
+      "verdict": "accept",
+      "tags": [
+        "visible",
+        "close"
+      ],
+      "components": [
+        "shell",
+        "timeline",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-010",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 2,
+      "stepTitle": "The dataset: what is in it, and what each record points to",
+      "questionId": "autonomy-a18",
+      "kind": "autonomy",
+      "question": "Each photo names its era and kind (`dylan` or `place`) in `photos.json`, and the panel picks a Dylan photo first; `eras.json`'s `photos` lists stay empty, or each era listing its photo ids, as the plan's interface shows? (the agent's own call A18, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Each photo names its era and kind (`dylan` or `place`) in `photos.json`, and the panel picks a Dylan photo first; `eras.json`'s `photos` lists stay empty",
+          "why": "the photo search worked era by era, and the order rule (Dylan, then place) lives in one place",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "each era listing its photo ids, as the plan's interface shows",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Each photo names its era and kind (`dylan` or `place`) in `photos.json`, and the panel picks a Dylan photo first; `eras.json`'s `photos` lists stay empty",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the photo search worked era by era, and the order rule (Dylan, then place) lives in one place",
+      "verdict": "accept",
+      "tags": [
+        "hard-to-undo"
+      ],
+      "components": [
+        "dataset",
+        "data-check",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-011",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 4,
+      "stepTitle": "Album and song pages: covers, lyrics links, and connections (question 3)",
+      "questionId": "autonomy-a11",
+      "kind": "autonomy",
+      "question": "\"Lyrics on bobdylan.com ↗\" opens in a new tab, or opening in the same tab? (the agent's own call A11, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "\"Lyrics on bobdylan.com ↗\" opens in a new tab",
+          "why": "you keep your place in the site",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "opening in the same tab",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "\"Lyrics on bobdylan.com ↗\" opens in a new tab",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "you keep your place in the site",
+      "verdict": "accept",
+      "tags": [
+        "visible",
+        "close"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-012",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 4,
+      "stepTitle": "Album and song pages: covers, lyrics links, and connections (question 3)",
+      "questionId": "autonomy-a16",
+      "kind": "autonomy",
+      "question": "Song pages step to the album's previous and next song, or no stepping between songs? (the agent's own call A16, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Song pages step to the album's previous and next song",
+          "why": "reading through an album without going back to it each time",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "no stepping between songs",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Song pages step to the album's previous and next song",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "reading through an album without going back to it each time",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-013",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 5,
+      "stepTitle": "Threads and the map: follow connections as cards, or see them all",
+      "questionId": "autonomy-a7",
+      "kind": "autonomy",
+      "question": "The threads are built by `tools/make-threads.mjs`: one per theme plus \"Borrowed tunes\" and \"Songs others made famous\", each card's sentence the song's note or the connection's why, or twelve threads each written card by card? (the agent's own call A7, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The threads are built by `tools/make-threads.mjs`: one per theme plus \"Borrowed tunes\" and \"Songs others made famous\", each card's sentence the song's note or the connection's why",
+          "why": "the writing is the dataset's own, checked once; a hand-written thread can replace any of them in `data/threads.json`",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "twelve threads each written card by card",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The threads are built by `tools/make-threads.mjs`: one per theme plus \"Borrowed tunes\" and \"Songs others made famous\", each card's sentence the song's note or the connection's why",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the writing is the dataset's own, checked once; a hand-written thread can replace any of them in `data/threads.json`",
+      "verdict": "accept",
+      "tags": [
+        "visible",
+        "close"
+      ],
+      "components": [
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-014",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 6,
+      "stepTitle": "Search, listening and watching, and checking it on a phone",
+      "questionId": "autonomy-a14",
+      "kind": "autonomy",
+      "question": "Search forgives a typo or two (one edit at 4–5 letters, two from 6; a swapped pair counts as one) and takes `theme:<name>`, which the theme chips on song pages use, or plain matching? (the agent's own call A14, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Search forgives a typo or two (one edit at 4–5 letters, two from 6; a swapped pair counts as one) and takes `theme:<name>`, which the theme chips on song pages use",
+          "why": "a mistyped title still finds its song (\"rolling stoen\", `runs/search.txt`), and a theme chip needs a way to search by theme",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "plain matching",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Search forgives a typo or two (one edit at 4–5 letters, two from 6; a swapped pair counts as one) and takes `theme:<name>`, which the theme chips on song pages use",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a mistyped title still finds its song (\"rolling stoen\", `runs/search.txt`), and a theme chip needs a way to search by theme",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "data-check",
+        "search",
+        "phone-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-015",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 1,
+      "stepTitle": "The app shell: an Astro site for a phone, a real page per album and song",
+      "questionId": "autonomy-a1",
+      "kind": "autonomy",
+      "question": "The site's base path is `/` (it lives at a domain's root), or `/dylan-site/` for a GitHub Pages project page? (the agent's own call A1, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The site's base path is `/` (it lives at a domain's root)",
+          "why": "the host is not chosen yet; every address goes through `import.meta.env.BASE_URL` (changed after the code check: before, links were written from `/` and a new base would have broken them), so `base` in `astro.config.mjs`, or `astro build --base /dylan-site/`, moves the whole site",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "`/dylan-site/` for a GitHub Pages project page",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The site's base path is `/` (it lives at a domain's root)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the host is not chosen yet; every address goes through `import.meta.env.BASE_URL` (changed after the code check: before, links were written from `/` and a new base would have broken them), so `base` in `astro.config.mjs`, or `astro build --base /dylan-site/`, moves the whole site",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "shell",
+        "timeline",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-016",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 2,
+      "stepTitle": "The dataset: what is in it, and what each record points to",
+      "questionId": "autonomy-a2",
+      "kind": "autonomy",
+      "question": "The parts of the dataset are written as `data/parts/*.json` and merged by `tools/merge-data.mjs` into the seven files, or writing the seven files by hand? (the agent's own call A2, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The parts of the dataset are written as `data/parts/*.json` and merged by `tools/merge-data.mjs` into the seven files",
+          "why": "several writers worked in parallel by era; the merge drops duplicate songs by id",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "writing the seven files by hand",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The parts of the dataset are written as `data/parts/*.json` and merged by `tools/merge-data.mjs` into the seven files",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "several writers worked in parallel by era; the merge drops duplicate songs by id",
+      "verdict": "listed",
+      "tags": [],
+      "components": [
+        "dataset",
+        "data-check",
+        "threads"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-017",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 3,
+      "stepTitle": "The era timeline: each era with its own look (question 2)",
+      "questionId": "autonomy-a13",
+      "kind": "autonomy",
+      "question": "Each era page (`/era/<id>/`) is the whole timeline, opened at that era, or one timeline page that reads the era from the address? (the agent's own call A13, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Each era page (`/era/<id>/`) is the whole timeline, opened at that era",
+          "why": "a shared era link opens on its panel with no script, and the back button returns to it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "one timeline page that reads the era from the address",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Each era page (`/era/<id>/`) is the whole timeline, opened at that era",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a shared era link opens on its panel with no script, and the back button returns to it",
+      "verdict": "listed",
+      "tags": [],
+      "components": [
+        "timeline"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-018",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 5,
+      "stepTitle": "Threads and the map: follow connections as cards, or see them all",
+      "questionId": "autonomy-a4",
+      "kind": "autonomy",
+      "question": "The map's layout is d3-force, run in the browser, or a precomputed layout, or Cytoscape? (the agent's own call A4, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The map's layout is d3-force, run in the browser",
+          "why": "about 30 KB, and it settles the dots around whichever song you open",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a precomputed layout, or Cytoscape",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The map's layout is d3-force, run in the browser",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "about 30 KB, and it settles the dots around whichever song you open",
+      "verdict": "listed",
+      "tags": [],
+      "components": [
+        "threads"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-019",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 6,
+      "stepTitle": "Search, listening and watching, and checking it on a phone",
+      "questionId": "autonomy-a3",
+      "kind": "autonomy",
+      "question": "The phone check drives the Chrome already on the machine (`CHROME_PATH`, else the HyperFrames cache), or downloading a Chrome with `puppeteer`? (the agent's own call A3, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The phone check drives the Chrome already on the machine (`CHROME_PATH`, else the HyperFrames cache)",
+          "why": "`puppeteer-core` installs no browser; one less 150 MB download",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "downloading a Chrome with `puppeteer`",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The phone check drives the Chrome already on the machine (`CHROME_PATH`, else the HyperFrames cache)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "`puppeteer-core` installs no browser; one less 150 MB download",
+      "verdict": "listed",
+      "tags": [],
+      "components": [
+        "data-check",
+        "search",
+        "phone-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-020",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 6,
+      "stepTitle": "Search, listening and watching, and checking it on a phone",
+      "questionId": "autonomy-a12",
+      "kind": "autonomy",
+      "question": "The phone check does not size-check links inside running text or the map's dots, and answers outside requests (covers, players) with an empty reply, so it sees the drawn covers, or holding every link to 44 px, and loading real covers during the check? (the agent's own call A12, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The phone check does not size-check links inside running text or the map's dots, and answers outside requests (covers, players) with an empty reply, so it sees the drawn covers",
+          "why": "a link inside a sentence is read, not aimed at; the dots are a picture you drag; the check needs no network. The site's own files must all load: a failed load of one fails the check (changed after the code check: before, every failed load was ignored)",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "holding every link to 44 px, and loading real covers during the check",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The phone check does not size-check links inside running text or the map's dots, and answers outside requests (covers, players) with an empty reply, so it sees the drawn covers",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a link inside a sentence is read, not aimed at; the dots are a picture you drag; the check needs no network. The site's own files must all load: a failed load of one fails the check (changed after the code check: before, every failed load was ignored)",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "data-check",
+        "search",
+        "phone-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-021",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 2,
+      "stepTitle": "The dataset: what is in it, and what each record points to",
+      "questionId": "autonomy-a6",
+      "kind": "autonomy",
+      "question": "49 connections, each one a fact the writers were sure of, or about 140, as the plan estimated? (the agent's own call A6, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "49 connections, each one a fact the writers were sure of",
+          "why": "a wrong connection is worse than a missing one; more can be added to `data/parts/*.json` and merged",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "about 140, as the plan estimated",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "49 connections, each one a fact the writers were sure of",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a wrong connection is worse than a missing one; more can be added to `data/parts/*.json` and merged",
+      "verdict": "own",
+      "tags": [
+        "visible"
+      ],
+      "own": "can you explore more why we didnt fully fill the connections here?",
+      "components": [
+        "dataset",
+        "data-check",
+        "threads"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-022",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 2,
+      "stepTitle": "The dataset: what is in it, and what each record points to",
+      "questionId": "autonomy-d1",
+      "kind": "autonomy",
+      "question": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written, or two-line credited excerpts on landmark songs, as the plan allows? (the agent's own call D1, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written",
+          "why": "the writers were stopped by a content filter when quoting lyrics, so the build quotes none; an excerpt can be added to `data/songs.json` by hand and the page shows it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "two-line credited excerpts on landmark songs, as the plan allows",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the writers were stopped by a content filter when quoting lyrics, so the build quotes none; an excerpt can be added to `data/songs.json` by hand and the page shows it",
+      "verdict": "own",
+      "tags": [
+        "deviation",
+        "visible"
+      ],
+      "own": "its fine if this is the only possibility but arfe you sure we dcant just quote some small parts? i dont undersand why we wouldnt be able to, this is common to cite a line from a song, even in popular culture",
+      "components": [
+        "dataset",
+        "data-check",
+        "threads"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-023",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 3,
+      "stepTitle": "The era timeline: each era with its own look (question 2)",
+      "questionId": "autonomy-a5",
+      "kind": "autonomy",
+      "question": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks), or loading web fonts per era? (the agent's own call A5, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks)",
+          "why": "no font downloads and no flash of unstyled text; the look varies a little by phone",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "loading web fonts per era",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "no font downloads and no flash of unstyled text; the look varies a little by phone",
+      "verdict": "own",
+      "tags": [
+        "visible",
+        "close"
+      ],
+      "own": "i think the fonts and styling can be much better, more individualistic; it's kind of boring and stock right now. each era should mean something and visually be represented by that via the page. it shouldnt be standardized, it should evoke the creativity of bob dylan",
+      "components": [
+        "timeline"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-024",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 4,
+      "stepTitle": "Album and song pages: covers, lyrics links, and connections (question 3)",
+      "questionId": "autonomy-a17",
+      "kind": "autonomy",
+      "question": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks, or the full track list, or an unlabelled selection? (the agent's own call A17, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks",
+          "why": "the dataset writes 7–8 songs per landmark and 2–3 per other album (D-002); the label says so (added after the code check)",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the full track list, or an unlabelled selection",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the dataset writes 7–8 songs per landmark and 2–3 per other album (D-002); the label says so (added after the code check)",
+      "verdict": "own",
+      "tags": [
+        "visible"
+      ],
+      "own": "is this missing some songs do you mean?",
+      "components": [
+        "pages"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-025",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 6,
+      "stepTitle": "Search, listening and watching, and checking it on a phone",
+      "questionId": "autonomy-a9",
+      "kind": "autonomy",
+      "question": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment, or clips for Newport 1965 and live songs? (the agent's own call A9, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment",
+          "why": "no official upload of the Newport footage turned up; unofficial uploads come and go; \"official audio\" uploads would only repeat Spotify",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "clips for Newport 1965 and live songs",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "no official upload of the Newport footage turned up; unofficial uploads come and go; \"official audio\" uploads would only repeat Spotify",
+      "verdict": "own",
+      "tags": [
+        "visible",
+        "close"
+      ],
+      "own": "we should be able to view other videos here too i mean there should be a lot we can view and probably on more than two",
+      "components": [
+        "data-check",
+        "search",
+        "phone-check"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-026",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 6,
+      "stepTitle": "Search, listening and watching, and checking it on a phone",
+      "questionId": "autonomy-a8",
+      "kind": "autonomy",
+      "question": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs), or ids typed in by hand? (the agent's own call A8, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs)",
+          "why": "a wrong id plays the wrong song; four songs whose titles did not match have no player",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "ids typed in by hand",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a wrong id plays the wrong song; four songs whose titles did not match have no player",
+      "verdict": "own",
+      "tags": [
+        "visible"
+      ],
+      "own": "for the 4 that werent found we must find a replacement for it; can't leave dry",
+      "components": [
+        "data-check",
+        "search",
+        "phone-check"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-027",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 3,
+      "stepTitle": "The era timeline: each era with its own look (question 2)",
+      "questionId": "autonomy-a5",
+      "kind": "autonomy",
+      "question": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks) [visible, close] (changed after review: \"it should evoke the creativity of bob dylan\" — each era now has its own art direction: its own free typeface from `@fontsource` (Alfa Slab One, Courier Prime, Bebas Neue, Rye, DM Serif Display, Abril Fatface, Monoton with Oswald, IM Fell English, Oswald Light, Limelight, Cinzel), palette, CSS texture and a gesture on its panel and pages: a taped flyer and rubber stamp for the Village, a Dont Look Back cue card for Going Electric, a woodtype frame for Basement and Country, a revival handbill for Gospel, neon tubes for the '80s, a 78 label for Back to the Roots, film frames for the Late Renaissance, a deco frame for the Standards, brass for Rough and Rowdy; the chips, buttons and cards became era objects), or loading web fonts per era? (the agent's own call A5, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks) [visible, close] (changed after review: \"it should evoke the creativity of bob dylan\" — each era now has its own art direction: its own free typeface from `@fontsource` (Alfa Slab One, Courier Prime, Bebas Neue, Rye, DM Serif Display, Abril Fatface, Monoton with Oswald, IM Fell English, Oswald Light, Limelight, Cinzel), palette, CSS texture and a gesture on its panel and pages: a taped flyer and rubber stamp for the Village, a Dont Look Back cue card for Going Electric, a woodtype frame for Basement and Country, a revival handbill for Gospel, neon tubes for the '80s, a 78 label for Back to the Roots, film frames for the Late Renaissance, a deco frame for the Standards, brass for Rough and Rowdy; the chips, buttons and cards became era objects)",
+          "why": "no font downloads and no flash of unstyled text; the look varies a little by phone",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "loading web fonts per era",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks) [visible, close] (changed after review: \"it should evoke the creativity of bob dylan\" — each era now has its own art direction: its own free typeface from `@fontsource` (Alfa Slab One, Courier Prime, Bebas Neue, Rye, DM Serif Display, Abril Fatface, Monoton with Oswald, IM Fell English, Oswald Light, Limelight, Cinzel), palette, CSS texture and a gesture on its panel and pages: a taped flyer and rubber stamp for the Village, a Dont Look Back cue card for Going Electric, a woodtype frame for Basement and Country, a revival handbill for Gospel, neon tubes for the '80s, a 78 label for Back to the Roots, film frames for the Late Renaissance, a deco frame for the Standards, brass for Rough and Rowdy; the chips, buttons and cards became era objects)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "no font downloads and no flash of unstyled text; the look varies a little by phone",
+      "verdict": "accept",
+      "tags": [],
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-028",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 2,
+      "stepTitle": "The dataset: what is in it, and what each record points to",
+      "questionId": "autonomy-a6",
+      "kind": "autonomy",
+      "question": "49 connections, each one a fact the writers were sure of [visible] (changed after review: 135 connections. The first writers worked one era at a time and could only link songs inside their own era, so almost nothing crossed eras; a pass over the whole catalogue added 86: 46 same-theme pairs across eras, 30 famous covers, 9 source tunes, 1 rewrite), or about 140, as the plan estimated? (the agent's own call A6, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "49 connections, each one a fact the writers were sure of [visible] (changed after review: 135 connections. The first writers worked one era at a time and could only link songs inside their own era, so almost nothing crossed eras; a pass over the whole catalogue added 86: 46 same-theme pairs across eras, 30 famous covers, 9 source tunes, 1 rewrite)",
+          "why": "a wrong connection is worse than a missing one; more can be added to `data/parts/*.json` and merged",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "about 140, as the plan estimated",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "49 connections, each one a fact the writers were sure of [visible] (changed after review: 135 connections. The first writers worked one era at a time and could only link songs inside their own era, so almost nothing crossed eras; a pass over the whole catalogue added 86: 46 same-theme pairs across eras, 30 famous covers, 9 source tunes, 1 rewrite)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a wrong connection is worse than a missing one; more can be added to `data/parts/*.json` and merged",
+      "verdict": "accept",
+      "tags": [],
+      "components": [
+        "dataset",
+        "data-check",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-029",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 4,
+      "stepTitle": "Album and song pages: covers, lyrics links, and connections (question 3)",
+      "questionId": "autonomy-a17",
+      "kind": "autonomy",
+      "question": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks [visible] (changed after review: the album page shows the full track list from MusicBrainz, numbered; the songs with their own page are marked \"its story ›\", and a line says how many), or the full track list, or an unlabelled selection? (the agent's own call A17, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks [visible] (changed after review: the album page shows the full track list from MusicBrainz, numbered; the songs with their own page are marked \"its story ›\", and a line says how many)",
+          "why": "the dataset writes 7–8 songs per landmark and 2–3 per other album (D-002); the label says so (added after the code check)",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the full track list, or an unlabelled selection",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks [visible] (changed after review: the album page shows the full track list from MusicBrainz, numbered; the songs with their own page are marked \"its story ›\", and a line says how many)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the dataset writes 7–8 songs per landmark and 2–3 per other album (D-002); the label says so (added after the code check)",
+      "verdict": "accept",
+      "tags": [],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-030",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 6,
+      "stepTitle": "Search, listening and watching, and checking it on a phone",
+      "questionId": "autonomy-a8",
+      "kind": "autonomy",
+      "question": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs) [visible] (changed after review: 181 of 181. Spotify spells two titles differently, \"Fourth Time Around\" and \"Love Minus Zero\"; the match now drops subtitles and reads 4th as fourth, still by title), or ids typed in by hand? (the agent's own call A8, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs) [visible] (changed after review: 181 of 181. Spotify spells two titles differently, \"Fourth Time Around\" and \"Love Minus Zero\"; the match now drops subtitles and reads 4th as fourth, still by title)",
+          "why": "a wrong id plays the wrong song; four songs whose titles did not match have no player",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "ids typed in by hand",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs) [visible] (changed after review: 181 of 181. Spotify spells two titles differently, \"Fourth Time Around\" and \"Love Minus Zero\"; the match now drops subtitles and reads 4th as fourth, still by title)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a wrong id plays the wrong song; four songs whose titles did not match have no player",
+      "verdict": "accept",
+      "tags": [],
+      "components": [
+        "data-check",
+        "search",
+        "phone-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-031",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 6,
+      "stepTitle": "Search, listening and watching, and checking it on a phone",
+      "questionId": "autonomy-a9",
+      "kind": "autonomy",
+      "question": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment [visible, close] (changed after review, question 4 answered B: 166 album songs have a clip from Bob Dylan's official channel, and 13 moments have footage, some posted by others, each kept only when its title names the event; `npm run check:clips` fails on any clip taken down), or clips for Newport 1965 and live songs? (the agent's own call A9, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment [visible, close] (changed after review, question 4 answered B: 166 album songs have a clip from Bob Dylan's official channel, and 13 moments have footage, some posted by others, each kept only when its title names the event; `npm run check:clips` fails on any clip taken down)",
+          "why": "no official upload of the Newport footage turned up; unofficial uploads come and go; \"official audio\" uploads would only repeat Spotify",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "clips for Newport 1965 and live songs",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment [visible, close] (changed after review, question 4 answered B: 166 album songs have a clip from Bob Dylan's official channel, and 13 moments have footage, some posted by others, each kept only when its title names the event; `npm run check:clips` fails on any clip taken down)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "no official upload of the Newport footage turned up; unofficial uploads come and go; \"official audio\" uploads would only repeat Spotify",
+      "verdict": "accept",
+      "tags": [],
+      "components": [
+        "data-check",
+        "search",
+        "phone-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-032",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 2,
+      "stepTitle": "The dataset: what is in it, and what each record points to",
+      "questionId": "autonomy-d1",
+      "kind": "autonomy",
+      "question": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written [deviation, visible] (kept after review: short credited quotation is common, and may well be fair use; the limit is the AI's output, which a filter stopped every time it wrote lyric lines. Lines added by hand to `excerpt` in `data/songs.json` show, credited; a script that copies lyrics from another site would get round that filter, so the build does not use one), or two-line credited excerpts on landmark songs, as the plan allows? (the agent's own call D1, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written [deviation, visible] (kept after review: short credited quotation is common, and may well be fair use; the limit is the AI's output, which a filter stopped every time it wrote lyric lines. Lines added by hand to `excerpt` in `data/songs.json` show, credited; a script that copies lyrics from another site would get round that filter, so the build does not use one)",
+          "why": "the writers were stopped by a content filter when quoting lyrics, so the build quotes none; an excerpt can be added to `data/songs.json` by hand and the page shows it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "two-line credited excerpts on landmark songs, as the plan allows",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written [deviation, visible] (kept after review: short credited quotation is common, and may well be fair use; the limit is the AI's output, which a filter stopped every time it wrote lyric lines. Lines added by hand to `excerpt` in `data/songs.json` show, credited; a script that copies lyrics from another site would get round that filter, so the build does not use one)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the writers were stopped by a content filter when quoting lyrics, so the build quotes none; an excerpt can be added to `data/songs.json` by hand and the page shows it",
+      "verdict": "own",
+      "tags": [
+        "deviation"
+      ],
+      "own": "So are you saying it is empty right now? that is what im concerned about",
+      "components": [
+        "dataset",
+        "data-check",
+        "threads"
+      ],
+      "status": "superseded",
+      "supersedes": [],
+      "supersededOn": "2026-10-07",
+      "note": "superseded by D-033"
+    },
+    {
+      "id": "D-033",
+      "date": "2026-10-07",
+      "plan": "2026-10-06-dylan-site",
+      "step": 2,
+      "stepTitle": "The dataset: what is in it, and what each record points to",
+      "questionId": "owner-lyrics-summary",
+      "kind": "owner",
+      "question": "Lyrics are summarised, not quoted: every album song carries a summary of three or four sentences in our own words (`summary`, from `data/sources/summaries.json`) beside its one-sentence preview and the link to its lyrics on bobdylan.com; no excerpts are written, and `data/sources/excerpts.json` stays for a line added by hand, or two-line credited excerpts on landmark songs, or excerpts left empty with only the one-sentence preview? (the owner's answer in conversation after the second walkthrough review)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Lyrics are summarised, not quoted: every album song carries a summary of three or four sentences in our own words (`summary`, from `data/sources/summaries.json`) beside its one-sentence preview and the link to its lyrics on bobdylan.com; no excerpts are written, and `data/sources/excerpts.json` stays for a line added by hand",
+          "why": "the AI cannot write lyric lines, and the owner is fine with an AI-written summary in their place",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "two-line credited excerpts on landmark songs, or excerpts left empty with only the one-sentence preview",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Lyrics are summarised, not quoted: every album song carries a summary of three or four sentences in our own words (`summary`, from `data/sources/summaries.json`) beside its one-sentence preview and the link to its lyrics on bobdylan.com; no excerpts are written, and `data/sources/excerpts.json` stays for a line added by hand",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the AI cannot write lyric lines, and the owner is fine with an AI-written summary in their place",
+      "verdict": "answered",
+      "tags": [],
+      "own": "ok i think its fine to just have AI fill in the lyrics summary? · yes do both",
+      "components": [
+        "dataset",
+        "data-check"
+      ],
+      "status": "in force",
+      "supersedes": [
+        "D-032"
+      ]
+    },
+    {
+      "id": "D-034",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 1,
+      "stepTitle": "Every track becomes a song: its record and its writing (questions 1 and 2)",
+      "questionId": "q1",
+      "question": "Which tracks get a page?",
+      "options": [
+        {
+          "id": "a",
+          "label": "The 54 missing from the 16 landmarks",
+          "why": "Makes \"16 in full\" true; about 120 new pages. Triplicate keeps 27 dead rows.",
+          "recommended": false
+        },
+        {
+          "id": "b",
+          "label": "All 277",
+          "why": "Every row of every album opens a page; about 600 new pages.",
+          "recommended": true
+        },
+        {
+          "id": "c",
+          "label": "None",
+          "why": "The track lists stay as they are.",
+          "recommended": false
+        }
+      ],
+      "chosen": "All 277",
+      "chosenId": "b",
+      "recommended": true,
+      "why": "Every row of every album opens a page; about 600 new pages.",
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": [
+        "D-002"
+      ]
+    },
+    {
+      "id": "D-035",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 1,
+      "stepTitle": "Every track becomes a song: its record and its writing (questions 1 and 2)",
+      "questionId": "q2",
+      "question": "How much is written for a song by another writer?",
+      "options": [
+        {
+          "id": "a",
+          "label": "The same page as his own songs",
+          "why": "A note, a summary of the song and his recording, the player, who wrote the words.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "A shorter page: the note and the player",
+          "why": "One sentence and the player; thinner than his own songs.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "No page: the writer's name on the row",
+          "why": "Not a link; Triplicate stays mostly dead rows.",
+          "recommended": false
+        }
+      ],
+      "chosen": "The same page as his own songs",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "A note, a summary of the song and his recording, the player, who wrote the words.",
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-036",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 2,
+      "stepTitle": "The app shell on a wide screen: a header, the era's look across the window, room for two columns (question 1)",
+      "questionId": "q1",
+      "question": "How wide should the content go on a computer?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Up to 1200 px, two columns",
+          "why": "Cover and players left, words and connections right; the era's look either side.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Up to 1600 px, three columns where there is room",
+          "why": "A third column, the song's map, on a wide monitor; harder to read in order.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Keep the 720 px column, paint the margins",
+          "why": "The cheapest; a song page stays 2,500 px tall.",
+          "recommended": false
+        }
+      ],
+      "chosen": "Up to 1200 px, two columns",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "Cover and players left, words and connections right; the era's look either side.",
+      "components": [
+        "shell",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-037",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 3,
+      "stepTitle": "The era timeline on a computer: one era fills the screen (question 2)",
+      "questionId": "q2",
+      "question": "On a computer, does the home page give one era at a time, or all of them at once?",
+      "options": [
+        {
+          "id": "a",
+          "label": "One era fills the screen",
+          "why": "Photo left, story right, albums under; arrows, keys and the timeline move on.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "All eleven down one long page",
+          "why": "Scroll from Hibbing to Rough and Rowdy; the look changes under you.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "An overview of eleven columns first",
+          "why": "One more click to an era; each column is about 120 px wide.",
+          "recommended": false
+        }
+      ],
+      "chosen": "One era fills the screen",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "Photo left, story right, albums under; arrows, keys and the timeline move on.",
+      "note": "actually maybe mixing this with scroll is good. i like how this is presented but if we scroll down, it should get us to the next era with a clean transition through scrolling, wihtout needing to click the arrow",
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-038",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "q3",
+      "question": "On a computer, what should clicking a dot on the map do?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Select it, and show its panel",
+          "why": "You stay on the map; Open the song › or a double click opens it.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Open its song at once",
+          "why": "As on a phone; every click leaves the map.",
+          "recommended": false
+        }
+      ],
+      "chosen": "Select it, and show its panel",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "You stay on the map; Open the song › or a double click opens it.",
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-039",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 1,
+      "stepTitle": "Every track becomes a song: its record and its writing (questions 1 and 2)",
+      "questionId": "autonomy-a1",
+      "kind": "autonomy",
+      "question": "Every album track is mapped to its song once, by `tools/add-tracks.mjs`, into `data/sources/track-map.json` (`{ album: [song id per track] }`); album pages and the data check read that map, or matching track titles to songs when each page is built, as before? (the agent's own call A1, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Every album track is mapped to its song once, by `tools/add-tracks.mjs`, into `data/sources/track-map.json` (`{ album: [song id per track] }`); album pages and the data check read that map",
+          "why": "a take or a live take maps to a song with a different title; one map, checked, is simpler than the same fuzzy match in three places",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "matching track titles to songs when each page is built, as before",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Every album track is mapped to its song once, by `tools/add-tracks.mjs`, into `data/sources/track-map.json` (`{ album: [song id per track] }`); album pages and the data check read that map",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a take or a live take maps to a song with a different title; one map, checked, is simpler than the same fuzzy match in three places",
+      "verdict": "accept",
+      "tags": [
+        "hard-to-undo"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-040",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 1,
+      "stepTitle": "Every track becomes a song: its record and its writing (questions 1 and 2)",
+      "questionId": "autonomy-a2",
+      "kind": "autonomy",
+      "question": "Takes on one album that have no song between them become one song under the shared title: \"Alberta #1\" and \"Alberta #2\" are the song \"Alberta\"; \"Forever Young (continued)\" on Planet Waves maps to \"Forever Young\", or a song per take? (the agent's own call A2, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Takes on one album that have no song between them become one song under the shared title: \"Alberta #1\" and \"Alberta #2\" are the song \"Alberta\"; \"Forever Young (continued)\" on Planet Waves maps to \"Forever Young\"",
+          "why": "the plan folds takes into the song they are takes of; with no existing song, the title without the take number is that song",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a song per take",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Takes on one album that have no song between them become one song under the shared title: \"Alberta #1\" and \"Alberta #2\" are the song \"Alberta\"; \"Forever Young (continued)\" on Planet Waves maps to \"Forever Young\"",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the plan folds takes into the song they are takes of; with no existing song, the title without the take number is that song",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-041",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 1,
+      "stepTitle": "Every track becomes a song: its record and its writing (questions 1 and 2)",
+      "questionId": "autonomy-a3",
+      "kind": "autonomy",
+      "question": "A live take whose song had no page anywhere becomes a song under its plain title, with the live take as its track: \"The Mighty Quinn (Quinn the Eskimo)\" and \"Minstrel Boy\", both on Self Portrait, or a song titled \"… (live)\"? (the agent's own call A3, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "A live take whose song had no page anywhere becomes a song under its plain title, with the live take as its track: \"The Mighty Quinn (Quinn the Eskimo)\" and \"Minstrel Boy\", both on Self Portrait",
+          "why": "the page is about the song; the album row still shows the track as MusicBrainz names it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a song titled \"… (live)\"",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "A live take whose song had no page anywhere becomes a song under its plain title, with the live take as its track: \"The Mighty Quinn (Quinn the Eskimo)\" and \"Minstrel Boy\", both on Self Portrait",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the page is about the song; the album row still shows the track as MusicBrainz names it",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-042",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 1,
+      "stepTitle": "Every track becomes a song: its record and its writing (questions 1 and 2)",
+      "questionId": "autonomy-d1",
+      "kind": "autonomy",
+      "question": "The new songs' records are in `data/parts/album-tracks.json`, or `data/parts/tracks.json`, as the plan's interface named it? (the agent's own call D1, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The new songs' records are in `data/parts/album-tracks.json`",
+          "why": "that file already exists: it is the \"Blood on the Tracks\" era's part",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "`data/parts/tracks.json`, as the plan's interface named it",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The new songs' records are in `data/parts/album-tracks.json`",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "that file already exists: it is the \"Blood on the Tracks\" era's part",
+      "verdict": "accept",
+      "tags": [
+        "deviation"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-043",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 2,
+      "stepTitle": "Players, clips and lyrics links for the new songs",
+      "questionId": "autonomy-a8",
+      "kind": "autonomy",
+      "question": "A traditional song's words card says \"A traditional song\", or \"Words by traditional\", or no line? (the agent's own call A8, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "A traditional song's words card says \"A traditional song\"",
+          "why": "\"Words by\" names a writer; a traditional song has none (25 songs)",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "\"Words by traditional\", or no line",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "A traditional song's words card says \"A traditional song\"",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "\"Words by\" names a writer; a traditional song has none (25 songs)",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-044",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 2,
+      "stepTitle": "Players, clips and lyrics links for the new songs",
+      "questionId": "autonomy-d4",
+      "kind": "autonomy",
+      "question": "An instrumental keeps its bobdylan.com page as its link (9 songs, such as \"Turkey Chase\"), as \"Nashville Skyline Rag\" had from the first build, or no lyrics link, as step 1's case table says? (the agent's own call D4, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "An instrumental keeps its bobdylan.com page as its link (9 songs, such as \"Turkey Chase\"), as \"Nashville Skyline Rag\" had from the first build",
+          "why": "bobdylan.com keeps a page for each; the button still reads \"Lyrics on bobdylan.com\", which there means the song's page, not words",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "no lyrics link, as step 1's case table says",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "An instrumental keeps its bobdylan.com page as its link (9 songs, such as \"Turkey Chase\"), as \"Nashville Skyline Rag\" had from the first build",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "bobdylan.com keeps a page for each; the button still reads \"Lyrics on bobdylan.com\", which there means the song's page, not words",
+      "verdict": "accept",
+      "tags": [
+        "deviation",
+        "close"
+      ],
+      "components": [
+        "pages",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-045",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 3,
+      "stepTitle": "Connections and threads reach the new songs",
+      "questionId": "autonomy-d3",
+      "kind": "autonomy",
+      "question": "`data/threads.json` is kept by hand from now on: the 26 new songs were placed into it, and `tools/make-threads.mjs` refuses to overwrite it without `--force`, or regenerating the threads with the tool? (the agent's own call D3, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "`data/threads.json` is kept by hand from now on: the 26 new songs were placed into it, and `tools/make-threads.mjs` refuses to overwrite it without `--force`",
+          "why": "the tool keeps ten songs per theme, landmark albums first; with 452 album songs it would pick a different ten and drop the placed songs",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "regenerating the threads with the tool",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "`data/threads.json` is kept by hand from now on: the 26 new songs were placed into it, and `tools/make-threads.mjs` refuses to overwrite it without `--force`",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the tool keeps ten songs per theme, landmark albums first; with 452 album songs it would pick a different ten and drop the placed songs",
+      "verdict": "accept",
+      "tags": [
+        "deviation"
+      ],
+      "components": [
+        "data-check",
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-046",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 4,
+      "stepTitle": "Album pages, search and the map with every track; the data check holds it",
+      "questionId": "autonomy-a9",
+      "kind": "autonomy",
+      "question": "A song page names its live takes on other albums: \"Also on Self Portrait: She Belongs to Me (live)\", or the album row linking there, with nothing on the song's page? (the agent's own call A9, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "A song page names its live takes on other albums: \"Also on Self Portrait: She Belongs to Me (live)\"",
+          "why": "a reader on the song page would not know the live take exists; the map gives it for free",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the album row linking there, with nothing on the song's page",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "A song page names its live takes on other albums: \"Also on Self Portrait: She Belongs to Me (live)\"",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a reader on the song page would not know the live take exists; the map gives it for free",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "data-check",
+        "pages",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-047",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 2,
+      "stepTitle": "Players, clips and lyrics links for the new songs",
+      "questionId": "autonomy-a5",
+      "kind": "autonomy",
+      "question": "The three fetchers now keep what earlier runs found (`lyrics.json` was rewritten from scratch each run, which would have dropped 8 links found in the first build) and know a few other spellings (Talkin' World War III Blues, Motorpsycho Nightmare, What'll I Do, Quinn the Eskimo), or rerunning them as they were? (the agent's own call A5, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The three fetchers now keep what earlier runs found (`lyrics.json` was rewritten from scratch each run, which would have dropped 8 links found in the first build) and know a few other spellings (Talkin' World War III Blues, Motorpsycho Nightmare, What'll I Do, Quinn the Eskimo)",
+          "why": "a rerun must only add; without the spellings, 4 of Dylan's songs had no lyrics link and 3 no player",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "rerunning them as they were",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The three fetchers now keep what earlier runs found (`lyrics.json` was rewritten from scratch each run, which would have dropped 8 links found in the first build) and know a few other spellings (Talkin' World War III Blues, Motorpsycho Nightmare, What'll I Do, Quinn the Eskimo)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a rerun must only add; without the spellings, 4 of Dylan's songs had no lyrics link and 3 no player",
+      "verdict": "listed",
+      "tags": [],
+      "components": [
+        "pages",
+        "search"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-048",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 3,
+      "stepTitle": "Connections and threads reach the new songs",
+      "questionId": "autonomy-a7",
+      "kind": "autonomy",
+      "question": "Covers others made famous are added as their own version songs (12, such as Manfred Mann's \"Mighty Quinn\"), as the first build's connections were, and are not added to the \"Songs others made famous\" thread, or adding them to that thread too? (the agent's own call A7, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Covers others made famous are added as their own version songs (12, such as Manfred Mann's \"Mighty Quinn\"), as the first build's connections were, and are not added to the \"Songs others made famous\" thread",
+          "why": "the writers were asked for new songs in threads; a thread change is the owner's to see",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "adding them to that thread too",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Covers others made famous are added as their own version songs (12, such as Manfred Mann's \"Mighty Quinn\"), as the first build's connections were, and are not added to the \"Songs others made famous\" thread",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the writers were asked for new songs in threads; a thread change is the owner's to see",
+      "verdict": "listed",
+      "tags": [],
+      "components": [
+        "data-check",
+        "pages",
+        "threads"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-049",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 1,
+      "stepTitle": "Every track becomes a song: its record and its writing (questions 1 and 2)",
+      "questionId": "autonomy-a4",
+      "kind": "autonomy",
+      "question": "Where Dylan co-wrote the words (with Robert Hunter, Jacques Levy, Tom Petty, Carole Bayer Sager), the song counts as his own: no \"Words by\" line, the co-writer named in the note, or a \"Words by Bob Dylan and …\" line? (the agent's own call A4, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "Where Dylan co-wrote the words (with Robert Hunter, Jacques Levy, Tom Petty, Carole Bayer Sager), the song counts as his own: no \"Words by\" line, the co-writer named in the note",
+          "why": "the line is for songs whose words he did not write; the writers had handled it two ways and two songs were changed to match",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a \"Words by Bob Dylan and …\" line",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "Where Dylan co-wrote the words (with Robert Hunter, Jacques Levy, Tom Petty, Carole Bayer Sager), the song counts as his own: no \"Words by\" line, the co-writer named in the note",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the line is for songs whose words he did not write; the writers had handled it two ways and two songs were changed to match",
+      "verdict": "own",
+      "tags": [
+        "visible",
+        "close"
+      ],
+      "own": "probably want to give each writer credit",
+      "components": [
+        "pages"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-050",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 2,
+      "stepTitle": "Players, clips and lyrics links for the new songs",
+      "questionId": "autonomy-d2",
+      "kind": "autonomy",
+      "question": "No Genius links: another writer's song shows \"Words by …\" alone, or \"Lyrics on Genius ↗\" where Genius has the song, as the plan review asked? (the agent's own call D2, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "No Genius links: another writer's song shows \"Words by …\" alone",
+          "why": "Genius answers this machine with 403, and the search engines that could find its pages answer with a bot check, so no link could be found or checked; an unchecked address could be a dead link",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "\"Lyrics on Genius ↗\" where Genius has the song, as the plan review asked",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "No Genius links: another writer's song shows \"Words by …\" alone",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "Genius answers this machine with 403, and the search engines that could find its pages answer with a bot check, so no link could be found or checked; an unchecked address could be a dead link",
+      "verdict": "own",
+      "tags": [
+        "deviation",
+        "visible"
+      ],
+      "own": "are there other lyrics providers not blocked?",
+      "components": [
+        "pages",
+        "search"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-051",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-every-song",
+      "step": 2,
+      "stepTitle": "Players, clips and lyrics links for the new songs",
+      "questionId": "autonomy-a6",
+      "kind": "autonomy",
+      "question": "The 1979 Saturday Night Live moment stays without a clip: the YouTube finder found the same unofficial upload the first build dropped, and now skips it, or adding it back? (the agent's own call A6, flagged in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The 1979 Saturday Night Live moment stays without a clip: the YouTube finder found the same unofficial upload the first build dropped, and now skips it",
+          "why": "the first walkthrough's clip count (179, which the review accepted) did not include it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "adding it back",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The 1979 Saturday Night Live moment stays without a clip: the YouTube finder found the same unofficial upload the first build dropped, and now skips it",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the first walkthrough's clip count (179, which the review accepted) did not include it",
+      "verdict": "flag",
+      "tags": [],
+      "components": [
+        "pages",
+        "search"
+      ],
+      "status": "flagged",
+      "supersedes": []
+    },
+    {
+      "id": "D-052",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "q4",
+      "question": "q4",
+      "options": [],
+      "chosen": "Add \"A thread from this song ›\" to the map page",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "",
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-053",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 1,
+      "stepTitle": "The map: every dot opens its song, on a computer and a phone",
+      "questionId": "autonomy-a2",
+      "kind": "autonomy",
+      "question": "the + / − buttons show from 768 px, not on phones, or on phones too? (the agent's own call A2, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the + / − buttons show from 768 px, not on phones",
+          "why": "a phone pinches, and the brief keeps phones looking as today",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "on phones too",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the + / − buttons show from 768 px, not on phones",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a phone pinches, and the brief keeps phones looking as today",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "shell",
+        "timeline",
+        "pages",
+        "threads",
+        "search",
+        "phone-check",
+        "desktop-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-054",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 1,
+      "stepTitle": "The map: every dot opens its song, on a computer and a phone",
+      "questionId": "autonomy-a4",
+      "kind": "autonomy",
+      "question": "the hover label replaces the dot's SVG <title> tooltip; each dot gets an aria-label instead, or keep the native tooltip too? (the agent's own call A4, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the hover label replaces the dot's SVG <title> tooltip; each dot gets an aria-label instead",
+          "why": "two tooltips at once on a computer",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "keep the native tooltip too",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the hover label replaces the dot's SVG <title> tooltip; each dot gets an aria-label instead",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "two tooltips at once on a computer",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "shell",
+        "timeline",
+        "pages",
+        "threads",
+        "search",
+        "phone-check",
+        "desktop-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-055",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 2,
+      "stepTitle": "The app shell on a wide screen: a header, the era's look across the window, room for two columns (question 1)",
+      "questionId": "autonomy-a7",
+      "kind": "autonomy",
+      "question": "the tablet band keeps today's 672→720 px column with 48 px side margins (max-width 816 px), or widening the column itself? (the agent's own call A7, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the tablet band keeps today's 672→720 px column with 48 px side margins (max-width 816 px)",
+          "why": "the plan says \"today's layout with wider margins\"",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "widening the column itself",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the tablet band keeps today's 672→720 px column with 48 px side margins (max-width 816 px)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the plan says \"today's layout with wider margins\"",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "shell",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-056",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 2,
+      "stepTitle": "The app shell on a wide screen: a header, the era's look across the window, room for two columns (question 1)",
+      "questionId": "autonomy-a5",
+      "kind": "autonomy",
+      "question": "the header is sticky (stays at the top as you scroll), 64 px, on the era's paper, or a header that scrolls away? (the agent's own call A5, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the header is sticky (stays at the top as you scroll), 64 px, on the era's paper",
+          "why": "search \"always at hand\", as the plan puts it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a header that scrolls away",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the header is sticky (stays at the top as you scroll), 64 px, on the era's paper",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "search \"always at hand\", as the plan puts it",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "shell",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-057",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 3,
+      "stepTitle": "The era timeline on a computer: one era fills the screen (question 2)",
+      "questionId": "autonomy-a9",
+      "kind": "autonomy",
+      "question": "the desktop spread is the same markup as the phone panel (new EraSpread.astro used at every width), laid out by CSS grid from 1100 px, or a second, desktop-only set of era sections? (the agent's own call A9, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the desktop spread is the same markup as the phone panel (new EraSpread.astro used at every width), laid out by CSS grid from 1100 px",
+          "why": "one DOM: no duplicated photos or text, and the phone panel is unchanged",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a second, desktop-only set of era sections",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the desktop spread is the same markup as the phone panel (new EraSpread.astro used at every width), laid out by CSS grid from 1100 px",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "one DOM: no duplicated photos or text, and the phone panel is unchanged",
+      "verdict": "accept",
+      "tags": [
+        "hard-to-undo"
+      ],
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-058",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 3,
+      "stepTitle": "The era timeline on a computer: one era fills the screen (question 2)",
+      "questionId": "autonomy-a11",
+      "kind": "autonomy",
+      "question": "the crossfade is the header and window colour fading (0.5 s) plus the leaving era's text dimming to 25 %, or a full-screen fade between eras? (the agent's own call A11, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the crossfade is the header and window colour fading (0.5 s) plus the leaving era's text dimming to 25 %",
+          "why": "a fade on top of a scroll-snap reads as a flash",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a full-screen fade between eras",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the crossfade is the header and window colour fading (0.5 s) plus the leaving era's text dimming to 25 %",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a fade on top of a scroll-snap reads as a flash",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-059",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 3,
+      "stepTitle": "The era timeline on a computer: one era fills the screen (question 2)",
+      "questionId": "autonomy-a12",
+      "kind": "autonomy",
+      "question": "timeline names are clipped with an ellipsis on short eras (each stretch at least 64 px); the current era's name is written out in full over its neighbours, or names under every stretch in full? (the agent's own call A12, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "timeline names are clipped with an ellipsis on short eras (each stretch at least 64 px); the current era's name is written out in full over its neighbours",
+          "why": "Back to the Roots (2 years) is about 30 px wide at 1440 px",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "names under every stretch in full",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "timeline names are clipped with an ellipsis on short eras (each stretch at least 64 px); the current era's name is written out in full over its neighbours",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "Back to the Roots (2 years) is about 30 px wide at 1440 px",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-060",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 4,
+      "stepTitle": "Album, song and moment pages in two columns",
+      "questionId": "autonomy-a14",
+      "kind": "autonomy",
+      "question": "the song page's left column holds the cover at 150 px above the title (changed in `66db1e0`: beside a 150 px cover, \"Stardust\" broke mid-word at 1440 px), and scrolls on its own if taller than the window, or the cover across the whole left column? (the agent's own call A14, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the song page's left column holds the cover at 150 px above the title (changed in `66db1e0`: beside a 150 px cover, \"Stardust\" broke mid-word at 1440 px), and scrolls on its own if taller than the window",
+          "why": "a 380 px cover plus two players is taller than a 900 px window, and a sticky column that tall hides its players",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the cover across the whole left column",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the song page's left column holds the cover at 150 px above the title (changed in `66db1e0`: beside a 150 px cover, \"Stardust\" broke mid-word at 1440 px), and scrolls on its own if taller than the window",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a 380 px cover plus two players is taller than a 900 px window, and a sticky column that tall hides its players",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-061",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 4,
+      "stepTitle": "Album, song and moment pages in two columns",
+      "questionId": "autonomy-a13",
+      "kind": "autonomy",
+      "question": "the song page's words card is rendered twice (Words.astro): once in the phone position, once in the right column, each hidden at the other width, or moving the players with script, or a grid without the sticky column? (the agent's own call A13, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the song page's words card is rendered twice (Words.astro): once in the phone position, once in the right column, each hidden at the other width",
+          "why": "the phone order puts the words before the players while the desktop puts the players on the left; this keeps the phone exactly as today with no script",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "moving the players with script, or a grid without the sticky column",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the song page's words card is rendered twice (Words.astro): once in the phone position, once in the right column, each hidden at the other width",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the phone order puts the words before the players while the desktop puts the players on the left; this keeps the phone exactly as today with no script",
+      "verdict": "accept",
+      "tags": [
+        "hard-to-undo"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-062",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 4,
+      "stepTitle": "Album, song and moment pages in two columns",
+      "questionId": "autonomy-d1",
+      "kind": "autonomy",
+      "question": "a moment's \"songs it is tied to\" are the Dylan songs its story names by title, plus the era's records from that year, or the songs it is tied to? (the agent's own call D1, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "a moment's \"songs it is tied to\" are the Dylan songs its story names by title, plus the era's records from that year",
+          "why": "the data has no moment-to-song links; this shows only ties that are really there, and nothing when none is",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the songs it is tied to",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "a moment's \"songs it is tied to\" are the Dylan songs its story names by title, plus the era's records from that year",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the data has no moment-to-song links; this shows only ties that are really there, and nothing when none is",
+      "verdict": "accept",
+      "tags": [
+        "deviation"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-063",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "autonomy-a20",
+      "kind": "autonomy",
+      "question": "on /map/<song>/ the panel opens already showing that song; /map/ opens on \"Click a dot…\", or an empty panel until you click? (the agent's own call A20, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "on /map/<song>/ the panel opens already showing that song; /map/ opens on \"Click a dot…\"",
+          "why": "the page is about that song, and its dot is already lit",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "an empty panel until you click",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "on /map/<song>/ the panel opens already showing that song; /map/ opens on \"Click a dot…\"",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the page is about that song, and its dot is already lit",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-064",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "autonomy-a18",
+      "kind": "autonomy",
+      "question": "from 1100 px a thread's map opens on its first song's neighbourhood (as a phone's does), and hovering a card lights its dot and glides the map to it when it is out of view; a song's map pages and small map also open on the neighbourhood; /map/ shows everything, or every map fitted to all its songs, as on a tablet? (the agent's own call A18, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "from 1100 px a thread's map opens on its first song's neighbourhood (as a phone's does), and hovering a card lights its dot and glides the map to it when it is out of view; a song's map pages and small map also open on the neighbourhood; /map/ shows everything",
+          "why": "the layout is about 3,000 map units across: fitted to a thread's songs, a 1200 × 520 map was at 0.18 zoom with 5 px labels; labels also keep at least 12.5 px on screen from 1100 px",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "every map fitted to all its songs, as on a tablet",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "from 1100 px a thread's map opens on its first song's neighbourhood (as a phone's does), and hovering a card lights its dot and glides the map to it when it is out of view; a song's map pages and small map also open on the neighbourhood; /map/ shows everything",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the layout is about 3,000 map units across: fitted to a thread's songs, a 1200 × 520 map was at 0.18 zoom with 5 px labels; labels also keep at least 12.5 px on screen from 1100 px",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-065",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "autonomy-a17",
+      "kind": "autonomy",
+      "question": "the line of years puts each card's year on the line and writes the gap to the next card on the line between them (\"2 yrs →\"); the cards are evenly spaced, or spacing cards in proportion to the years between them? (the agent's own call A17, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the line of years puts each card's year on the line and writes the gap to the next card on the line between them (\"2 yrs →\"); the cards are evenly spaced",
+          "why": "four cards on screen at once need equal widths; a 40-year gap would push the next card off the row",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "spacing cards in proportion to the years between them",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the line of years puts each card's year on the line and writes the gap to the next card on the line between them (\"2 yrs →\"); the cards are evenly spaced",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "four cards on screen at once need equal widths; a 40-year gap would push the next card off the row",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-066",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "autonomy-d2",
+      "kind": "autonomy",
+      "question": "The tablet band (768–1099 px) also hides the map's own Cards / Map toggle beside a thread's cards, or the tablet exactly as today? (the agent's own call D2, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The tablet band (768–1099 px) also hides the map's own Cards / Map toggle beside a thread's cards",
+          "why": "the plan's own leftover-toggle bug showed there too: the thread's toggle was hidden, the map's was not",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the tablet exactly as today",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The tablet band (768–1099 px) also hides the map's own Cards / Map toggle beside a thread's cards",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the plan's own leftover-toggle bug showed there too: the thread's toggle was hidden, the map's was not",
+      "verdict": "accept",
+      "tags": [
+        "deviation"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-067",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 6,
+      "stepTitle": "Search and About on a computer, and a desktop check",
+      "questionId": "autonomy-a23",
+      "kind": "autonomy",
+      "question": "the desktop check also fails when the phone's bottom bar or no header shows, when › beside an era or › beside a thread's cards moves nothing, and it presses ← to come back, or only the plan's list? (the agent's own call A23, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the desktop check also fails when the phone's bottom bar or no header shows, when › beside an era or › beside a thread's cards moves nothing, and it presses ← to come back",
+          "why": "the same \"a control showing that does nothing\" rule, applied to the controls this plan adds",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "only the plan's list",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the desktop check also fails when the phone's bottom bar or no header shows, when › beside an era or › beside a thread's cards moves nothing, and it presses ← to come back",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the same \"a control showing that does nothing\" rule, applied to the controls this plan adds",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "data-check",
+        "pages",
+        "search",
+        "phone-check",
+        "desktop-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-068",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 1,
+      "stepTitle": "The map: every dot opens its song, on a computer and a phone",
+      "questionId": "autonomy-a1",
+      "kind": "autonomy",
+      "question": "each dot's invisible hit ring is 28 map units across (r 14), or a ring 14 px across? (the agent's own call A1, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "each dot's invisible hit ring is 28 map units across (r 14)",
+          "why": "read \"a ring 14 px across around it\" as 7 px each side of the 14 px dot; that is what gives the plan's 44 px at a phone's zoom (about 1.6)",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a ring 14 px across",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "each dot's invisible hit ring is 28 map units across (r 14)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "read \"a ring 14 px across around it\" as 7 px each side of the 14 px dot; that is what gives the plan's 44 px at a phone's zoom (about 1.6)",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "shell",
+        "timeline",
+        "pages",
+        "threads",
+        "search",
+        "phone-check",
+        "desktop-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-069",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 1,
+      "stepTitle": "The map: every dot opens its song, on a computer and a phone",
+      "questionId": "autonomy-a3",
+      "kind": "autonomy",
+      "question": "the phone check tries a touch tap and a pointer press-release on a dot, both must open the song, or a tap only? (the agent's own call A3, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the phone check tries a touch tap and a pointer press-release on a dot, both must open the song",
+          "why": "headless Chrome routes a synthetic tap past pointer capture, so a tap alone passed against the old bug; the press fails on it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a tap only",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the phone check tries a touch tap and a pointer press-release on a dot, both must open the song",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "headless Chrome routes a synthetic tap past pointer capture, so a tap alone passed against the old bug; the press fails on it",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "shell",
+        "timeline",
+        "pages",
+        "threads",
+        "search",
+        "phone-check",
+        "desktop-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-070",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 2,
+      "stepTitle": "The app shell on a wide screen: a header, the era's look across the window, room for two columns (question 1)",
+      "questionId": "autonomy-a6",
+      "kind": "autonomy",
+      "question": "the header search is a plain GET form to /search/?q=… (works without script); \"/\" focuses it only when the header shows (from 1100 px), or a scripted field? (the agent's own call A6, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the header search is a plain GET form to /search/?q=… (works without script); \"/\" focuses it only when the header shows (from 1100 px)",
+          "why": "the Enter case needs nothing more, and Astro's router already handles GET forms",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a scripted field",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the header search is a plain GET form to /search/?q=… (works without script); \"/\" focuses it only when the header shows (from 1100 px)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the Enter case needs nothing more, and Astro's router already handles GET forms",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "shell",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-071",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 2,
+      "stepTitle": "The app shell on a wide screen: a header, the era's look across the window, room for two columns (question 1)",
+      "questionId": "autonomy-a8",
+      "kind": "autonomy",
+      "question": "map pages light \"Map\" in the header but still \"Threads\" in the phone's bottom bar (it has no Map tab), or adding a Map tab to the bottom bar? (the agent's own call A8, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "map pages light \"Map\" in the header but still \"Threads\" in the phone's bottom bar (it has no Map tab)",
+          "why": "phones stay as they are",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "adding a Map tab to the bottom bar",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "map pages light \"Map\" in the header but still \"Threads\" in the phone's bottom bar (it has no Map tab)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "phones stay as they are",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "shell",
+        "pages",
+        "threads",
+        "search"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-072",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 3,
+      "stepTitle": "The era timeline on a computer: one era fills the screen (question 2)",
+      "questionId": "autonomy-a10",
+      "kind": "autonomy",
+      "question": "scrolling keeps replaceState for the address (/era/<id>/), as today; ‹ ›, keys and the timeline do the same, or pushState per era, so Back steps through eras? (the agent's own call A10, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "scrolling keeps replaceState for the address (/era/<id>/), as today; ‹ ›, keys and the timeline do the same",
+          "why": "a scroll would otherwise fill the history with eleven entries; a shared link and a reload still open that era",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "pushState per era, so Back steps through eras",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "scrolling keeps replaceState for the address (/era/<id>/), as today; ‹ ›, keys and the timeline do the same",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a scroll would otherwise fill the history with eleven entries; a shared link and a reload still open that era",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "timeline"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-073",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 4,
+      "stepTitle": "Album, song and moment pages in two columns",
+      "questionId": "autonomy-a15",
+      "kind": "autonomy",
+      "question": "the small map on a song page is the right column's full width × 300 px, under the connections, or 360 × 300? (the agent's own call A15, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the small map on a song page is the right column's full width × 300 px, under the connections",
+          "why": "a 360 px box alone in a 780 px column left a hole",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "360 × 300",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the small map on a song page is the right column's full width × 300 px, under the connections",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a 360 px box alone in a 780 px column left a hole",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-074",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "autonomy-a25",
+      "kind": "autonomy",
+      "question": "The map panel's rows are one built file, `/map-panel.json`, fetched on the first click, and a song with no preview shows its note, or the panel's data written into every map page? (the agent's own call A25, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "The map panel's rows are one built file, `/map-panel.json`, fetched on the first click, and a song with no preview shows its note",
+          "why": "230 songs' rows in each of the 230 map pages would make each page much heavier; one file is cached after the first click",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the panel's data written into every map page",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "The map panel's rows are one built file, `/map-panel.json`, fetched on the first click, and a song with no preview shows its note",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "230 songs' rows in each of the 230 map pages would make each page much heavier; one file is cached after the first click",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-075",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "autonomy-a19",
+      "kind": "autonomy",
+      "question": "the era filter is the legend turned into buttons by script from 1100 px (role=button, 44 px tall, one era at a time, click again to clear), or real buttons at every width, or several eras at once? (the agent's own call A19, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the era filter is the legend turned into buttons by script from 1100 px (role=button, 44 px tall, one era at a time, click again to clear)",
+          "why": "the phone legend stays as it is (and is not a filter there); \"click an era to dim the others\" names one",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "real buttons at every width, or several eras at once",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the era filter is the legend turned into buttons by script from 1100 px (role=button, 44 px tall, one era at a time, click again to clear)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the phone legend stays as it is (and is not a filter there); \"click an era to dim the others\" names one",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-076",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 6,
+      "stepTitle": "Search and About on a computer, and a desktop check",
+      "questionId": "autonomy-a21",
+      "kind": "autonomy",
+      "question": "search's three columns are placed by CSS on group sections (Eras and Moments stacked in the first column); on a phone the groups keep today's order, best match first, or re-rendering the results in a fixed column order? (the agent's own call A21, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "search's three columns are placed by CSS on group sections (Eras and Moments stacked in the first column); on a phone the groups keep today's order, best match first",
+          "why": "one renderer for both widths, phone output unchanged",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "re-rendering the results in a fixed column order",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "search's three columns are placed by CSS on group sections (Eras and Moments stacked in the first column); on a phone the groups keep today's order, best match first",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "one renderer for both widths, phone output unchanged",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "data-check",
+        "pages",
+        "search",
+        "phone-check",
+        "desktop-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-077",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 6,
+      "stepTitle": "Search and About on a computer, and a desktop check",
+      "questionId": "autonomy-a22",
+      "kind": "autonomy",
+      "question": "\"content narrower than 60 %\" is measured as the horizontal span of everything showing inside <main>; the 404 page is exempt; the era-background test reads the colour behind the window's right edge, 85 % down (clear of the ‹ › buttons), against the body era's --paper, or measuring .page's width, or sampling the left edge? (the agent's own call A22, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "\"content narrower than 60 %\" is measured as the horizontal span of everything showing inside <main>; the 404 page is exempt; the era-background test reads the colour behind the window's right edge, 85 % down (clear of the ‹ › buttons), against the body era's --paper",
+          "why": ".page is 1200 px even when its content sits in a 720 px column; the home page's left half is a photograph",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "measuring .page's width, or sampling the left edge",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "\"content narrower than 60 %\" is measured as the horizontal span of everything showing inside <main>; the 404 page is exempt; the era-background test reads the colour behind the window's right edge, 85 % down (clear of the ‹ › buttons), against the body era's --paper",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": ".page is 1200 px even when its content sits in a 720 px column; the home page's left half is a photograph",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "data-check",
+        "pages",
+        "search",
+        "phone-check",
+        "desktop-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-078",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 6,
+      "stepTitle": "Search and About on a computer, and a desktop check",
+      "questionId": "autonomy-a24",
+      "kind": "autonomy",
+      "question": "`npm test` runs the data check, the build, the phone check and the desktop check; `npm run check:desktop` runs the last alone; `--shots <dir>` also writes the 1440 × 900 screenshots there, or a separate script per size? (the agent's own call A24, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "`npm test` runs the data check, the build, the phone check and the desktop check; `npm run check:desktop` runs the last alone; `--shots <dir>` also writes the 1440 × 900 screenshots there",
+          "why": "the plan's npm test order; the shots flag gives the review folder its pictures",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a separate script per size",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "`npm test` runs the data check, the build, the phone check and the desktop check; `npm run check:desktop` runs the last alone; `--shots <dir>` also writes the 1440 × 900 screenshots there",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the plan's npm test order; the shots flag gives the review folder its pictures",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "data-check",
+        "pages",
+        "search",
+        "phone-check",
+        "desktop-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-079",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "autonomy-d3",
+      "kind": "autonomy",
+      "question": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers, or the covers of its first songs? (the agent's own call D3, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers",
+          "why": "their first songs are traditional or other artists' recordings with no album cover",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the covers of its first songs",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "their first songs are traditional or other artists' recordings with no album cover",
+      "verdict": "own",
+      "tags": [
+        "deviation"
+      ],
+      "own": "i would like to give some visuals for these as well",
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-080",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 4,
+      "stepTitle": "Album, song and moment pages in two columns",
+      "questionId": "autonomy-a16",
+      "kind": "autonomy",
+      "question": "the album page's left column is not sticky, or sticky like the song page's? (the agent's own call A16, flagged in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the album page's left column is not sticky",
+          "why": "a 480 px cover plus \"why it matters\" is taller than the window",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "sticky like the song page's",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the album page's left column is not sticky",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a 480 px cover plus \"why it matters\" is taller than the window",
+      "verdict": "flag",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "flagged",
+      "supersedes": []
+    },
+    {
+      "id": "D-081",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 5,
+      "stepTitle": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+      "questionId": "autonomy-d3",
+      "kind": "autonomy",
+      "question": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers [deviation] (changed after review, \"i would like to give some visuals for these as well\": a step not on his albums, an old tune or another artist's version, now shows the cover of the Dylan song it is connected to, so every thread has four covers), or the covers of its first songs? (the agent's own call D3, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers [deviation] (changed after review, \"i would like to give some visuals for these as well\": a step not on his albums, an old tune or another artist's version, now shows the cover of the Dylan song it is connected to, so every thread has four covers)",
+          "why": "their first songs are traditional or other artists' recordings with no album cover",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the covers of its first songs",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers [deviation] (changed after review, \"i would like to give some visuals for these as well\": a step not on his albums, an old tune or another artist's version, now shows the cover of the Dylan song it is connected to, so every thread has four covers)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "their first songs are traditional or other artists' recordings with no album cover",
+      "verdict": "accept",
+      "tags": [
+        "deviation"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-082",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-desktop",
+      "step": 4,
+      "stepTitle": "Album, song and moment pages in two columns",
+      "questionId": "autonomy-a16",
+      "kind": "autonomy",
+      "question": "the album page's left column is not sticky, or sticky like the song page's? (the agent's own call A16, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the album page's left column is not sticky",
+          "why": "a 480 px cover plus \"why it matters\" is taller than the window",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "sticky like the song page's",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the album page's left column is not sticky",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a 480 px cover plus \"why it matters\" is taller than the window",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "pages"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-083",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-fuller",
+      "step": 5,
+      "stepTitle": "The sides of a wide window (question 1)",
+      "questionId": "q1",
+      "question": "q1",
+      "options": [],
+      "chosen": "A context rail from 1440 px, the content kept at 1200 px",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "",
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-084",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-fuller",
+      "step": 6,
+      "stepTitle": "Links out, and checks that hold it",
+      "questionId": "q2",
+      "question": "q2",
+      "options": [],
+      "chosen": "Wikipedia and MusicBrainz, where MusicBrainz lists them",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "",
+      "components": [
+        "desktop-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-085",
+      "date": "2026-10-07",
+      "plan": "2026-10-07-fuller",
+      "step": 1,
+      "stepTitle": "Longer writing for eras, moments and albums (question 3)",
+      "questionId": "q3",
+      "question": "q3",
+      "options": [],
+      "chosen": "An era about 250 words, a moment about 120, an album about 150",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "",
+      "components": [
+        "data-check",
+        "pages"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-086",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 3,
+      "stepTitle": "Era and moment pages built around their story",
+      "questionId": "q5",
+      "question": "q5",
+      "options": [],
+      "chosen": "Yes, as built: every era's bands on the home page too",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "",
+      "components": [
+        "timeline",
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-087",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 4,
+      "stepTitle": "Album and song pages: the album's player, its essay, a track list that opens in place",
+      "questionId": "q4",
+      "question": "q4",
+      "options": [],
+      "chosen": "A line: Find Fallen Angels on Spotify ↗",
+      "chosenId": "b",
+      "recommended": true,
+      "why": "",
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-088",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 2,
+      "stepTitle": "More photographs for eras and moments",
+      "questionId": "autonomy-a14",
+      "kind": "autonomy",
+      "question": "an era's gallery is up to five photographs of its own; a photo marked as a moment's belongs to that moment, and tops up a gallery with fewer than three (Basement and Blood on the Tracks: 2 of their own and 1 from a moment), or a moment's photo counted in every gallery, or never? (the agent's own call A14, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "an era's gallery is up to five photographs of its own; a photo marked as a moment's belongs to that moment, and tops up a gallery with fewer than three (Basement and Blood on the Tracks: 2 of their own and 1 from a moment)",
+          "why": "the moment's photo leads its own page; a gallery of two looked thin",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a moment's photo counted in every gallery, or never",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "an era's gallery is up to five photographs of its own; a photo marked as a moment's belongs to that moment, and tops up a gallery with fewer than three (Basement and Blood on the Tracks: 2 of their own and 1 from a moment)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the moment's photo leads its own page; a gallery of two looked thin",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-089",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 2,
+      "stepTitle": "More photographs for eras and moments",
+      "questionId": "autonomy-a16",
+      "kind": "autonomy",
+      "question": "a moment's photograph is often its place or its people, and the caption says so: Big Pink for the Basement sessions, the Warfield for the gospel shows, Roy Orbison for the Wilburys, or a photo only of the event itself? (the agent's own call A16, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "a moment's photograph is often its place or its people, and the caption says so: Big Pink for the Basement sessions, the Warfield for the gospel shows, Roy Orbison for the Wilburys",
+          "why": "Commons has few free photos of the events; a place, captioned, is honest and still shows it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a photo only of the event itself",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "a moment's photograph is often its place or its people, and the caption says so: Big Pink for the Basement sessions, the Warfield for the gospel shows, Roy Orbison for the Wilburys",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "Commons has few free photos of the events; a place, captioned, is honest and still shows it",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline",
+        "search"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-090",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 3,
+      "stepTitle": "Era and moment pages built around their story",
+      "questionId": "autonomy-a1",
+      "kind": "autonomy",
+      "question": "(question 5) every era on the timeline gets its bands, under its own spread, inside a new wrapper (`article.eb`) that a phone swipes and a computer snaps to; the home page's timeline gets them too, or bands only for the era in the address, after the whole timeline? (the agent's own call A1, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "(question 5) every era on the timeline gets its bands, under its own spread, inside a new wrapper (`article.eb`) that a phone swipes and a computer snaps to; the home page's timeline gets them too",
+          "why": "/era/&lt;id&gt;/ is the whole timeline, and › and ← → move between eras, so each era needs its bands under its own spread",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "bands only for the era in the address, after the whole timeline",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "(question 5) every era on the timeline gets its bands, under its own spread, inside a new wrapper (`article.eb`) that a phone swipes and a computer snaps to; the home page's timeline gets them too",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "/era/&lt;id&gt;/ is the whole timeline, and › and ← → move between eras, so each era needs its bands under its own spread",
+      "verdict": "accept",
+      "tags": [
+        "hard-to-undo"
+      ],
+      "components": [
+        "timeline",
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-091",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 3,
+      "stepTitle": "Era and moment pages built around their story",
+      "questionId": "autonomy-a3",
+      "kind": "autonomy",
+      "question": "the \"records and moments\" band shows only from 1100 px; phones and tablets get the story and gallery, songs to start with, threads and Read on, stacked, or the same band on a phone? (the agent's own call A3, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the \"records and moments\" band shows only from 1100 px; phones and tablets get the story and gallery, songs to start with, threads and Read on, stacked",
+          "why": "the phone's era panel just above already lists the same albums and moments",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the same band on a phone",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the \"records and moments\" band shows only from 1100 px; phones and tablets get the story and gallery, songs to start with, threads and Read on, stacked",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the phone's era panel just above already lists the same albums and moments",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline",
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-092",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 3,
+      "stepTitle": "Era and moment pages built around their story",
+      "questionId": "autonomy-a4",
+      "kind": "autonomy",
+      "question": "a moment page shows its clip first, its own photo under it when it has both; with neither, the era's lead photo, headed \"The era's photograph · &lt;era&gt;\"; \"Around it\" is the two moments either side; \"His songs from &lt;year&gt;\" up to 8, the most connected first, or only the clip or only one photo? (the agent's own call A4, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "a moment page shows its clip first, its own photo under it when it has both; with neither, the era's lead photo, headed \"The era's photograph · &lt;era&gt;\"; \"Around it\" is the two moments either side; \"His songs from &lt;year&gt;\" up to 8, the most connected first",
+          "why": "a full page at every width, and the era's photo honestly labelled",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "only the clip or only one photo",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "a moment page shows its clip first, its own photo under it when it has both; with neither, the era's lead photo, headed \"The era's photograph · &lt;era&gt;\"; \"Around it\" is the two moments either side; \"His songs from &lt;year&gt;\" up to 8, the most connected first",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a full page at every width, and the era's photo honestly labelled",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline",
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-093",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 3,
+      "stepTitle": "Era and moment pages built around their story",
+      "questionId": "autonomy-a19",
+      "kind": "autonomy",
+      "question": "the gallery is a grid (the first photo wide, then two a row) with one line naming the photographers; each photo's credit and licence show when it opens large, or a sideways row, or a credit under every thumbnail? (the agent's own call A19, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the gallery is a grid (the first photo wide, then two a row) with one line naming the photographers; each photo's credit and licence show when it opens large",
+          "why": "a sideways scroller inside the phone's sideways swipe fights it; credits under every thumbnail crowd it",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a sideways row, or a credit under every thumbnail",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the gallery is a grid (the first photo wide, then two a row) with one line naming the photographers; each photo's credit and licence show when it opens large",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a sideways scroller inside the phone's sideways swipe fights it; credits under every thumbnail crowd it",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline",
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-094",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 3,
+      "stepTitle": "Era and moment pages built around their story",
+      "questionId": "autonomy-a26",
+      "kind": "autonomy",
+      "question": "an era's \"Threads through it\" shows at most six threads, those with the most of the era's songs first, or every thread that passes through it? (the agent's own call A26, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "an era's \"Threads through it\" shows at most six threads, those with the most of the era's songs first",
+          "why": "the twelve threads pass through most eras; six reads as a band",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "every thread that passes through it",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "an era's \"Threads through it\" shows at most six threads, those with the most of the era's songs first",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the twelve threads pass through most eras; six reads as a band",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline",
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-095",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 4,
+      "stepTitle": "Album and song pages: the album's player, its essay, a track list that opens in place",
+      "questionId": "autonomy-a24",
+      "kind": "autonomy",
+      "question": "(question 4) Fallen Angels has no album player: MusicBrainz lists no Spotify album whose title matches it, and the desktop check only asks for a player where an album has a Spotify id, or all 39 with a player? (the agent's own call A24, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "(question 4) Fallen Angels has no album player: MusicBrainz lists no Spotify album whose title matches it, and the desktop check only asks for a player where an album has a Spotify id",
+          "why": "a guessed album id could play the wrong record; its songs still have their own players",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "all 39 with a player",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "(question 4) Fallen Angels has no album player: MusicBrainz lists no Spotify album whose title matches it, and the desktop check only asks for a player where an album has a Spotify id",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a guessed album id could play the wrong record; its songs still have their own players",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-096",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 4,
+      "stepTitle": "Album and song pages: the album's player, its essay, a track list that opens in place",
+      "questionId": "autonomy-a25",
+      "kind": "autonomy",
+      "question": "a song page's \"In threads\" also lists the thread made from the song (\"From &lt;song&gt;\"), so a song in no curated thread still has one, or the curated threads only? (the agent's own call A25, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "a song page's \"In threads\" also lists the thread made from the song (\"From &lt;song&gt;\"), so a song in no curated thread still has one",
+          "why": "every connected song has its own thread (D-052's link), and the band would otherwise be empty for most songs",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the curated threads only",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "a song page's \"In threads\" also lists the thread made from the song (\"From &lt;song&gt;\"), so a song in no curated thread still has one",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "every connected song has its own thread (D-052's link), and the band would otherwise be empty for most songs",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-097",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 4,
+      "stepTitle": "Album and song pages: the album's player, its essay, a track list that opens in place",
+      "questionId": "autonomy-a7",
+      "kind": "autonomy",
+      "question": "\"Where its songs lead\": at most six connections to songs off the album, covers, borrowed tunes, answers and rewrites before shared themes, or all of them? (the agent's own call A7, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "\"Where its songs lead\": at most six connections to songs off the album, covers, borrowed tunes, answers and rewrites before shared themes",
+          "why": "Blonde on Blonde alone has dozens; six reads as a band, not a wall",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "all of them",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "\"Where its songs lead\": at most six connections to songs off the album, covers, borrowed tunes, answers and rewrites before shared themes",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "Blonde on Blonde alone has dozens; six reads as a band, not a wall",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-098",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 4,
+      "stepTitle": "Album and song pages: the album's player, its essay, a track list that opens in place",
+      "questionId": "autonomy-a5",
+      "kind": "autonomy",
+      "question": "album page: the cover and the Spotify album player on the left; Why it matters with the essay, the track list and \"Where its songs lead\" on the right; previous and next album under both, or the essay in the left column? (the agent's own call A5, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "album page: the cover and the Spotify album player on the left; Why it matters with the essay, the track list and \"Where its songs lead\" on the right; previous and next album under both",
+          "why": "the left column is already a 480 px cover; the essay reads better at the right column's measure",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the essay in the left column",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "album page: the cover and the Spotify album player on the left; Why it matters with the essay, the track list and \"Where its songs lead\" on the right; previous and next album under both",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the left column is already a 480 px cover; the essay reads better at the right column's measure",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-099",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 4,
+      "stepTitle": "Album and song pages: the album's player, its essay, a track list that opens in place",
+      "questionId": "autonomy-d1",
+      "kind": "autonomy",
+      "question": "removed the desktop-only \"Also in this era\" row; the previous and next album of the era, with covers, replace it at every width, or keeping both? (the agent's own call D1, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "removed the desktop-only \"Also in this era\" row; the previous and next album of the era, with covers, replace it at every width",
+          "why": "two bands of the same era's covers is the clutter the brief asked to avoid",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "keeping both",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "removed the desktop-only \"Also in this era\" row; the previous and next album of the era, with covers, replace it at every width",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "two bands of the same era's covers is the clutter the brief asked to avoid",
+      "verdict": "accept",
+      "tags": [
+        "deviation"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-100",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 5,
+      "stepTitle": "The sides of a wide window (question 1)",
+      "questionId": "autonomy-a9",
+      "kind": "autonomy",
+      "question": "from 1440 px the content starts under the header's left edge, up to 1200 px, with the rail (240 px and a 48 px gap) in the right margin: the content is 984 px at 1440, the full 1200 from about 1900, or the content centred with the rail outside it? (the agent's own call A9, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "from 1440 px the content starts under the header's left edge, up to 1200 px, with the rail (240 px and a 48 px gap) in the right margin: the content is 984 px at 1440, the full 1200 from about 1900",
+          "why": "1200 px plus the rail cannot be centred below about 1830 px; lining up with the header keeps the page calm",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the content centred with the rail outside it",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "from 1440 px the content starts under the header's left edge, up to 1200 px, with the rail (240 px and a 48 px gap) in the right margin: the content is 984 px at 1440, the full 1200 from about 1900",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "1200 px plus the rail cannot be centred below about 1830 px; lining up with the header keeps the page calm",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-101",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 5,
+      "stepTitle": "The sides of a wide window (question 1)",
+      "questionId": "autonomy-a8",
+      "kind": "autonomy",
+      "question": "the rail is on album, song and moment pages only, or a rail on every page? (the agent's own call A8, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the rail is on album, song and moment pages only",
+          "why": "the era page is full-bleed and already shows the eras; threads, the map, search and About have no single era",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a rail on every page",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the rail is on album, song and moment pages only",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the era page is full-bleed and already shows the eras; threads, the map, search and About have no single era",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-102",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 6,
+      "stepTitle": "Links out, and checks that hold it",
+      "questionId": "autonomy-a11",
+      "kind": "autonomy",
+      "question": "\"Read on: Wikipedia ↗ · MusicBrainz ↗\" at the end of album and song pages and of each era's bands, in a new tab, and nothing when there are no links, or near the title? (the agent's own call A11, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "\"Read on: Wikipedia ↗ · MusicBrainz ↗\" at the end of album and song pages and of each era's bands, in a new tab, and nothing when there are no links",
+          "why": "it is where reading carries on, and it keeps the top of the page clear",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "near the title",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "\"Read on: Wikipedia ↗ · MusicBrainz ↗\" at the end of album and song pages and of each era's bands, in a new tab, and nothing when there are no links",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "it is where reading carries on, and it keeps the top of the page clear",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "desktop-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-103",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 6,
+      "stepTitle": "Links out, and checks that hold it",
+      "questionId": "autonomy-a23",
+      "kind": "autonomy",
+      "question": "links out for the 452 album songs only; the 86 songs on no album of his (old tunes, other artists' versions) have none, or every song? (the agent's own call A23, accepted in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "links out for the 452 album songs only; the 86 songs on no album of his (old tunes, other artists' versions) have none",
+          "why": "those are other artists' recordings, with no MusicBrainz release in the site's data to start from",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "every song",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "links out for the 452 album songs only; the 86 songs on no album of his (old tunes, other artists' versions) have none",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "those are other artists' recordings, with no MusicBrainz release in the site's data to start from",
+      "verdict": "accept",
+      "tags": [
+        "visible"
+      ],
+      "components": [
+        "desktop-check"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-104",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 1,
+      "stepTitle": "Longer writing for eras, moments and albums (question 3)",
+      "questionId": "autonomy-a18",
+      "kind": "autonomy",
+      "question": "the data check compares quoted titles loosely (curly and straight apostrophes, hyphens, a bracketed subtitle) and accepts seven real songs on none of the site's albums (\"Dignity\", \"Blind Willie McTell\", \"Series of Dreams\", \"Things Have Changed\", \"I Shall Be Released\", \"This Wheel's on Fire\", \"Handle with Care\"), or quoting only titles on the site? (the agent's own call A18, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the data check compares quoted titles loosely (curly and straight apostrophes, hyphens, a bracketed subtitle) and accepts seven real songs on none of the site's albums (\"Dignity\", \"Blind Willie McTell\", \"Series of Dreams\", \"Things Have Changed\", \"I Shall Be Released\", \"This Wheel's on Fire\", \"Handle with Care\")",
+          "why": "the stories name these songs; they are titles, not lyrics",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "quoting only titles on the site",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the data check compares quoted titles loosely (curly and straight apostrophes, hyphens, a bracketed subtitle) and accepts seven real songs on none of the site's albums (\"Dignity\", \"Blind Willie McTell\", \"Series of Dreams\", \"Things Have Changed\", \"I Shall Be Released\", \"This Wheel's on Fire\", \"Handle with Care\")",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the stories name these songs; they are titles, not lyrics",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "data-check",
+        "pages"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-105",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 1,
+      "stepTitle": "Longer writing for eras, moments and albums (question 3)",
+      "questionId": "autonomy-a21",
+      "kind": "autonomy",
+      "question": "the data check holds each era section to 60–110 words, a moment to 80–150 and an album essay to 100–180, or an exact length, or no bound? (the agent's own call A21, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the data check holds each era section to 60–110 words, a moment to 80–150 and an album essay to 100–180",
+          "why": "the plan says \"about\" (D-085); the band catches a text that is cut off or runs on, not one a few words over",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "an exact length, or no bound",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the data check holds each era section to 60–110 words, a moment to 80–150 and an album essay to 100–180",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the plan says \"about\" (D-085); the band catches a text that is cut off or runs on, not one a few words over",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "data-check",
+        "pages"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-106",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 2,
+      "stepTitle": "More photographs for eras and moments",
+      "questionId": "autonomy-a15",
+      "kind": "autonomy",
+      "question": "six of the first 26 photographs are now marked as a moment's, since each already shows it (the March on Washington, Isle of Wight 1969, Chicago 1974, Ginsberg on the Rolling Thunder Revue, Rotterdam 1978, the American Reunion of 1993), or leaving them as era photos only? (the agent's own call A15, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "six of the first 26 photographs are now marked as a moment's, since each already shows it (the March on Washington, Isle of Wight 1969, Chicago 1974, Ginsberg on the Rolling Thunder Revue, Rotterdam 1978, the American Reunion of 1993)",
+          "why": "those moments get their photo without a new search",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "leaving them as era photos only",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "six of the first 26 photographs are now marked as a moment's, since each already shows it (the March on Washington, Isle of Wight 1969, Chicago 1974, Ginsberg on the Rolling Thunder Revue, Rotterdam 1978, the American Reunion of 1993)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "those moments get their photo without a new search",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "timeline",
+        "search"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-107",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 3,
+      "stepTitle": "Era and moment pages built around their story",
+      "questionId": "autonomy-a2",
+      "kind": "autonomy",
+      "question": "on a phone the swiped row is as tall as the era in view (a ResizeObserver follows it), or every era as tall as the tallest era's bands? (the agent's own call A2, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "on a phone the swiped row is as tall as the era in view (a ResizeObserver follows it)",
+          "why": "a short era would end in a screen or more of blank space",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "every era as tall as the tallest era's bands",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "on a phone the swiped row is as tall as the era in view (a ResizeObserver follows it)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a short era would end in a screen or more of blank space",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "timeline",
+        "pages",
+        "threads"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-108",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 4,
+      "stepTitle": "Album and song pages: the album's player, its essay, a track list that opens in place",
+      "questionId": "autonomy-a6",
+      "kind": "autonomy",
+      "question": "a track row's title stays a link to its song; a separate ▾ button opens the row in place (preview, themes, its Spotify player, \"Its page ›\"), and the player loads the first time the row opens, or the whole row as the toggle? (the agent's own call A6, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "a track row's title stays a link to its song; a separate ▾ button opens the row in place (preview, themes, its Spotify player, \"Its page ›\"), and the player loads the first time the row opens",
+          "why": "links keep working as before, on phones too; 30 players loading with the album would be heavy",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the whole row as the toggle",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "a track row's title stays a link to its song; a separate ▾ button opens the row in place (preview, themes, its Spotify player, \"Its page ›\"), and the player loads the first time the row opens",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "links keep working as before, on phones too; 30 players loading with the album would be heavy",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-109",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 4,
+      "stepTitle": "Album and song pages: the album's player, its essay, a track list that opens in place",
+      "questionId": "autonomy-a20",
+      "kind": "autonomy",
+      "question": "a song page's \"The same year\" lists up to 8 of his own songs from his records that year, the most connected first, leaving out covers and other artists' songs, or every song from that year on the site? (the agent's own call A20, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "a song page's \"The same year\" lists up to 8 of his own songs from his records that year, the most connected first, leaving out covers and other artists' songs",
+          "why": "it is about what he was writing then",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "every song from that year on the site",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "a song page's \"The same year\" lists up to 8 of his own songs from his records that year, the most connected first, leaving out covers and other artists' songs",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "it is about what he was writing then",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "pages",
+        "threads"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-110",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 5,
+      "stepTitle": "The sides of a wide window (question 1)",
+      "questionId": "autonomy-a10",
+      "kind": "autonomy",
+      "question": "the rail: the era badge and years, the eras as a list of bars sized by their years with this one lit and a pin at the page's year, and quick links (the era, the album, a thread, the map), or a small horizontal ribbon? (the agent's own call A10, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the rail: the era badge and years, the eras as a list of bars sized by their years with this one lit and a pin at the page's year, and quick links (the era, the album, a thread, the map)",
+          "why": "a 240 px column reads better as a list with names",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "a small horizontal ribbon",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the rail: the era badge and years, the eras as a list of bars sized by their years with this one lit and a pin at the page's year, and quick links (the era, the album, a thread, the map)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "a 240 px column reads better as a list with names",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "timeline"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-111",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 6,
+      "stepTitle": "Links out, and checks that hold it",
+      "questionId": "autonomy-a12",
+      "kind": "autonomy",
+      "question": "each new desktop-check rule reads the built pages (the essay block, the album player's address, the moment's own photo or a clip) and only fails once its data exists, or checking only the data? (the agent's own call A12, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "each new desktop-check rule reads the built pages (the essay block, the album player's address, the moment's own photo or a clip) and only fails once its data exists",
+          "why": "it checks that the pages actually show the parts",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "checking only the data",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "each new desktop-check rule reads the built pages (the essay block, the album player's address, the moment's own photo or a clip) and only fails once its data exists",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "it checks that the pages actually show the parts",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "desktop-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-112",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 6,
+      "stepTitle": "Links out, and checks that hold it",
+      "questionId": "autonomy-a22",
+      "kind": "autonomy",
+      "question": "a song's \"MusicBrainz ↗\" opens the work (the song as written), or the recording on the album? (the agent's own call A22, listed, not judged, in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "a song's \"MusicBrainz ↗\" opens the work (the song as written)",
+          "why": "the work is where MusicBrainz keeps the Wikipedia link and every recording of the song",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the recording on the album",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "a song's \"MusicBrainz ↗\" opens the work (the song as written)",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "the work is where MusicBrainz keeps the Wikipedia link and every recording of the song",
+      "verdict": "listed",
+      "tags": [
+        "close"
+      ],
+      "components": [
+        "desktop-check"
+      ],
+      "status": "listed",
+      "supersedes": []
+    },
+    {
+      "id": "D-113",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 6,
+      "stepTitle": "Links out, and checks that hold it",
+      "questionId": "autonomy-a13",
+      "kind": "autonomy",
+      "question": "eras link only to Wikipedia, an article picked by hand for what the era is most about (Hibbing, Greenwich Village, the Electric Dylan controversy, The Basement Tapes, the Rolling Thunder Revue, the Traveling Wilburys, the 2016 Nobel Prize in Literature), each kept only when it answers; Gospel, Back to the Roots, the Standards and Rough and Rowdy have none, or no era links? (the agent's own call A13, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "eras link only to Wikipedia, an article picked by hand for what the era is most about (Hibbing, Greenwich Village, the Electric Dylan controversy, The Basement Tapes, the Rolling Thunder Revue, the Traveling Wilburys, the 2016 Nobel Prize in Literature), each kept only when it answers; Gospel, Back to the Roots, the Standards and Rough and Rowdy have none",
+          "why": "an era is not a MusicBrainz entity, so the finder found none; the plan says each era links out",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "no era links",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "eras link only to Wikipedia, an article picked by hand for what the era is most about (Hibbing, Greenwich Village, the Electric Dylan controversy, The Basement Tapes, the Rolling Thunder Revue, the Traveling Wilburys, the 2016 Nobel Prize in Literature), each kept only when it answers; Gospel, Back to the Roots, the Standards and Rough and Rowdy have none",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "an era is not a MusicBrainz entity, so the finder found none; the plan says each era links out",
+      "verdict": "own",
+      "tags": [
+        "visible"
+      ],
+      "own": "maybe every era should have something it links to, for consistency",
+      "components": [
+        "desktop-check"
+      ],
+      "status": "own",
+      "supersedes": []
+    },
+    {
+      "id": "D-114",
+      "date": "2026-10-08",
+      "plan": "2026-10-07-fuller",
+      "step": 6,
+      "stepTitle": "Links out, and checks that hold it",
+      "questionId": "autonomy-a17",
+      "kind": "autonomy",
+      "question": "the desktop check names eight gaps the photo search could not fill and does not fail on them: Back to the Roots (2 photos) and seven moments with no photo or clip (the Shelton review, marrying Sara Lownds, the motorcycle accident, Pat Garrett, the 1980 retrospective shows, Chronicles, The Philosophy of Modern Song); any other gap fails, or the check failing until they are filled? (the agent's own call A17, answered in the reviewer's own words in the walkthrough)",
+      "options": [
+        {
+          "id": "chose",
+          "label": "the desktop check names eight gaps the photo search could not fill and does not fail on them: Back to the Roots (2 photos) and seven moments with no photo or clip (the Shelton review, marrying Sara Lownds, the motorcycle accident, Pat Garrett, the 1980 retrospective shows, Chronicles, The Philosophy of Modern Song); any other gap fails",
+          "why": "Commons has no free photograph that fits; these pages show the era's photograph, labelled",
+          "recommended": true
+        },
+        {
+          "id": "instead",
+          "label": "the check failing until they are filled",
+          "why": "",
+          "recommended": false
+        }
+      ],
+      "chosen": "the desktop check names eight gaps the photo search could not fill and does not fail on them: Back to the Roots (2 photos) and seven moments with no photo or clip (the Shelton review, marrying Sara Lownds, the motorcycle accident, Pat Garrett, the 1980 retrospective shows, Chronicles, The Philosophy of Modern Song); any other gap fails",
+      "chosenId": "chose",
+      "recommended": true,
+      "why": "Commons has no free photograph that fits; these pages show the era's photograph, labelled",
+      "verdict": "own",
+      "tags": [
+        "visible"
+      ],
+      "own": "is there something else we can put here? be creative but also consistent",
+      "components": [
+        "desktop-check"
+      ],
+      "status": "own",
+      "supersedes": []
+    }
+  ]
+}

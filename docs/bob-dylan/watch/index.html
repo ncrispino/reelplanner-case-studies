@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The videos · Bob Dylan, explored</title>
+<meta name="description" content="The videos of the Bob Dylan, explored case study, to watch, with their chapters and the owner's answers.">
+<script src="../../assets/theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<link rel="stylesheet" href="../../assets/case-study.css">
+<!-- HyperFrames' own player (MIT, assets/hyperframes-player.LICENSE): it plays a reviewed video's scenes with their voice and
+     captions, and nothing else; the review page's marks, comments and answers are reelplanning's layer, left out here -->
+<script src="../../assets/hyperframes-player.js"></script>
+</head>
+<body>
+<header class="top"><div class="in"><span class="crumbs"><a href="../../">reelplanning case studies</a><span aria-hidden="true">›</span><a class="name" href="../">Bob Dylan, explored</a></span>
+  <nav aria-label="This case study"><a href="../">Write-up</a><a href="../watch/" aria-current="page"><span class="long">Watch the 7 videos</span><span class="short">Videos</span></a><a href="../site/" title="The site this study built, as it was at the end"><span class="long">The finished site</span><span class="short">Site</span> ↗</a></nav>
+  <button type="button" class="theme" aria-label="Switch theme">☾</button></div></header>
+<main class="page"><div class="watch">
+  <nav class="vlist" aria-label="The videos" id="list"></nav>
+  <div class="stage">
+    <span class="label" id="kicker"></span>
+    <h1 id="title">Loading…</h1>
+    <p class="sub" id="meta"></p>
+    <div class="screen"><hyperframes-player id="p" controls width="1920" height="1080"></hyperframes-player></div>
+    <div class="marks" id="marks"></div>
+    <p class="note">Each video is shown as it was last built. Three were rebuilt after a review asked for changes: the first plan video, its walkthrough, and the walkthrough of the site on a computer. Their first versions were not kept; the timeline quotes what the owner said about them.</p>
+    <p class="note">This is the video the owner reviewed, without the pauses. Where the review stopped at a question, this version plays
+    the scenes for every option in turn. The list shows what the owner picked.</p>
+  </div>
+</div></main>
+<script>
+(async () => {
+  const { videos } = await (await fetch("videos.json")).json();
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const mmss = (t) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`;
+  const player = $("p");
+  // the list, by plan; a plan approved in chat has no plan video
+  const plans = [...new Map(videos.map((x) => [x.plan, x.planTitle])).entries()];
+  $("list").innerHTML = plans.map(([plan, title], i) => {
+    const vs = videos.filter((x) => x.plan === plan);
+    return `<section><span class="label">Plan ${i + 1}</span><p class="pt">${esc(title)}</p>` +
+      (vs.some((x) => x.kind === "plan") ? "" : `<div class="none">Approved in chat: no plan video</div>`) +
+      vs.map((x) => `<a href="?v=${x.slug}" data-v="${x.slug}"><span>${x.kind === "plan" ? "Plan video" : "Walkthrough"}</span><small>${x.lengthLabel}</small></a>`).join("") + `</section>`;
+  }).join("");
+  let cur = null, pendingSeek = null;
+  const open = (slug, t, push) => {
+    cur = videos.find((x) => x.slug === slug) || videos[0];
+    document.title = `${cur.title} · Bob Dylan, explored`;
+    $("kicker").textContent = `Plan ${plans.findIndex(([p]) => p === cur.plan) + 1} · ${cur.planTitle}`;
+    $("title").textContent = cur.kind === "plan" ? "Plan video" : "Walkthrough";
+    $("meta").textContent = `${cur.scenes} scenes · ${cur.lengthLabel}` + (cur.questions.length ? ` · ${cur.questions.length} question${cur.questions.length > 1 ? "s" : ""} for the owner` : "");
+    for (const a of $("list").querySelectorAll("a")) a.setAttribute("aria-current", a.dataset.v === cur.slug ? "true" : "false");
+    const rows = [...cur.chapters.map((c) => ({ ...c, q: false })), ...cur.questions.map((q) => ({ ...q, q: true }))].sort((a, b) => a.t - b.t);
+    $("marks").innerHTML = rows.map((r) => r.q
+      ? `<button class="mark q" data-t="${r.t}"><time>${mmss(r.t)}</time><span><b>Question ${esc(r.id.slice(1))} · ${esc(r.question || "")}</b>` +
+        (r.answer ? `<span class="ans">${esc(r.answer)}${r.own ? " (typed answer)" : ""}</span>` : "") + `</span></button>`
+      : `<button class="mark" data-t="${r.t}"><time>${mmss(r.t)}</time><span>${esc(r.title)}</span></button>`).join("") +
+      (cur.kind !== "plan" && cur.questions.length ? `<p class="note">A walkthrough's questions continue the plan's numbering.</p>` : "");
+    pendingSeek = t || null;
+    player.setAttribute("src", cur.src);
+    if (push) history.pushState({}, "", `?v=${cur.slug}`);
+  };
+  player.addEventListener("ready", () => { if (pendingSeek) { player.seek(pendingSeek); pendingSeek = null; } });
+  $("list").addEventListener("click", (e) => { const a = e.target.closest("a[data-v]"); if (!a) return; e.preventDefault(); open(a.dataset.v, 0, true); });
+  $("marks").addEventListener("click", (e) => { const b = e.target.closest(".mark"); if (!b) return; player.seek(+b.dataset.t + 0.6); player.play(); });
+  player.addEventListener("timeupdate", (e) => {
+    const t = e.detail?.currentTime ?? player.currentTime; let last = null;
+    for (const b of $("marks").querySelectorAll(".mark")) { b.classList.remove("now"); if (+b.dataset.t <= t + 0.1) last = b; }
+    last?.classList.add("now");
+  });
+  addEventListener("popstate", () => open(new URLSearchParams(location.search).get("v"), 0, false));
+  const hash = location.hash.match(/t=([\d.]+)/);
+  open(new URLSearchParams(location.search).get("v"), hash ? +hash[1] : 0, false);
+})();
+</script>
+</body>
+</html>

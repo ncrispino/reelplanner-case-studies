@@ -1,0 +1,70 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  /* type sizes used: 76 (question), 40 (heading), 34 (chose), 30 (compact chose, tiles), 26 (labels, addresses, instead of, why) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f07-q5-b-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f07-q5-b-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f07-q5-b-place { position:absolute; left:80px; top:70px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f07-q5-b-win { position:absolute; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f07-q5-b-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f07-q5-b-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f07-q5-b-addr { position:absolute; left:84px; right:12px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; overflow:hidden; }
+  .f07-q5-b-crop { position:absolute; left:0; top:36px; overflow:hidden; }
+  .f07-q5-b-crop img { position:absolute; display:block; max-width:none; }
+  .f07-q5-b-ph { position:absolute; border:1px solid var(--rp-ink); border-radius:28px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f07-q5-b-ph img { position:absolute; left:0; display:block; max-width:none; }
+  .f07-q5-b-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; }
+  .f07-q5-b-label { position:absolute; font:400 26px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f07-q5-b-chip { position:absolute; padding:10px 18px; font:400 26px/1 "Inter"; color:var(--rp-ink); background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.18); border-radius:999px; white-space:nowrap; }
+  .f07-q5-b-tile { position:absolute; box-sizing:border-box; padding:22px 28px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f07-q5-b-tile b { display:block; font:700 30px/1.2 "Inter"; color:var(--rp-ink); margin-bottom:6px; }
+  .f07-q5-b-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f07-q5-b-txt { position:absolute; left:36px; right:28px; top:30px; }
+  .f07-q5-b-card.compact .f07-q5-b-txt { top:22px; }
+  .f07-q5-b-kick { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-coral-deep); margin-bottom:14px; }
+  .f07-q5-b-chose { font:700 34px/1.25 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f07-q5-b-card.compact .f07-q5-b-chose { font-size:30px; }
+  .f07-q5-b-inst { margin-top:12px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f07-q5-b-card.compact .f07-q5-b-inst { margin-top:8px; }
+  .f07-q5-b-why { margin-top:8px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); white-space:nowrap; }
+
+</style>
+
+<div id="root" data-composition-id="07-q5-b" data-band="bottom" data-start="0" data-duration="7.023" data-width="1920" data-height="1080">
+  <div class="clip f07-q5-b-bg" id="f07-q5-b-bg" data-start="0" data-duration="7.023" data-track-index="0"></div>
+  <div class="clip f07-q5-b-scene" id="f07-q5-b-scene" data-start="0" data-duration="7.023" data-track-index="1">
+    <div class="f07-q5-b-place" id="f07-q5-b-place">If B · step 3</div>
+    <div class="f07-q5-b-win" id="f07-q5-b-w1" data-artifact="/" style="left:60px;top:150px;width:864px;height:576px"><div class="f07-q5-b-bar"><span class="f07-q5-b-dot" style="left:16px"></span><span class="f07-q5-b-dot" style="left:34px"></span><span class="f07-q5-b-dot" style="left:52px"></span><span class="f07-q5-b-addr">/</span></div><div class="f07-q5-b-crop" style="width:864px;height:540px"><img src="assets/shots/d-home.png" alt="The home page: the eras&#x27; full screens only" style="left:0.0px;top:0.0px;width:864.0px;height:540.0px"></div></div>
+    <div class="f07-q5-b-win" id="f07-q5-b-w2" data-artifact="/era/hibbing/" style="left:996px;top:150px;width:864px;height:576px"><div class="f07-q5-b-bar"><span class="f07-q5-b-dot" style="left:16px"></span><span class="f07-q5-b-dot" style="left:34px"></span><span class="f07-q5-b-dot" style="left:52px"></span><span class="f07-q5-b-addr">/era/hibbing/</span></div><div class="f07-q5-b-crop" style="width:864px;height:540px"><img src="assets/shots/d-home-bands.png" alt="An era&#x27;s own address, with its bands" style="left:0.0px;top:0.0px;width:864.0px;height:540.0px"></div></div>
+    <div class="f07-q5-b-label" id="f07-q5-b-l1" style="left:60px;top:760px;">/ : each era's full screen alone</div>
+    <div class="f07-q5-b-label" id="f07-q5-b-l2" style="left:996px;top:760px;">/era/hibbing/ : the bands, a second version to keep</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f07-q5-b-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var card = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, at); };
+  var coral = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, at); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+  rise(tl, $("place"), 0.10);
+  push(tl, $("w1"), 0.20);
+  rise(tl, $("l1"), 0.40);
+  push(tl, $("w2"), 4.94);
+  rise(tl, $("l2"), 4.94);
+  tl.set({}, {}, 6.123);
+  window.__timelines["07-q5-b"] = tl;
+})();
+</script>
+</template>

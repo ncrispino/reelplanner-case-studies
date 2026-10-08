@@ -1,0 +1,70 @@
+$ node tools/find-lyrics-links.mjs
+✓ youre-no-good: https://www.bobdylan.com/songs/youre-no-good/
+✓ in-my-time-of-dyin: https://www.bobdylan.com/songs/my-time-dyin/
+✓ fixin-to-die: https://www.bobdylan.com/songs/fixin-die/
+✓ bob-dylans-blues: https://www.bobdylan.com/songs/bob-dylans-blues/
+· talking-world-war-iii-blues: not in the index
+· motorpsycho-nitemare: not in the index
+✓ i-dont-believe-you-she-acts-like-we-never-have-met: https://www.bobdylan.com/songs/i-dont-believe-you-she-acts-we-never-have-met/
+✓ bob-dylans-115th-dream: https://www.bobdylan.com/songs/bob-dylans-115th-dream/
+· most-likely-you-go-your-way-and-ill-go-mine: not in the index
+· alberta: not in the index
+✓ i-forgot-more-than-youll-ever-know: https://www.bobdylan.com/songs/i-forgot-more-youll-ever-know/
+✓ early-mornin-rain: https://www.bobdylan.com/songs/early-mornin-rain/
+✓ youre-a-big-girl-now: https://www.bobdylan.com/songs/youre-big-girl-now/
+✓ goin-to-acapulco: https://www.bobdylan.com/songs/goin-acapulco/
+· katies-been-gone: not in the index
+✓ aint-no-more-cane: https://www.bobdylan.com/songs/aint-no-more-cane/
+✓ dont-ya-tell-henry: https://www.bobdylan.com/songs/dont-ya-tell-henry/
+✓ the-grooms-still-waiting-at-the-altar: https://www.bobdylan.com/songs/grooms-still-waiting-altar/
+✓ ill-remember-you: https://www.bobdylan.com/songs/ill-remember-you/
+✓ somethings-burning-baby: https://www.bobdylan.com/songs/somethings-burning-baby/
+✓ lets-stick-together: https://www.bobdylan.com/songs/lets-stick-together/
+✓ t-v-talkin-song: https://www.bobdylan.com/songs/tv-talkin-song/
+✓ cats-in-the-well: https://www.bobdylan.com/songs/cats-well/
+✓ sittin-on-top-of-the-world: https://www.bobdylan.com/songs/sittin-top-world/
+✓ youre-gonna-quit-me: https://www.bobdylan.com/songs/youre-gonna-quit-me/
+✓ ragged-and-dirty: https://www.bobdylan.com/songs/ragged-dirty/
+✓ til-i-fell-in-love-with-you: https://www.bobdylan.com/songs/til-i-fell-love-you/
+✓ cant-wait: https://www.bobdylan.com/songs/cant-wait/
+✓ the-levees-gonna-break: https://www.bobdylan.com/songs/levees-gonna-break/
+✓ ill-be-home-for-christmas: https://www.bobdylan.com/songs/ill-be-home-christmas/
+✓ o-come-all-ye-faithful-adeste-fideles: https://www.bobdylan.com/songs/o-come-all-ye-faithful-adeste-fideles/
+✓ o-little-town-of-bethlehem: https://www.bobdylan.com/songs/o-little-town-bethlehem/
+✓ my-wifes-home-town: https://www.bobdylan.com/songs/my-wifes-home-town/
+✓ its-all-good: https://www.bobdylan.com/songs/its-all-good/
+✓ what-ill-do: https://www.bobdylan.com/songs/whatll-i-do/
+✓ maybe-youll-be-there: https://www.bobdylan.com/songs/maybe-youll-be-there/
+· i-guess-ill-have-to-change-my-plans: not in the index
+· i-could-have-told-you: not in the index
+· once-upon-a-time: not in the index
+· this-nearly-was-mine: not in the index
+· that-old-feeling: not in the index
+· it-gets-lonely-early: not in the index
+· my-one-and-only-love: not in the index
+· trade-winds: not in the index
+· braggin: not in the index
+· imagination: not in the index
+· how-deep-is-the-ocean: not in the index
+· p-s-i-love-you: not in the index
+· the-best-is-yet-to-come: not in the index
+· but-beautiful: not in the index
+· heres-that-rainy-day: not in the index
+· where-is-the-one: not in the index
+· theres-a-flaw-in-my-flue: not in the index
+· day-in-day-out: not in the index
+· i-couldnt-sleep-a-wink-last-night: not in the index
+· sentimental-journey: not in the index
+· somewhere-along-the-way: not in the index
+· when-the-world-was-young: not in the index
+· these-foolish-things: not in the index
+· you-go-to-my-head: not in the index
+· stardust: not in the index
+· its-funny-to-everyone-but-me: not in the index
+· why-was-i-born: not in the index
+✓ ive-made-up-my-mind-to-give-myself-to-you: https://www.bobdylan.com/songs/ive-made-up-my-mind-to-give-myself-to-you/
+· the-mighty-quinn-quinn-the-eskimo: not in the index
+· september-of-my-years: not in the index
+· as-time-goes-by: not in the index
+✓ this-wheels-on-fire: https://www.bobdylan.com/songs/wheels-fire/
+exit 0

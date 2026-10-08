@@ -1,0 +1,174 @@
+---
+import Shell from "../../layouts/Shell.astro";
+import Cover from "../../components/Cover.astro";
+import ConnectionCard from "../../components/ConnectionCard.astro";
+import ReadOn from "../../components/ReadOn.astro";
+import { albums, eraById, songById, albumById, connectionsOf, url, yearsLabel, titleSize } from "../../lib/data";
+import mb from "../../../data/sources/musicbrainz.json";
+import trackMap from "../../../data/sources/track-map.json";
+export function getStaticPaths() { return albums.map((a) => ({ params: { id: a.id }, props: { album: a } })); }
+const { album } = Astro.props;
+const era = eraById.get(album.era)!;
+const tracks = album.songs.map((s) => songById.get(s)!).filter(Boolean);
+// the full track list comes from MusicBrainz; every track opens its song's page (data/sources/track-map.json, from
+// tools/add-tracks.mjs: a take or a live take opens the song it is a take of)
+const mbTracks = (mb as Record<string, { tracks: { title: string }[] }>)[album.id]?.tracks ?? [];
+const ids = (trackMap as Record<string, string[]>)[album.id] ?? [];
+const full = mbTracks.length ? mbTracks.map((t, i) => ({ n: i + 1, title: t.title, song: songById.get(ids[i]) ?? null })) : tracks.map((s, i) => ({ n: i + 1, title: s.title, song: s }));
+const total = full.length;
+// the connections that start from its songs (plan 2026-10-07-fuller, step 4): covers, borrowed tunes and the like
+// before shared themes, each song's first, at most six; never one to another song of this album
+const own = new Set(album.songs);
+const order = (k: string) => (k === "same-theme" ? 1 : 0);
+const conns = tracks.flatMap((s) => connectionsOf(s.id).filter((c) => !own.has(c.other.id)).map((c) => ({ ...c, from: s })))
+  .sort((a, b) => order(a.kind) - order(b.kind)).filter((c, i, all) => all.findIndex((x) => x.from.id === c.from.id && x.other.id === c.other.id) === i).slice(0, 6);
+// the record before and after it in its era (D-003: their real covers)
+const at = era.albums.indexOf(album.id);
+const prev = at > 0 ? albumById.get(era.albums[at - 1]) ?? null : null;
+const next = at >= 0 && at < era.albums.length - 1 ? albumById.get(era.albums[at + 1]) ?? null : null;
+const essay = album.essay && String(album.essay).trim() ? album.essay : null;
+---
+<Shell title={album.title} era={era.id} description={album.why} rail={{ era, album, year: album.year, here: "album" }}>
+  <a class="back" href={url.era(era.id)}>‹ {era.title}</a>
+  <!-- from 1100 px (plan 2026-10-07-desktop, step 4; plan 2026-10-07-fuller, step 4): the cover large, the album's
+       player under it on the left; why it matters, the essay, the track list and its connections on the right. Below
+       that the wrappers are display: contents and a phone gets one column -->
+  <div class="wide side-first album">
+  <div class="col side">
+  <div class="head">
+    <Cover album={album} size="l" name={`cover-${album.id}`} />
+    <div>
+      <p class="kicker"><span class="year">{album.year}</span>{album.landmark && " · a landmark"}</p>
+      <h1 class="display" style={titleSize(album.title, 52)}>{album.title}</h1>
+      <div class="chips"><a class="chip" href={url.era(era.id)}>{era.title} · <span class="year">{yearsLabel(era)}</span></a></div>
+    </div>
+  </div>
+  {album.spotifyAlbum && (
+    <section class="players aplayer" aria-label="Listen to the album">
+      <h2 class="section-title">Listen to the album</h2>
+      <div class="pl sp-pl">
+        <iframe class="spa" src={`https://open.spotify.com/embed/album/${album.spotifyAlbum}?utm_source=generator`} title={`${album.title} on Spotify`}
+          loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </section>
+  )}
+  {/* an album with no Spotify album to embed (question 4, answered B: D-087): a search for it on Spotify instead */}
+  {!album.spotifyAlbum && (
+    <section class="players aplayer" aria-label="Listen to the album">
+      <h2 class="section-title">Listen to the album</h2>
+      <a class="button spsearch" href={`https://open.spotify.com/search/${encodeURIComponent(`${album.title} Bob Dylan`)}/albums`} target="_blank" rel="noopener">Find {album.title} on Spotify ↗</a>
+    </section>
+  )}
+  </div>
+  <div class="col main">
+  <h2 class="section-title">Why it matters</h2>
+  <p class="why">{album.why}</p>
+  {essay && <div class="essay">{String(essay).split(/\n\s*\n/).map((para) => <p>{para}</p>)}</div>}
+  <h2 class="section-title">Track list · {total} songs</h2>
+  <ol class="list tracks">
+    {full.map((t) => t.song
+      ? (
+        <li class="tr">
+          <div class="row">
+            <a href={url.song(t.song.id)}><span class="tt"><span class="n year">{t.n}</span><span>{t.title}</span></span></a>
+            <button type="button" class="open" aria-expanded="false" aria-controls={`t-${album.id}-${t.n}`} aria-label={`Open ${t.title} here`}><span aria-hidden="true">▾</span></button>
+          </div>
+          <div class="det" id={`t-${album.id}-${t.n}`} hidden>
+            {t.song.preview ? <p class="pv">{t.song.preview}</p> : <p class="pv plainv">{t.song.note}</p>}
+            {t.song.themes.length > 0 && <p class="th soft">{t.song.themes.join(" · ")}</p>}
+            {t.song.spotify && (
+              <div class="pl sp-pl"><iframe class="sp" data-src={`https://open.spotify.com/embed/track/${t.song.spotify}?utm_source=generator`} title={`${t.title} on Spotify`}
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+            )}
+            <a class="its" href={url.song(t.song.id)}>Its page ›</a>
+          </div>
+        </li>
+      )
+      : (<li><span class="plain"><span class="tt"><span class="n year">{t.n}</span><span>{t.title}</span></span></span></li>))}
+  </ol>
+  {conns.length > 0 && (
+    <section class="cn" aria-label="Where its songs lead">
+      <h2 class="section-title">Where its songs lead</h2>
+      <div class="conns">{conns.map((c) => <ConnectionCard words={`${c.from.title} · ${c.words}`} other={c.other} why={c.why} />)}</div>
+    </section>
+  )}
+  </div>
+  </div>
+  {(prev || next) && (
+    <nav class="pn" aria-label={`More from ${era.title}`}>
+      {prev ? <a class="pa" href={url.album(prev.id)}><Cover album={prev} size="s" /><span><span class="kicker">‹ Before it</span><span class="pt">{prev.title}</span><span class="year soft">{prev.year}</span></span></a> : <span></span>}
+      {next && <a class="pa nx" href={url.album(next.id)}><span><span class="kicker">After it ›</span><span class="pt">{next.title}</span><span class="year soft">{next.year}</span></span><Cover album={next} size="s" /></a>}
+    </nav>
+  )}
+  <ReadOn out={album.out} />
+</Shell>
+<script>
+  // a track row opens in place (plan 2026-10-07-fuller, step 4): its preview, themes and player; the player loads
+  // the first time the row opens
+  function setup() {
+    document.querySelectorAll<HTMLButtonElement>(".tracks .open").forEach((b) => {
+      if (b.dataset.ready) return;
+      b.dataset.ready = "1";
+      b.addEventListener("click", () => {
+        const det = document.getElementById(b.getAttribute("aria-controls")!)!;
+        const open = det.hidden;
+        det.hidden = !open;
+        b.setAttribute("aria-expanded", String(open));
+        b.closest(".tr")?.classList.toggle("is-open", open);
+        const f = det.querySelector<HTMLIFrameElement>("iframe[data-src]");
+        if (open && f && !f.src) f.src = f.dataset.src!;
+      });
+    });
+  }
+  setup();
+  document.addEventListener("astro:page-load", setup);
+</script>
+<style>
+  .tracks .tt { display: grid; grid-template-columns: 2.2em 1fr; align-items: baseline; }
+  .tracks .tt .n { width: auto; }
+  .tracks .n { display: inline-block; width: 2.2em; color: var(--soft); }
+  .tracks .plain { color: var(--soft); }
+  .tracks .row { display: flex; align-items: stretch; border-bottom: 1px solid var(--line); }
+  .tracks .row a { flex: 1; min-width: 0; border-bottom: 0; }
+  .open { flex: 0 0 52px; min-height: 52px; display: grid; place-items: center; padding: 0; cursor: pointer; background: none; border: 0;
+    border-left: 1px solid var(--line); color: var(--accent); font: 700 18px/1 var(--label); }
+  .open span { transition: rotate .2s ease; }
+  .open[aria-expanded="true"] span { rotate: 180deg; }
+  .open:hover { background: var(--card); }
+  .det { padding: 14px 2px 20px 2.2em; border-bottom: 1px solid var(--line); display: grid; gap: 10px; }
+  .det[hidden] { display: none; }
+  .det .pv { margin: 0; font-style: italic; font-size: 17px; }
+  .det .plainv { font-style: normal; }
+  .det .th { margin: 0; font-size: 14px; }
+  .det .sp { height: 152px; border-radius: 12px; }
+  .tracks .det .its { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; padding: 0; border-bottom: 0; color: var(--accent); font: var(--label-weight) 14px/1 var(--label);
+    letter-spacing: var(--label-track); text-transform: var(--label-case); text-decoration: none; }
+  .tr.is-open .row { background: color-mix(in srgb, var(--card) 55%, transparent); }
+  .head { display: grid; gap: 16px; margin: 6px 0 4px; }
+  .why { margin: 0; }
+  .essay p { margin: 14px 0 0; line-height: 1.65; }
+  .aplayer { margin-top: 8px; }
+  .spa { height: 352px; border-radius: 12px; }
+  .pn { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .pa { display: flex; gap: 12px; align-items: center; text-decoration: none; min-width: 0; }
+  .pa > span { display: grid; gap: 2px; min-width: 0; }
+  .pa .kicker { margin: 0; }
+  .pa :global(.cover.s) { width: 72px; flex: 0 0 auto; }
+  .pt { font-size: 16px; line-height: 1.25; }
+  .nx { justify-content: flex-end; text-align: right; }
+  @media (min-width: 768px) { .head { grid-template-columns: 300px 1fr; align-items: end; } .pa :global(.cover.s) { width: 96px; } }
+  @media (min-width: 1100px) {
+    .album { --side: 480px; margin-top: 8px; }
+    .head { grid-template-columns: 1fr; gap: 20px; margin-top: 0; }
+    .head :global(.cover.l) { width: 100%; max-width: 480px; }
+    .main > .section-title:first-child { margin-top: 0; }
+    .essay { max-width: 68ch; }
+    .essay p { font-size: 17px; }
+    .conns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+    .conns :global(.conn) { margin: 0; }
+    .cn { margin-top: 24px; }
+    .pn { margin-top: 64px; }
+    .pa :global(.cover.s) { width: 120px; }
+    .pt { font-size: 19px; }
+  }
+</style>

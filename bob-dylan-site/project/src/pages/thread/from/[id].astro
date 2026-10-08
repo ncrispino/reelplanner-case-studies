@@ -1,0 +1,16 @@
+---
+import Shell from "../../../layouts/Shell.astro";
+import ThreadCards from "../../../components/ThreadCards.astro";
+import { songs, threadFrom, connectionsOf, eraOfSong } from "../../../lib/data";
+export function getStaticPaths() {
+  return songs.filter((s) => connectionsOf(s.id).length > 0).map((s) => ({ params: { id: s.id }, props: { song: s } }));
+}
+const { song } = Astro.props;
+const path = threadFrom(song.id);
+const steps = path.map((s) => {
+  if (s.id === song.id) return { song: s, why: "Where you started." };
+  const c = connectionsOf(s.id).find((c) => path.some((p) => p.id === c.other.id));
+  return { song: s, why: c ? `${c.words} ${c.other.title}: ${c.why}` : "" };
+});
+---
+<Shell title={`From ${song.title}`} era={eraOfSong(song).id} tab="threads"><ThreadCards title={`From ${song.title}`} steps={steps} thread={`from/${song.id}`} /></Shell>

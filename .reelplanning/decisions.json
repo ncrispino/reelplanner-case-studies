@@ -1,0 +1,122 @@
+{
+  "decisions": [
+    {
+      "id": "D-001",
+      "date": "2026-10-08",
+      "plan": "2026-10-08-case-study-page",
+      "step": 1,
+      "stepTitle": "The timeline, from the transcript, the reviews and the commits (question 1)",
+      "questionId": "q1",
+      "question": "What does the timeline say of the agent's side?",
+      "options": [
+        {
+          "id": "a",
+          "label": "One line per event, from its commit message",
+          "why": "Short; the agent's reasoning stays in the transcript.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Also quote the agent's chat replies",
+          "why": "Much longer; the replies are long.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Only the owner's side",
+          "why": "What was built shows only as pictures.",
+          "recommended": false
+        }
+      ],
+      "chosen": "One line per event, from its commit message",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "Short; the agent's reasoning stays in the transcript.",
+      "components": [
+        "study",
+        "study-page",
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-002",
+      "date": "2026-10-08",
+      "plan": "2026-10-08-case-study-page",
+      "step": 2,
+      "stepTitle": "A watch-only viewer for the videos (question 2)",
+      "questionId": "q2",
+      "question": "How should a video play on the watch page?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A rendered video file, in the browser's own player",
+          "why": "Plays anywhere; rendering here is slow, so one is timed first.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "reelplanning's player in a watch-only mode",
+          "why": "A change to reelplanning itself first.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "The review player as it is, with better names",
+          "why": "The marking-up stays.",
+          "recommended": false
+        }
+      ],
+      "chosen": "i guess the rendered video file is fine to start but the watch only might be useful too",
+      "chosenId": "own",
+      "recommended": false,
+      "why": "",
+      "components": [
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    },
+    {
+      "id": "D-003",
+      "date": "2026-10-08",
+      "plan": "2026-10-08-case-study-page",
+      "step": 3,
+      "stepTitle": "The study page, told as a timeline (question 3)",
+      "questionId": "q3",
+      "question": "How much of the timeline is open at first?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Each plan's videos and reviews open; the rest folded",
+          "why": "About 30 of some 70 events show; one click opens a fold.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "Everything open",
+          "why": "A long page; the plans are harder to see.",
+          "recommended": false
+        },
+        {
+          "id": "c",
+          "label": "Only each plan's heading",
+          "why": "The order stays hidden until a plan is opened.",
+          "recommended": false
+        }
+      ],
+      "chosen": "Each plan's videos and reviews open; the rest folded",
+      "chosenId": "a",
+      "recommended": true,
+      "why": "About 30 of some 70 events show; one click opens a fold.",
+      "components": [
+        "study",
+        "study-page",
+        "timeline"
+      ],
+      "status": "active",
+      "supersedes": []
+    }
+  ]
+}

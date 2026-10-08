@@ -1,0 +1,5 @@
+$ node tools/find-youtube.mjs
+songs: 364 of 452 album songs have an official clip
+✓ snl-1979: "Bob Dylan - Gotta Serve Somebody" (Natsukashii)
+done: 365 clips
+exit 0

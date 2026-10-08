@@ -1,0 +1,468 @@
+{
+  "eras": [
+    {
+      "id": "standards",
+      "title": "The Standards",
+      "years": [
+        2015,
+        2017
+      ],
+      "theme": "standards",
+      "summary": "Dylan turned to the Great American Songbook, recording three albums of songs Frank Sinatra had sung, arranged for his touring band. In the middle of it he became the first songwriter awarded the Nobel Prize in Literature.",
+      "albums": [
+        "shadows-in-the-night",
+        "fallen-angels",
+        "triplicate"
+      ],
+      "moments": [
+        "musicares-2015",
+        "nobel-prize-2016",
+        "nobel-lecture-2017"
+      ],
+      "photos": []
+    },
+    {
+      "id": "rough",
+      "title": "Rough and Rowdy",
+      "years": [
+        2020,
+        null
+      ],
+      "theme": "rough",
+      "summary": "In 2020 he returned with his first original songs in eight years, starting with the Kennedy epic \"Murder Most Foul\" and the album Rough and Rowdy Ways. He has since sold his song catalog, streamed a reimagined concert film and published a book about other people's songs.",
+      "albums": [
+        "rough-and-rowdy-ways"
+      ],
+      "moments": [
+        "murder-most-foul-release",
+        "catalog-sale-2020",
+        "shadow-kingdom-2021",
+        "philosophy-of-modern-song"
+      ],
+      "photos": []
+    }
+  ],
+  "moments": [
+    {
+      "id": "musicares-2015",
+      "year": 2015,
+      "title": "MusiCares Person of the Year",
+      "text": "Honored by MusiCares in Los Angeles, he gave a long, rare speech about his songwriting and his critics.",
+      "era": "standards",
+      "youtube": null
+    },
+    {
+      "id": "nobel-prize-2016",
+      "year": 2016,
+      "title": "Nobel Prize in Literature",
+      "text": "The Swedish Academy named him the 2016 laureate for creating new poetic expressions within the great American song tradition, making him the first songwriter to receive it.",
+      "era": "standards",
+      "youtube": null
+    },
+    {
+      "id": "nobel-lecture-2017",
+      "year": 2017,
+      "title": "Nobel lecture",
+      "text": "He met the Nobel requirement in June 2017 by sending a recorded lecture on the books and songs that shaped him.",
+      "era": "standards",
+      "youtube": null
+    },
+    {
+      "id": "murder-most-foul-release",
+      "year": 2020,
+      "title": "\"Murder Most Foul\" released",
+      "text": "In March 2020, early in the pandemic, he released a seventeen-minute song about the Kennedy assassination without warning, his first new original song in eight years.",
+      "era": "rough",
+      "youtube": null
+    },
+    {
+      "id": "catalog-sale-2020",
+      "year": 2020,
+      "title": "Song catalog sold",
+      "text": "In December 2020 he sold the rights to his entire songwriting catalog to Universal Music Publishing Group.",
+      "era": "rough",
+      "youtube": null
+    },
+    {
+      "id": "shadow-kingdom-2021",
+      "year": 2021,
+      "title": "Shadow Kingdom stream",
+      "text": "In July 2021 he presented Shadow Kingdom, a filmed concert of reworked older songs streamed online.",
+      "era": "rough",
+      "youtube": null
+    },
+    {
+      "id": "philosophy-of-modern-song",
+      "year": 2022,
+      "title": "The Philosophy of Modern Song",
+      "text": "He published a book of essays on dozens of songs by other artists, his first book of new prose since Chronicles: Volume One in 2004.",
+      "era": "rough",
+      "youtube": null
+    }
+  ],
+  "albums": [
+    {
+      "id": "shadows-in-the-night",
+      "title": "Shadows in the Night",
+      "year": 2015,
+      "era": "standards",
+      "why": "Dylan's first album of standards strips songs Frank Sinatra once recorded down to his small touring band, recorded live in the studio.",
+      "songs": [
+        "im-a-fool-to-want-you",
+        "full-moon-and-empty-arms",
+        "that-lucky-old-sun"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "fallen-angels",
+      "title": "Fallen Angels",
+      "year": 2016,
+      "era": "standards",
+      "why": "A second set of Sinatra-associated standards, cut with the same touring band and a slightly lighter, more romantic mood.",
+      "songs": [
+        "young-at-heart",
+        "all-the-way",
+        "melancholy-mood"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "triplicate",
+      "title": "Triplicate",
+      "year": 2017,
+      "era": "standards",
+      "why": "His first triple album, thirty standards in three themed sets of ten, closing out his run of American songbook records.",
+      "songs": [
+        "september-of-my-years",
+        "stormy-weather",
+        "as-time-goes-by"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "rough-and-rowdy-ways",
+      "title": "Rough and Rowdy Ways",
+      "year": 2020,
+      "era": "rough",
+      "why": "His first album of new original songs since Tempest in 2012, made largely of long, unhurried meditations on history, mortality and himself. It closes with the seventeen-minute \"Murder Most Foul\" on a disc of its own. The album went to number one in the UK.",
+      "songs": [
+        "i-contain-multitudes",
+        "false-prophet",
+        "my-own-version-of-you",
+        "goodbye-jimmy-reed",
+        "crossing-the-rubicon",
+        "key-west-philosopher-pirate",
+        "murder-most-foul"
+      ],
+      "landmark": true,
+      "cover": null
+    }
+  ],
+  "songs": [
+    {
+      "id": "im-a-fool-to-want-you",
+      "title": "I’m a Fool to Want You",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "Frank Sinatra shares a writing credit on this 1951 torch song, which opens the album.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/im-a-fool-to-want-you/",
+      "preview": "A singer admits he cannot stop longing for someone he knows is bad for him.",
+      "excerpt": null
+    },
+    {
+      "id": "full-moon-and-empty-arms",
+      "title": "Full Moon and Empty Arms",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "Its melody comes from Rachmaninoff's Second Piano Concerto, and Dylan released his version a year ahead of the album.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/full-moon-and-empty-arms/",
+      "preview": "A lonely lover spends a moonlit night wishing the absent one were there.",
+      "excerpt": null
+    },
+    {
+      "id": "that-lucky-old-sun",
+      "title": "That Lucky Old Sun",
+      "year": 2015,
+      "album": "shadows-in-the-night",
+      "by": null,
+      "note": "A 1949 hit for Frankie Laine, it closes the album.",
+      "themes": [
+        "time",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/lucky-old-sun/",
+      "preview": "A worn-out laborer envies the sun, which rolls across the sky all day with no burden to carry.",
+      "excerpt": null
+    },
+    {
+      "id": "young-at-heart",
+      "title": "Young at Heart",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Frank Sinatra had a hit with it in 1954, and it opens the album.",
+      "themes": [
+        "time",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/young-at-heart/",
+      "preview": "Staying hopeful and playful, the song argues, keeps a person young whatever their age.",
+      "excerpt": null
+    },
+    {
+      "id": "all-the-way",
+      "title": "All the Way",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "Written for the 1957 film The Joker Is Wild, it won the Academy Award for Best Original Song.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/all-the-way/",
+      "preview": "A promise of love that holds nothing back and lasts through good times and bad.",
+      "excerpt": null
+    },
+    {
+      "id": "melancholy-mood",
+      "title": "Melancholy Mood",
+      "year": 2016,
+      "album": "fallen-angels",
+      "by": null,
+      "note": "It was the song on Frank Sinatra's first commercial record, made with Harry James's band in 1939.",
+      "themes": [
+        "loss",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/melancholy-mood/",
+      "preview": "A singer sunk in gloom after love has gone wishes the clouds would lift.",
+      "excerpt": null
+    },
+    {
+      "id": "september-of-my-years",
+      "title": "September of My Years",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Frank Sinatra made it the title song of his 1965 album about growing older.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "A man in later life looks back over the seasons of his years.",
+      "excerpt": null
+    },
+    {
+      "id": "stormy-weather",
+      "title": "Stormy Weather",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "Harold Arlen and Ted Koehler wrote it in 1933, and Lena Horne made it her signature song.",
+      "themes": [
+        "loss",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/stormy-weather/",
+      "preview": "Since a lover left, it has felt as if the rain will never stop.",
+      "excerpt": null
+    },
+    {
+      "id": "as-time-goes-by",
+      "title": "As Time Goes By",
+      "year": 2017,
+      "album": "triplicate",
+      "by": null,
+      "note": "First heard in a 1931 Broadway show, it became famous through the 1942 film Casablanca.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": "Whatever else changes, the simple truths of love stay the same.",
+      "excerpt": null
+    },
+    {
+      "id": "i-contain-multitudes",
+      "title": "I Contain Multitudes",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "Its title comes from Walt Whitman's Song of Myself, and it was released as a single in April 2020.",
+      "themes": [
+        "time",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/i-contain-multitudes/",
+      "preview": "An aging narrator describes himself as a bundle of contradictions holding many selves at once.",
+      "excerpt": null
+    },
+    {
+      "id": "false-prophet",
+      "title": "False Prophet",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "Released in May 2020, its music is built on Billy \"The Kid\" Emerson's 1954 Sun Records blues \"If Lovin' Is Believing\".",
+      "themes": [
+        "faith",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/false-prophet/",
+      "preview": "A defiant speaker insists he is no fake and stares down enemies and mortality alike.",
+      "excerpt": null
+    },
+    {
+      "id": "my-own-version-of-you",
+      "title": "My Own Version of You",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "It imagines building a companion out of body parts, in the manner of Frankenstein.",
+      "themes": [
+        "love",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/my-own-version-of-you/",
+      "preview": "A narrator roams graveyards and history gathering pieces to assemble the perfect person.",
+      "excerpt": null
+    },
+    {
+      "id": "goodbye-jimmy-reed",
+      "title": "Goodbye Jimmy Reed",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "It is a tribute to the Chicago blues singer and harmonica player Jimmy Reed.",
+      "themes": [
+        "faith",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/goodbye-jimmy-reed/",
+      "preview": "A farewell to a blues hero that mixes religion, rough living and devotion to the music.",
+      "excerpt": null
+    },
+    {
+      "id": "crossing-the-rubicon",
+      "title": "Crossing the Rubicon",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "Its title refers to Julius Caesar crossing the Rubicon river in 49 BC, a point of no return.",
+      "themes": [
+        "time",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/crossing-the-rubicon/",
+      "preview": "Over a slow blues, a man announces he has made an irreversible choice and will not turn back.",
+      "excerpt": null
+    },
+    {
+      "id": "key-west-philosopher-pirate",
+      "title": "Key West (Philosopher Pirate)",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "Named for the island city at the tip of Florida, it runs over nine minutes with accordion throughout.",
+      "themes": [
+        "the road",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/key-west-philosopher-pirate/",
+      "preview": "The Florida island becomes a dreamlike refuge, a place of healing at the end of the road.",
+      "excerpt": null
+    },
+    {
+      "id": "murder-most-foul",
+      "title": "Murder Most Foul",
+      "year": 2020,
+      "album": "rough-and-rowdy-ways",
+      "by": null,
+      "note": "Nearly seventeen minutes long, it is his longest song and became his first to top a Billboard chart.",
+      "themes": [
+        "death",
+        "America",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/murder-most-foul/",
+      "preview": "The 1963 killing of John F. Kennedy is retold alongside a vast roll call of the music and films of the era.",
+      "excerpt": null
+    },
+    {
+      "id": "if-lovin-is-believing",
+      "title": "If Lovin' Is Believing",
+      "year": 1954,
+      "album": null,
+      "by": "Billy \"The Kid\" Emerson",
+      "note": "A blues by Billy \"The Kid\" Emerson, recorded for Sun Records in Memphis.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "false-prophet",
+      "to": "if-lovin-is-believing",
+      "kind": "borrowed-tune",
+      "why": "The music of \"False Prophet\" closely follows Emerson's 1954 Sun single."
+    },
+    {
+      "from": "murder-most-foul",
+      "to": "key-west-philosopher-pirate",
+      "kind": "same-theme",
+      "why": "Both songs dwell on the assassination of an American president, Kennedy in one and McKinley in the other."
+    }
+  ]
+}

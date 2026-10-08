@@ -1,0 +1,5 @@
+$ node tools/fetch-spotify.mjs
+bringing-it-all-back-home: 7/7 songs (1 Spotify album link(s))
+blonde-on-blonde: 7/7 songs (1 Spotify album link(s))
+done: 181 of 181 album songs have a Spotify id
+exit 0

@@ -1,0 +1,1804 @@
+{
+  "eras": {
+    "hibbing": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#Early_life_and_education",
+      "more": [
+        {
+          "label": "Hibbing, Minnesota",
+          "href": "https://en.wikipedia.org/wiki/Hibbing,_Minnesota"
+        }
+      ]
+    },
+    "village": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#1960%E2%80%931962%3A_Move_to_New_York_and_stardom",
+      "more": [
+        {
+          "label": "Greenwich Village",
+          "href": "https://en.wikipedia.org/wiki/Greenwich_Village"
+        }
+      ]
+    },
+    "electric": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#1965%E2%80%931969%3A_Going_electric_and_motorcycle_accident",
+      "more": [
+        {
+          "label": "Electric Dylan controversy",
+          "href": "https://en.wikipedia.org/wiki/Electric_Dylan_controversy"
+        }
+      ]
+    },
+    "basement": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#1965%E2%80%931969%3A_Going_electric_and_motorcycle_accident",
+      "more": [
+        {
+          "label": "The Basement Tapes",
+          "href": "https://en.wikipedia.org/wiki/The_Basement_Tapes"
+        }
+      ]
+    },
+    "tracks": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#1970%E2%80%931979%3A_Return_to_touring_and_Christian_music",
+      "more": [
+        {
+          "label": "Rolling Thunder Revue",
+          "href": "https://en.wikipedia.org/wiki/Rolling_Thunder_Revue"
+        }
+      ]
+    },
+    "gospel": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#1970%E2%80%931979%3A_Return_to_touring_and_Christian_music"
+    },
+    "eighties": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#1980%E2%80%931989%3A_Career_fluctuations",
+      "more": [
+        {
+          "label": "Traveling Wilburys",
+          "href": "https://en.wikipedia.org/wiki/Traveling_Wilburys"
+        }
+      ]
+    },
+    "roots": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#1990%E2%80%931999%3A_Return_to_folk_music_and_resurgence"
+    },
+    "renaissance": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#2000%E2%80%932009%3A_Oscar_win%2C_memoir%2C_and_Modern_Times",
+      "more": [
+        {
+          "label": "2016 Nobel Prize in Literature",
+          "href": "https://en.wikipedia.org/wiki/2016_Nobel_Prize_in_Literature"
+        }
+      ]
+    },
+    "standards": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#2010%E2%80%932019%3A_Tempest_and_continued_recordings"
+    },
+    "rough": {
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan#2020%E2%80%93present%3A_Rough_and_Rowdy_Ways"
+    }
+  },
+  "albums": {
+    "bob-dylan": {
+      "musicbrainz": "https://musicbrainz.org/release-group/6ac612a5-e815-3fed-b341-8b3faa351df4",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan_(album)"
+    },
+    "freewheelin": {
+      "musicbrainz": "https://musicbrainz.org/release-group/169b62aa-c3a5-3ed9-bed1-cc47c4bc51ad",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Freewheelin%27_Bob_Dylan"
+    },
+    "another-side": {
+      "musicbrainz": "https://musicbrainz.org/release-group/b18ef710-0e47-3c10-ab0b-6631533549ee",
+      "wikipedia": "https://en.wikipedia.org/wiki/Another_Side_of_Bob_Dylan"
+    },
+    "times-they-are-a-changin": {
+      "musicbrainz": "https://musicbrainz.org/release-group/846f8032-9a85-3f4f-b7f5-28c86573d044",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Times_They_Are_a-Changin%27_(Bob_Dylan_album)"
+    },
+    "bringing-it-all-back-home": {
+      "musicbrainz": "https://musicbrainz.org/release-group/6cadda7c-fbd0-3b19-9546-56915e3305d8",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bringing_It_All_Back_Home"
+    },
+    "highway-61-revisited": {
+      "musicbrainz": "https://musicbrainz.org/release-group/fb48b1dc-412f-36aa-8820-1023c08c46c6",
+      "wikipedia": "https://en.wikipedia.org/wiki/Highway_61_Revisited"
+    },
+    "blonde-on-blonde": {
+      "musicbrainz": "https://musicbrainz.org/release-group/329fb554-2a81-3d8a-8e22-ec2c66810019",
+      "wikipedia": "https://en.wikipedia.org/wiki/Blonde_on_Blonde"
+    },
+    "john-wesley-harding": {
+      "musicbrainz": "https://musicbrainz.org/release-group/32981714-597a-32dd-9f29-b2f7566fed89",
+      "wikipedia": "https://en.wikipedia.org/wiki/John_Wesley_Harding"
+    },
+    "nashville-skyline": {
+      "musicbrainz": "https://musicbrainz.org/release-group/2ca28746-8987-3015-b54c-75b3aa8ca1a1",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nashville_Skyline"
+    },
+    "new-morning": {
+      "musicbrainz": "https://musicbrainz.org/release-group/4f2b915f-cc82-3c18-ac9b-05f3d4df622d",
+      "wikipedia": "https://en.wikipedia.org/wiki/New_Morning"
+    },
+    "self-portrait": {
+      "musicbrainz": "https://musicbrainz.org/release-group/6163aa70-d97f-34e5-a5bf-54b7d85a7ea0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Self_Portrait_(Bob_Dylan_album)"
+    },
+    "dylan-1973": {
+      "musicbrainz": "https://musicbrainz.org/release-group/a876f1e5-9a1a-32ef-a7f2-8971511bd19f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dylan_(1973_album)"
+    },
+    "pat-garrett": {
+      "musicbrainz": "https://musicbrainz.org/release-group/443726be-82e0-3d6d-ab2a-2de3099b0dde",
+      "wikipedia": "https://en.wikipedia.org/wiki/Pat_Garrett_%26_Billy_the_Kid_(album)"
+    },
+    "planet-waves": {
+      "musicbrainz": "https://musicbrainz.org/release-group/aedd518d-d7e0-3595-80c7-54d2aad292f8",
+      "wikipedia": "https://en.wikipedia.org/wiki/Planet_Waves"
+    },
+    "blood-on-the-tracks": {
+      "musicbrainz": "https://musicbrainz.org/release-group/9c1b8072-eb1d-33d2-af8c-984d46e40902",
+      "wikipedia": "https://en.wikipedia.org/wiki/Blood_on_the_Tracks"
+    },
+    "the-basement-tapes": {
+      "musicbrainz": "https://musicbrainz.org/release-group/47873729-6db0-3431-99e7-0292e939dadf",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Basement_Tapes"
+    },
+    "desire": {
+      "musicbrainz": "https://musicbrainz.org/release-group/fc325dd3-73ed-36aa-9c77-6b65a958e3cf",
+      "wikipedia": "https://en.wikipedia.org/wiki/Desire_(Bob_Dylan_album)"
+    },
+    "street-legal": {
+      "musicbrainz": "https://musicbrainz.org/release-group/5883c91a-43ea-34e6-922d-1dc12fd48467",
+      "wikipedia": "https://en.wikipedia.org/wiki/Street-Legal_(album)"
+    },
+    "slow-train-coming": {
+      "musicbrainz": "https://musicbrainz.org/release-group/84b2989d-4364-3882-9570-30d4a048c487",
+      "wikipedia": "https://en.wikipedia.org/wiki/Slow_Train_Coming"
+    },
+    "saved": {
+      "musicbrainz": "https://musicbrainz.org/release-group/a11f33bf-1573-3b99-bcc6-d0c6e6592bcd",
+      "wikipedia": "https://en.wikipedia.org/wiki/Saved_(Bob_Dylan_album)"
+    },
+    "shot-of-love": {
+      "musicbrainz": "https://musicbrainz.org/release-group/4491344e-1ffd-339d-a2c5-e6a369b4708e",
+      "wikipedia": "https://en.wikipedia.org/wiki/Shot_of_Love"
+    },
+    "infidels": {
+      "musicbrainz": "https://musicbrainz.org/release-group/60f27712-263a-348c-8eda-b5315a67e8c2",
+      "wikipedia": "https://en.wikipedia.org/wiki/Infidels_(album)"
+    },
+    "empire-burlesque": {
+      "musicbrainz": "https://musicbrainz.org/release-group/a90b32b2-c84d-35ad-bab3-07e6799cde5b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Empire_Burlesque"
+    },
+    "knocked-out-loaded": {
+      "musicbrainz": "https://musicbrainz.org/release-group/423bf65a-6e28-3a14-8ea7-08912eb15e29",
+      "wikipedia": "https://en.wikipedia.org/wiki/Knocked_Out_Loaded"
+    },
+    "down-in-the-groove": {
+      "musicbrainz": "https://musicbrainz.org/release-group/ce8a72cf-10c7-3dea-b9e7-3dd260a9ed5c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Down_in_the_Groove"
+    },
+    "oh-mercy": {
+      "musicbrainz": "https://musicbrainz.org/release-group/36675813-6c3c-33fa-8eaf-b1cd66d4f006",
+      "wikipedia": "https://en.wikipedia.org/wiki/Oh_Mercy"
+    },
+    "under-the-red-sky": {
+      "musicbrainz": "https://musicbrainz.org/release-group/8d231aa3-4a4e-306a-a3f9-4421e846bb1a",
+      "wikipedia": "https://en.wikipedia.org/wiki/Under_the_Red_Sky"
+    },
+    "good-as-i-been-to-you": {
+      "musicbrainz": "https://musicbrainz.org/release-group/43f420f8-44ca-3ff2-92c2-c6f285cb163b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Good_as_I_Been_to_You"
+    },
+    "world-gone-wrong": {
+      "musicbrainz": "https://musicbrainz.org/release-group/fb0d0547-c8ec-3300-8f70-6f45361578f3",
+      "wikipedia": "https://en.wikipedia.org/wiki/World_Gone_Wrong"
+    },
+    "time-out-of-mind": {
+      "musicbrainz": "https://musicbrainz.org/release-group/dad1dada-1fda-3186-beb7-3bc80e90f9e0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Time_Out_of_Mind_(Bob_Dylan_album)"
+    },
+    "love-and-theft": {
+      "musicbrainz": "https://musicbrainz.org/release-group/9980ffe5-c5b5-3a83-8c1e-1ec6618f97ca",
+      "wikipedia": "https://en.wikipedia.org/wiki/Love_and_Theft_(Bob_Dylan_album)"
+    },
+    "modern-times": {
+      "musicbrainz": "https://musicbrainz.org/release-group/d300b74b-02b4-33e3-998e-e4405e8e6580",
+      "wikipedia": "https://en.wikipedia.org/wiki/Modern_Times_(Bob_Dylan_album)"
+    },
+    "christmas-in-the-heart": {
+      "musicbrainz": "https://musicbrainz.org/release-group/16d64d01-6d92-40b2-86ba-7f76c018ab9c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Christmas_in_the_Heart"
+    },
+    "together-through-life": {
+      "musicbrainz": "https://musicbrainz.org/release-group/2202f7cc-6ce1-3aea-85b0-163347528402",
+      "wikipedia": "https://en.wikipedia.org/wiki/Together_Through_Life"
+    },
+    "tempest": {
+      "musicbrainz": "https://musicbrainz.org/release-group/42555dd2-d671-4c96-85c3-3939232ffc4b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tempest_(Bob_Dylan_album)"
+    },
+    "shadows-in-the-night": {
+      "musicbrainz": "https://musicbrainz.org/release-group/5e3e123f-0746-49fa-ac3a-1acf0dc254a0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Shadows_in_the_Night"
+    },
+    "fallen-angels": {
+      "musicbrainz": "https://musicbrainz.org/release-group/3e9553c6-786a-4f85-8a2a-1b70cd166742",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fallen_Angels_(Bob_Dylan_album)"
+    },
+    "triplicate": {
+      "musicbrainz": "https://musicbrainz.org/release-group/f490ca6a-ff96-4132-b235-71640f51d9d0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Triplicate_(Bob_Dylan_album)"
+    },
+    "rough-and-rowdy-ways": {
+      "musicbrainz": "https://musicbrainz.org/release-group/43b12592-d808-44de-a5df-ebd7c6b2b75c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Rough_and_Rowdy_Ways"
+    }
+  },
+  "songs": {
+    "youre-no-good": {
+      "musicbrainz": "https://musicbrainz.org/work/50214f6e-87fd-4067-9a5f-b3e8e1b748c5"
+    },
+    "in-my-time-of-dyin": {
+      "musicbrainz": "https://musicbrainz.org/work/0845e3dc-783d-40e8-a8ae-ba0289b98694"
+    },
+    "man-of-constant-sorrow": {
+      "musicbrainz": "https://musicbrainz.org/work/84a66f45-4f60-4aaa-8163-c92079c9e877",
+      "wikipedia": "https://en.wikipedia.org/wiki/Man_of_Constant_Sorrow"
+    },
+    "fixin-to-die": {
+      "musicbrainz": "https://musicbrainz.org/work/402405c8-acbd-3de4-9f8d-2bbaa595826e",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fixin%27_to_Die_Blues"
+    },
+    "pretty-peggy-o": {
+      "musicbrainz": "https://musicbrainz.org/work/52089277-3826-33bc-9bd5-606365451cf9"
+    },
+    "highway-51": {
+      "musicbrainz": "https://musicbrainz.org/work/773e1fea-7af8-3d05-bcf3-276b387f4c4d"
+    },
+    "gospel-plow": {
+      "musicbrainz": "https://musicbrainz.org/work/0ee749bc-fa4b-3e68-af25-686a5aab69e5"
+    },
+    "baby-let-me-follow-you-down": {
+      "musicbrainz": "https://musicbrainz.org/work/5cee6e58-87c3-4183-b7b0-e2fa908e9240"
+    },
+    "freight-train-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/2f3b19e4-14a3-3756-bad2-0f000c920a25"
+    },
+    "see-that-my-grave-is-kept-clean": {
+      "musicbrainz": "https://musicbrainz.org/work/88bc04a1-7f5f-3607-8855-56cfa1cfe6dc",
+      "wikipedia": "https://en.wikipedia.org/wiki/See_That_My_Grave_Is_Kept_Clean"
+    },
+    "talkin-new-york": {
+      "musicbrainz": "https://musicbrainz.org/work/b391eba1-24bc-3d4b-9510-e36f4ad0e4f5",
+      "wikipedia": "https://en.wikipedia.org/wiki/Talkin%27_New_York"
+    },
+    "house-of-the-risin-sun": {
+      "musicbrainz": "https://musicbrainz.org/work/11e9382d-334c-498c-85cc-8029c1e03c57"
+    },
+    "song-to-woody": {
+      "musicbrainz": "https://musicbrainz.org/work/c35e6be5-57c8-3467-a779-64aef4d6c415",
+      "wikipedia": "https://en.wikipedia.org/wiki/Song_to_Woody"
+    },
+    "down-the-highway": {
+      "musicbrainz": "https://musicbrainz.org/work/d5c204a5-18e6-3c3a-adb8-875a616dd214",
+      "wikipedia": "https://en.wikipedia.org/wiki/Down_the_Highway_(song)"
+    },
+    "bob-dylans-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/b1c1f7f9-a870-3f5f-b5f5-854b8ae5eda3",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan%27s_Blues"
+    },
+    "talking-world-war-iii-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/b2f9b96d-89a1-4499-9606-26e60860309d",
+      "wikipedia": "https://en.wikipedia.org/wiki/Talkin%27_World_War_III_Blues"
+    },
+    "corrina-corrina": {
+      "musicbrainz": "https://musicbrainz.org/work/8fbc762e-d02a-3212-a1a0-b76e34fb9f93"
+    },
+    "honey-just-allow-me-one-more-chance": {
+      "musicbrainz": "https://musicbrainz.org/work/c7e0ce04-3cd2-3ac1-a19a-07ca94423423"
+    },
+    "i-shall-be-free": {
+      "musicbrainz": "https://musicbrainz.org/work/a2331550-4792-3b4b-91ad-995ee329448f",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Shall_Be_Free"
+    },
+    "blowin-in-the-wind": {
+      "musicbrainz": "https://musicbrainz.org/work/f5a12d42-00a1-3bc2-8ed1-df2506ea3db2",
+      "wikipedia": "https://en.wikipedia.org/wiki/Blowin%27_in_the_Wind"
+    },
+    "girl-from-the-north-country": {
+      "musicbrainz": "https://musicbrainz.org/work/570edb47-3490-337a-9eb5-19542bcbf4a8",
+      "wikipedia": "https://en.wikipedia.org/wiki/Girl_from_the_North_Country"
+    },
+    "masters-of-war": {
+      "musicbrainz": "https://musicbrainz.org/work/131c38ec-9606-3faf-b889-ee7238572c75",
+      "wikipedia": "https://en.wikipedia.org/wiki/Masters_of_War"
+    },
+    "a-hard-rains-a-gonna-fall": {
+      "musicbrainz": "https://musicbrainz.org/work/b57912dc-7ca1-3805-8af2-8eca5d3e7496",
+      "wikipedia": "https://en.wikipedia.org/wiki/A_Hard_Rain%27s_a-Gonna_Fall"
+    },
+    "dont-think-twice-its-all-right": {
+      "musicbrainz": "https://musicbrainz.org/work/04920e7f-790a-302c-873c-1efc11d20b4d",
+      "wikipedia": "https://en.wikipedia.org/wiki/Don%27t_Think_Twice,_It%27s_All_Right"
+    },
+    "bob-dylans-dream": {
+      "musicbrainz": "https://musicbrainz.org/work/bd938649-94eb-3dd7-9239-43b739283469",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan%27s_Dream"
+    },
+    "oxford-town": {
+      "musicbrainz": "https://musicbrainz.org/work/8e30b4a1-1f3d-3525-8e91-3e05ae30e052",
+      "wikipedia": "https://en.wikipedia.org/wiki/Oxford_Town"
+    },
+    "all-i-really-want-to-do": {
+      "musicbrainz": "https://musicbrainz.org/work/584483d2-ca00-3023-9967-6e9e91f4a165",
+      "wikipedia": "https://en.wikipedia.org/wiki/All_I_Really_Want_to_Do"
+    },
+    "black-crow-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/ac2f1d04-5ba8-442f-9a84-206da60d7bba",
+      "wikipedia": "https://en.wikipedia.org/wiki/Black_Crow_Blues"
+    },
+    "spanish-harlem-incident": {
+      "musicbrainz": "https://musicbrainz.org/work/43d57918-fc9f-30d1-a971-31ea6bc3f33f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Spanish_Harlem_Incident"
+    },
+    "i-shall-be-free-no-10": {
+      "musicbrainz": "https://musicbrainz.org/work/709b2efc-6d32-458e-988a-7bdbc3c52d2d",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Shall_Be_Free_No._10"
+    },
+    "to-ramona": {
+      "musicbrainz": "https://musicbrainz.org/work/0898ffbe-3609-3892-ba55-629efd8407d9",
+      "wikipedia": "https://en.wikipedia.org/wiki/To_Ramona"
+    },
+    "motorpsycho-nitemare": {
+      "musicbrainz": "https://musicbrainz.org/work/1cf218c8-eb46-4a18-a4d3-89bfe524972c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Motorpsycho_Nitemare"
+    },
+    "i-dont-believe-you-she-acts-like-we-never-have-met": {
+      "musicbrainz": "https://musicbrainz.org/work/6aab48bf-4dec-329d-b843-00d2ee815788",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Don%27t_Believe_You_(She_Acts_Like_We_Never_Have_Met)"
+    },
+    "ballad-in-plain-d": {
+      "musicbrainz": "https://musicbrainz.org/work/057c7002-99c1-4573-af4e-80f1322cbf2d",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ballad_in_Plain_D"
+    },
+    "chimes-of-freedom": {
+      "musicbrainz": "https://musicbrainz.org/work/b6417ad9-7965-331a-8a0f-18c3da2f4f74",
+      "wikipedia": "https://en.wikipedia.org/wiki/Chimes_of_Freedom_(song)"
+    },
+    "my-back-pages": {
+      "musicbrainz": "https://musicbrainz.org/work/b85b3a85-b955-3a99-99e8-168027489954",
+      "wikipedia": "https://en.wikipedia.org/wiki/My_Back_Pages"
+    },
+    "it-aint-me-babe": {
+      "musicbrainz": "https://musicbrainz.org/work/32adbe0c-4feb-3290-a66c-17b9400a5a4c",
+      "wikipedia": "https://en.wikipedia.org/wiki/It_Ain%27t_Me_Babe"
+    },
+    "one-too-many-mornings": {
+      "musicbrainz": "https://musicbrainz.org/work/76a0fd00-0006-49c7-bd60-92e72490d3e8",
+      "wikipedia": "https://en.wikipedia.org/wiki/One_Too_Many_Mornings"
+    },
+    "north-country-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/675f22a0-5ea3-4939-860e-1f30ba629deb",
+      "wikipedia": "https://en.wikipedia.org/wiki/North_Country_Blues"
+    },
+    "the-times-they-are-a-changin": {
+      "musicbrainz": "https://musicbrainz.org/work/59f4520e-95e1-3f77-ab62-ff9f21285bec",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Times_They_Are_a-Changin%27_(song)"
+    },
+    "ballad-of-hollis-brown": {
+      "musicbrainz": "https://musicbrainz.org/work/5ed18d5c-9848-393a-a919-1cc02ef4bfe8",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ballad_of_Hollis_Brown"
+    },
+    "with-god-on-our-side": {
+      "musicbrainz": "https://musicbrainz.org/work/32623697-38ad-3cb0-b45a-da158426a1d7",
+      "wikipedia": "https://en.wikipedia.org/wiki/With_God_on_Our_Side_(song)"
+    },
+    "only-a-pawn-in-their-game": {
+      "musicbrainz": "https://musicbrainz.org/work/9725de39-be25-40de-a739-0ea170bbc0de",
+      "wikipedia": "https://en.wikipedia.org/wiki/Only_a_Pawn_in_Their_Game"
+    },
+    "boots-of-spanish-leather": {
+      "musicbrainz": "https://musicbrainz.org/work/428eadb3-4fae-397f-b28b-d87c13519116",
+      "wikipedia": "https://en.wikipedia.org/wiki/Boots_of_Spanish_Leather"
+    },
+    "when-the-ship-comes-in": {
+      "musicbrainz": "https://musicbrainz.org/work/e393936f-b863-466a-9c84-50a51d995268",
+      "wikipedia": "https://en.wikipedia.org/wiki/When_the_Ship_Comes_In"
+    },
+    "the-lonesome-death-of-hattie-carroll": {
+      "musicbrainz": "https://musicbrainz.org/work/c05e06fd-89d8-36d8-8aab-9804b8dd5d89",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Lonesome_Death_of_Hattie_Carroll"
+    },
+    "restless-farewell": {
+      "musicbrainz": "https://musicbrainz.org/work/c1620cb6-4a71-4a90-909c-6b2c2b9e0c63",
+      "wikipedia": "https://en.wikipedia.org/wiki/Restless_Farewell"
+    },
+    "she-belongs-to-me": {
+      "musicbrainz": "https://musicbrainz.org/work/c9d8d46b-6241-3456-8e00-f06f34d62d99",
+      "wikipedia": "https://en.wikipedia.org/wiki/She_Belongs_to_Me"
+    },
+    "outlaw-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/483df276-5e37-31d8-a965-cbc090ec9490",
+      "wikipedia": "https://en.wikipedia.org/wiki/Outlaw_Blues_(Bob_Dylan_song)"
+    },
+    "on-the-road-again": {
+      "musicbrainz": "https://musicbrainz.org/work/224728f8-8876-3e86-9f2a-848479af98bd",
+      "wikipedia": "https://en.wikipedia.org/wiki/On_the_Road_Again_(Bob_Dylan_song)"
+    },
+    "bob-dylans-115th-dream": {
+      "musicbrainz": "https://musicbrainz.org/work/0e1312a0-fee9-39bf-a82e-bb73498c3241",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bob_Dylan%27s_115th_Dream"
+    },
+    "subterranean-homesick-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/7a9c81ed-a7b0-3cc3-9adf-7a2a1c289d60",
+      "wikipedia": "https://en.wikipedia.org/wiki/Subterranean_Homesick_Blues"
+    },
+    "maggies-farm": {
+      "musicbrainz": "https://musicbrainz.org/work/e89ed03f-3e33-32c2-9b7b-40193da6fd20",
+      "wikipedia": "https://en.wikipedia.org/wiki/Maggie%27s_Farm"
+    },
+    "love-minus-zero-no-limit": {
+      "musicbrainz": "https://musicbrainz.org/work/bf2882e5-e749-3b20-80fe-8c85dd831b06",
+      "wikipedia": "https://en.wikipedia.org/wiki/Love_Minus_Zero/No_Limit"
+    },
+    "mr-tambourine-man": {
+      "musicbrainz": "https://musicbrainz.org/work/034767af-af7c-3143-b2e7-4e23d9aeb1af",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mr._Tambourine_Man"
+    },
+    "gates-of-eden": {
+      "musicbrainz": "https://musicbrainz.org/work/1d94e0a4-052b-3c5a-b879-67e321b307c0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Gates_of_Eden_(song)"
+    },
+    "its-alright-ma-im-only-bleeding": {
+      "musicbrainz": "https://musicbrainz.org/work/858676e9-f0b2-3901-a724-5c061783d294",
+      "wikipedia": "https://en.wikipedia.org/wiki/It%27s_Alright,_Ma_(I%27m_Only_Bleeding)"
+    },
+    "its-all-over-now-baby-blue": {
+      "musicbrainz": "https://musicbrainz.org/work/79f25b2f-dd32-3f14-9b04-02bd5b3142fb",
+      "wikipedia": "https://en.wikipedia.org/wiki/It%27s_All_Over_Now,_Baby_Blue"
+    },
+    "it-takes-a-lot-to-laugh-it-takes-a-train-to-cry": {
+      "musicbrainz": "https://musicbrainz.org/work/bd4d1773-1891-30fd-8329-b0fb008a0dde",
+      "wikipedia": "https://en.wikipedia.org/wiki/It_Takes_a_Lot_to_Laugh,_It_Takes_a_Train_to_Cry"
+    },
+    "from-a-buick-6": {
+      "musicbrainz": "https://musicbrainz.org/work/ccc3b337-f4e7-334c-94be-6d998909aff3",
+      "wikipedia": "https://en.wikipedia.org/wiki/From_a_Buick_6"
+    },
+    "like-a-rolling-stone": {
+      "musicbrainz": "https://musicbrainz.org/work/4f3cc611-009f-3fa9-a47c-a27d29ef0513",
+      "wikipedia": "https://en.wikipedia.org/wiki/Like_a_Rolling_Stone"
+    },
+    "tombstone-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/6a1942c3-3cb2-39f7-8b5a-fe7a8423b6ad",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tombstone_Blues"
+    },
+    "ballad-of-a-thin-man": {
+      "musicbrainz": "https://musicbrainz.org/work/0db453d7-8e17-3938-8e63-5405588153c5",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ballad_of_a_Thin_Man"
+    },
+    "queen-jane-approximately": {
+      "musicbrainz": "https://musicbrainz.org/work/0ff45968-45bf-472a-9d7e-f21d8fe634c3",
+      "wikipedia": "https://en.wikipedia.org/wiki/Queen_Jane_Approximately"
+    },
+    "highway-61-revisited": {
+      "musicbrainz": "https://musicbrainz.org/work/2d336de3-866a-3344-a76c-87ea2676b0b9",
+      "wikipedia": "https://en.wikipedia.org/wiki/Highway_61_Revisited_(song)"
+    },
+    "just-like-tom-thumbs-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/7558e252-6763-3fa1-97aa-9cd42121e745",
+      "wikipedia": "https://en.wikipedia.org/wiki/Just_Like_Tom_Thumb%27s_Blues"
+    },
+    "desolation-row": {
+      "musicbrainz": "https://musicbrainz.org/work/15304b0b-6ac2-3f16-b8c7-89eea5fc998d",
+      "wikipedia": "https://en.wikipedia.org/wiki/Desolation_Row"
+    },
+    "pledging-my-time": {
+      "musicbrainz": "https://musicbrainz.org/work/7b8c2397-3b71-3410-9ef6-c6fa1194a131",
+      "wikipedia": "https://en.wikipedia.org/wiki/Pledging_My_Time"
+    },
+    "one-of-us-must-know-sooner-or-later": {
+      "musicbrainz": "https://musicbrainz.org/work/ccf2f4e8-7931-34dd-b571-646567915812",
+      "wikipedia": "https://en.wikipedia.org/wiki/One_of_Us_Must_Know_(Sooner_or_Later)"
+    },
+    "leopard-skin-pill-box-hat": {
+      "musicbrainz": "https://musicbrainz.org/work/35729ada-1b27-3374-9acc-9327435d2e85",
+      "wikipedia": "https://en.wikipedia.org/wiki/Leopard-Skin_Pill-Box_Hat"
+    },
+    "most-likely-you-go-your-way-and-ill-go-mine": {
+      "musicbrainz": "https://musicbrainz.org/work/7319958c-39f8-3c07-8a08-c05ed5a8b2ab",
+      "wikipedia": "https://en.wikipedia.org/wiki/Most_Likely_You_Go_Your_Way_and_I%27ll_Go_Mine"
+    },
+    "temporary-like-achilles": {
+      "musicbrainz": "https://musicbrainz.org/work/b70afde7-4f1a-3fe6-868d-14947c686192",
+      "wikipedia": "https://en.wikipedia.org/wiki/Temporary_Like_Achilles"
+    },
+    "absolutely-sweet-marie": {
+      "musicbrainz": "https://musicbrainz.org/work/9f05efb9-102c-3903-8958-d5423bf0ca90",
+      "wikipedia": "https://en.wikipedia.org/wiki/Absolutely_Sweet_Marie"
+    },
+    "obviously-five-believers": {
+      "musicbrainz": "https://musicbrainz.org/work/e6483a08-d5bd-4437-8a57-52790f73b147",
+      "wikipedia": "https://en.wikipedia.org/wiki/Obviously_5_Believers"
+    },
+    "rainy-day-women-12-35": {
+      "musicbrainz": "https://musicbrainz.org/work/96e9e5c2-0f54-3b8e-bd40-ad81d3378c83",
+      "wikipedia": "https://en.wikipedia.org/wiki/Rainy_Day_Women_Nos._12_%26_35"
+    },
+    "visions-of-johanna": {
+      "musicbrainz": "https://musicbrainz.org/work/acf2000d-8e7e-3e91-b0b6-9fa34d53ec06",
+      "wikipedia": "https://en.wikipedia.org/wiki/Visions_of_Johanna"
+    },
+    "i-want-you": {
+      "musicbrainz": "https://musicbrainz.org/work/549b28ab-60aa-4ec5-8203-4f3e94661846",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Want_You_(Bob_Dylan_song)"
+    },
+    "stuck-inside-of-mobile-with-the-memphis-blues-again": {
+      "musicbrainz": "https://musicbrainz.org/work/27eca722-f2a2-3d3d-8b45-78b04c00b6ff",
+      "wikipedia": "https://en.wikipedia.org/wiki/Stuck_Inside_of_Mobile_with_the_Memphis_Blues_Again"
+    },
+    "just-like-a-woman": {
+      "musicbrainz": "https://musicbrainz.org/work/5f83fb2b-fd0d-3cf7-b37c-a9e70d09be20",
+      "wikipedia": "https://en.wikipedia.org/wiki/Just_Like_a_Woman"
+    },
+    "4th-time-around": {
+      "musicbrainz": "https://musicbrainz.org/work/d902b2a2-5dc6-32bb-a391-bfbf0f098e9c",
+      "wikipedia": "https://en.wikipedia.org/wiki/4th_Time_Around"
+    },
+    "sad-eyed-lady-of-the-lowlands": {
+      "musicbrainz": "https://musicbrainz.org/work/0f940733-a4d5-417c-b211-72c8e14f44d3",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sad_Eyed_Lady_of_the_Lowlands"
+    },
+    "the-ballad-of-frankie-lee-and-judas-priest": {
+      "musicbrainz": "https://musicbrainz.org/work/83554b16-f544-3c09-88e3-233eb8f09344",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Ballad_of_Frankie_Lee_and_Judas_Priest"
+    },
+    "dear-landlord": {
+      "musicbrainz": "https://musicbrainz.org/work/c77b1d42-b357-4be0-a22d-2f23c8c795c7"
+    },
+    "i-am-a-lonesome-hobo": {
+      "musicbrainz": "https://musicbrainz.org/work/b923261f-87a7-3898-b7fd-2ff80f8eee4c",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Am_a_Lonesome_Hobo"
+    },
+    "i-pity-the-poor-immigrant": {
+      "musicbrainz": "https://musicbrainz.org/work/2ed2b3e4-211c-3e00-a401-9761df3fc03c",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Pity_the_Poor_Immigrant"
+    },
+    "down-along-the-cove": {
+      "musicbrainz": "https://musicbrainz.org/work/34995533-294a-305d-83b2-d7efb6bda42c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Down_Along_the_Cove"
+    },
+    "john-wesley-harding": {
+      "musicbrainz": "https://musicbrainz.org/work/4bad31a7-8249-3761-abbe-38c76802f3f4",
+      "wikipedia": "https://en.wikipedia.org/wiki/John_Wesley_Harding_(song)"
+    },
+    "as-i-went-out-one-morning": {
+      "musicbrainz": "https://musicbrainz.org/work/7c249e32-d312-4efa-9543-64e67a3d68e0",
+      "wikipedia": "https://en.wikipedia.org/wiki/As_I_Went_Out_One_Morning"
+    },
+    "i-dreamed-i-saw-st-augustine": {
+      "musicbrainz": "https://musicbrainz.org/work/7265759b-d775-3eba-b3e2-d336bc58fcde",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Dreamed_I_Saw_St._Augustine"
+    },
+    "all-along-the-watchtower": {
+      "musicbrainz": "https://musicbrainz.org/work/13b8eeb2-e3bb-35d9-b110-2cfc8ef4b4d7",
+      "wikipedia": "https://en.wikipedia.org/wiki/All_Along_the_Watchtower"
+    },
+    "drifters-escape": {
+      "musicbrainz": "https://musicbrainz.org/work/e16d692c-29aa-393f-b75b-945b92287bb3",
+      "wikipedia": "https://en.wikipedia.org/wiki/Drifter%27s_Escape"
+    },
+    "the-wicked-messenger": {
+      "musicbrainz": "https://musicbrainz.org/work/de96f513-53c0-4bd7-9b55-91ef7822a8d9",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Wicked_Messenger"
+    },
+    "ill-be-your-baby-tonight": {
+      "musicbrainz": "https://musicbrainz.org/work/f3e005dc-17b4-3b17-a173-291eb45f6f97",
+      "wikipedia": "https://en.wikipedia.org/wiki/I%27ll_Be_Your_Baby_Tonight"
+    },
+    "peggy-day": {
+      "musicbrainz": "https://musicbrainz.org/work/1f1b0af8-1b5e-3f62-a7ae-d1f71497b2c4"
+    },
+    "one-more-night": {
+      "musicbrainz": "https://musicbrainz.org/work/36d95c65-4b60-34a8-9250-d6918570f6d3"
+    },
+    "country-pie": {
+      "musicbrainz": "https://musicbrainz.org/work/9f8feacb-74d1-3520-b649-ff54ae9fbe06"
+    },
+    "girl-from-the-north-country-with-johnny-cash": {
+      "musicbrainz": "https://musicbrainz.org/work/570edb47-3490-337a-9eb5-19542bcbf4a8",
+      "wikipedia": "https://en.wikipedia.org/wiki/Girl_from_the_North_Country"
+    },
+    "nashville-skyline-rag": {
+      "musicbrainz": "https://musicbrainz.org/work/f5c040c0-347a-3389-b799-ce6b5cdf0692"
+    },
+    "to-be-alone-with-you": {
+      "musicbrainz": "https://musicbrainz.org/work/0cd3484e-2b72-38c8-a765-00991ecee62b"
+    },
+    "i-threw-it-all-away": {
+      "musicbrainz": "https://musicbrainz.org/work/00f74dcb-5b80-34d3-8a60-3c36c915d186"
+    },
+    "lay-lady-lay": {
+      "musicbrainz": "https://musicbrainz.org/work/de9472a5-895b-323b-be6c-abdf3a0a9943",
+      "wikipedia": "https://en.wikipedia.org/wiki/Lay_Lady_Lay"
+    },
+    "tell-me-that-it-isnt-true": {
+      "musicbrainz": "https://musicbrainz.org/work/edee3f9d-8d66-362a-989c-4dad080d045b"
+    },
+    "tonight-ill-be-staying-here-with-you": {
+      "musicbrainz": "https://musicbrainz.org/work/7a7a3eb4-fbd8-3d6e-98d1-2d09ade10cba",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tonight_I%27ll_Be_Staying_Here_with_You"
+    },
+    "time-passes-slowly": {
+      "musicbrainz": "https://musicbrainz.org/work/eef1dd01-7be0-3402-97e5-16fdd198ef2a"
+    },
+    "went-to-see-the-gypsy": {
+      "musicbrainz": "https://musicbrainz.org/work/2e92d3f2-3434-4837-a62a-2ef59a20e624"
+    },
+    "winterlude": {
+      "musicbrainz": "https://musicbrainz.org/work/003323f7-b839-41a0-8a6b-a160ed45500e"
+    },
+    "if-dogs-run-free": {
+      "musicbrainz": "https://musicbrainz.org/work/ef1e98cf-ba89-43be-bb9a-844d78ec8fdc"
+    },
+    "new-morning": {
+      "musicbrainz": "https://musicbrainz.org/work/acdf7c3e-27f3-41da-90e6-860140308a3d"
+    },
+    "sign-on-the-window": {
+      "musicbrainz": "https://musicbrainz.org/work/befd03da-31cc-467c-81e7-5b71470db556"
+    },
+    "one-more-weekend": {
+      "musicbrainz": "https://musicbrainz.org/work/d5880f95-7c09-439d-824b-b5651a4697fd"
+    },
+    "three-angels": {
+      "musicbrainz": "https://musicbrainz.org/work/71da2da6-c405-3550-a14a-9391a2b58703"
+    },
+    "father-of-night": {
+      "musicbrainz": "https://musicbrainz.org/work/e5f2d16e-6946-3b8f-8d7c-4c4b59e3d2f8"
+    },
+    "if-not-for-you": {
+      "musicbrainz": "https://musicbrainz.org/work/22bd7848-543a-42a1-b517-c5bb130e145e",
+      "wikipedia": "https://en.wikipedia.org/wiki/If_Not_for_You"
+    },
+    "day-of-the-locusts": {
+      "musicbrainz": "https://musicbrainz.org/work/0adbbeb7-9895-45c2-a1fd-3fb725c3fabc",
+      "wikipedia": "https://en.wikipedia.org/wiki/Day_of_the_Locusts"
+    },
+    "the-man-in-me": {
+      "musicbrainz": "https://musicbrainz.org/work/a3c3abfd-d96d-3d0e-aeed-d984e85fca33",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Man_in_Me"
+    },
+    "alberta": {
+      "musicbrainz": "https://musicbrainz.org/work/8128abc5-8c15-3917-886e-c6d81abbf2ac"
+    },
+    "i-forgot-more-than-youll-ever-know": {
+      "musicbrainz": "https://musicbrainz.org/work/f3f16657-ad47-46bb-8aee-7bdec328a1a1",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Forgot_More_Than_You%27ll_Ever_Know"
+    },
+    "days-of-49": {
+      "musicbrainz": "https://musicbrainz.org/work/2828cfe5-0a9d-3dc0-b13e-002979b4c81c"
+    },
+    "early-mornin-rain": {
+      "musicbrainz": "https://musicbrainz.org/work/4869350a-c2e1-3bb5-93cf-797aba060c75",
+      "wikipedia": "https://en.wikipedia.org/wiki/Early_Morning_Rain"
+    },
+    "in-search-of-little-sadie": {
+      "musicbrainz": "https://musicbrainz.org/work/1ad6beeb-566b-4c0d-8d5d-f17314d33bed"
+    },
+    "let-it-be-me": {
+      "musicbrainz": "https://musicbrainz.org/work/958377e9-29c0-4b49-a6a2-9b7b10840b3b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Let_It_Be_Me_(The_Everly_Brothers_song)"
+    },
+    "little-sadie": {
+      "musicbrainz": "https://musicbrainz.org/work/f1685ceb-ef5a-47da-a373-69db1f02cf89"
+    },
+    "woogie-boogie": {
+      "musicbrainz": "https://musicbrainz.org/work/e76c3401-5f07-3991-9dc3-fc8834c9a453"
+    },
+    "belle-isle": {
+      "musicbrainz": "https://musicbrainz.org/work/def6623a-f337-35a3-b5bf-1a2300dfa715"
+    },
+    "living-the-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/9c481016-600e-4351-ba68-236a01cbf97f"
+    },
+    "gotta-travel-on": {
+      "musicbrainz": "https://musicbrainz.org/work/d04bac7f-e7ab-413f-afd6-0001c9ab9b8a",
+      "wikipedia": "https://en.wikipedia.org/wiki/Gotta_Travel_On"
+    },
+    "blue-moon": {
+      "musicbrainz": "https://musicbrainz.org/work/3c339d3d-c76d-3eb5-b3bc-98c8c2d18620",
+      "wikipedia": "https://en.wikipedia.org/wiki/Blue_Moon_(1934_song)"
+    },
+    "take-me-as-i-am-or-let-me-go": {
+      "musicbrainz": "https://musicbrainz.org/work/e4701775-0042-3737-8564-d0175b79a3ce"
+    },
+    "take-a-message-to-mary": {
+      "musicbrainz": "https://musicbrainz.org/work/b99fd41d-d051-3263-9ed1-4bd824351e3d",
+      "wikipedia": "https://en.wikipedia.org/wiki/Take_a_Message_to_Mary"
+    },
+    "it-hurts-me-too": {
+      "musicbrainz": "https://musicbrainz.org/work/e63e8bc9-4376-324e-8f0e-732231a8e9ef"
+    },
+    "wigwam": {
+      "musicbrainz": "https://musicbrainz.org/work/3709c600-a018-3e76-848c-7ffbd375ec37",
+      "wikipedia": "https://en.wikipedia.org/wiki/Wigwam_(Bob_Dylan_song)"
+    },
+    "the-mighty-quinn-quinn-the-eskimo": {
+      "musicbrainz": "https://musicbrainz.org/work/01479277-2afc-4d45-b395-94631e0feb95",
+      "wikipedia": "https://en.wikipedia.org/wiki/Quinn_the_Eskimo_(Mighty_Quinn)"
+    },
+    "minstrel-boy": {
+      "musicbrainz": "https://musicbrainz.org/work/d068fae2-a979-31c1-85b6-792155c735f9"
+    },
+    "all-the-tired-horses": {
+      "musicbrainz": "https://musicbrainz.org/work/188f88ab-e2e2-32c2-bb59-b1c9905eb23d",
+      "wikipedia": "https://en.wikipedia.org/wiki/All_the_Tired_Horses"
+    },
+    "copper-kettle": {
+      "musicbrainz": "https://musicbrainz.org/work/f5e85fde-1a3a-3100-8ac4-86e376200727",
+      "wikipedia": "https://en.wikipedia.org/wiki/Copper_Kettle"
+    },
+    "the-boxer": {
+      "musicbrainz": "https://musicbrainz.org/work/d45cd2ac-52d2-3469-b9c3-985dc15523ef",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Boxer"
+    },
+    "sarah-jane": {
+      "musicbrainz": "https://musicbrainz.org/work/a2cd2ee6-4009-3056-ad9d-b87117fbea81"
+    },
+    "mr-bojangles": {
+      "musicbrainz": "https://musicbrainz.org/work/209a2db6-6ab0-37b8-952a-e7178daa35e6",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mr._Bojangles_(song)"
+    },
+    "the-ballad-of-ira-hayes": {
+      "musicbrainz": "https://musicbrainz.org/work/f8361253-095e-4557-8c8d-5c17c2edbc5c",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Ballad_of_Ira_Hayes"
+    },
+    "mary-ann": {
+      "musicbrainz": "https://musicbrainz.org/work/ba81170d-80a1-38f6-a776-f2beeab4c9ed"
+    },
+    "big-yellow-taxi": {
+      "musicbrainz": "https://musicbrainz.org/work/be39cb45-a437-43dc-b484-1cd13c4a43c3",
+      "wikipedia": "https://en.wikipedia.org/wiki/Big_Yellow_Taxi"
+    },
+    "a-fool-such-as-i": {
+      "musicbrainz": "https://musicbrainz.org/work/145a08d2-3730-4888-9e3c-8f58fc1d307c",
+      "wikipedia": "https://en.wikipedia.org/wiki/(Now_and_Then_There%27s)_A_Fool_Such_as_I"
+    },
+    "spanish-is-the-loving-tongue": {
+      "musicbrainz": "https://musicbrainz.org/work/1f77b50a-c0c6-4de9-a963-eec5e94c827d"
+    },
+    "lily-of-the-west": {
+      "musicbrainz": "https://musicbrainz.org/work/03d4e3df-6a9b-3b5a-b6f4-33436b57bbb4"
+    },
+    "cant-help-falling-in-love": {
+      "musicbrainz": "https://musicbrainz.org/work/06afdb15-bfd4-388f-8d51-72531748b715",
+      "wikipedia": "https://en.wikipedia.org/wiki/Can%27t_Help_Falling_in_Love"
+    },
+    "main-title-theme-billy": {
+      "musicbrainz": "https://musicbrainz.org/work/9eacba9d-137f-3c5f-9fa2-dd27cadaffe9"
+    },
+    "cantina-theme-workin-for-the-law": {
+      "musicbrainz": "https://musicbrainz.org/work/83211b25-ab51-4668-91ff-917ee72c044c"
+    },
+    "bunkhouse-theme": {
+      "musicbrainz": "https://musicbrainz.org/work/6d5743f4-935d-48b9-a776-4e4da7b9bbd6"
+    },
+    "river-theme": {
+      "musicbrainz": "https://musicbrainz.org/work/db2bc6e6-5b84-4c66-8609-1292d71f33c2"
+    },
+    "turkey-chase": {
+      "musicbrainz": "https://musicbrainz.org/work/ca3f6816-521e-4657-816e-e8c3acd7c7fb"
+    },
+    "final-theme": {
+      "musicbrainz": "https://musicbrainz.org/work/3f4030ba-18ce-4233-8622-f559ba825362"
+    },
+    "billy-1": {
+      "musicbrainz": "https://musicbrainz.org/work/50516989-f35f-4cc4-9ee7-bbbc43bd44d5"
+    },
+    "knockin-on-heavens-door": {
+      "musicbrainz": "https://musicbrainz.org/work/4195adde-cfcf-3cc5-ab3f-405a9fdca8a9",
+      "wikipedia": "https://en.wikipedia.org/wiki/Knockin%27_on_Heaven%27s_Door"
+    },
+    "going-going-gone": {
+      "musicbrainz": "https://musicbrainz.org/work/819208fc-a91c-44de-a073-e721da5f574f"
+    },
+    "tough-mama": {
+      "musicbrainz": "https://musicbrainz.org/work/81b92808-6e75-41d8-aba1-e5a29c3a0907"
+    },
+    "hazel": {
+      "musicbrainz": "https://musicbrainz.org/work/28845809-9fdd-4273-99d9-ffecf096be58"
+    },
+    "something-there-is-about-you": {
+      "musicbrainz": "https://musicbrainz.org/work/77286a0a-de94-430a-a720-afffd6a8a94a"
+    },
+    "dirge": {
+      "musicbrainz": "https://musicbrainz.org/work/16ab6792-8118-415e-984f-db8535fe26d0"
+    },
+    "you-angel-you": {
+      "musicbrainz": "https://musicbrainz.org/work/7ffea6d2-d19a-3827-a8b4-5c91e6b2876e"
+    },
+    "never-say-goodbye": {
+      "musicbrainz": "https://musicbrainz.org/work/6992eda9-9039-4dfe-9f3f-3aee2420f0ca"
+    },
+    "on-a-night-like-this": {
+      "musicbrainz": "https://musicbrainz.org/work/4d069c56-0f43-3bf9-9f1e-5469b9e45cab",
+      "wikipedia": "https://en.wikipedia.org/wiki/On_a_Night_Like_This_(Bob_Dylan_song)"
+    },
+    "forever-young": {
+      "musicbrainz": "https://musicbrainz.org/work/f978ba1e-9678-3761-a957-fa4084c0d09f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Forever_Young_(Bob_Dylan_song)"
+    },
+    "wedding-song": {
+      "musicbrainz": "https://musicbrainz.org/work/7d647681-bbc8-4319-bfb6-f97c51d28a54"
+    },
+    "youre-a-big-girl-now": {
+      "musicbrainz": "https://musicbrainz.org/work/b1433ed2-86c7-3c4e-854c-5516133e9fd7",
+      "wikipedia": "https://en.wikipedia.org/wiki/You%27re_a_Big_Girl_Now"
+    },
+    "meet-me-in-the-morning": {
+      "musicbrainz": "https://musicbrainz.org/work/3ae04d1c-2958-3902-88d2-311447aa6d96"
+    },
+    "if-you-see-her-say-hello": {
+      "musicbrainz": "https://musicbrainz.org/work/f29f75a6-9eed-3a23-b177-2ae2fe38ec20",
+      "wikipedia": "https://en.wikipedia.org/wiki/If_You_See_Her,_Say_Hello"
+    },
+    "tangled-up-in-blue": {
+      "musicbrainz": "https://musicbrainz.org/work/8167aef3-d6e2-391d-8489-5af14bd33426",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tangled_Up_in_Blue"
+    },
+    "simple-twist-of-fate": {
+      "musicbrainz": "https://musicbrainz.org/work/f80683b3-c36d-3a4d-8355-cf952ba932d3",
+      "wikipedia": "https://en.wikipedia.org/wiki/Simple_Twist_of_Fate"
+    },
+    "idiot-wind": {
+      "musicbrainz": "https://musicbrainz.org/work/00329b5e-956d-3a3f-8895-d073c6783fde",
+      "wikipedia": "https://en.wikipedia.org/wiki/Idiot_Wind"
+    },
+    "youre-gonna-make-me-lonesome-when-you-go": {
+      "musicbrainz": "https://musicbrainz.org/work/855f1213-a46b-3d6b-b499-c502ba4c727b",
+      "wikipedia": "https://en.wikipedia.org/wiki/You%27re_Gonna_Make_Me_Lonesome_When_You_Go"
+    },
+    "lily-rosemary-and-the-jack-of-hearts": {
+      "musicbrainz": "https://musicbrainz.org/work/1df015cb-3d8c-3f5d-a13b-541fbe43d978",
+      "wikipedia": "https://en.wikipedia.org/wiki/Lily,_Rosemary_and_the_Jack_of_Hearts"
+    },
+    "shelter-from-the-storm": {
+      "musicbrainz": "https://musicbrainz.org/work/c82efaff-546e-3af5-9326-e4c84cec7010",
+      "wikipedia": "https://en.wikipedia.org/wiki/Shelter_from_the_Storm"
+    },
+    "buckets-of-rain": {
+      "musicbrainz": "https://musicbrainz.org/work/dfc1bce0-033b-38c7-8fa9-1d7375305cc1",
+      "wikipedia": "https://en.wikipedia.org/wiki/Buckets_of_Rain"
+    },
+    "odds-and-ends": {
+      "musicbrainz": "https://musicbrainz.org/work/ac257263-886a-43e6-aaba-e434c4db5be6"
+    },
+    "orange-juice-blues-blues-for-breakfast": {
+      "musicbrainz": "https://musicbrainz.org/work/1af0f9ae-c659-4332-814e-736b4b32fb86"
+    },
+    "million-dollar-bash": {
+      "musicbrainz": "https://musicbrainz.org/work/e9f7caa1-868e-39cf-8480-146681d79a9f"
+    },
+    "yazoo-street-scandal": {
+      "musicbrainz": "https://musicbrainz.org/work/78920b27-3024-46c5-8fba-e943f1fec9b7"
+    },
+    "goin-to-acapulco": {
+      "musicbrainz": "https://musicbrainz.org/work/eb89be0a-9d8d-32d8-b15d-f883eb52dd4a"
+    },
+    "katies-been-gone": {
+      "musicbrainz": "https://musicbrainz.org/work/6b62d486-5ec5-42bd-b3cb-3cbd87a7952f"
+    },
+    "lo-and-behold": {
+      "musicbrainz": "https://musicbrainz.org/work/ef921ccb-2a6d-4d58-9862-d0b8839ce1ca"
+    },
+    "bessie-smith": {
+      "musicbrainz": "https://musicbrainz.org/work/46071f42-f9a7-46e6-b420-0c34cedfcb80"
+    },
+    "clothes-line-saga": {
+      "musicbrainz": "https://musicbrainz.org/work/4688b06b-f73a-4ce8-b849-8c9d4533d360"
+    },
+    "apple-suckling-tree": {
+      "musicbrainz": "https://musicbrainz.org/work/fd144e5d-f940-4761-a2a8-876379c796ce"
+    },
+    "please-mrs-henry": {
+      "musicbrainz": "https://musicbrainz.org/work/c361f6a6-4e2a-4c1c-958e-cccaa2dd1f86"
+    },
+    "too-much-of-nothing": {
+      "musicbrainz": "https://musicbrainz.org/work/b69b5317-1b23-3959-8ecf-7b71a7733b71"
+    },
+    "yea-heavy-and-a-bottle-of-bread": {
+      "musicbrainz": "https://musicbrainz.org/work/08cbdd17-6af4-4a84-aea4-581e4d0bbb0a"
+    },
+    "aint-no-more-cane": {
+      "musicbrainz": "https://musicbrainz.org/work/67ec919f-b498-47e1-aeda-4b8837ea4f74",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ain%27t_No_More_Cane"
+    },
+    "crash-on-the-levee-down-in-the-flood": {
+      "musicbrainz": "https://musicbrainz.org/work/e4c0564d-bd86-314d-b0f3-e6b3473367ab",
+      "wikipedia": "https://en.wikipedia.org/wiki/Down_in_the_Flood"
+    },
+    "ruben-remus": {
+      "musicbrainz": "https://musicbrainz.org/work/f5aca20e-afa0-47f8-b170-557d73aa7907"
+    },
+    "tiny-montgomery": {
+      "musicbrainz": "https://musicbrainz.org/work/5185e4eb-d30c-46cb-b454-a9a61c1eb870"
+    },
+    "dont-ya-tell-henry": {
+      "musicbrainz": "https://musicbrainz.org/work/1604991b-7fe0-4dac-b84b-7ec7f9034875"
+    },
+    "nothing-was-delivered": {
+      "musicbrainz": "https://musicbrainz.org/work/a4ad9770-7fab-42a3-ac0b-4fcc81a5f530",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nothing_Was_Delivered"
+    },
+    "open-the-door-homer": {
+      "musicbrainz": "https://musicbrainz.org/work/3514bda2-a869-493e-8492-6ca1c3f52e75"
+    },
+    "long-distance-operator": {
+      "musicbrainz": "https://musicbrainz.org/work/f5c90ce6-4c17-40d0-b677-43314bb69b32"
+    },
+    "tears-of-rage": {
+      "musicbrainz": "https://musicbrainz.org/work/977396ba-3402-36cc-b5d5-5ce0543c82b5",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tears_of_Rage"
+    },
+    "you-aint-goin-nowhere": {
+      "musicbrainz": "https://musicbrainz.org/work/6000dea9-6416-396a-8c4a-2f4f5e784a57",
+      "wikipedia": "https://en.wikipedia.org/wiki/You_Ain%27t_Goin%27_Nowhere"
+    },
+    "this-wheels-on-fire": {
+      "musicbrainz": "https://musicbrainz.org/work/97d1317b-657c-3457-8a56-929b8b83c1dc",
+      "wikipedia": "https://en.wikipedia.org/wiki/This_Wheel%27s_on_Fire"
+    },
+    "mozambique": {
+      "musicbrainz": "https://musicbrainz.org/work/38dd3463-836a-433a-a968-b619c7ae5e2f"
+    },
+    "romance-in-durango": {
+      "musicbrainz": "https://musicbrainz.org/work/10312fbb-faea-3e79-9e86-421bbc6d78e5"
+    },
+    "hurricane": {
+      "musicbrainz": "https://musicbrainz.org/work/9c7ff385-af3d-341b-8c12-5e866904efbc",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hurricane_(Bob_Dylan_song)"
+    },
+    "isis": {
+      "musicbrainz": "https://musicbrainz.org/work/c0796576-eeee-364b-b1f3-a90db24c2d06",
+      "wikipedia": "https://en.wikipedia.org/wiki/Isis_(song)"
+    },
+    "one-more-cup-of-coffee": {
+      "musicbrainz": "https://musicbrainz.org/work/946bc51b-7039-4c6f-92cb-1f09bdeaab04",
+      "wikipedia": "https://en.wikipedia.org/wiki/One_More_Cup_of_Coffee_(Valley_Below)"
+    },
+    "oh-sister": {
+      "musicbrainz": "https://musicbrainz.org/work/9d57cb95-70f2-3a3d-a629-4e8a98658ea2"
+    },
+    "joey": {
+      "musicbrainz": "https://musicbrainz.org/work/74741c2e-dec2-4789-9d39-0c8021ecd706"
+    },
+    "black-diamond-bay": {
+      "musicbrainz": "https://musicbrainz.org/work/5a5c6d05-8673-4a0a-838a-7aa200ea6ab9"
+    },
+    "sara": {
+      "musicbrainz": "https://musicbrainz.org/work/a3009491-da13-3b5c-a539-2cea9f394c7d"
+    },
+    "new-pony": {
+      "musicbrainz": "https://musicbrainz.org/work/b938c1ef-8e1a-3b59-86e5-f28754b132f8"
+    },
+    "no-time-to-think": {
+      "musicbrainz": "https://musicbrainz.org/work/fc2d4c83-3cc3-4302-82c0-a1ada6f42898"
+    },
+    "baby-stop-crying": {
+      "musicbrainz": "https://musicbrainz.org/work/09b784fe-b543-42ee-a02d-9893925d99d7",
+      "wikipedia": "https://en.wikipedia.org/wiki/Baby,_Stop_Crying"
+    },
+    "true-love-tends-to-forget": {
+      "musicbrainz": "https://musicbrainz.org/work/ab343c5a-4094-4bd2-ac39-e9da341e76a2"
+    },
+    "we-better-talk-this-over": {
+      "musicbrainz": "https://musicbrainz.org/work/cd77db3d-4f32-4106-87f7-7e08f113a3e1"
+    },
+    "where-are-you-tonight-journey-through-dark-heat": {
+      "musicbrainz": "https://musicbrainz.org/work/88a8a970-3ed1-3a71-ac7c-81e570b7da3f"
+    },
+    "changing-of-the-guards": {
+      "musicbrainz": "https://musicbrainz.org/work/b3b58202-fd21-3202-8eaf-0ab11dd9d464",
+      "wikipedia": "https://en.wikipedia.org/wiki/Changing_of_the_Guards"
+    },
+    "is-your-love-in-vain": {
+      "musicbrainz": "https://musicbrainz.org/work/73fd7181-92c5-41a9-bf4e-4045b55fa969"
+    },
+    "senor-tales-of-yankee-power": {
+      "musicbrainz": "https://musicbrainz.org/work/8cfbaf6a-4e32-3038-9875-22b6b8e7f96e"
+    },
+    "do-right-to-me-baby-do-unto-others": {
+      "musicbrainz": "https://musicbrainz.org/work/4fae17fd-a1fb-4c32-9ac4-3cc5004ba44d"
+    },
+    "gotta-serve-somebody": {
+      "musicbrainz": "https://musicbrainz.org/work/946d0a08-0527-3107-9987-d9ecc4e7400a"
+    },
+    "precious-angel": {
+      "musicbrainz": "https://musicbrainz.org/work/676810f5-c5dd-4262-8dae-5e17130b67f5"
+    },
+    "i-believe-in-you": {
+      "musicbrainz": "https://musicbrainz.org/work/a87475ed-f605-31dd-9395-61d09ace35ce"
+    },
+    "slow-train": {
+      "musicbrainz": "https://musicbrainz.org/work/298d9c3c-273c-44a9-8a8c-952e8fd252e4"
+    },
+    "gonna-change-my-way-of-thinking": {
+      "musicbrainz": "https://musicbrainz.org/work/96d4daee-a93b-4e52-b886-7576f1482cef"
+    },
+    "when-you-gonna-wake-up": {
+      "musicbrainz": "https://musicbrainz.org/work/40fc4e0f-4675-3272-ae18-41cc40e90c89"
+    },
+    "man-gave-names-to-all-the-animals": {
+      "musicbrainz": "https://musicbrainz.org/work/ce67e392-4696-4557-96f9-14882e8efaf2"
+    },
+    "when-he-returns": {
+      "musicbrainz": "https://musicbrainz.org/work/fcaf30bd-dd45-40d3-828e-b30922a248b1"
+    },
+    "a-satisfied-mind": {
+      "musicbrainz": "https://musicbrainz.org/work/c3b181cf-34b2-333b-847c-f8076c7e5a6b",
+      "wikipedia": "https://en.wikipedia.org/wiki/A_Satisfied_Mind"
+    },
+    "covenant-woman": {
+      "musicbrainz": "https://musicbrainz.org/work/bde79246-fcbd-4495-a1d2-2ef9a6765f09"
+    },
+    "what-can-i-do-for-you": {
+      "musicbrainz": "https://musicbrainz.org/work/cf786e17-f743-42fc-a1f5-30bd2f12a821"
+    },
+    "in-the-garden": {
+      "musicbrainz": "https://musicbrainz.org/work/b7a7afb2-921b-44ce-821f-bb1b47c626cf"
+    },
+    "saving-grace": {
+      "musicbrainz": "https://musicbrainz.org/work/9fc5e844-442e-3ad2-b377-c10419825fbb"
+    },
+    "are-you-ready": {
+      "musicbrainz": "https://musicbrainz.org/work/e961b977-397e-3192-bd44-ef5688354f2c"
+    },
+    "saved": {
+      "musicbrainz": "https://musicbrainz.org/work/12241573-4f4d-3d8a-a329-63765462c392"
+    },
+    "solid-rock": {
+      "musicbrainz": "https://musicbrainz.org/work/1592e94b-2c17-48c6-9a3f-eb6005668d41"
+    },
+    "pressing-on": {
+      "musicbrainz": "https://musicbrainz.org/work/af143258-9111-3cd1-b150-8c02f17d58da"
+    },
+    "heart-of-mine": {
+      "musicbrainz": "https://musicbrainz.org/work/43898de9-636e-32ab-b3ec-e0ba9f5a1f16",
+      "wikipedia": "https://en.wikipedia.org/wiki/Heart_of_Mine_(Bob_Dylan_song)"
+    },
+    "property-of-jesus": {
+      "musicbrainz": "https://musicbrainz.org/work/de7fba1c-5bbb-4d0f-afab-3b25a4320e5d"
+    },
+    "watered-down-love": {
+      "musicbrainz": "https://musicbrainz.org/work/1523e3c9-bd4b-4d25-bcbc-592c7965a3fc"
+    },
+    "the-grooms-still-waiting-at-the-altar": {
+      "musicbrainz": "https://musicbrainz.org/work/ee16a7dd-50a7-38d4-9f74-e96d8c3e23ae"
+    },
+    "dead-man-dead-man": {
+      "musicbrainz": "https://musicbrainz.org/work/361661ec-3d06-4fdf-ad44-9eea30d783e1"
+    },
+    "in-the-summertime": {
+      "musicbrainz": "https://musicbrainz.org/work/0b1e2fa2-6960-44da-9830-5c51e4965cfb"
+    },
+    "trouble": {
+      "musicbrainz": "https://musicbrainz.org/work/7beaab9f-6f5a-4cbc-8e99-9b3c33e6963d"
+    },
+    "shot-of-love": {
+      "musicbrainz": "https://musicbrainz.org/work/aa786654-a7a4-4bd5-bbcd-efb07cad2ff0"
+    },
+    "lenny-bruce": {
+      "musicbrainz": "https://musicbrainz.org/work/6cee9bc3-ea26-412d-b029-afa09f74f62c"
+    },
+    "every-grain-of-sand": {
+      "musicbrainz": "https://musicbrainz.org/work/d2493c3e-807d-39ce-93cb-3efa64c1e65b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Every_Grain_of_Sand"
+    },
+    "man-of-peace": {
+      "musicbrainz": "https://musicbrainz.org/work/bb5c2424-a62a-407c-ac76-818662f300ed"
+    },
+    "jokerman": {
+      "musicbrainz": "https://musicbrainz.org/work/78481106-062a-33d0-bf92-dfdb2ef50f8a"
+    },
+    "sweetheart-like-you": {
+      "musicbrainz": "https://musicbrainz.org/work/3fb10704-cdac-472f-815e-482f5bb37624",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sweetheart_Like_You"
+    },
+    "neighborhood-bully": {
+      "musicbrainz": "https://musicbrainz.org/work/3e70374d-2d96-4c06-bd31-7dc3e5bce0fb"
+    },
+    "license-to-kill": {
+      "musicbrainz": "https://musicbrainz.org/work/564c2ef6-49c8-3904-8f89-091e9741f31d"
+    },
+    "union-sundown": {
+      "musicbrainz": "https://musicbrainz.org/work/879127fb-6cca-4349-99ff-fce0926fdedb"
+    },
+    "i-and-i": {
+      "musicbrainz": "https://musicbrainz.org/work/d57308cd-733b-4ad8-bc13-3482ca6a6704"
+    },
+    "dont-fall-apart-on-me-tonight": {
+      "musicbrainz": "https://musicbrainz.org/work/e44c3468-ea7e-3fb3-80da-9a6d4f688a35"
+    },
+    "seeing-the-real-you-at-last": {
+      "musicbrainz": "https://musicbrainz.org/work/b1b18b84-0d5f-45df-b991-8dc592a0d0f9"
+    },
+    "ill-remember-you": {
+      "musicbrainz": "https://musicbrainz.org/work/043656cf-b997-3643-b458-21cb7c35449d"
+    },
+    "clean-cut-kid": {
+      "musicbrainz": "https://musicbrainz.org/work/fa6ca96a-692a-4252-a236-7dd140fe78ee"
+    },
+    "never-gonna-be-the-same-again": {
+      "musicbrainz": "https://musicbrainz.org/work/a582538d-1a9d-448e-890e-76d932b35b66"
+    },
+    "trust-yourself": {
+      "musicbrainz": "https://musicbrainz.org/work/180a1e3b-4796-450c-9f68-340a5d54d000"
+    },
+    "emotionally-yours": {
+      "musicbrainz": "https://musicbrainz.org/work/cc324a99-f885-488a-86d1-35d43b5c45d9"
+    },
+    "somethings-burning-baby": {
+      "musicbrainz": "https://musicbrainz.org/work/2f752770-5941-4542-9bd3-3bd0dd2ecc55"
+    },
+    "tight-connection-to-my-heart": {
+      "musicbrainz": "https://musicbrainz.org/work/c8319cb7-8df7-3dcb-9361-99e86d69fdbe",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tight_Connection_to_My_Heart_(Has_Anybody_Seen_My_Love)"
+    },
+    "when-the-night-comes-falling-from-the-sky": {
+      "musicbrainz": "https://musicbrainz.org/work/f6a7551b-875d-4db9-ad68-7e6b79c9d7e4"
+    },
+    "dark-eyes": {
+      "musicbrainz": "https://musicbrainz.org/work/301d9e72-8e25-3515-af05-0710952a31dc"
+    },
+    "you-wanna-ramble": {
+      "musicbrainz": "https://musicbrainz.org/work/8d10fcab-dc7e-3db0-8e05-099defc23c7a"
+    },
+    "precious-memories": {
+      "musicbrainz": "https://musicbrainz.org/work/6d49003b-a190-4fe0-9bef-ef03bcab5901"
+    },
+    "maybe-someday": {
+      "musicbrainz": "https://musicbrainz.org/work/31623ff3-ac41-3208-a289-c6450d6bff87"
+    },
+    "got-my-mind-made-up": {
+      "musicbrainz": "https://musicbrainz.org/work/7cbac8cc-a7a7-3576-96c5-a5728c018076"
+    },
+    "under-your-spell": {
+      "musicbrainz": "https://musicbrainz.org/work/b35939cd-12d6-39e3-a0c5-8d20e3e3b395"
+    },
+    "they-killed-him": {
+      "musicbrainz": "https://musicbrainz.org/work/beb11edc-7217-3245-950c-f1e6426eee4f",
+      "wikipedia": "https://en.wikipedia.org/wiki/They_Killed_Him"
+    },
+    "driftin-too-far-from-shore": {
+      "musicbrainz": "https://musicbrainz.org/work/1d7c647a-5c26-3271-80d1-c3ee4c9c7271"
+    },
+    "brownsville-girl": {
+      "musicbrainz": "https://musicbrainz.org/work/17136869-6e45-3899-ae0e-266af2aec073",
+      "wikipedia": "https://en.wikipedia.org/wiki/Brownsville_Girl"
+    },
+    "lets-stick-together": {
+      "musicbrainz": "https://musicbrainz.org/work/78bdf944-a8d1-37cb-aced-ad1e264df6bd",
+      "wikipedia": "https://en.wikipedia.org/wiki/Let%27s_Stick_Together_(song)"
+    },
+    "when-did-you-leave-heaven": {
+      "musicbrainz": "https://musicbrainz.org/work/63c51e1f-174b-3bf1-9205-a236e3d5316a"
+    },
+    "sally-sue-brown": {
+      "musicbrainz": "https://musicbrainz.org/work/32fe9556-98be-3007-ae0e-9ad0caf3ad1d"
+    },
+    "had-a-dream-about-you-baby": {
+      "musicbrainz": "https://musicbrainz.org/work/c0e9fb6c-fc97-39b4-8360-55133b940299"
+    },
+    "ugliest-girl-in-the-world": {
+      "musicbrainz": "https://musicbrainz.org/work/2088283c-aa93-4f54-b2ec-6071f9ce1ab0"
+    },
+    "ninety-miles-an-hour-down-a-dead-end-street": {
+      "musicbrainz": "https://musicbrainz.org/work/13f7b6be-6169-3b65-835a-fb077417816d"
+    },
+    "shenandoah": {
+      "musicbrainz": "https://musicbrainz.org/work/523bb820-4050-49aa-9daf-8acb636cf37c"
+    },
+    "death-is-not-the-end": {
+      "musicbrainz": "https://musicbrainz.org/work/6b11b7a6-8a1c-46b7-8626-c96c360e80b7"
+    },
+    "silvio": {
+      "musicbrainz": "https://musicbrainz.org/work/04a5c2f5-2a1d-3ce7-bf06-2e011f06fb8e"
+    },
+    "rank-strangers-to-me": {
+      "musicbrainz": "https://musicbrainz.org/work/8bab4248-8fd8-3426-8cd4-cb08ce680d73"
+    },
+    "where-teardrops-fall": {
+      "musicbrainz": "https://musicbrainz.org/work/6b9fd49e-e953-4e32-88f0-6d4cff916cfb"
+    },
+    "disease-of-conceit": {
+      "musicbrainz": "https://musicbrainz.org/work/5099d913-a71e-4c95-b26b-c94c63438235"
+    },
+    "what-was-it-you-wanted": {
+      "musicbrainz": "https://musicbrainz.org/work/5fbf0163-4039-4d2e-bdbc-381d682f498a"
+    },
+    "political-world": {
+      "musicbrainz": "https://musicbrainz.org/work/088a94d9-163f-46ab-9fa0-497110dc53f2"
+    },
+    "everything-is-broken": {
+      "musicbrainz": "https://musicbrainz.org/work/96fdb200-0e31-338a-b11e-fcd33bd6f5a7"
+    },
+    "ring-them-bells": {
+      "musicbrainz": "https://musicbrainz.org/work/257abda2-e7f3-3f49-92d2-bd9786b50218",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ring_Them_Bells_(song)"
+    },
+    "man-in-the-long-black-coat": {
+      "musicbrainz": "https://musicbrainz.org/work/59fc2b9b-fe5c-39df-9c47-5d5f279ad43a",
+      "wikipedia": "https://en.wikipedia.org/wiki/Man_in_the_Long_Black_Coat"
+    },
+    "most-of-the-time": {
+      "musicbrainz": "https://musicbrainz.org/work/e108af35-0248-3a23-9f10-95f6f61ec31a"
+    },
+    "what-good-am-i": {
+      "musicbrainz": "https://musicbrainz.org/work/5be2ba51-61d0-4f5e-a6f3-9a8d272cebc6"
+    },
+    "shooting-star": {
+      "musicbrainz": "https://musicbrainz.org/work/64e3c027-12d8-3ae5-b3d3-0fd241cc8155"
+    },
+    "unbelievable": {
+      "musicbrainz": "https://musicbrainz.org/work/f7a91d35-6e96-4169-8d36-1796e4a94401"
+    },
+    "t-v-talkin-song": {
+      "musicbrainz": "https://musicbrainz.org/work/d2b20c7e-c6e0-41f5-935b-069738482b2c"
+    },
+    "10-000-men": {
+      "musicbrainz": "https://musicbrainz.org/work/c9878b04-4139-46bb-8a28-fd2affc144cd"
+    },
+    "2-x-2": {
+      "musicbrainz": "https://musicbrainz.org/work/3cf74125-6d20-442d-a0ff-79b7b891e0c3"
+    },
+    "god-knows": {
+      "musicbrainz": "https://musicbrainz.org/work/8ae3c999-172d-4c2a-9e26-4785112b87c3"
+    },
+    "handy-dandy": {
+      "musicbrainz": "https://musicbrainz.org/work/69a7b9a3-3442-483b-8eb5-e19794596f50"
+    },
+    "cats-in-the-well": {
+      "musicbrainz": "https://musicbrainz.org/work/48e47075-8692-43bf-8e94-d878ec11d1bb"
+    },
+    "wiggle-wiggle": {
+      "musicbrainz": "https://musicbrainz.org/work/c670b052-1d15-440e-b006-56ed743ee206"
+    },
+    "under-the-red-sky": {
+      "musicbrainz": "https://musicbrainz.org/work/60a367ff-9541-4991-8ac0-b8d6787d574c"
+    },
+    "born-in-time": {
+      "musicbrainz": "https://musicbrainz.org/work/e0059c0f-18db-30fb-9a7a-8d9189c2148a"
+    },
+    "jim-jones": {
+      "musicbrainz": "https://musicbrainz.org/work/658f25da-668b-429f-99a6-3624ddf14f40"
+    },
+    "blackjack-davey": {
+      "musicbrainz": "https://musicbrainz.org/work/d6646618-36c2-4697-92d3-9f9069862ed3"
+    },
+    "canadee-i-o": {
+      "musicbrainz": "https://musicbrainz.org/work/80e22f92-a489-43a9-b905-02124b72f5d5"
+    },
+    "sittin-on-top-of-the-world": {
+      "musicbrainz": "https://musicbrainz.org/work/5bd4c71a-a7b8-40d0-89d6-8a6afc159b7d",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sitting_on_Top_of_the_World"
+    },
+    "little-maggie": {
+      "musicbrainz": "https://musicbrainz.org/work/80d523a7-94f0-4a05-a364-9df120d5fe92"
+    },
+    "hard-times": {
+      "musicbrainz": "https://musicbrainz.org/work/5d1c1ef6-6f07-4e50-ad65-fd639770680d"
+    },
+    "step-it-up-and-go": {
+      "musicbrainz": "https://musicbrainz.org/work/cfca8491-63cf-43b8-8613-0b360eeb5fc6"
+    },
+    "tomorrow-night": {
+      "musicbrainz": "https://musicbrainz.org/work/10ebcf5d-ced1-4dba-9ec0-37af151d4cda"
+    },
+    "youre-gonna-quit-me": {
+      "musicbrainz": "https://musicbrainz.org/work/144876ae-136e-4fd4-844b-2bc77e3bd476"
+    },
+    "diamond-joe": {
+      "musicbrainz": "https://musicbrainz.org/work/2a9d4ead-ecf0-4122-8a18-2ae98cc94932"
+    },
+    "frankie-and-albert": {
+      "musicbrainz": "https://musicbrainz.org/work/24d95d5a-04d3-4347-8f77-9a6e6b8b3039"
+    },
+    "arthur-mcbride": {
+      "musicbrainz": "https://musicbrainz.org/work/238bf06d-ba2a-44c7-9796-6500041b69ed"
+    },
+    "froggie-went-a-courtin": {
+      "musicbrainz": "https://musicbrainz.org/work/b18583e9-0f40-4b85-894d-7db59e470de4"
+    },
+    "love-henry": {
+      "musicbrainz": "https://musicbrainz.org/work/b9187ea4-43ef-483d-897a-17f5064f3e20"
+    },
+    "ragged-and-dirty": {
+      "musicbrainz": "https://musicbrainz.org/work/a49ba893-2f37-4f94-bc81-3a1cd2585a86",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ragged_%26_Dirty_(song)"
+    },
+    "blood-in-my-eyes": {
+      "musicbrainz": "https://musicbrainz.org/work/e327c07e-1223-45b9-b4da-f373d55e20e1"
+    },
+    "broke-down-engine": {
+      "musicbrainz": "https://musicbrainz.org/work/9ae8a04e-f7d6-4340-9e1d-14e936c8e3a1"
+    },
+    "two-soldiers": {
+      "musicbrainz": "https://musicbrainz.org/work/ceaede86-f802-46ba-a318-cfb9e657b30c"
+    },
+    "jack-a-roe": {
+      "musicbrainz": "https://musicbrainz.org/work/341d1304-1d3b-46a2-8137-ea6d21d90890"
+    },
+    "lone-pilgrim": {
+      "musicbrainz": "https://musicbrainz.org/work/e4939d84-3060-4005-9d6e-19b27263f5a3"
+    },
+    "world-gone-wrong": {
+      "musicbrainz": "https://musicbrainz.org/work/e5e8af4e-bfed-4ca6-b037-cfe9ea2c721d"
+    },
+    "delia": {
+      "musicbrainz": "https://musicbrainz.org/work/39514d02-fc03-4b6f-8fc6-9b6d7201bf6a"
+    },
+    "stack-a-lee": {
+      "musicbrainz": "https://musicbrainz.org/work/abb09cc1-30f5-4752-a324-2993779ccdf6"
+    },
+    "dirt-road-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/bcd65cef-7c7c-4103-a720-eff1e2a1cd17"
+    },
+    "million-miles": {
+      "musicbrainz": "https://musicbrainz.org/work/74d6243f-63d2-4854-bd1c-f7947de509f7"
+    },
+    "til-i-fell-in-love-with-you": {
+      "musicbrainz": "https://musicbrainz.org/work/7ce9603f-a20d-403c-ad29-32f6e5e8143e"
+    },
+    "cant-wait": {
+      "musicbrainz": "https://musicbrainz.org/work/7040d88f-6135-3917-8f8b-a01249d74c09"
+    },
+    "love-sick": {
+      "musicbrainz": "https://musicbrainz.org/work/e6978ebb-024d-3a95-958e-fe1e54f50cc8",
+      "wikipedia": "https://en.wikipedia.org/wiki/Love_Sick_(Bob_Dylan_song)"
+    },
+    "standing-in-the-doorway": {
+      "musicbrainz": "https://musicbrainz.org/work/525ccd57-48ef-4179-9896-4a043a1a33c0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Standing_in_the_Doorway"
+    },
+    "tryin-to-get-to-heaven": {
+      "musicbrainz": "https://musicbrainz.org/work/f9026f2d-a8aa-3eb4-869d-b3bc2587947f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tryin%27_to_Get_to_Heaven"
+    },
+    "not-dark-yet": {
+      "musicbrainz": "https://musicbrainz.org/work/d18c7441-77fa-4b3a-ba83-74c7c07db69c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Not_Dark_Yet"
+    },
+    "cold-irons-bound": {
+      "musicbrainz": "https://musicbrainz.org/work/50d7630f-1c05-3677-91de-c3a53a9a0d8b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cold_Irons_Bound"
+    },
+    "make-you-feel-my-love": {
+      "musicbrainz": "https://musicbrainz.org/work/55a38fa3-b0b8-4c74-ab22-4022e70a67da",
+      "wikipedia": "https://en.wikipedia.org/wiki/Make_You_Feel_My_Love"
+    },
+    "highlands": {
+      "musicbrainz": "https://musicbrainz.org/work/ff679df5-6aed-4f60-aa45-3ed4034df395",
+      "wikipedia": "https://en.wikipedia.org/wiki/Highlands_(song)"
+    },
+    "bye-and-bye": {
+      "musicbrainz": "https://musicbrainz.org/work/5bacade7-17bb-4b57-bc8d-4cac1f728b7f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bye_and_Bye"
+    },
+    "lonesome-day-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/84e1e725-7e19-4e29-8d1c-e88badce8b4c"
+    },
+    "floater-too-much-to-ask": {
+      "musicbrainz": "https://musicbrainz.org/work/d1791c7d-c12e-4c6e-b14f-e0e96b71ef7c"
+    },
+    "moonlight": {
+      "musicbrainz": "https://musicbrainz.org/work/e19e42e3-7d3f-47b8-8710-477d00e37693"
+    },
+    "cry-a-while": {
+      "musicbrainz": "https://musicbrainz.org/work/9e132dbb-5058-484d-93c5-0ea794c5f99d"
+    },
+    "tweedle-dee-and-tweedle-dum": {
+      "musicbrainz": "https://musicbrainz.org/work/a9faa884-c0fa-43c8-a9f1-2b2c79716a38"
+    },
+    "mississippi": {
+      "musicbrainz": "https://musicbrainz.org/work/1396e8d0-85e2-317f-951b-96d41efcadec"
+    },
+    "summer-days": {
+      "musicbrainz": "https://musicbrainz.org/work/2409667b-ba91-47ae-9508-32665c30b3ed",
+      "wikipedia": "https://en.wikipedia.org/wiki/Summer_Days_(Bob_Dylan_song)"
+    },
+    "high-water-for-charley-patton": {
+      "musicbrainz": "https://musicbrainz.org/work/7f88296e-f54d-3c0d-a3ad-fd98f8103c13",
+      "wikipedia": "https://en.wikipedia.org/wiki/High_Water_(For_Charley_Patton)"
+    },
+    "honest-with-me": {
+      "musicbrainz": "https://musicbrainz.org/work/46c0de9b-8ce1-4f97-8a0f-31d36bfb5211"
+    },
+    "po-boy": {
+      "musicbrainz": "https://musicbrainz.org/work/4a121494-1ef4-4076-9477-2eba370dc384"
+    },
+    "sugar-baby": {
+      "musicbrainz": "https://musicbrainz.org/work/44f5660b-7bc8-43a7-97aa-cceee7dd3106",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sugar_Baby_(song)"
+    },
+    "beyond-the-horizon": {
+      "musicbrainz": "https://musicbrainz.org/work/4d5e8a46-4dcd-40b3-85c3-5dcb5b5727c7"
+    },
+    "nettie-moore": {
+      "musicbrainz": "https://musicbrainz.org/work/e025e26b-ad18-454e-aa57-e20ccad34ecc",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nettie_Moore_(song)"
+    },
+    "the-levees-gonna-break": {
+      "musicbrainz": "https://musicbrainz.org/work/034ecab7-888b-48dc-a91f-e517ad528cb5"
+    },
+    "thunder-on-the-mountain": {
+      "musicbrainz": "https://musicbrainz.org/work/de7d1779-7f8b-42e2-97d5-213e37bfa221",
+      "wikipedia": "https://en.wikipedia.org/wiki/Thunder_on_the_Mountain"
+    },
+    "spirit-on-the-water": {
+      "musicbrainz": "https://musicbrainz.org/work/a9fcefb4-e8ab-4878-870a-7241e0371dc9",
+      "wikipedia": "https://en.wikipedia.org/wiki/Spirit_on_the_Water"
+    },
+    "rollin-and-tumblin": {
+      "musicbrainz": "https://musicbrainz.org/work/bdd6e6e9-3184-4e53-9e6b-26871e630d87"
+    },
+    "when-the-deal-goes-down": {
+      "musicbrainz": "https://musicbrainz.org/work/15eb20fc-7d85-4a88-bd5f-659e8beee246",
+      "wikipedia": "https://en.wikipedia.org/wiki/When_the_Deal_Goes_Down"
+    },
+    "someday-baby": {
+      "musicbrainz": "https://musicbrainz.org/work/0df0fe53-8797-46d2-93fb-81a6d1697cde",
+      "wikipedia": "https://en.wikipedia.org/wiki/Someday_Baby"
+    },
+    "workingmans-blues-2": {
+      "musicbrainz": "https://musicbrainz.org/work/028ce985-2c47-4bae-a04c-96ef8aa3fdf6",
+      "wikipedia": "https://en.wikipedia.org/wiki/Workingman%27s_Blues"
+    },
+    "aint-talkin": {
+      "musicbrainz": "https://musicbrainz.org/work/99d4244d-7d83-3d53-bc53-6106d03034b9",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ain%27t_Talkin%27"
+    },
+    "do-you-hear-what-i-hear": {
+      "musicbrainz": "https://musicbrainz.org/work/d60f4c0a-8c35-3707-bb52-407e63e33d1f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Do_You_Hear_What_I_Hear%3F"
+    },
+    "winter-wonderland": {
+      "musicbrainz": "https://musicbrainz.org/work/272df053-1800-46bf-b180-08df4173e58f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Winter_Wonderland"
+    },
+    "hark-the-herald-angels-sing": {
+      "musicbrainz": "https://musicbrainz.org/work/d43da445-dda6-448d-b7c4-52e02208ef31"
+    },
+    "ill-be-home-for-christmas": {
+      "musicbrainz": "https://musicbrainz.org/work/1aa1b720-0c31-4f32-8a63-accc54024713",
+      "wikipedia": "https://en.wikipedia.org/wiki/I%27ll_Be_Home_for_Christmas"
+    },
+    "little-drummer-boy": {
+      "musicbrainz": "https://musicbrainz.org/work/88b1b664-4f38-46b9-a301-7d89495ae448",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Little_Drummer_Boy"
+    },
+    "o-come-all-ye-faithful-adeste-fideles": {
+      "musicbrainz": "https://musicbrainz.org/work/3b1198be-1df0-4e06-91b2-6506590c7495"
+    },
+    "have-yourself-a-merry-little-christmas": {
+      "musicbrainz": "https://musicbrainz.org/work/2ff51d26-cc88-443e-83b9-baf9cf244112",
+      "wikipedia": "https://en.wikipedia.org/wiki/Have_Yourself_a_Merry_Little_Christmas"
+    },
+    "silver-bells": {
+      "musicbrainz": "https://musicbrainz.org/work/7c545870-460b-3331-b561-1448f04e5901",
+      "wikipedia": "https://en.wikipedia.org/wiki/Silver_Bells"
+    },
+    "the-first-noel": {
+      "musicbrainz": "https://musicbrainz.org/work/d3109c6d-7631-4b93-9f93-298077b7df9c"
+    },
+    "christmas-island": {
+      "musicbrainz": "https://musicbrainz.org/work/c7b460c4-76d8-4491-9291-3f07e9bfcce9"
+    },
+    "the-christmas-song": {
+      "musicbrainz": "https://musicbrainz.org/work/00324746-fc24-337b-a9fb-edb8a317be5b",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Christmas_Song"
+    },
+    "o-little-town-of-bethlehem": {
+      "musicbrainz": "https://musicbrainz.org/work/b33cc64c-6287-48b6-a48b-bbbdfdc93703"
+    },
+    "here-comes-santa-claus": {
+      "musicbrainz": "https://musicbrainz.org/work/8b5e0b0b-65ed-4e24-974a-262416875a4a",
+      "wikipedia": "https://en.wikipedia.org/wiki/Here_Comes_Santa_Claus"
+    },
+    "the-christmas-blues": {
+      "musicbrainz": "https://musicbrainz.org/work/48613473-e3bb-438a-8887-b05bc5a6e76a"
+    },
+    "must-be-santa": {
+      "musicbrainz": "https://musicbrainz.org/work/9e6b27bd-5e5d-4c34-b747-ebc3a40d037b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Must_Be_Santa_(song)"
+    },
+    "my-wifes-home-town": {
+      "musicbrainz": "https://musicbrainz.org/work/48216661-d854-36e4-a4b0-f0a70a5d73f0"
+    },
+    "if-you-ever-go-to-houston": {
+      "musicbrainz": "https://musicbrainz.org/work/83ae38d5-e279-36e3-a7c1-21bbc3618362"
+    },
+    "forgetful-heart": {
+      "musicbrainz": "https://musicbrainz.org/work/eae5562a-dd16-3b12-91fa-d9b6c6862af0"
+    },
+    "jolene": {
+      "musicbrainz": "https://musicbrainz.org/work/22519869-039b-3958-9fa0-df60416b0b1f"
+    },
+    "this-dream-of-you": {
+      "musicbrainz": "https://musicbrainz.org/work/679e2dc3-19d7-3129-b4d7-7ac615d73331"
+    },
+    "shake-shake-mama": {
+      "musicbrainz": "https://musicbrainz.org/work/18ea954d-1c71-3161-b7cd-05efe96e70a7"
+    },
+    "its-all-good": {
+      "musicbrainz": "https://musicbrainz.org/work/5694ef9e-b8a3-3a97-bd32-3476ef617de8"
+    },
+    "beyond-here-lies-nothin": {
+      "musicbrainz": "https://musicbrainz.org/work/b5d3544c-6f7e-3c6a-821f-35902feb9108",
+      "wikipedia": "https://en.wikipedia.org/wiki/Beyond_Here_Lies_Nothin%27"
+    },
+    "life-is-hard": {
+      "musicbrainz": "https://musicbrainz.org/work/b7fcb5e2-9e0f-336a-864d-2f383ab326b2"
+    },
+    "i-feel-a-change-comin-on": {
+      "musicbrainz": "https://musicbrainz.org/work/de6ef20a-1649-327c-a487-992b107b6ca0"
+    },
+    "soon-after-midnight": {
+      "musicbrainz": "https://musicbrainz.org/work/9222fcd0-0d4e-49cd-a828-eff039a2fa5a"
+    },
+    "narrow-way": {
+      "musicbrainz": "https://musicbrainz.org/work/e63d61f9-2f53-4227-aaab-0ff23f9c3521"
+    },
+    "long-and-wasted-years": {
+      "musicbrainz": "https://musicbrainz.org/work/5410fe95-3b09-4dc3-af89-e5162ecd3e65"
+    },
+    "pay-in-blood": {
+      "musicbrainz": "https://musicbrainz.org/work/96966b10-ea52-4a55-9a1e-683f4f7281a4"
+    },
+    "scarlet-town": {
+      "musicbrainz": "https://musicbrainz.org/work/3a814e3b-0db0-423a-8c32-9aa9c916b56d"
+    },
+    "early-roman-kings": {
+      "musicbrainz": "https://musicbrainz.org/work/771b85e2-65b4-4ccf-b72c-c7d4fa37d762"
+    },
+    "tin-angel": {
+      "musicbrainz": "https://musicbrainz.org/work/d36fcf44-ad6c-4f1e-9e39-d6761a2c8e17"
+    },
+    "duquesne-whistle": {
+      "musicbrainz": "https://musicbrainz.org/work/8b862d04-6bb6-4d18-b87b-3581aed285a9"
+    },
+    "tempest": {
+      "musicbrainz": "https://musicbrainz.org/work/70cbb688-483d-4ea5-87ab-fd0db3e3fa95"
+    },
+    "roll-on-john": {
+      "musicbrainz": "https://musicbrainz.org/work/6427da60-ee25-424e-8713-f102d35ab702",
+      "wikipedia": "https://en.wikipedia.org/wiki/Roll_On_John"
+    },
+    "the-night-we-called-it-a-day": {
+      "musicbrainz": "https://musicbrainz.org/work/90a39a7e-14b7-3447-82db-41a112d48af3",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Night_We_Called_It_a_Day_(song)"
+    },
+    "stay-with-me": {
+      "musicbrainz": "https://musicbrainz.org/work/042e07cd-e30f-4ed6-9636-3ba1f950411e"
+    },
+    "autumn-leaves": {
+      "musicbrainz": "https://musicbrainz.org/work/048b4b7a-07c4-3e33-959f-268199324401",
+      "wikipedia": "https://en.wikipedia.org/wiki/Autumn_Leaves_(1945_song)"
+    },
+    "why-try-to-change-me-now": {
+      "musicbrainz": "https://musicbrainz.org/work/5405f90f-b736-3df0-abc2-1eede9b6ab4d"
+    },
+    "some-enchanted-evening": {
+      "musicbrainz": "https://musicbrainz.org/work/55c5ff62-51be-3340-a389-9059fb0ec13e",
+      "wikipedia": "https://en.wikipedia.org/wiki/Some_Enchanted_Evening"
+    },
+    "where-are-you": {
+      "musicbrainz": "https://musicbrainz.org/work/1e160c2b-1073-405c-95cf-4d5829f5a093",
+      "wikipedia": "https://en.wikipedia.org/wiki/Where_Are_You%3F_(1937_song)"
+    },
+    "what-ill-do": {
+      "musicbrainz": "https://musicbrainz.org/work/47c1d13b-5e1b-31c1-8218-1c11f0eea736",
+      "wikipedia": "https://en.wikipedia.org/wiki/What%27ll_I_Do"
+    },
+    "im-a-fool-to-want-you": {
+      "musicbrainz": "https://musicbrainz.org/work/713f05ec-9b49-3813-84c9-f96e551e2c8b",
+      "wikipedia": "https://en.wikipedia.org/wiki/I%27m_a_Fool_to_Want_You"
+    },
+    "full-moon-and-empty-arms": {
+      "musicbrainz": "https://musicbrainz.org/work/83386046-6d03-36ca-bb37-639feea1b840",
+      "wikipedia": "https://en.wikipedia.org/wiki/Full_Moon_and_Empty_Arms"
+    },
+    "that-lucky-old-sun": {
+      "musicbrainz": "https://musicbrainz.org/work/497f68ad-527e-31c5-8049-3ea2018c996a",
+      "wikipedia": "https://en.wikipedia.org/wiki/That_Lucky_Old_Sun"
+    },
+    "maybe-youll-be-there": {
+      "musicbrainz": "https://musicbrainz.org/work/e00748e3-cb96-3c3b-9eed-6538d1938c47",
+      "wikipedia": "https://en.wikipedia.org/wiki/Maybe_You%27ll_Be_There"
+    },
+    "polka-dots-and-moonbeams": {
+      "musicbrainz": "https://musicbrainz.org/work/f32a8ad2-1196-3e41-85dd-fef963759bfa",
+      "wikipedia": "https://en.wikipedia.org/wiki/Polka_Dots_and_Moonbeams"
+    },
+    "skylark": {
+      "musicbrainz": "https://musicbrainz.org/work/40123b58-fcfb-39ab-884a-fdfbe022ae91",
+      "wikipedia": "https://en.wikipedia.org/wiki/Skylark_(song)"
+    },
+    "nevertheless": {
+      "musicbrainz": "https://musicbrainz.org/work/2fe1183f-3697-3ad4-b789-50f5840b2ebc",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nevertheless_I%27m_in_Love_with_You"
+    },
+    "all-or-nothing-at-all": {
+      "musicbrainz": "https://musicbrainz.org/work/d074d059-d8a0-3b2f-8b2a-9138d7166a42",
+      "wikipedia": "https://en.wikipedia.org/wiki/All_or_Nothing_at_All"
+    },
+    "on-a-little-street-in-singapore": {
+      "musicbrainz": "https://musicbrainz.org/work/9e8dea1c-fb36-474b-875d-9b04539e49a7",
+      "wikipedia": "https://en.wikipedia.org/wiki/On_a_Little_Street_in_Singapore"
+    },
+    "it-had-to-be-you": {
+      "musicbrainz": "https://musicbrainz.org/work/6a386e41-ed76-3df2-a0c4-fba63aa34137",
+      "wikipedia": "https://en.wikipedia.org/wiki/It_Had_to_Be_You_(song)"
+    },
+    "that-old-black-magic": {
+      "musicbrainz": "https://musicbrainz.org/work/3ed0d951-d66c-3731-a37b-30d985234108",
+      "wikipedia": "https://en.wikipedia.org/wiki/That_Old_Black_Magic"
+    },
+    "come-rain-or-come-shine": {
+      "musicbrainz": "https://musicbrainz.org/work/dfb51dff-8e04-313c-adab-48f3c62c1d24",
+      "wikipedia": "https://en.wikipedia.org/wiki/Come_Rain_or_Come_Shine"
+    },
+    "young-at-heart": {
+      "musicbrainz": "https://musicbrainz.org/work/d7f05945-3252-3c57-9e16-697aa3a5b622",
+      "wikipedia": "https://en.wikipedia.org/wiki/Young_at_Heart_(Johnny_Richards_and_Carolyn_Leigh_song)"
+    },
+    "all-the-way": {
+      "musicbrainz": "https://musicbrainz.org/work/79265f43-ff73-4d14-8b6e-05c2032338fd"
+    },
+    "melancholy-mood": {
+      "musicbrainz": "https://musicbrainz.org/work/eea9beb4-111e-4435-9954-c86d772f7930"
+    },
+    "i-guess-ill-have-to-change-my-plans": {
+      "musicbrainz": "https://musicbrainz.org/work/674c77e1-e0cd-4b83-81b2-12ab8085f07d",
+      "wikipedia": "https://en.wikipedia.org/wiki/I_Guess_I%27ll_Have_to_Change_My_Plan"
+    },
+    "i-could-have-told-you": {
+      "musicbrainz": "https://musicbrainz.org/work/11c520e0-483b-4308-a585-5b0911179316"
+    },
+    "once-upon-a-time": {
+      "musicbrainz": "https://musicbrainz.org/work/6e9a1ed8-14c3-3e8c-80db-a24395a3a1ee",
+      "wikipedia": "https://en.wikipedia.org/wiki/Once_Upon_a_Time_(Charles_Strouse_and_Lee_Adams_song)"
+    },
+    "this-nearly-was-mine": {
+      "musicbrainz": "https://musicbrainz.org/work/800a84a7-9c11-33fc-9bf0-61831d4e1c44"
+    },
+    "that-old-feeling": {
+      "musicbrainz": "https://musicbrainz.org/work/f282be5d-3b27-3f85-b971-eb65b2b4552d",
+      "wikipedia": "https://en.wikipedia.org/wiki/That_Old_Feeling_(song)"
+    },
+    "it-gets-lonely-early": {
+      "musicbrainz": "https://musicbrainz.org/work/8edc6084-63fb-4773-8d35-9326217dc506"
+    },
+    "my-one-and-only-love": {
+      "musicbrainz": "https://musicbrainz.org/work/dfcaafe7-e7f4-3f4e-8809-405433c08cf8",
+      "wikipedia": "https://en.wikipedia.org/wiki/My_One_and_Only_Love"
+    },
+    "trade-winds": {
+      "musicbrainz": "https://musicbrainz.org/work/ee6702ce-cdca-47b9-87de-c9e9b7d24a10"
+    },
+    "braggin": {
+      "musicbrainz": "https://musicbrainz.org/work/12c861f6-84e1-4c55-af87-5274234862ef"
+    },
+    "imagination": {
+      "musicbrainz": "https://musicbrainz.org/work/396ba035-20b9-3afd-9f9f-541c07d51009",
+      "wikipedia": "https://en.wikipedia.org/wiki/Imagination_(1940_song)"
+    },
+    "how-deep-is-the-ocean": {
+      "musicbrainz": "https://musicbrainz.org/work/5757fff7-068f-3328-8eb0-cb427891e0cd",
+      "wikipedia": "https://en.wikipedia.org/wiki/How_Deep_Is_the_Ocean%3F"
+    },
+    "p-s-i-love-you": {
+      "musicbrainz": "https://musicbrainz.org/work/e2351a44-bcbe-4b1f-b7b9-49cba0875cc9",
+      "wikipedia": "https://en.wikipedia.org/wiki/P.S._I_Love_You_(1934_song)"
+    },
+    "the-best-is-yet-to-come": {
+      "musicbrainz": "https://musicbrainz.org/work/e80b62cf-33f0-3f3e-9474-9eba890143db",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Best_Is_Yet_to_Come"
+    },
+    "but-beautiful": {
+      "musicbrainz": "https://musicbrainz.org/work/10f9d66d-700a-3267-9551-2938a219ebf9",
+      "wikipedia": "https://en.wikipedia.org/wiki/But_Beautiful_(song)"
+    },
+    "heres-that-rainy-day": {
+      "musicbrainz": "https://musicbrainz.org/work/ad3199e2-5395-3254-842f-dde2db33efca",
+      "wikipedia": "https://en.wikipedia.org/wiki/Here%27s_That_Rainy_Day"
+    },
+    "where-is-the-one": {
+      "musicbrainz": "https://musicbrainz.org/work/fff347bb-d059-4cb0-94ca-86e83e533a9a"
+    },
+    "theres-a-flaw-in-my-flue": {
+      "musicbrainz": "https://musicbrainz.org/work/210ef62d-40fd-4fe1-8579-c2729510914e"
+    },
+    "day-in-day-out": {
+      "musicbrainz": "https://musicbrainz.org/work/686b5328-9e56-31d3-b8b4-c9bda091d9d9",
+      "wikipedia": "https://en.wikipedia.org/wiki/Day_In,_Day_Out_(1939_song)"
+    },
+    "i-couldnt-sleep-a-wink-last-night": {
+      "musicbrainz": "https://musicbrainz.org/work/2a111643-253a-48cf-a073-cf2adedb4148"
+    },
+    "sentimental-journey": {
+      "musicbrainz": "https://musicbrainz.org/work/2a2d2b64-fd9d-4823-b44c-865d638495ec",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sentimental_Journey_(song)"
+    },
+    "somewhere-along-the-way": {
+      "musicbrainz": "https://musicbrainz.org/work/de29661b-ede9-4b6a-9f26-33cafe259252",
+      "wikipedia": "https://en.wikipedia.org/wiki/Somewhere_Along_the_Way"
+    },
+    "when-the-world-was-young": {
+      "musicbrainz": "https://musicbrainz.org/work/bc0ebeea-f7e3-4707-853a-94997c14683d",
+      "wikipedia": "https://en.wikipedia.org/wiki/(Ah,_the_Apple_Trees)_When_the_World_Was_Young"
+    },
+    "these-foolish-things": {
+      "musicbrainz": "https://musicbrainz.org/work/6261d6d4-caa9-31f0-8ab4-f977bcd57451",
+      "wikipedia": "https://en.wikipedia.org/wiki/These_Foolish_Things_(Remind_Me_of_You)"
+    },
+    "you-go-to-my-head": {
+      "musicbrainz": "https://musicbrainz.org/work/72715cfb-1ade-30ed-951f-14cea4bc6292",
+      "wikipedia": "https://en.wikipedia.org/wiki/You_Go_to_My_Head"
+    },
+    "stardust": {
+      "musicbrainz": "https://musicbrainz.org/work/79b054ee-5d88-3f1c-9808-ffc5b19899fc",
+      "wikipedia": "https://en.wikipedia.org/wiki/Stardust_(1927_song)"
+    },
+    "its-funny-to-everyone-but-me": {
+      "musicbrainz": "https://musicbrainz.org/work/4aa5107f-3f66-4d55-b367-c073e473a8ae",
+      "wikipedia": "https://en.wikipedia.org/wiki/It%27s_Funny_to_Everyone_but_Me"
+    },
+    "why-was-i-born": {
+      "musicbrainz": "https://musicbrainz.org/work/d7a82b9e-b4c4-42d0-aca6-45f40acbe309",
+      "wikipedia": "https://en.wikipedia.org/wiki/Why_Was_I_Born%3F"
+    },
+    "september-of-my-years": {
+      "musicbrainz": "https://musicbrainz.org/work/bdaf022d-5678-4a95-9aa6-45eda0376f56",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_September_of_My_Years"
+    },
+    "stormy-weather": {
+      "musicbrainz": "https://musicbrainz.org/work/6711fe46-c3a7-3bc1-abbe-0d4bba53bcc6",
+      "wikipedia": "https://en.wikipedia.org/wiki/Stormy_Weather_(song)"
+    },
+    "as-time-goes-by": {
+      "musicbrainz": "https://musicbrainz.org/work/0675ec94-29a8-3ea6-a3a3-9c3675a3449e",
+      "wikipedia": "https://en.wikipedia.org/wiki/As_Time_Goes_By_(song)"
+    },
+    "ive-made-up-my-mind-to-give-myself-to-you": {
+      "musicbrainz": "https://musicbrainz.org/work/a1267c09-7751-46af-ba6f-df8cb9c76020"
+    },
+    "black-rider": {
+      "musicbrainz": "https://musicbrainz.org/work/ca557254-0ba3-40f3-ae50-c7e2605aaf08"
+    },
+    "mother-of-muses": {
+      "musicbrainz": "https://musicbrainz.org/work/35272711-8510-458e-892f-d40cf52780e2"
+    },
+    "i-contain-multitudes": {
+      "musicbrainz": "https://musicbrainz.org/work/945932fd-527e-42d0-a907-6b34703a26d3"
+    },
+    "false-prophet": {
+      "musicbrainz": "https://musicbrainz.org/work/0f4e3d6e-6e0d-4145-84fc-b6b8d8540839",
+      "wikipedia": "https://en.wikipedia.org/wiki/False_Prophet_(song)"
+    },
+    "my-own-version-of-you": {
+      "musicbrainz": "https://musicbrainz.org/work/01de4731-2aaa-40ce-bd32-031f198c71d9"
+    },
+    "goodbye-jimmy-reed": {
+      "musicbrainz": "https://musicbrainz.org/work/12c19178-f784-4eb3-b96a-3f82b9fbad45"
+    },
+    "crossing-the-rubicon": {
+      "musicbrainz": "https://musicbrainz.org/work/a3fec692-0560-4571-9b3c-ffa0a9d72b24"
+    },
+    "key-west-philosopher-pirate": {
+      "musicbrainz": "https://musicbrainz.org/work/6f436ad9-b960-4bdd-b34a-ddf8c930cc4a"
+    },
+    "murder-most-foul": {
+      "musicbrainz": "https://musicbrainz.org/work/4d95c677-f1bc-4966-ab32-19d78f234a35"
+    }
+  }
+}

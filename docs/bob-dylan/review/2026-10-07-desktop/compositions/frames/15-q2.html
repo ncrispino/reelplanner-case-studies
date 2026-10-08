@@ -1,0 +1,142 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f15-q2-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f15-q2-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f15-q2-place { position:absolute; left:90px; top:76px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.14em; text-transform:uppercase; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f15-q2-q { position:absolute; left:90px; top:124px; width:1740px; font:400 62px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+  .f15-q2-opt { position:absolute; box-sizing:border-box; top:300px; width:560px; height:500px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f15-q2-opt .k { position:absolute; left:32px; top:28px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f15-q2-opt .l { position:absolute; left:32px; top:72px; right:32px; font:400 44px/1.08 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f15-q2-opt .t { position:absolute; left:32px; top:444px; right:20px; font:400 26px/1.2 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); white-space:nowrap; }
+  .f15-q2-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:13px; }
+  .f15-q2-rec { color:var(--rp-coral-deep); }
+
+  /* the tiny wireframes: drawn with the eras' own words */
+  .f15-q2-wf { position:absolute; left:32px; top:186px; width:496px; height:236px; box-sizing:border-box; border-radius:8px; overflow:hidden; border:1px solid rgba(var(--rp-ink-rgb),0.20); background:var(--rp-paper); }
+  .f15-q2-a-photo { position:absolute; left:0; top:0; width:248px; height:236px; overflow:hidden; background:var(--rp-slab); }
+  .f15-q2-a-photo img { display:block; width:248px; height:236px; object-fit:cover; object-position:50% 22%; filter:grayscale(1); }
+  .f15-q2-a-credit { position:absolute; left:0; bottom:0; padding:4px 10px 5px; background:rgba(var(--rp-ink-rgb),0.78); font:400 24px/1 "Inter"; color:var(--rp-on-ink); white-space:nowrap; }
+  .f15-q2-a-story { position:absolute; left:248px; top:0; width:248px; height:236px; background:var(--rp-slab); }
+  .f15-q2-a-name { position:absolute; left:20px; top:30px; width:180px; font:700 26px/1.1 "Inter"; letter-spacing:-0.01em; text-transform:uppercase; color:var(--rp-slab-ink); }
+  .f15-q2-a-yrs { position:absolute; left:20px; top:110px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.78); white-space:nowrap; }
+  .f15-q2-a-next { position:absolute; right:10px; top:96px; width:40px; height:40px; border-radius:9999px; box-sizing:border-box; border:1px solid rgba(var(--rp-slab-ink-rgb),0.5); font:700 26px/36px "Inter"; text-align:center; color:var(--rp-slab-ink); }
+  .f15-q2-band { position:absolute; left:0; width:496px; height:59px; box-sizing:border-box; padding-left:20px; font:700 24px/59px "Inter"; letter-spacing:-0.01em; text-transform:uppercase; white-space:nowrap; }
+  .f15-q2-col { position:absolute; top:0; height:236px; width:45px; }
+  .f15-q2-col span { position:absolute; left:0; right:0; bottom:12px; text-align:center; font:700 24px/30px "Inter"; letter-spacing:-0.02em; white-space:nowrap; }
+
+  .f15-q2-e1 { background:color-mix(in oklab, var(--rp-coral) 60%, var(--rp-ink)); color:var(--rp-slab-ink); }
+  .f15-q2-e2 { background:var(--rp-paper); color:var(--rp-ink); }
+  .f15-q2-e3 { background-color:var(--rp-slab); color:var(--rp-slab-ink); }
+  .f15-q2-e4 { background:color-mix(in oklab, var(--rp-syn-num) 45%, var(--rp-tile)); color:var(--rp-ink); }
+  .f15-q2-e5 { background:color-mix(in oklab, var(--rp-syn-key) 45%, var(--rp-slab)); color:var(--rp-slab-ink); }
+  .f15-q2-e6 { background:color-mix(in oklab, var(--rp-syn-del) 55%, var(--rp-slab)); color:var(--rp-slab-ink); }
+  .f15-q2-e7 { background:color-mix(in oklab, var(--rp-syn-str) 40%, var(--rp-tile)); color:var(--rp-ink); }
+  .f15-q2-e8 { background:color-mix(in oklab, var(--rp-ink) 18%, var(--rp-tile)); color:var(--rp-ink); }
+  .f15-q2-e9 { background:color-mix(in oklab, var(--rp-syn-com) 55%, var(--rp-slab)); color:var(--rp-slab-ink); }
+  .f15-q2-e10 { background:var(--rp-tile-2); color:var(--rp-ink); }
+  .f15-q2-e11 { background:color-mix(in oklab, var(--rp-coral) 30%, var(--rp-slab)); color:var(--rp-slab-ink); }
+</style>
+
+<div id="root" data-composition-id="15-q2" data-band="bottom" data-duration="14.687" data-width="1920" data-height="1080">
+
+  <div class="clip f15-q2-bg" id="f15-q2-bg" data-start="0" data-duration="14.687" data-track-index="0"></div>
+
+  <div class="clip f15-q2-scene" id="f15-q2-scene" data-start="0" data-duration="14.687" data-track-index="1">
+    <div class="f15-q2-place" id="f15-q2-place">Question 2 · step 3</div>
+    <div class="f15-q2-q" id="f15-q2-q" data-question>On a computer, does the home page give one era at a time, <span style="display:block">or all of them at once?</span></div>
+
+    <div class="f15-q2-opt" id="f15-q2-opt-a" data-option="a" style="left:90px">
+      <div class="f15-q2-ring" id="f15-q2-ring"></div>
+      <span class="k">A<span class="f15-q2-rec" id="f15-q2-rec"> · RECOMMENDED</span></span>
+      <div class="l">One era fills the screen</div>
+      <div class="f15-q2-wf" id="f15-q2-wf-a">
+        <div class="f15-q2-a-photo" id="f15-q2-a-photo"><img src="assets/photos/electric-kramer-1965.jpg" alt="Dylan in 1965, publicity photo by Daniel Kramer"><span class="f15-q2-a-credit">Kramer · PD</span></div>
+        <div class="f15-q2-a-story" id="f15-q2-a-story">
+          <div class="f15-q2-a-name">Going Electric</div>
+          <div class="f15-q2-a-yrs">1965–1966</div>
+          <div class="f15-q2-a-next" id="f15-q2-a-next">›</div>
+        </div>
+      </div>
+      <div class="t">photo left, story right</div>
+    </div>
+
+    <div class="f15-q2-opt" id="f15-q2-opt-b" data-option="b" style="left:680px">
+      <span class="k">B</span>
+      <div class="l">All eleven down one long page</div>
+      <div class="f15-q2-wf" id="f15-q2-wf-b">
+        <div class="f15-q2-band f15-q2-e1" id="f15-q2-b1" style="top:0">Duluth and Hibbing</div>
+        <div class="f15-q2-band f15-q2-e2" id="f15-q2-b2" style="top:59px">Greenwich Village</div>
+        <div class="f15-q2-band f15-q2-e3" id="f15-q2-b3" style="top:118px">Going Electric</div>
+        <div class="f15-q2-band f15-q2-e4" id="f15-q2-b4" style="top:177px">Basement and Country</div>
+      </div>
+      <div class="t">the look changes as you go</div>
+    </div>
+
+    <div class="f15-q2-opt" id="f15-q2-opt-c" data-option="c" style="left:1270px">
+      <span class="k">C</span>
+      <div class="l">An overview of eleven columns first</div>
+      <div class="f15-q2-wf" id="f15-q2-wf-c">
+        <div class="f15-q2-col f15-q2-e1" id="f15-q2-c1" style="left:0"><span>’41</span></div>
+        <div class="f15-q2-col f15-q2-e2" id="f15-q2-c2" style="left:45px"><span>’61</span></div>
+        <div class="f15-q2-col f15-q2-e3" id="f15-q2-c3" style="left:90px"><span>’65</span></div>
+        <div class="f15-q2-col f15-q2-e4" id="f15-q2-c4" style="left:135px"><span>’67</span></div>
+        <div class="f15-q2-col f15-q2-e5" id="f15-q2-c5" style="left:180px"><span>’73</span></div>
+        <div class="f15-q2-col f15-q2-e6" id="f15-q2-c6" style="left:225px"><span>’79</span></div>
+        <div class="f15-q2-col f15-q2-e7" id="f15-q2-c7" style="left:270px"><span>’83</span></div>
+        <div class="f15-q2-col f15-q2-e8" id="f15-q2-c8" style="left:315px"><span>’92</span></div>
+        <div class="f15-q2-col f15-q2-e9" id="f15-q2-c9" style="left:360px"><span>’97</span></div>
+        <div class="f15-q2-col f15-q2-e10" id="f15-q2-c10" style="left:405px"><span>’15</span></div>
+        <div class="f15-q2-col f15-q2-e11" id="f15-q2-c11" style="left:450px;width:46px"><span>’20</span></div>
+      </div>
+      <div class="t">about 120 px each</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "15-q2";
+  var $ = function (s) { return document.getElementById("f15-q2-" + s); };
+  var slideUp = function (tl, el, at) {
+    tl.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: eyebrow and heading with "Question two", then card A on "A, one era fills the screen"
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+  tl.fromTo($("q"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.2);
+  slideUp(tl, $("opt-a"), 4.8);
+  tl.fromTo($("a-photo"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power3.out" }, 5.3);
+  tl.fromTo($("a-story"), { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 5.55);
+  tl.fromTo($("a-next"), { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }, 5.9);
+
+  // Scene 2: card B on "B, all eleven down one long page"; the bands stack down
+  slideUp(tl, $("opt-b"), 6.9);
+  ["b1", "b2", "b3", "b4"].forEach(function (id, i) {
+    tl.fromTo($(id), { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 7.45 + i * 0.28);
+  });
+
+  // Scene 3: card C on "C, an overview of eleven columns"; the columns fill in across
+  slideUp(tl, $("opt-c"), 9.55);
+  for (var i = 1; i <= 11; i++) {
+    tl.fromTo($("c" + i), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 10.1 + (i - 1) * 0.08);
+  }
+
+  // Scene 4: on "I recommend A", A gets the coral border and RECOMMENDED; hold still
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power3.out" }, 13.0);
+  tl.fromTo($("rec"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power3.out" }, 13.2);
+
+  tl.set({}, {}, 14.187);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

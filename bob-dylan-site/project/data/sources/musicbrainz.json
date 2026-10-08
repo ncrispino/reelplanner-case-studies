@@ -1,0 +1,2604 @@
+{
+  "bob-dylan": {
+    "title": "Bob Dylan",
+    "year": 1962,
+    "releaseGroup": "6ac612a5-e815-3fed-b341-8b3faa351df4",
+    "release": "4b5db958-0948-4151-8e1f-2d5b8cc35975",
+    "tracks": [
+      {
+        "title": "You’re No Good",
+        "recording": "ac781013-b606-4a6e-89bb-6db725c4ccc9",
+        "length": 100000
+      },
+      {
+        "title": "Talkin’ New York",
+        "recording": "0d0020a4-0892-45d1-ae4a-979a51f3f54d",
+        "length": 199000
+      },
+      {
+        "title": "In My Time of Dyin’",
+        "recording": "750b475a-59f7-4a5b-bc62-f46d4e948670",
+        "length": 159000
+      },
+      {
+        "title": "Man of Constant Sorrow",
+        "recording": "a4d9c3ad-dc0d-4a3c-b0dd-5819cbf3c412",
+        "length": 188000
+      },
+      {
+        "title": "Fixin’ to Die",
+        "recording": "d1cd3bc8-ab20-49ca-9333-6ac4cb315026",
+        "length": 141000
+      },
+      {
+        "title": "Pretty Peggy‐O",
+        "recording": "fe2c63d2-1ac0-44e4-8a7b-b5c4be58f80d",
+        "length": 203000
+      },
+      {
+        "title": "Highway 51",
+        "recording": "00a07585-14a0-4aae-b209-454c5bf02ae8",
+        "length": 173000
+      },
+      {
+        "title": "Gospel Plow",
+        "recording": "ecceda4c-56a7-490b-b8e6-f3b0d4ef6964",
+        "length": 106000
+      },
+      {
+        "title": "Baby, Let Me Follow You Down",
+        "recording": "2f10e157-d46a-4e74-a8d0-8f8a2243d2f8",
+        "length": 155000
+      },
+      {
+        "title": "House of the Risin’ Sun",
+        "recording": "b31f12e9-2b2d-4ac5-b1fd-fdb0b97d168c",
+        "length": 318000
+      },
+      {
+        "title": "Freight Train Blues",
+        "recording": "85057ddb-649d-462e-ac17-66d7c9963bb1",
+        "length": 139000
+      },
+      {
+        "title": "Song to Woody",
+        "recording": "97c5ff2b-bb61-4d4d-80ec-95b754bb76ed",
+        "length": 162000
+      },
+      {
+        "title": "See That My Grave Is Kept Clean",
+        "recording": "0128d3d7-03e7-4f12-8c72-7ec3791a72cb",
+        "length": 163333
+      }
+    ]
+  },
+  "freewheelin": {
+    "title": "The Freewheelin' Bob Dylan",
+    "year": 1963,
+    "releaseGroup": "169b62aa-c3a5-3ed9-bed1-cc47c4bc51ad",
+    "release": "0a730b81-69a3-4064-9c2b-29d890275165",
+    "tracks": [
+      {
+        "title": "Blowin' In The Wind",
+        "recording": "00e37446-2e4c-409a-a8a1-ed94f1b01a57",
+        "length": null
+      },
+      {
+        "title": "Girl From The North Country",
+        "recording": "70ee22be-b7ae-48fb-999c-19569ccaf5d4",
+        "length": null
+      },
+      {
+        "title": "Masters Of War",
+        "recording": "7c2e2481-5afc-4b15-9223-f9af46d3443a",
+        "length": null
+      },
+      {
+        "title": "Down The Highway",
+        "recording": "805341f7-0f2e-486c-80a7-5939d247df14",
+        "length": null
+      },
+      {
+        "title": "Bob Dylan's Blues",
+        "recording": "54a2441e-74b9-459a-a34e-007a3993173c",
+        "length": null
+      },
+      {
+        "title": "A Hard Rain's A-Gonna Fall",
+        "recording": "c854aeaf-8658-4c13-a5ab-153e101454c4",
+        "length": null
+      },
+      {
+        "title": "Don't Think Twice, It's All Right",
+        "recording": "ad3e0ef7-7ed0-49f9-9da4-989573b906f9",
+        "length": null
+      },
+      {
+        "title": "Bob Dylan's Dream",
+        "recording": "5c132e5f-9b7e-4187-bc2b-c88448c3f682",
+        "length": null
+      },
+      {
+        "title": "Oxford Town",
+        "recording": "702a58b1-6538-4434-83c2-b81a4c4c94e8",
+        "length": null
+      },
+      {
+        "title": "Talking World War III Blues",
+        "recording": "1fc279bc-7d2c-4bd0-8b26-5f387d6583c9",
+        "length": null
+      },
+      {
+        "title": "Corrina, Corrina",
+        "recording": "5a0a3146-89b3-4771-a8aa-8fed5059225a",
+        "length": null
+      },
+      {
+        "title": "Honey, Just Allow Me One More Chance",
+        "recording": "5061f6d0-2136-4767-b351-6f205461e418",
+        "length": null
+      },
+      {
+        "title": "I Shall Be Free",
+        "recording": "713b81c9-c3b0-4783-b63d-d84f25e47d0f",
+        "length": null
+      }
+    ]
+  },
+  "times-they-are-a-changin": {
+    "title": "The Times They Are a-Changin'",
+    "year": 1964,
+    "releaseGroup": "846f8032-9a85-3f4f-b7f5-28c86573d044",
+    "release": "0442def1-1c4b-40a7-adfb-83ca09e047bb",
+    "tracks": [
+      {
+        "title": "The Times They Are A‐Changin’",
+        "recording": "9b6c2e25-73d4-4357-9c4a-e62a44be0e62",
+        "length": 195066
+      },
+      {
+        "title": "Ballad of Hollis Brown",
+        "recording": "5a5e964b-df12-4b6a-97bf-67c6bf50587c",
+        "length": 305133
+      },
+      {
+        "title": "With God on Our Side",
+        "recording": "5a69badb-3ad3-4c6e-b283-dabeb1e892d5",
+        "length": 428133
+      },
+      {
+        "title": "One Too Many Mornings",
+        "recording": "5b94a305-f6e2-47b3-80db-578cc32257a1",
+        "length": 159866
+      },
+      {
+        "title": "North Country Blues",
+        "recording": "3cda897c-fb9e-458d-ad10-34bc1732f939",
+        "length": 274026
+      },
+      {
+        "title": "Only a Pawn in Their Game",
+        "recording": "90a1170e-f768-41e1-bfe8-df1340d50da7",
+        "length": 212933
+      },
+      {
+        "title": "Boots of Spanish Leather",
+        "recording": "fd25920f-e4ae-42c3-960a-d152bcc3fbb1",
+        "length": 279906
+      },
+      {
+        "title": "When the Ship Comes In",
+        "recording": "1badcb36-4125-4458-b51f-3d86a1b4c73d",
+        "length": 198066
+      },
+      {
+        "title": "The Lonesome Death of Hattie Carroll",
+        "recording": "e7d3c329-551a-4dee-a28d-fb192b1d3a2b",
+        "length": 347093
+      },
+      {
+        "title": "Restless Farewell",
+        "recording": "7532d9cf-f329-4673-af3e-3ce6351d08bc",
+        "length": 333506
+      }
+    ]
+  },
+  "another-side": {
+    "title": "Another Side of Bob Dylan",
+    "year": 1964,
+    "releaseGroup": "b18ef710-0e47-3c10-ab0b-6631533549ee",
+    "release": "2ffaba3d-840c-4e46-aa66-a3beaf6723eb",
+    "tracks": [
+      {
+        "title": "All I Really Want to Do",
+        "recording": "923a74d3-8b02-43ba-9cf5-776f55c9a801",
+        "length": 244000
+      },
+      {
+        "title": "Black Crow Blues",
+        "recording": "53288a48-2cfc-4fcb-84b9-563aebc88863",
+        "length": 194266
+      },
+      {
+        "title": "Spanish Harlem Incident",
+        "recording": "32092737-8bc9-4148-b4cd-aa06bc0cf91a",
+        "length": 144293
+      },
+      {
+        "title": "Chimes of Freedom",
+        "recording": "b1f9db77-09f1-4ca9-a0f5-7ea19514faf9",
+        "length": 430466
+      },
+      {
+        "title": "I Shall Be Free No. 10",
+        "recording": "62e36eb0-a746-4c79-ba35-736939ba7ae8",
+        "length": 287533
+      },
+      {
+        "title": "To Ramona",
+        "recording": "a76f3e20-6e43-4adf-b196-d517ba56d558",
+        "length": 232466
+      },
+      {
+        "title": "Motorpsycho Nitemare",
+        "recording": "766bcc19-731c-4f0a-a3dd-834d44e530b5",
+        "length": 273506
+      },
+      {
+        "title": "My Back Pages",
+        "recording": "6b6f851f-e323-4404-be79-163a82a815da",
+        "length": 262866
+      },
+      {
+        "title": "I Don’t Believe You (She Acts Like We Never Have Met)",
+        "recording": "bad1b2a7-3fea-4506-b6e4-8e0a6a676190",
+        "length": 262400
+      },
+      {
+        "title": "Ballad in Plain D",
+        "recording": "1a24bfa1-5bc8-483e-b3a1-85a080fa40aa",
+        "length": 496893
+      },
+      {
+        "title": "It Ain’t Me, Babe",
+        "recording": "7e902682-21d6-4ca7-baf4-ef78279b7999",
+        "length": 213306
+      }
+    ]
+  },
+  "bringing-it-all-back-home": {
+    "title": "Bringing It All Back Home",
+    "year": 1965,
+    "releaseGroup": "6cadda7c-fbd0-3b19-9546-56915e3305d8",
+    "release": "c65242d0-596d-4ff5-9097-293dca0d4703",
+    "tracks": [
+      {
+        "title": "Subterranean Homesick Blues",
+        "recording": "a789abbf-fefe-4a7d-9d45-3efbfd389c88",
+        "length": 144760
+      },
+      {
+        "title": "She Belongs to Me",
+        "recording": "e9e148d8-299d-4ca5-b788-6cea8d15c9ca",
+        "length": 169706
+      },
+      {
+        "title": "Maggie's Farm",
+        "recording": "9a80acb2-67cb-4638-b82d-f5e42ea018ec",
+        "length": 237626
+      },
+      {
+        "title": "Love Minus Zero/No Limit",
+        "recording": "22c6dfe8-64fd-4a05-9657-a4e15f4fd3e3",
+        "length": 174106
+      },
+      {
+        "title": "Outlaw Blues",
+        "recording": "dda27130-f777-4615-ae20-f4d06a2d2cdc",
+        "length": 187266
+      },
+      {
+        "title": "On the Road Again",
+        "recording": "81b4e688-3d48-4154-9fb4-94876a6c2aa3",
+        "length": 158426
+      },
+      {
+        "title": "Bob Dylan's 115th Dream",
+        "recording": "216f6434-f0ce-4c62-9152-48f3ff8aa23a",
+        "length": 392840
+      },
+      {
+        "title": "Mr. Tambourine Man",
+        "recording": "81ee2fd6-58a3-41de-b299-fe96dae9fde3",
+        "length": 333533
+      },
+      {
+        "title": "Gates of Eden",
+        "recording": "21a6db8a-680b-4615-803b-cea038cb96fe",
+        "length": 343000
+      },
+      {
+        "title": "It's Alright, Ma (I'm Only Bleeding)",
+        "recording": "c40615ab-2a8d-4223-baa5-69dfedc0fa4e",
+        "length": 452093
+      },
+      {
+        "title": "It's All Over Now, Baby Blue",
+        "recording": "b2a33fa4-323b-484f-b748-764553116506",
+        "length": 253640
+      }
+    ]
+  },
+  "highway-61-revisited": {
+    "title": "Highway 61 Revisited",
+    "year": 1965,
+    "releaseGroup": "fb48b1dc-412f-36aa-8820-1023c08c46c6",
+    "release": "263a8ba4-cbc2-4fbd-9aa3-1de457c717a1",
+    "tracks": [
+      {
+        "title": "Like a Rolling Stone",
+        "recording": "26244520-0e1d-4d42-b101-ce6b83299d33",
+        "length": 369733
+      },
+      {
+        "title": "Tombstone Blues",
+        "recording": "8d5ac86a-bca6-4e10-a915-f6807628a05e",
+        "length": 358493
+      },
+      {
+        "title": "It Takes a Lot to Laugh, It Takes a Train to Cry",
+        "recording": "525dc658-e6cb-4923-80d9-a77e93ef4d33",
+        "length": 249133
+      },
+      {
+        "title": "From a Buick 6",
+        "recording": "1d93090b-bcf1-4663-9900-051bdb580bbe",
+        "length": 199066
+      },
+      {
+        "title": "Ballad of a Thin Man",
+        "recording": "80c25169-fbf6-4eca-bda4-15319ae42274",
+        "length": 358533
+      },
+      {
+        "title": "Queen Jane Approximately",
+        "recording": "3debc2e6-d3df-46df-a73a-b7b5536a7136",
+        "length": 331400
+      },
+      {
+        "title": "Highway 61 Revisited",
+        "recording": "1825fac7-762b-496d-b0ed-44e92f303ea9",
+        "length": 210173
+      },
+      {
+        "title": "Just Like Tom Thumb’s Blues",
+        "recording": "5e252930-b998-457c-935b-79e03d178bf0",
+        "length": 331760
+      },
+      {
+        "title": "Desolation Row",
+        "recording": "d315625a-3976-41b4-b2e0-43336b0f67bc",
+        "length": 680400
+      }
+    ]
+  },
+  "blonde-on-blonde": {
+    "title": "Blonde on Blonde",
+    "year": 1966,
+    "releaseGroup": "329fb554-2a81-3d8a-8e22-ec2c66810019",
+    "release": "478ff5ce-7bb6-4909-b2e0-bfb5492f87bb",
+    "tracks": [
+      {
+        "title": "Rainy Day Women #12 & 35",
+        "recording": "ab1d0ca0-7ca0-4037-9785-7e1d65e45413",
+        "length": 276666
+      },
+      {
+        "title": "Pledging My Time",
+        "recording": "ffe699b0-00f5-4689-8ce3-4bc0150575d9",
+        "length": 230093
+      },
+      {
+        "title": "Visions of Johanna",
+        "recording": "b9c93771-75e8-4a16-ad0a-3c00ff47e4d8",
+        "length": 453440
+      },
+      {
+        "title": "One of Us Must Know (Sooner or Later)",
+        "recording": "24ebb63c-a9c0-4746-927e-297c027aeb74",
+        "length": 294760
+      },
+      {
+        "title": "I Want You",
+        "recording": "123b0bb8-c351-4608-999e-d847f3c0b359",
+        "length": 187773
+      },
+      {
+        "title": "Stuck Inside of Mobile With the Memphis Blues Again",
+        "recording": "90567658-25b3-4366-a0de-22321dff0966",
+        "length": 425893
+      },
+      {
+        "title": "Leopard-Skin Pill-Box Hat",
+        "recording": "e4b3fe25-4f3b-40c2-a914-f226feb3bde5",
+        "length": 238400
+      },
+      {
+        "title": "Just Like a Woman",
+        "recording": "0d24a997-5cf8-4629-8900-db1feda33ece",
+        "length": 290733
+      },
+      {
+        "title": "Most Likely You Go Your Way and I'll Go Mine",
+        "recording": "9a366514-d618-4e0f-ac6f-3fa1ead7dd55",
+        "length": 210200
+      },
+      {
+        "title": "Temporary Like Achilles",
+        "recording": "6a837e1c-7d6d-433b-a782-29a371a15dcf",
+        "length": 302533
+      },
+      {
+        "title": "Absolutely Sweet Marie",
+        "recording": "f91804ae-a075-4cac-8fbb-4d6401a2f10f",
+        "length": 297026
+      },
+      {
+        "title": "4th Time Around",
+        "recording": "4ce35d5d-58b5-4143-a8b8-da208e73b0a3",
+        "length": 275000
+      },
+      {
+        "title": "Obviously Five Believers",
+        "recording": "9545ac5c-9c76-4d97-94a4-844a387e6548",
+        "length": 215506
+      },
+      {
+        "title": "Sad-Eyed Lady of the Lowlands",
+        "recording": "1b83e46d-59f4-4ccf-a57a-0e201ccae401",
+        "length": 680600
+      }
+    ]
+  },
+  "john-wesley-harding": {
+    "title": "John Wesley Harding",
+    "year": 1967,
+    "releaseGroup": "32981714-597a-32dd-9f29-b2f7566fed89",
+    "release": "8e7e12b2-46ff-4e6b-8384-2ce538d90dcc",
+    "tracks": [
+      {
+        "title": "John Wesley Harding",
+        "recording": "8fd96e0c-fd16-41a2-a47e-a491762dcfc2",
+        "length": 177826
+      },
+      {
+        "title": "As I Went Out One Morning",
+        "recording": "dc92e8c1-9f1a-4b4e-8743-5527c6ddb29b",
+        "length": 169173
+      },
+      {
+        "title": "I Dreamed I Saw St. Augustine",
+        "recording": "333ada76-04fb-47f2-9257-e84632df7024",
+        "length": 233000
+      },
+      {
+        "title": "All Along the Watchtower",
+        "recording": "a280c14d-9898-42ff-910a-683fccaf3d06",
+        "length": 152000
+      },
+      {
+        "title": "The Ballad of Frankie Lee and Judas Priest",
+        "recording": "d2a56b3f-5bc5-4ef5-9d94-9d61219aa6dd",
+        "length": 336000
+      },
+      {
+        "title": "Drifter’s Escape",
+        "recording": "b6f5035e-9c19-41f5-a611-96db18ea12fc",
+        "length": 172160
+      },
+      {
+        "title": "Dear Landlord",
+        "recording": "cc4c5e87-21b7-4a3d-8748-1a8ab79d8c42",
+        "length": 196000
+      },
+      {
+        "title": "I Am a Lonesome Hobo",
+        "recording": "1e1ad5a6-add9-4e03-ab5d-0d26fdd1e615",
+        "length": 199506
+      },
+      {
+        "title": "I Pity the Poor Immigrant",
+        "recording": "49721838-6993-471b-82a1-a698425e497c",
+        "length": 252666
+      },
+      {
+        "title": "The Wicked Messenger",
+        "recording": "75f8d787-79b2-4301-b1e0-1f42fca62a28",
+        "length": 123000
+      },
+      {
+        "title": "Down Along the Cove",
+        "recording": "f915f1dc-a4e1-415a-83b6-cf09810000b2",
+        "length": 143666
+      },
+      {
+        "title": "I’ll Be Your Baby Tonight",
+        "recording": "bda82824-33bf-40d1-b592-3c7e96a9a130",
+        "length": 156160
+      }
+    ]
+  },
+  "nashville-skyline": {
+    "title": "Nashville Skyline",
+    "year": 1969,
+    "releaseGroup": "2ca28746-8987-3015-b54c-75b3aa8ca1a1",
+    "release": "ea91f392-11d5-3acf-8ca2-bb5ea6c02206",
+    "tracks": [
+      {
+        "title": "Girl From the North Country",
+        "recording": "fc28d433-f724-4b5a-ae15-c83cf06d7449",
+        "length": 223866
+      },
+      {
+        "title": "Nashville Skyline Rag",
+        "recording": "0a12f3a7-d320-43ad-b777-2e949eae0977",
+        "length": 194333
+      },
+      {
+        "title": "To Be Alone With You",
+        "recording": "ce6a425f-9f9f-4608-947e-43ba8f17a3ce",
+        "length": 130360
+      },
+      {
+        "title": "I Threw It All Away",
+        "recording": "dd318dfe-91b0-4a82-a520-e4771eb4c07f",
+        "length": 145933
+      },
+      {
+        "title": "Peggy Day",
+        "recording": "07b3f738-da20-4792-ab9a-c19ecbd96a79",
+        "length": 122573
+      },
+      {
+        "title": "Lay Lady Lay",
+        "recording": "9fd94be8-2c33-4621-aff8-e1caa7c923ce",
+        "length": 201026
+      },
+      {
+        "title": "One More Night",
+        "recording": "2180f4b9-c00b-474f-ba35-a9bef3074a5c",
+        "length": 144666
+      },
+      {
+        "title": "Tell Me That It Isn't True",
+        "recording": "5b78b429-327f-4e69-ad0b-09588c2c51c5",
+        "length": 163066
+      },
+      {
+        "title": "Country Pie",
+        "recording": "72e2ed72-7050-4ba9-85ce-904c95f41701",
+        "length": 97973
+      },
+      {
+        "title": "Tonight I'll Be Staying Here With You",
+        "recording": "a0b21e98-58da-4730-a634-69f18b12814b",
+        "length": 203866
+      }
+    ]
+  },
+  "self-portrait": {
+    "title": "Self Portrait",
+    "year": 1970,
+    "releaseGroup": "6163aa70-d97f-34e5-a5bf-54b7d85a7ea0",
+    "release": "3f2f83f9-3548-4154-85be-47b378f7767b",
+    "tracks": [
+      {
+        "title": "All the Tired Horses",
+        "recording": "024f3a65-347b-4de5-94fa-9b0543d320cb",
+        "length": 191000
+      },
+      {
+        "title": "Alberta #1",
+        "recording": "598293f9-5c73-4f8b-aeae-0c2bda9b7407",
+        "length": 175000
+      },
+      {
+        "title": "I Forgot More Than You’ll Ever Know",
+        "recording": "590f9117-73e0-40be-a8dd-1c2edc188790",
+        "length": 142000
+      },
+      {
+        "title": "Days of 49",
+        "recording": "b35671c2-48c2-4cc9-9dda-ee9278d303fa",
+        "length": 342000
+      },
+      {
+        "title": "Early Mornin’ Rain",
+        "recording": "c6191320-82f0-4b80-959c-dfb21a9d9d9b",
+        "length": 211000
+      },
+      {
+        "title": "In Search of Little Sadie",
+        "recording": "21f2913f-4f96-4873-8b1c-4d87bd006431",
+        "length": 146000
+      },
+      {
+        "title": "Let It Be Me",
+        "recording": "6b4f7c9a-d77f-46f0-93a3-a4ed51e840ed",
+        "length": 178000
+      },
+      {
+        "title": "Little Sadie",
+        "recording": "46d21d69-faa8-4ab2-8948-2ced86ab7ead",
+        "length": 118000
+      },
+      {
+        "title": "Woogie Boogie",
+        "recording": "c1aa5de8-e5d1-44ac-99b7-7e28d7887cd7",
+        "length": 126000
+      },
+      {
+        "title": "Belle Isle",
+        "recording": "f8e3ba34-14ad-4e8d-a07b-e5cbd073b22a",
+        "length": 148000
+      },
+      {
+        "title": "Living the Blues",
+        "recording": "1f7aec00-c74e-4e6e-9d56-b2848c02bc0d",
+        "length": 161000
+      },
+      {
+        "title": "Like a Rolling Stone (live)",
+        "recording": "62e94e94-98f6-44a8-a1be-b94d1066cf68",
+        "length": 314000
+      },
+      {
+        "title": "Copper Kettle",
+        "recording": "591166e8-404e-423a-a225-b7933b25faee",
+        "length": 212000
+      },
+      {
+        "title": "Gotta Travel On",
+        "recording": "2d691182-ab55-4635-8d39-f938770b358d",
+        "length": 184000
+      },
+      {
+        "title": "Blue Moon",
+        "recording": "df7f4ba3-6e15-4598-8b7e-fc7aa2de47d6",
+        "length": 146000
+      },
+      {
+        "title": "The Boxer",
+        "recording": "98e3cc4d-054c-4289-a2ee-3dbcef354fd4",
+        "length": 165000
+      },
+      {
+        "title": "The Mighty Quinn (Quinn the Eskimo) (live)",
+        "recording": "d1f816f9-2911-4647-80e4-dcbf91a6fd53",
+        "length": 174000
+      },
+      {
+        "title": "Take Me as I Am (or Let Me Go)",
+        "recording": "cbac3245-be38-432f-af81-6b65ad61b468",
+        "length": 179000
+      },
+      {
+        "title": "Take a Message to Mary",
+        "recording": "8eec977a-bc02-497f-8183-0b349591ea24",
+        "length": 164000
+      },
+      {
+        "title": "It Hurts Me Too",
+        "recording": "501140d1-7d69-4186-875d-d1b9c065865e",
+        "length": 196000
+      },
+      {
+        "title": "Minstrel Boy (live)",
+        "recording": "8c750f80-c1eb-4396-95f5-f8d8841f4ba1",
+        "length": 209000
+      },
+      {
+        "title": "She Belongs to Me (live)",
+        "recording": "93396647-9837-4d04-89cf-b56c3b9a6542",
+        "length": 162000
+      },
+      {
+        "title": "Wigwam",
+        "recording": "63e12665-326b-4505-a26d-35cdb198df4f",
+        "length": 188000
+      },
+      {
+        "title": "Alberta #2",
+        "recording": "95ec9817-a2fe-45f9-8ca9-45d2549f1db2",
+        "length": 200000
+      }
+    ]
+  },
+  "new-morning": {
+    "title": "New Morning",
+    "year": 1970,
+    "releaseGroup": "4f2b915f-cc82-3c18-ac9b-05f3d4df622d",
+    "release": "454fa3bf-d2f3-4cae-a933-9efdf71d1765",
+    "tracks": [
+      {
+        "title": "If Not for You",
+        "recording": "6199daf3-1d69-4a27-84bf-c456ccf521fe",
+        "length": 164226
+      },
+      {
+        "title": "Day of the Locusts",
+        "recording": "77713cf0-16e4-4356-8e56-41e11e3480a4",
+        "length": 243533
+      },
+      {
+        "title": "Time Passes Slowly",
+        "recording": "4544dc48-216d-4fcd-a2d3-a8dd66f9aeb1",
+        "length": 159640
+      },
+      {
+        "title": "Went to See the Gypsy",
+        "recording": "088f91d4-cde3-4ffe-81d5-94f6c590ffde",
+        "length": 174666
+      },
+      {
+        "title": "Winterlude",
+        "recording": "cae83cc8-f6af-413f-a984-ffe920fbf5b6",
+        "length": 146293
+      },
+      {
+        "title": "If Dogs Run Free",
+        "recording": "875a7a90-05ee-48fd-b8c4-9720790bdca4",
+        "length": 222040
+      },
+      {
+        "title": "New Morning",
+        "recording": "8195607d-851e-4787-9f63-a6594e999d8d",
+        "length": 241160
+      },
+      {
+        "title": "Sign on the Window",
+        "recording": "8d199933-8c2e-460a-9454-b3c64e0866ea",
+        "length": 224506
+      },
+      {
+        "title": "One More Weekend",
+        "recording": "31dad8c2-5599-4c4e-a5be-cfc9b4d276fa",
+        "length": 196093
+      },
+      {
+        "title": "The Man in Me",
+        "recording": "63e3b799-ea56-4dca-9fd3-3033f3440871",
+        "length": 192333
+      },
+      {
+        "title": "Three Angels",
+        "recording": "9768eb7f-243f-44f3-8599-ae286bc3aef1",
+        "length": 131066
+      },
+      {
+        "title": "Father of Night",
+        "recording": "a711ebef-3c6b-45d2-90d5-e4fef1ef43e9",
+        "length": 91173
+      }
+    ]
+  },
+  "pat-garrett": {
+    "title": "Pat Garrett & Billy the Kid",
+    "year": 1973,
+    "releaseGroup": "443726be-82e0-3d6d-ab2a-2de3099b0dde",
+    "release": "fcf16c46-1b7c-4c98-b4e4-32295dce3639",
+    "tracks": [
+      {
+        "title": "Main Title Theme (Billy)",
+        "recording": "97526d02-5bad-4d1b-a1b7-c69bb26cd3db",
+        "length": 366093
+      },
+      {
+        "title": "Cantina Theme (Workin’ for the Law)",
+        "recording": "bbb52fa3-d7c4-4f70-ac1e-e9bb3bb94d10",
+        "length": 176573
+      },
+      {
+        "title": "Billy 1",
+        "recording": "83dfd9fa-4b9b-476b-8082-2956b2a4059d",
+        "length": 235426
+      },
+      {
+        "title": "Bunkhouse Theme",
+        "recording": "6eabc9f9-1796-4589-b1e7-29d76bc2cbef",
+        "length": 135906
+      },
+      {
+        "title": "River Theme",
+        "recording": "fd365e74-35e2-49ba-83dc-47c59c804230",
+        "length": 88466
+      },
+      {
+        "title": "Turkey Chase",
+        "recording": "13b845b1-45a3-4e3f-a625-0c84e839fac7",
+        "length": 214000
+      },
+      {
+        "title": "Knockin’ on Heaven’s Door",
+        "recording": "6fe0f731-6a6a-4985-a9bb-cd032ec3bc3a",
+        "length": 152800
+      },
+      {
+        "title": "Final Theme",
+        "recording": "8419bb02-7259-4e82-88d6-c81420799477",
+        "length": 323160
+      },
+      {
+        "title": "Billy 4",
+        "recording": "a5615e58-a57f-4503-88be-0abf0230ea7d",
+        "length": 303106
+      },
+      {
+        "title": "Billy 7",
+        "recording": "75974999-592e-42d6-9cac-9f04aeb8cfea",
+        "length": 127933
+      }
+    ]
+  },
+  "dylan-1973": {
+    "title": "Dylan",
+    "year": 1973,
+    "releaseGroup": "a876f1e5-9a1a-32ef-a7f2-8971511bd19f",
+    "release": "8c66385d-4fb7-4182-8e9e-298359c62ade",
+    "tracks": [
+      {
+        "title": "Lily of the West",
+        "recording": "4cd89c31-f58c-424f-982b-f98304178301",
+        "length": null
+      },
+      {
+        "title": "Can't Help Falling in Love",
+        "recording": "84a5a745-0731-4164-8c65-53b703a167ca",
+        "length": null
+      },
+      {
+        "title": "Sarah Jane",
+        "recording": "c92b8f31-aa86-46da-a5bc-2d394f9a3e45",
+        "length": null
+      },
+      {
+        "title": "Mr. Bojangles",
+        "recording": "ae8c0b8a-501d-4fe8-8124-bb3c41db0120",
+        "length": null
+      },
+      {
+        "title": "The Ballad of Ira Hayes",
+        "recording": "7b7601e0-c0a1-4dbf-8d8c-3e275e92c3ee",
+        "length": null
+      },
+      {
+        "title": "Mary Ann",
+        "recording": "447202aa-41b8-4b43-bd25-55f6aa1b968a",
+        "length": null
+      },
+      {
+        "title": "Big Yellow Taxi",
+        "recording": "5c69e138-6b4d-49c0-b9f3-501b880a9210",
+        "length": null
+      },
+      {
+        "title": "A Fool Such as I",
+        "recording": "fd888385-6e68-4822-8b60-49c16429e167",
+        "length": null
+      },
+      {
+        "title": "Spanish Is the Loving Tongue",
+        "recording": "96e3bbe1-31d6-4928-9c92-9cd696217f1c",
+        "length": null
+      }
+    ]
+  },
+  "planet-waves": {
+    "title": "Planet Waves",
+    "year": 1974,
+    "releaseGroup": "aedd518d-d7e0-3595-80c7-54d2aad292f8",
+    "release": "1bf441ee-1d09-4bf4-b1db-d84b9a603c48",
+    "tracks": [
+      {
+        "title": "On a Night Like This",
+        "recording": "acd31ba5-5502-4b1a-a87d-a4b513dce53f",
+        "length": 179293
+      },
+      {
+        "title": "Going, Going, Gone",
+        "recording": "ac2fad30-12d5-4277-bfd6-fe2b01ef0674",
+        "length": 208173
+      },
+      {
+        "title": "Tough Mama",
+        "recording": "be93e7be-88d0-4897-af5f-e01bc991c2b5",
+        "length": 256893
+      },
+      {
+        "title": "Hazel",
+        "recording": "36e7690a-e391-4960-a1eb-6a8b68b6b78d",
+        "length": 169506
+      },
+      {
+        "title": "Something There Is About You",
+        "recording": "4309f546-e0be-4257-96f3-21a407db25bf",
+        "length": 283893
+      },
+      {
+        "title": "Forever Young",
+        "recording": "40158b00-5beb-4561-a09d-4ea0013be046",
+        "length": 297373
+      },
+      {
+        "title": "Forever Young",
+        "recording": "a3ddb4e3-ed23-4c12-8c1b-424d211cfa14",
+        "length": 168693
+      },
+      {
+        "title": "Dirge",
+        "recording": "994f8ad7-5b5d-496e-b0cd-2632aa787cef",
+        "length": 337066
+      },
+      {
+        "title": "You Angel You",
+        "recording": "6362c764-dcd9-43be-af7e-666b1909e1e4",
+        "length": 174440
+      },
+      {
+        "title": "Never Say Goodbye",
+        "recording": "a737c97d-2881-474b-89e9-c33b05472f29",
+        "length": 173760
+      },
+      {
+        "title": "Wedding Song",
+        "recording": "a434c1ac-5706-4aa9-bc4b-d3801b3e112e",
+        "length": 280640
+      }
+    ]
+  },
+  "blood-on-the-tracks": {
+    "title": "Blood on the Tracks",
+    "year": 1975,
+    "releaseGroup": "9c1b8072-eb1d-33d2-af8c-984d46e40902",
+    "release": "b13937fa-2737-3d31-a40d-45f5bc21e850",
+    "tracks": [
+      {
+        "title": "Tangled Up in Blue",
+        "recording": "9e5680b3-1a52-4910-9a47-f04f46545b98",
+        "length": 342626
+      },
+      {
+        "title": "Simple Twist of Fate",
+        "recording": "bf9fcb18-9ee0-42fb-b9ad-1a72ed52780a",
+        "length": 259173
+      },
+      {
+        "title": "You’re a Big Girl Now",
+        "recording": "11e43295-b007-4222-a4aa-c90576ef3372",
+        "length": 276026
+      },
+      {
+        "title": "Idiot Wind",
+        "recording": "cf9e2966-0165-4daf-b0ff-ce1217b3df0e",
+        "length": 469573
+      },
+      {
+        "title": "You’re Gonna Make Me Lonesome When You Go",
+        "recording": "2917a32f-6756-445a-8d94-6de589af8bf0",
+        "length": 175760
+      },
+      {
+        "title": "Meet Me in the Morning",
+        "recording": "2b60ec63-dd95-4ce8-881d-9980428d85c8",
+        "length": 262240
+      },
+      {
+        "title": "Lily, Rosemary and the Jack of Hearts",
+        "recording": "9fa20f00-bdcb-4fcc-b85b-0b17601e10e5",
+        "length": 533760
+      },
+      {
+        "title": "If You See Her, Say Hello",
+        "recording": "41681fa3-3720-46a0-a6c8-a050588849c0",
+        "length": 289466
+      },
+      {
+        "title": "Shelter From the Storm",
+        "recording": "14704fe6-3e48-4be9-bac1-f57a98c4ebd9",
+        "length": 302440
+      },
+      {
+        "title": "Buckets of Rain",
+        "recording": "2bd02152-fa74-46a0-96e6-50705ab8f5fe",
+        "length": 202600
+      }
+    ]
+  },
+  "the-basement-tapes": {
+    "title": "The Basement Tapes",
+    "year": 1975,
+    "releaseGroup": "47873729-6db0-3431-99e7-0292e939dadf",
+    "release": "3144217a-2c44-441c-a211-2bbbc906068f",
+    "tracks": [
+      {
+        "title": "Odds and Ends",
+        "recording": "3d92b491-b728-4d51-b4b6-446603aa915a",
+        "length": 107000
+      },
+      {
+        "title": "Orange Juice Blues (Blues for Breakfast)",
+        "recording": "db0e39f0-b2e9-430d-a51d-b2b8d6583dae",
+        "length": 220000
+      },
+      {
+        "title": "Million Dollar Bash",
+        "recording": "5354181c-f354-4b67-a060-14cc24d989ef",
+        "length": 153000
+      },
+      {
+        "title": "Yazoo Street Scandal",
+        "recording": "c3c9144d-4688-4846-868f-122caa7416f3",
+        "length": 210000
+      },
+      {
+        "title": "Goin’ to Acapulco",
+        "recording": "cb9ed977-660b-4cc1-af43-1808b1b3ad40",
+        "length": 329000
+      },
+      {
+        "title": "Katie’s Been Gone",
+        "recording": "466eb380-c4e3-4e36-ad3b-880cc032c4f9",
+        "length": 166000
+      },
+      {
+        "title": "Lo and Behold!",
+        "recording": "58eb6c54-3842-472b-8434-e33d92693263",
+        "length": 168000
+      },
+      {
+        "title": "Bessie Smith",
+        "recording": "1871da9f-6dad-47da-8e87-765d1e16c834",
+        "length": 259000
+      },
+      {
+        "title": "Clothes Line Saga",
+        "recording": "a79c864c-17d2-42ff-a877-c43bc876b747",
+        "length": 177000
+      },
+      {
+        "title": "Apple Suckling Tree",
+        "recording": "7dadd95b-0927-4e7e-9403-24e49e9b40ee",
+        "length": 169000
+      },
+      {
+        "title": "Please, Mrs. Henry",
+        "recording": "7ca05c60-0589-4507-96b3-2695561cad1b",
+        "length": 154000
+      },
+      {
+        "title": "Tears of Rage",
+        "recording": "17c858d5-d925-443c-947a-633a1cf68e7d",
+        "length": 252000
+      },
+      {
+        "title": "Too Much of Nothing",
+        "recording": "8c9a2ade-eb08-45df-b80e-d088b3f0a42c",
+        "length": 184000
+      },
+      {
+        "title": "Yea! Heavy and a Bottle of Bread",
+        "recording": "e1e5bd17-8bb9-4814-8263-3694d1e6ce14",
+        "length": 136000
+      },
+      {
+        "title": "Ain’t No More Cane",
+        "recording": "05ceca0f-d06f-495d-b48e-2d7f256ed41c",
+        "length": 238000
+      },
+      {
+        "title": "Crash on the Levee (Down in the Flood)",
+        "recording": "d0743448-0639-4dcc-88e2-f23ab66fc99d",
+        "length": 125000
+      },
+      {
+        "title": "Ruben Remus",
+        "recording": "3d232be6-e91c-4111-9d9b-612fd0605b6b",
+        "length": 196000
+      },
+      {
+        "title": "Tiny Montgomery",
+        "recording": "d15c9a8b-6b6a-476d-a3df-10fc485d7a67",
+        "length": 167000
+      },
+      {
+        "title": "You Ain’t Goin’ Nowhere",
+        "recording": "f6a12766-c0bf-4f2d-932b-195fd607cf13",
+        "length": 163000
+      },
+      {
+        "title": "Don’t Ya Tell Henry",
+        "recording": "49f06a60-c3c2-4c95-ab27-8a808dc2dd8d",
+        "length": 194000
+      },
+      {
+        "title": "Nothing Was Delivered",
+        "recording": "b11b6335-0713-4740-9e63-383378cd2ddb",
+        "length": 264000
+      },
+      {
+        "title": "Open the Door, Homer",
+        "recording": "5f263f2a-985c-47be-bc37-005c5342587f",
+        "length": 170000
+      },
+      {
+        "title": "Long Distance Operator",
+        "recording": "d04ed1cd-db20-457f-a789-1b89e4b5078b",
+        "length": 220000
+      },
+      {
+        "title": "This Wheel’s on Fire",
+        "recording": "eb09e766-1d1e-40ba-8197-49fbef4edc62",
+        "length": 230000
+      }
+    ]
+  },
+  "desire": {
+    "title": "Desire",
+    "year": 1976,
+    "releaseGroup": "fc325dd3-73ed-36aa-9c77-6b65a958e3cf",
+    "release": "085ab0ae-23a6-4b4f-9642-59850fca4eb8",
+    "tracks": [
+      {
+        "title": "Hurricane",
+        "recording": "b249950e-5ff4-401a-aa3f-44c9db9e380e",
+        "length": 513000
+      },
+      {
+        "title": "Isis",
+        "recording": "0b58c9f5-e27b-4a15-b1c3-27d0f349a09a",
+        "length": 418000
+      },
+      {
+        "title": "Mozambique",
+        "recording": "1b612fd2-1f2f-4080-822c-5b01f9b23494",
+        "length": 180000
+      },
+      {
+        "title": "One More Cup of Coffee",
+        "recording": "2c2548c1-276a-44e1-a2ea-84b4abe31be9",
+        "length": 223000
+      },
+      {
+        "title": "Oh, Sister",
+        "recording": "3762512f-c1f9-4c4d-a9aa-3170cca85470",
+        "length": 245000
+      },
+      {
+        "title": "Joey",
+        "recording": "17c1e7ca-7b10-490b-9804-143ddf4ed96c",
+        "length": 665000
+      },
+      {
+        "title": "Romance in Durango",
+        "recording": "a9a433c1-7d84-45ab-b175-c61709914743",
+        "length": 350000
+      },
+      {
+        "title": "Black Diamond Bay",
+        "recording": "be703d59-929f-46cd-bf67-db668748516d",
+        "length": 450000
+      },
+      {
+        "title": "Sara",
+        "recording": "a406b1cf-08eb-4543-a384-272383632295",
+        "length": 329000
+      }
+    ]
+  },
+  "street-legal": {
+    "title": "Street-Legal",
+    "year": 1978,
+    "releaseGroup": "5883c91a-43ea-34e6-922d-1dc12fd48467",
+    "release": "5570d8fa-24b7-4450-a35c-fb86233cf609",
+    "tracks": [
+      {
+        "title": "Changing of the Guards",
+        "recording": "e8fc2560-63cb-4504-bc3f-8550d4c5b1b7",
+        "length": 394533
+      },
+      {
+        "title": "New Pony",
+        "recording": "001cff09-a5fc-4a3f-957c-086c10e624ad",
+        "length": 270866
+      },
+      {
+        "title": "No Time to Think",
+        "recording": "b42d4ec9-0bdd-4cbb-ac45-bb7b870b8dcf",
+        "length": 503066
+      },
+      {
+        "title": "Baby Stop Crying",
+        "recording": "c4870b51-e1c5-4dbf-81ed-1fc294aca1ab",
+        "length": 321066
+      },
+      {
+        "title": "Is Your Love in Vain?",
+        "recording": "8ed38488-b732-4e31-a6d7-c6cea6d0618c",
+        "length": 273800
+      },
+      {
+        "title": "Señor (Tales of Yankee Power)",
+        "recording": "df1224c7-d454-4d96-ba6c-3feaa70431d1",
+        "length": 343893
+      },
+      {
+        "title": "True Love Tends to Forget",
+        "recording": "6f90d083-bc9d-4031-bc3d-f2c39284914c",
+        "length": 258173
+      },
+      {
+        "title": "We Better Talk This Over",
+        "recording": "c545b0a6-8538-4910-8a2f-945970d6e989",
+        "length": 248133
+      },
+      {
+        "title": "Where Are You Tonight? (Journey Through Dark Heat)",
+        "recording": "c938aa3d-663f-4e47-a11e-020ae45e2ae0",
+        "length": 376467
+      }
+    ]
+  },
+  "slow-train-coming": {
+    "title": "Slow Train Coming",
+    "year": 1979,
+    "releaseGroup": "84b2989d-4364-3882-9570-30d4a048c487",
+    "release": "5f96435f-df41-4d29-a4c6-eac86206ed50",
+    "tracks": [
+      {
+        "title": "Gotta Serve Somebody",
+        "recording": "8720126d-b5d6-47b5-93d9-d097be3e880e",
+        "length": 323000
+      },
+      {
+        "title": "Precious Angel",
+        "recording": "6c8a291b-cb3a-439e-99b3-91699264c6e7",
+        "length": 390000
+      },
+      {
+        "title": "I Believe in You",
+        "recording": "c142fdd3-ab4a-4501-8b52-5de34ba94958",
+        "length": 308000
+      },
+      {
+        "title": "Slow Train",
+        "recording": "324c73f3-f55b-4af5-96f0-474489275c24",
+        "length": 357000
+      },
+      {
+        "title": "Gonna Change My Way of Thinking",
+        "recording": "a9d88f1a-ad27-49c0-8a01-3f6a2b390c5a",
+        "length": 327000
+      },
+      {
+        "title": "Do Right to Me Baby (Do Unto Others)",
+        "recording": "c31fbe1a-6df2-444d-a9c3-2e47ce7ddc55",
+        "length": 232000
+      },
+      {
+        "title": "When You Gonna Wake Up",
+        "recording": "4f714165-ca50-4a5a-817b-46a137e9d873",
+        "length": 328000
+      },
+      {
+        "title": "Man Gave Names to All the Animals",
+        "recording": "83d20dc3-6e1e-4c81-9fbb-68a86f6957d9",
+        "length": 265000
+      },
+      {
+        "title": "When He Returns",
+        "recording": "b888274e-f2f6-4174-b744-dcd590f5b4f8",
+        "length": 269000
+      }
+    ]
+  },
+  "saved": {
+    "title": "Saved",
+    "year": 1980,
+    "releaseGroup": "a11f33bf-1573-3b99-bcc6-d0c6e6592bcd",
+    "release": "a133d452-f424-3593-829c-7b0450c43b28",
+    "tracks": [
+      {
+        "title": "A Satisfied Mind",
+        "recording": "bd047df9-91ce-4d23-bc1a-93c9afda9008",
+        "length": 118493
+      },
+      {
+        "title": "Saved",
+        "recording": "eebb101e-e254-4d17-9ece-67da1a8cf61d",
+        "length": 243400
+      },
+      {
+        "title": "Covenant Woman",
+        "recording": "344ee0cb-4e4b-4f88-bb42-df6147569b05",
+        "length": 365466
+      },
+      {
+        "title": "What Can I Do for You?",
+        "recording": "d9983cf7-ca78-4694-8740-6939fda0ae1d",
+        "length": 354973
+      },
+      {
+        "title": "Solid Rock",
+        "recording": "27a1474b-cf17-42c0-a076-0c38d248405a",
+        "length": 238360
+      },
+      {
+        "title": "Pressing On",
+        "recording": "63dba5b3-83f0-4cc8-9fd0-82781ef8b79d",
+        "length": 313933
+      },
+      {
+        "title": "In the Garden",
+        "recording": "2561ceb8-2165-4104-9255-e2d70717d199",
+        "length": 359640
+      },
+      {
+        "title": "Saving Grace",
+        "recording": "5b58fcf5-1ee1-4fff-b25e-80bd0d482cdf",
+        "length": 304533
+      },
+      {
+        "title": "Are You Ready",
+        "recording": "8b8887fd-88a0-4ce5-93ed-eea76eddf8ee",
+        "length": 280866
+      }
+    ]
+  },
+  "shot-of-love": {
+    "title": "Shot of Love",
+    "year": 1981,
+    "releaseGroup": "4491344e-1ffd-339d-a2c5-e6a369b4708e",
+    "release": "35080863-a7bf-4e70-9464-2e757745d1f3",
+    "tracks": [
+      {
+        "title": "Shot of Love",
+        "recording": "f3c08d6b-215d-4be6-9db8-e41cfc6b5ea0",
+        "length": 258000
+      },
+      {
+        "title": "Heart of Mine",
+        "recording": "7c7326ea-26dd-45ee-9df5-b58205c7d644",
+        "length": 269000
+      },
+      {
+        "title": "Property of Jesus",
+        "recording": "c871eaa9-a1a0-4f1d-8810-61309e1d4b25",
+        "length": 273000
+      },
+      {
+        "title": "Lenny Bruce",
+        "recording": "7bc18b92-a63e-4e9b-899c-21608c7e33be",
+        "length": 272000
+      },
+      {
+        "title": "Watered‐Down Love",
+        "recording": "8c06b900-dab2-48d0-8fea-ba4c7b22dc82",
+        "length": 250000
+      },
+      {
+        "title": "The Groom's Still Waiting at the Altar",
+        "recording": "c37187d7-1733-4f82-8627-9811478b7244",
+        "length": 242000
+      },
+      {
+        "title": "Dead Man, Dead Man",
+        "recording": "7cc76426-89d5-4438-9eca-f1f5abe7cc82",
+        "length": 238000
+      },
+      {
+        "title": "In the Summertime",
+        "recording": "55704453-2b7b-4f45-850a-8c4b9b7a2ff0",
+        "length": 214000
+      },
+      {
+        "title": "Trouble",
+        "recording": "38560717-c83d-4528-852a-f31cccc0dece",
+        "length": 272000
+      },
+      {
+        "title": "Every Grain of Sand",
+        "recording": "292de4ff-db12-478b-a287-7c083622d797",
+        "length": 372000
+      }
+    ]
+  },
+  "infidels": {
+    "title": "Infidels",
+    "year": 1983,
+    "releaseGroup": "60f27712-263a-348c-8eda-b5315a67e8c2",
+    "release": "0791c523-08b5-33a1-b925-c4ac962e5e13",
+    "tracks": [
+      {
+        "title": "Jokerman",
+        "recording": "fbd96791-374a-4e01-ad3d-ffa9827877d4",
+        "length": 379026
+      },
+      {
+        "title": "Sweetheart Like You",
+        "recording": "86aaa61d-e9d2-48c1-b5b8-2683f35ae527",
+        "length": 275800
+      },
+      {
+        "title": "Neighborhood Bully",
+        "recording": "a2943762-ced7-4f47-a79c-32ca7800fe37",
+        "length": 277533
+      },
+      {
+        "title": "License to Kill",
+        "recording": "b6259642-8ee0-4734-8e18-2b4ab388c833",
+        "length": 214640
+      },
+      {
+        "title": "Man of Peace",
+        "recording": "7c459fb0-e3ca-4e86-b540-bffdb0cddea4",
+        "length": 392133
+      },
+      {
+        "title": "Union Sundown",
+        "recording": "22deb801-fc4c-400a-9575-878a5b328653",
+        "length": 325760
+      },
+      {
+        "title": "I and I",
+        "recording": "a6f07d48-066b-4960-aab7-9048a09c07f3",
+        "length": 312773
+      },
+      {
+        "title": "Don't Fall Apart on Me Tonight",
+        "recording": "1e442a8b-20cd-4b9b-9941-21d796d111b8",
+        "length": 356334
+      }
+    ]
+  },
+  "empire-burlesque": {
+    "title": "Empire Burlesque",
+    "year": 1985,
+    "releaseGroup": "a90b32b2-c84d-35ad-bab3-07e6799cde5b",
+    "release": "d9cdb4b1-f553-461a-a89e-cc73d6cbf68e",
+    "tracks": [
+      {
+        "title": "Tight Connection to My Heart (Has Anybody Seen My Love)",
+        "recording": "3e5170e1-0837-4820-8199-bc2a663aaa63",
+        "length": 322000
+      },
+      {
+        "title": "Seeing the Real You at Last",
+        "recording": "28075d3f-be7e-47bd-9509-831c2b17be5c",
+        "length": 261000
+      },
+      {
+        "title": "I'll Remember You",
+        "recording": "e5d8b6e6-0484-48be-9844-94da73ea7441",
+        "length": 254000
+      },
+      {
+        "title": "Clean Cut Kid",
+        "recording": "7e9d6d63-1f78-4f72-a4aa-06836f89ea4a",
+        "length": 257000
+      },
+      {
+        "title": "Never Gonna Be the Same Again",
+        "recording": "5c2864e1-f38d-4012-bcff-d1538d1d9921",
+        "length": 191000
+      },
+      {
+        "title": "Trust Yourself",
+        "recording": "0c64a981-76b7-4c9d-b877-aacdbade57ea",
+        "length": 208000
+      },
+      {
+        "title": "Emotionally Yours",
+        "recording": "4b6150f1-e530-41c5-9e2f-062d79c0ffaf",
+        "length": 270000
+      },
+      {
+        "title": "When the Night Comes Falling From the Sky",
+        "recording": "cbf5f32b-f740-4dd0-b28c-af54e4e665a0",
+        "length": 450000
+      },
+      {
+        "title": "Something's Burning, Baby",
+        "recording": "4c71cf10-ca8e-464f-aa58-c5fdb9c8f95a",
+        "length": 294000
+      },
+      {
+        "title": "Dark Eyes",
+        "recording": "ed58055b-036c-40a9-94f2-c9385f248f54",
+        "length": 309000
+      }
+    ]
+  },
+  "knocked-out-loaded": {
+    "title": "Knocked Out Loaded",
+    "year": 1986,
+    "releaseGroup": "423bf65a-6e28-3a14-8ea7-08912eb15e29",
+    "release": "f414a2b8-7aa3-4dc7-83ec-37ee7e5823ff",
+    "tracks": [
+      {
+        "title": "You Wanna Ramble",
+        "recording": "ef9dc5d7-3fcd-455b-bc1b-93c5ac7c2e17",
+        "length": 197000
+      },
+      {
+        "title": "They Killed Him",
+        "recording": "8072cb75-2ffa-402c-898f-d197bb7d50f9",
+        "length": 244000
+      },
+      {
+        "title": "Driftin' Too Far From Shore",
+        "recording": "09f1538d-62ca-4842-9f13-05adeb69e3af",
+        "length": 222000
+      },
+      {
+        "title": "Precious Memories",
+        "recording": "f1b14b93-314c-4441-b579-ec85e8b994e6",
+        "length": 195493
+      },
+      {
+        "title": "Maybe Someday",
+        "recording": "7e32a0a2-a98b-4f96-a374-5711aef9c1a6",
+        "length": 199906
+      },
+      {
+        "title": "Brownsville Girl",
+        "recording": "fb45ea27-dc57-4d22-8508-9bc80ca43c8f",
+        "length": 663426
+      },
+      {
+        "title": "Got My Mind Made Up",
+        "recording": "7aa5f73f-7d58-4896-a5ab-6095b2ee5336",
+        "length": 175440
+      },
+      {
+        "title": "Under Your Spell",
+        "recording": "406cd809-a8b8-403e-a68d-f6a0ecb1003e",
+        "length": 236734
+      }
+    ]
+  },
+  "down-in-the-groove": {
+    "title": "Down in the Groove",
+    "year": 1988,
+    "releaseGroup": "ce8a72cf-10c7-3dea-b9e7-3dd260a9ed5c",
+    "release": "010a2b9f-3cce-3bf6-b52c-001a8178f0d0",
+    "tracks": [
+      {
+        "title": "Let's Stick Together",
+        "recording": "e0bcaee9-cb5d-4255-ac47-f0044fa8408a",
+        "length": 188626
+      },
+      {
+        "title": "When Did You Leave Heaven?",
+        "recording": "fc770dde-33fc-4d77-80d5-7ac9155e9aa7",
+        "length": 135066
+      },
+      {
+        "title": "Sally Sue Brown",
+        "recording": "df3471a6-1810-430f-809c-49bac9f725f2",
+        "length": 149440
+      },
+      {
+        "title": "Death Is Not the End",
+        "recording": "d6b8a448-7f3f-4e2a-800b-435224d64e8e",
+        "length": 310360
+      },
+      {
+        "title": "Had a Dream About You, Baby",
+        "recording": "990e1cae-0033-4ba9-9cc7-6a74b8af8036",
+        "length": 173640
+      },
+      {
+        "title": "Ugliest Girl in the World",
+        "recording": "a4c4cb4f-9a94-4eb0-a4f8-ac4fff040993",
+        "length": 212466
+      },
+      {
+        "title": "Silvio",
+        "recording": "4ddbe5ed-46e4-4452-83de-6fef1d24fda4",
+        "length": 185800
+      },
+      {
+        "title": "Ninety Miles an Hour (Down a Dead End Street)",
+        "recording": "34aa7db9-8c69-41c9-abf6-d5ebbde16660",
+        "length": 176266
+      },
+      {
+        "title": "Shenandoah",
+        "recording": "300f286a-d483-44a3-bdd2-b177e94bdf87",
+        "length": 218626
+      },
+      {
+        "title": "Rank Strangers to Me",
+        "recording": "d4bdb911-887c-439e-b0ef-73f2a2352d65",
+        "length": 176707
+      }
+    ]
+  },
+  "oh-mercy": {
+    "title": "Oh Mercy",
+    "year": 1989,
+    "releaseGroup": "36675813-6c3c-33fa-8eaf-b1cd66d4f006",
+    "release": "0ca2e6a7-587a-477f-8567-ee98afa6d35d",
+    "tracks": [
+      {
+        "title": "Political World",
+        "recording": "64d8cd75-ddca-4ee6-abd7-a059978b0872",
+        "length": 227133
+      },
+      {
+        "title": "Where Teardrops Fall",
+        "recording": "6f5bc29b-ba15-4b0e-baf7-f12037e35b60",
+        "length": 152866
+      },
+      {
+        "title": "Everything Is Broken",
+        "recording": "ccbe8992-e312-48d5-b132-62dcaa15bc99",
+        "length": 195426
+      },
+      {
+        "title": "Ring Them Bells",
+        "recording": "4b38d8eb-7a05-46a1-b974-30f7f90947b2",
+        "length": 180133
+      },
+      {
+        "title": "Man in the Long Black Coat",
+        "recording": "9c6bc66b-d7d7-46c2-a906-abe11ae413c6",
+        "length": 273973
+      },
+      {
+        "title": "Most of the Time",
+        "recording": "689c4e31-8fd7-474f-b505-d2221dce1432",
+        "length": 303426
+      },
+      {
+        "title": "What Good Am I?",
+        "recording": "8c51c256-307c-4768-8806-b6a43ce67c5b",
+        "length": 284800
+      },
+      {
+        "title": "Disease of Conceit",
+        "recording": "1761b263-8384-4c97-bd8a-a38eca03a320",
+        "length": 223973
+      },
+      {
+        "title": "What Was It You Wanted",
+        "recording": "9158e1f6-90e5-408e-bb29-843b9c3e0477",
+        "length": 302826
+      },
+      {
+        "title": "Shooting Star",
+        "recording": "c1318bff-8f02-4d8f-9b9d-c0f3b94df96e",
+        "length": 195106
+      }
+    ]
+  },
+  "under-the-red-sky": {
+    "title": "Under the Red Sky",
+    "year": 1990,
+    "releaseGroup": "8d231aa3-4a4e-306a-a3f9-4421e846bb1a",
+    "release": "078b20db-c52f-4b64-b902-e06885daf688",
+    "tracks": [
+      {
+        "title": "Wiggle Wiggle",
+        "recording": "c172de84-b708-41ec-b6ec-e19264727feb",
+        "length": 129760
+      },
+      {
+        "title": "Under the Red Sky",
+        "recording": "e3b8eae8-6ae6-4e9d-af88-7505623e7fca",
+        "length": 249466
+      },
+      {
+        "title": "Unbelievable",
+        "recording": "ada36259-5eb0-4e59-a79c-a13181ba7810",
+        "length": 246800
+      },
+      {
+        "title": "Born in Time",
+        "recording": "a7ba5dac-8e70-449f-80ec-315efeb91834",
+        "length": 219040
+      },
+      {
+        "title": "T.V. Talkin' Song",
+        "recording": "9f035322-a040-47b6-98ba-6625b551fcc5",
+        "length": 182560
+      },
+      {
+        "title": "10,000 Men",
+        "recording": "f590c03e-1910-478f-800b-9edd4d98363c",
+        "length": 261000
+      },
+      {
+        "title": "2 X 2",
+        "recording": "6905c30e-2a24-42e0-9c70-f73781a2cd8d",
+        "length": 217000
+      },
+      {
+        "title": "God Knows",
+        "recording": "afcb99aa-ba8d-46bb-a5ff-563b5f7c8585",
+        "length": 182000
+      },
+      {
+        "title": "Handy Dandy",
+        "recording": "0c22ff8d-ba87-4a47-be4e-637324d6f7ae",
+        "length": 243040
+      },
+      {
+        "title": "Cat's in the Well",
+        "recording": "afb5bd3b-ec1d-44d1-b000-83658d381ab9",
+        "length": 201493
+      }
+    ]
+  },
+  "good-as-i-been-to-you": {
+    "title": "Good as I Been to You",
+    "year": 1992,
+    "releaseGroup": "43f420f8-44ca-3ff2-92c2-c6f285cb163b",
+    "release": "cd4767e3-53e1-3b4d-9c47-c7163c15c83d",
+    "tracks": [
+      {
+        "title": "Frankie & Albert",
+        "recording": "e4127531-55e3-4f82-bc5e-c033a4f877c3",
+        "length": 230426
+      },
+      {
+        "title": "Jim Jones",
+        "recording": "2ab7aed3-38dc-434c-9bee-54ab22bfc4d6",
+        "length": 235173
+      },
+      {
+        "title": "Blackjack Davey",
+        "recording": "d1afef2e-1625-41f6-9f2c-55c68baa6202",
+        "length": 350000
+      },
+      {
+        "title": "Canadee-i-o",
+        "recording": "3bff76aa-13aa-4cc1-a696-eae5507b0154",
+        "length": 263493
+      },
+      {
+        "title": "Sittin’ on Top of the World",
+        "recording": "038d42f9-a85e-4a67-8d81-4b61e8b66ca0",
+        "length": 270840
+      },
+      {
+        "title": "Little Maggie",
+        "recording": "bc591aee-1362-4a5d-bace-c31efd73eb5f",
+        "length": 174933
+      },
+      {
+        "title": "Hard Times",
+        "recording": "3f9c5cc2-9fed-4971-b9e1-226a42d56bb3",
+        "length": 274333
+      },
+      {
+        "title": "Step It Up and Go",
+        "recording": "bc4ee7a7-719c-44f5-b499-cd359735081c",
+        "length": 177666
+      },
+      {
+        "title": "Tomorrow Night",
+        "recording": "f1ad9d44-4dbc-47f9-8377-25219f234a80",
+        "length": 223133
+      },
+      {
+        "title": "Arthur McBride",
+        "recording": "fd5e0b99-0fc8-4939-9bcc-af264ff0fdc2",
+        "length": 382093
+      },
+      {
+        "title": "You’re Gonna Quit Me",
+        "recording": "e8362313-fbb2-463a-91f2-a7c9e41e1ba2",
+        "length": 168440
+      },
+      {
+        "title": "Diamond Joe",
+        "recording": "9c2ae9c8-6ff6-4d33-9746-4a214ff918cd",
+        "length": 197400
+      },
+      {
+        "title": "Froggie Went a Courtin’",
+        "recording": "2bdebe25-df19-4849-88b3-3e4c6abcb94d",
+        "length": 384026
+      }
+    ]
+  },
+  "world-gone-wrong": {
+    "title": "World Gone Wrong",
+    "year": 1993,
+    "releaseGroup": "fb0d0547-c8ec-3300-8f70-6f45361578f3",
+    "release": "3cba7f03-13b4-4c2c-9307-f8dc3db4a678",
+    "tracks": [
+      {
+        "title": "World Gone Wrong",
+        "recording": "f681941e-0575-4e33-b35e-cdb1c6dedeab",
+        "length": 237666
+      },
+      {
+        "title": "Love Henry",
+        "recording": "aae64983-2dcf-4f32-87b4-b47ee6000afd",
+        "length": 264000
+      },
+      {
+        "title": "Ragged & Dirty",
+        "recording": "15610ccd-672e-429c-8289-54d7d49cbc14",
+        "length": 249360
+      },
+      {
+        "title": "Blood in My Eyes",
+        "recording": "be98b001-5980-4d78-83f5-71e8eadc82f5",
+        "length": 304533
+      },
+      {
+        "title": "Broke Down Engine",
+        "recording": "31ac93a4-8268-425a-9886-cd5d26dd9e1e",
+        "length": 202706
+      },
+      {
+        "title": "Delia",
+        "recording": "51ed495f-2dbd-4c9f-ae0d-920806d04e1e",
+        "length": 341866
+      },
+      {
+        "title": "Stack a Lee",
+        "recording": "fe4c3cb6-0a10-4693-bc72-8ff45c629282",
+        "length": 230693
+      },
+      {
+        "title": "Two Soldiers",
+        "recording": "2770de48-bba9-4880-aa19-d20b82c9987b",
+        "length": 345466
+      },
+      {
+        "title": "Jack‐a‐Roe",
+        "recording": "1d08a984-579c-4aed-8185-18d7bc1900a1",
+        "length": 296266
+      },
+      {
+        "title": "Lone Pilgrim",
+        "recording": "345cf33e-79b5-4cec-8c59-9d0638c04c12",
+        "length": 163440
+      }
+    ]
+  },
+  "time-out-of-mind": {
+    "title": "Time Out of Mind",
+    "year": 1997,
+    "releaseGroup": "dad1dada-1fda-3186-beb7-3bc80e90f9e0",
+    "release": "06248c52-902b-4bd1-a5b6-529723295277",
+    "tracks": [
+      {
+        "title": "Love Sick",
+        "recording": "86dd41b7-edf8-4b4b-b165-ba9bdf06e2c5",
+        "length": 321733
+      },
+      {
+        "title": "Dirt Road Blues",
+        "recording": "0f7ed100-d632-4006-b111-fb55d0a1a1e4",
+        "length": 216226
+      },
+      {
+        "title": "Standing in the Doorway",
+        "recording": "acda6729-d894-48f7-b4bc-97103b9178ae",
+        "length": 463373
+      },
+      {
+        "title": "Million Miles",
+        "recording": "4163167d-fabf-4251-936f-87fcd02f422f",
+        "length": 352866
+      },
+      {
+        "title": "Tryin' to Get to Heaven",
+        "recording": "c76807bb-c356-47a5-98b4-7d74ad14cad3",
+        "length": 321960
+      },
+      {
+        "title": "'til I Fell in Love With You",
+        "recording": "9db3b756-7a56-4b41-8f4b-1ba799ea4a51",
+        "length": 317533
+      },
+      {
+        "title": "Not Dark Yet",
+        "recording": "58658c5b-cef2-49d3-a38d-0af729abfeee",
+        "length": 389066
+      },
+      {
+        "title": "Cold Irons Bound",
+        "recording": "0948b991-b5cd-4ad7-bf2c-22355c47b6bd",
+        "length": 435640
+      },
+      {
+        "title": "Make You Feel My Love",
+        "recording": "eef3b6c1-af4c-48d9-95ff-79bf220d66a9",
+        "length": 212960
+      },
+      {
+        "title": "Can't Wait",
+        "recording": "84b9f5da-249d-46ea-818e-f9aaf036ffde",
+        "length": 347466
+      },
+      {
+        "title": "Highlands",
+        "recording": "7514bee9-4e79-4c94-a3f2-7884d5cafd20",
+        "length": 991906
+      }
+    ]
+  },
+  "love-and-theft": {
+    "title": "\"Love and Theft\"",
+    "year": 2001,
+    "releaseGroup": "9980ffe5-c5b5-3a83-8c1e-1ec6618f97ca",
+    "release": "3a1dd339-b33f-4024-84f4-016d10ab2334",
+    "tracks": [
+      {
+        "title": "Tweedle Dee & Tweedle Dum",
+        "recording": "10914257-df86-4a5c-a1e9-57092211ce0b",
+        "length": 286493
+      },
+      {
+        "title": "Mississippi",
+        "recording": "7eae3b27-9f70-47ff-8cbf-42ab66013e3e",
+        "length": 321106
+      },
+      {
+        "title": "Summer Days",
+        "recording": "ee4fa5e4-9369-4e47-b5d8-c96270a2ad3b",
+        "length": 292760
+      },
+      {
+        "title": "Bye and Bye",
+        "recording": "92ed59b7-04b5-4388-9d56-1e854adeed7e",
+        "length": 196306
+      },
+      {
+        "title": "Lonesome Day Blues",
+        "recording": "b1ec6b9c-0b70-48d8-8ac3-3837d6f2ee3f",
+        "length": 365093
+      },
+      {
+        "title": "Floater (Too Much to Ask)",
+        "recording": "f139aea7-0399-4c33-89bb-3a57324a398e",
+        "length": 299533
+      },
+      {
+        "title": "High Water (For Charley Patton)",
+        "recording": "5e767591-f82f-4356-8080-835a2960a964",
+        "length": 244800
+      },
+      {
+        "title": "Moonlight",
+        "recording": "54a26f6b-5490-4a6c-8a2b-ae35c5631d94",
+        "length": 203133
+      },
+      {
+        "title": "Honest With Me",
+        "recording": "8d907dee-14f5-41d8-bb96-440bd202625d",
+        "length": 349106
+      },
+      {
+        "title": "Po’ Boy",
+        "recording": "8d606bc4-d71d-41cb-89f3-0a7275e73f91",
+        "length": 185826
+      },
+      {
+        "title": "Cry a While",
+        "recording": "a8e496ab-9bae-4272-b79d-f785d504ed24",
+        "length": 305440
+      },
+      {
+        "title": "Sugar Baby",
+        "recording": "aa43e49c-f3c7-4bbc-b2cd-98286df2823d",
+        "length": 400866
+      }
+    ]
+  },
+  "modern-times": {
+    "title": "Modern Times",
+    "year": 2006,
+    "releaseGroup": "d300b74b-02b4-33e3-998e-e4405e8e6580",
+    "release": "8d08d62f-ac61-31f5-aab8-e762dd7a3c6b",
+    "tracks": [
+      {
+        "title": "Thunder on the Mountain",
+        "recording": "1525386b-3f25-4314-ac26-d75cb77fe848",
+        "length": 355000
+      },
+      {
+        "title": "Spirit on the Water",
+        "recording": "aff97af1-0f74-43f5-ab9a-1ce46d02f4e7",
+        "length": 462640
+      },
+      {
+        "title": "Rollin’ and Tumblin’",
+        "recording": "cde0e30b-4b1f-49d1-b323-3c42631fd617",
+        "length": 361546
+      },
+      {
+        "title": "When the Deal Goes Down",
+        "recording": "d1e88ee2-eb7b-409d-936b-b0f34124750a",
+        "length": 304186
+      },
+      {
+        "title": "Someday Baby",
+        "recording": "1ca7b47e-f00f-418b-a73a-01ea2d98b7f5",
+        "length": 295560
+      },
+      {
+        "title": "Workingman’s Blues #2",
+        "recording": "3d66ba1f-6471-4249-8153-aed54dddea49",
+        "length": 367426
+      },
+      {
+        "title": "Beyond the Horizon",
+        "recording": "6f03cde7-699a-476c-a024-229704b9374c",
+        "length": 336106
+      },
+      {
+        "title": "Nettie Moore",
+        "recording": "3c841d13-0026-40f9-9446-d686a1b42ac6",
+        "length": 412520
+      },
+      {
+        "title": "The Levee’s Gonna Break",
+        "recording": "58412aad-8464-4094-9dd7-e74e8c926108",
+        "length": 343133
+      },
+      {
+        "title": "Ain’t Talkin’",
+        "recording": "c9caf6fb-a4ce-48bf-9e0b-5523ac8f0788",
+        "length": 528066
+      }
+    ]
+  },
+  "together-through-life": {
+    "title": "Together Through Life",
+    "year": 2009,
+    "releaseGroup": "2202f7cc-6ce1-3aea-85b0-163347528402",
+    "release": "611c75fd-fb12-4d80-9d31-bb2cf35a1733",
+    "tracks": [
+      {
+        "title": "Beyond Here Lies Nothin'",
+        "recording": "6acb3fc2-28c7-49d5-8663-4d3fa035d592",
+        "length": 230493
+      },
+      {
+        "title": "Life Is Hard",
+        "recording": "9e9657a0-7e5f-4897-8b28-b9badec7cd68",
+        "length": 219106
+      },
+      {
+        "title": "My Wife's Home Town",
+        "recording": "06447dee-7fa6-4895-8dde-d0d6bddb5b7c",
+        "length": 255066
+      },
+      {
+        "title": "If You Ever Go to Houston",
+        "recording": "d0c7a8d7-781a-4b14-9a81-d3974e072de9",
+        "length": 348760
+      },
+      {
+        "title": "Forgetful Heart",
+        "recording": "eaa49c27-3cea-4e8d-9b3d-6ae1bfebeab7",
+        "length": 222306
+      },
+      {
+        "title": "Jolene",
+        "recording": "65fd8509-fc43-4419-ac5b-3b4c924dfb36",
+        "length": 230666
+      },
+      {
+        "title": "This Dream of You",
+        "recording": "dc25c98f-ceee-4c88-91c3-dbda51bb6157",
+        "length": 354173
+      },
+      {
+        "title": "Shake Shake Mama",
+        "recording": "741d9a3a-9869-4829-970a-5abe86604127",
+        "length": 217333
+      },
+      {
+        "title": "I Feel a Change Comin' On",
+        "recording": "65e1f5e7-6d84-451a-b679-658fa47af90e",
+        "length": 325320
+      },
+      {
+        "title": "It's All Good",
+        "recording": "8d77d0d2-3eaa-40e2-992b-e12e6d3f542c",
+        "length": 327893
+      }
+    ]
+  },
+  "christmas-in-the-heart": {
+    "title": "Christmas in the Heart",
+    "year": 2009,
+    "releaseGroup": "16d64d01-6d92-40b2-86ba-7f76c018ab9c",
+    "release": "1a8839a2-6eed-4317-adec-28ec672e57a3",
+    "tracks": [
+      {
+        "title": "Here Comes Santa Claus",
+        "recording": "bfa60ce4-1a9d-40e8-99de-4674dda45c66",
+        "length": 155000
+      },
+      {
+        "title": "Do You Hear What I Hear?",
+        "recording": "cb3ddecc-4aab-44e6-89fd-447f6fc3c588",
+        "length": 182000
+      },
+      {
+        "title": "Winter Wonderland",
+        "recording": "cd4bee0d-353e-4e22-95d4-b120a791f61a",
+        "length": 112000
+      },
+      {
+        "title": "Hark the Herald Angels Sing",
+        "recording": "8db0da5a-7646-41c8-a46b-3b2c8d73d3b3",
+        "length": 150000
+      },
+      {
+        "title": "I'll Be Home for Christmas",
+        "recording": "d700f5a2-9018-43a8-a37b-7dd70a504bfe",
+        "length": 174000
+      },
+      {
+        "title": "Little Drummer Boy",
+        "recording": "c77e3455-d3be-4a4e-a86c-91f0ffad1f49",
+        "length": 172000
+      },
+      {
+        "title": "The Christmas Blues",
+        "recording": "0da68734-6f0b-441b-b86a-8f0d7bd4fb20",
+        "length": 174000
+      },
+      {
+        "title": "O' Come All Ye Faithful (Adeste Fideles)",
+        "recording": "a8fb36dd-a91c-47e1-9e29-487ceb9085ae",
+        "length": 168000
+      },
+      {
+        "title": "Have Yourself a Merry Little Christmas",
+        "recording": "25ab46c6-8f8b-4765-a2de-74ec8bf851ad",
+        "length": 246000
+      },
+      {
+        "title": "Must Be Santa",
+        "recording": "c3693f6e-92df-46ee-a7f6-5fa4d0ba03de",
+        "length": 168000
+      },
+      {
+        "title": "Silver Bells",
+        "recording": "d48f432e-7122-48b9-89cb-a30732a6b0ba",
+        "length": 155000
+      },
+      {
+        "title": "The First Noel",
+        "recording": "620403da-5561-4e61-bc52-7a3b76e8b09d",
+        "length": 150000
+      },
+      {
+        "title": "Christmas Island",
+        "recording": "8e307365-c848-422e-83a1-9464ba560b5b",
+        "length": 147000
+      },
+      {
+        "title": "The Christmas Song",
+        "recording": "4b801ad3-d0b1-4d62-8417-36db7583ead5",
+        "length": 236000
+      },
+      {
+        "title": "O' Little Town of Bethlehem",
+        "recording": "2b7aa627-8175-4b3a-9e82-192a667d06d3",
+        "length": 137000
+      }
+    ]
+  },
+  "tempest": {
+    "title": "Tempest",
+    "year": 2012,
+    "releaseGroup": "42555dd2-d671-4c96-85c3-3939232ffc4b",
+    "release": "6eb84813-1355-4f3d-85e0-9f56ba6b1e1e",
+    "tracks": [
+      {
+        "title": "Duquesne Whistle",
+        "recording": "ab24ee8c-03bc-47f2-a9f9-f7a71d56da9a",
+        "length": 343680
+      },
+      {
+        "title": "Soon After Midnight",
+        "recording": "c45df27f-a649-4c2c-85e2-70c9b2cd5d11",
+        "length": 207893
+      },
+      {
+        "title": "Narrow Way",
+        "recording": "ee0e8de1-ae94-47a1-b916-a1f4aa152f02",
+        "length": 448040
+      },
+      {
+        "title": "Long and Wasted Years",
+        "recording": "82f71b27-4535-48b7-b6ef-a84505d14259",
+        "length": 226653
+      },
+      {
+        "title": "Pay in Blood",
+        "recording": "1bb302be-1a3a-4c11-bc11-185e211464cf",
+        "length": 309573
+      },
+      {
+        "title": "Scarlet Town",
+        "recording": "97c8ded9-432e-4481-96f4-dbe3dce9f73e",
+        "length": 437093
+      },
+      {
+        "title": "Early Roman Kings",
+        "recording": "d9ae4437-d8ac-4003-afcb-192d3edc76ad",
+        "length": 314053
+      },
+      {
+        "title": "Tin Angel",
+        "recording": "883616fc-cba7-4b3d-b21d-676e7ac510c9",
+        "length": 545026
+      },
+      {
+        "title": "Tempest",
+        "recording": "afc989e9-11b2-4e73-a6cd-81daba9f6c4c",
+        "length": 834826
+      },
+      {
+        "title": "Roll on John",
+        "recording": "a986e943-b09c-4f3a-ae13-86fac9eb05bd",
+        "length": 445640
+      }
+    ]
+  },
+  "shadows-in-the-night": {
+    "title": "Shadows in the Night",
+    "year": 2015,
+    "releaseGroup": "5e3e123f-0746-49fa-ac3a-1acf0dc254a0",
+    "release": "4b1923d9-4d38-49fc-b005-398ef7f2f83b",
+    "tracks": [
+      {
+        "title": "I’m a Fool to Want You",
+        "recording": "6ec6455e-7009-4f20-a58a-c2048abe09ae",
+        "length": 291000
+      },
+      {
+        "title": "The Night We Called It a Day",
+        "recording": "9227d03b-9cb6-447d-86b6-1df235807e88",
+        "length": 205000
+      },
+      {
+        "title": "Stay With Me",
+        "recording": "14d556ad-7c98-495e-b137-9b2d970edbdc",
+        "length": 176000
+      },
+      {
+        "title": "Autumn Leaves",
+        "recording": "446a5648-77c2-493b-b06d-e1dd1aff26e8",
+        "length": 182000
+      },
+      {
+        "title": "Why Try to Change Me Now",
+        "recording": "630b1fb0-486b-43fa-9b69-283f4211ffe4",
+        "length": 218000
+      },
+      {
+        "title": "Some Enchanted Evening",
+        "recording": "372a6be9-bf12-4462-8755-74ae6b5916a1",
+        "length": 208000
+      },
+      {
+        "title": "Full Moon and Empty Arms",
+        "recording": "8ad710ae-2436-4fdd-8a58-f5ce1af670d5",
+        "length": 206000
+      },
+      {
+        "title": "Where Are You?",
+        "recording": "c53ee445-4ab8-4f95-a315-14103b6dba57",
+        "length": 217000
+      },
+      {
+        "title": "What I’ll Do",
+        "recording": "656a9317-be4d-4566-b6ef-fc8997d42e60",
+        "length": 201000
+      },
+      {
+        "title": "That Lucky Old Sun",
+        "recording": "b6801c90-f52c-4cdf-8210-c479a6a4783f",
+        "length": 219000
+      }
+    ]
+  },
+  "fallen-angels": {
+    "title": "Fallen Angels",
+    "year": 2016,
+    "releaseGroup": "3e9553c6-786a-4f85-8a2a-1b70cd166742",
+    "release": "536c98a9-ccf1-431a-abbc-eeb3a3aaf4de",
+    "tracks": [
+      {
+        "title": "Young at Heart",
+        "recording": "32827c80-7c8d-4a67-8ae0-4fb10bad889c",
+        "length": 179000
+      },
+      {
+        "title": "Maybe You'll Be There",
+        "recording": "48ec5e80-2c14-41c3-b270-716bf6cc0b7c",
+        "length": 176000
+      },
+      {
+        "title": "Polka Dots and Moonbeams",
+        "recording": "4b8e26f1-22b8-4064-89b7-f14b98d45945",
+        "length": 215000
+      },
+      {
+        "title": "All the Way",
+        "recording": "62bbcb39-cc20-4fea-a702-ad49fefe0d4b",
+        "length": 241000
+      },
+      {
+        "title": "Skylark",
+        "recording": "04132805-476a-4a03-be56-ae3141e23e8c",
+        "length": 176000
+      },
+      {
+        "title": "Nevertheless",
+        "recording": "fe1b779e-bc90-4826-9dae-2d7df03be553",
+        "length": 207000
+      },
+      {
+        "title": "All or Nothing at All",
+        "recording": "da6bc156-9cf7-4450-9be3-49f5a9e7b911",
+        "length": 184000
+      },
+      {
+        "title": "On a Little Street in Singapore",
+        "recording": "b5c34c30-34e4-4756-83c3-db83f757d8bc",
+        "length": 136000
+      },
+      {
+        "title": "It Had to Be You",
+        "recording": "e3161632-c6d5-4fa7-8c32-d2c36d07dca0",
+        "length": 242000
+      },
+      {
+        "title": "Melancholy Mood",
+        "recording": "be55238a-3cd6-47d6-b009-24199be209c1",
+        "length": 173000
+      },
+      {
+        "title": "That Old Black Magic",
+        "recording": "3f0fb553-23ea-4806-af0c-cc415901c36a",
+        "length": 182000
+      },
+      {
+        "title": "Come Rain or Come Shine",
+        "recording": "cd6fb888-504f-4881-bed9-87690b3a72e2",
+        "length": 159000
+      }
+    ]
+  },
+  "triplicate": {
+    "title": "Triplicate",
+    "year": 2017,
+    "releaseGroup": "f490ca6a-ff96-4132-b235-71640f51d9d0",
+    "release": "b1d3ec30-10d3-4be1-8653-c6fc5a18a482",
+    "tracks": [
+      {
+        "title": "I Guess I’ll Have to Change My Plans",
+        "recording": "dbe7c517-2c18-49b2-b6c0-f690288ac513",
+        "length": 147000
+      },
+      {
+        "title": "September of My Years",
+        "recording": "eee24cdf-cea4-4192-9417-91082ed8e206",
+        "length": 206000
+      },
+      {
+        "title": "I Could Have Told You",
+        "recording": "449704e2-5fba-458a-8e8e-7b6d3c9f4ea5",
+        "length": 220000
+      },
+      {
+        "title": "Once Upon a Time",
+        "recording": "96f67851-7977-4ae9-84ac-a61877d282c7",
+        "length": 218000
+      },
+      {
+        "title": "Stormy Weather",
+        "recording": "331ca7bc-56e0-4a76-8ce8-e93bb51a0dbc",
+        "length": 186000
+      },
+      {
+        "title": "This Nearly Was Mine",
+        "recording": "84ee040b-1b76-40e4-b456-27a91ef166ee",
+        "length": 169000
+      },
+      {
+        "title": "That Old Feeling",
+        "recording": "85d31d82-9bb7-4b85-b6b1-68ce2d803f84",
+        "length": 219000
+      },
+      {
+        "title": "It Gets Lonely Early",
+        "recording": "7d1cf48c-2d31-43d8-8d07-4f934ba40b93",
+        "length": 190000
+      },
+      {
+        "title": "My One and Only Love",
+        "recording": "d6bc1da7-bbf6-4fab-9c40-6d3b7dab5c5d",
+        "length": 204000
+      },
+      {
+        "title": "Trade Winds",
+        "recording": "c2ecad55-5f06-4f4a-87b3-dea23a712a1a",
+        "length": 161000
+      },
+      {
+        "title": "Braggin’",
+        "recording": "88d39f55-ad0d-41a4-8ad2-6e3f9c0aceb6",
+        "length": 164693
+      },
+      {
+        "title": "As Time Goes By",
+        "recording": "d3b91d72-20de-43b4-94b5-c3a11398bcea",
+        "length": 202493
+      },
+      {
+        "title": "Imagination",
+        "recording": "618490da-6741-41dd-9199-349055bd610b",
+        "length": 154546
+      },
+      {
+        "title": "How Deep Is the Ocean",
+        "recording": "f238d9c6-b153-48c0-be09-68118808dddc",
+        "length": 203346
+      },
+      {
+        "title": "P.S. I Love You",
+        "recording": "36dff7f4-c951-49a3-81b9-d7ed2862534e",
+        "length": 257560
+      },
+      {
+        "title": "The Best Is Yet to Come",
+        "recording": "429356fa-0c04-466a-ab6d-297a79edf37e",
+        "length": 177413
+      },
+      {
+        "title": "But Beautiful",
+        "recording": "7eb20811-d5b7-4974-9ff4-8d97e91bb085",
+        "length": 202480
+      },
+      {
+        "title": "Here’s That Rainy Day",
+        "recording": "c2acfbd0-5306-4f97-a1a2-627d0ca01f6d",
+        "length": 207266
+      },
+      {
+        "title": "Where Is the One",
+        "recording": "47668b4a-829d-41b7-a0b5-143dc0e2605a",
+        "length": 194946
+      },
+      {
+        "title": "There’s a Flaw in My Flue",
+        "recording": "feac3b77-c6a3-45f1-8ed7-a937fffdc28f",
+        "length": 167026
+      },
+      {
+        "title": "Day In, Day Out",
+        "recording": "81993477-55dc-4038-949b-d6dca7894d6d",
+        "length": 181640
+      },
+      {
+        "title": "I Couldn’t Sleep a Wink Last Night",
+        "recording": "bfc55cdd-88e3-411b-b657-a02245d3f895",
+        "length": 195906
+      },
+      {
+        "title": "Sentimental Journey",
+        "recording": "8d1093c7-f08b-47ed-9be5-d4947c534cc6",
+        "length": 191653
+      },
+      {
+        "title": "Somewhere Along the Way",
+        "recording": "2691ba75-97ca-44e6-8866-18f930e6d94b",
+        "length": 198866
+      },
+      {
+        "title": "When the World Was Young",
+        "recording": "e105bf10-ea7e-4510-926e-36bf64604800",
+        "length": 227160
+      },
+      {
+        "title": "These Foolish Things",
+        "recording": "a630d4ce-8442-4c10-a0b9-ec64457e8d90",
+        "length": 251186
+      },
+      {
+        "title": "You Go to My Head",
+        "recording": "3bdc5271-8ed3-4233-8974-8e245387ab53",
+        "length": 186826
+      },
+      {
+        "title": "Stardust",
+        "recording": "95b072a2-a7d8-4a9a-8c60-b62037b4dc74",
+        "length": 154853
+      },
+      {
+        "title": "It’s Funny to Everyone but Me",
+        "recording": "8e942d02-c4f2-4758-8b02-7f4c893572e1",
+        "length": 158773
+      },
+      {
+        "title": "Why Was I Born",
+        "recording": "0efeb11e-e5fd-45ab-a98e-0071f3e8f9be",
+        "length": 169586
+      }
+    ]
+  },
+  "rough-and-rowdy-ways": {
+    "title": "Rough and Rowdy Ways",
+    "year": 2020,
+    "releaseGroup": "43b12592-d808-44de-a5df-ebd7c6b2b75c",
+    "release": "2d274b79-ca34-4a99-9447-b1e57fc27338",
+    "tracks": [
+      {
+        "title": "I Contain Multitudes",
+        "recording": "01bd7388-8ebb-4fa5-bd9f-e3dc3d3fe52e",
+        "length": 276733
+      },
+      {
+        "title": "False Prophet",
+        "recording": "1832910b-0749-494a-8bbc-1c8d2d00a658",
+        "length": 360013
+      },
+      {
+        "title": "My Own Version of You",
+        "recording": "03306a2d-929f-4976-a79f-db008a46b9e1",
+        "length": 401360
+      },
+      {
+        "title": "I’ve Made Up My Mind to Give Myself to You",
+        "recording": "f00228c8-34de-4d72-ad35-b0fda1569aa2",
+        "length": 392213
+      },
+      {
+        "title": "Black Rider",
+        "recording": "7ebfadfc-13da-456f-883d-e6408c4a8ed7",
+        "length": 252893
+      },
+      {
+        "title": "Goodbye Jimmy Reed",
+        "recording": "cbdcd1ef-6caf-4554-92dd-221b3559d056",
+        "length": 253853
+      },
+      {
+        "title": "Mother of Muses",
+        "recording": "02bd84f0-6da2-4732-9368-39b4bc002332",
+        "length": 269240
+      },
+      {
+        "title": "Crossing the Rubicon",
+        "recording": "5c9ab09b-dfa6-4297-a546-dc9b72ba64d2",
+        "length": 442760
+      },
+      {
+        "title": "Key West (Philosopher Pirate)",
+        "recording": "0ec5f88e-94b7-49dc-8f07-38e5528254e2",
+        "length": 574133
+      },
+      {
+        "title": "Murder Most Foul",
+        "recording": "0f7f3692-8944-4fd6-9a64-8ddd91a17ed6",
+        "length": 1014786
+      }
+    ]
+  }
+}

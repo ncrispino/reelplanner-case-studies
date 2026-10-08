@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "src": "2026-10-07-desktop--walkthrough/index.html",
+  "project": "walkthrough-video",
+  "exportedAt": "2026-10-07T21:33:18.118Z",
+  "watch": {
+    "firstPlayAt": "2026-10-07T21:32:55.427Z",
+    "maxTimeReached": 146.93,
+    "durationSeconds": 183.49,
+    "completion": 0.801,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 0.801
+      }
+    ],
+    "moments": [],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q4",
+      "option": "a",
+      "label": "Add \"A thread from this song ›\" to the map page",
+      "recommended": true,
+      "planStep": 5,
+      "question": "On a computer, should the full map offer a way to the thread cards?",
+      "t": 132.238,
+      "decidedAt": "2026-10-07T21:33:09.409Z"
+    }
+  ],
+  "quizzes": [],
+  "autonomy": [
+    {
+      "id": "d3",
+      "verdict": "accept",
+      "t": 117.582,
+      "planStep": 5,
+      "chose": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers [deviation] (changed after review, \"i would like to give some visuals for these as well\": a step not on his albums, an old tune or another artist's version, now shows the cover of the Dylan song it is connected to, so every thread has four covers)",
+      "shownAt": "2026-10-07T21:33:04.173Z",
+      "judgedAt": "2026-10-07T21:33:05.487Z"
+    }
+  ],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-07-desktop",
+      "seen": "2026-10-07T18:27:33.885Z",
+      "sent": "2026-10-07T18:28:44.960Z"
+    },
+    {
+      "video": "2026-10-07-desktop--walkthrough",
+      "seen": "2026-10-07T20:51:14.179Z",
+      "sent": "2026-10-07T20:54:29.986Z"
+    },
+    {
+      "video": "2026-10-07-every-song",
+      "seen": "2026-10-07T18:19:40.466Z",
+      "sent": "2026-10-07T18:20:41.979Z"
+    },
+    {
+      "video": "2026-10-07-every-song--walkthrough",
+      "seen": "2026-10-07T20:46:39.847Z",
+      "sent": "2026-10-07T20:47:37.358Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 0,
+    "walked": 0,
+    "termsOpened": 0,
+    "termsLookedUp": [
+      "agent",
+      "beat"
+    ],
+    "rewinds": 0,
+    "watchedPct": 80
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "amuymjm2ofd1y",
+      "kind": "approve",
+      "t": 145.67,
+      "frame": {
+        "index": 13,
+        "compositionId": "13-stop6",
+        "title": "Step 6 · Search, and the desktop check"
+      },
+      "plan": {
+        "step": 6,
+        "questions": [],
+        "component": null
+      },
+      "comment": ""
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

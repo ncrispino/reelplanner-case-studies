@@ -1,0 +1,5 @@
+$ node tools/find-lyrics-links.mjs
+· september-of-my-years: not in the index
+· as-time-goes-by: not in the index
+· this-wheels-on-fire: not in the index
+exit 0

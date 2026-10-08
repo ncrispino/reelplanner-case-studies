@@ -1,0 +1,80 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; container-type:size; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f09-d3-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f09-d3-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* the real screenshot: 1440 x 900 shown at 1040 x 650 (scale 0.722), window 1040 x 686, top 130 */
+  .f09-d3-win { position:absolute; left:90px; top:130px; width:1040px; height:686px; box-sizing:border-box; border-radius:14px; border:1px solid rgba(var(--rp-ink-rgb),0.5); overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f09-d3-bar { position:absolute; left:0; top:0; width:100%; height:36px; box-sizing:border-box; background:var(--rp-tile-2); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f09-d3-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.28); }
+  .f09-d3-addr { position:absolute; left:84px; top:5px; font:400 26px/26px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; }
+  .f09-d3-win img { position:absolute; left:0; top:36px; display:block; width:1040px; height:650px; }
+  /* Borrowed tunes' covers row (shot x 138-486, y 268-350) on screen */
+  .f09-d3-ring { position:absolute; left:180px; top:349px; width:258px; height:66px; box-sizing:border-box; border:2px solid var(--rp-coral); border-radius:8px; }
+
+  .f09-d3-place { position:absolute; left:1200px; top:150px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f09-d3-card { position:absolute; left:1200px; top:210px; width:630px; height:540px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f09-d3-txt { position:absolute; left:44px; top:44px; width:542px; }
+  .f09-d3-kind { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f09-d3-chose { margin-top:26px; font:700 40px/1.2 "Inter"; color:var(--rp-ink); }
+  .f09-d3-inst { margin-top:26px; font:400 28px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f09-d3-why { margin-top:22px; font:400 28px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+</style>
+
+<div id="root" data-composition-id="09-d3" data-band="bottom" data-start="0" data-duration="9.225" data-width="1920" data-height="1080">
+  <div class="clip f09-d3-bg" id="f09-d3-bg" data-start="0" data-duration="9.225" data-track-index="0"></div>
+
+  <div class="clip f09-d3-scene" id="f09-d3-scene" data-start="0" data-duration="9.225" data-track-index="1">
+    <div class="f09-d3-win" id="f09-d3-win" data-artifact="/threads/">
+      <div class="f09-d3-bar">
+        <i class="f09-d3-dot" style="left:16px"></i><i class="f09-d3-dot" style="left:34px"></i><i class="f09-d3-dot" style="left:52px"></i>
+        <span class="f09-d3-addr">/threads/</span>
+      </div>
+      <img src="assets/shots/d-threads.png" alt="The threads list at 1440: a grid three across, each thread card with its covers">
+    </div>
+    <i class="f09-d3-ring" id="f09-d3-ring"></i>
+
+    <div class="f09-d3-place" id="f09-d3-place">Step 5</div>
+    <div class="f09-d3-card" id="f09-d3-card" data-call="d3">
+      <div class="f09-d3-txt">
+        <div class="f09-d3-kind" id="f09-d3-kind">Off-plan change</div>
+        <div class="f09-d3-chose" id="f09-d3-chose">Covers from all of a thread's songs</div>
+        <div class="f09-d3-inst" id="f09-d3-inst">instead of: the covers of its first songs</div>
+        <div class="f09-d3-why" id="f09-d3-why">an old tune shows the cover of the song it leads to</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "09-d3";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f09-d3-" + s); };
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the page ("threads list"), the card on "covers", its why on "because"; hold
+  tl.fromTo($("win"), { opacity: 0, y: 30, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, 0.067);
+  rise(tl, $("place"), 0.337, 8);
+  tl.fromTo($("card"), { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 1.755);
+  rise(tl, $("kind"), 1.957, 8);
+  rise(tl, $("chose"), 2.227);
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.45, ease: E }, 3.105);
+  rise(tl, $("inst"), 3.509);
+  rise(tl, $("why"), 4.522);
+
+  tl.set({}, {}, 8.724);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

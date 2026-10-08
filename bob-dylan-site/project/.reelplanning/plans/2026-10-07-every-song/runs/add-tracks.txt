@@ -1,0 +1,11 @@
+$ node tools/add-tracks.mjs
+✓ 458 tracks on 39 albums: 182 already songs, 271 new songs, 4 takes folded into their songs, 2 live takes linked to existing pages, 2 live takes made songs of their own
+  take: self-portrait: "Alberta #1" → alberta
+  take: self-portrait: "Alberta #2" → alberta
+  take: pat-garrett: "Billy 4" → billy-1
+  take: pat-garrett: "Billy 7" → billy-1
+  live: self-portrait: "Like a Rolling Stone (live)" → like-a-rolling-stone
+  live: self-portrait: "The Mighty Quinn (Quinn the Eskimo) (live)" → the-mighty-quinn-quinn-the-eskimo (new)
+  live: self-portrait: "Minstrel Boy (live)" → minstrel-boy (new)
+  live: self-portrait: "She Belongs to Me (live)" → she-belongs-to-me
+exit 0

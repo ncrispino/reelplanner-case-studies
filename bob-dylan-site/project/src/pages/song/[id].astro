@@ -1,0 +1,127 @@
+---
+import Shell from "../../layouts/Shell.astro";
+import Cover from "../../components/Cover.astro";
+import ConnectionCard from "../../components/ConnectionCard.astro";
+import Player from "../../components/Player.astro";
+import Words from "../../components/Words.astro";
+import MapView from "../../components/MapView.astro";
+import mb from "../../../data/sources/musicbrainz.json";
+import trackMap from "../../../data/sources/track-map.json";
+import ReadOn from "../../components/ReadOn.astro";
+import { songs, albumById, eraOfSong, connectionsOf, threadsOf, degreeOf, url, titleSize } from "../../lib/data";
+export function getStaticPaths() { return songs.map((s) => ({ params: { id: s.id }, props: { song: s } })); }
+const { song } = Astro.props;
+const album = song.album ? albumById.get(song.album)! : null;
+const era = eraOfSong(song);
+const conns = connectionsOf(song.id);
+const idx = album ? album.songs.indexOf(song.id) : -1;
+const prev = album && idx > 0 ? album.songs[idx - 1] : null;
+const next = album && idx >= 0 && idx < album.songs.length - 1 ? album.songs[idx + 1] : null;
+// where this song is on the records: its own album's takes, and live takes on other albums (track-map.json)
+const onTracks = Object.entries(trackMap as Record<string, string[]>).flatMap(([a, ids]) =>
+  ids.flatMap((id, i) => (id === song.id ? [{ album: a, title: (mb as Record<string, { tracks: { title: string }[] }>)[a].tracks[i].title }] : [])));
+const takes = onTracks.filter((t) => t.album === song.album).map((t) => t.title);
+const elsewhere = onTracks.filter((t) => t.album !== song.album);
+// "In threads" and "The same year" (plan 2026-10-07-fuller, step 4): the curated threads it is in, and the thread
+// made from it; his other songs of its year (his own records' songs), the most connected first, at most eight
+const inThreads = threadsOf(song.id);
+const sameYear = song.year == null ? [] : songs.filter((s) => s.id !== song.id && s.year === song.year && s.album && (!s.by || s.by === "Bob Dylan"))
+  .map((s, i) => ({ s, d: degreeOf(s.id), i })).sort((a, b) => b.d - a.d || a.i - b.i).slice(0, 8).map((x) => x.s);
+---
+<Shell title={song.title} era={era.id} description={song.note} rail={{ era, album, song, year: song.year, here: "song" }}>
+  <a class="back" href={album ? url.album(album.id) : url.era(era.id)}>‹ {album ? album.title : era.title}</a>
+  <!-- from 1100 px two columns (plan 2026-10-07-desktop, step 4): the cover, note, themes and players stay on the left;
+       the words, the connections and a small map of the song's neighbours on the right. Below that the wrappers are
+       display: contents, so a phone gets the one column in today's order (the words card before the players). -->
+  <div class="wide side-first song">
+  <div class="col side sticky">
+  <div class="head">
+    {album && <a href={url.album(album.id)} class="cv"><Cover album={album} size="s" name={`cover-${album.id}`} grow="(min-width: 1100px) 150px, 104px" /></a>}
+    <div>
+      <p class="kicker">{song.by && song.by !== "Bob Dylan" ? song.by : album?.title}{song.year ? <> · <span class="year">{song.year}</span></> : null}</p>
+      <h1 class="display" style={titleSize(song.title)}>{song.title}</h1>
+    </div>
+  </div>
+  <p class="note">{song.note}</p>
+  {song.themes.length > 0 && (
+    <div class="chips" aria-label="Themes">
+      {song.themes.map((t) => <a class="chip" href={url.search("theme:" + t)}>{t}</a>)}
+    </div>
+  )}
+  {takes.length > 1 && <p class="soft takes">Takes on the album: {takes.join(" · ")}</p>}
+  {elsewhere.map((t) => <p class="soft takes">Also on <a href={url.album(t.album)}>{albumById.get(t.album)?.title}</a>: {t.title}</p>)}
+  <Words song={song} class="words-one" />
+  <Player spotify={song.spotify} youtube={song.youtube} title={song.title} />
+  </div>
+  <div class="col main">
+  <Words song={song} class="desk" />
+  {conns.length > 0 && (
+    <>
+      <h2 class="section-title">Connections</h2>
+      <div class="conns">{conns.map((c) => <ConnectionCard words={c.words} other={c.other} why={c.why} />)}</div>
+      <div class="actions">
+        <a class="button accent" href={url.threadFrom(song.id)}>Start a thread from here</a>
+        <a class="button" href={url.map(song.id)}>See it on the map</a>
+      </div>
+      <section class="desk near" aria-label="On the map">
+        <h2 class="section-title">On the map</h2>
+        <MapView focus={song.id} mode="small" />
+      </section>
+    </>
+  )}
+  {(inThreads.length > 0 || conns.length > 0) && (
+    <section class="band" aria-label="In threads">
+      <h2 class="section-title">In threads</h2>
+      <ul class="list">
+        {inThreads.map((t) => <li><a href={url.thread(t.id)}><span>{t.title}</span><span class="soft n">{t.steps.length} songs ›</span></a></li>)}
+        {conns.length > 0 && <li><a href={url.threadFrom(song.id)}><span>From {song.title}</span><span class="soft n">its own thread ›</span></a></li>}
+      </ul>
+    </section>
+  )}
+  {sameYear.length > 0 && (
+    <section class="band" aria-label={`The same year, ${song.year}`}>
+      <h2 class="section-title">The same year · <span class="year">{song.year}</span></h2>
+      <ul class="list sy">
+        {sameYear.map((s) => <li><a href={url.song(s.id)}><span>{s.title}</span><span class="soft n">{albumById.get(s.album!)?.title}</span></a></li>)}
+      </ul>
+    </section>
+  )}
+  </div>
+  </div>
+  {album && (prev || next) && (
+    <nav class="pn" aria-label={`More from ${album.title}`}>
+      {prev ? <a class="button" href={url.song(prev)}>‹ Previous</a> : <span></span>}
+      {next && <a class="button" href={url.song(next)}>Next ›</a>}
+    </nav>
+  )}
+  <ReadOn out={song.out} />
+</Shell>
+<style>
+  .head { display: flex; gap: 14px; align-items: flex-end; margin: 4px 0 10px; }
+  .cv { flex: 0 0 auto; }
+  .head > div { min-width: 0; }
+  .note { font-size: 18px; }
+  .takes { margin: 4px 0 0; font-size: 15px; }
+  .band .n { font-size: 14px; text-align: right; }
+  .band .section-title { margin-top: 32px; }
+  .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 32px; }
+  @media (min-width: 1100px) {
+    :global(.lyrics.words-one) { display: none; }
+    .song { margin-top: 8px; }
+    /* the left column stays in place; if it is taller than the window it scrolls on its own */
+    .side { max-height: calc(100dvh - var(--head-h) - 48px); overflow-y: auto; scrollbar-width: thin; padding: 4px 12px 12px 4px; margin: -4px -12px 0 -4px; }
+    /* the cover above the title, so a long word gets the column's full width (beside a 150 px cover it broke mid-word) */
+    .side .head { gap: 14px; margin-top: 0; flex-direction: column; align-items: flex-start; }
+    .side .cv :global(.cover.s) { width: 150px; }
+    .side .note { font-size: 17px; }
+    .side :global(.players) { margin-bottom: 0; }
+    .main > .section-title:first-of-type { margin-top: 36px; }
+    .conns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+    .conns :global(.conn) { margin: 0; }
+    .near { margin-top: 8px; }
+    .band { margin-top: 12px; }
+    .main > .band:first-child .section-title, :global(.lyrics.desk) + .band .section-title { margin-top: 24px; }
+    .sy { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
+    .pn { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 48px; }
+  }
+</style>

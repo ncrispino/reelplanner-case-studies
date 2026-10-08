@@ -1,0 +1,77 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 26 (addresses, gestures) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f08-step3-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f08-step3-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* one phone: the real screenshot, 330 x 715 (750 x 1624 at 0.44), thin ink hairline, radius 36, top at y 90 */
+  .f08-step3-ph { position:absolute; top:40px; width:332px; height:767px; }
+  .f08-step3-addr { position:absolute; left:-30px; width:392px; top:0; text-align:center; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f08-step3-frame { position:absolute; left:0; top:50px; width:330px; height:715px; border:1px solid var(--rp-ink); border-radius:36px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f08-step3-frame img { display:block; width:330px; height:auto; }
+  /* its gesture, under the phone */
+  .f08-step3-gest { position:absolute; width:392px; top:828px; text-align:center; font:400 26px/1.2 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f08-step3-gest.c { color:var(--rp-coral-deep); }
+</style>
+
+<div id="root" data-composition-id="08-step3" data-band="bottom" data-start="0" data-duration="12.565" data-width="1920" data-height="1080">
+
+  <div class="clip f08-step3-bg" id="f08-step3-bg" data-start="0" data-duration="12.565" data-track-index="0"></div>
+
+  <div class="clip f08-step3-scene" id="f08-step3-scene" data-start="0" data-duration="12.565" data-track-index="1">
+    <div class="f08-step3-ph" id="f08-step3-p1" data-artifact="/era/village/" style="left:210px">
+      <div class="f08-step3-addr">/era/village/</div>
+      <div class="f08-step3-frame"><img src="assets/shots/era-village.png" alt="The Greenwich Village era panel: typed title, a HOOTENANNY TONIGHT stamp"></div>
+    </div>
+    <div class="f08-step3-ph" id="f08-step3-p2" data-artifact="/era/electric/" style="left:590px">
+      <div class="f08-step3-addr">/era/electric/</div>
+      <div class="f08-step3-frame"><img src="assets/shots/era-electric.png" alt="The Going Electric era panel: a tilted cue card, an op-art target"></div>
+    </div>
+    <div class="f08-step3-ph" id="f08-step3-p3" data-artifact="/era/gospel/" style="left:970px">
+      <div class="f08-step3-addr">/era/gospel/</div>
+      <div class="f08-step3-frame"><img src="assets/shots/era-gospel.png" alt="The Gospel era panel: a REVIVAL TONIGHT handbill banner"></div>
+    </div>
+    <div class="f08-step3-ph" id="f08-step3-p4" data-artifact="/era/eighties/" style="left:1350px">
+      <div class="f08-step3-addr">/era/eighties/</div>
+      <div class="f08-step3-frame"><img src="assets/shots/era-eighties.png" alt="The '80s era panel: neon tube title on a dark grid"></div>
+    </div>
+
+    <div class="f08-step3-gest" id="f08-step3-g1" style="left:180px">typed flyer, rubber stamp</div>
+    <div class="f08-step3-gest" id="f08-step3-g2" style="left:560px">cue card, op-art</div>
+    <div class="f08-step3-gest" id="f08-step3-g3" style="left:940px">revival handbill</div>
+    <div class="f08-step3-gest c" id="f08-step3-g4" style="left:1320px">neon tubes</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "08-step3";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f08-step3-" + s); };
+  // a short push: in from below and a touch small, landing at scale 1 (never past it)
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var pop = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-18s): the four phones push in, one per era named, each gesture under it; then hold
+  push(tl, $("p1"), 0.209);
+  pop(tl, $("g1"), 0.977);
+  push(tl, $("p2"), 3.002);
+  pop(tl, $("g2"), 3.77);
+  push(tl, $("p3"), 5.794);
+  pop(tl, $("g3"), 6.561);
+  push(tl, $("p4"), 8.586);
+  pop(tl, $("g4"), 9.354);
+
+  tl.set({}, {}, 18);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

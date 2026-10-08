@@ -1,0 +1,19 @@
+✓ era hibbing: Bob Dylan § Early life and education
+  ✓ also https://en.wikipedia.org/wiki/Hibbing,_Minnesota (200)
+✓ era village: Bob Dylan § 1960–1962: Move to New York and stardom
+  ✓ also https://en.wikipedia.org/wiki/Greenwich_Village (200)
+✓ era electric: Bob Dylan § 1965–1969: Going electric and motorcycle accident
+  ✓ also https://en.wikipedia.org/wiki/Electric_Dylan_controversy (200)
+✓ era basement: Bob Dylan § 1965–1969: Going electric and motorcycle accident
+  ✓ also https://en.wikipedia.org/wiki/The_Basement_Tapes (200)
+✓ era tracks: Bob Dylan § 1970–1979: Return to touring and Christian music
+  ✓ also https://en.wikipedia.org/wiki/Rolling_Thunder_Revue (200)
+✓ era gospel: Bob Dylan § 1970–1979: Return to touring and Christian music
+✓ era eighties: Bob Dylan § 1980–1989: Career fluctuations
+  ✓ also https://en.wikipedia.org/wiki/Traveling_Wilburys (200)
+✓ era roots: Bob Dylan § 1990–1999: Return to folk music and resurgence
+✓ era renaissance: Bob Dylan § 2000–2009: Oscar win, memoir, and Modern Times
+  ✓ also https://en.wikipedia.org/wiki/2016_Nobel_Prize_in_Literature (200)
+✓ era standards: Bob Dylan § 2010–2019: Tempest and continued recordings
+✓ era rough: Bob Dylan § 2020–present: Rough and Rowdy Ways
+eras only: 11 of 11 written

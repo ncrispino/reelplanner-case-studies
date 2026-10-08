@@ -1,0 +1,163 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f08-step2-dataset-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f08-step2-dataset-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f08-step2-dataset-place { position:absolute; left:80px; top:36px; font:500 28px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the data/ folder's seven files, each with its plain word */
+  .f08-step2-dataset-fn { position:absolute; left:80px; height:56px; font:500 34px/56px "JetBrains Mono"; color:var(--rp-ink); white-space:pre; }
+  .f08-step2-dataset-fd { position:absolute; left:360px; height:56px; font:400 28px/56px "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f08-step2-dataset-ful { position:absolute; left:80px; top:378px; width:204px; height:3px; background:rgba(var(--rp-ink-rgb),0.85); transform-origin:0 50%; }
+
+  /* the code slab (theme block code-diff: typed context, wiped-in added lines) */
+  .f08-step2-dataset-slab { position:absolute; left:640px; top:110px; width:1200px; height:520px; border-radius:8px; background:var(--rp-slab); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); overflow:hidden; }
+  .f08-step2-dataset-bar { position:absolute; left:0; top:0; width:1200px; height:56px; background:var(--rp-slab-bar); }
+  .f08-step2-dataset-file { position:absolute; left:28px; top:14px; font:500 28px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.72); white-space:nowrap; }
+  .f08-step2-dataset-ln { position:absolute; left:70px; font:400 28px/84px "JetBrains Mono"; color:var(--rp-slab-ink); white-space:pre; font-variant-ligatures:none; }
+  .f08-step2-dataset-ln.add { background:rgba(var(--rp-syn-add-rgb),0.12); }
+  .f08-step2-dataset-ln .k { color:var(--rp-syn-key); } .f08-step2-dataset-ln .s { color:var(--rp-syn-str); }
+  .f08-step2-dataset-sign { position:absolute; left:30px; font:700 28px/84px "JetBrains Mono"; color:var(--rp-syn-add); }
+  .f08-step2-dataset-wipe { position:absolute; left:70px; width:1110px; height:124px; overflow:hidden; }
+  .f08-step2-dataset-wipe .f08-step2-dataset-ln { left:0; top:40px; }
+  .f08-step2-dataset-cover { position:absolute; left:70px; width:1110px; height:84px; background:var(--rp-slab); }
+  .f08-step2-dataset-caret { position:absolute; left:2px; top:27px; width:15px; height:30px; background:var(--rp-slab-ink); }
+
+  /* pinned words, on the field each one names */
+  .f08-step2-dataset-tok { position:relative; display:inline-block; line-height:36px; }
+  .f08-step2-dataset-ul { position:absolute; left:0; right:0; bottom:-3px; height:3px; background:rgba(var(--rp-slab-ink-rgb),0.85); transform-origin:0 50%; }
+  .f08-step2-dataset-ul.hot { height:4px; background:var(--rp-coral); }
+  /* pins sit in the empty right part of their own line, a short leader back to the line's end */
+  .f08-step2-dataset-ld { position:absolute; top:41px; width:26px; height:2px; background:rgba(var(--rp-slab-ink-rgb),0.6); transform-origin:0 50%; }
+  .f08-step2-dataset-ld.hot { background:var(--rp-coral); }
+  .f08-step2-dataset-pin { position:absolute; top:25px; padding:0 10px; font:400 28px/34px "Inter"; font-style:normal; color:var(--rp-slab); background:var(--rp-slab-ink); border-radius:5px; white-space:nowrap; }
+  .f08-step2-dataset-pin.hot { background:var(--rp-coral); color:var(--rp-on-ink); }
+
+  .f08-step2-dataset-note { position:absolute; left:640px; top:664px; font:400 28px/44px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="08-step2-dataset" data-band="bottom" data-duration="17.737" data-width="1920" data-height="1080">
+
+  <div class="clip f08-step2-dataset-bg" id="f08-step2-dataset-bg" data-start="0" data-duration="26" data-track-index="0"></div>
+
+  <div class="clip f08-step2-dataset-scene" id="f08-step2-dataset-scene" data-start="0" data-duration="26" data-track-index="1">
+    <div class="f08-step2-dataset-place" id="f08-step2-dataset-place">Step 2 · The dataset</div>
+
+    <div class="f08-step2-dataset-fn" id="f08-step2-dataset-n1" style="top:110px">eras.json</div>
+    <div class="f08-step2-dataset-fd" id="f08-step2-dataset-d1" style="top:110px">eras</div>
+    <div class="f08-step2-dataset-fn" id="f08-step2-dataset-n2" style="top:178px">moments.json</div>
+    <div class="f08-step2-dataset-fd" id="f08-step2-dataset-d2" style="top:178px">moments</div>
+    <div class="f08-step2-dataset-fn" id="f08-step2-dataset-n3" style="top:246px">albums.json</div>
+    <div class="f08-step2-dataset-fd" id="f08-step2-dataset-d3" style="top:246px">albums</div>
+    <div class="f08-step2-dataset-fn" id="f08-step2-dataset-n4" style="top:314px">songs.json</div>
+    <div class="f08-step2-dataset-fd" id="f08-step2-dataset-d4" style="top:314px">songs</div>
+    <div class="f08-step2-dataset-fn" id="f08-step2-dataset-n5" style="top:382px">links.json</div>
+    <div class="f08-step2-dataset-fd" id="f08-step2-dataset-d5" style="top:382px">connections</div>
+    <div class="f08-step2-dataset-fn" id="f08-step2-dataset-n6" style="top:450px">threads.json</div>
+    <div class="f08-step2-dataset-fd" id="f08-step2-dataset-d6" style="top:450px">threads</div>
+    <div class="f08-step2-dataset-fn" id="f08-step2-dataset-n7" style="top:518px">photos.json</div>
+    <div class="f08-step2-dataset-fd" id="f08-step2-dataset-d7" style="top:518px">photos</div>
+    <div class="f08-step2-dataset-ful" id="f08-step2-dataset-ful"></div>
+
+    <div class="f08-step2-dataset-slab" id="f08-step2-dataset-slab" data-artifact="data/songs.json">
+      <div class="f08-step2-dataset-bar"></div>
+      <div class="f08-step2-dataset-file">data/songs.json</div>
+
+      <div class="f08-step2-dataset-ln" id="f08-step2-dataset-L1" style="top:76px">{ <span class="k">"id"</span>: <span class="s">"blowin-in-the-wind"</span>,</div>
+      <div class="f08-step2-dataset-ln" id="f08-step2-dataset-L2" style="top:160px">  <span class="k">"album"</span>: <span class="s">"freewheelin"</span>,</div>
+
+      <div class="f08-step2-dataset-sign" id="f08-step2-dataset-a3" style="top:244px">+</div>
+      <div class="f08-step2-dataset-wipe" id="f08-step2-dataset-W3" style="top:204px"><div class="f08-step2-dataset-ln add" id="f08-step2-dataset-L3">  <span class="f08-step2-dataset-tok"><span class="k">"spotify"</span><i class="f08-step2-dataset-ul" id="f08-step2-dataset-u3"></i></span>: <span class="s">"…"</span>,<i class="f08-step2-dataset-ld" id="f08-step2-dataset-g3" style="left:294px"></i><em class="f08-step2-dataset-pin" id="f08-step2-dataset-p3" data-gloss="spotify" style="left:326px">player</em></div></div>
+
+      <div class="f08-step2-dataset-sign" id="f08-step2-dataset-a4" style="top:328px">+</div>
+      <div class="f08-step2-dataset-wipe" id="f08-step2-dataset-W4" style="top:288px"><div class="f08-step2-dataset-ln add" id="f08-step2-dataset-L4">  <span class="f08-step2-dataset-tok"><span class="k">"youtube"</span><i class="f08-step2-dataset-ul" id="f08-step2-dataset-u4"></i></span>: <span class="k">null</span>,<i class="f08-step2-dataset-ld" id="f08-step2-dataset-g4" style="left:310px"></i><em class="f08-step2-dataset-pin" id="f08-step2-dataset-p4" data-gloss="youtube" style="left:342px">video</em></div></div>
+
+      <div class="f08-step2-dataset-sign" id="f08-step2-dataset-a5" style="top:412px">+</div>
+      <div class="f08-step2-dataset-wipe" id="f08-step2-dataset-W5" style="top:372px"><div class="f08-step2-dataset-ln add" id="f08-step2-dataset-L5">  <span class="f08-step2-dataset-tok"><span class="k">"lyrics"</span><i class="f08-step2-dataset-ul hot" id="f08-step2-dataset-u5"></i></span>: <span class="s">"https://www.bobdylan.com/songs/blowin-wind/"</span><i class="f08-step2-dataset-ld hot" id="f08-step2-dataset-g5" style="left:966px"></i><em class="f08-step2-dataset-pin hot" id="f08-step2-dataset-p5" data-gloss="lyrics" style="left:998px">lyrics</em></div></div>
+
+      <div class="f08-step2-dataset-ln" id="f08-step2-dataset-L6" style="top:496px">}</div>
+
+      <div class="f08-step2-dataset-cover" id="f08-step2-dataset-v1" style="top:76px"><i class="f08-step2-dataset-caret" id="f08-step2-dataset-k1"></i></div>
+      <div class="f08-step2-dataset-cover" id="f08-step2-dataset-v2" style="top:160px"><i class="f08-step2-dataset-caret" id="f08-step2-dataset-k2"></i></div>
+    </div>
+
+    <div class="f08-step2-dataset-note" id="f08-step2-dataset-note">no lyrics copied: a link to the official page</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "08-step2-dataset";
+  var $ = function (s) { return document.getElementById("f08-step2-dataset-" + s); };
+  var CW = 16.8;   // JetBrains Mono advance at 28px (0.6em)
+  var WW = 1110;   // wipe window width
+
+  // a typer the timeline drives (file names on the paper)
+  function typer(el, text) {
+    var n = text.length;
+    return function (p) { el.textContent = text.slice(0, Math.floor(p * n + 1e-6)); };
+  }
+  var typers = [];
+  for (var i = 1; i <= 7; i++) { var el = $("n" + i); typers.push(typer(el, el.textContent)); typers[i - 1](0); }
+
+  // initial states, outside the timeline
+  gsap.set([$("p3"), $("p4"), $("p5")], { opacity: 0, y: 8 });
+  gsap.set([$("u3"), $("u4"), $("u5"), $("g3"), $("g4"), $("g5")], { scaleX: 0 });
+  gsap.set($("L6"), { opacity: 0 });
+  gsap.set([$("a3"), $("a4"), $("a5")], { opacity: 0 });
+  ["W3", "W4", "W5"].forEach(function (w) { gsap.set($(w), { x: -WW }); });
+  ["L3", "L4", "L5"].forEach(function (l) { gsap.set($(l), { x: WW }); });
+  gsap.set([$("k1"), $("k2")], { opacity: 0 });
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0–8s): the anchor, then seven files type down, each with its plain word
+  tl.fromTo($("place"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.066);
+  var starts = [0.6, 1.5, 2.4, 3.3, 4.2, 5.4, 6.4];
+  starts.forEach(function (t0, i) {
+    var d = { p: 0 }, T = typers[i];
+    tl.to(d, { p: 1, duration: 0.5, ease: "none", onUpdate: function () { T(d.p); } }, t0);
+    tl.fromTo($("d" + (i + 1)), { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, t0 + 0.5);
+  });
+
+  // Scene 2 (8–20s): songs.json opens on the slab; the record types, then three new fields wipe in
+  tl.fromTo($("ful"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.out" }, 5.37);
+  tl.fromTo($("slab"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 5.436);
+  var lines = [[29, 8.8, 1.0], [25, 10.0, 0.9]];
+  lines.forEach(function (L, i) {
+    var n = i + 1;
+    tl.set($("k" + n), { opacity: 1 }, L[1] - 0.2);
+    tl.fromTo($("v" + n), { x: 0 }, { x: L[0] * CW, duration: L[2], ease: "steps(" + L[0] + ")" }, L[1]);
+    tl.set($("v" + n), { opacity: 0 }, L[1] + L[2] + 0.15);
+  });
+  // each added field: sign, wipe, then its pinned word rises and its underline draws
+  [["3", 11.6], ["4", 12.9], ["5", 14.2]].forEach(function (f) {
+    var n = f[0], t = f[1];
+    tl.to($("a" + n), { opacity: 1, duration: 0.2, ease: "none" }, t);
+    tl.to($("W" + n), { x: 0, duration: 0.7, ease: "power2.inOut" }, t);
+    tl.to($("L" + n), { x: 0, duration: 0.7, ease: "power2.inOut" }, t);
+    tl.to($("p" + n), { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t + 0.8);
+    tl.to($("u" + n), { scaleX: 1, duration: 0.4, ease: "power1.inOut" }, t + 0.85);
+    tl.to($("g" + n), { scaleX: 1, duration: 0.3, ease: "power3.out" }, t + 0.7);
+  });
+  // the record closes once the lyrics line is in (all done by ~15.5s; the scene rests after)
+  tl.to($("L6"), { opacity: 1, duration: 0.3, ease: "power3.out" }, 14.9);
+
+  // Scene 3 (20–26s): the note under the slab, then hold
+  tl.fromTo($("note"), { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 13.524);
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 25.99);
+
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

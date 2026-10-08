@@ -1,0 +1,41 @@
+---
+import Shell from "../../layouts/Shell.astro";
+import { at } from "../../lib/data";
+---
+<Shell title="Search" era="village" tab="search">
+  <p class="kicker">Search</p>
+  <label class="field"><span class="sr">Search eras, moments, albums and songs</span>
+    <input id="q" type="search" placeholder="Tangled, 1966, theme:protest…" autocomplete="off" enterkeyhint="search" /></label>
+  <div id="results" aria-live="polite" data-index={at("/search-index.json")}></div>
+</Shell>
+<script>
+  import { mountSearch } from "../../islands/search";
+  async function setup() {
+    const input = document.querySelector<HTMLInputElement>("#q");
+    const out = document.querySelector<HTMLElement>("#results");
+    if (!input || !out || input.dataset.ready) return;
+    input.dataset.ready = "1";
+    input.value = new URLSearchParams(location.search).get("q") ?? "";
+    const rows = await (await fetch(out.dataset.index!)).json();
+    mountSearch(input, out, rows);
+    if (!input.value) input.focus();
+  }
+  setup();
+  document.addEventListener("astro:page-load", setup);
+</script>
+<style>
+  .field { display: block; margin: 6px 0 12px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  input { width: 100%; min-height: 52px; padding: 12px 16px; font: 18px var(--label); border-radius: 0; border: 2px solid var(--ink);
+    background: var(--card); color: var(--ink); box-shadow: 4px 4px 0 var(--accent); }
+  /* a computer: three columns, Eras and Moments, Albums, Songs (plan 2026-10-07-desktop, step 6) */
+  @media (min-width: 1100px) {
+    .field { max-width: 720px; }
+    #results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto 1fr; column-gap: 40px; align-items: start; }
+    #results > :global(p) { grid-column: 1 / -1; }
+    #results :global(.g-eras) { grid-column: 1; grid-row: 1; }
+    #results :global(.g-moments) { grid-column: 1; grid-row: 2; }
+    #results :global(.g-albums) { grid-column: 2; grid-row: 1 / span 2; }
+    #results :global(.g-songs) { grid-column: 3; grid-row: 1 / span 2; }
+  }
+</style>

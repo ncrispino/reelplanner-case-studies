@@ -1,0 +1,16 @@
+---
+import Shell from "../layouts/Shell.astro";
+import { url } from "../lib/data";
+---
+<Shell title="Not found" era="eighties" tab="search">
+  <p class="kicker">Not found</p>
+  <h1 class="display" style="font-size:clamp(34px,10vw,56px)">No page at that address</h1>
+  <p class="soft">Here is what search finds for it:</p>
+  <a id="go" class="button accent" href={url.search()} data-search={url.search()}>Search</a>
+</Shell>
+<script>
+  // Turn the mistyped address into a search: /album/blonde-on-blond/ → "blonde on blond".
+  const words = location.pathname.split("/").filter(Boolean).pop()?.replace(/-/g, " ") ?? "";
+  const go = document.querySelector<HTMLElement>("#go")!.dataset.search!;
+  if (words) location.replace(`${go}?q=${encodeURIComponent(words)}`);
+</script>

@@ -1,0 +1,1865 @@
+{
+  "project": "walkthrough-video",
+  "title": "walkthrough-video",
+  "planDir": ".reelplanning/plans/2026-10-07-desktop",
+  "kind": "walkthrough",
+  "totalSeconds": 183.494,
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "What landed",
+      "fromFrame": 1,
+      "toFrame": 16,
+      "start": 0,
+      "end": 183.494,
+      "linearSeconds": 183.494,
+      "watchedSeconds": 177.494,
+      "decisions": [
+        "q4"
+      ]
+    }
+  ],
+  "levels": null,
+  "quizzes": [],
+  "autonomy": [
+    {
+      "id": "d1",
+      "frameIndex": 6,
+      "planStep": 4,
+      "chose": "a moment's \"songs it is tied to\" are the Dylan songs its story names by title, plus the era's records from that year",
+      "insteadOf": "the songs it is tied to",
+      "why": "the data has no moment-to-song links; this shows only ties that are really there, and nothing when none is",
+      "check": "src/pages/moment/[id].astro",
+      "at": 85.348
+    },
+    {
+      "id": "d2",
+      "frameIndex": 8,
+      "planStep": 5,
+      "chose": "The tablet band (768–1099 px) also hides the map's own Cards / Map toggle beside a thread's cards",
+      "insteadOf": "the tablet exactly as today",
+      "why": "the plan's own leftover-toggle bug showed there too: the thread's toggle was hidden, the map's was not",
+      "check": "src/components/ThreadCards.astro",
+      "at": 108.857
+    },
+    {
+      "id": "d3",
+      "frameIndex": 9,
+      "planStep": 5,
+      "chose": "the threads list shows its covers from all of a thread's songs' albums, first four distinct; two threads (Borrowed tunes, Songs others made famous) have none and show no covers [deviation] (changed after review, \"i would like to give some visuals for these as well\": a step not on his albums, an old tune or another artist's version, now shows the cover of the Dylan song it is connected to, so every thread has four covers)",
+      "insteadOf": "the covers of its first songs",
+      "why": "their first songs are traditional or other artists' recordings with no album cover",
+      "check": "src/pages/threads/index.astro",
+      "at": 117.582
+    },
+    {
+      "id": "a23",
+      "frameIndex": 13,
+      "planStep": 6,
+      "chose": "the desktop check also fails when the phone's bottom bar or no header shows, when › beside an era or › beside a thread's cards moves nothing, and it presses ← to come back",
+      "insteadOf": "only the plan's list",
+      "why": "the same \"a control showing that does nothing\" rule, applied to the controls this plan adds",
+      "check": "tools/check-desktop.mjs",
+      "at": 153.817
+    }
+  ],
+  "autonomyGroups": [
+    {
+      "id": "stop-2",
+      "stop": true,
+      "frameIndex": 2,
+      "planStep": 1,
+      "ids": [
+        "a2",
+        "a4"
+      ],
+      "calls": [
+        {
+          "id": "a2",
+          "planStep": 1,
+          "chose": "the + / − buttons show from 768 px, not on phones",
+          "insteadOf": "on phones too",
+          "why": "a phone pinches, and the brief keeps phones looking as today",
+          "check": "src/components/MapView.astro"
+        },
+        {
+          "id": "a4",
+          "planStep": 1,
+          "chose": "the hover label replaces the dot's SVG <title> tooltip; each dot gets an aria-label instead",
+          "insteadOf": "keep the native tooltip too",
+          "why": "two tooltips at once on a computer",
+          "check": "src/islands/map.ts"
+        }
+      ],
+      "at": 28.174
+    },
+    {
+      "id": "stop-3",
+      "stop": true,
+      "frameIndex": 3,
+      "planStep": 2,
+      "ids": [
+        "a5",
+        "a7"
+      ],
+      "calls": [
+        {
+          "id": "a5",
+          "planStep": 2,
+          "chose": "the header is sticky (stays at the top as you scroll), 64 px, on the era's paper",
+          "insteadOf": "a header that scrolls away",
+          "why": "search \"always at hand\", as the plan puts it",
+          "check": "src/styles/site.css (.masthead)"
+        },
+        {
+          "id": "a7",
+          "planStep": 2,
+          "chose": "the tablet band keeps today's 672→720 px column with 48 px side margins (max-width 816 px)",
+          "insteadOf": "widening the column itself",
+          "why": "the plan says \"today's layout with wider margins\"",
+          "check": "src/styles/site.css"
+        }
+      ],
+      "at": 40.313
+    },
+    {
+      "id": "stop-4",
+      "stop": true,
+      "frameIndex": 4,
+      "planStep": 3,
+      "ids": [
+        "a9",
+        "a11",
+        "a12"
+      ],
+      "calls": [
+        {
+          "id": "a9",
+          "planStep": 3,
+          "chose": "the desktop spread is the same markup as the phone panel (new EraSpread.astro used at every width), laid out by CSS grid from 1100 px",
+          "insteadOf": "a second, desktop-only set of era sections",
+          "why": "one DOM: no duplicated photos or text, and the phone panel is unchanged",
+          "check": "src/components/EraSpread.astro"
+        },
+        {
+          "id": "a11",
+          "planStep": 3,
+          "chose": "the crossfade is the header and window colour fading (0.5 s) plus the leaving era's text dimming to 25 %",
+          "insteadOf": "a full-screen fade between eras",
+          "why": "a fade on top of a scroll-snap reads as a flash",
+          "check": "src/components/EraSpread.astro"
+        },
+        {
+          "id": "a12",
+          "planStep": 3,
+          "chose": "timeline names are clipped with an ellipsis on short eras (each stretch at least 64 px); the current era's name is written out in full over its neighbours",
+          "insteadOf": "names under every stretch in full",
+          "why": "Back to the Roots (2 years) is about 30 px wide at 1440 px",
+          "check": "src/components/Timeline.astro"
+        }
+      ],
+      "at": 59.492
+    },
+    {
+      "id": "stop-5",
+      "stop": true,
+      "frameIndex": 5,
+      "planStep": 4,
+      "ids": [
+        "a13",
+        "a14"
+      ],
+      "calls": [
+        {
+          "id": "a13",
+          "planStep": 4,
+          "chose": "the song page's words card is rendered twice (Words.astro): once in the phone position, once in the right column, each hidden at the other width",
+          "insteadOf": "moving the players with script, or a grid without the sticky column",
+          "why": "the phone order puts the words before the players while the desktop puts the players on the left; this keeps the phone exactly as today with no script",
+          "check": "src/pages/song/[id].astro, src/components/Words.astro"
+        },
+        {
+          "id": "a14",
+          "planStep": 4,
+          "chose": "the song page's left column holds the cover at 150 px above the title (changed in `66db1e0`: beside a 150 px cover, \"Stardust\" broke mid-word at 1440 px), and scrolls on its own if taller than the window",
+          "insteadOf": "the cover across the whole left column",
+          "why": "a 380 px cover plus two players is taller than a 900 px window, and a sticky column that tall hides its players",
+          "check": "src/pages/song/[id].astro"
+        }
+      ],
+      "at": 77.007
+    },
+    {
+      "id": "stop-7",
+      "stop": true,
+      "frameIndex": 7,
+      "planStep": 5,
+      "ids": [
+        "a17",
+        "a18",
+        "a20"
+      ],
+      "calls": [
+        {
+          "id": "a17",
+          "planStep": 5,
+          "chose": "the line of years puts each card's year on the line and writes the gap to the next card on the line between them (\"2 yrs →\"); the cards are evenly spaced",
+          "insteadOf": "spacing cards in proportion to the years between them",
+          "why": "four cards on screen at once need equal widths; a 40-year gap would push the next card off the row",
+          "check": "src/components/ThreadCards.astro"
+        },
+        {
+          "id": "a18",
+          "planStep": 5,
+          "chose": "from 1100 px a thread's map opens on its first song's neighbourhood (as a phone's does), and hovering a card lights its dot and glides the map to it when it is out of view; a song's map pages and small map also open on the neighbourhood; /map/ shows everything",
+          "insteadOf": "every map fitted to all its songs, as on a tablet",
+          "why": "the layout is about 3,000 map units across: fitted to a thread's songs, a 1200 × 520 map was at 0.18 zoom with 5 px labels; labels also keep at least 12.5 px on screen from 1100 px",
+          "check": "src/islands/map.ts (show), src/components/ThreadCards.astro"
+        },
+        {
+          "id": "a20",
+          "planStep": 5,
+          "chose": "on /map/<song>/ the panel opens already showing that song; /map/ opens on \"Click a dot…\"",
+          "insteadOf": "an empty panel until you click",
+          "why": "the page is about that song, and its dot is already lit",
+          "check": "src/components/MapView.astro"
+        }
+      ],
+      "at": 100.004
+    },
+    {
+      "id": "list-15",
+      "list": true,
+      "frameIndex": 15,
+      "planStep": null,
+      "ids": [
+        "a1",
+        "a3",
+        "a6",
+        "a8",
+        "a10",
+        "a15",
+        "a16",
+        "a25",
+        "a19",
+        "a21",
+        "a22",
+        "a24"
+      ],
+      "calls": [
+        {
+          "id": "a1",
+          "planStep": 1,
+          "chose": "each dot's invisible hit ring is 28 map units across (r 14)",
+          "insteadOf": "a ring 14 px across",
+          "why": "read \"a ring 14 px across around it\" as 7 px each side of the 14 px dot; that is what gives the plan's 44 px at a phone's zoom (about 1.6)",
+          "check": "src/islands/map.ts"
+        },
+        {
+          "id": "a3",
+          "planStep": 1,
+          "chose": "the phone check tries a touch tap and a pointer press-release on a dot, both must open the song",
+          "insteadOf": "a tap only",
+          "why": "headless Chrome routes a synthetic tap past pointer capture, so a tap alone passed against the old bug; the press fails on it",
+          "check": "tools/check-phone.mjs"
+        },
+        {
+          "id": "a6",
+          "planStep": 2,
+          "chose": "the header search is a plain GET form to /search/?q=… (works without script); \"/\" focuses it only when the header shows (from 1100 px)",
+          "insteadOf": "a scripted field",
+          "why": "the Enter case needs nothing more, and Astro's router already handles GET forms",
+          "check": "src/layouts/Shell.astro"
+        },
+        {
+          "id": "a8",
+          "planStep": 2,
+          "chose": "map pages light \"Map\" in the header but still \"Threads\" in the phone's bottom bar (it has no Map tab)",
+          "insteadOf": "adding a Map tab to the bottom bar",
+          "why": "phones stay as they are",
+          "check": "src/layouts/Shell.astro"
+        },
+        {
+          "id": "a10",
+          "planStep": 3,
+          "chose": "scrolling keeps replaceState for the address (/era/<id>/), as today; ‹ ›, keys and the timeline do the same",
+          "insteadOf": "pushState per era, so Back steps through eras",
+          "why": "a scroll would otherwise fill the history with eleven entries; a shared link and a reload still open that era",
+          "check": "src/components/Timeline.astro"
+        },
+        {
+          "id": "a15",
+          "planStep": 4,
+          "chose": "the small map on a song page is the right column's full width × 300 px, under the connections",
+          "insteadOf": "360 × 300",
+          "why": "a 360 px box alone in a 780 px column left a hole",
+          "check": "src/components/MapView.astro (.m-small)"
+        },
+        {
+          "id": "a16",
+          "planStep": 4,
+          "chose": "the album page's left column is not sticky",
+          "insteadOf": "sticky like the song page's",
+          "why": "a 480 px cover plus \"why it matters\" is taller than the window",
+          "check": "src/pages/album/[id].astro"
+        },
+        {
+          "id": "a25",
+          "planStep": 5,
+          "chose": "The map panel's rows are one built file, `/map-panel.json`, fetched on the first click, and a song with no preview shows its note",
+          "insteadOf": "the panel's data written into every map page",
+          "why": "230 songs' rows in each of the 230 map pages would make each page much heavier; one file is cached after the first click",
+          "check": "src/pages/map-panel.json.ts"
+        },
+        {
+          "id": "a19",
+          "planStep": 5,
+          "chose": "the era filter is the legend turned into buttons by script from 1100 px (role=button, 44 px tall, one era at a time, click again to clear)",
+          "insteadOf": "real buttons at every width, or several eras at once",
+          "why": "the phone legend stays as it is (and is not a filter there); \"click an era to dim the others\" names one",
+          "check": "src/components/MapView.astro"
+        },
+        {
+          "id": "a21",
+          "planStep": 6,
+          "chose": "search's three columns are placed by CSS on group sections (Eras and Moments stacked in the first column); on a phone the groups keep today's order, best match first",
+          "insteadOf": "re-rendering the results in a fixed column order",
+          "why": "one renderer for both widths, phone output unchanged",
+          "check": "src/islands/search.ts, src/pages/search/index.astro"
+        },
+        {
+          "id": "a22",
+          "planStep": 6,
+          "chose": "\"content narrower than 60 %\" is measured as the horizontal span of everything showing inside <main>; the 404 page is exempt; the era-background test reads the colour behind the window's right edge, 85 % down (clear of the ‹ › buttons), against the body era's --paper",
+          "insteadOf": "measuring .page's width, or sampling the left edge",
+          "why": ".page is 1200 px even when its content sits in a 720 px column; the home page's left half is a photograph",
+          "check": "tools/check-desktop.mjs"
+        },
+        {
+          "id": "a24",
+          "planStep": 6,
+          "chose": "`npm test` runs the data check, the build, the phone check and the desktop check; `npm run check:desktop` runs the last alone; `--shots <dir>` also writes the 1440 × 900 screenshots there",
+          "insteadOf": "a separate script per size",
+          "why": "the plan's npm test order; the shots flag gives the review folder its pictures",
+          "check": "package.json, tools/check-desktop.mjs"
+        }
+      ],
+      "at": 177.444
+    }
+  ],
+  "openQuestion": {
+    "question": "Seeing it run, anything you'd change?",
+    "frameIndex": 16,
+    "at": 183.444
+  },
+  "watchedSeconds": 177.494,
+  "frames": [
+    {
+      "index": 1,
+      "title": "The site on a computer",
+      "compositionId": "01-built",
+      "type": "hook",
+      "durationSeconds": 14.379,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": "What landed",
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "On a computer, the site now fills the window. A header with search, each era across the whole screen, two-column pages, threads along the years, and a map you can click. On a phone, nothing changed: eighteen pages compared pixel for pixel are the same.",
+      "start": 0,
+      "thumb": "snapshots/frame-00-at-7.44s.png",
+      "terms": [
+        "era",
+        "search",
+        "thread"
+      ],
+      "defines": [
+        "era",
+        "search",
+        "thread"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 1
+      }
+    },
+    {
+      "index": 2,
+      "title": "Step 1 · The map",
+      "compositionId": "02-stop1",
+      "type": "cta",
+      "durationSeconds": 13.845,
+      "planStep": 1,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step one. A click or a tap on a dot opens its song now, on a phone too. Two choices: the plus and minus buttons show from tablet width up, since a phone pinches; and hovering a dot shows its own label in place of the browser's tooltip.",
+      "start": 14.379,
+      "thumb": "snapshots/frame-01-at-21.55s.png",
+      "autonomyStop": [
+        "a2",
+        "a4"
+      ],
+      "terms": [
+        "call",
+        "tag",
+        "dot"
+      ],
+      "defines": [
+        "call",
+        "tag"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 2
+      }
+    },
+    {
+      "index": 3,
+      "title": "Step 2 · The header, and the tablet",
+      "compositionId": "03-stop2",
+      "type": "cta",
+      "durationSeconds": 12.139,
+      "planStep": 2,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step two. The header stays at the top as you scroll, so search is always there. And a tablet keeps today's column, with wider margins: at nine hundred pixels a thread still has its cards and map side by side.",
+      "start": 28.224,
+      "thumb": "snapshots/frame-02-at-34.54s.png",
+      "autonomyStop": [
+        "a5",
+        "a7"
+      ],
+      "terms": [
+        "header"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 3
+      }
+    },
+    {
+      "index": 4,
+      "title": "Step 3 · Each era a screen",
+      "compositionId": "04-stop3",
+      "type": "cta",
+      "durationSeconds": 19.179,
+      "planStep": 3,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step three. Each era fills the screen, and scrolling snaps to the next. The era is one piece of page at every width, laid out side by side from eleven hundred pixels. As you scroll, the header's colour fades into the next era's and the old text dims. And on the timeline, short eras' names are cut short; the current one is written in full.",
+      "start": 40.363,
+      "thumb": "snapshots/frame-03-at-50.2s.png",
+      "autonomyStop": [
+        "a9",
+        "a11",
+        "a12"
+      ],
+      "terms": [
+        "era"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 4
+      }
+    },
+    {
+      "index": 5,
+      "title": "Step 4 · Two-column pages",
+      "compositionId": "05-stop4",
+      "type": "cta",
+      "durationSeconds": 17.515,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step four. A song page has the cover, note and players on the left, and the words, connections and a small map on the right. The words card is drawn twice, once for each layout, so the phone page stays exactly as it was. And the cover sits small, above the title, so a long title never breaks inside a word.",
+      "start": 59.542,
+      "thumb": "snapshots/frame-04-at-68.3s.png",
+      "autonomyStop": [
+        "a13",
+        "a14"
+      ],
+      "terms": [
+        "connection",
+        "cover"
+      ],
+      "defines": [
+        "connection"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 5
+      }
+    },
+    {
+      "index": 6,
+      "title": "Off-plan change · a moment's songs",
+      "compositionId": "06-d1",
+      "type": "cta",
+      "durationSeconds": 8.341,
+      "planStep": 4,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "d1",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Off the plan: a moment lists the songs its story names, and the era's records from that year, because the data has no list of songs for each moment.",
+      "start": 77.057,
+      "thumb": "snapshots/frame-05-at-81.48s.png",
+      "terms": [
+        "moment",
+        "list"
+      ],
+      "defines": [
+        "moment"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 6
+      }
+    },
+    {
+      "index": 7,
+      "title": "Step 5 · Threads and the map",
+      "compositionId": "07-stop5",
+      "type": "cta",
+      "durationSeconds": 14.656,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step five. A thread's cards are spaced evenly, with the years between them written on the line, since a forty-year gap would push the next card off the row. Its map opens on the first song's neighbours. And the map page opens with its song already in the panel.",
+      "start": 85.398,
+      "thumb": "snapshots/frame-06-at-92.73s.png",
+      "autonomyStop": [
+        "a17",
+        "a18",
+        "a20"
+      ],
+      "terms": [
+        "thread"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 7
+      }
+    },
+    {
+      "index": 8,
+      "title": "Off-plan change · the tablet's toggle",
+      "compositionId": "08-d2",
+      "type": "cta",
+      "durationSeconds": 8.853,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "d2",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Off the plan: the tablet also hides the map's own Cards and Map button beside a thread's cards, the same leftover button this plan removes on a computer.",
+      "start": 100.054,
+      "thumb": "snapshots/frame-07-at-104.48s.png",
+      "terms": [
+        "tablet",
+        "cards and map button"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 8
+      }
+    },
+    {
+      "index": 9,
+      "title": "Off-plan change · the threads list's covers",
+      "compositionId": "09-d3",
+      "type": "cta",
+      "durationSeconds": 8.725,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "d3",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "And the threads list shows each thread's covers from all its songs; an old tune, or another artist's version, shows the cover of the Dylan song it leads to.",
+      "start": 108.907,
+      "thumb": "snapshots/frame-08-at-113.52s.png",
+      "terms": [
+        "thread",
+        "threads list",
+        "cover",
+        "list"
+      ],
+      "change": {
+        "status": "edited",
+        "said": false,
+        "shown": true,
+        "retimed": true,
+        "wasIndex": 9
+      }
+    },
+    {
+      "index": 10,
+      "title": "Question 4 · A way to the thread cards",
+      "compositionId": "10-q4",
+      "type": "cta",
+      "durationSeconds": 14.656,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": "q4",
+      "branch": null,
+      "question": "On a computer, should the full map offer a way to the thread cards?",
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [
+        {
+          "id": "a",
+          "label": "Add \"A thread from this song ›\" to the map page",
+          "why": "One link beside the title; one more control on a full map.",
+          "recommended": true
+        },
+        {
+          "id": "b",
+          "label": "No link: open the song, then start a thread",
+          "why": "As built; two clicks, through the song page.",
+          "recommended": false
+        }
+      ],
+      "narration": "One question came up while building. On a computer, the Cards and Map button is gone, so the full map has no way to the thread cards. A: add a link, a thread from this song, to the map page. B: no link; open the song, then start a thread from there. I recommend A.",
+      "start": 117.632,
+      "thumb": "snapshots/frame-09-at-125.21s.png",
+      "terms": [
+        "thread"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 10
+      }
+    },
+    {
+      "index": 11,
+      "title": "If A: a link on the map page",
+      "compositionId": "11-q4-a",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q4=a",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With A, the map page gets one link, under its title, to a thread built from its song.",
+      "start": 132.288,
+      "thumb": "snapshots/frame-10-at-135.54s.png",
+      "terms": [
+        "header"
+      ],
+      "change": {
+        "status": "edited",
+        "said": false,
+        "shown": true,
+        "retimed": false,
+        "wasIndex": 11
+      }
+    },
+    {
+      "index": 12,
+      "title": "If B: as built",
+      "compositionId": "12-q4-b",
+      "type": "benefit_highlight",
+      "durationSeconds": 6,
+      "planStep": 5,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": "q4=b",
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "With B, it stays as built: two clicks, through the song page.",
+      "start": 138.288,
+      "thumb": "snapshots/frame-11-at-141.54s.png",
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 12
+      }
+    },
+    {
+      "index": 13,
+      "title": "Step 6 · Search, and the desktop check",
+      "compositionId": "13-stop6",
+      "type": "cta",
+      "durationSeconds": 9.579,
+      "planStep": 6,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": "a23",
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "Step six. Search shows three columns. And the desktop check fails on more than the plan listed: the phone's bottom bar or no header, and any arrow that moves nothing.",
+      "start": 144.288,
+      "thumb": "snapshots/frame-12-at-149.08s.png",
+      "terms": [
+        "desktop check",
+        "search"
+      ],
+      "defines": [
+        "desktop check"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 13
+      }
+    },
+    {
+      "index": 14,
+      "title": "What ran",
+      "compositionId": "14-ran",
+      "type": "benefit_highlight",
+      "durationSeconds": 11.627,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "What ran: the data check, the build of fourteen hundred pages, the phone check and the new desktop check at two sizes, all passing. Not done: question four, and the hover label is checked only by hand.",
+      "start": 153.867,
+      "thumb": "snapshots/frame-13-at-159.68s.png",
+      "terms": [
+        "data check",
+        "phone check"
+      ],
+      "defines": [
+        "data check",
+        "phone check"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 14
+      }
+    },
+    {
+      "index": 15,
+      "title": "The rest of the choices",
+      "compositionId": "15-list",
+      "type": "cta",
+      "durationSeconds": 12,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "autonomyList": [
+        "a1",
+        "a3",
+        "a6",
+        "a8",
+        "a10",
+        "a15",
+        "a16",
+        "a25",
+        "a19",
+        "a21",
+        "a22",
+        "a24"
+      ],
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "The rest of the choices are on this list, twelve of them, one line each.",
+      "start": 165.494,
+      "thumb": "snapshots/frame-14-at-171.49s.png",
+      "terms": [
+        "call",
+        "list"
+      ],
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 15
+      }
+    },
+    {
+      "index": 16,
+      "title": "Anything you'd change?",
+      "compositionId": "16-ending",
+      "type": "cta",
+      "durationSeconds": 6,
+      "planStep": null,
+      "planQuestions": [],
+      "specSection": null,
+      "components": [],
+      "decision": null,
+      "branch": null,
+      "question": null,
+      "chapterStart": null,
+      "knowledge": null,
+      "quiz": null,
+      "answer": null,
+      "explain": null,
+      "autonomy": null,
+      "chose": null,
+      "insteadOf": null,
+      "why": null,
+      "check": null,
+      "kind": null,
+      "summary": null,
+      "options": [],
+      "narration": "That's the site on a computer. Seeing it run, anything you'd change?",
+      "start": 177.494,
+      "thumb": "snapshots/frame-15-at-180.49s.png",
+      "change": {
+        "status": "same",
+        "said": false,
+        "shown": false,
+        "retimed": false,
+        "wasIndex": 16
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "q4",
+      "kind": "one",
+      "frameIndex": 10,
+      "compositionId": "10-q4",
+      "planStep": 5,
+      "question": "On a computer, should the full map offer a way to the thread cards?",
+      "questionMore": "The Cards | Map button is gone on a computer, so the full map has no way back to the cards that a phone's \"Cards\" gives.",
+      "at": 132.238,
+      "resumeAt": 144.288,
+      "options": [
+        {
+          "id": "a",
+          "label": "Add \"A thread from this song ›\" to the map page",
+          "why": "One link beside the title; one more control on a full map.",
+          "recommended": true,
+          "more": "On /map/masters-of-war/, \"A thread from Masters of War ›\" sits beside the title and opens /thread/from/masters-of-war/.",
+          "branch": {
+            "frameIndex": 11,
+            "compositionId": "11-q4-a",
+            "start": 132.288,
+            "end": 138.288
+          }
+        },
+        {
+          "id": "b",
+          "label": "No link: open the song, then start a thread",
+          "why": "As built; two clicks, through the song page.",
+          "recommended": false,
+          "more": "Open the song from the panel, then \"Start a thread from here\" on its page.",
+          "branch": {
+            "frameIndex": 12,
+            "compositionId": "12-q4-b",
+            "start": 138.288,
+            "end": 144.288
+          }
+        }
+      ],
+      "summary": null
+    }
+  ],
+  "details": [],
+  "guide": {
+    "parts": [
+      {
+        "name": "step-1",
+        "title": "Step 1 · The map: every dot opens its song, on a computer and a phone",
+        "planStep": 1,
+        "kind": "step",
+        "src": "guide/step-1.html"
+      },
+      {
+        "name": "step-2",
+        "title": "Step 2 · The app shell on a wide screen: a header, the era's look across the window, room for two columns (question 1)",
+        "planStep": 2,
+        "kind": "step",
+        "src": "guide/step-2.html"
+      },
+      {
+        "name": "step-3",
+        "title": "Step 3 · The era timeline on a computer: one era fills the screen (question 2)",
+        "planStep": 3,
+        "kind": "step",
+        "src": "guide/step-3.html"
+      },
+      {
+        "name": "step-4",
+        "title": "Step 4 · Album, song and moment pages in two columns",
+        "planStep": 4,
+        "kind": "step",
+        "src": "guide/step-4.html"
+      },
+      {
+        "name": "step-5",
+        "title": "Step 5 · Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+        "planStep": 5,
+        "kind": "step",
+        "src": "guide/step-5.html"
+      },
+      {
+        "name": "step-6",
+        "title": "Step 6 · Search and About on a computer, and a desktop check",
+        "planStep": 6,
+        "kind": "step",
+        "src": "guide/step-6.html"
+      },
+      {
+        "name": "decisions",
+        "title": "Decisions in force",
+        "planStep": null,
+        "kind": "decisions",
+        "src": "guide/decisions.html"
+      },
+      {
+        "name": "what-changed",
+        "title": "What changed, in full",
+        "planStep": null,
+        "kind": "overview",
+        "src": "guide/what-changed.html"
+      },
+      {
+        "name": "map",
+        "title": "Map interaction",
+        "planStep": null,
+        "kind": "category",
+        "src": "guide/map.html"
+      },
+      {
+        "name": "shell",
+        "title": "The wide shell",
+        "planStep": 2,
+        "kind": "category",
+        "src": "guide/shell.html"
+      },
+      {
+        "name": "eras",
+        "title": "Eras full screen",
+        "planStep": 3,
+        "kind": "category",
+        "src": "guide/eras.html"
+      },
+      {
+        "name": "pages",
+        "title": "Two-column pages",
+        "planStep": 4,
+        "kind": "category",
+        "src": "guide/pages.html"
+      },
+      {
+        "name": "threads",
+        "title": "Threads on a computer",
+        "planStep": 5,
+        "kind": "category",
+        "src": "guide/threads.html"
+      },
+      {
+        "name": "check",
+        "title": "Search and the desktop check",
+        "planStep": 6,
+        "kind": "category",
+        "src": "guide/check.html"
+      },
+      {
+        "name": "choices",
+        "title": "Every choice the agent made",
+        "planStep": null,
+        "kind": "choices",
+        "src": "guide/choices.html"
+      }
+    ]
+  },
+  "plan": {
+    "title": "The Dylan site on a computer: full-window eras, two-column pages, and a map you can click",
+    "problem": "The owner, after opening the built site on a computer:\n\n> \"we need a new plan to make this work better on a computer. right now there is poor formatting (e.g., themes not\n> going on full page, the side by side threads and map) and functionality (e.g., can't press a dot on the thread\n> map, still a button to change cards that can be clicked), as a lot was meant for a phone. we need to fill in more\n> and fix it so it looks great on a computer too\"\n\n### What we have\n\nThe site from the plan `2026-10-06-dylan-site`: 802 pages, built for a phone first. On a 1440 × 900 window,\nevery page is that phone layout in a column 720 px wide in the middle (`.page { max-width: 720px }`), with half\nthe window empty:\n\n- **The home page:** the era's look (its colours, texture and photo frame) stops at the column's edges; the rest\n  of the window is a plain paper colour. You move between eras by clicking the thin strip at the top or with the\n  arrow keys, which only work once the panel has focus.\n- **A thread:** the cards and the map sit side by side, each about 330 px wide. The map is a tall, thin strip\n  whose labels are too small to read, and the **Cards | Map** toggle is still there although both are showing.\n- **The map:** clicking a dot does nothing. Tried on 2026-10-07 at 1440 × 900 and at phone size: the address stays\n  on the map. The map takes the pointer as soon as it is pressed (so that dragging works), and the click then lands\n  on the map instead of the dot's link. This is broken on phones too. The mouse wheel over the map zooms it, so the\n  page stops scrolling while the pointer is over it.\n- **Album, song and moment pages:** one column; the players, the words and the connections come one under another,\n  so a song page is 2,500 px tall on a screen with room for two columns.",
+    "steps": [
+      {
+        "n": 1,
+        "title": "The map: every dot opens its song, on a computer and a phone",
+        "text": "*Stands alone.*\n\n**It lets you:** click or tap any dot on the map, on the thread page or the map page, and land on that song's page;\nscroll past the map without it zooming; and see a dot's name and era by hovering over it.\n\nToday the map calls `setPointerCapture` the moment a pointer goes down on it, so that a drag keeps working when the\npointer leaves the map. That also sends the click that follows to the map instead of to the dot under the pointer,\nand the dot's link never opens. The fix takes the pointer only once it has moved more than 4 px, so a press and\nrelease without moving is a plain click on the dot. The click opens the song on a phone and on the small maps of a\nthread or a song page; on a computer's full map page, what it does is question 3. Each dot also gets an invisible ring 14 px across around it,\nso a dot is easy to hit on a phone (44 px with the map's zoom on a phone) and with a mouse.\n\nThe mouse wheel scrolls the page, as it does everywhere else. The map zooms with the wheel only while Ctrl or ⌘ is\nheld (as a trackpad pinch sends it), or with **+** and **−** buttons in its corner. On a computer, hovering a dot\nshows its title, artist or album, and year in a small label beside it, and lights its lines.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| Click a dot | \"Nottamun Town\" on `/map/masters-of-war/` | its song page opens | you click: the dot; map: no drag, so the link opens; you see: `/song/nottamun-town/` |\n| Tap a dot on a phone | the same dot at 375 px | its song page opens | you tap: the dot; you see: its page |\n| Drag | press, move 30 px, release | the map moves; no page opens | you drag; map: takes the pointer past 4 px; you see: the map moved |\n| Wheel over the map | scroll down with the pointer on the map | the page scrolls past the map | you scroll; map: lets it through; you see: the page move |\n| Zoom | Ctrl + wheel, or **+** | the map zooms around the pointer | you press: +; you see: bigger dots and labels |\n| Hover | the pointer on \"Lord Randal\" | \"Lord Randal · traditional\" beside it, its line lit | you hover; you see: the label |\n\n#### Interface\n\n```\nsrc/islands/map.ts        # the map island\n  pointerdown             # remembers where; takes no pointer yet\n  pointermove > 4 px      # starts a drag and takes the pointer\n  click                   # follows the dot's link unless a drag happened\n  wheel                   # zooms only with Ctrl or ⌘; otherwise the page scrolls\n  .zoom + / −             # two buttons in the map's corner, 44 px each\n  hover label             # title · album or artist · year, on screens with a mouse\ntools/check-phone.mjs     # also taps a dot on /map/masters-of-war/ and fails unless a song page opens\n```\n\n#### Example\n\nOn `/thread/faith/` you click \"Gotta Serve Somebody\" on the map. Its page, `/song/gotta-serve-somebody/`, opens.\nBack on the thread, you scroll down with the pointer over the map and the page scrolls past it. You hold Ctrl and\nscroll up; the map zooms in around the pointer.\n\n```diagram\nstate: A pointer on the map\n[*] -> pressed: you press on a dot | nothing is taken yet\npressed -> opened: you release without moving | the dot's link opens its song\npressed -> dragging: you move more than 4 px | the map takes the pointer\ndragging -> [*]: you release | the map stays where you left it; no page opens\n```"
+      },
+      {
+        "n": 2,
+        "title": "The app shell on a wide screen: a header, the era's look across the window, room for two columns (question 1)",
+        "text": "*Stands alone. Steps 3 to 6 build on it.*\n\n**It lets you:** use the site on a computer as a site made for one: the era's look across the whole window, a\nheader with search always at hand, and pages that use the width instead of a phone column.\n\nThree widths, decided by the window: a **phone** up to 767 px (today's layout, unchanged), a **tablet** from 768\nto 1099 px (today's layout with wider margins), and a **desktop** from 1100 px. Everything below is for the\ndesktop width. Said plainly (from the plan review): the layout follows the window's width, not the device. A window\n900 px wide, a small laptop window or a tablet held sideways, is in the middle band, so it gets the tablet layout:\ntoday's single column and bottom bar, with more room at the sides. Only a window 1100 px or wider gets the header\nand two columns.\n\n- **A header** across the top replaces the centred tabs: the site's name on the left, **Eras**, **Threads**,\n  **Map** and **About** in the middle, and a search field on the right. Typing in it and pressing Enter opens\n  `/search/?q=…`; pressing `/` anywhere puts the cursor in it.\n- **The era's look fills the window.** The era's background colour, texture and accent paint the whole page,\n  header included, not only the column. On pages with no era (threads, search, about) the site's paper look fills\n  it, as today.\n- **A grid for the content**, as wide as question 1 decides (recommended: up to 1200 px), with a main column and a\n  side column. Running text keeps a readable line of about 70 characters, whatever the width.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A song page at 1440 px | `/song/like-a-rolling-stone/` | Going Electric's op-art black and white across the whole window, the header on it | you open: the page; shell: the era's theme on the page; you see: no plain margins |\n| Search from anywhere | type \"judas\" in the header, Enter | the search page with the Manchester 1966 moment first | you type; shell: opens `/search/?q=judas`; you see: results |\n| The `/` key | on any page | the cursor is in the header's search field | you press `/`; you see: the field focused |\n| A tablet | 900 px wide | today's layout, with 48 px margins | you open: a page; you see: one column |\n| A phone | 375 px | today's layout and bottom bar, unchanged | you open: a page; you see: what you see today |\n\n#### Interface\n\n```\nsrc/layouts/Shell.astro     # the header from 1100 px; the bottom bar below 768 px\nsrc/styles/site.css         # the shared styles: the widths below\n  --page-max                # the content's widest width: question 1\n  .wide                     # a two-column grid: main and side (side 320–380 px)\n  .measure                  # running text, about 70 characters a line\n  @media (min-width: 1100px)  # the desktop layout; nothing below it changes\nsrc/themes/*.css            # each era's look moves from the column onto the whole page\n```\n\n#### Example\n\nYou open `/album/blonde-on-blonde/` at 1440 × 900. The whole window is Going Electric's black with its op-art\nrings; the header across the top is on it, with \"Search\" at the right. The album's cover and the track list sit\nside by side in the middle 1200 px. You press `/`, type \"visions\" and press Enter: the search page opens with\n\"Visions of Johanna\" first.\n\n```diagram\nflow: Which layout a window gets\nwindow width -> phone = phone, up to 767 px: bottom bar, one column | today's layout, unchanged\nwindow width -> tablet = tablet, 768–1099 px: one wider column | today's layout with more margin\nwindow width -> desktop = desktop, 1100 px and up: header, era look across the window, two columns | the new layout in steps 2 to 6\n```"
+      },
+      {
+        "n": 3,
+        "title": "The era timeline on a computer: one era fills the screen (question 2)",
+        "text": "*Needs step 2.*\n\n**It lets you:** move through Dylan's life on a computer one era at a time, each era filling the screen with its\nphotograph, its story, its albums and its moments, and step to the next era with an arrow, a key or the timeline.\n\nOn a desktop, the home page shows one era per screen (question 2, recommended A). Its photograph takes the left\nhalf of the window, edge to edge, in the era's frame; its years, title and story take the right half. Below them, a\nrow of the era's album covers (each opens its album) and a short list of its moments with their years. The thin\nstrip at the top becomes a timeline across the whole width, 1941 to today, with each era's name under its stretch\nand the current one lit.\n\nScrolling moves between eras too (the owner's note on question 2: \"if we scroll down, it should get us to the next\nera with a clean transition through scrolling, without needing to click the arrow\"). The eras sit one under another,\neach one screen tall, and the page snaps to the next era as you scroll down a screen and to the previous one as you\nscroll up, so a scroll never stops halfway between two eras; the look crossfades as one era gives way to the next.\nLarge **‹** and **›** buttons at the window's sides, the ← and → keys (on the page, no focus needed) and the\ntimeline also move to the previous or next era. Said plainly: one era fills the screen at a time, and scrolling,\nthe arrows, the keys and the timeline all go to the era before or after it. The look crossfades as you move, and the address becomes\n`/era/<id>/` so back and a shared link work. Photos are served at up to 2000 px wide for this layout (Wikimedia\nor the original's own width when it is smaller).\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| Open the home page | `/` at 1440 × 900 | Duluth and Hibbing: the Iron Range photo on the left, the story on the right | you open: `/`; you see: one era, full window |\n| Next era | press → | Greenwich Village slides in, its typed-flyer look crossfades in | you press: →; timeline: next; you see: `/era/village/` |\n| Jump with the timeline | click \"Gospel\" on the timeline | the Gospel era, its revival-handbill look | you click: Gospel; you see: `/era/gospel/` |\n| An album on the era | click *Slow Train Coming* in the row | the album page | you click: the cover; you see: `/album/slow-train-coming/` |\n| An era with no photo of Dylan | Back to the Roots | the place photo or the covers collage fills the left half, as on a phone (D-006) | you see: no empty half |\n\n#### Interface\n\n```\nsrc/components/Timeline.astro   # from 1100 px: one era per screen, ‹ › buttons, a full-width timeline\nsrc/components/EraSpread.astro  # new: one era's photo, story, album row and moments, for the desktop\nsrc/islands/timeline.ts         # ← → on the page; the address follows the era\nsrc/components/PhotoPanel.astro  # photo sizes 480, 800, 1200, 2000 px\n```\n\n#### Example\n\nAt 1440 × 900 you open the site. Duluth and Hibbing fills the screen in its rust and slate. You press → twice:\nGoing Electric arrives, the window turns black with its op-art rings, Daniel Kramer's 1965 photo on the left and\n\"In 1965 Dylan traded solo acoustic folk for a rock band…\" on the right, with *Bringing It All Back Home*,\n*Highway 61 Revisited* and *Blonde on Blonde* in a row under it.\n\n```diagram\nflow: Moving through the eras on a computer\nera = one era, full window -> next = the next era: → or › | the look crossfades; the address changes\nera -> jump = any era: click its name on the timeline\nera -> album = an album page: click a cover in the row\nera -> moment = a moment: click it in the list\n```"
+      },
+      {
+        "n": 4,
+        "title": "Album, song and moment pages in two columns",
+        "text": "*Needs step 2.*\n\n**It lets you:** see a song's cover, players and words at a glance on a computer, with its connections and its\nplace on the map beside them instead of a long scroll; and see an album or a moment the same way.\n\n- **A song page** has a left column that stays in place as you scroll: the cover, the title, the note, the themes\n  and the players (Spotify and YouTube, D-005). The right column has the words card (preview, summary and the lyrics\n  link, D-007, D-033), the connections as a grid of cards two across, and a small live map of the song's neighbours\n  (the map from step 1, clickable). Under both, the previous and next songs on the album.\n- **An album page** has the cover large (up to 480 px, the real cover, D-003) with the era tag and \"why it matters\"\n  on the left, the full track list on the right, and a row \"Also in this era\" with the era's other albums.\n- **A moment page** has its clip or photograph large on the left and its story on the right, with the songs it\n  is tied to under it.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A song with connections | \"Masters of War\" | left: cover, note, players; right: words, 4 connection cards, the map of its neighbours | you open: the page; you see: both columns in one screen |\n| A song with no connections | \"I Believe in You\" | the right column has the words card and no connection cards or map | you open: the page; you see: the words, then the next song on the album |\n| A long summary | \"Murder Most Foul\" | the left column stays in place while the right scrolls | you scroll; you see: the players stay |\n| An album | *Blonde on Blonde* | the cover at 480 px beside the 14 tracks; \"Also in this era\" with *Bringing It All Back Home* and *Highway 61 Revisited* | you open: the album; you see: cover and tracks side by side |\n| A moment with a clip | Newport 1965 | the clip large on the left, the story right | you open: `/moment/newport-1965/`; you see: the clip beside the story |\n\n#### Interface\n\n```\nsrc/pages/song/[id].astro     # .wide: left (sticky) cover, note, themes, players; right words, connections, map\nsrc/pages/album/[id].astro    # .wide: left cover and why it matters; right track list; then \"Also in this era\"\nsrc/pages/moment/[id].astro   # .wide: left clip or photo; right story and its songs\nsrc/components/MapView.astro  # a small mode, 360 × 300, for the song page\n```\n\n#### Example\n\nAt 1440 × 900 you open \"Like a Rolling Stone\". On the left, the *Highway 61 Revisited* cover, \"Released as a single\nin July 1965 at over six minutes…\", **Loss** and **Freedom**, and the Spotify player. On the right, the words card,\nthen four connection cards, two across, then a small map with the song in the middle; you click \"The Rolling\nStones\" on it and their version's page opens.\n\n```diagram\ncompare: A song page at 1440 px\nbefore: one 720 px column: cover, note, words, players, connections, one under another (2,500 px)\nafter: two columns: cover, note and players stay on the left; words, connections and a small map on the right\n```"
+      },
+      {
+        "n": 5,
+        "title": "Threads and the map on a computer: cards along the years, the map below, a panel for the song you click (question 3)",
+        "text": "*Needs steps 1 and 2.*\n\n**It lets you:** see a whole thread at once on a computer, its cards along a row of years with the map under them,\nand explore the map in a full window with the song you clicked described beside it.\n\n- **A thread** on a desktop shows its cards in a row along a line of years, four on screen at once, with **‹ ›**\n  to move along and the year between cards drawn as the gap on the line. The map is under the cards, the full\n  width of the content and 520 px tall. Hovering a card lights its dot; the **Cards | Map** toggle is gone at this\n  width, because both are showing. On a phone the toggle stays, as today.\n- **The map page** (`/map/`, `/map/<song>/`) fills the window under the header. Clicking a dot selects it\n  (question 3, recommended A): a side panel shows its title, era, cover, preview and connections, with **Open the\n  song ›**; a double-click opens it directly. The era legend becomes a filter: click an era to dim the others.\n- **The threads list** shows its twelve threads as a grid of cards, three across, each with the covers of its\n  first songs.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| A thread at 1440 px | \"Faith\" | 4 of its 10 cards, Gates of Eden 1965 first, the map under them | you open: `/thread/faith/`; you see: cards and map, no toggle |\n| Hover a card | \"Gotta Serve Somebody\" | its dot lights on the map below | you hover; you see: the dot lit |\n| Click a dot on the map page | \"Nottamun Town\" | the side panel: traditional, its note, 1 connection (Masters of War), **Open the song ›** | you click: the dot; map: selects; you see: the panel |\n| Filter by era | click \"Gospel\" in the legend | the other eras' dots dim | you click: Gospel; you see: only the Gospel dots bright |\n| A phone | \"Faith\" at 375 px | cards, with the Cards \\| Map toggle, as today | you see: today's thread |\n\n#### Interface\n\n```\nsrc/components/ThreadCards.astro  # from 1100 px: a row along the years, ‹ ›, the map under it; no toggle\nsrc/pages/map/[id].astro          # from 1100 px: the map fills the window; a side panel\nsrc/components/MapPanel.astro     # new: the selected song: title, era, cover, preview, connections, Open\nsrc/islands/map.ts                # select on click (desktop, question 3), open on double-click; era filter\nsrc/pages/threads/index.astro     # a grid of thread cards, three across\n```\n\n#### Example\n\nAt 1440 × 900 you open \"Faith\". Gates of Eden (1965), I Dreamed I Saw St. Augustine (1967), The Wicked\nMessenger (1967) and Gotta Serve Somebody (1979) are along the line of years, the map under them. You click \"Gotta\nServe Somebody\" on the map: the panel says Gospel, 1979, \"Whoever you are and however high you rise, you will end\nup answering to one master or another.\", its 2 connections, and **Open the song ›**. You click it and the song page\nopens.\n\n```diagram\nsequence: Clicking a dot on the map page (question 3, A)\nyou -> map: click a dot\nmap -> panel: show its title, era, preview, connections\nyou -> panel: Open the song ›\npanel -> song page: open it\n```"
+      },
+      {
+        "n": 6,
+        "title": "Search and About on a computer, and a desktop check",
+        "text": "*Needs step 2.*\n\n**It lets you:** see search results grouped side by side on a computer, and trust that every page has been looked\nat on a computer before it ships, with a check that fails when one still looks or works like a phone page.\n\n- **Search** on a desktop shows its groups in three columns: Eras and Moments, Albums, Songs. Typing in the header's\n  field (step 2) and pressing Enter opens it.\n- **About** puts its sections (sources, credits, what the site leaves out) in two columns.\n- **The desktop check** (`tools/check-desktop.mjs`, new) is the only check that looks at the site at computer\n  sizes; the phone check only ever opens pages at 375 px, where the Cards | Map button belongs. So a problem that\n  shows only on a computer, such as that button left showing beside the map, fails the desktop check and nothing\n  else. It opens the same 12 views as the phone check at 1440 × 900\n  and 1100 × 800, saves screenshots to `checks/desktop/`, and fails on: a page that scrolls sideways; a control\n  showing that does nothing at that width (the Cards | Map toggle); an era page whose window background is not the\n  era's; content narrower than 60 % of the window on a page meant to be wide; a map dot that, clicked, neither\n  opens a song nor selects it; and any error. `npm test` runs the data check, the phone check and the desktop check.\n\n#### Cases\n\n| Case | Example | What happens | Trace |\n|---|---|---|---|\n| Search at 1440 px | \"1966\" | three columns: 2 moments; 1 album, *Blonde on Blonde*; the 1966 songs | you type: 1966; you see: three columns |\n| A clean build | `npm test` | data ✓, phone ✓ 12 views, desktop ✓ 24 views (12 × 2 sizes) | you run: npm test; it prints: three ✓ |\n| A leftover toggle | the toggle shows on `/thread/faith/` at 1440 px | the check fails, naming the page and the control | check: finds it; prints: ✗ thread at 1440 × 900: \"Cards \\| Map\" shows while both views do |\n| A plain margin | an era's look stops at 1200 px | the check fails | check: window background ≠ era background; prints: ✗ era at 1440 × 900 |\n\n#### Interface\n\n```\nnode tools/check-desktop.mjs    # 12 views × 1440 × 900 and 1100 × 800; screenshots in checks/desktop/\n  ✓ 24 views at 1440 × 900 and 1100 × 800, screenshots in checks/desktop/\n  ✗ <view> at <size>: <what is wrong>     # exit 1\nnpm test                        # the data check, then the phone check, then the desktop check\nsrc/pages/search/index.astro    # three columns from 1100 px\nsrc/pages/about.astro           # two columns from 1100 px\n```\n\n#### Example\n\nYou run `npm test` after a change to the thread page. It prints `✓ 11 eras, 39 albums, 255 songs…`, then\n`✓ 12 views at 375×812`, then `✗ thread at 1440 × 900: \"Cards | Map\" shows while both views do`, and exits 1. You\nhide the toggle from 1100 px, run it again, and all three pass.\n\n```diagram\nflow: What npm test runs\nnpm test -> data = the data check: ids, links, credits, summaries\ndata -> phone = the phone check: 12 views at 375 × 812, a dot tap opens a song\nphone -> desktop = the desktop check: 12 views at 1440 × 900 and 1100 × 800 | fails on a phone page on a computer\ndesktop -> pass = all three ✓\ndesktop -x fail = exit 1, naming the view, the size and what is wrong\n```"
+      }
+    ]
+  },
+  "slug": "2026-10-07-desktop--walkthrough",
+  "prerequisites": [
+    {
+      "video": "2026-10-06-dylan-site",
+      "title": "video",
+      "gives": "decisions D-001, D-002, D-003, D-005, D-006, D-007, D-033: how should the site be built?; explains \"search\"",
+      "seconds": 341.4,
+      "terms": [
+        "index.html",
+        "app.css",
+        "app.js",
+        "static host",
+        "build step",
+        "route",
+        "JSON",
+        "id",
+        "TypeScript",
+        "Vite",
+        "Astro",
+        "npm",
+        "node_modules",
+        "library",
+        "placeholder",
+        "View Transitions",
+        "Cover Art Archive",
+        "Wikimedia Commons",
+        "licence",
+        "embedded player",
+        "tap target",
+        "headless Chrome",
+        "npm test",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "YouTube",
+        "Spotify",
+        "view",
+        "quick check",
+        "theme",
+        "every polish by hand",
+        "polish",
+        "package.json",
+        "dist/",
+        "public domain",
+        "CC BY 2.0",
+        "CC BY-SA 2.0",
+        "youtube-nocookie.com"
+      ],
+      "found": true
+    }
+  ],
+  "terms": [
+    "pixels",
+    "header",
+    "tablet",
+    "dot",
+    "tooltip",
+    "pinch",
+    "era",
+    "timeline",
+    "words card",
+    "connections",
+    "moment",
+    "thread",
+    "Cards and Map button",
+    "threads list",
+    "cover",
+    "search",
+    "desktop check",
+    "data check",
+    "phone check",
+    "bottom bar",
+    "hover label",
+    "off-plan change",
+    "list",
+    "recommended",
+    "deviation",
+    "npm test",
+    "call",
+    "tag"
+  ],
+  "termMeanings": {
+    "pixels": "the dots a screen is made of (a laptop window is about 1440 wide)",
+    "header": "the bar across the top of every page on a computer",
+    "tablet": "a window from 768 to 1099 pixels wide",
+    "dot": "one song on the map",
+    "tooltip": "the small label a browser shows when you hold the mouse still over something",
+    "pinch": "two fingers drawn apart or together to zoom",
+    "era": "a named stretch of Dylan's life, such as Going Electric",
+    "timeline": "the bar across the top of the home page, one stretch per era",
+    "words card": "the box on a song page with its preview, its summary and its lyrics link",
+    "connections": "links between two songs, with a kind and a sentence of why",
+    "moment": "a dated event in his life that is not a record, such as Newport 1965",
+    "thread": "a path through songs that share something, in time order, shown as cards",
+    "cards and map button": "the switch on a thread that shows its cards or its map",
+    "threads list": "the page listing all twelve threads",
+    "cover": "an album's front picture",
+    "search": "the view that finds eras, moments, albums and songs as you type",
+    "desktop check": "the script that opens every kind of page at computer sizes and fails when one looks or works like a phone page",
+    "data check": "the script that fails when the dataset is wrong",
+    "phone check": "the same at phone size",
+    "bottom bar": "the row of tabs at the bottom of a phone screen",
+    "hover label": "the label that appears beside a dot when the mouse is over it",
+    "off-plan change": "something built other than the plan said",
+    "list": "the choices that do not pause the video, one line each",
+    "recommended": "the option I would pick, marked on its card",
+    "deviation": "an off-plan change",
+    "npm test": "the one command that runs every check",
+    "call": "a choice made while building that the plan did not settle",
+    "tag": "a label on a choice: visible, hard to undo, or close"
+  },
+  "glossary": [
+    {
+      "term": "A call",
+      "meaning": "A choice the agent made on its own while building, one the plan did not cover: one row in walkthrough.md",
+      "forms": [
+        "call",
+        "choice"
+      ],
+      "display": "choice",
+      "said": "A choice the agent made on its own while building, one the plan did not cover: one row in `walkthrough.md`.",
+      "definedIn": {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 2,
+        "title": "Step 1 · The map",
+        "start": 14.379,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    },
+    {
+      "term": "A tag",
+      "meaning": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end",
+      "forms": [
+        "tag",
+        "label"
+      ],
+      "display": "label",
+      "said": "A label the agent puts on a choice it made alone, saying why you might want to look at it. Four kinds: *visible* (you'll notice it when you use the thing), *hard-to-undo* (changing it later costs real work), *close* (a toss-up: the other way was nearly as good), *deviation* (an off-plan change). An off-plan change, and a choice labelled visible or hard-to-undo, pauses the walkthrough video; every other choice is on its list at the end.",
+      "definedIn": {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 2,
+        "title": "Step 1 · The map",
+        "start": 14.379,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    },
+    {
+      "term": "A miss",
+      "meaning": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video",
+      "forms": [
+        "miss",
+        "late fix"
+      ],
+      "display": "late fix",
+      "said": "A late fix: something a review let through that a later plan, fix or review had to change. A recent one makes a choice that shares its label pause the walkthrough video."
+    },
+    {
+      "term": "A deviation",
+      "meaning": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video",
+      "forms": [
+        "deviation",
+        "off-plan change"
+      ],
+      "display": "off-plan change",
+      "said": "An off-plan change: a choice where the agent did something other than what the plan said. It always stops the walkthrough video.",
+      "definedIn": {
+        "video": "2026-10-07-every-song--walkthrough",
+        "frame": 3,
+        "title": "Off-plan change · the file name",
+        "start": 36.309,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    },
+    {
+      "term": "A beat",
+      "meaning": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene",
+      "forms": [
+        "beat",
+        "scene"
+      ],
+      "display": "scene",
+      "said": "One scene of a video: a picture and a sentence or two of its voice. A video is a row of scenes; a question or a choice pauses at the end of its scene."
+    },
+    {
+      "term": "A chapter",
+      "meaning": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system",
+      "forms": [
+        "chapter"
+      ],
+      "said": "A stretch of one video under one title; the player shows \"Chapter 2 of 4\" as it begins. Not a plan's step, and not a part of the system."
+    },
+    {
+      "term": "An area",
+      "meaning": "One part of the system, drawn as a box, with an id in system.json (where it is called a component)",
+      "forms": [
+        "area",
+        "part of the system"
+      ],
+      "display": "part of the system",
+      "said": "One part of the system, drawn as a box, with an id in `system.json` (where it is called a component)."
+    },
+    {
+      "term": "The app shell",
+      "id": "shell",
+      "meaning": "The one page that holds the site: it reads the address and draws one view at a time, with the bottom bar",
+      "forms": [
+        "app shell"
+      ],
+      "said": "The one page that holds the site: it reads the address and draws one view at a time, with the bottom bar.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 3,
+        "title": "Step 1 · The app shell, now animated",
+        "start": 30.464,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The dataset",
+      "id": "dataset",
+      "meaning": "The JSON files in data/ that hold every era, moment, album, song, connection, thread and photo, written by hand era by era in data/parts/ and merged by a script",
+      "forms": [
+        "dataset"
+      ],
+      "said": "The JSON files in `data/` that hold every era, moment, album, song, connection, thread and photo, written by hand era by era in `data/parts/` and merged by a script.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The data check",
+      "id": "data-check",
+      "meaning": "A script that fails when the dataset has an id used twice, a connection to a song that does not exist, an album outside its era's years, a photo with no licence or credit, or a lyric excerpt over two lines",
+      "forms": [
+        "data check"
+      ],
+      "said": "A script that fails when the dataset has an id used twice, a connection to a song that does not exist, an album outside its era's years, a photo with no licence or credit, or a lyric excerpt over two lines.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 10,
+        "title": "Step 2 · The data check, now for credits",
+        "start": 134.559,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "An era",
+      "meaning": "A named stretch of Dylan's life with years and a colour, such as \"Going Electric, 1965–1966\"; the timeline shows one per panel",
+      "forms": [
+        "era"
+      ],
+      "said": "A named stretch of Dylan's life with years and a colour, such as \"Going Electric, 1965–1966\"; the timeline shows one per panel.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 2,
+        "title": "Three things that are wrong today",
+        "start": 11.52,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      }
+    },
+    {
+      "term": "A moment",
+      "meaning": "A dated event in his life that is not a record, such as the 1966 motorcycle accident",
+      "forms": [
+        "moment"
+      ],
+      "said": "A dated event in his life that is not a record, such as the 1966 motorcycle accident.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 20,
+        "title": "Step 4 · A song page in two columns",
+        "start": 206.446,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    },
+    {
+      "term": "A connection",
+      "meaning": "A link between two songs, with a kind (borrowed tune, answer, rewrite, covered by, re-recorded, same theme) and one sentence of why",
+      "forms": [
+        "connection"
+      ],
+      "said": "A link between two songs, with a kind (borrowed tune, answer, rewrite, covered by, re-recorded, same theme) and one sentence of why.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 6,
+        "title": "Step 2 · Three widths",
+        "start": 71.083,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    },
+    {
+      "term": "The era timeline",
+      "id": "timeline",
+      "meaning": "The home view: one full-width panel per era, swiped sideways, with a strip of all eras on top",
+      "forms": [
+        "era timeline"
+      ],
+      "said": "The home view: one full-width panel per era, swiped sideways, with a strip of all eras on top.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 12,
+        "title": "Step 3 · Each era its own look",
+        "start": 157.32,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "Album and song pages",
+      "id": "pages",
+      "meaning": "The page for one album (why it matters, its songs) and for one song (its note, themes and connections)",
+      "forms": [
+        "album and song pages"
+      ],
+      "said": "The page for one album (why it matters, its songs) and for one song (its note, themes and connections).",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 17,
+        "title": "Step 4 · The song page",
+        "start": 231.826,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    },
+    {
+      "term": "A thread",
+      "id": "threads",
+      "meaning": "A path through songs that share something, in time order, shown as cards you swipe through",
+      "forms": [
+        "thread"
+      ],
+      "said": "A path through songs that share something, in time order, shown as cards you swipe through.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 23,
+        "title": "Step 5 · The map, on a phone too",
+        "start": 300.713,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      }
+    },
+    {
+      "term": "Search",
+      "id": "search",
+      "meaning": "The view that finds eras, albums and songs as you type, in the page with no server",
+      "forms": [
+        "search"
+      ],
+      "said": "The view that finds eras, albums and songs as you type, in the page with no server.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    },
+    {
+      "term": "The phone check",
+      "id": "phone-check",
+      "meaning": "A script that opens every view at phone width and fails on a sideways scroll, a tap target under 44 px or an error",
+      "forms": [
+        "phone check"
+      ],
+      "said": "A script that opens every view at phone width and fails on a sideways scroll, a tap target under 44 px or an error.",
+      "definedIn": {
+        "video": "2026-10-06-dylan-site",
+        "frame": 25,
+        "title": "Step 6 · Listen and watch on the page",
+        "start": 330.785,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      }
+    },
+    {
+      "term": "The desktop check",
+      "id": "desktop-check",
+      "meaning": "A script that opens every kind of page at computer sizes (1440 × 900 and 1100 × 800) and fails on a sideways scroll, a control showing that does nothing at that width, an era's look that stops short of the window, content in a phone-width column, a map dot that does nothing when clicked, or an error",
+      "forms": [
+        "desktop check"
+      ],
+      "said": "A script that opens every kind of page at computer sizes (1440 × 900 and 1100 × 800) and fails on a sideways scroll, a control showing that does nothing at that width, an era's look that stops short of the window, content in a phone-width column, a map dot that does nothing when clicked, or an error.",
+      "definedIn": {
+        "video": "2026-10-07-desktop",
+        "frame": 3,
+        "title": "Three changes, six steps",
+        "start": 23.765,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      }
+    },
+    {
+      "term": "A repo / repository",
+      "meaning": "A project's folder of code together with its whole history, kept with git",
+      "forms": [
+        "repo",
+        "repository"
+      ],
+      "said": "A project's folder of code together with its whole history, kept with git.",
+      "other": true
+    },
+    {
+      "term": "A branch",
+      "meaning": "A line of work kept apart from the main code until it is merged",
+      "forms": [
+        "branch"
+      ],
+      "said": "A line of work kept apart from the main code until it is merged.",
+      "other": true
+    },
+    {
+      "term": "Merge",
+      "meaning": "To bring a branch's changes into the main code. A pull request is merged when it is accepted",
+      "forms": [
+        "merge"
+      ],
+      "said": "To bring a branch's changes into the main code. A pull request is merged when it is accepted.",
+      "other": true
+    },
+    {
+      "term": "A commit",
+      "meaning": "One saved change to a repo, with a message saying what changed",
+      "forms": [
+        "commit"
+      ],
+      "said": "One saved change to a repo, with a message saying what changed.",
+      "other": true
+    },
+    {
+      "term": "A pull request / PR",
+      "meaning": "A change someone asks to have merged into a repo; others read it and comment before it goes in",
+      "forms": [
+        "pull request",
+        "pr"
+      ],
+      "said": "A change someone asks to have merged into a repo; others read it and comment before it goes in.",
+      "other": true
+    },
+    {
+      "term": "The agent",
+      "meaning": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos",
+      "forms": [
+        "agent"
+      ],
+      "said": "The AI coding assistant that does the work, in chat: it writes the plan, builds the code and makes the videos.",
+      "other": true
+    }
+  ],
+  "ids": {
+    "A1": {
+      "kind": "choice",
+      "gloss": "each dot's invisible hit ring is 28 map units across (r 14)"
+    },
+    "A10": {
+      "kind": "choice",
+      "gloss": "scrolling keeps replaceState for the address (/era/<id>/), as today; ‹ ›, keys…"
+    },
+    "A11": {
+      "kind": "choice",
+      "gloss": "the crossfade is the header and window colour fading (0.5 s) plus the leaving…"
+    },
+    "A12": {
+      "kind": "choice",
+      "gloss": "timeline names are clipped with an ellipsis on short eras (each stretch at…"
+    },
+    "A13": {
+      "kind": "choice",
+      "gloss": "the song page's words card is rendered twice (Words.astro): once in the phone…"
+    },
+    "A14": {
+      "kind": "choice",
+      "gloss": "the song page's left column holds the cover at 150 px above the title (changed…"
+    },
+    "A15": {
+      "kind": "choice",
+      "gloss": "the small map on a song page is the right column's full width × 300 px, under…"
+    },
+    "A16": {
+      "kind": "choice",
+      "gloss": "the album page's left column is not sticky"
+    },
+    "A17": {
+      "kind": "choice",
+      "gloss": "the line of years puts each card's year on the line and writes the gap to the…"
+    },
+    "A18": {
+      "kind": "choice",
+      "gloss": "from 1100 px a thread's map opens on its first song's neighbourhood (as a…"
+    },
+    "A19": {
+      "kind": "choice",
+      "gloss": "the era filter is the legend turned into buttons by script from 1100 px…"
+    },
+    "A2": {
+      "kind": "choice",
+      "gloss": "the + / − buttons show from 768 px, not on phones"
+    },
+    "A20": {
+      "kind": "choice",
+      "gloss": "on /map/<song>/ the panel opens already showing that song; /map/ opens on…"
+    },
+    "A21": {
+      "kind": "choice",
+      "gloss": "search's three columns are placed by CSS on group sections (Eras and Moments…"
+    },
+    "A22": {
+      "kind": "choice",
+      "gloss": "\"content narrower than 60 %\" is measured as the horizontal span of everything…"
+    },
+    "A23": {
+      "kind": "choice",
+      "gloss": "the desktop check also fails when the phone's bottom bar or no header shows…"
+    },
+    "A24": {
+      "kind": "choice",
+      "gloss": "`npm test` runs the data check, the build, the phone check and the desktop…"
+    },
+    "A25": {
+      "kind": "choice",
+      "gloss": "The map panel's rows are one built file, `/map-panel.json`, fetched on the…"
+    },
+    "A3": {
+      "kind": "choice",
+      "gloss": "the phone check tries a touch tap and a pointer press-release on a dot, both…"
+    },
+    "A4": {
+      "kind": "choice",
+      "gloss": "the hover label replaces the dot's SVG <title> tooltip; each dot gets an…"
+    },
+    "A5": {
+      "kind": "choice",
+      "gloss": "the header is sticky (stays at the top as you scroll), 64 px, on the era's paper"
+    },
+    "A6": {
+      "kind": "choice",
+      "gloss": "the header search is a plain GET form to /search/?q=… (works without script)…"
+    },
+    "A7": {
+      "kind": "choice",
+      "gloss": "the tablet band keeps today's 672→720 px column with 48 px side margins…"
+    },
+    "A8": {
+      "kind": "choice",
+      "gloss": "map pages light \"Map\" in the header but still \"Threads\" in the phone's bottom…"
+    },
+    "A9": {
+      "kind": "choice",
+      "gloss": "the desktop spread is the same markup as the phone panel (new EraSpread.astro…"
+    },
+    "D1": {
+      "kind": "off-plan change",
+      "gloss": "a moment's \"songs it is tied to\" are the Dylan songs its story names by title…"
+    },
+    "D2": {
+      "kind": "off-plan change",
+      "gloss": "The tablet band (768–1099 px) also hides the map's own Cards / Map toggle…"
+    },
+    "D3": {
+      "kind": "off-plan change",
+      "gloss": "the threads list shows its covers from all of a thread's songs' albums, first…"
+    },
+    "q4": {
+      "kind": "question",
+      "n": 4,
+      "gloss": "On a computer, should the full map offer a way to the thread cards?"
+    }
+  },
+  "termsCheck": "strict",
+  "changes": {
+    "against": "HEAD",
+    "baseline": true,
+    "at": "2026-10-07T21:06:53.938Z",
+    "build": "e65f08739afe",
+    "added": 0,
+    "edited": 2,
+    "restyled": 0,
+    "retimed": 0,
+    "same": 14,
+    "removed": [],
+    "changedFrames": [
+      9,
+      11
+    ],
+    "restyledFrames": [],
+    "changedSeconds": 14.72,
+    "totalSeconds": 183.494
+  }
+}

@@ -1,0 +1,88 @@
+---
+// One era: its photograph, years, title, story, moments and albums (plan 2026-10-07-desktop, step 3).
+// On a phone and a tablet it is a panel you swipe sideways, one under the other in this order; from 1100 px the same
+// markup becomes a spread that fills the screen: the photograph the left half, edge to edge, and the years, title,
+// story, a row of album covers and the moments in the right half.
+import { momentById, albumById, yearsLabel, url, type Era } from "../lib/data";
+import PhotoPanel from "./PhotoPanel.astro";
+import Cover from "./Cover.astro";
+import EraStory from "./EraStory.astro";
+interface Props { era: Era; eager?: boolean; next?: Era | null; prev?: Era | null }
+const { era: e, eager = false, next = null } = Astro.props;
+---
+<!-- the era and, under its spread, its bands (plan 2026-10-07-fuller, step 3): the wrapper is what a phone swipes and
+     what a computer snaps to, so the bands scroll freely under the spread -->
+<article class="eb" data-era={e.id}>
+<section class="panel" id={`era-${e.id}`} data-era={e.id} data-title={e.title} data-href={url.era(e.id)} aria-label={e.title}>
+  <span class="stamp" aria-hidden="true"></span>
+  <div class="pic"><PhotoPanel era={e} eager={eager} /></div>
+  <header class="ehead">
+    <p class="kicker years year">{yearsLabel(e)}</p>
+    <h1 class="display etitle">{e.title}</h1>
+  </header>
+  <p class="summary">{e.summary}</p>
+  {e.moments.length > 0 && (
+    <ol class="moments">
+      {e.moments.map((m) => momentById.get(m)).filter(Boolean).map((m) => (
+        <li><a href={url.moment(m!.id)}><span class="year">{m!.year}</span><span>{m!.title}</span></a></li>
+      ))}
+    </ol>
+  )}
+  {e.albums.length > 0 && (
+    <div class="albums">
+      {e.albums.map((a) => albumById.get(a)).filter(Boolean).map((a) => (
+        <a href={url.album(a!.id)} class="alb"><Cover album={a!} size="s" name={`cover-${a!.id}`} /><span class="at">{a!.title}</span></a>
+      ))}
+    </div>
+  )}
+  <p class="hint soft"><span class="t-hint">{next ? `Swipe for ${next.title} →` : "The end of the line, for now."}</span><span class="d-hint">{next ? `Scroll or press → for ${next.title}` : "The end of the line, for now."}</span></p>
+</section>
+<EraStory era={e} />
+</article>
+<style>
+  /* layout only: each era dresses its own panel in src/themes/<era>.css */
+  .eb { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; background: var(--texture), var(--paper); color: var(--ink); font-family: var(--body); }
+  .panel { position: relative; isolation: isolate; overflow: clip; min-width: 0; padding: 18px 16px 28px; min-height: 70dvh; }
+  .ehead { margin-top: 18px; }
+  .etitle { font-size: clamp(38px, 11vw, 64px); }
+  .summary { font-size: 17px; margin: 14px 0 18px; }
+  .moments { list-style: none; padding: 0; margin: 0 0 20px; }
+  .moments a { display: grid; grid-template-columns: 56px 1fr; gap: 10px; padding: 11px 0; text-decoration: none; min-height: 44px; }
+  .albums { display: flex; gap: 14px; overflow-x: auto; padding: 4px 4px 10px; }
+  .alb { flex: 0 0 108px; text-decoration: none; }
+  .at { display: block; font-size: 14px; line-height: 1.25; margin-top: 8px; }
+  .hint { font-size: 15px; margin-top: 20px; }
+  .d-hint { display: none; }
+  @media (min-width: 768px) { .panel { padding: 22px 28px 36px; } }
+
+  /* the spread: one era fills the screen under the header and the timeline */
+  @media (min-width: 1100px) {
+    /* a snap area taller than the window scrolls freely inside it, so the bands under the spread can be read */
+    .eb { scroll-snap-align: start; scroll-snap-stop: always; }
+    /* .panel.panel: wins over an era's own panel padding (src/themes/<era>.css), so every photo runs edge to edge;
+       the right padding keeps the text clear of the › button */
+    .panel.panel { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto auto 1fr auto; column-gap: clamp(40px, 5vw, 80px);
+      align-content: start; min-height: calc(100dvh - var(--head-h) - var(--strip-h)); padding: 0 max(80px, calc((100vw - var(--page-max)) / 2)) 0 0; }
+    .pic { grid-column: 1; grid-row: 1 / -1; position: relative; min-height: 100%; }
+    /* (two classes each, so these win over PhotoPanel's own one-class rules whatever order the CSS is bundled in) */
+    .pic > :global(.photo), .pic > :global(.collage), .pic > :global(.poster) { position: absolute; inset: 0; display: flex; flex-direction: column; aspect-ratio: auto; margin: 0; }
+    .pic :global(.photo .frame) { flex: 1; aspect-ratio: auto; }
+    .pic :global(.frame img) { object-position: 50% 30%; }
+    .pic :global(.credit) { padding: 0 16px 10px; margin-top: 8px; }
+    .pic > :global(.collage.collage) { display: grid; }
+    .ehead, .summary, .moments, .albums, .hint { grid-column: 2; min-width: 0; }
+    .ehead { grid-row: 1; margin-top: clamp(28px, 6vh, 64px); }
+    .etitle { font-size: clamp(48px, 5vw, 76px); }
+    .summary { grid-row: 2; font-size: 19px; line-height: 1.6; max-width: 62ch; margin: 18px 0 22px; }
+    .albums { grid-row: 3; flex-wrap: wrap; overflow: visible; padding: 4px 0 6px; gap: 18px; }
+    .alb { flex: 0 0 112px; }
+    .moments { grid-row: 4; margin: 18px 0 0; }
+    .moments a { grid-template-columns: 64px 1fr; padding: 8px 0; }
+    .hint { grid-row: 6; align-self: end; margin: 20px 0 28px; }
+    .t-hint { display: none; }
+    .d-hint { display: inline; }
+    /* the look crossfades as one era gives way to the next */
+    .panel > :not(.pic):not(.stamp) { transition: opacity .6s ease; }
+    :global(.timeline.live) .panel:not(.cur) > :not(.pic):not(.stamp) { opacity: .25; }
+  }
+</style>

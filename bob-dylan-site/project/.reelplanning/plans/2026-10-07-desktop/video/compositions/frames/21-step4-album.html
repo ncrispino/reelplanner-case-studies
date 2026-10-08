@@ -1,0 +1,147 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 56 (big cover), 40 (moment title), 26 (labels, mono, story), 24 (tracks, small covers) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f21s4a-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f21s4a-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f21s4a-place { position:absolute; left:64px; top:56px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* two mock windows, 880 x 770, top at y 110 (bottom 880) */
+  .f21s4a-win { position:absolute; top:110px; width:880px; height:770px; box-sizing:border-box; border-radius:14px; border:1px solid var(--rp-ink); overflow:hidden; background:var(--rp-slab); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f21s4a-bar { position:absolute; left:0; top:0; width:100%; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f21s4a-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f21s4a-addr { position:absolute; left:110px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); white-space:nowrap; font-variant-ligatures:none; }
+  .f21s4a-view { position:absolute; left:0; top:37px; width:878px; height:731px; overflow:hidden; color:var(--rp-slab-ink);
+    background: repeating-radial-gradient(circle at 70% 50%, rgba(var(--rp-slab-ink-rgb),0.06) 0 3px, rgba(var(--rp-slab-ink-rgb),0) 3px 28px), var(--rp-slab); }
+  .f21s4a-cond { display:inline-block; transform:scaleX(0.8); transform-origin:0 0; white-space:nowrap; }
+
+  /* album page */
+  /* drawn covers: the shared style (frame 13), same colour per album */
+  .f21s4a-cv { position:absolute; box-sizing:border-box; border:1px solid rgba(var(--rp-slab-ink-rgb),0.3); }
+  .f21s4a-cv span { position:absolute; left:14px; top:14px; right:12px; font:700 24px/1.08 "Inter"; text-transform:uppercase; letter-spacing:-0.005em; }
+  .f21s4a-cv-bob { background:repeating-radial-gradient(circle at 50% 55%, var(--rp-paper) 0 6px, var(--rp-slab) 6px 12px); }
+  .f21s4a-cv-bob span { color:var(--rp-ink); background:var(--rp-paper); padding:4px 6px; right:auto; }
+  .f21s4a-cv-biab { background:var(--rp-paper); }
+  .f21s4a-cv-biab span { color:var(--rp-ink); }
+  .f21s4a-cv-h61 { background:color-mix(in oklab, var(--rp-syn-num) 75%, var(--rp-slab)); }
+  .f21s4a-cv-h61 span { color:var(--rp-slab); }
+  .f21s4a-big { left:32px; top:32px; width:320px; height:320px; }
+  .f21s4a-tracks { position:absolute; left:394px; top:30px; width:454px; }
+  .f21s4a-h { font:700 26px/1 "Inter"; text-transform:uppercase; letter-spacing:0.06em; color:var(--rp-syn-num); white-space:nowrap; }
+  .f21s4a-row { display:flex; gap:12px; padding:4px 0; border-top:1px solid rgba(var(--rp-slab-ink-rgb),0.14); }
+  .f21s4a-row:first-of-type { margin-top:14px; }
+  .f21s4a-row b { flex:0 0 34px; font:400 26px/1.15 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.55); }
+  .f21s4a-row span { font:400 24px/1.25 "Inter"; color:var(--rp-slab-ink); }
+  .f21s4a-also { position:absolute; left:32px; top:392px; }
+  .f21s4a-sm { top:44px; width:160px; height:160px; }
+
+  /* moment page */
+  .f21s4a-clip { position:absolute; left:32px; top:32px; width:380px; height:286px; box-sizing:border-box; border-radius:8px; background:color-mix(in oklab, var(--rp-slab) 80%, var(--rp-ink)); border:1px solid rgba(var(--rp-slab-ink-rgb),0.2); }
+  .f21s4a-play { position:absolute; left:142px; top:95px; width:96px; height:96px; border-radius:50%; background:var(--rp-coral); }
+  .f21s4a-play:after { content:""; position:absolute; left:38px; top:28px; border-left:30px solid var(--rp-on-ink); border-top:20px solid transparent; border-bottom:20px solid transparent; }
+  .f21s4a-cliplbl { position:absolute; left:18px; bottom:16px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.75); }
+  .f21s4a-story { position:absolute; left:444px; top:32px; width:404px; }
+  .f21s4a-lower { position:absolute; left:32px; top:356px; width:814px; padding-top:28px; border-top:1px solid rgba(var(--rp-slab-ink-rgb),0.2); }
+  .f21s4a-yr { font:400 26px/1 "JetBrains Mono"; color:var(--rp-syn-num); }
+  .f21s4a-mt { margin-top:14px; font:700 40px/1.05 "Inter"; text-transform:uppercase; color:var(--rp-slab-ink); }
+  .f21s4a-mt .f21s4a-cond { white-space:normal; width:505px; }
+  .f21s4a-tx { font:400 36px/1.45 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.92); }
+</style>
+
+<div id="root" data-composition-id="21-step4-album" data-band="bottom" data-start="0" data-duration="8.981" data-width="1920" data-height="1080">
+
+  <div class="clip f21s4a-bg" id="f21s4a-bg" data-start="0" data-duration="8.981" data-track-index="0"></div>
+
+  <div class="clip f21s4a-scene" id="f21s4a-scene" data-start="0" data-duration="8.981" data-track-index="1">
+    <div class="f21s4a-place" id="f21s4a-place">Step 4 · an album, a moment</div>
+
+    <!-- the album page -->
+    <div class="f21s4a-win" id="f21s4a-wa" style="left:64px" data-artifact="/album/blonde-on-blonde/">
+      <div class="f21s4a-bar">
+        <div class="f21s4a-dot" style="left:18px"></div><div class="f21s4a-dot" style="left:36px"></div><div class="f21s4a-dot" style="left:54px"></div>
+        <div class="f21s4a-addr">/album/blonde-on-blonde/</div>
+      </div>
+      <div class="f21s4a-view">
+        <div class="f21s4a-cv f21s4a-cv-bob f21s4a-big" id="f21s4a-big"><span>Blonde on Blonde</span></div>
+        <div class="f21s4a-tracks" id="f21s4a-tracks">
+          <div class="f21s4a-h">Track list · 14 songs</div>
+          <div class="f21s4a-row"><b>1</b><span>Rainy Day Women #12 &amp; 35</span></div>
+          <div class="f21s4a-row"><b>2</b><span>Pledging My Time</span></div>
+          <div class="f21s4a-row"><b>3</b><span>Visions of Johanna</span></div>
+          <div class="f21s4a-row"><b>4</b><span>One of Us Must Know (Sooner or Later)</span></div>
+          <div class="f21s4a-row"><b>5</b><span>I Want You</span></div>
+          <div class="f21s4a-row"><b>6</b><span>Stuck Inside of Mobile With the Memphis Blues Again</span></div>
+          <div class="f21s4a-row"><b>7</b><span>Leopard-Skin Pill-Box Hat</span></div>
+          <div class="f21s4a-row"><b>8</b><span>Just Like a Woman</span></div>
+          <div class="f21s4a-row"><b>9</b><span>Most Likely You Go Your Way and I&#39;ll Go Mine</span></div>
+          <div class="f21s4a-row"><b>10</b><span>Temporary Like Achilles</span></div>
+          <div class="f21s4a-row"><b>11</b><span>Absolutely Sweet Marie</span></div>
+          <div class="f21s4a-row"><b>12</b><span>4th Time Around</span></div>
+          <div class="f21s4a-row"><b>13</b><span>Obviously Five Believers</span></div>
+          <div class="f21s4a-row"><b>14</b><span>Sad-Eyed Lady of the Lowlands</span></div>
+        </div>
+        <div class="f21s4a-also" id="f21s4a-also">
+          <div class="f21s4a-h">Also in this era</div>
+          <div class="f21s4a-cv f21s4a-cv-biab f21s4a-sm" style="left:0"><span>Bringing It All Back Home</span></div>
+          <div class="f21s4a-cv f21s4a-cv-h61 f21s4a-sm" style="left:176px"><span>Highway 61 Revisited</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- the moment page -->
+    <div class="f21s4a-win" id="f21s4a-wm" style="left:976px" data-artifact="/moment/newport-1965/">
+      <div class="f21s4a-bar">
+        <div class="f21s4a-dot" style="left:18px"></div><div class="f21s4a-dot" style="left:36px"></div><div class="f21s4a-dot" style="left:54px"></div>
+        <div class="f21s4a-addr">/moment/newport-1965/</div>
+      </div>
+      <div class="f21s4a-view">
+        <div class="f21s4a-clip" id="f21s4a-clip"><div class="f21s4a-play"></div><div class="f21s4a-cliplbl">clip</div></div>
+        <div class="f21s4a-story">
+          <div class="f21s4a-yr" id="f21s4a-yr">1965</div>
+          <div class="f21s4a-mt" id="f21s4a-mt"><span class="f21s4a-cond">Newport Folk Festival: plays electric</span></div>
+        </div>
+        <div class="f21s4a-lower">
+          <div class="f21s4a-tx" id="f21s4a-tx">On July 25, 1965, Dylan took the Newport stage backed by members of the Paul Butterfield Blues Band, and his short, loud electric set drew boos from part of the folk crowd.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "21-step4-album";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f21s4a-" + s); };
+  var pop = function (el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.45, ease: E }, at); };
+  var push = function (el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-5.9s): the album window; the cover large; the track list; the era's other albums
+  pop($("place"), 0.02, 8);
+  push($("wa"), 0.05);
+  tl.fromTo($("big"), { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.55, ease: E }, 1.25);
+  pop($("tracks").children[0], 2.6, 8);
+  var rows = $("tracks").querySelectorAll(".f21s4a-row");
+  for (var i = 0; i < rows.length; i++) pop(rows[i], 2.68 + i * 0.07, 8);
+  pop($("also"), 3.95);
+
+  // Scene 2 (5.9s-end): the moment window; its clip; its story. Hold.
+  push($("wm"), 5.92);
+  tl.fromTo($("clip"), { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, 6.8);
+  pop($("yr"), 7.2);
+  pop($("mt"), 7.3);
+  pop($("tx"), 7.75);
+
+  tl.set({}, {}, 8.981);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

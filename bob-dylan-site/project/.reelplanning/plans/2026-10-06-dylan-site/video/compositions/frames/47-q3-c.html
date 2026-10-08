@@ -1,0 +1,66 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f47-q3-c-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f47-q3-c-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f47-q3-c-place { position:absolute; left:90px; top:110px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the phone: 400 x 800, ink hairline, radius 44, top at y 110; the Gospel theme, no photograph */
+  .f47-q3-c-phone { position:absolute; left:760px; top:110px; width:400px; height:780px; border-radius:44px; border:1px solid var(--rp-ink); overflow:hidden; box-sizing:border-box; background:color-mix(in oklab, var(--rp-syn-del) 50%, var(--rp-slab)); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f47-q3-c-strip { position:absolute; left:24px; top:22px; width:352px; height:12px; }
+  .f47-q3-c-strip i { position:absolute; top:0; height:12px; border-radius:3px; background:rgba(var(--rp-slab-ink-rgb),0.2); }
+  .f47-q3-c-strip i.on { background:var(--rp-syn-num); }
+  .f47-q3-c-frame { position:absolute; left:30px; top:62px; width:340px; height:296px; box-sizing:border-box; border:2px solid var(--rp-syn-num); }
+  .f47-q3-c-title { position:absolute; left:0; top:150px; width:340px; text-align:center; font:400 88px/1 "EB Garamond"; letter-spacing:0.12em; color:var(--rp-syn-num); white-space:nowrap; }
+  .f47-q3-c-yrs { position:absolute; left:24px; top:392px; width:352px; text-align:center; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.78); }
+  .f47-q3-c-mom { position:absolute; left:24px; top:470px; width:352px; text-align:center; border-top:1px solid var(--rp-syn-num); padding-top:16px; }
+  .f47-q3-c-mom .my { display:block; font:400 26px/1 "JetBrains Mono"; color:var(--rp-syn-num); }
+  .f47-q3-c-mom .mt { display:block; margin-top:10px; font:400 26px/1.15 "EB Garamond"; color:var(--rp-slab-ink); white-space:nowrap; }
+  .f47-q3-c-tabs { position:absolute; left:0; top:696px; width:400px; height:84px; border-top:1px solid rgba(var(--rp-slab-ink-rgb),0.2); display:flex; justify-content:space-between; padding:22px 24px 0; box-sizing:border-box; }
+  .f47-q3-c-tabs span { font:400 26px/1 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.74); }
+  .f47-q3-c-tabs span.on { color:var(--rp-syn-num); }
+</style>
+
+<div id="root" data-composition-id="47-q3-c" data-band="bottom" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f47-q3-c-bg" id="f47-q3-c-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f47-q3-c-scene" id="f47-q3-c-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f47-q3-c-place" id="f47-q3-c-place">If C · step 3</div>
+    <div class="f47-q3-c-phone" id="f47-q3-c-phone" data-artifact="#/era/gospel">
+      <div class="f47-q3-c-strip"><i style="left:0px; width:75px"></i><i style="left:77.9px; width:15px"></i><i style="left:95.9px; width:7.5px"></i><i style="left:106.4px; width:15px"></i><i style="left:124.3px; width:30px"></i><i class="on" style="left:157.2px; width:11.2px"></i><i style="left:171.4px; width:30px"></i><i style="left:204.4px; width:26.3px"></i><i style="left:233.6px; width:33.7px"></i><i style="left:270.3px; width:52.5px"></i><i style="left:325.7px; width:26.3px"></i></div>
+      <div class="f47-q3-c-frame" id="f47-q3-c-frame"><div class="f47-q3-c-title" id="f47-q3-c-title">Gospel</div></div>
+      <div class="f47-q3-c-yrs" id="f47-q3-c-yrs">1979–1981</div>
+      <div class="f47-q3-c-mom" id="f47-q3-c-mom"><span class="my">1980</span><span class="mt">Gospel tour, Toronto</span></div>
+      <div class="f47-q3-c-tabs"><span class="on">Eras</span><span>Threads</span><span>Search</span><span>About</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "47-q3-c";
+  var $ = function (s) { return document.getElementById("f47-q3-c-" + s); };
+  var E = "power3.out";
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6s): the Gospel panel draws, opening on its title where the photo would be; hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.05);
+  tl.fromTo($("phone"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.1);
+  tl.fromTo($("frame"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 0.6);
+  tl.fromTo($("title"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.9);
+  tl.fromTo($("yrs"), { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 1.6);
+  tl.fromTo($("mom"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 2.1);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 5.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "src": "2026-10-08-case-study-page/index.html",
+  "project": "video",
+  "exportedAt": "2026-10-08T06:37:35.732Z",
+  "watch": {
+    "firstPlayAt": "2026-10-08T06:30:40.890Z",
+    "maxTimeReached": 261.13,
+    "durationSeconds": 263.72,
+    "completion": 0.99,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 1
+      },
+      {
+        "id": "ch2",
+        "completion": 1
+      },
+      {
+        "id": "ch3",
+        "completion": 1
+      },
+      {
+        "id": "ch4",
+        "completion": 0.973
+      }
+    ],
+    "moments": [
+      {
+        "kind": "rewind",
+        "t": 0,
+        "from": 12.2,
+        "planStep": null,
+        "frameIndex": 1
+      },
+      {
+        "kind": "rewind",
+        "t": 42.11,
+        "from": 49.17,
+        "planStep": null,
+        "frameIndex": 3
+      }
+    ],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q1",
+      "option": "a",
+      "label": "One line per event, from its commit message",
+      "recommended": true,
+      "planStep": 1,
+      "question": "What does the timeline say of the agent's side?",
+      "t": 81.694,
+      "decidedAt": "2026-10-08T06:33:41.233Z"
+    },
+    {
+      "id": "q2",
+      "option": "own",
+      "label": "i guess the rendered video file is fine to start but the watch only might be useful too",
+      "own": true,
+      "recommended": false,
+      "planStep": 2,
+      "question": "How should a video play on the watch page?",
+      "t": 138.838,
+      "decidedAt": "2026-10-08T06:34:48.014Z"
+    },
+    {
+      "id": "q3",
+      "option": "a",
+      "label": "Each plan's videos and reviews open; the rest folded",
+      "recommended": true,
+      "planStep": 3,
+      "question": "How much of the timeline is open at first?",
+      "t": 199.118,
+      "decidedAt": "2026-10-08T06:35:22.696Z"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "k1",
+      "answer": "a",
+      "correct": true,
+      "t": 166.838,
+      "answeredAt": "2026-10-08T06:34:59.811Z"
+    },
+    {
+      "id": "k2",
+      "answer": "a",
+      "correct": false,
+      "t": 254.67,
+      "answeredAt": "2026-10-08T06:36:11.674Z",
+      "walked": true
+    }
+  ],
+  "checks": "on",
+  "autonomy": [],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-08-case-study-page",
+      "seen": "2026-10-08T06:35:41.196Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 1,
+    "walked": 1,
+    "termsOpened": 0,
+    "termsLookedUp": [],
+    "rewinds": 2,
+    "watchedPct": 99
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "amuz5w0ge8frp",
+      "kind": "note",
+      "comment": "i guess the rendered video file is fine to start but the watch only might be useful too",
+      "about": "Answered in their own words: How should a video play on the watch page?",
+      "t": 138.84,
+      "frame": {
+        "index": 10,
+        "compositionId": "10-q2",
+        "title": "Question 2 · How should a video play on the watch page?"
+      },
+      "plan": {
+        "step": 2,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuz5zexwoim4",
+      "kind": "note",
+      "comment": "jsut small thing, make sure the text is easily readable and actually at the top and throughout there should be ways to mimic it; ie, if user wants to try this on their own, they can copy the first commadn at the starta nd it will start claude with the first prompt. before that theres the standard reaelplannign setup. this will ensure that anywone that wansto follow the full csae sutdy can fully replicate it",
+      "about": "",
+      "t": 261.13,
+      "frame": {
+        "index": 23,
+        "compositionId": "23-ending",
+        "title": "The plan, with your choices"
+      },
+      "plan": {
+        "step": null,
+        "questions": [
+          1,
+          2,
+          3
+        ],
+        "component": null
+      }
+    },
+    {
+      "id": "amuz5zj1xp193",
+      "kind": "approve",
+      "t": 261.13,
+      "frame": {
+        "index": 23,
+        "compositionId": "23-ending",
+        "title": "The plan, with your choices"
+      },
+      "plan": {
+        "step": null,
+        "questions": [
+          1,
+          2,
+          3
+        ],
+        "component": null
+      },
+      "comment": ""
+    }
+  ],
+  "recorded": {
+    "reelplanning": "0.2.0"
+  }
+}

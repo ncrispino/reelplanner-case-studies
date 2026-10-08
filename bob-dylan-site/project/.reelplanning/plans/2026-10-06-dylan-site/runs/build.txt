@@ -1,0 +1,8 @@
+$ npm run build
+03:43:00 [build] ✓ Completed in 273ms.
+03:43:06 ✓ Completed in 5.00s.
+03:43:06 ✓ Completed in 37ms.
+03:43:06 [build] ✓ Completed in 6.42s.
+03:43:06 [build] 802 page(s) built in 6.88s
+03:43:06 [build] Complete!
+exit 0

@@ -1,0 +1,22 @@
+---
+// "Read on: Wikipedia ↗ · MusicBrainz ↗" (plan 2026-10-07-fuller, step 6): where an era, album or song has them;
+// nothing at all when it has none.
+import { outLinks, type Out } from "../lib/data";
+interface Props { out?: Out | null; class?: string }
+const { out, class: cls } = Astro.props;
+const list = outLinks(out);
+---
+{list.length > 0 && (
+  <p class:list={["readon", cls]}>
+    <span class="kicker">Read on</span>
+    {list.map(([name, href]) => <a class="ro" href={href} target="_blank" rel="noopener">{name} ↗</a>)}
+  </p>
+)}
+<style>
+  .readon { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin: 40px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+  .readon .kicker { margin: 0 10px 0 0; }
+  .ro { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; font: var(--label-weight) 15px/1 var(--label);
+    letter-spacing: .03em; color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  .ro + .ro::before { content: "·"; margin: 0 14px 0 -6px; color: var(--soft); text-decoration: none; display: inline-block; }
+  .ro:hover { color: var(--accent); }
+</style>

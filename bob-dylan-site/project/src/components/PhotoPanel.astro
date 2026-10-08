@@ -1,0 +1,58 @@
+---
+// An era's lead picture (step 3): a free photo of Dylan from the era; else a free photo of the place or moment;
+// else the era's covers as a collage; else a poster drawn for the site in the era's style. Never text alone.
+import { getImage } from "astro:assets";
+import { albumById, photosOfEra, type Era } from "../lib/data";
+import Cover from "./Cover.astro";
+interface Props { era: Era; eager?: boolean }
+const { era, eager = false } = Astro.props;
+const files = import.meta.glob<{ default: ImageMetadata }>("../assets/photos/*.{jpg,jpeg,png,webp}", { eager: true });
+// (a moment's own photograph is the moment's, not the era's lead: photosOfEra leaves it out)
+const pick = photosOfEra(era)[0];
+const meta = pick && files[`../assets/photos/${pick.file}`]?.default;
+let img, tiny;
+if (meta) {
+  // up to 2000 px wide for a computer's full-screen era (plan 2026-10-07-desktop, step 3), never wider than the original
+  const widths = [480, 800, 1200, 2000].filter((w) => w < meta.width);
+  if (meta.width <= 2000) widths.push(meta.width);
+  img = await getImage({ src: meta, widths, sizes: "(min-width: 1100px) 50vw, (min-width: 768px) 720px, 100vw", format: "webp", quality: 72 });
+  tiny = await getImage({ src: meta, width: 24, format: "webp", quality: 40 });
+}
+const covers = era.albums.map((a) => albumById.get(a)!).filter(Boolean).slice(0, 4);
+---
+{img && pick ? (
+  <figure class="photo">
+    <div class="frame" style={`background-image:url(${tiny!.src})`}>
+      <img src={img.src} srcset={img.srcSet.attribute} sizes={img.attributes.sizes} alt={pick.caption}
+        width={meta!.width} height={meta!.height} loading={eager ? "eager" : "lazy"} decoding="async"
+        onload="this.classList.add('in')" />
+    </div>
+    <figcaption class="credit">{pick.caption}{String(pick.caption).includes(String(pick.year)) ? "" : `, ${pick.year}`} · {pick.photographer} · <a href={pick.source} rel="noopener">{pick.licence}</a></figcaption>
+  </figure>
+) : covers.length ? (
+  <div class:list={["collage", `n${covers.length}`]} aria-label={`Album covers from ${era.title}`}>
+    {covers.map((a) => <Cover album={a} size="m" />)}
+  </div>
+) : (
+  <div class="poster" aria-hidden="true">
+    <span class="p1">{era.title}</span><span class="p2 year">{era.years[0]}–{era.years[1] ?? ""}</span>
+  </div>
+)}
+<style>
+  /* layout only: each era frames its picture its own way in src/themes/<era>.css */
+  .photo { position: relative; margin: 0; }
+  .frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--card) center/cover; }
+  .frame::before { content: ""; position: absolute; inset: 0; backdrop-filter: blur(14px); }
+  .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; opacity: 0; transition: opacity .5s ease; }
+  .frame img.in { opacity: 1; }
+  .frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+  .collage { display: grid; gap: 6px; aspect-ratio: 4 / 3; }
+  .collage.n1 { grid-template-columns: 1fr; } .collage.n2 { grid-template-columns: 1fr 1fr; }
+  .collage.n3, .collage.n4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+  .collage.n3 :global(.cover:first-child) { grid-row: span 2; }
+  .collage :global(.cover) { width: 100%; height: 100%; aspect-ratio: auto; }
+  .poster { aspect-ratio: 4 / 3; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px;
+    background: var(--texture), var(--accent); color: var(--accent-ink); }
+  .p1 { font-family: var(--display); font-weight: var(--display-weight); text-transform: var(--display-case); font-size: 40px; line-height: 1; }
+  .p2 { font-size: 18px; margin-top: 8px; }
+</style>

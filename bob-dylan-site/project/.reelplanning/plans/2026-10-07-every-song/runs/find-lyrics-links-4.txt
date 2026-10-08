@@ -1,0 +1,64 @@
+$ node tools/find-lyrics-links.mjs
+· alberta: not in the index
+· katies-been-gone: not in the index
+· i-guess-ill-have-to-change-my-plans: not in the index
+· i-could-have-told-you: not in the index
+· once-upon-a-time: not in the index
+· this-nearly-was-mine: not in the index
+· that-old-feeling: not in the index
+· it-gets-lonely-early: not in the index
+· my-one-and-only-love: not in the index
+· trade-winds: not in the index
+· braggin: not in the index
+· imagination: not in the index
+· how-deep-is-the-ocean: not in the index
+· p-s-i-love-you: not in the index
+· the-best-is-yet-to-come: not in the index
+· but-beautiful: not in the index
+· heres-that-rainy-day: not in the index
+· where-is-the-one: not in the index
+· theres-a-flaw-in-my-flue: not in the index
+· day-in-day-out: not in the index
+· i-couldnt-sleep-a-wink-last-night: not in the index
+· sentimental-journey: not in the index
+· somewhere-along-the-way: not in the index
+· when-the-world-was-young: not in the index
+· these-foolish-things: not in the index
+· you-go-to-my-head: not in the index
+· stardust: not in the index
+· its-funny-to-everyone-but-me: not in the index
+· why-was-i-born: not in the index
+· september-of-my-years: not in the index
+· as-time-goes-by: not in the index
+· alberta: not on Lyrics.com either
+✓ katies-been-gone: https://www.lyrics.com/lyric/9415162/Bob+Dylan/Katie%27s+Been+Gone
+✓ i-guess-ill-have-to-change-my-plans: https://www.lyrics.com/lyric/33712131/Bob+Dylan/I+Guess+I%27ll+Have+to+Change+My+Plans
+✓ i-could-have-told-you: https://www.lyrics.com/lyric/33712129/Bob+Dylan/I+Could+Have+Told+You
+✓ once-upon-a-time: https://www.lyrics.com/lyric/33712128/Bob+Dylan/Once+Upon+a+Time
+✓ this-nearly-was-mine: https://www.lyrics.com/lyric/33712126/Bob+Dylan/This+Nearly+Was+Mine
+✓ that-old-feeling: https://www.lyrics.com/lyric/33747781/Bob+Dylan/That+Old+Feeling
+✓ it-gets-lonely-early: https://www.lyrics.com/lyric/33712124/Bob+Dylan/It+Gets+Lonely+Early
+✓ my-one-and-only-love: https://www.lyrics.com/lyric/33712123/Bob+Dylan/My+One+and+Only+Love
+✓ trade-winds: https://www.lyrics.com/lyric/33712122/Bob+Dylan/Trade+Winds
+✓ braggin: https://www.lyrics.com/lyric/33712121/Bob+Dylan/Braggin%27
+✓ imagination: https://www.lyrics.com/lyric/33712119/Bob+Dylan/Imagination
+✓ how-deep-is-the-ocean: https://www.lyrics.com/lyric/33712118/Bob+Dylan/How+Deep+Is+the+Ocean
+✓ p-s-i-love-you: https://www.lyrics.com/lyric/33712117/Bob+Dylan/P.S.+I+Love+You
+✓ the-best-is-yet-to-come: https://www.lyrics.com/lyric/33712116/Bob+Dylan/The+Best+Is+Yet+to+Come
+✓ but-beautiful: https://www.lyrics.com/lyric/33712115/Bob+Dylan/But+Beautiful
+✓ heres-that-rainy-day: https://www.lyrics.com/lyric/33712114/Bob+Dylan/Here%27s+That+Rainy+Day
+✓ where-is-the-one: https://www.lyrics.com/lyric/33712113/Bob+Dylan/Where+Is+the+One
+✓ theres-a-flaw-in-my-flue: https://www.lyrics.com/lyric/33712112/Bob+Dylan/There%27s+a+Flaw+in+My+Flue
+✓ day-in-day-out: https://www.lyrics.com/lyric/33712111/Bob+Dylan/Day+in%2C+Day+Out
+✓ i-couldnt-sleep-a-wink-last-night: https://www.lyrics.com/lyric/33712110/Bob+Dylan/I+Couldn%27t+Sleep+a+Wink+Last+Night
+✓ sentimental-journey: https://www.lyrics.com/lyric/33712109/Bob+Dylan/Sentimental+Journey
+✓ somewhere-along-the-way: https://www.lyrics.com/lyric/33712108/Bob+Dylan/Somewhere+Along+the+Way
+· when-the-world-was-young: https://www.lyrics.com/lyric/33712107/Bob+Dylan/When+the+World+Was+Young answered 202
+· these-foolish-things: https://www.lyrics.com/lyric/33712106/Bob+Dylan/These+Foolish+Things answered 202
+· you-go-to-my-head: https://www.lyrics.com/lyric/33712105/Bob+Dylan/You+Go+to+My+Head answered 202
+· stardust: https://www.lyrics.com/lyric/33712104/Bob+Dylan/Stardust answered 202
+· its-funny-to-everyone-but-me: https://www.lyrics.com/lyric/33712103/Bob+Dylan/It%27s+Funny+to+Everyone+But+Me answered 202
+· why-was-i-born: https://www.lyrics.com/lyric/33712102/Bob+Dylan/Why+Was+I+Born answered 202
+· september-of-my-years: https://www.lyrics.com/lyric/33712130/Bob+Dylan/September+of+My+Years answered 202
+· as-time-goes-by: https://www.lyrics.com/lyric/33712120/Bob+Dylan/As+Time+Goes+By answered 202
+exit 0

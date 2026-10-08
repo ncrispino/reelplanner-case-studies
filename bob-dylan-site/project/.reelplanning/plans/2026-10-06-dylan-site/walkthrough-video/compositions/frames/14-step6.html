@@ -1,0 +1,77 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 72 (title), 26 (place label, addresses, label) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f14-step6-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f14-step6-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f14-step6-place { position:absolute; left:110px; top:250px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f14-step6-title { position:absolute; left:106px; top:292px; width:560px; font:400 72px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* one phone: the real screenshot, 360 x 780 (750 x 1624 at 0.48), thin ink hairline, radius 36, top at y 90 */
+  .f14-step6-ph { position:absolute; top:40px; width:362px; height:832px; }
+  .f14-step6-addr { position:absolute; left:-40px; width:442px; top:0; text-align:center; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f14-step6-frame { position:absolute; left:0; top:50px; width:360px; height:780px; border:1px solid var(--rp-ink); border-radius:36px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f14-step6-frame img { display:block; width:360px; height:auto; }
+
+  /* the label, on the left, a short leader to the blank Listen and watch frame of the first phone
+     (screenshot frame x 32-718, y 1260-1508 -> on screen x 735-1045, y 695-814) */
+  .f14-step6-note { position:absolute; left:110px; top:690px; width:520px; box-sizing:border-box; padding:14px 18px; border-radius:6px; border:1px solid var(--rp-coral); background:var(--rp-paper); font:400 26px/1.35 "Inter"; color:var(--rp-ink); }
+  .f14-step6-lead { position:absolute; left:0; top:0; width:1920px; height:900px; overflow:visible; pointer-events:none; }
+</style>
+
+<div id="root" data-composition-id="14-step6" data-band="bottom" data-start="0" data-duration="8.789" data-width="1920" data-height="1080">
+
+  <div class="clip f14-step6-bg" id="f14-step6-bg" data-start="0" data-duration="8.789" data-track-index="0"></div>
+
+  <div class="clip f14-step6-scene" id="f14-step6-scene" data-start="0" data-duration="8.789" data-track-index="1">
+    <div class="f14-step6-place" id="f14-step6-place">Step 6</div>
+    <div class="f14-step6-title" id="f14-step6-title">Players, loaded</div>
+
+    <div class="f14-step6-ph" id="f14-step6-p1" data-artifact="/song/like-a-rolling-stone/" style="left:720px">
+      <div class="f14-step6-addr">/song/like-a-rolling-stone/</div>
+      <div class="f14-step6-frame"><img src="assets/shots/song-lars.png" alt="Like a Rolling Stone: era-styled theme chips, The words card, the Listen and watch frame"></div>
+    </div>
+    <div class="f14-step6-ph" id="f14-step6-p2" data-artifact="/song/subterranean-homesick-blues/" style="left:1200px">
+      <div class="f14-step6-addr">/song/subterranean-homesick-blues/</div>
+      <div class="f14-step6-frame"><img src="assets/shots/song-shs.png" alt="Subterranean Homesick Blues: its Listen and watch frames, then Connections"></div>
+    </div>
+
+    <svg class="f14-step6-lead" id="f14-step6-lead" viewBox="0 0 1920 900" aria-hidden="true">
+      <line x1="630" y1="740" x2="752" y2="752" style="stroke:var(--rp-coral); stroke-width:2"/>
+      <circle cx="752" cy="752" r="5" style="fill:var(--rp-coral)"/>
+    </svg>
+    <div class="f14-step6-note" id="f14-step6-note">players load from Spotify and YouTube on the site; blank here</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "14-step6";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f14-step6-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  // a short push: in from below and a touch small, landing at scale 1 (never past it)
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-14s): the anchor, both song phones, then the note on the blank players; hold
+  pop(tl, $("place"), 0.031, 8);
+  pop(tl, $("title"), 0.094, 10);
+  push(tl, $("p1"), 0.376);
+  push(tl, $("p2"), 2.009);
+  tl.fromTo($("note"), { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 3.767);
+  tl.fromTo($("lead"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 3.955);
+
+  tl.set({}, {}, 14);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

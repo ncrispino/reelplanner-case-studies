@@ -1,0 +1,139 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes: 24 bold (drawn cover title), 28 (command), 26 (mono, terminal lines, tags), 24 (search results) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f29-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f29-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* left: the search page mock, 780 x 678 (top 90 -> bottom 768, level with the last row of tags) */
+  .f29-win { position:absolute; left:60px; top:90px; width:780px; height:678px; box-sizing:border-box; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-paper); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f29-bar { position:absolute; left:0; top:0; width:100%; height:36px; box-sizing:border-box; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); background:var(--rp-tile); }
+  .f29-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:5px; background:rgba(var(--rp-ink-rgb),0.3); }
+  .f29-url { position:absolute; left:60px; right:0; top:0; text-align:center; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; font-variant-ligatures:none; }
+  .f29-page { position:absolute; left:0; top:36px; width:778px; height:640px; }
+  .f29-field { position:absolute; left:28px; top:24px; width:720px; height:56px; box-sizing:border-box; padding:0 18px; border-radius:6px; border:1px solid rgba(var(--rp-ink-rgb),0.4); background:var(--rp-paper); font:400 26px/54px "JetBrains Mono"; color:var(--rp-ink); }
+  .f29-col { position:absolute; top:108px; width:224px; }
+  .f29-ch { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); padding-bottom:12px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f29-it { margin-top:14px; box-sizing:border-box; padding:12px 14px; border-radius:8px; border:1px solid rgba(var(--rp-ink-rgb),0.12); background:var(--rp-tile); font:400 24px/1.3 "Inter"; color:var(--rp-ink); }
+  /* the drawn cover: the shared style (13-step3's .f13-step3-covers), Blonde on Blonde's own pattern */
+  .f29-cover { position:relative; margin-top:14px; width:224px; height:224px; box-sizing:border-box; border:1px solid rgba(var(--rp-slab-ink-rgb),0.3); background:repeating-radial-gradient(circle at 50% 55%, var(--rp-paper) 0 6px, var(--rp-slab) 6px 12px); }
+  .f29-cover span { position:absolute; left:14px; top:14px; font:700 24px/1.08 "Inter"; text-transform:uppercase; letter-spacing:-0.005em; color:var(--rp-ink); background:var(--rp-paper); padding:4px 6px; }
+
+  /* right: the planned run, on the slab */
+  .f29-term { position:absolute; left:890px; top:90px; width:970px; height:390px; box-sizing:border-box; border-radius:8px; border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); overflow:hidden; background:var(--rp-slab); }
+  .f29-tbar { position:absolute; left:0; top:0; width:100%; height:52px; background:var(--rp-slab-bar); }
+  .f29-tdot { position:absolute; top:21px; width:10px; height:10px; border-radius:5px; background:rgba(var(--rp-slab-ink-rgb),0.3); }
+  .f29-tname { position:absolute; left:80px; top:0; font:400 26px/52px "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.6); white-space:nowrap; }
+  .f29-plan { display:inline-block; margin-right:14px; height:36px; padding:0 14px; border-radius:6px; background:var(--rp-coral); color:var(--rp-paper); font:400 26px/36px "JetBrains Mono"; white-space:nowrap; vertical-align:1px; }
+  .f29-body { position:absolute; left:28px; top:76px; width:914px; }
+  .f29-cmd { font:400 28px/1.4 "JetBrains Mono"; color:var(--rp-slab-ink); white-space:nowrap; font-variant-ligatures:none; }
+  .f29-cmd .p { color:var(--rp-syn-com); }
+  .f29-ln { margin-top:10px; display:grid; grid-template-columns:36px 246px 1fr; font:400 26px/1.36 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.86); font-variant-ligatures:none; }
+  /* planned, not run: a neutral grey ring, never a green tick */
+  .f29-ln .ok { color:rgba(var(--rp-slab-ink-rgb),0.6); }
+  .f29-ln .lb { color:var(--rp-syn-com); white-space:nowrap; }
+
+  /* the six failures it catches */
+  .f29-fl { position:absolute; left:892px; top:512px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f29-tags { position:absolute; left:890px; top:556px; width:970px; height:300px; }
+  .f29-tag { position:absolute; width:477px; height:60px; box-sizing:border-box; padding:0 20px 0 50px; border-radius:8px; border:1px solid rgba(var(--rp-ink-rgb),0.18); background:var(--rp-tile); font:400 26px/58px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f29-tag .x { position:absolute; left:18px; top:0; font:400 26px/58px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); }
+</style>
+
+<div id="root" data-composition-id="29-step6" data-band="bottom" data-start="0" data-duration="15.723" data-width="1920" data-height="1080">
+  <div class="clip f29-bg" id="f29-bg" data-start="0" data-duration="15.723" data-track-index="0"></div>
+
+  <div class="clip f29-scene" id="f29-scene" data-start="0" data-duration="15.723" data-track-index="1">
+
+    <div class="f29-win" id="f29-win" data-artifact="/search/?q=1966 in three columns (proposed)">
+      <div class="f29-bar"><span class="f29-dot" style="left:16px"></span><span class="f29-dot" style="left:34px"></span><span class="f29-dot" style="left:52px"></span><div class="f29-url">/search/?q=1966</div></div>
+      <div class="f29-page">
+        <div class="f29-field" id="f29-field">1966</div>
+        <div class="f29-col" id="f29-c1" style="left:28px">
+          <div class="f29-ch">MOMENTS</div>
+          <div class="f29-it">Motorcycle accident near Woodstock</div>
+          <div class="f29-it">“Judas!” at the Manchester Free Trade Hall</div>
+        </div>
+        <div class="f29-col" id="f29-c2" style="left:276px">
+          <div class="f29-ch">ALBUMS</div>
+          <div class="f29-cover"><span>Blonde on Blonde</span></div>
+        </div>
+        <div class="f29-col" id="f29-c3" style="left:524px">
+          <div class="f29-ch">SONGS</div>
+          <div class="f29-it">Rainy Day Women #12 &amp; 35</div>
+          <div class="f29-it">Visions of Johanna</div>
+          <div class="f29-it">I Want You</div>
+          <div class="f29-it">Just Like a Woman</div>
+          <div class="f29-it">4th Time Around</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="f29-term" id="f29-term" data-artifact="npm test (planned run)">
+      <div class="f29-tbar"><span class="f29-tdot" style="left:18px"></span><span class="f29-tdot" style="left:36px"></span><span class="f29-tdot" style="left:54px"></span><span class="f29-tname">terminal</span></div>
+      <div class="f29-body">
+        <div class="f29-cmd" id="f29-cmd"><span class="p">$ </span>npm test</div>
+        <div class="f29-ln" id="f29-l1"><span class="ok">○</span><span class="lb">data check</span><span>11 eras, 39 albums, 255 songs, 135 connections, 12 threads, 26 photos</span></div>
+        <div class="f29-ln" id="f29-l2"><span class="ok">○</span><span class="lb">phone check</span><span>12 views at 375×812</span></div>
+        <div class="f29-ln" id="f29-l3"><span class="ok">○</span><span class="lb">desktop check</span><span><span class="f29-plan" id="f29-plan">planned</span>24 views at 1440 × 900 and 1100 × 800, screenshots in checks/desktop/</span></div>
+      </div>
+    </div>
+
+    <div class="f29-fl" id="f29-fl">fails on</div>
+    <div class="f29-tags" id="f29-tags">
+      <div class="f29-tag" id="f29-t1" style="left:0;top:0"><span class="x">✗</span>sideways scroll</div>
+      <div class="f29-tag" id="f29-t2" style="left:493px;top:0"><span class="x">✗</span>a button that does nothing</div>
+      <div class="f29-tag" id="f29-t3" style="left:0;top:76px"><span class="x">✗</span>an era's look that stops short</div>
+      <div class="f29-tag" id="f29-t4" style="left:493px;top:76px"><span class="x">✗</span>a phone-width column</div>
+      <div class="f29-tag" id="f29-t5" style="left:0;top:152px"><span class="x">✗</span>a dot that does nothing</div>
+      <div class="f29-tag" id="f29-t6" style="left:493px;top:152px"><span class="x">✗</span>an error</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "29-step6";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f29-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.45, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the search mock, its groups in three columns
+  push(tl, $("win"), 0.05);
+  pop(tl, $("field"), 0.5, 8);
+  pop(tl, $("c1"), 2.25, 16);   // "three columns"
+  pop(tl, $("c2"), 2.45, 16);
+  pop(tl, $("c3"), 2.65, 16);
+
+  // Scene 2: the planned run types
+  push(tl, $("term"), 3.7);   // "a new desktop check"
+  tl.fromTo($("plan"), { opacity: 0 }, { opacity: 1, duration: 0.35, ease: E }, 5.2);   // with the first line
+  tl.fromTo($("cmd"), { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "steps(10)" }, 4.4);   // "opens"
+  pop(tl, $("l1"), 5.0, 6);    // "every view"
+  pop(tl, $("l2"), 5.5, 6);
+  pop(tl, $("l3"), 5.95, 6);   // "two computer sizes"
+
+  // Scene 3: what it fails on, each as it is named; hold
+  tl.fromTo($("fl"), { opacity: 0 }, { opacity: 1, duration: 0.35, ease: E }, 7.45);   // "It fails on"
+  pop(tl, $("t1"), 8.05);    // "sideways scroll"
+  pop(tl, $("t2"), 9.15);    // "a button that does nothing"
+  pop(tl, $("t3"), 10.5);    // "an era's look that stops short"
+  pop(tl, $("t4"), 12.2);    // "a phone-width column"
+  pop(tl, $("t5"), 13.4);    // "a dot that does nothing"
+  pop(tl, $("t6"), 14.85);   // "an error"
+
+  tl.set({}, {}, 15.723);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

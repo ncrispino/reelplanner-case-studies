@@ -1,0 +1,136 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f25-q3-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f25-q3-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f25-q3-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.14em; text-transform:uppercase; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f25-q3-q { position:absolute; left:90px; top:160px; width:1740px; font:400 68px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  .f25-q3-opt { position:absolute; box-sizing:border-box; top:320px; width:840px; height:500px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f25-q3-opt .k { position:absolute; left:32px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f25-q3-opt .l { position:absolute; left:32px; top:88px; right:32px; font:400 52px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); white-space:nowrap; }
+  .f25-q3-opt .t { position:absolute; left:32px; top:436px; right:32px; font:400 26px/1.3 "JetBrains Mono"; white-space:nowrap; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f25-q3-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:13px; }
+  .f25-q3-rec { color:var(--rp-coral-deep); }
+
+  /* the tiny pictures: a map (slab) with a dot, then a panel beside it / a page instead of it */
+  .f25-q3-pic { position:absolute; left:32px; top:172px; width:776px; height:240px; border-radius:8px; overflow:hidden; border:1px solid rgba(var(--rp-ink-rgb),0.2); background:var(--rp-paper); }
+  .f25-q3-map { position:absolute; left:0; top:0; width:776px; height:240px; background:var(--rp-slab); }
+  .f25-q3-d { position:absolute; width:10px; height:10px; margin:-5px 0 0 -5px; border-radius:50%; background:rgba(var(--rp-slab-ink-rgb),0.55); }
+  .f25-q3-sel { position:absolute; width:22px; height:22px; margin:-11px 0 0 -11px; border-radius:50%; box-sizing:border-box; border:2px solid var(--rp-slab-ink); }
+  .f25-q3-ln { position:absolute; height:1px; background:rgba(var(--rp-slab-ink-rgb),0.35); transform-origin:0 50%; }
+  .f25-q3-panel { position:absolute; right:0; top:0; width:330px; height:240px; box-sizing:border-box; background:var(--rp-tile); border-left:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f25-q3-panel .pt { position:absolute; left:20px; top:20px; font:700 26px/1.15 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f25-q3-panel .pm { position:absolute; left:20px; top:56px; font:400 24px/1.15 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f25-q3-panel .pc { position:absolute; left:20px; top:104px; font:400 24px/1.3 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f25-q3-panel .pc i { font-style:normal; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f25-q3-panel .po { position:absolute; left:20px; bottom:20px; font:400 24px/1.15 "Inter"; color:var(--rp-ink); white-space:nowrap; text-decoration:underline; text-underline-offset:4px; }
+  /* B: the song page itself, with the new header */
+  .f25-q3-page { position:absolute; left:0; top:0; width:776px; height:240px; background:var(--rp-paper); }
+  .f25-q3-hd { position:absolute; left:0; top:0; width:776px; height:48px; box-sizing:border-box; background:var(--rp-tile-2); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.18); }
+  .f25-q3-hd .b { position:absolute; left:20px; top:12px; font:700 24px/24px "Inter"; color:var(--rp-ink); }
+  .f25-q3-hd .tb { position:absolute; left:120px; top:13px; font:700 24px/24px "Inter"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.8); white-space:nowrap; }
+  .f25-q3-hd .sr { position:absolute; right:14px; top:7px; width:140px; height:34px; box-sizing:border-box; border-radius:6px; border:1px solid rgba(var(--rp-ink-rgb),0.4); background:var(--rp-paper); padding-left:12px; font:400 24px/32px "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f25-q3-page .gt { position:absolute; left:28px; top:68px; display:flex; align-items:baseline; gap:18px; white-space:nowrap; }
+  .f25-q3-page .gt b { font:700 36px/1 "Inter"; letter-spacing:-0.01em; text-transform:uppercase; color:var(--rp-ink); }
+  .f25-q3-page .gt span { font:400 24px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f25-q3-page .gn { position:absolute; left:28px; top:124px; width:720px; font:400 24px/1.35 "Inter"; color:var(--rp-ink); }
+</style>
+
+<div id="root" data-composition-id="25-q3" data-band="bottom" data-start="0" data-duration="11.017" data-width="1920" data-height="1080">
+
+  <div class="clip f25-q3-bg" id="f25-q3-bg" data-start="0" data-duration="11.017" data-track-index="0"></div>
+
+  <div class="clip f25-q3-scene" id="f25-q3-scene" data-start="0" data-duration="11.017" data-track-index="1">
+    <div class="f25-q3-place" id="f25-q3-place">Question 3 · step 5</div>
+    <div class="f25-q3-q" id="f25-q3-q" data-question>On a computer, what should clicking a dot do?</div>
+
+    <div class="f25-q3-opt" id="f25-q3-opt-a" data-option="a" style="left:90px">
+      <div class="f25-q3-ring" id="f25-q3-ring"></div>
+      <span class="k">A<span class="f25-q3-rec" id="f25-q3-rec"> · RECOMMENDED</span></span>
+      <div class="l">Select it, and show its panel</div>
+      <div class="t">double click opens the song</div>
+      <div class="f25-q3-pic" aria-hidden="true">
+        <div class="f25-q3-map">
+          <div class="f25-q3-ln" style="left:150px; top:70px; width:172px; transform:rotate(15.5deg)"></div>
+          <div class="f25-q3-ln" style="left:316px; top:116px; width:84px; transform:rotate(-39deg)"></div>
+          <div class="f25-q3-d" style="left:150px; top:70px"></div>
+          <div class="f25-q3-d" style="left:380px; top:62px"></div>
+          <div class="f25-q3-d" style="left:90px; top:180px"></div>
+          <div class="f25-q3-d" style="left:260px; top:196px"></div>
+          <div class="f25-q3-d" style="left:316px; top:116px; background:var(--rp-slab-ink)"></div>
+          <div class="f25-q3-sel" id="f25-q3-sel-a" style="left:316px; top:116px"></div>
+        </div>
+        <div class="f25-q3-panel" id="f25-q3-panel">
+          <div class="pt">Nottamun Town</div>
+          <div class="pm">traditional</div>
+          <div class="pc">1 connection<br><i>Masters of War</i></div>
+          <div class="po">Open the song ›</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="f25-q3-opt" id="f25-q3-opt-b" data-option="b" style="left:990px">
+      <span class="k">B</span>
+      <div class="l">Open its song at once</div>
+      <div class="t">as on a phone</div>
+      <div class="f25-q3-pic" aria-hidden="true">
+        <div class="f25-q3-map">
+          <div class="f25-q3-ln" style="left:150px; top:70px; width:172px; transform:rotate(15.5deg)"></div>
+          <div class="f25-q3-ln" style="left:316px; top:116px; width:84px; transform:rotate(-39deg)"></div>
+          <div class="f25-q3-d" style="left:150px; top:70px"></div>
+          <div class="f25-q3-d" style="left:380px; top:62px"></div>
+          <div class="f25-q3-d" style="left:90px; top:180px"></div>
+          <div class="f25-q3-d" style="left:260px; top:196px"></div>
+          <div class="f25-q3-d" style="left:316px; top:116px; background:var(--rp-slab-ink)"></div>
+          <div class="f25-q3-sel" id="f25-q3-sel-b" style="left:316px; top:116px"></div>
+        </div>
+        <div class="f25-q3-page" id="f25-q3-page">
+          <div class="f25-q3-hd"><span class="b">Dylan</span> <span class="tb"><span style="text-transform:uppercase">Eras &#160;Threads &#160;Map &#160;About</span></span> <span class="sr">Search</span></div>
+          <div class="gt"><b>Nottamun Town</b><span>traditional</span></div>
+          <div class="gn">An English-derived folk song of topsy-turvy riddles, popularized in the folk revival by Jean Ritchie.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "25-q3";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f25-q3-" + s); };
+  var slideUp = function (tl, el, at) {
+    tl.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-5s): eyebrow and heading, then card A; its dot is selected, its panel slides in
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.05);
+  tl.fromTo($("q"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.2);
+  slideUp(tl, $("opt-a"), 3.2);
+  tl.fromTo($("sel-a"), { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: E }, 3.55);
+  tl.fromTo($("panel"), { xPercent: 100 }, { xPercent: 0, duration: 0.6, ease: E }, 4.45);
+
+  // Scene 2 (5-8s): card B; its dot is clicked and the page takes the whole picture
+  slideUp(tl, $("opt-b"), 6.7);
+  tl.fromTo($("sel-b"), { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: E }, 7.05);
+  tl.fromTo($("page"), { opacity: 0 }, { opacity: 1, duration: 0.45, ease: E }, 7.75);
+
+  // Scene 3 (8-10.5s): A gets the coral border and RECOMMENDED; hold still
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 9.5);
+  tl.fromTo($("rec"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 9.7);
+
+  tl.set({}, {}, 10.517);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

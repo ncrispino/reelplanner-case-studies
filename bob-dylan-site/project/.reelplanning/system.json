@@ -1,0 +1,139 @@
+{
+  "name": "dylan-site",
+  "kind": "greenfield",
+  "components": [
+    {
+      "id": "shell",
+      "name": "The app shell",
+      "owns": "index.html, app.css, app.js: the router and the layout"
+    },
+    {
+      "id": "dataset",
+      "name": "The dataset",
+      "owns": "data/*.json: eras, moments, albums, songs, connections, threads"
+    },
+    {
+      "id": "data-check",
+      "name": "The data check",
+      "owns": "tools/check-data.mjs"
+    },
+    {
+      "id": "timeline",
+      "name": "The era timeline",
+      "owns": "the home view: swipe through eras"
+    },
+    {
+      "id": "pages",
+      "name": "Album and song pages",
+      "owns": "#/album/<id>, #/song/<id>"
+    },
+    {
+      "id": "threads",
+      "name": "Threads",
+      "owns": "#/threads, #/thread/<id>, data/threads.json"
+    },
+    {
+      "id": "search",
+      "name": "Search",
+      "owns": "#/search"
+    },
+    {
+      "id": "phone-check",
+      "name": "The phone check",
+      "owns": "tools/check-phone.mjs"
+    },
+    {
+      "id": "desktop-check",
+      "name": "The desktop check",
+      "owns": "tools/check-desktop.mjs"
+    }
+  ],
+  "edges": [
+    {
+      "from": "shell",
+      "to": "timeline",
+      "label": "draws"
+    },
+    {
+      "from": "shell",
+      "to": "pages",
+      "label": "draws"
+    },
+    {
+      "from": "shell",
+      "to": "threads",
+      "label": "draws"
+    },
+    {
+      "from": "shell",
+      "to": "search",
+      "label": "draws"
+    },
+    {
+      "from": "timeline",
+      "to": "dataset",
+      "label": "reads"
+    },
+    {
+      "from": "pages",
+      "to": "dataset",
+      "label": "reads"
+    },
+    {
+      "from": "threads",
+      "to": "dataset",
+      "label": "reads"
+    },
+    {
+      "from": "search",
+      "to": "dataset",
+      "label": "reads"
+    },
+    {
+      "from": "data-check",
+      "to": "dataset",
+      "label": "checks"
+    },
+    {
+      "from": "phone-check",
+      "to": "shell",
+      "label": "checks"
+    },
+    {
+      "from": "desktop-check",
+      "to": "shell",
+      "label": "checks"
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "open-a-link",
+      "name": "Open a link",
+      "steps": [
+        "shell",
+        "dataset",
+        "pages"
+      ]
+    },
+    {
+      "id": "before-a-commit",
+      "name": "Before a commit",
+      "steps": [
+        "data-check",
+        "phone-check"
+      ]
+    }
+  ],
+  "stage": {
+    "rail": {
+      "x": 80,
+      "y": 150,
+      "w": 500,
+      "slotH": 90,
+      "gap": 20,
+      "slots": 6
+    },
+    "kind": "screens",
+    "why": "The site is a static set of phone screens that read one dataset; nothing exchanges data at runtime, so the picture is the screens a visitor ends up with, not a graph of boxes."
+  }
+}

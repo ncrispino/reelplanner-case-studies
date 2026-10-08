@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "voice": "aura-2-apollo-en",
+  "speed": 1.25,
+  "model": "openrouter deepgram/aura-2 + openrouter openai/whisper-1",
+  "lines": {
+    "10": {
+      "key": "b8cfdfb042efb1df85ad",
+      "text": "Question two: how should a video play there? A: a rendered video file, in the browser's own player. B: reelplanning's player in a watch-only mode. C: the review player as it is, with better names. I recommend A, though rendering is slow on this machine, so I'd time one first, and fall back to B if it's too slow.",
+      "sha256": "ae71e3101ad4aaeb3ba9a6c86dccfba919ed6b851b6e7ee19b12b066cb8d3b06",
+      "duration_s": 23.928
+    },
+    "11": {
+      "key": "9c10a64fce4e29236e1b",
+      "text": "With A, each video is a plain file that plays anywhere, with nothing to fill in.",
+      "sha256": "8e53c63c4fda411ce43d2a4cd97cb1206d123353926b768f6fc7ae733f0de0c2",
+      "duration_s": 4.848
+    },
+    "12": {
+      "key": "af6a3f553d118e2e5b64",
+      "text": "With B, reelplanning itself changes first, and its player hides everything a reviewer uses.",
+      "sha256": "0f4e189191854e8fa7d3243043bf1ee207cb79576abd6d61d71d61373aa331d8",
+      "duration_s": 5.568
+    },
+    "13": {
+      "key": "ff35b2a3d7de1d494537",
+      "text": "With C, the review page stays, marks and all.",
+      "sha256": "6c47fd0434ceb50ed6859747b8add72ef7e24f1488ef7a2de4d987fdd4ae0e61",
+      "duration_s": 3.624
+    },
+    "14": {
+      "key": "91b20d7d3d96e98a129e",
+      "text": "A quick check. On the watch page, you click question four of the walkthrough of the site on a computer. What happens?",
+      "sha256": "84907831e9b6e2979eb39c5cb9322684b62e2d235a745d0f1a99ea903a557026",
+      "duration_s": 5.736
+    },
+    "15": {
+      "key": "c831e35492a27a36a8d5",
+      "text": "Step three. The study page becomes a vertical timeline over three days. Each plan is a stretch, headed by the words that started it. Along it come the messages, the plans, each video with a still and a watch link, each review, and what changed after, with before and after pictures.",
+      "sha256": "a60cd40fbc859165bea2f8649bd0a1ea4ae4de1ee5675597ddd6998a26f237eb",
+      "duration_s": 17.904
+    },
+    "16": {
+      "key": "221c609fcd4d1260cd62",
+      "text": "Question three: how much of the timeline is open at first? A: each plan's videos and reviews open, with small messages and details folded. B: everything open. C: only each plan's heading. I recommend A.",
+      "sha256": "ef35c9fdda06951bc24b97484bd7549a951456af14e16d838d5cfad7a473e8b6",
+      "duration_s": 14.376
+    },
+    "17": {
+      "key": "3373f1798e74f1ceb6f2",
+      "text": "With A, about thirty events show, and the rest open in place.",
+      "sha256": "624e1f61aa38d6bb4bae90ba42976cf7cc9f4a5b773e4d36f2b2edf65be7fcb9",
+      "duration_s": 3.984
+    },
+    "18": {
+      "key": "e3b183bcbf7dfcb7e896",
+      "text": "With B, all of them show, and the plans get harder to see.",
+      "sha256": "1953eb28a87c3c7b022c303cb346b4677bb37b8b3668c6f138decfe656c3de03",
+      "duration_s": 4.344
+    },
+    "19": {
+      "key": "abc111ec0d9a0494f88d",
+      "text": "With C, the order of events stays hidden until you open a plan.",
+      "sha256": "10c71f807ea85fc54e1d4194b03b4ed6c672c1ded3b56e3fb92224e230f1cc19",
+      "duration_s": 5.136
+    },
+    "20": {
+      "key": "4485040d5a5fb5f9841e",
+      "text": "Step four. The page opens with one real loop instead of a diagram: the request, the plan video's first question, the owner's own answer, the first build, the words boring and stock, and the themed site. Each links down to its place on the timeline.",
+      "sha256": "5ce44e0b6d19920f11166e1f2fd51df08d1ecf39581105f0a1f3dfa1e015cf32",
+      "duration_s": 15.888
+    },
+    "21": {
+      "key": "d271993c68c62ab1df53",
+      "text": "Step five. A check opens every page at phone and computer size. It fails on an error, a broken link, an event with no source, or a quote that isn't word for word.",
+      "sha256": "e36545fdee716efeacfbef1881eccada95899a2b6eba2f338fee0b34224bd54b",
+      "duration_s": 11.664
+    },
+    "22": {
+      "key": "df30b460fb3d90a69cc2",
+      "text": "Another quick check. Someone tidies a quote, writing don't where the owner wrote dont. What does the check do?",
+      "sha256": "8661a5eccc368031c04ddadfd5cf0b780e343b5b082487ece7ab978eb7e6b017",
+      "duration_s": 5.088
+    },
+    "23": {
+      "key": "6d3b8f4304b656b87bdb",
+      "text": "That's the plan. Draw on any step to leave a note, or approve it.",
+      "sha256": "ed33d8a2a3767d682bf4d550e019be6204c8971e2aaa1194c6ed4923fee18324",
+      "duration_s": 4.416
+    },
+    "01": {
+      "key": "ea1d23e7ce01e0fcb7df",
+      "text": "Here's the case study page as it is. You said it doesn't explain anything. It tells reelplanning in general words, in cards, before it shows anything that happened, and its videos open in the review page.",
+      "sha256": "089bdde7695c5508186681d73840fe83046b9cd0a82a7ea4df14eab2641d63e8",
+      "duration_s": 11.304
+    },
+    "02": {
+      "key": "120acf1febb0af742566",
+      "text": "Three things fall short. The order of events, which comment led to which video, has to be pieced together from four cards. A visitor gets the review page, with marks, comments and a finish button they can't use. And the record of what happened sits in four places: the transcript, the reviews, the commits and the plans.",
+      "sha256": "87a57e849e9adddb4678025efae73991a7942a5a308d3f831d1b9956fe4645f6",
+      "duration_s": 19.488
+    },
+    "03": {
+      "key": "a5a453b742e27624ac56",
+      "text": "So, three changes in five steps. One record of what happened, built from all four. Videos to watch, not review. And a page that tells it in order, with a check that every event has a source.",
+      "sha256": "f006ba98570e0d55976b31e2a848450e13c1a269c4efe07c9d36028ff5fc7727",
+      "duration_s": 14.976
+    },
+    "04": {
+      "key": "66148a9474810dca5743",
+      "text": "Step one. A script reads the transcript, every review and the project's commits, and writes one timeline. Each event keeps its time, the owner's own words, quoted exactly, its source, and what it led to. The first walkthrough review, for example, leads to the commit that gave each era its own look.",
+      "sha256": "c56d23163d170c0ab548d9e909356749756cdf6c9bcad812a6efaccdb3ff753f",
+      "duration_s": 21.168
+    },
+    "05": {
+      "key": "b49b85c102a6ef1ac307",
+      "text": "Question one, for step one: what does the timeline say of the agent's side? A: one line per event, from its commit message. B: also quote the agent's chat replies. C: only the owner's side. I recommend A.",
+      "sha256": "e65b1b6ed053a6d5057a3fb2274eefef36c41d3c434f99f097c449788f67acdd",
+      "duration_s": 14.808
+    },
+    "06": {
+      "key": "9a205c1fa89389679cec",
+      "text": "With A, each build reads in a line, like each era its own art direction.",
+      "sha256": "0da3982f99de2816cc5875cc941d9e413fbc812881c7174b46b7f3be96a52255",
+      "duration_s": 4.488
+    },
+    "07": {
+      "key": "0ade941983100a928e07",
+      "text": "With B, every step also carries the agent's reply, which makes it much longer.",
+      "sha256": "aafe09928cd38a3aa27bd9dd708f7aba927c1c7790a6352c212131fc2155f3a2",
+      "duration_s": 5.544
+    },
+    "08": {
+      "key": "f0a701d408c37df5e1c7",
+      "text": "With C, what was built shows only as pictures.",
+      "sha256": "9a045b99236f6b7c0840ed8dbea7463108c92ffe0f42e55ed59ee5398c1eced4",
+      "duration_s": 3.456
+    },
+    "09": {
+      "key": "3c2920dfd4c2c927c331",
+      "text": "Step two. A watch page plays one video at a time, chosen from a list named by what each video is. Under it, its chapters and questions jump there, and each question shows what the owner answered. There's no mark, no comment box, no finish.",
+      "sha256": "b3581d1509c8b1fe28e97c5b85632184fdaccabebabc0a0dce080dac737f54c1",
+      "duration_s": 15.216
+    }
+  }
+}

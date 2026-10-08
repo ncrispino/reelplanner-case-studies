@@ -1,0 +1,63 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f45-q3-a-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f45-q3-a-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f45-q3-a-place { position:absolute; left:90px; top:110px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f45-q3-a-tile { position:absolute; box-sizing:border-box; width:270px; height:260px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f45-q3-a-tile.zero { background:var(--rp-paper); border:1px dashed rgba(var(--rp-ink-rgb),0.4); }
+  .f45-q3-a-tile .n { position:absolute; left:24px; top:26px; width:230px; font:400 26px/1.15 "Inter"; color:var(--rp-ink); }
+  .f45-q3-a-tile .c { position:absolute; left:22px; top:104px; font:400 96px/1 "EB Garamond"; letter-spacing:-0.025em; color:var(--rp-ink); }
+  .f45-q3-a-tile.zero .c { color:rgba(var(--rp-ink-rgb),0.5); }
+  .f45-q3-a-tile .u { position:absolute; left:24px; top:210px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f45-q3-a-only { position:absolute; left:24px; top:210px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-coral-deep); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="45-q3-a" data-band="bottom" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f45-q3-a-bg" id="f45-q3-a-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f45-q3-a-scene" id="f45-q3-a-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f45-q3-a-place" id="f45-q3-a-place">If A · step 3 · photos found so far</div>
+    <div id="f45-q3-a-eras" data-artifact="photos per era, photos.json">
+      <div class="f45-q3-a-tile zero" id="f45-q3-a-t1" style="left:90px; top:220px"><span class="n">Hibbing</span><span class="c">0</span><span class="f45-q3-a-only" id="f45-q3-a-only1">theme only</span></div>
+      <div class="f45-q3-a-tile" id="f45-q3-a-t2" style="left:384px; top:220px"><span class="n">Village</span><span class="c">1</span><span class="u">photo</span></div>
+      <div class="f45-q3-a-tile zero" id="f45-q3-a-t3" style="left:678px; top:220px"><span class="n">Electric</span><span class="c">0</span><span class="f45-q3-a-only" id="f45-q3-a-only3">theme only</span></div>
+      <div class="f45-q3-a-tile zero" id="f45-q3-a-t4" style="left:972px; top:220px"><span class="n">Basement</span><span class="c">0</span><span class="f45-q3-a-only" id="f45-q3-a-only4">theme only</span></div>
+      <div class="f45-q3-a-tile zero" id="f45-q3-a-t5" style="left:1266px; top:220px"><span class="n">Tracks</span><span class="c">0</span><span class="f45-q3-a-only" id="f45-q3-a-only5">theme only</span></div>
+      <div class="f45-q3-a-tile" id="f45-q3-a-t6" style="left:1560px; top:220px"><span class="n">Gospel</span><span class="c">1</span><span class="u">photo</span></div>
+      <div class="f45-q3-a-tile" id="f45-q3-a-t7" style="left:237px; top:520px"><span class="n">'80s</span><span class="c">1</span><span class="u">photo</span></div>
+      <div class="f45-q3-a-tile zero" id="f45-q3-a-t8" style="left:531px; top:520px"><span class="n">Roots</span><span class="c">0</span><span class="f45-q3-a-only" id="f45-q3-a-only8">theme only</span></div>
+      <div class="f45-q3-a-tile" id="f45-q3-a-t9" style="left:825px; top:520px"><span class="n">Renaissance</span><span class="c">1</span><span class="u">photo</span></div>
+      <div class="f45-q3-a-tile zero" id="f45-q3-a-t10" style="left:1119px; top:520px"><span class="n">Standards</span><span class="c">0</span><span class="f45-q3-a-only" id="f45-q3-a-only10">theme only</span></div>
+      <div class="f45-q3-a-tile zero" id="f45-q3-a-t11" style="left:1413px; top:520px"><span class="n">Rough</span><span class="c">0</span><span class="f45-q3-a-only" id="f45-q3-a-only11">theme only</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "45-q3-a";
+  var $ = function (s) { return document.getElementById("f45-q3-a-" + s); };
+  var E = "power3.out";
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6s): the eleven eras and their photo counts draw in order; the zeros say "theme only"; hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.05);
+  for (var i = 1; i <= 11; i++) {
+    tl.fromTo($("t" + i), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: E }, 0.15 + (i - 1) * 0.14);
+  }
+  tl.fromTo([$("only1"), $("only3"), $("only4"), $("only5"), $("only8"), $("only10"), $("only11")], { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, 2.2);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 5.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

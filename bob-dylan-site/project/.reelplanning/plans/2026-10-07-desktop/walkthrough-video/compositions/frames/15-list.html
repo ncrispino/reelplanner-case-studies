@@ -1,0 +1,62 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 28 (chose), 26 (place label, instead of) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f15-list-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f15-list-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f15-list-place { position:absolute; left:70px; top:70px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* twelve line cards, two columns of six: x 70 / 980, width 870; rows 120 apart from y 130 (last ends at 864) */
+  .f15-list-card { position:absolute; width:870px; height:104px; box-sizing:border-box; border-radius:8px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f15-list-card .c { position:absolute; left:28px; right:24px; top:16px; font:700 28px/1.2 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); white-space:nowrap; }
+  .f15-list-card .i { position:absolute; left:28px; right:24px; top:58px; font:400 26px/1.2 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="15-list" data-band="bottom" data-start="0" data-duration="12" data-width="1920" data-height="1080">
+
+  <div class="clip f15-list-bg" id="f15-list-bg" data-start="0" data-duration="12" data-track-index="0"></div>
+
+  <div class="clip f15-list-scene" id="f15-list-scene" data-start="0" data-duration="12" data-track-index="1">
+    <div class="f15-list-place" id="f15-list-place">The rest of the choices · 12</div>
+
+    <div class="f15-list-card" id="f15-list-k1" data-call="a1" style="left:70px;top:130px"><div class="c">each dot's hit ring 28 map units across</div><div class="i">instead of: 14 px</div></div>
+    <div class="f15-list-card" id="f15-list-k2" data-call="a3" style="left:70px;top:250px"><div class="c">the phone check taps and presses a dot</div><div class="i">instead of: a tap only</div></div>
+    <div class="f15-list-card" id="f15-list-k3" data-call="a6" style="left:70px;top:370px"><div class="c">header search a plain form</div><div class="i">instead of: a scripted field</div></div>
+    <div class="f15-list-card" id="f15-list-k4" data-call="a8" style="left:70px;top:490px"><div class="c">Map lit in the header, Threads in the phone bar</div><div class="i">instead of: a Map tab on phones</div></div>
+    <div class="f15-list-card" id="f15-list-k5" data-call="a10" style="left:70px;top:610px"><div class="c">scrolling replaces the address</div><div class="i">instead of: a history entry per era</div></div>
+    <div class="f15-list-card" id="f15-list-k6" data-call="a15" style="left:70px;top:730px"><div class="c">the song page's small map the column's width</div><div class="i">instead of: 360 × 300</div></div>
+
+    <div class="f15-list-card" id="f15-list-k7" data-call="a16" style="left:980px;top:130px"><div class="c">the album page's left column not sticky</div><div class="i">instead of: sticky</div></div>
+    <div class="f15-list-card" id="f15-list-k8" data-call="a25" style="left:980px;top:250px"><div class="c">panel data one file, fetched on first click</div><div class="i">instead of: in every map page</div></div>
+    <div class="f15-list-card" id="f15-list-k9" data-call="a19" style="left:980px;top:370px"><div class="c">era filter one era at a time, from 1100 px</div><div class="i">instead of: several, at every width</div></div>
+    <div class="f15-list-card" id="f15-list-k10" data-call="a21" style="left:980px;top:490px"><div class="c">search columns set by the page's style</div><div class="i">instead of: drawing the results again</div></div>
+    <div class="f15-list-card" id="f15-list-k11" data-call="a22" style="left:980px;top:610px"><div class="c">the check measures what shows in the page</div><div class="i">instead of: the page's box</div></div>
+    <div class="f15-list-card" id="f15-list-k12" data-call="a24" style="left:980px;top:730px"><div class="c"><code>npm test</code> runs all four checks</div><div class="i">instead of: a script per size</div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "15-list";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f15-list-" + s); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-3.5s): the twelve lines land in order (column one, then column two) by "12 of them"; hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.05);
+  for (var i = 1; i <= 12; i++) {
+    tl.fromTo($("k" + i), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.45, ease: E }, 0.12 + (i - 1) * 0.15);
+  }
+
+  tl.set({}, {}, 3.456);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

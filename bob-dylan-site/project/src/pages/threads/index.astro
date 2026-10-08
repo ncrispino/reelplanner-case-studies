@@ -1,0 +1,48 @@
+---
+import Shell from "../../layouts/Shell.astro";
+import Cover from "../../components/Cover.astro";
+import { threads, songById, albumById, links, url, sortYear, eraOfSong } from "../../lib/data";
+const rows = threads.map((t) => {
+  const ss = t.steps.map((s) => songById.get(s.song)!).filter(Boolean);
+  const ys = ss.map((s) => s.year).filter((y): y is number => y != null);
+  // from 1100 px each thread is a card with the covers of its first songs' albums (plan 2026-10-07-desktop, step 5)
+  // a step that is not on one of his albums (an old tune he borrowed, another artist's version) shows the cover of the
+  // Dylan song it is connected to, so "Borrowed tunes" and "Songs others made famous" get covers too (walkthrough review)
+  const albumOf = (s: { id: string; album: string | null }) => s.album ?? links.filter((l) => l.from === s.id || l.to === s.id)
+    .map((l) => songById.get(l.from === s.id ? l.to : l.from)?.album).find((a) => !!a) ?? null;
+  const covers = [...new Set(ss.map(albumOf).filter((a): a is string => !!a))].slice(0, 4).map((a) => albumById.get(a)!).filter(Boolean);
+  return { t, n: ss.length, from: Math.min(...ys), to: Math.max(...ys), path: ss.map((s) => eraOfSong(s).id), covers };
+});
+---
+<Shell title="Threads" era="tracks" tab="threads">
+  <p class="kicker">Threads</p>
+  <h1 class="display" style="font-size:clamp(34px,10vw,56px)">Follow one idea through his songs</h1>
+  <p class="soft">Each thread is a path through songs that share something, in time order. Or see every connection at once on <a href={url.map()}>the map</a>.</p>
+  <ul class="list threads">
+    {rows.map(({ t, n, from, to, path, covers }) => (
+      <li><a href={url.thread(t.id)}><span class="covs desk" aria-hidden="true">{covers.map((a) => <Cover album={a} size="s" />)}</span><span><strong class="tn">{t.title}</strong><span class="soft intro">{t.intro}</span>
+        <span class="path" aria-hidden="true">{path.map((e) => <i data-era={e}></i>)}</span></span><span class="year soft yr">{n} songs<br /><span class="span">{from}–{to}</span></span></a></li>
+    ))}
+  </ul>
+</Shell>
+<style>
+  .threads .tn { display: block; font: var(--display-weight) 22px/1.15 var(--display-alt, var(--display)); font-style: var(--display-style); }
+  .threads .intro { display: block; margin-top: 4px; font-size: 16px; }
+  .threads .yr { flex: 0 0 auto; text-align: right; font: 13px/1.4 var(--label); }
+  .threads a { padding: 14px 2px 16px; }
+  /* the eras the thread passes through, in order, one mark per song */
+  .path { display: flex; gap: 3px; margin-top: 10px; }
+  .path i { width: 14px; height: 8px; background: var(--dot); box-shadow: 0 0 0 1px rgba(0,0,0,.45); }
+  @media (min-width: 1100px) {
+    .threads { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border: 0; margin-top: 28px; }
+    .threads li { display: flex; }
+    .threads a { flex: 1; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 14px; padding: 16px 18px 18px;
+      border: 1.5px solid var(--line); background: var(--card); }
+    .threads a:hover { border-color: var(--ink); }
+    .covs { display: grid !important; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .covs :global(.cover.s) { width: 100%; }
+    .threads .yr { text-align: left; }
+    .threads .yr br { display: none; }
+    .threads .span::before { content: " · "; }
+  }
+</style>

@@ -1,0 +1,81 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 48 (question, option labels), 26 (eyebrow, mono labels, letters), 24 (sans labels in the drawing) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f31-k6-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f31-k6-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f31-k6-kicker { position:absolute; left:90px; top:266px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.16em; text-transform:uppercase; color:var(--rp-ink); white-space:nowrap; }
+  .f31-k6-ill { position:absolute; left:90px; top:320px; width:900px; height:150px; }
+  .f31-k6-win { position:absolute; left:0; top:0; width:520px; height:150px; box-sizing:border-box; border-radius:10px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.35); overflow:hidden; }
+  .f31-k6-bar { position:absolute; left:0; top:0; right:0; height:24px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f31-k6-dot { position:absolute; top:8px; width:8px; height:8px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.3); }
+  .f31-k6-btn { position:absolute; left:36px; top:46px; padding:0 16px; height:44px; box-sizing:border-box; border-radius:9999px; background:var(--rp-paper); border:1px solid rgba(var(--rp-ink-rgb),0.3); font:400 24px/42px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f31-k6-ring { position:absolute; left:-9px; top:-9px; right:-9px; bottom:-9px; box-sizing:border-box; border-radius:9999px; border:2px solid var(--rp-coral); }
+  /* the window's width, measured on the window itself */
+  .f31-k6-lab { position:absolute; left:14px; right:14px; top:104px; height:32px; }
+  .f31-k6-ml { position:absolute; left:0; right:0; top:15px; height:2px; background:rgba(var(--rp-ink-rgb),0.55); }
+  .f31-k6-mt { position:absolute; top:6px; width:2px; height:20px; background:rgba(var(--rp-ink-rgb),0.55); }
+  .f31-k6-mv { position:absolute; left:50%; top:0; width:140px; margin-left:-70px; height:32px; background:var(--rp-tile); text-align:center; font:400 26px/32px "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; font-variant-ligatures:none; }
+
+  .f31-k6-q { position:absolute; left:90px; top:502px; width:1700px; font:400 48px/1.1 "EB Garamond"; letter-spacing:-0.015em; color:var(--rp-ink); }
+  .f31-k6-opt { position:absolute; top:611px; width:560px; height:164px; box-sizing:border-box; border-radius:12px; background:var(--rp-paper); border:1px solid rgba(var(--rp-ink-rgb),0.2); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f31-k6-opt .k { position:absolute; left:32px; top:30px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.16em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f31-k6-opt .l { position:absolute; left:32px; top:76px; right:32px; font:400 48px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+</style>
+
+<div id="root" data-composition-id="31-k6" data-band="bottom" data-duration="10" data-width="1920" data-height="1080">
+
+  <div class="clip f31-k6-bg" id="f31-k6-bg" data-start="0" data-duration="10" data-track-index="0"></div>
+
+  <div class="clip f31-k6-scene" id="f31-k6-scene" data-start="0" data-duration="10" data-track-index="1">
+    <div class="f31-k6-kicker" id="f31-k6-kicker">Quick check · Step 6</div>
+
+    <div class="f31-k6-ill" data-artifact="a thread in a window 1440 px wide">
+      <div class="f31-k6-win" id="f31-k6-win"><div class="f31-k6-bar"><span class="f31-k6-dot" style="left:12px"></span><span class="f31-k6-dot" style="left:26px"></span><span class="f31-k6-dot" style="left:40px"></span></div>
+        <div class="f31-k6-btn" id="f31-k6-btn">Cards and Map<div class="f31-k6-ring" id="f31-k6-ring"></div></div>
+        <div class="f31-k6-lab" id="f31-k6-lab"><span class="f31-k6-ml"></span><span class="f31-k6-mt" style="left:0"></span><span class="f31-k6-mt" style="right:0"></span><span class="f31-k6-mv">1440 px</span></div>
+      </div>
+    </div>
+
+    <div class="f31-k6-q" id="f31-k6-q" data-question>The Cards and Map button shows on a thread in a window 1440 pixels wide. Which check fails?</div>
+
+    <div class="f31-k6-opt" id="f31-k6-opt-a" data-option="a" style="left:90px"><span class="k">A</span><span class="l">The data check</span></div>
+    <div class="f31-k6-opt" id="f31-k6-opt-b" data-option="b" style="left:680px"><span class="k">B</span><span class="l">The phone check</span></div>
+    <div class="f31-k6-opt" id="f31-k6-opt-c" data-option="c" style="left:1270px"><span class="k">C</span><span class="l">The desktop check</span></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "31-k6";
+  var $ = function (s) { return document.getElementById("f31-k6-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at); };
+  var fade = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power3.out" }, at); };
+  var draw = function (tl, el, at) { tl.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.out" }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the eyebrow and the drawing
+  pop(tl, $("kicker"), 0.06, 8);
+  pop(tl, $("win"), 0.4, 10);
+  fade(tl, $("btn"), 1.75);
+  tl.fromTo($("ring"), { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 0.45, ease: "power3.out" }, 2.8);
+  fade(tl, $("lab"), 4.5);
+
+  // Scene 2: the question, then the cards; all at rest well before the end
+  pop(tl, $("q"), 3.2, 10);
+  pop(tl, $("opt-a"), 5.0, 12);
+  pop(tl, $("opt-b"), 5.3, 12);
+  pop(tl, $("opt-c"), 5.6, 12);
+
+  tl.set({}, {}, 7.765);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,7 @@
+$ node tools/fetch-spotify.mjs
+freewheelin: 13/13 songs (1 Spotify album link(s))
+another-side: 11/11 songs (1 Spotify album link(s))
+self-portrait: 21/21 songs (1 Spotify album link(s))
+shadows-in-the-night: 10/10 songs (1 Spotify album link(s))
+done: 452 of 452 album songs have a Spotify id
+exit 0

@@ -1,0 +1,153 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes in this frame: 44 (title, page titles), 30 (page body), 26 (small) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f55-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f55-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* anchor */
+  .f55-step { position:absolute; left:120px; top:130px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f55-title { position:absolute; left:120px; top:172px; width:360px; font:400 44px/1.08 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* the phones (Video direction) */
+  .f55-phone { position:absolute; top:110px; width:400px; height:800px; box-sizing:border-box; border-radius:44px; border:1px solid var(--rp-ink); background:var(--rp-paper); overflow:hidden; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f55-tabs { position:absolute; left:0; bottom:0; width:398px; height:80px; box-sizing:border-box; padding:0 24px 8px; display:flex; justify-content:space-between; align-items:center; background:var(--rp-paper); border-top:1px solid rgba(var(--rp-ink-rgb),0.14); font:400 26px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.55); }
+  .f55-tabs .on { color:var(--rp-ink); font-weight:700; }
+  .f55-ptitle { position:absolute; left:28px; top:56px; width:344px; font:400 44px/48px "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f55-sml { position:absolute; left:28px; font:400 26px/32px "Inter"; color:rgba(var(--rp-ink-rgb),0.7); white-space:nowrap; }
+  .f55-yr { position:absolute; left:28px; font:400 26px/32px "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f55-hd { position:absolute; left:28px; font:400 26px/32px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f55-body { position:absolute; left:28px; width:344px; font:400 30px/40px "Inter"; color:var(--rp-ink); }
+
+  /* left: the Play row, then the player bar it becomes */
+  .f55-row { position:absolute; left:24px; top:440px; width:350px; height:72px; box-sizing:border-box; padding:0 22px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.16); font:400 30px/70px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f55-player { position:absolute; left:24px; top:440px; width:350px; height:150px; box-sizing:border-box; padding:22px; border-radius:12px; background:var(--rp-slab); color:var(--rp-slab-ink); transform-origin:50% 0; }
+  .f55-player .t { display:block; font:400 26px/32px "Inter"; white-space:nowrap; }
+  .f55-player .s { display:block; margin-top:4px; font:400 26px/32px "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.66); }
+  .f55-trk { position:absolute; left:22px; right:22px; bottom:24px; height:6px; border-radius:3px; background:rgba(var(--rp-slab-ink-rgb),0.22); overflow:hidden; }
+  .f55-fill { position:absolute; left:0; top:0; width:100%; height:6px; background:var(--rp-slab-ink); transform-origin:0 50%; }
+
+  /* right: the video frame on the moment page */
+  .f55-vid { position:absolute; left:24px; top:376px; width:350px; height:197px; box-sizing:border-box; border-radius:8px; background:var(--rp-slab); overflow:hidden; }
+  .f55-vid .p { position:absolute; left:22px; top:22px; width:306px; font:400 26px/32px "Inter"; color:var(--rp-slab-ink); }
+  .f55-vid .on { position:absolute; left:22px; top:128px; font:400 26px/32px "JetBrains Mono"; color:var(--rp-slab-ink); white-space:nowrap; }
+  .f55-vid .trk { position:absolute; left:22px; right:22px; bottom:22px; height:6px; border-radius:3px; background:rgba(var(--rp-slab-ink-rgb),0.22); overflow:hidden; }
+  .f55-vcap { position:absolute; left:28px; top:586px; font:400 26px/32px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f55-tap { position:absolute; box-sizing:border-box; border-radius:16px; border:3px solid var(--rp-coral); }
+
+  /* notes at right */
+  /* "loads after a tap" sits between the two players, a short leader to each */
+  .f55-lead { position:absolute; top:620px; height:1px; background:var(--rp-ink); }
+  .f55-lead.l { left:902px; width:62px; transform-origin:100% 50%; }
+  .f55-lead.r { left:1136px; width:62px; transform-origin:0 50%; }
+  .f55-note { position:absolute; left:972px; top:580px; width:156px; text-align:center; font:400 30px/40px "Inter"; color:var(--rp-ink); }
+  /* the quiet line, centred over the two phones (under them is the caption band) */
+  .f55-strip { position:absolute; left:520px; top:52px; width:1060px; text-align:center; font:400 26px/32px "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="55-step6-play" data-band="bottom" data-start="0" data-duration="18.027" data-width="1920" data-height="1080">
+  <div class="clip f55-bg" id="f55-bg" data-start="0" data-duration="18.027" data-track-index="0"></div>
+
+  <div class="clip f55-scene" id="f55-scene" data-start="0" data-duration="18.027" data-track-index="1">
+    <div class="f55-step" id="f55-step">Step 6</div>
+    <div class="f55-title" id="f55-title">Search, listening, checks</div>
+
+    <!-- left phone: the song page -->
+    <div class="f55-phone" id="f55-p1" data-artifact="#/song/like-a-rolling-stone" style="left:520px">
+      <div class="f55-ptitle" id="f55-a-title">Like a Rolling Stone</div>
+      <div class="f55-sml" id="f55-a-alb" style="top:168px">Highway 61 Revisited</div>
+      <div class="f55-yr" id="f55-a-yr" style="top:204px">1965</div>
+      <div class="f55-body" id="f55-a-note" style="top:256px">Recorded in New York, June 1965.</div>
+      <div class="f55-hd" id="f55-a-lh" style="top:396px">Listen</div>
+      <div class="f55-row" id="f55-a-row">▶ Play · Spotify</div>
+      <div class="f55-player" id="f55-a-player">
+        <span class="t">Like a Rolling Stone · 6:13</span>
+        <span class="s">Spotify</span>
+        <div class="f55-trk"><div class="f55-fill" id="f55-a-fill"></div></div>
+      </div>
+      <div class="f55-tap" id="f55-a-tap" style="left:16px; top:432px; width:366px; height:88px"></div>
+      <div class="f55-tabs"><span class="on">Eras</span> <span>Threads</span> <span>Search</span> <span>About</span></div>
+    </div>
+
+    <!-- right phone: the moment page -->
+    <div class="f55-phone" id="f55-p2" data-artifact="#/moment/newport-1965" style="left:1180px">
+      <div class="f55-yr" id="f55-b-yr" style="top:56px">1965</div>
+      <div class="f55-ptitle" id="f55-b-title" style="top:96px">Newport Folk Festival</div>
+      <div class="f55-body" id="f55-b-note" style="top:204px">plays electric</div>
+      <div class="f55-hd" id="f55-b-wh" style="top:330px">Watch</div>
+      <div class="f55-vid" id="f55-b-vid">
+        <div class="p" id="f55-b-vt">Newport Folk Festival, 1965</div>
+        <div class="on" id="f55-b-on">playing</div>
+        <div class="trk"><div class="f55-fill" id="f55-b-fill"></div></div>
+      </div>
+      <div class="f55-vcap" id="f55-b-cap">youtube-nocookie.com</div>
+      <div class="f55-tap" id="f55-b-tap" style="left:16px; top:368px; width:366px; height:213px"></div>
+      <div class="f55-tabs"><span class="on">Eras</span> <span>Threads</span> <span>Search</span> <span>About</span></div>
+    </div>
+
+    <div class="f55-lead l" id="f55-lead"></div>
+    <div class="f55-lead r" id="f55-lead2"></div>
+    <div class="f55-note" id="f55-note">loads after a tap</div>
+    <div class="f55-strip" id="f55-strip">search and the phone check: as in version one</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "55-step6-play";
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out", IO = "power3.inOut";
+  function up(sel, t, d) { tl.fromTo(sel, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: d || 0.5, ease: E }, t); }
+  function tap(sel, t) {
+    tl.fromTo(sel, { opacity: 0, scale: 1.06 }, { opacity: 1, scale: 1, duration: 0.3, ease: E }, t);
+    tl.to(sel, { opacity: 0, duration: 0.35, ease: E }, t + 0.6);
+  }
+
+  // Scene 1 (0-8s): anchor; the song page with its Play row; a tap; the row becomes a player bar
+  tl.fromTo("#f55-step", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 0.151);
+  tl.fromTo("#f55-title", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 0.262);
+  tl.fromTo("#f55-p1", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.226);
+  up("#f55-a-title", 0.601);
+  up("#f55-a-alb", 0.976);
+  up("#f55-a-yr", 1.127);
+  up("#f55-a-note", 1.502);
+  up("#f55-a-lh", 2.103);
+  tl.fromTo("#f55-a-row", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 2.255);
+  tl.set("#f55-a-player", { opacity: 0 }, 0);
+  tap("#f55-a-tap", 3.455);
+  tl.to("#f55-a-row", { opacity: 0, duration: 0.25, ease: E }, 3.756);
+  tl.fromTo("#f55-a-player", { opacity: 0, scaleY: 0.5 }, { opacity: 1, scaleY: 1, duration: 0.5, ease: E }, 3.792);
+  tl.fromTo("#f55-a-fill", { scaleX: 0 }, { scaleX: 0.12, duration: 2.6, ease: "none" }, 4.207);
+  tl.fromTo("#f55-lead", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: E }, 4.658);
+  tl.fromTo("#f55-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 4.807);
+
+  // Scene 2 (8-17s): the moment page, Newport 1965, its video frame; a tap; it shows "playing"
+  tl.fromTo("#f55-p2", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 6.16);
+  up("#f55-b-yr", 6.534);
+  up("#f55-b-title", 6.685);
+  up("#f55-b-note", 7.21);
+  up("#f55-b-wh", 7.737);
+  tl.fromTo("#f55-b-vid", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 7.887);
+  up("#f55-b-cap", 8.262);
+  tl.fromTo("#f55-lead2", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: E }, 8.42);
+  tl.set(["#f55-b-on", "#f55-b-fill"], { opacity: 0 }, 0);
+  tap("#f55-b-tap", 9.465);
+  tl.fromTo("#f55-b-on", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 9.84);
+  tl.fromTo("#f55-b-fill", { opacity: 1, scaleX: 0 }, { opacity: 1, scaleX: 0.1, duration: 2.6, ease: "none" }, 9.914);
+
+  // Scene 3 (17-24s): the strip; hold
+  tl.fromTo("#f55-strip", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 13.145);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 24.632);
+  window.__timelines = window.__timelines || {};
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

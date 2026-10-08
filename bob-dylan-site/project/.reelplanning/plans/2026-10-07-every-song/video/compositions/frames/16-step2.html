@@ -1,0 +1,106 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 64 (title), 48 (song titles), 28 (slots, words-by line), 26 (fetchers, labels) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f16-step2-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f16-step2-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f16-step2-place { position:absolute; left:80px; top:64px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f16-step2-title { position:absolute; left:76px; top:102px; font:400 64px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  /* the three fetchers, on the slab: they are scripts */
+  .f16-step2-fl { position:absolute; left:80px; top:262px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f16-step2-fx { position:absolute; left:80px; width:400px; height:52px; box-sizing:border-box; border-radius:8px; background:var(--rp-slab); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); }
+  .f16-step2-fx span { position:absolute; left:24px; top:13px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-slab-ink); white-space:nowrap; font-variant-ligatures:none; }
+  .f16-step2-wire { position:absolute; left:480px; width:240px; height:2px; background:rgba(var(--rp-ink-rgb),0.4); transform-origin:0 50%; }
+
+  /* the song cards */
+  .f16-step2-card { position:absolute; left:720px; width:1120px; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f16-step2-card .h { position:absolute; left:36px; top:24px; font:400 48px/1.06 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); white-space:nowrap; }
+  .f16-step2-slot { position:absolute; left:36px; width:1046px; height:56px; box-sizing:border-box; border-top:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f16-step2-slot .n { position:absolute; left:0; top:14px; font:400 28px/1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f16-step2-slot .v { position:absolute; right:0; top:15px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); white-space:nowrap; }
+  .f16-step2-slot .w { position:absolute; left:0; top:14px; font:400 28px/1 "Inter"; color:var(--rp-coral); white-space:nowrap; }
+  .f16-step2-strike { position:absolute; left:0; top:28px; width:150px; height:2px; background:rgba(var(--rp-ink-rgb),0.7); transform-origin:0 50%; }
+</style>
+
+<div id="root" data-composition-id="16-step2" data-band="bottom" data-duration="15.604" data-width="1920" data-height="1080">
+
+  <div class="clip f16-step2-bg" id="f16-step2-bg" data-start="0" data-duration="15.604" data-track-index="0"></div>
+
+  <div class="clip f16-step2-scene" id="f16-step2-scene" data-start="0" data-duration="15.604" data-track-index="1">
+
+    <div class="f16-step2-place" id="f16-step2-place">Step 2</div>
+    <div class="f16-step2-title" id="f16-step2-title">Players, clips and lyrics links</div>
+
+    <div class="f16-step2-fl" id="f16-step2-fl">the same three fetchers</div>
+    <div class="f16-step2-fx" id="f16-step2-f1" style="top:348px"><span>fetch-spotify</span></div>
+    <div class="f16-step2-fx" id="f16-step2-f2" style="top:410px"><span>find-youtube</span></div>
+    <div class="f16-step2-fx" id="f16-step2-f3" style="top:472px"><span>find-lyrics-links</span></div>
+    <!-- wires from each fetcher to its slot on the first card -->
+    <div class="f16-step2-wire" id="f16-step2-w1" style="top:373px"></div>
+    <div class="f16-step2-wire" id="f16-step2-w2" style="top:435px"></div>
+    <div class="f16-step2-wire" id="f16-step2-w3" style="top:497px"></div>
+
+    <div class="f16-step2-card" id="f16-step2-c1" style="top:224px;height:320px" data-artifact="Meet Me in the Morning">
+      <span class="h">Meet Me in the Morning</span>
+      <div class="f16-step2-slot" style="top:121px"><span class="n">Spotify id</span><span class="v" id="f16-step2-v1">✓ found</span></div>
+      <div class="f16-step2-slot" style="top:183px"><span class="n">official clip</span><span class="v" id="f16-step2-v2">✓ found</span></div>
+      <div class="f16-step2-slot" style="top:245px"><span class="n">lyrics link</span><span class="v" id="f16-step2-v3">✓ found</span></div>
+    </div>
+
+    <div class="f16-step2-card" id="f16-step2-c2" style="top:572px;height:300px" data-artifact="Stardust">
+      <span class="h">Stardust</span>
+      <div class="f16-step2-slot" style="top:108px"><span class="n">Spotify id</span><span class="v">✓ found</span></div>
+      <div class="f16-step2-slot" style="top:166px"><span class="n">official clip</span><span class="v">✓ found</span></div>
+      <div class="f16-step2-slot" style="top:224px">
+        <span class="n" id="f16-step2-old">lyrics link</span>
+        <div class="f16-step2-strike" id="f16-step2-strike"></div>
+        <span class="w" id="f16-step2-words">Words by Hoagy Carmichael and Mitchell Parish · not on bobdylan.com</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "16-step2";
+  var $ = function (s) { return document.getElementById("f16-step2-" + s); };
+  var pop = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at); };
+  var fill = function (tl, w, v, at) {
+    tl.fromTo(w, { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, at);
+    tl.fromTo(v, { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, at + 0.3);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-9.8s): the card; the fetchers; its slots fill as each is named
+  pop(tl, $("place"), 0.05);
+  pop(tl, $("title"), 0.1);
+  tl.fromTo($("c1"), { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.3);
+  pop(tl, $("fl"), 1.5);
+  pop(tl, $("f1"), 1.8);
+  pop(tl, $("f2"), 1.95);
+  pop(tl, $("f3"), 2.1);
+  fill(tl, $("w1"), $("v1"), 4.9);
+  fill(tl, $("w2"), $("v2"), 6.0);
+  fill(tl, $("w3"), $("v3"), 7.5);
+
+  // Scene 2 (9.8-15.1s): the Stardust card; its lyrics link gives way to who wrote the words; hold
+  tl.fromTo($("c2"), { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 9.75);
+  tl.fromTo($("strike"), { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, 11.6);
+  tl.fromTo($("old"), { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power3.out" }, 12.4);
+  tl.fromTo($("strike"), { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power3.out" }, 12.4);
+  tl.fromTo($("words"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 12.6);
+
+  tl.set({}, {}, 15.104);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

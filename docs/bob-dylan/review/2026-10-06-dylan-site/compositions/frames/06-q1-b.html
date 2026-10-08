@@ -1,0 +1,76 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f06-q1-b-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f06-q1-b-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f06-q1-b-place { position:absolute; left:90px; top:96px; font:400 28px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f06-q1-b-tree { position:absolute; box-sizing:border-box; left:90px; top:170px; width:780px; height:620px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f06-q1-b-ln { position:absolute; left:56px; font:400 48px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f06-q1-b-ln .g { color:rgba(var(--rp-ink-rgb),0.62); }
+  .f06-q1-b-arrow { position:absolute; left:940px; top:478px; width:420px; height:4px; transform-origin:0 50%; }
+  .f06-q1-b-shaft { position:absolute; left:0; top:0; width:396px; height:4px; background:var(--rp-coral); }
+  .f06-q1-b-head { position:absolute; left:392px; top:-12px; width:0; height:0; border-top:14px solid transparent; border-bottom:14px solid transparent; border-left:28px solid var(--rp-coral); }
+  .f06-q1-b-cmd { position:absolute; left:960px; top:418px; font:400 28px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f06-q1-b-dist { position:absolute; box-sizing:border-box; left:1390px; top:340px; width:450px; height:280px; border-radius:12px; background:var(--rp-paper); border:2px solid var(--rp-ink); }
+  .f06-q1-b-dist .d { position:absolute; left:32px; font:400 48px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f06-q1-b-dist .d .g { color:rgba(var(--rp-ink-rgb),0.62); }
+</style>
+
+<div id="root" data-composition-id="06-q1-b" data-band="bottom" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f06-q1-b-bg" id="f06-q1-b-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f06-q1-b-scene" id="f06-q1-b-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f06-q1-b-place" id="f06-q1-b-place">If B · step 1</div>
+    <div class="f06-q1-b-tree" id="f06-q1-b-tree" data-artifact="the site folder">
+      <div class="f06-q1-b-ln" id="f06-q1-b-l0" style="top:52px">dylan-site/</div>
+      <div class="f06-q1-b-ln" id="f06-q1-b-l1" style="top:140px"><span class="g">├─ </span>package.json</div>
+      <div class="f06-q1-b-ln" id="f06-q1-b-l2" style="top:228px"><span class="g">├─ </span>src/</div>
+      <div class="f06-q1-b-ln" id="f06-q1-b-l3" style="top:316px"><span class="g">│  ├─ </span>app.ts</div>
+      <div class="f06-q1-b-ln" id="f06-q1-b-l4" style="top:404px"><span class="g">│  └─ </span>views/</div>
+      <div class="f06-q1-b-ln" id="f06-q1-b-l5" style="top:492px"><span class="g">└─ </span>data/</div>
+    </div>
+    <div class="f06-q1-b-arrow" id="f06-q1-b-arrow"><div class="f06-q1-b-shaft"></div><div class="f06-q1-b-head"></div></div>
+    <div class="f06-q1-b-cmd" id="f06-q1-b-cmd">npm run build</div>
+    <div class="f06-q1-b-dist" id="f06-q1-b-dist" data-artifact="the build output folder">
+      <div class="d" style="top:44px">dist/</div>
+      <div class="d" id="f06-q1-b-d1" style="top:116px"><span class="g">├─ </span>index.html</div>
+      <div class="d" id="f06-q1-b-d2" style="top:188px"><span class="g">└─ </span>assets/</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "06-q1-b";
+  var $ = function (s) { return document.getElementById("f06-q1-b-" + s); };
+  var line = function (tl, el, at) {
+    tl.fromTo(el, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6s): the tree draws, the build arrow runs to dist/, then hold still
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+  tl.fromTo($("tree"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+  line(tl, $("l0"), 0.3);
+  line(tl, $("l1"), 0.6);
+  line(tl, $("l2"), 0.9);
+  line(tl, $("l3"), 1.15);
+  line(tl, $("l4"), 1.4);
+  line(tl, $("l5"), 1.65);
+  tl.fromTo($("cmd"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 2.1);
+  tl.fromTo($("arrow"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.inOut" }, 2.2);
+  tl.fromTo($("dist"), { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 2.7);
+  line(tl, $("d1"), 3.1);
+  line(tl, $("d2"), 3.4);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 5.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

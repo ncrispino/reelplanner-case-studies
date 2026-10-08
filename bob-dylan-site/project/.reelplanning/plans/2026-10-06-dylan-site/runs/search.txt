@@ -1,0 +1,39 @@
+$ node tools/try-search.mjs 1966 "rolling stoen" tangled "blonde on blond" theme:faith
+search "1966"
+Moments:
+  Motorcycle accident near Woodstock · 1966
+  "Judas!" at the Manchester Free Trade Hall · 1966
+Albums:
+  Blonde on Blonde · 1966
+Songs:
+  Rainy Day Women #12 & 35 · Blonde on Blonde · 1966
+  Visions of Johanna · Blonde on Blonde · 1966
+  I Want You · Blonde on Blonde · 1966
+search "rolling stoen"
+Songs:
+  Like a Rolling Stone · Highway 61 Revisited · 1965
+  Like a Rolling Stone · The Rolling Stones · 1995
+search "tangled"
+Songs:
+  Tangled Up in Blue · Blood on the Tracks · 1975
+search "blonde on blond"
+Albums:
+  Blonde on Blonde · 1966
+  Blood on the Tracks · 1975
+Songs:
+  Rainy Day Women #12 & 35 · Blonde on Blonde · 1966
+  Visions of Johanna · Blonde on Blonde · 1966
+  I Want You · Blonde on Blonde · 1966
+  Stuck Inside of Mobile With the Memphis Blues Again · Blonde on Blonde · 1966
+  Just Like a Woman · Blonde on Blonde · 1966
+search "theme:faith"
+Songs:
+  With God on Our Side · The Times They Are a-Changin' · 1964
+  Gates of Eden · Bringing It All Back Home · 1965
+  I Dreamed I Saw St. Augustine · John Wesley Harding · 1967
+  The Wicked Messenger · John Wesley Harding · 1967
+  Shelter From the Storm · Blood on the Tracks · 1975
+  Oh, Sister · Desire · 1976
+  Changing of the Guards · Street-Legal · 1978
+  Gotta Serve Somebody · Slow Train Coming · 1979
+exit 0

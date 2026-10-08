@@ -1,0 +1,78 @@
+{
+  "id": "9c1be9053655",
+  "scenes": [
+    {
+      "scene": 1,
+      "narration": "e863a9371785",
+      "frame": "9e9274213465"
+    },
+    {
+      "scene": 2,
+      "narration": "284fc4d83504",
+      "frame": "df1a0c32a1c1"
+    },
+    {
+      "scene": 3,
+      "narration": "049f54eed048",
+      "frame": "5ecf0b3f906d"
+    },
+    {
+      "scene": 4,
+      "narration": "534f9b2a4e1b",
+      "frame": "cb4f43b19a4e"
+    },
+    {
+      "scene": 5,
+      "narration": "845189a3d625",
+      "frame": "55425178fef4"
+    },
+    {
+      "scene": 6,
+      "narration": "71fc4f0b3ea7",
+      "frame": "da939960d964"
+    },
+    {
+      "scene": 7,
+      "narration": "ec436c447562",
+      "frame": "7d1b3670102f"
+    },
+    {
+      "scene": 8,
+      "narration": "9fc950539579",
+      "frame": "ab7e0fb17dec"
+    },
+    {
+      "scene": 9,
+      "narration": "a6b7d3576a3f",
+      "frame": "3a5076012c2c"
+    },
+    {
+      "scene": 10,
+      "narration": "eb476d9ff512",
+      "frame": "26a24ea7fa29"
+    },
+    {
+      "scene": 11,
+      "narration": "9d0c75651458",
+      "frame": "4fb4fba5206d"
+    }
+  ],
+  "round": 1,
+  "at": "2026-10-07T03:59:28.007Z",
+  "video": "2026-10-06-dylan-site--walkthrough",
+  "build": "73e459cabe51",
+  "scope": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "context": []
+}

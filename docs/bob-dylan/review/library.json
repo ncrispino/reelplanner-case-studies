@@ -1,0 +1,125 @@
+{
+  "slugs": [
+    "2026-10-06-dylan-site",
+    "2026-10-06-dylan-site--walkthrough",
+    "2026-10-07-every-song",
+    "2026-10-07-every-song--walkthrough",
+    "2026-10-07-desktop",
+    "2026-10-07-desktop--walkthrough",
+    "2026-10-07-fuller--walkthrough"
+  ],
+  "system": null,
+  "plans": [
+    {
+      "plan": "2026-10-07-fuller",
+      "date": "2026-10-07",
+      "title": "A fuller site: more to read, more to see, more to do on every page",
+      "video": null,
+      "walkthrough": "2026-10-07-fuller--walkthrough",
+      "status": "fixing",
+      "guide": "2026-10-07-fuller--walkthrough",
+      "stages": {
+        "decided": true,
+        "built": true,
+        "reviewed": true,
+        "stage": "fixes to make"
+      }
+    },
+    {
+      "plan": "2026-10-07-every-song",
+      "date": "2026-10-07",
+      "title": "Every track a page: the 277 album tracks with no page of their own",
+      "video": "2026-10-07-every-song",
+      "walkthrough": "2026-10-07-every-song--walkthrough",
+      "status": "fixing",
+      "guide": "2026-10-07-every-song--walkthrough",
+      "steps": {
+        "plan": {
+          "1": 56.362,
+          "2": 156.805,
+          "3": 171.909,
+          "4": 195.736
+        },
+        "built": {
+          "1": 16.32,
+          "2": 44.373,
+          "3": 76.053,
+          "4": 96.767
+        }
+      },
+      "stages": {
+        "decided": true,
+        "built": true,
+        "reviewed": true,
+        "stage": "fixes to make"
+      }
+    },
+    {
+      "plan": "2026-10-07-desktop",
+      "date": "2026-10-07",
+      "title": "The Dylan site on a computer: full-window eras, two-column pages, and a map you can click",
+      "video": "2026-10-07-desktop",
+      "walkthrough": "2026-10-07-desktop--walkthrough",
+      "status": "approved",
+      "guide": "2026-10-07-desktop--walkthrough",
+      "steps": {
+        "plan": {
+          "1": 39.04,
+          "2": 71.083,
+          "3": 139.531,
+          "4": 206.446,
+          "5": 240.406,
+          "6": 293.214
+        },
+        "built": {
+          "1": 14.379,
+          "2": 28.224,
+          "3": 40.363,
+          "4": 59.542,
+          "5": 85.398,
+          "6": 144.288
+        }
+      },
+      "stages": {
+        "decided": true,
+        "built": true,
+        "reviewed": true,
+        "stage": "accepted"
+      }
+    },
+    {
+      "plan": "2026-10-06-dylan-site",
+      "date": "2026-10-06",
+      "title": "Bob Dylan, explored: a phone-first site of eras, albums, songs and how they connect",
+      "video": "2026-10-06-dylan-site",
+      "walkthrough": "2026-10-06-dylan-site--walkthrough",
+      "status": "fixing",
+      "guide": "2026-10-06-dylan-site--walkthrough",
+      "steps": {
+        "plan": {
+          "1": 30.464,
+          "2": 117.322,
+          "3": 157.32,
+          "4": 231.826,
+          "5": 300.713,
+          "6": 330.785
+        },
+        "built": {
+          "2": 54.101,
+          "3": 15.019,
+          "4": 71.317,
+          "5": 40.896,
+          "6": 80.106
+        }
+      },
+      "stages": {
+        "decided": true,
+        "built": true,
+        "reviewed": true,
+        "stage": "fixes to make"
+      }
+    }
+  ],
+  "explainers": [],
+  "other": []
+}

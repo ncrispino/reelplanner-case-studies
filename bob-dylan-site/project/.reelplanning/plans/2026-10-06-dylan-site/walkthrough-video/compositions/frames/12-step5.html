@@ -1,0 +1,68 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 72 (title), 26 (place label, addresses) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f12-step5-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f12-step5-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f12-step5-place { position:absolute; left:110px; top:350px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-step5-title { position:absolute; left:106px; top:392px; width:600px; font:400 72px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+  .f12-step5-rule { position:absolute; left:110px; top:572px; width:220px; height:2px; background:var(--rp-coral); transform-origin:0 50%; }
+
+  /* one phone: the real screenshot, 360 x 780 (750 x 1624 at 0.48), thin ink hairline, radius 36, top at y 90 */
+  .f12-step5-ph { position:absolute; top:40px; width:362px; height:832px; }
+  .f12-step5-addr { position:absolute; left:-20px; width:402px; top:0; text-align:center; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f12-step5-frame { position:absolute; left:0; top:50px; width:360px; height:780px; border:1px solid var(--rp-ink); border-radius:36px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f12-step5-frame img { display:block; width:360px; height:auto; }
+</style>
+
+<div id="root" data-composition-id="12-step5" data-band="bottom" data-start="0" data-duration="13.205" data-width="1920" data-height="1080">
+
+  <div class="clip f12-step5-bg" id="f12-step5-bg" data-start="0" data-duration="13.205" data-track-index="0"></div>
+
+  <div class="clip f12-step5-scene" id="f12-step5-scene" data-start="0" data-duration="13.205" data-track-index="1">
+    <div class="f12-step5-place" id="f12-step5-place">Step 5</div>
+    <div class="f12-step5-title" id="f12-step5-title">Threads and the map, redrawn</div>
+    <div class="f12-step5-rule" id="f12-step5-rule"></div>
+
+    <div class="f12-step5-ph" id="f12-step5-p1" data-artifact="/thread/faith/" style="left:880px">
+      <div class="f12-step5-addr">/thread/faith/</div>
+      <div class="f12-step5-frame"><img src="assets/shots/thread-faith.png" alt="The Faith thread, its first card: 1965, Gates of Eden, in the Going Electric look"></div>
+    </div>
+    <div class="f12-step5-ph" id="f12-step5-p2" data-artifact="/map/masters-of-war/" style="left:1360px">
+      <div class="f12-step5-addr">/map/masters-of-war/</div>
+      <div class="f12-step5-frame"><img src="assets/shots/map.png" alt="The map as a night chart, opened on Masters of War, era-coloured dots"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "12-step5";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f12-step5-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  // a short push: in from below and a touch small, landing at scale 1 (never past it)
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8s): the anchor, then the thread phone
+  pop(tl, $("place"), 0.041, 8);
+  pop(tl, $("title"), 0.124, 10);
+  push(tl, $("p1"), 0.66);
+
+  // Scene 2 (8-16s): the map phone; hold
+  push(tl, $("p2"), 6.602);
+  tl.fromTo($("rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 6.932);
+
+  tl.set({}, {}, 16);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

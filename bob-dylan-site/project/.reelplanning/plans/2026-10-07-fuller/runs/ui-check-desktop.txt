@@ -1,0 +1,5 @@
+$ node tools/check-desktop.mjs
+· note (era photographs not landed yet, not failing): 5 pages, e.g. era "hibbing": 2 photos, want 3; era "basement": 2 photos, want 3; era "gospel": 1 photo, want 3
+· note (moment photos not landed yet, not failing): 27 pages, e.g. moment "born-in-duluth": no photo or clip; moment "move-to-hibbing": no photo or clip; moment "hibbing-high-graduation": no photo or clip
+✓ 24 views at 1440 × 900 and 1100 × 800, screenshots in checks/desktop/
+exit 0

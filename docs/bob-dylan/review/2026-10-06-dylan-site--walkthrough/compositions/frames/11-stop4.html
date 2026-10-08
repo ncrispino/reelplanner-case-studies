@@ -1,0 +1,82 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 44 (choice), 26 (place label, lines) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f11-stop4-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f11-stop4-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* the phone: the real 750 x 1624 shot at 0.48, thin ink hairline, radius 36, top at y 90 */
+  .f11-stop4-phone { position:absolute; left:240px; top:90px; width:360px; height:780px; box-sizing:border-box; border-radius:36px; border:1px solid rgba(var(--rp-ink-rgb),0.5); overflow:hidden; background:var(--rp-slab); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f11-stop4-phone img { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 0; }
+  /* small coral ticks just left of each "its story ›" mark (marks at x 582-715, rows y 198/428/680/832/1088 at 2x; shot at 0.479);
+     ticks sit at x 268-272, clear of every title (row titles end by x 260 on the mark rows) */
+  .f11-stop4-ring { position:absolute; left:0; top:0; width:358px; height:778px; pointer-events:none; }
+  .f11-stop4-tick { position:absolute; left:267px; width:4px; height:28px; border-radius:2px; background:var(--rp-coral); }
+
+  .f11-stop4-place { position:absolute; left:760px; top:196px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f11-stop4-card { position:absolute; left:760px; top:300px; width:960px; height:330px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f11-stop4-txt { position:absolute; left:48px; top:48px; width:864px; }
+  .f11-stop4-chose { font:700 44px/1.18 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); }
+  .f11-stop4-inst { margin-top:20px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f11-stop4-why { margin-top:16px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+</style>
+
+<div id="root" data-composition-id="11-stop4" data-band="bottom" data-duration="9.289" data-width="1920" data-height="1080">
+  <div class="clip f11-stop4-bg" id="f11-stop4-bg" data-start="0" data-duration="9.289" data-track-index="0"></div>
+
+  <div class="clip f11-stop4-scene" id="f11-stop4-scene" data-start="0" data-duration="9.289" data-track-index="1">
+    <div class="f11-stop4-phone" id="f11-stop4-phone" data-artifact="/album/blonde-on-blonde/">
+      <img src="assets/shots/album-bob-songs.png" alt="Blonde on Blonde: track list, 14 songs, numbered, its story links on seven">
+      <div class="f11-stop4-ring" id="f11-stop4-ring">
+        <i class="f11-stop4-tick" style="top:81px"></i>
+        <i class="f11-stop4-tick" style="top:190px"></i>
+        <i class="f11-stop4-tick" style="top:311px"></i>
+        <i class="f11-stop4-tick" style="top:384px"></i>
+        <i class="f11-stop4-tick" style="top:506px"></i>
+      </div>
+    </div>
+
+    <div class="f11-stop4-place" id="f11-stop4-place">Step 4 · Album and song pages</div>
+
+    <div class="f11-stop4-card" id="f11-stop4-ca17" data-call="a17">
+      <div class="f11-stop4-txt">
+        <div class="f11-stop4-chose" id="f11-stop4-c1">Every track, numbered</div>
+        <div class="f11-stop4-inst" id="f11-stop4-i1">instead of: only the selected songs</div>
+        <div class="f11-stop4-why" id="f11-stop4-w1">its story › marks the 7 with a page, 5 on screen</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f11-stop4-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-7s): the phone pushed in, the full track list
+  tl.fromTo($("phone"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: E }, 0.094);
+  rise(tl, $("place"), 0.377, 10);
+
+  // Scene 2 (4.4-9.3s): card a17; its why rings the story links on the phone; hold
+  tl.fromTo($("ca17"), { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.7, ease: E }, 4.457);
+  rise(tl, $("c1"), 4.771);
+  rise(tl, $("i1"), 5.273);
+  rise(tl, $("w1"), 5.838);
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 5.964);
+
+  tl.set({}, {}, 9.289);
+  window.__timelines["11-stop4"] = tl;
+})();
+</script>
+</template>

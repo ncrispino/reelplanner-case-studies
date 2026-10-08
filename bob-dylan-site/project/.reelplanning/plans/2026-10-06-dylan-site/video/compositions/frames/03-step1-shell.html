@@ -1,0 +1,163 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 64 (title), 36 (era title), 26 (everything else) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f03-step1-shell-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f03-step1-shell-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f03-step1-shell-place { position:absolute; left:200px; top:388px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f03-step1-shell-title { position:absolute; left:196px; top:428px; font:400 64px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  /* the address, above the phone */
+  .f03-step1-shell-addr { position:absolute; left:1040px; top:30px; width:520px; height:58px; box-sizing:border-box; border-radius:9999px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f03-step1-shell-addr span { position:absolute; left:0; width:518px; top:15px; text-align:center; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; font-variant-ligatures:none; }
+
+  /* the phone: 400 x 800, ink hairline, radius 44, top at y 110; Going Electric theme = slab ground, amber, condensed bold caps */
+  .f03-step1-shell-wrap { position:absolute; left:1100px; top:110px; width:400px; height:800px; }
+  .f03-step1-shell-phone { position:absolute; left:0; top:0; width:400px; height:800px; box-sizing:border-box; border-radius:44px; border:1px solid var(--rp-ink); background:var(--rp-slab); overflow:hidden; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f03-step1-shell-speaker { position:absolute; left:162px; top:14px; width:76px; height:8px; border-radius:9999px; background:rgba(var(--rp-slab-ink-rgb),0.22); }
+  .f03-step1-shell-cond { display:inline-block; transform:scaleX(0.8); transform-origin:0 0; white-space:nowrap; }
+  .f03-step1-shell-etitle { position:absolute; left:24px; top:62px; font:700 36px/1 "Inter"; text-transform:uppercase; letter-spacing:0.01em; color:var(--rp-syn-num); }
+  .f03-step1-shell-eyear { position:absolute; left:24px; top:114px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.7); }
+  .f03-step1-shell-cv { position:absolute; width:168px; height:168px; box-sizing:border-box; padding:14px; border-radius:8px; background:var(--rp-slab-bar); border:1px solid color-mix(in oklab, var(--rp-syn-num) 55%, var(--rp-slab)); transform-origin:0 0; }
+  .f03-step1-shell-cv .ct { font:700 26px/1.05 "Inter"; text-transform:uppercase; color:var(--rp-slab-ink); }
+  .f03-step1-shell-cv .cy { position:absolute; left:14px; bottom:12px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-syn-num); }
+  .f03-step1-shell-moment { position:absolute; left:24px; top:566px; font:400 26px/1.3 "Inter"; color:var(--rp-slab-ink); white-space:nowrap; }
+  .f03-step1-shell-moment b { font:400 26px/1.3 "JetBrains Mono"; color:var(--rp-syn-num); margin-right:14px; }
+  .f03-step1-shell-touch { position:absolute; left:264px; top:232px; width:56px; height:56px; border-radius:50%; border:2px solid rgba(var(--rp-slab-ink-rgb),0.7); box-sizing:border-box; }
+
+  /* the album page that fills in behind the growing cover */
+  .f03-step1-shell-backl { position:absolute; left:24px; top:26px; font:400 26px/1 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.72); white-space:nowrap; }
+  .f03-step1-shell-meta { position:absolute; left:24px; font:400 26px/1 "JetBrains Mono"; white-space:nowrap; }
+  .f03-step1-shell-song { position:absolute; left:24px; width:352px; height:46px; border-top:1px solid rgba(var(--rp-slab-ink-rgb),0.14); font:400 26px/46px "Inter"; color:var(--rp-slab-ink); white-space:nowrap; }
+
+  .f03-step1-shell-tabs { position:absolute; left:0; top:716px; width:400px; height:84px; box-sizing:border-box; border-top:1px solid rgba(var(--rp-slab-ink-rgb),0.14); background:var(--rp-slab); display:flex; justify-content:space-between; align-items:flex-start; padding:20px 24px 0; }
+  .f03-step1-shell-tabs span { font:400 26px/1 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.55); }
+  .f03-step1-shell-tabs span.on { color:var(--rp-syn-num); }
+
+  /* the pinned word that rides on the moving cover */
+  /* outside the phone, right of it; the cover's right edge stays at x 376 while it grows, so the leader keeps touching it */
+  .f03-step1-shell-gloss { position:absolute; left:448px; top:287px; font:400 26px/1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f03-step1-shell-gl { position:absolute; left:380px; top:299px; width:56px; height:2px; background:var(--rp-coral); transform-origin:100% 50%; }
+
+  /* scene 3: the way back */
+  .f03-step1-shell-lead { position:absolute; left:1512px; top:290px; width:56px; height:1px; background:rgba(var(--rp-ink-rgb),0.4); transform-origin:0 50%; }
+  .f03-step1-shell-back { position:absolute; left:1584px; top:277px; font:400 26px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.8); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="03-step1-shell" data-band="bottom" data-duration="20.788" data-width="1920" data-height="1080">
+
+  <div class="clip f03-step1-shell-bg" id="f03-step1-shell-bg" data-start="0" data-duration="20.788" data-track-index="0"></div>
+
+  <div class="clip f03-step1-shell-scene" id="f03-step1-shell-scene" data-start="0" data-duration="20.788" data-track-index="1">
+
+    <div class="f03-step1-shell-place" id="f03-step1-shell-place">Step 1</div>
+    <div class="f03-step1-shell-title" id="f03-step1-shell-title">The app shell</div>
+
+    <div class="f03-step1-shell-addr" id="f03-step1-shell-addr" data-artifact="the address">
+      <span id="f03-step1-shell-a1">#/era/electric</span>
+      <span id="f03-step1-shell-a2">#/album/highway-61-revisited</span>
+    </div>
+
+    <div class="f03-step1-shell-wrap" id="f03-step1-shell-wrap" data-artifact="#/era/electric → #/album/highway-61-revisited">
+    <div class="f03-step1-shell-phone" id="f03-step1-shell-phone">
+      <div class="f03-step1-shell-speaker"></div>
+
+      <!-- the Going Electric panel -->
+      <div class="f03-step1-shell-etitle" id="f03-step1-shell-etitle"><span class="f03-step1-shell-cond">Going Electric</span></div>
+      <div class="f03-step1-shell-eyear" id="f03-step1-shell-eyear">1965–1966</div>
+      <div class="f03-step1-shell-cv" id="f03-step1-shell-c1" style="left:24px; top:176px"><div class="ct"><span class="f03-step1-shell-cond">Bringing It<br>All Back<br>Home</span></div><div class="cy">1965</div></div>
+      <div class="f03-step1-shell-cv" id="f03-step1-shell-c3" style="left:24px; top:360px"><div class="ct"><span class="f03-step1-shell-cond">Blonde on<br>Blonde</span></div><div class="cy">1966</div></div>
+      <div class="f03-step1-shell-moment" id="f03-step1-shell-moment"><b>1965</b>Newport: plays electric</div>
+
+      <!-- the album page, filling in behind the cover -->
+      <div class="f03-step1-shell-backl" id="f03-step1-shell-backl">‹ Going Electric</div>
+      <div class="f03-step1-shell-meta" id="f03-step1-shell-m1" style="top:486px; color:rgba(var(--rp-slab-ink-rgb),0.8)">1965 · Columbia</div>
+      <div class="f03-step1-shell-meta" id="f03-step1-shell-m2" style="top:522px; color:rgba(var(--rp-slab-ink-rgb),0.55)">cover from the archive</div>
+      <div class="f03-step1-shell-song" id="f03-step1-shell-s1" style="top:566px">Like a Rolling Stone</div>
+      <div class="f03-step1-shell-song" id="f03-step1-shell-s2" style="top:612px">Ballad of a Thin Man</div>
+      <div class="f03-step1-shell-song" id="f03-step1-shell-s3" style="top:658px">Desolation Row</div>
+
+      <!-- the cover that grows into the header -->
+      <div class="f03-step1-shell-cv" id="f03-step1-shell-c2" style="left:208px; top:176px"><div class="ct"><span class="f03-step1-shell-cond">Highway 61<br>Revisited</span></div><div class="cy">1965</div></div>
+      <div class="f03-step1-shell-touch" id="f03-step1-shell-touch"></div>
+
+      <div class="f03-step1-shell-tabs">
+        <span class="on">Eras</span> <span>Threads</span> <span>Search</span> <span>About</span>
+      </div>
+    </div>
+
+    <div class="f03-step1-shell-gl" id="f03-step1-shell-gl"></div>
+    <div class="f03-step1-shell-gloss" id="f03-step1-shell-gloss" data-gloss="view-transition-name">View Transitions</div>
+    </div>
+
+    <div class="f03-step1-shell-lead" id="f03-step1-shell-lead"></div>
+    <div class="f03-step1-shell-back" id="f03-step1-shell-back">back: it shrinks home</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "03-step1-shell";
+  var $ = function (s) { return document.getElementById("f03-step1-shell-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at); };
+  var fadeIn = function (tl, el, at, dur) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: dur || 0.4, ease: "power3.out" }, at); };
+  var fadeOut = function (tl, el, at, dur) { tl.fromTo(el, { opacity: 1 }, { opacity: 0, duration: dur || 0.4, ease: "power3.out" }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // initial states for the album page (hidden until the tap)
+  tl.set([$("backl"), $("m1"), $("m2"), $("s1"), $("s2"), $("s3"), $("a2"), $("touch"), $("gloss"), $("gl"), $("lead"), $("back")], { opacity: 0 }, 0);
+
+  // Scene 1 (0-6s): the anchor, the phone on the Going Electric panel, the address
+  pop(tl, $("phone"), 0.102, 16);
+  fadeIn(tl, $("place"), 0.304);
+  pop(tl, $("title"), 0.406, 10);
+  pop(tl, $("addr"), 0.71, 8);
+  pop(tl, $("etitle"), 1.014, 10);
+  fadeIn(tl, $("eyear"), 1.42);
+  pop(tl, $("c1"), 2.029, 14);
+  pop(tl, $("c2"), 2.434, 14);
+  pop(tl, $("c3"), 2.84, 14);
+  pop(tl, $("moment"), 3.652, 8);
+
+  // Scene 2 (6-14s): the tap, the cover grows into the album page's header
+  tl.fromTo($("touch"), { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power3.out" }, 6.086);
+  tl.to($("touch"), { opacity: 0, duration: 0.3, ease: "power3.out" }, 6.593);
+  tl.fromTo($("gl"), { opacity: 1, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.4, ease: "power3.out" }, 6.492);
+  tl.fromTo($("gloss"), { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, 6.6);
+
+  var G = 7.0, GD = 1.3;
+  // cover: from (208,176) at 168px to (24,64) at 352px
+  tl.fromTo($("c2"), { x: 0, y: 0, scale: 1 }, { x: -184, y: -112, scale: 352 / 168, duration: GD, ease: "power3.inOut" }, G);
+  // the era panel gives way, the page fills in behind
+  fadeOut(tl, $("etitle"), G, 0.35);
+  fadeOut(tl, $("eyear"), G, 0.35);
+  fadeOut(tl, $("c1"), G, 0.35);
+  fadeOut(tl, $("c3"), G, 0.35);
+  fadeOut(tl, $("moment"), G, 0.35);
+  fadeOut(tl, $("a1"), 7.304, 0.3);
+  fadeIn(tl, $("a2"), 7.506, 0.4);
+  fadeIn(tl, $("backl"), 8.318);
+  pop(tl, $("m1"), 8.927, 8);
+  pop(tl, $("m2"), 9.536, 8);
+  pop(tl, $("s1"), 10.549, 8);
+  pop(tl, $("s2"), 11.361, 8);
+  pop(tl, $("s3"), 12.173, 8);
+
+  // Scene 3 (14-20s): the way back, then hold
+  tl.fromTo($("lead"), { opacity: 1, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.4, ease: "power3.out" }, 14.201);
+  tl.fromTo($("back"), { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 14.404);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 19.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

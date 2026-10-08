@@ -1,0 +1,70 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* three type sizes: 26 (eyebrow, request, keys), 44 (option labels), 56 (question) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f54-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f54-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f54-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.16em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f54-req { position:absolute; left:90px; top:140px; height:52px; box-sizing:border-box; padding:0 22px; border-radius:8px; background:var(--rp-slab); border:1px solid rgba(var(--rp-on-ink-rgb),0.14); font:400 26px/50px "JetBrains Mono"; color:var(--rp-slab-ink); white-space:nowrap; font-variant-ligatures:none; }
+  .f54-req .x { color:var(--rp-syn-del); }
+
+  .f54-q { position:absolute; left:90px; top:222px; width:1740px; font:400 56px/1.1 "EB Garamond"; letter-spacing:-0.016em; color:var(--rp-ink); }
+
+  .f54-opt { position:absolute; box-sizing:border-box; top:400px; width:540px; height:320px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f54-opt .k { position:absolute; left:32px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f54-opt .l { position:absolute; left:32px; top:92px; right:32px; font:400 44px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+</style>
+
+<div id="root" data-composition-id="54-k3" data-band="bottom" data-start="0" data-duration="9.9" data-width="1920" data-height="1080">
+  <div class="clip f54-bg" id="f54-bg" data-start="0" data-duration="12" data-track-index="0"></div>
+
+  <div class="clip f54-scene" id="f54-scene" data-start="0" data-duration="12" data-track-index="1">
+    <div class="f54-place" id="f54-place">QUICK CHECK · STEP 4</div>
+    <div class="f54-req" id="f54-req" data-artifact="cover request">coverartarchive.org · Oh Mercy · <span class="x">failed</span></div>
+
+    <div class="f54-q" id="f54-q" data-question>The Cover Art Archive does not answer for Oh Mercy’s cover. What does its album page show?</div>
+
+    <div class="f54-opt" id="f54-opt-a" data-option="a" style="left:90px">
+      <span class="k">A</span>
+      <div class="l">A broken image</div>
+    </div>
+    <div class="f54-opt" id="f54-opt-b" data-option="b" style="left:690px">
+      <span class="k">B</span>
+      <div class="l">A cover drawn in its era’s theme</div>
+    </div>
+    <div class="f54-opt" id="f54-opt-c" data-option="c" style="left:1290px">
+      <span class="k">C</span>
+      <div class="l">No cover, the title only</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "54-k3";
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out";
+  function slideUp(sel, at) { tl.fromTo(sel, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, at); }
+
+  // Scene 1 (0-4s): the eyebrow, then the failed cover request
+  tl.fromTo("#f54-place", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.049);
+  tl.fromTo("#f54-req", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 0.295);
+  tl.fromTo("#f54-req .x", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: E }, 0.886);
+
+  // Scene 2 (4-12s): the question, then the three cards; hold from 8s
+  tl.fromTo("#f54-q", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 1.97);
+  slideUp("#f54-opt-a", 2.757);
+  slideUp("#f54-opt-b", 3.054);
+  slideUp("#f54-opt-c", 3.348);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 11.99);
+  window.__timelines = window.__timelines || {};
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

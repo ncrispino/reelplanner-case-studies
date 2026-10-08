@@ -1,0 +1,94 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f09-step2-check-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f09-step2-check-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f09-step2-check-place { position:absolute; left:160px; top:72px; font:500 28px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the terminal (theme block terminal-run) */
+  .f09-step2-check-win { position:absolute; left:160px; top:140px; width:1600px; height:500px; border-radius:8px; background:var(--rp-slab); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); overflow:hidden; }
+  .f09-step2-check-bar { position:absolute; left:0; top:0; width:1600px; height:56px; background:var(--rp-slab-bar); }
+  .f09-step2-check-dot { position:absolute; top:22px; width:13px; height:13px; border-radius:50%; background:rgba(var(--rp-slab-ink-rgb),0.3); }
+  .f09-step2-check-title { position:absolute; left:110px; top:14px; font:500 28px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.62); white-space:nowrap; }
+  .f09-step2-check-line { position:absolute; left:40px; font:400 28px/48px "JetBrains Mono"; color:var(--rp-slab-ink); white-space:pre; font-variant-ligatures:none; }
+  .f09-step2-check-line .g { color:rgba(var(--rp-slab-ink-rgb),0.62); font-weight:700; margin-right:0.6em; }
+  .f09-step2-check-line.dim { color:rgba(var(--rp-slab-ink-rgb),0.62); }
+  .f09-step2-check-ok { color:var(--rp-syn-add); } .f09-step2-check-err { color:var(--rp-syn-del); }
+  .f09-step2-check-caret { display:inline-block; width:0.55em; height:1.05em; margin-left:0.08em; background:var(--rp-slab-ink); vertical-align:text-bottom; }
+  .f09-step2-check-m { position:relative; display:inline-block; line-height:34px; }
+  .f09-step2-check-u { position:absolute; left:0; right:0; bottom:-3px; height:4px; background:var(--rp-coral); transform-origin:0 50%; }
+  .f09-step2-check-pin { position:absolute; left:-6px; bottom:100%; margin-bottom:8px; padding:0 10px; font:400 28px/34px "Inter"; font-style:normal; color:var(--rp-on-ink); background:var(--rp-coral); border-radius:5px; white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="09-step2-check" data-band="bottom" data-duration="10.261" data-width="1920" data-height="1080">
+
+  <div class="clip f09-step2-check-bg" id="f09-step2-check-bg" data-start="0" data-duration="10.261" data-track-index="0"></div>
+
+  <div class="clip f09-step2-check-scene" id="f09-step2-check-scene" data-start="0" data-duration="10.261" data-track-index="1">
+    <div class="f09-step2-check-place" id="f09-step2-check-place">Step 2 · The data check</div>
+
+    <div class="f09-step2-check-win" id="f09-step2-check-win" data-artifact="node tools/check-data.mjs">
+      <div class="f09-step2-check-bar"></div>
+      <div class="f09-step2-check-dot" style="left:24px"></div><div class="f09-step2-check-dot" style="left:48px"></div><div class="f09-step2-check-dot" style="left:72px"></div>
+      <div class="f09-step2-check-title">dylan-site</div>
+
+      <div class="f09-step2-check-line" id="f09-step2-check-c1" style="top:86px"><span class="g">$</span><span id="f09-step2-check-c1t">node tools/check-data.mjs</span><i class="f09-step2-check-caret" id="f09-step2-check-c1k"></i></div>
+      <div class="f09-step2-check-line" id="f09-step2-check-o1" style="top:134px"><span class="f09-step2-check-ok">✓</span> 11 eras, 39 albums, 212 songs, 140 connections, 12 threads, 31 photos</div>
+
+      <div class="f09-step2-check-line" id="f09-step2-check-c2" style="top:214px"><span class="g">$</span><span id="f09-step2-check-c2t">node tools/check-data.mjs</span><i class="f09-step2-check-caret" id="f09-step2-check-c2k"></i></div>
+      <div class="f09-step2-check-line" id="f09-step2-check-o2" style="top:310px"><span class="f09-step2-check-err">✗</span> photos.json #7: "newport-1965" <span class="f09-step2-check-m">has no licence<i class="f09-step2-check-u" id="f09-step2-check-u1"></i><em class="f09-step2-check-pin" id="f09-step2-check-p1" data-gloss="no licence">a photo with no licence</em></span></div>
+      <div class="f09-step2-check-line dim" id="f09-step2-check-o3" style="top:358px">exit 1</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "09-step2-check";
+  var $ = function (s) { return document.getElementById("f09-step2-check-" + s); };
+
+  // a typer the timeline drives
+  function typer(el, text, t0, t1) {
+    var n = text.length;
+    return function (t) { var k = t <= t0 ? 0 : t >= t1 ? n : Math.floor(((t - t0) / (t1 - t0)) * n); el.textContent = text.slice(0, k); };
+  }
+  var c1 = $("c1t"), T1 = typer(c1, c1.textContent, 0.6, 1.8), d1 = { t: 0 };
+  var c2 = $("c2t"), T2 = typer(c2, c2.textContent, 6.5, 7.6), d2 = { t: 0 };
+  T1(0); T2(0);
+
+  // initial states, outside the timeline
+  gsap.set([$("o1"), $("c2"), $("o2"), $("o3")], { opacity: 0 });
+  gsap.set($("u1"), { scaleX: 0 });
+  gsap.set($("p1"), { opacity: 0, y: 6 });
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0–6s): the check is typed and passes, photos counted
+  tl.fromTo($("place"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.036);
+  tl.fromTo($("win"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.073);
+  tl.to(d1, { t: 1.8, duration: 1.2, ease: "none", onUpdate: function () { T1(d1.t); } }, 0.441);   // typed
+  tl.set($("c1k"), { opacity: 0 }, 1.465);
+  tl.to($("o1"), { opacity: 1, duration: 0.12, ease: "none" }, 1.758);                              // printed
+
+  // Scene 2 (6–14s): a second run fails on a photo with no licence
+  tl.set($("c2"), { opacity: 1 }, 4.544);
+  tl.to(d2, { t: 7.6, duration: 1.1, ease: "none", onUpdate: function () { T2(d2.t); } }, 4.764);
+  tl.set($("c2k"), { opacity: 0 }, 5.716);
+  tl.to($("o2"), { opacity: 1, duration: 0.12, ease: "none" }, 6.01);
+  tl.to($("o3"), { opacity: 1, duration: 0.12, ease: "none" }, 6.157);
+  tl.to($("u1"), { scaleX: 1, duration: 0.45, ease: "power2.out" }, 6.597);                         // drawn under "has no licence"
+  tl.to($("p1"), { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 6.818);                  // the chip lights, the one coral
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 13.99);
+
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

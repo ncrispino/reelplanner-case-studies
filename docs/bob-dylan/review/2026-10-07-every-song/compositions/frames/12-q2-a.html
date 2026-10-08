@@ -1,0 +1,93 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f12-q2-a-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f12-q2-a-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f12-q2-a-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the mock page: thin browser window, radius 14, ink hairline, 36 px title bar */
+  .f12-q2-a-win { position:absolute; box-sizing:border-box; left:300px; top:150px; width:1320px; height:720px; border-radius:14px; border:1px solid rgba(var(--rp-ink-rgb),0.22); background:var(--rp-paper); overflow:hidden; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f12-q2-a-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f12-q2-a-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.22); }
+  .f12-q2-a-addr { position:absolute; left:100px; top:0; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f12-q2-a-kick { position:absolute; left:70px; top:52px; font:400 26px/1 "Inter"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-q2-a-h1 { position:absolute; left:66px; top:118px; font:italic 400 92px/1 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); white-space:nowrap; }
+  .f12-q2-a-row { position:absolute; left:70px; right:70px; box-sizing:border-box; border-top:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f12-q2-a-k { position:absolute; left:0; top:24px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-q2-a-v { position:absolute; left:220px; top:20px; font:400 30px/1.2 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f12-q2-a-tok { position:relative; display:inline-block; }
+  .f12-q2-a-ul { position:absolute; left:0; right:0; bottom:-4px; height:3px; background:var(--rp-coral); transform-origin:0 50%; }
+  .f12-q2-a-player { position:absolute; left:220px; top:14px; width:620px; height:84px; box-sizing:border-box; border-radius:8px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f12-q2-a-play { position:absolute; left:26px; top:22px; width:0; height:0; border-top:20px solid transparent; border-bottom:20px solid transparent; border-left:32px solid var(--rp-ink); }
+  .f12-q2-a-pl { position:absolute; left:84px; top:24px; font:400 30px/1.2 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="12-q2-a" data-band="bottom" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f12-q2-a-bg" id="f12-q2-a-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f12-q2-a-scene" id="f12-q2-a-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f12-q2-a-place" id="f12-q2-a-place">If A · step 1</div>
+
+    <div class="f12-q2-a-win" id="f12-q2-a-win" data-artifact="/song/stardust/ (proposed)">
+      <div class="f12-q2-a-bar">
+        <i class="f12-q2-a-dot" style="left:18px"></i><i class="f12-q2-a-dot" style="left:38px"></i><i class="f12-q2-a-dot" style="left:58px"></i>
+        <div class="f12-q2-a-addr">/song/stardust/</div>
+      </div>
+
+      <div class="f12-q2-a-kick" id="f12-q2-a-kick">Triplicate · 2017</div>
+      <div class="f12-q2-a-h1" id="f12-q2-a-h1">Stardust</div>
+
+      <div class="f12-q2-a-row" id="f12-q2-a-r1" style="top:250px; height:96px">
+        <div class="f12-q2-a-k">note</div>
+        <div class="f12-q2-a-v"><span class="f12-q2-a-tok">Hoagy Carmichael<i class="f12-q2-a-ul" id="f12-q2-a-ul"></i></span>, 1927</div>
+      </div>
+      <div class="f12-q2-a-row" id="f12-q2-a-r2" style="top:346px; height:96px">
+        <div class="f12-q2-a-k">summary</div>
+        <div class="f12-q2-a-v">the song, and what his recording does</div>
+      </div>
+      <div class="f12-q2-a-row" id="f12-q2-a-r3" style="top:442px; height:116px">
+        <div class="f12-q2-a-k">player</div>
+        <div class="f12-q2-a-player"><i class="f12-q2-a-play"></i><div class="f12-q2-a-pl">Spotify · Stardust</div></div>
+      </div>
+      <div class="f12-q2-a-row" id="f12-q2-a-r4" style="top:558px; height:96px">
+        <div class="f12-q2-a-k">the words</div>
+        <div class="f12-q2-a-v">Words by Hoagy Carmichael and Mitchell Parish</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "12-q2-a";
+  var D = 4.373;
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f12-q2-a-" + s); };
+  var row = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the page enters by a short push and fills, part by part, on the voice; then hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.35, ease: E }, 0.02);
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: E }, 0.05);
+  row(tl, $("kick"), 0.3);
+  row(tl, $("h1"), 0.38);                                                   // "Stardust"
+  row(tl, $("r1"), 1.4);                                                    // "a note"
+  tl.fromTo($("ul"), { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: E }, 1.95); // "Hoagy Carmichael"
+  row(tl, $("r2"), 3.05);                                                   // "a summary"
+  row(tl, $("r3"), 3.6);                                                    // "its player"
+  row(tl, $("r4"), 3.85);
+
+  tl.set({}, {}, D);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

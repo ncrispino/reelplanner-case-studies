@@ -1,0 +1,111 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 64 (title), 36 (nodes), 30 (today line), 26 (place label, address, edge labels) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f04-step1-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f04-step1-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f04-step1-place { position:absolute; left:80px; top:92px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f04-step1-title { position:absolute; left:900px; top:120px; font:400 64px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  /* the map, cropped: the real screenshot at scale 1, window 700 x 600 showing screenshot x 370-1070, y 235-835 */
+  .f04-step1-win { position:absolute; left:80px; top:150px; width:700px; height:636px; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f04-step1-bar { position:absolute; left:0; top:0; width:700px; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); z-index:1; }
+  .f04-step1-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f04-step1-addr { position:absolute; left:84px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f04-step1-crop { position:absolute; left:0; top:36px; width:700px; height:600px; overflow:hidden; }
+  .f04-step1-crop img { position:absolute; left:-370px; top:-235px; display:block; width:1440px; height:900px; max-width:none; }
+
+  .f04-step1-today { position:absolute; left:900px; top:222px; font:400 30px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.78); white-space:nowrap; }
+  .f04-step1-strike { position:absolute; left:-4px; right:-4px; top:16px; height:2px; background:var(--rp-ink); transform-origin:0 50%; }
+
+  .f04-step1-svg { position:absolute; left:0; top:0; width:1920px; height:900px; overflow:visible; pointer-events:none; }
+
+  /* the state diagram */
+  .f04-step1-node { position:absolute; height:84px; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.2); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); font:400 36px/82px "Inter"; color:var(--rp-ink); text-align:center; white-space:nowrap; }
+  .f04-step1-hot { position:absolute; left:-1px; top:-1px; right:-1px; bottom:-1px; border-radius:12px; background:var(--rp-coral); color:var(--rp-paper); font:400 36px/84px "Inter"; text-align:center; }
+  .f04-step1-elab { position:absolute; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; font-variant-ligatures:none; }
+</style>
+
+<div id="root" data-composition-id="04-step1" data-band="bottom" data-start="0" data-duration="20.212" data-width="1920" data-height="1080">
+
+  <div class="clip f04-step1-bg" id="f04-step1-bg" data-start="0" data-duration="20.212" data-track-index="0"></div>
+
+  <div class="clip f04-step1-scene" id="f04-step1-scene" data-start="0" data-duration="20.212" data-track-index="1">
+    <div class="f04-step1-place" id="f04-step1-place">Step 1 · the map</div>
+    <div class="f04-step1-title" id="f04-step1-title">A click lands on the dot</div>
+
+    <div class="f04-step1-win" id="f04-step1-win" data-artifact="/map/masters-of-war/">
+      <div class="f04-step1-bar"><span class="f04-step1-dot" style="left:16px"></span><span class="f04-step1-dot" style="left:34px"></span><span class="f04-step1-dot" style="left:52px"></span><span class="f04-step1-addr">/map/masters-of-war/</span></div>
+      <div class="f04-step1-crop"><img src="assets/shots/desk-map.png" alt="The map for Masters of War, cropped to the map: dots and lines, Nottamun Town just below the middle"></div>
+    </div>
+
+    <!-- the Nottamun Town dot (screenshot 727,538 -> screen 438,490): the pointer parks just below-right of it, tilted away from its label -->
+    <svg class="f04-step1-svg" id="f04-step1-press" viewBox="0 0 1920 900" aria-hidden="true">
+      <circle id="f04-step1-ring" cx="438" cy="490" r="12" style="fill:none; stroke:var(--rp-paper); stroke-width:3"/>
+    </svg>
+    <svg class="f04-step1-svg" id="f04-step1-ptr" viewBox="0 0 1920 900" aria-hidden="true">
+      <g transform="translate(443 494) rotate(-28) scale(0.82)"><path id="f04-step1-ptrp" d="M0 0 L0 36 L9 28 L16 44 L23 41 L16 25 L28 25 Z" style="fill:var(--rp-ink); stroke:var(--rp-paper); stroke-width:2; stroke-linejoin:round"/></g>
+    </svg>
+
+    <div class="f04-step1-today" id="f04-step1-today">today: the map takes the pointer at once<span class="f04-step1-strike" id="f04-step1-strike"></span></div>
+
+    <!-- edges: pressed -> song opens (release, no move); pressed -> dragging (move > 4 px) -->
+    <svg class="f04-step1-svg" viewBox="0 0 1920 900" aria-hidden="true">
+      <path id="f04-step1-e1" d="M1142 498 C1310 498 1330 322 1494 322" style="fill:none; stroke:var(--rp-ink); stroke-width:2"/>
+      <path id="f04-step1-a1" d="M1478 312 L1496 322 L1478 332" style="fill:none; stroke:var(--rp-ink); stroke-width:2; stroke-linejoin:round"/>
+      <path id="f04-step1-e2" d="M1142 526 C1310 526 1330 692 1494 692" style="fill:none; stroke:var(--rp-ink); stroke-width:2"/>
+      <path id="f04-step1-a2" d="M1478 682 L1496 692 L1478 702" style="fill:none; stroke:var(--rp-ink); stroke-width:2; stroke-linejoin:round"/>
+    </svg>
+    <div class="f04-step1-elab" id="f04-step1-l1" style="left:1060px;top:296px">release, no move</div>
+    <div class="f04-step1-elab" id="f04-step1-l2" style="left:1150px;top:676px">move &gt; 4 px</div>
+
+    <div class="f04-step1-node" id="f04-step1-n1" style="left:900px;top:470px;width:240px">pressed</div>
+    <div class="f04-step1-node" id="f04-step1-n2" style="left:1500px;top:280px;width:300px">song opens<div class="f04-step1-hot" id="f04-step1-hot">song opens</div></div>
+    <div class="f04-step1-node" id="f04-step1-n3" style="left:1500px;top:650px;width:300px">dragging</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "04-step1";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f04-step1-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var fade = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: d || 0.35, ease: E }, at); };
+  var node = function (tl, el, at) { tl.fromTo(el, { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, at); };
+  var draw = function (tl, el, at, len) { tl.fromTo(el, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-11.1s): the map crop; the pointer on Nottamun Town presses; the "today" line, struck through
+  pop(tl, $("place"), 0.169, 8);
+  tl.fromTo($("win"), { opacity: 0, y: 30, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, 0.24);
+  pop(tl, $("title"), 0.601, 10);
+  tl.fromTo($("ptr"), { opacity: 0, x: 60, y: 50 }, { opacity: 1, x: 0, y: 0, duration: 0.6, ease: E }, 1.804);     // "grabs the pointer"
+  pop(tl, $("today"), 2.406, 8);
+  tl.fromTo($("ptrp"), { scale: 1, svgOrigin: "0 0" }, { scale: 0.86, duration: 0.1, ease: "power2.out", immediateRender: false }, 3.537);   // "press"
+  tl.to($("ptrp"), { scale: 1, duration: 0.15, ease: "power2.out" }, 3.669);
+  tl.fromTo($("ring"), { opacity: 0, scale: 0.3, svgOrigin: "438 490" }, { opacity: 1, scale: 1, duration: 0.35, ease: E }, 3.561);
+  tl.to($("ring"), { opacity: 0, duration: 0.5, ease: "power2.out" }, 4.002);                              // a pulse, then gone off the label
+  tl.fromTo($("strike"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: E }, 11.298);                            // "broken"
+
+  // Scene 2 (11.1-16.4s): the diagram draws node by node; "song opens" turns coral; hold
+  node(tl, $("n1"), 13.379);                                                                                     // "Now"
+  draw(tl, $("e2"), 15.64, 420); fade(tl, $("a2"), 16.121); pop(tl, $("l2"), 15.786, 6);                           // "move 4 pixels"
+  node(tl, $("n3"), 16.351);
+  draw(tl, $("e1"), 17.566, 420); fade(tl, $("a1"), 18.047); pop(tl, $("l1"), 17.637, 6);                           // "press and release"
+  node(tl, $("n2"), 18.047);
+  tl.fromTo($("hot"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 18.553);                          // "opens the song": the one coral
+
+  tl.set({}, {}, 19.711);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

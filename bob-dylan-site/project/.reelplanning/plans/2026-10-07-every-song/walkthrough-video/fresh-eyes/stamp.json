@@ -1,0 +1,70 @@
+{
+  "id": "0a8d0ce400bb",
+  "scenes": [
+    {
+      "scene": 1,
+      "narration": "44189f955ce2",
+      "frame": "c3dbef8b3aa8"
+    },
+    {
+      "scene": 2,
+      "narration": "c23c84542d10",
+      "frame": "a6548c8e2112"
+    },
+    {
+      "scene": 3,
+      "narration": "08f97ffd49e5",
+      "frame": "6620f8fc2be7"
+    },
+    {
+      "scene": 4,
+      "narration": "eca3dfe22bd5",
+      "frame": "4ec83dce2a1f"
+    },
+    {
+      "scene": 5,
+      "narration": "7aeae4475525",
+      "frame": "ec5f52cbef44"
+    },
+    {
+      "scene": 6,
+      "narration": "36d074bfff56",
+      "frame": "b7a230ea2e45"
+    },
+    {
+      "scene": 7,
+      "narration": "f3f2c2618cc3",
+      "frame": "14d6a200d885"
+    },
+    {
+      "scene": 8,
+      "narration": "a77d55957aca",
+      "frame": "ad8946b732c5"
+    },
+    {
+      "scene": 9,
+      "narration": "97a47f63079e",
+      "frame": "3c49afce3830"
+    },
+    {
+      "scene": 10,
+      "narration": "4cef9ded99a8",
+      "frame": "47c902dabffb"
+    },
+    {
+      "scene": 11,
+      "narration": "84bfaef54d37",
+      "frame": "baa4e68633bc"
+    },
+    {
+      "scene": 12,
+      "narration": "f44112199abf",
+      "frame": "d3dd1b6eac2c"
+    }
+  ],
+  "round": 1,
+  "at": "2026-10-07T20:23:59.529Z",
+  "video": "2026-10-07-every-song--walkthrough",
+  "build": "first",
+  "scope": null
+}

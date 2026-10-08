@@ -1,0 +1,9 @@
+---
+import Shell from "../../layouts/Shell.astro";
+import ThreadCards from "../../components/ThreadCards.astro";
+import { threads, songById, eraOfSong } from "../../lib/data";
+export function getStaticPaths() { return threads.map((t) => ({ params: { id: t.id }, props: { thread: t } })); }
+const { thread } = Astro.props;
+const steps = thread.steps.map((s) => ({ song: songById.get(s.song)!, why: s.why })).filter((s) => s.song);
+---
+<Shell title={thread.title} era={steps[0] ? eraOfSong(steps[0].song).id : "village"} tab="threads"><ThreadCards title={thread.title} intro={thread.intro} steps={steps} thread={thread.id} /></Shell>

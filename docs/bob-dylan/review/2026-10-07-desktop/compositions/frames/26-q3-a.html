@@ -1,0 +1,114 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f26-q3-a-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f26-q3-a-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f26-q3-a-place { position:absolute; left:260px; top:46px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the browser-window mock: radius 14, ink hairline, 36 px title bar with three dots and the address */
+  .f26-q3-a-win { position:absolute; left:260px; top:100px; width:1400px; height:780px; box-sizing:border-box; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f26-q3-a-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f26-q3-a-bar i { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.3); }
+  .f26-q3-a-addr { position:absolute; left:96px; top:0; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); white-space:nowrap; }
+  .f26-q3-a-body { position:absolute; left:0; top:37px; width:1398px; height:741px; overflow:hidden; }
+
+  /* the map (slab) */
+  .f26-q3-a-map { position:absolute; left:0; top:0; width:1398px; height:741px; background:var(--rp-slab); }
+  .f26-q3-a-d { position:absolute; width:12px; height:12px; margin:-6px 0 0 -6px; border-radius:50%; background:rgba(var(--rp-slab-ink-rgb),0.5); }
+  .f26-q3-a-d.on { width:16px; height:16px; margin:-8px 0 0 -8px; background:var(--rp-slab-ink); }
+  .f26-q3-a-ln { position:absolute; height:1px; background:rgba(var(--rp-slab-ink-rgb),0.35); transform-origin:0 50%; }
+  .f26-q3-a-lab { position:absolute; font:400 24px/1 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.82); white-space:nowrap; }
+  .f26-q3-a-sel { position:absolute; left:470px; top:420px; width:40px; height:40px; margin:-20px 0 0 -20px; border-radius:50%; box-sizing:border-box; border:3px solid var(--rp-coral); }
+  .f26-q3-a-ptr { position:absolute; left:478px; top:428px; width:30px; height:40px; }
+
+  /* the panel, sliding in beside the map */
+  .f26-q3-a-panel { position:absolute; right:0; top:0; width:480px; height:741px; box-sizing:border-box; background:var(--rp-tile); border-left:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f26-q3-a-pt { position:absolute; left:40px; top:56px; font:400 60px/1.05 "EB Garamond"; letter-spacing:-0.015em; color:var(--rp-ink); white-space:nowrap; }
+  .f26-q3-a-pm { position:absolute; left:40px; top:140px; font:400 28px/1.2 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f26-q3-a-pn { position:absolute; left:40px; top:194px; width:400px; font:400 26px/1.32 "Inter"; color:var(--rp-ink); }
+  .f26-q3-a-rule { position:absolute; left:40px; right:40px; top:356px; height:1px; background:rgba(var(--rp-ink-rgb),0.12); }
+  .f26-q3-a-pk { position:absolute; left:40px; top:392px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f26-q3-a-pc { position:absolute; left:40px; top:438px; font:400 30px/1.2 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f26-q3-a-po { position:absolute; left:40px; bottom:56px; font:400 30px/1.2 "Inter"; color:var(--rp-ink); white-space:nowrap; text-decoration:underline; text-underline-offset:6px; }
+</style>
+
+<div id="root" data-composition-id="26-q3-a" data-band="bottom" data-start="0" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f26-q3-a-bg" id="f26-q3-a-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f26-q3-a-scene" id="f26-q3-a-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f26-q3-a-place" id="f26-q3-a-place">If A · step 5</div>
+
+    <div class="f26-q3-a-win" id="f26-q3-a-win" data-artifact="/map/masters-of-war/">
+      <div class="f26-q3-a-bar"><i style="left:18px"></i><i style="left:36px"></i><i style="left:54px"></i><span class="f26-q3-a-addr">/map/masters-of-war/</span></div>
+      <div class="f26-q3-a-body">
+        <div class="f26-q3-a-map">
+          <div class="f26-q3-a-ln" style="left:470px; top:420px; width:165px; transform:rotate(-33deg)"></div>
+          <div class="f26-q3-a-ln" style="left:610px; top:330px; width:140px; transform:rotate(-52deg)"></div>
+          <div class="f26-q3-a-ln" style="left:610px; top:330px; width:180px; transform:rotate(18deg)"></div>
+          <div class="f26-q3-a-d" style="left:180px; top:140px"></div>
+          <div class="f26-q3-a-d" style="left:300px; top:250px"></div>
+          <div class="f26-q3-a-d" style="left:695px; top:220px"></div>
+          <div class="f26-q3-a-d" style="left:780px; top:385px"></div>
+          <div class="f26-q3-a-d" style="left:330px; top:560px"></div>
+          <div class="f26-q3-a-d" style="left:160px; top:640px"></div>
+          <div class="f26-q3-a-d" style="left:820px; top:600px"></div>
+          <div class="f26-q3-a-d" style="left:1000px; top:150px"></div>
+          <div class="f26-q3-a-d" style="left:1150px; top:470px"></div>
+          <div class="f26-q3-a-d" style="left:1260px; top:260px"></div>
+          <div class="f26-q3-a-d on" style="left:610px; top:330px"></div>
+          <div class="f26-q3-a-d on" style="left:470px; top:420px"></div>
+          <div class="f26-q3-a-lab" style="left:632px; top:300px">Masters of War</div>
+          <div class="f26-q3-a-lab" style="left:290px; top:448px">Nottamun Town</div>
+          <div class="f26-q3-a-sel" id="f26-q3-a-sel"></div>
+          <svg class="f26-q3-a-ptr" id="f26-q3-a-ptr" viewBox="0 0 30 40" aria-hidden="true"><path d="M2 2 L2 32 L10 25 L15 37 L20 35 L15 23 L26 23 Z" style="fill:var(--rp-slab-ink); stroke:var(--rp-slab); stroke-width:2; stroke-linejoin:round"/></svg>
+        </div>
+        <div class="f26-q3-a-panel" id="f26-q3-a-panel">
+          <div class="f26-q3-a-pt" id="f26-q3-a-pt">Nottamun Town</div>
+          <div class="f26-q3-a-pm" id="f26-q3-a-pm">traditional</div>
+          <div class="f26-q3-a-pn" id="f26-q3-a-pn">An English-derived folk song of topsy-turvy riddles, popularized in the folk revival by Jean Ritchie.</div>
+          <div class="f26-q3-a-rule"></div>
+          <div class="f26-q3-a-pk" id="f26-q3-a-pk">1 connection</div>
+          <div class="f26-q3-a-pc" id="f26-q3-a-pc">Masters of War</div>
+          <div class="f26-q3-a-po" id="f26-q3-a-po">Open the song ›</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "26-q3-a";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f26-q3-a-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 10 : d }, { opacity: 1, y: 0, duration: 0.4, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-3.4s): the map; the pointer clicks Nottamun Town; the panel slides in beside the map; hold
+  pop(tl, $("place"), 0.03, 8);
+  tl.fromTo($("win"), { opacity: 0, y: 30, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: E }, 0.03);
+  tl.fromTo($("ptr"), { opacity: 0, x: 140, y: 110 }, { opacity: 1, x: 0, y: 0, duration: 0.5, ease: E }, 0.25);
+  tl.fromTo($("ptr"), { scale: 1 }, { scale: 0.85, duration: 0.08, ease: "power1.out" }, 0.74);
+  tl.to($("ptr"), { scale: 1, duration: 0.1, ease: "power1.out" }, 0.82);
+  tl.fromTo($("sel"), { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.35, ease: E }, 0.76);
+  tl.fromTo($("panel"), { xPercent: 100 }, { xPercent: 0, duration: 0.65, ease: E }, 1.05);
+  pop(tl, $("pt"), 1.5);
+  pop(tl, $("pm"), 1.62);
+  pop(tl, $("pn"), 1.72);
+  pop(tl, $("pk"), 1.85);
+  pop(tl, $("pc"), 1.95);
+  pop(tl, $("po"), 2.15);
+
+  tl.set({}, {}, 3.413);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

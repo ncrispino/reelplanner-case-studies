@@ -1,0 +1,781 @@
+{
+  "eras": [
+    {
+      "id": "renaissance",
+      "title": "Late Renaissance",
+      "years": [
+        1997,
+        2012
+      ],
+      "theme": "renaissance",
+      "summary": "With Time Out of Mind in 1997, Dylan returned to new songwriting and won the Grammy for Album of the Year, starting a long late-career revival. Touring constantly, he made a string of acclaimed records steeped in old American blues and ballads, and added an Oscar and a bestselling memoir.",
+      "albums": [
+        "time-out-of-mind",
+        "love-and-theft",
+        "modern-times",
+        "together-through-life",
+        "christmas-in-the-heart",
+        "tempest"
+      ],
+      "moments": [
+        "grammy-album-of-the-year-1998",
+        "oscar-things-have-changed",
+        "chronicles-volume-one",
+        "presidential-medal-of-freedom"
+      ],
+      "photos": []
+    }
+  ],
+  "moments": [
+    {
+      "id": "grammy-album-of-the-year-1998",
+      "year": 1998,
+      "title": "Album of the Year Grammy for Time Out of Mind",
+      "text": "In February 1998 Time Out of Mind won the Grammy for Album of the Year, along with two other awards that night.",
+      "era": "renaissance",
+      "youtube": null
+    },
+    {
+      "id": "oscar-things-have-changed",
+      "year": 2001,
+      "title": "Academy Award for Things Have Changed",
+      "text": "Dylan won the Oscar for Best Original Song for Things Have Changed, written for the film Wonder Boys; it also took the Golden Globe.",
+      "era": "renaissance",
+      "youtube": null
+    },
+    {
+      "id": "chronicles-volume-one",
+      "year": 2004,
+      "title": "Chronicles: Volume One published",
+      "text": "Dylan's memoir Chronicles: Volume One came out in October 2004 and became a bestseller praised by critics.",
+      "era": "renaissance",
+      "youtube": null
+    },
+    {
+      "id": "presidential-medal-of-freedom",
+      "year": 2012,
+      "title": "Presidential Medal of Freedom",
+      "text": "President Barack Obama awarded Dylan the Presidential Medal of Freedom at the White House in May 2012.",
+      "era": "renaissance",
+      "youtube": null
+    }
+  ],
+  "albums": [
+    {
+      "id": "time-out-of-mind",
+      "title": "Time Out of Mind",
+      "year": 1997,
+      "era": "renaissance",
+      "why": "Recorded with producer Daniel Lanois, it was Dylan's first album of new original songs in seven years and his first major critical comeback in decades. Its dark, aging voice and murky sound won the Grammy for Album of the Year and opened his late-career run.",
+      "songs": [
+        "love-sick",
+        "standing-in-the-doorway",
+        "tryin-to-get-to-heaven",
+        "not-dark-yet",
+        "cold-irons-bound",
+        "make-you-feel-my-love",
+        "highlands"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "love-and-theft",
+      "title": "\"Love and Theft\"",
+      "year": 2001,
+      "era": "renaissance",
+      "why": "Released on September 11, 2001, it set Dylan's songs inside the sounds of prewar America: blues, rockabilly, swing and Tin Pan Alley. He produced it himself under the name Jack Frost with his touring band, and its title in quotation marks nods to a scholarly book on blackface minstrelsy.",
+      "songs": [
+        "tweedle-dee-and-tweedle-dum",
+        "mississippi",
+        "summer-days",
+        "high-water-for-charley-patton",
+        "honest-with-me",
+        "po-boy",
+        "sugar-baby"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "modern-times",
+      "title": "Modern Times",
+      "year": 2006,
+      "era": "renaissance",
+      "why": "It entered the Billboard 200 at number one, Dylan's first chart-topping album in America since Desire in 1976. Recorded with his road band and produced by Dylan as Jack Frost, it reworked old blues and ballad forms and won the Grammy for Best Contemporary Folk/Americana Album.",
+      "songs": [
+        "thunder-on-the-mountain",
+        "spirit-on-the-water",
+        "rollin-and-tumblin",
+        "when-the-deal-goes-down",
+        "someday-baby",
+        "workingmans-blues-2",
+        "aint-talkin"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "together-through-life",
+      "title": "Together Through Life",
+      "year": 2009,
+      "era": "renaissance",
+      "why": "Written mostly with Robert Hunter and colored by David Hidalgo's accordion, it has a loose, border-town feel. It entered the charts at number one in both the US and UK.",
+      "songs": [
+        "beyond-here-lies-nothin",
+        "life-is-hard",
+        "i-feel-a-change-comin-on"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "christmas-in-the-heart",
+      "title": "Christmas in the Heart",
+      "year": 2009,
+      "era": "renaissance",
+      "why": "A collection of holiday standards sung with full sincerity, it surprised many listeners. Dylan gave all his royalties from it to charities fighting hunger.",
+      "songs": [
+        "here-comes-santa-claus",
+        "the-christmas-blues",
+        "must-be-santa"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "tempest",
+      "title": "Tempest",
+      "year": 2012,
+      "era": "renaissance",
+      "why": "Released in the fiftieth anniversary year of his first album, it is one of his darkest records, full of violent ballads and blues. Its long title song about the Titanic and its farewell to John Lennon stand out.",
+      "songs": [
+        "duquesne-whistle",
+        "tempest",
+        "roll-on-john"
+      ],
+      "landmark": false,
+      "cover": null
+    }
+  ],
+  "songs": [
+    {
+      "id": "love-sick",
+      "title": "Love Sick",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "Dylan played it at the 1998 Grammy Awards, where a dancer with the words Soy Bomb painted on his chest jumped on stage beside him.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/love-sick/",
+      "preview": "A man walks through a world that has gone sour, sick from a love he can neither keep nor shake.",
+      "excerpt": null
+    },
+    {
+      "id": "standing-in-the-doorway",
+      "title": "Standing in the Doorway",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "A slow, drifting ballad that runs nearly eight minutes.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/standing-doorway/",
+      "preview": "Left behind by a lover, the singer lingers between staying and going, unable to let the feeling die.",
+      "excerpt": null
+    },
+    {
+      "id": "tryin-to-get-to-heaven",
+      "title": "Tryin' to Get to Heaven",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "Dylan reshaped the song often in concert in the years after the album came out.",
+      "themes": [
+        "faith",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/trying-get-heaven/",
+      "preview": "A weary traveler moves through river towns and train stations hoping to reach salvation before time runs out.",
+      "excerpt": null
+    },
+    {
+      "id": "not-dark-yet",
+      "title": "Not Dark Yet",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "It was released as a single from the album and became one of its most praised songs.",
+      "themes": [
+        "death",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/not-dark-yet/",
+      "preview": "An aging man takes stock of a life that is fading toward its end, though night has not quite fallen.",
+      "excerpt": null
+    },
+    {
+      "id": "cold-irons-bound",
+      "title": "Cold Irons Bound",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "It won the 1998 Grammy for Best Male Rock Vocal Performance.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/cold-irons-bound/",
+      "preview": "Rejected and trapped, the singer feels himself carried away as if in chains, far from the one he loved.",
+      "excerpt": null
+    },
+    {
+      "id": "make-you-feel-my-love",
+      "title": "Make You Feel My Love",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "Billy Joel released a version before Dylan's own appeared, and it went on to become one of his most covered songs.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/make-you-feel-my-love/",
+      "preview": "A plain promise that the singer will go to any length to comfort and stand by the person he loves.",
+      "excerpt": null
+    },
+    {
+      "id": "highlands",
+      "title": "Highlands",
+      "year": 1997,
+      "album": "time-out-of-mind",
+      "by": null,
+      "note": "At more than sixteen minutes it closes the album and was then the longest studio track Dylan had released.",
+      "themes": [
+        "time",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/highlands/",
+      "preview": "A man rambles through a city day, including a long exchange with a waitress, while his mind is set on a distant, longed-for place.",
+      "excerpt": null
+    },
+    {
+      "id": "tweedle-dee-and-tweedle-dum",
+      "title": "Tweedle Dee & Tweedle Dum",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "The opening track borrows its title characters from the old English nursery rhyme also used by Lewis Carroll.",
+      "themes": [
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/tweedle-dee-tweedle-dum/",
+      "preview": "Two look-alike schemers roll through a carnival-like America, bound together and impossible to tell apart.",
+      "excerpt": null
+    },
+    {
+      "id": "mississippi",
+      "title": "Mississippi",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "Dylan first tried it during the Time Out of Mind sessions, and Sheryl Crow released a version before his own appeared.",
+      "themes": [
+        "love",
+        "time",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/mississippi/",
+      "preview": "A man who has stayed too long in one place looks back on lost chances and still offers his love.",
+      "excerpt": null
+    },
+    {
+      "id": "summer-days",
+      "title": "Summer Days",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "A fast jump-blues number that became a lively fixture of his concerts.",
+      "themes": [
+        "time",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/summer-days/",
+      "preview": "An older man insists the good times are not over and that the past can still be lived again.",
+      "excerpt": null
+    },
+    {
+      "id": "high-water-for-charley-patton",
+      "title": "High Water (For Charley Patton)",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "It is dedicated to the Delta blues pioneer Charley Patton.",
+      "themes": [
+        "death",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/high-water-charley-patton/",
+      "preview": "A rising flood sweeps over a Southern landscape, and the people in its path scramble for safety.",
+      "excerpt": null
+    },
+    {
+      "id": "honest-with-me",
+      "title": "Honest With Me",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "A hard-driving electric blues built on a slide-guitar riff.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/honest-me/",
+      "preview": "A restless man stuck in a city he dislikes demands straight talk from the woman he is with.",
+      "excerpt": null
+    },
+    {
+      "id": "po-boy",
+      "title": "Po’ Boy",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "A light, jazzy tune filled with old vaudeville-style jokes.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/po-boy/",
+      "preview": "A poor wanderer moves from one odd scene to the next, making the best of hard luck.",
+      "excerpt": null
+    },
+    {
+      "id": "sugar-baby",
+      "title": "Sugar Baby",
+      "year": 2001,
+      "album": "love-and-theft",
+      "by": null,
+      "note": "The slow, brooding closing track runs well over six minutes.",
+      "themes": [
+        "love",
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/sugar-baby/",
+      "preview": "A world-weary man tells a woman that the old days are gone and warns her to face what is coming.",
+      "excerpt": null
+    },
+    {
+      "id": "thunder-on-the-mountain",
+      "title": "Thunder on the Mountain",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "The opening track famously name-checks the singer Alicia Keys.",
+      "themes": [
+        "faith",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/thunder-mountain/",
+      "preview": "A rollicking vision of trouble brewing over the land, with the singer ready to ride out the storm.",
+      "excerpt": null
+    },
+    {
+      "id": "spirit-on-the-water",
+      "title": "Spirit on the Water",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "A gentle, swinging love song that runs more than seven minutes.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/spirit-water/",
+      "preview": "A man shut out of paradise still can't stop thinking of the woman he adores.",
+      "excerpt": null
+    },
+    {
+      "id": "rollin-and-tumblin",
+      "title": "Rollin’ and Tumblin’",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "Dylan built it on the old Delta blues tune best known from Muddy Waters' 1950 recording.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/rollin-and-tumblin/",
+      "preview": "A restless man rises early and wrestles with his troubles and a woman who has done him wrong.",
+      "excerpt": null
+    },
+    {
+      "id": "when-the-deal-goes-down",
+      "title": "When the Deal Goes Down",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "A slow waltz in the style of the old crooner ballads.",
+      "themes": [
+        "love",
+        "time",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/when-deal-goes-down/",
+      "preview": "A man reflects on how short life is and pledges to be there for his love when the end comes.",
+      "excerpt": null
+    },
+    {
+      "id": "someday-baby",
+      "title": "Someday Baby",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "It won the 2007 Grammy for Best Solo Rock Vocal Performance.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/someday-baby/",
+      "preview": "A man fed up with a lover's mistreatment says that one day she won't be able to hurt him anymore.",
+      "excerpt": null
+    },
+    {
+      "id": "workingmans-blues-2",
+      "title": "Workingman’s Blues #2",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "Its title nods to Merle Haggard's country song Workin' Man Blues.",
+      "themes": [
+        "America",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/workingmans-blues-2/",
+      "preview": "A laborer watches wages fall and the old order crumble, yet keeps faith with his love and his dignity.",
+      "excerpt": null
+    },
+    {
+      "id": "aint-talkin",
+      "title": "Ain’t Talkin’",
+      "year": 2006,
+      "album": "modern-times",
+      "by": null,
+      "note": "At almost nine minutes it is the album's long, somber closer.",
+      "themes": [
+        "the road",
+        "death",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/aint-talkin/",
+      "preview": "A lone figure walks through a ruined, hostile world, keeping his thoughts to himself as he goes.",
+      "excerpt": null
+    },
+    {
+      "id": "beyond-here-lies-nothin",
+      "title": "Beyond Here Lies Nothin'",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "The opening track was co-written with Grateful Dead lyricist Robert Hunter.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/beyond-here-lies-nothin/",
+      "preview": "Over a Latin-tinged groove the singer tells his love that there is nothing beyond what they have together.",
+      "excerpt": null
+    },
+    {
+      "id": "life-is-hard",
+      "title": "Life Is Hard",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "Dylan wrote it for the French director Olivier Dahan's film My Own Love Song, which led to the whole album.",
+      "themes": [
+        "loss",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/life-hard/",
+      "preview": "A lonely man drifts through his days missing someone and finding the world harder to bear alone.",
+      "excerpt": null
+    },
+    {
+      "id": "i-feel-a-change-comin-on",
+      "title": "I Feel a Change Comin' On",
+      "year": 2009,
+      "album": "together-through-life",
+      "by": null,
+      "note": "Another co-write with Robert Hunter, it name-checks the country songwriter Billy Joe Shaver.",
+      "themes": [
+        "time",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/i-feel-change-comin/",
+      "preview": "An older man senses a shift in his life and hopes it will bring him closer to the woman he wants.",
+      "excerpt": null
+    },
+    {
+      "id": "here-comes-santa-claus",
+      "title": "Here Comes Santa Claus",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "Dylan's straight-faced take on the holiday standard first made popular by Gene Autry.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/here-comes-santa-claus/",
+      "preview": "A cheerful announcement that Santa is on his way down the road with gifts for everyone.",
+      "excerpt": null
+    },
+    {
+      "id": "the-christmas-blues",
+      "title": "The Christmas Blues",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "A melancholy holiday song Dylan sings as a slow, bluesy lament.",
+      "themes": [
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/christmas-blues/",
+      "preview": "Someone alone at Christmas feels the season's cheer only deepen their sadness.",
+      "excerpt": null
+    },
+    {
+      "id": "must-be-santa",
+      "title": "Must Be Santa",
+      "year": 2009,
+      "album": "christmas-in-the-heart",
+      "by": null,
+      "note": "Dylan's raucous polka version, built on an arrangement by the Texas band Brave Combo, got a manic party music video.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/must-be-santa/",
+      "preview": "A rapid-fire game of clues that all point to one jolly visitor.",
+      "excerpt": null
+    },
+    {
+      "id": "duquesne-whistle",
+      "title": "Duquesne Whistle",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "Co-written with Robert Hunter, it opens with a mock-vintage swing intro before the band kicks in.",
+      "themes": [
+        "the road",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/duquesne-whistle/",
+      "preview": "A train whistle sounds across the land as the singer rides toward home and the woman he loves.",
+      "excerpt": null
+    },
+    {
+      "id": "tempest",
+      "title": "Tempest",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The nearly fourteen-minute title song retells the sinking of the Titanic.",
+      "themes": [
+        "death",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/tempest/",
+      "preview": "A sweeping ballad of the great ship's last night, following passengers and crew as it goes down.",
+      "excerpt": null
+    },
+    {
+      "id": "roll-on-john",
+      "title": "Roll on John",
+      "year": 2012,
+      "album": "tempest",
+      "by": null,
+      "note": "The closing track is a tribute to John Lennon.",
+      "themes": [
+        "death",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/roll-john/",
+      "preview": "A farewell that traces a fellow musician's life from his early days to his violent death.",
+      "excerpt": null
+    },
+    {
+      "id": "make-you-feel-my-love-adele",
+      "title": "Make You Feel My Love",
+      "year": 2008,
+      "album": null,
+      "by": "Adele",
+      "note": "Adele recorded it for her debut album 19, and it became a major and lasting hit in the UK.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "mississippi-sheryl-crow",
+      "title": "Mississippi",
+      "year": 1998,
+      "album": null,
+      "by": "Sheryl Crow",
+      "note": "Crow included the song on her 1998 album The Globe Sessions.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "rollin-and-tumblin-muddy-waters",
+      "title": "Rollin' and Tumblin'",
+      "year": 1950,
+      "album": null,
+      "by": "Muddy Waters",
+      "note": "Muddy Waters' recording of the Delta blues tune became the standard version of the song.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "workin-man-blues",
+      "title": "Workin' Man Blues",
+      "year": 1969,
+      "album": null,
+      "by": "Merle Haggard",
+      "note": "Haggard's country hit is a tribute to the hard-working laborer.",
+      "themes": [
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "high-water-everywhere",
+      "title": "High Water Everywhere",
+      "year": 1929,
+      "album": null,
+      "by": "Charley Patton",
+      "note": "Patton's two-part blues describes the Great Mississippi Flood of 1927.",
+      "themes": [
+        "death",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "make-you-feel-my-love",
+      "to": "make-you-feel-my-love-adele",
+      "kind": "covered-by",
+      "why": "Adele's 2008 cover on her debut album 19 made the song famous to a new generation."
+    },
+    {
+      "from": "mississippi",
+      "to": "mississippi-sheryl-crow",
+      "kind": "covered-by",
+      "why": "Sheryl Crow released the song in 1998, three years before Dylan's own version came out."
+    },
+    {
+      "from": "rollin-and-tumblin",
+      "to": "rollin-and-tumblin-muddy-waters",
+      "kind": "borrowed-tune",
+      "why": "Dylan's song takes the melody and riff of the old blues that Muddy Waters made famous."
+    },
+    {
+      "from": "workingmans-blues-2",
+      "to": "workin-man-blues",
+      "kind": "same-theme",
+      "why": "Dylan's title points back to Haggard's working-class anthem, and both songs honor the laborer."
+    },
+    {
+      "from": "high-water-for-charley-patton",
+      "to": "high-water-everywhere",
+      "kind": "same-theme",
+      "why": "Dylan dedicated his flood song to Patton, whose own blues chronicled the 1927 Mississippi flood."
+    }
+  ]
+}

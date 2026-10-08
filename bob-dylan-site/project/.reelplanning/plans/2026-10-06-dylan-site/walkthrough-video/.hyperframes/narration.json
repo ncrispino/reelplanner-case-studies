@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "voice": "am_michael",
+  "speed": 1.25,
+  "model": "kokoro-v1.0 + whisper small.en",
+  "lines": {
+    "10": {
+      "key": "3c4abe0fa88f050f209d",
+      "text": "What ran: the data check, the build, the phone check and the clip check, all passing. Not done: excerpts, and hosting.",
+      "sha256": "877a5620fc3943b1f8f9943e500630ace0cb9f945329eca96066ff7900b46080",
+      "duration_s": 6.144
+    },
+    "11": {
+      "key": "8061fa77261482268fdd",
+      "text": "That's what changed. Seeing it run, anything you'd change?",
+      "sha256": "536a5004c8da77a551667ea84acebd476eac4e86734c7c1d03935a7c15136326",
+      "duration_s": 2.901
+    },
+    "01": {
+      "key": "999a47aaf54c4b717464",
+      "text": "This is the walkthrough again, after your review. Six things changed: a look for each era, threads and the map redrawn, many more connections, full track lists, a loaded player on every song, and many more clips. The seven choices you accepted stay as they were.",
+      "sha256": "81b421ec4da0063073ec3c92f81067c755ad3300c6c6cd1207c680bf7cfec2a2",
+      "duration_s": 15.019
+    },
+    "02": {
+      "key": "4325c54707619ea9ff32",
+      "text": "Each era now has its own look. Greenwich Village is a typed flyer with a rubber stamp. Going Electric is a Dont Look Back cue card. Gospel is a revival handbill in gold and red. The eighties are neon tubes.",
+      "sha256": "5c8ae5a4bba7a85441acc0bbdfe5499ea79f6aad80289c07fc6b7a608643d39b",
+      "duration_s": 12.565
+    },
+    "03": {
+      "key": "1c9de32005e0b6a29f92",
+      "text": "The choice changed: each era has its own typeface, eleven free fonts chosen from its records and posters, instead of the fonts already on the phone. Back to the Roots is a seventy-eight label; the Standards, an art deco frame.",
+      "sha256": "c7b56e163e9431f0d307e4c44fa50513de39117291b749bd15375db6a976ff5c",
+      "duration_s": 13.312
+    },
+    "04": {
+      "key": "fb9a62648ed7f8f77ffa",
+      "text": "Threads and the map are redrawn. Each thread card wears its song's era, with the year large and how far it moved from the card before. The map is a night chart, each dot coloured by its era, and no label overlaps another.",
+      "sha256": "fd6578e5b8e82f5698a40820988fb2892db58154dad84aa3a4643b4934ec5a3a",
+      "duration_s": 13.205
+    },
+    "05": {
+      "key": "140afbbca35eefaff810",
+      "text": "You asked why there were so few connections. The first writers worked one era at a time, and could only link songs inside their own era. A pass across the whole catalogue added eighty-six: famous covers, the tunes he borrowed, and songs that share a theme across the years. There are a hundred and thirty-five now.",
+      "sha256": "2acbf07f4b885c75c582da4d1e0f148cb9da550717cee19e5607792c1c1ed69c",
+      "duration_s": 17.216
+    },
+    "06": {
+      "key": "c01bd57b35a76a9acaac",
+      "text": "And you asked whether songs were missing. They were only unlisted. An album page now shows every track, numbered, and marks the songs that have their own page.",
+      "sha256": "8eb69a3c238477ccbf881af59ed1b6dfad85fedbbadefe115ce68c3b3c0b722a",
+      "duration_s": 8.789
+    },
+    "07": {
+      "key": "c06864db4395d3392bb5",
+      "text": "On a song page, the players are loaded with the page now, in a frame that matches the era. They play from Spotify and YouTube on the site; here they are blank.",
+      "sha256": "6474360ebfc75e06b117d35cd08f6bcf48af105eefb5357a5d3636281298ec6e",
+      "duration_s": 8.789
+    },
+    "08": {
+      "key": "3a7567047bd7a273d32d",
+      "text": "No song is left without a player: all a hundred and eighty-one album songs match on Spotify now. And there are a hundred and seventy-nine clips: an official one for most songs, and footage of moments like Newport, some posted by others. A clip check finds any that are taken down.",
+      "sha256": "836ebdde50874005a53d6d4d068af1b43df1fd4b33faeac97b46711d29734ab0",
+      "duration_s": 15.744
+    },
+    "09": {
+      "key": "322a317b238981a6df38",
+      "text": "You asked whether we really can't quote a line. Quoting a line or two with credit is common, and may well be allowed. The limit is the AI itself: a filter stopped it every time it wrote lyric lines. So none are written, but lines you add by hand show on the page, credited.",
+      "sha256": "9933a11a635762e9f3b9e94000d5a51708e32078a7b7c0be21ca66baf9b5d4c6",
+      "duration_s": 15.083
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "@fontsource/cinzel/latin-600.css";
+/* Rough and Rowdy, 2020– — dark rooms, brass and shadow.
+   Near-black with one warm light, engraved capitals cast in brass, pictures in bevelled brass frames under a heavy
+   vignette, a screwed-on plaque, and brass nameplates for themes. */
+[data-era="rough"] { --paper:#0b0a08; --ink:#e9dcc0; --soft:rgba(233,220,192,.76); --line:rgba(196,154,87,.3); --accent:#c49a57;
+  --accent-ink:#120f0a; --accent2:#7a5a2e; --card:#16130e;
+  --display:"Cinzel","Trajan Pro",Georgia,serif; --display-alt:"Cinzel","Trajan Pro",Georgia,serif; --display-weight:600;
+  --display-case:none; --display-track:.03em; --display-style:normal; --display-lh:1.14;
+  --body:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --label:"Cinzel",Georgia,serif; --label-weight:600; --label-track:.14em; --label-case:uppercase;
+  --texture:radial-gradient(700px 520px at 75% -120px, rgba(196,154,87,.17), transparent 70%) no-repeat,
+    radial-gradient(rgba(233,220,192,.035) 1px, transparent 1.2px) 0 0 / 4px 4px;
+  --brass:linear-gradient(180deg,#f0d49a 0%,#b98a45 45%,#8a6430 55%,#d9b273 100%);
+  --stamp:"Rough & Rowdy"; --dot:#9aa3b5; }
+
+@scope ([data-era="rough"]) to ([data-era]) {
+  :scope.panel { box-shadow: inset 0 -160px 120px -60px rgba(0,0,0,.7); }
+  /* a brass plaque, screwed on */
+  .stamp { top: 32px; right: 26px; rotate: -3deg; }
+  .stamp::after { display: block; padding: 7px 24px; background: radial-gradient(circle at 9px 50%, #4a3618 0 2.5px, transparent 3px),
+      radial-gradient(circle at calc(100% - 9px) 50%, #4a3618 0 2.5px, transparent 3px), var(--brass);
+    color: #2a1d0b; font: 600 11px/1 "Cinzel", serif; letter-spacing: .18em; text-transform: uppercase; box-shadow: 0 6px 16px rgba(0,0,0,.7);
+    text-shadow: 0 1px 0 rgba(255,236,190,.5); }
+  /* a bevelled brass frame, the room's shadow on the picture */
+  .photo .frame { border: 7px solid transparent; border-image: linear-gradient(135deg, #f0d49a, #8a6430 30%, #d9b273 55%, #5c4220 80%, #c49a57) 1;
+    box-shadow: 0 24px 50px rgba(0,0,0,.8); }
+  .photo .frame img { filter: contrast(1.2) brightness(.92) sepia(.25); }
+  .photo .frame::after { background: radial-gradient(ellipse at 55% 35%, transparent 35%, rgba(5,4,3,.75)); }
+  .years { color: var(--accent); }
+  /* engraved in brass */
+  :scope .etitle { font-size: clamp(38px, 11.5vw, 62px); }
+  .display { background: var(--brass); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 0 rgba(0,0,0,.9)); }
+  .display a { color: transparent; }
+  .moments .year { color: var(--accent); }
+  .chip { background: radial-gradient(circle at 8px 50%, #4a3618 0 2px, transparent 2.5px), radial-gradient(circle at calc(100% - 8px) 50%, #4a3618 0 2px, transparent 2.5px), var(--brass);
+    color: #2a1d0b; border: 0; padding: 8px 22px; font-size: 13px; text-shadow: 0 1px 0 rgba(255,236,190,.45); box-shadow: 0 4px 10px rgba(0,0,0,.6); }
+  .button { background: var(--card); color: var(--ink); border: 1.5px solid transparent;
+    background: linear-gradient(var(--card), var(--card)) padding-box, var(--brass) border-box; font: 600 14px/1.1 "Cinzel", serif; letter-spacing: .12em;
+    box-shadow: 0 8px 18px rgba(0,0,0,.6); }
+  .button.accent { background: var(--brass); color: #2a1d0b; text-shadow: 0 1px 0 rgba(255,236,190,.45); }
+  .card, :scope.card { background: radial-gradient(ellipse at 80% 0, rgba(196,154,87,.12), transparent 60%), var(--card); border: 0;
+    border-top: 2px solid var(--accent); border-bottom: 1px solid rgba(196,154,87,.4); box-shadow: 0 18px 36px rgba(0,0,0,.6); padding: 20px 20px; }
+  .section-title { color: var(--accent); font-size: 15px; display: flex; align-items: center; gap: 12px; }
+  .section-title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--accent), transparent); }
+  .list, .list li a, .list li > span { border-color: rgba(196,154,87,.22); }
+  :scope.tc { border: 6px solid transparent; border-image: linear-gradient(135deg, #f0d49a, #8a6430 30%, #d9b273 55%, #5c4220 80%, #c49a57) 1;
+    background: radial-gradient(500px 340px at 80% -60px, rgba(196,154,87,.2), transparent 70%) no-repeat, var(--paper); box-shadow: inset 0 0 60px rgba(0,0,0,.8); }
+  .big { color: var(--accent); }
+  :scope .drawn { background: radial-gradient(ellipse at 30% 20%, rgba(196,154,87,.45), transparent 60%), #0b0a08; color: #e3c38a;
+    box-shadow: inset 0 0 0 4px #c49a57, inset 0 0 0 6px #0b0a08; }
+  .pl { border: 5px solid transparent; border-image: linear-gradient(135deg, #f0d49a, #8a6430 30%, #d9b273 55%, #5c4220 80%, #c49a57) 1; background: #000; padding: 6px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.7); }
+  .chart { border: 6px solid transparent; border-image: linear-gradient(135deg, #f0d49a, #8a6430 30%, #d9b273 55%, #5c4220 80%, #c49a57) 1; box-shadow: 0 22px 44px rgba(0,0,0,.75); }
+  .toggle { border: 1.5px solid var(--accent); }
+  .toggle .on { background: var(--brass); color: #2a1d0b; }
+  .tabbar { border-top: 1.5px solid var(--accent); }
+}

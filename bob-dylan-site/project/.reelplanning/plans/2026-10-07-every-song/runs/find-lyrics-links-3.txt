@@ -1,0 +1,37 @@
+$ node tools/find-lyrics-links.mjs
+✓ talking-world-war-iii-blues: https://www.bobdylan.com/songs/talkin-world-war-iii-blues/
+✓ motorpsycho-nitemare: https://www.bobdylan.com/songs/motorpsycho-nightmare/
+✓ most-likely-you-go-your-way-and-ill-go-mine: https://www.bobdylan.com/songs/most-likely-you-go-your-way-and-ill-go-mine/
+· alberta: not in the index
+· katies-been-gone: not in the index
+· i-guess-ill-have-to-change-my-plans: not in the index
+· i-could-have-told-you: not in the index
+· once-upon-a-time: not in the index
+· this-nearly-was-mine: not in the index
+· that-old-feeling: not in the index
+· it-gets-lonely-early: not in the index
+· my-one-and-only-love: not in the index
+· trade-winds: not in the index
+· braggin: not in the index
+· imagination: not in the index
+· how-deep-is-the-ocean: not in the index
+· p-s-i-love-you: not in the index
+· the-best-is-yet-to-come: not in the index
+· but-beautiful: not in the index
+· heres-that-rainy-day: not in the index
+· where-is-the-one: not in the index
+· theres-a-flaw-in-my-flue: not in the index
+· day-in-day-out: not in the index
+· i-couldnt-sleep-a-wink-last-night: not in the index
+· sentimental-journey: not in the index
+· somewhere-along-the-way: not in the index
+· when-the-world-was-young: not in the index
+· these-foolish-things: not in the index
+· you-go-to-my-head: not in the index
+· stardust: not in the index
+· its-funny-to-everyone-but-me: not in the index
+· why-was-i-born: not in the index
+✓ the-mighty-quinn-quinn-the-eskimo: https://www.bobdylan.com/songs/quinn-eskimo-mighty-quinn/
+· september-of-my-years: not in the index
+· as-time-goes-by: not in the index
+exit 0

@@ -1,0 +1,63 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 72 (title), 34 (choice), 26 (instead of) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f11-list-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f11-list-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f11-list-title { position:absolute; left:120px; top:130px; font:400 72px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f11-list-rule { position:absolute; left:120px; top:228px; width:1680px; height:2px; background:var(--rp-coral); transform-origin:0 50%; }
+
+  /* one-line cards: the choice in bold, then what it was instead of */
+  .f11-list-card { position:absolute; left:120px; width:1680px; height:128px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f11-list-line { position:absolute; left:44px; top:0; height:128px; display:flex; align-items:center; gap:28px; white-space:nowrap; }
+  .f11-list-chose { font:700 34px/1.2 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); }
+  .f11-list-inst { font:400 26px/1.2 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+</style>
+
+<div id="root" data-composition-id="11-list" data-band="bottom" data-duration="8.64" data-width="1920" data-height="1080">
+  <div class="clip f11-list-bg" id="f11-list-bg" data-start="0" data-duration="8.64" data-track-index="0"></div>
+
+  <div class="clip f11-list-scene" id="f11-list-scene" data-start="0" data-duration="8.64" data-track-index="1">
+    <div class="f11-list-title" id="f11-list-title">The other choices</div>
+    <div class="f11-list-rule" id="f11-list-rule"></div>
+
+    <div class="f11-list-card" id="f11-list-ca5" data-call="a5" style="top:300px">
+      <div class="f11-list-line"><span class="f11-list-chose">The fetchers keep what they found</span><span class="f11-list-inst">instead of: rewriting their files each run</span></div>
+    </div>
+    <div class="f11-list-card" id="f11-list-ca6" data-call="a6" style="top:452px">
+      <div class="f11-list-line"><span class="f11-list-chose">The 1979 Saturday Night Live clip stays dropped</span><span class="f11-list-inst">instead of: adding it back</span></div>
+    </div>
+    <div class="f11-list-card" id="f11-list-ca7" data-call="a7" style="top:604px">
+      <div class="f11-list-line"><span class="f11-list-chose">Cover versions stay out of their thread</span><span class="f11-list-inst">instead of: adding them to Songs others made famous</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f11-list-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var land = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8.6s): the title, then each line on its words; hold
+  tl.fromTo($("title"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 0.05);
+  tl.fromTo($("rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 0.25);
+  land(tl, $("ca5"), 2.3);   // "The fetchers keep what they found"
+  land(tl, $("ca6"), 4.15);  // "the Saturday Night Live clip"
+  land(tl, $("ca7"), 6.9);   // "the cover versions"
+
+  tl.set({}, {}, 8.64);
+  window.__timelines["11-list"] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "src": "2026-10-06-dylan-site--walkthrough/index.html",
+  "project": "walkthrough-video",
+  "exportedAt": "2026-10-07T04:39:25.740Z",
+  "watch": {
+    "firstPlayAt": "2026-10-07T04:36:19.177Z",
+    "maxTimeReached": 131.87,
+    "durationSeconds": 131.87,
+    "completion": 1,
+    "chapters": [
+      {
+        "id": "ch1",
+        "completion": 1
+      }
+    ],
+    "moments": [
+      {
+        "kind": "rewind",
+        "t": 104.67,
+        "from": 119.67,
+        "planStep": 2,
+        "frameIndex": 9
+      }
+    ],
+    "details": []
+  },
+  "decisions": [],
+  "quizzes": [],
+  "autonomy": [
+    {
+      "id": "a5",
+      "verdict": "accept",
+      "t": 40.846,
+      "planStep": 3,
+      "chose": "Each era's theme uses fonts already on the phone (system serif, condensed and typewriter stacks) [visible, close] (changed after review: \"it should evoke the creativity of bob dylan\" — each era now has its own art direction: its own free typeface from `@fontsource` (Alfa Slab One, Courier Prime, Bebas Neue, Rye, DM Serif Display, Abril Fatface, Monoton with Oswald, IM Fell English, Oswald Light, Limelight, Cinzel), palette, CSS texture and a gesture on its panel and pages: a taped flyer and rubber stamp for the Village, a Dont Look Back cue card for Going Electric, a woodtype frame for Basement and Country, a revival handbill for Gospel, neon tubes for the '80s, a 78 label for Back to the Roots, film frames for the Late Renaissance, a deco frame for the Standards, brass for Rough and Rowdy; the chips, buttons and cards became era objects)",
+      "shownAt": "2026-10-07T04:37:00.067Z",
+      "judgedAt": "2026-10-07T04:37:00.990Z"
+    },
+    {
+      "id": "a6",
+      "verdict": "accept",
+      "t": 71.267,
+      "planStep": 2,
+      "chose": "49 connections, each one a fact the writers were sure of [visible] (changed after review: 135 connections. The first writers worked one era at a time and could only link songs inside their own era, so almost nothing crossed eras; a pass over the whole catalogue added 86: 46 same-theme pairs across eras, 30 famous covers, 9 source tunes, 1 rewrite)",
+      "shownAt": "2026-10-07T04:37:31.451Z",
+      "judgedAt": "2026-10-07T04:37:32.200Z"
+    },
+    {
+      "id": "a17",
+      "verdict": "accept",
+      "t": 80.056,
+      "planStep": 4,
+      "chose": "The album page lists the dataset's songs, headed \"Selected songs · 7 of 14\" when they are fewer than the album's tracks [visible] (changed after review: the album page shows the full track list from MusicBrainz, numbered; the songs with their own page are marked \"its story ›\", and a line says how many)",
+      "shownAt": "2026-10-07T04:37:41.035Z",
+      "judgedAt": "2026-10-07T04:37:43.265Z"
+    },
+    {
+      "id": "a8",
+      "verdict": "accept",
+      "t": 104.589,
+      "planStep": 6,
+      "chose": "Spotify track ids come from MusicBrainz's Spotify album links and Spotify's own album pages, kept only when Spotify's title for the track matches the song (177 of 181 album songs) [visible] (changed after review: 181 of 181. Spotify spells two titles differently, \"Fourth Time Around\" and \"Love Minus Zero\"; the match now drops subtitles and reads 4th as fourth, still by title)",
+      "shownAt": "2026-10-07T04:38:07.836Z",
+      "judgedAt": "2026-10-07T04:38:10.215Z"
+    },
+    {
+      "id": "a9",
+      "verdict": "accept",
+      "t": 104.589,
+      "planStep": 6,
+      "chose": "Two YouTube clips, both posted by Bob Dylan's official channel: \"Subterranean Homesick Blues\" (the Dont Look Back cue-card film) and the \"Things Have Changed\" video on the 2001 Oscar moment [visible, close] (changed after review, question 4 answered B: 166 album songs have a clip from Bob Dylan's official channel, and 13 moments have footage, some posted by others, each kept only when its title names the event; `npm run check:clips` fails on any clip taken down)",
+      "shownAt": "2026-10-07T04:38:07.836Z",
+      "judgedAt": "2026-10-07T04:38:10.492Z"
+    },
+    {
+      "id": "d1",
+      "verdict": "own",
+      "own": "So are you saying it is empty right now? that is what im concerned about",
+      "t": 119.672,
+      "planStep": 2,
+      "chose": "Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written [deviation, visible] (kept after review: short credited quotation is common, and may well be fair use; the limit is the AI's output, which a filter stopped every time it wrote lyric lines. Lines added by hand to `excerpt` in `data/songs.json` show, credited; a script that copies lyrics from another site would get round that filter, so the build does not use one)",
+      "shownAt": "2026-10-07T04:38:57.584Z",
+      "judgedAt": "2026-10-07T04:39:09.998Z"
+    }
+  ],
+  "knowledgeLevel": null,
+  "watched": [
+    {
+      "video": "2026-10-06-dylan-site",
+      "seen": "2026-10-06T20:49:38.354Z",
+      "sent": "2026-10-06T21:01:57.864Z"
+    },
+    {
+      "video": "2026-10-06-dylan-site--walkthrough",
+      "seen": "2026-10-07T03:07:02.405Z",
+      "sent": "2026-10-07T03:10:32.779Z"
+    }
+  ],
+  "confusion": {
+    "wrongChecks": 0,
+    "walked": 0,
+    "termsOpened": 0,
+    "termsLookedUp": [
+      "wikimedia commons"
+    ],
+    "rewinds": 1,
+    "watchedPct": 100
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "amuxmbgdq9g46",
+      "kind": "note",
+      "comment": "So are you saying it is empty right now? that is what im concerned about",
+      "about": "On what the agent decided: Every song's `excerpt` is empty: the field, its two-line limit, its credit and its place on the song page are built, but no lyric lines are written [deviation, visible] (kept after review: short credited quotation is common, and may well be fair use; the limit is the AI's output, which a filter stopped every time it wrote lyric lines. Lines added by hand to `excerpt` in `data/songs.json` show, credited; a script that copies lyrics from another site would get round that filter, so the build does not use one)",
+      "t": 119.67,
+      "frame": {
+        "index": 9,
+        "compositionId": "06-d1",
+        "title": "Lyric excerpts, kept as they were"
+      },
+      "plan": {
+        "step": 2,
+        "questions": [],
+        "component": null
+      }
+    },
+    {
+      "id": "amuxmbrrza9jb",
+      "kind": "approve",
+      "t": 131.87,
+      "frame": {
+        "index": 11,
+        "compositionId": "22-ending",
+        "title": "Anything you'd change?"
+      },
+      "plan": {
+        "step": null,
+        "questions": [],
+        "component": null
+      },
+      "comment": ""
+    }
+  ],
+  "recorded": {
+    "reviewer": "agent@localhost",
+    "via": "git user.email",
+    "reelplanning": "0.2.0"
+  }
+}

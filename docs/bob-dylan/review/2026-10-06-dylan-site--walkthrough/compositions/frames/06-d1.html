@@ -1,0 +1,93 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; container-type:size; -webkit-font-smoothing:antialiased; }
+  .f06-d1-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f06-d1-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f06-d1-phone { position:absolute; left:240px; top:90px; width:360px; height:780px; box-sizing:border-box; border-radius:36px; border:1px solid rgba(var(--rp-ink-rgb),0.5); overflow:hidden; background:var(--rp-slab); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f06-d1-phone img { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 0; }
+  .f06-d1-ring { position:absolute; left:8px; top:16px; width:344px; height:222px; box-sizing:border-box; border:1px solid var(--rp-coral); border-radius:12px; }
+
+  .f06-d1-eyebrow { position:absolute; left:760px; top:150px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:var(--rp-ink); white-space:nowrap; }
+  .f06-d1-anchor { position:absolute; left:760px; top:196px; display:flex; align-items:baseline; gap:18px; white-space:nowrap; }
+  .f06-d1-anchor .p { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f06-d1-anchor .h { font:400 44px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  .f06-d1-card { position:absolute; left:760px; top:300px; width:960px; height:500px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f06-d1-txt { position:absolute; left:48px; top:48px; width:864px; }
+  .f06-d1-chose { font:700 36px/1.22 "Inter"; color:var(--rp-ink); }
+  .f06-d1-inst { margin-top:20px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f06-d1-why { margin-top:16px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+
+  .f06-d1-slab { position:absolute; left:48px; top:288px; width:864px; height:164px; box-sizing:border-box; border-radius:8px; background:var(--rp-slab); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); overflow:hidden; }
+  .f06-d1-bar { position:absolute; left:0; top:0; width:864px; height:52px; background:var(--rp-slab-bar); }
+  .f06-d1-file { position:absolute; left:24px; top:13px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.72); white-space:nowrap; }
+  .f06-d1-ln { position:absolute; left:24px; font:400 26px/52px "JetBrains Mono"; color:var(--rp-slab-ink); white-space:pre; font-variant-ligatures:none; }
+  .f06-d1-ln .s { color:var(--rp-syn-str); }
+  .f06-d1-ln .k { color:var(--rp-syn-key); }
+</style>
+
+<div id="root" data-composition-id="06-d1" data-band="bottom" data-duration="15.083" data-width="1920" data-height="1080">
+  <div class="clip f06-d1-bg" id="f06-d1-bg" data-start="0" data-duration="15.083" data-track-index="0"></div>
+
+  <div class="clip f06-d1-scene" id="f06-d1-scene" data-start="0" data-duration="15.083" data-track-index="1">
+    <div class="f06-d1-phone" id="f06-d1-phone" data-artifact="/song/like-a-rolling-stone/">
+      <img src="assets/shots/song-lars-lyrics.png" alt="Like a Rolling Stone: the words card and its bobdylan.com link">
+      <i class="f06-d1-ring" id="f06-d1-ring"></i>
+    </div>
+
+    <div class="f06-d1-eyebrow" id="f06-d1-eyebrow">Step 2</div>
+    <div class="f06-d1-anchor" id="f06-d1-anchor"><span class="h">Off-plan change · lyric excerpts</span></div>
+
+    <div class="f06-d1-card" id="f06-d1-cd1" data-call="d1">
+      <div class="f06-d1-txt">
+        <div class="f06-d1-chose" id="f06-d1-c1">No excerpts written by the AI</div>
+        <div class="f06-d1-inst" id="f06-d1-i1">instead of: two credited lines</div>
+        <div class="f06-d1-why" id="f06-d1-w1">a filter stops the AI writing lyrics; lines added by hand show</div>
+      </div>
+      <div class="f06-d1-slab" id="f06-d1-slab" data-artifact="data/songs.json">
+        <div class="f06-d1-bar"></div>
+        <div class="f06-d1-file">data/songs.json</div>
+        <div class="f06-d1-ln" id="f06-d1-L1" style="top:56px">"id": <span class="s">"like-a-rolling-stone"</span>,</div>
+        <div class="f06-d1-ln" id="f06-d1-L2" style="top:104px">"excerpt": <span class="k">null</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f06-d1-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8s): the phone pushed in; its words card ringed
+  tl.fromTo($("phone"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: E }, 0.125);
+  rise(tl, $("eyebrow"), 0.335, 10);
+  rise(tl, $("anchor"), 0.838, 10);
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 2.681);
+
+  // Scene 2 (8-18s): card d1, its why, and the empty field on the slab; hold
+  tl.fromTo($("cd1"), { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.7, ease: E }, 6.871);
+  rise(tl, $("c1"), 7.374);
+  rise(tl, $("i1"), 8.045);
+  rise(tl, $("w1"), 8.715);
+  tl.fromTo($("slab"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 9.72);
+  rise(tl, $("L1"), 10.139, 8);
+  rise(tl, $("L2"), 10.558, 8);
+
+  tl.set({}, {}, 18);
+  window.__timelines["06-d1"] = tl;
+})();
+</script>
+</template>

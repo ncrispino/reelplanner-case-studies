@@ -1,0 +1,76 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f52-q2-c-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f52-q2-c-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f52-q2-c-place { position:absolute; left:90px; top:110px; font:400 28px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the code slab (theme block code-diff: one added line wiped in) */
+  .f52-q2-c-slab { position:absolute; left:90px; top:180px; width:1740px; height:620px; border-radius:8px; background:var(--rp-slab); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); overflow:hidden; }
+  .f52-q2-c-bar { position:absolute; left:0; top:0; width:1740px; height:56px; background:var(--rp-slab-bar); }
+  .f52-q2-c-file { position:absolute; left:28px; top:14px; font:400 28px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.72); white-space:nowrap; }
+  .f52-q2-c-ln { position:absolute; left:70px; font:400 28px/84px "JetBrains Mono"; color:var(--rp-slab-ink); white-space:pre; font-variant-ligatures:none; }
+  .f52-q2-c-ln.add { background:rgba(var(--rp-syn-add-rgb),0.12); }
+  .f52-q2-c-ln .k { color:var(--rp-syn-key); } .f52-q2-c-ln .s { color:var(--rp-syn-str); }
+  .f52-q2-c-sign { position:absolute; left:30px; font:700 28px/84px "JetBrains Mono"; color:var(--rp-syn-add); }
+  .f52-q2-c-wipe { position:absolute; left:70px; width:1650px; height:84px; overflow:hidden; }
+  .f52-q2-c-wipe .f52-q2-c-ln { left:0; top:0; }
+
+  .f52-q2-c-tok { position:relative; display:inline-block; line-height:36px; }
+  .f52-q2-c-ul { position:absolute; left:0; right:0; bottom:-3px; height:4px; background:var(--rp-coral); transform-origin:0 50%; }
+</style>
+
+<div id="root" data-composition-id="52-q2-c" data-band="bottom" data-duration="6" data-width="1920" data-height="1080">
+
+  <div class="clip f52-q2-c-bg" id="f52-q2-c-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+  <div class="clip f52-q2-c-scene" id="f52-q2-c-scene" data-start="0" data-duration="6" data-track-index="1">
+    <div class="f52-q2-c-place" id="f52-q2-c-place">If C · step 4</div>
+
+    <div class="f52-q2-c-slab" id="f52-q2-c-slab" data-artifact="data/songs.json">
+      <div class="f52-q2-c-bar"></div>
+      <div class="f52-q2-c-file">data/songs.json</div>
+
+      <div class="f52-q2-c-ln" style="top:76px">{ <span class="k">"id"</span>: <span class="s">"blowin-in-the-wind"</span>,</div>
+      <div class="f52-q2-c-ln" style="top:160px">  <span class="k">"album"</span>: <span class="s">"freewheelin"</span>,</div>
+      <div class="f52-q2-c-sign" id="f52-q2-c-a1" style="top:244px">+</div>
+      <div class="f52-q2-c-wipe" id="f52-q2-c-W1" style="top:244px"><div class="f52-q2-c-ln add" id="f52-q2-c-L1">  <span class="f52-q2-c-tok"><span class="k">"preview"</span><i class="f52-q2-c-ul" id="f52-q2-c-u1"></i></span>: <span class="s">"Nine questions about war and freedom, and an answer that won't stay still."</span>,</div></div>
+      <div class="f52-q2-c-ln" style="top:328px">  <span class="k">"spotify"</span>: <span class="s">"…"</span>,</div>
+      <div class="f52-q2-c-ln" style="top:412px">  <span class="k">"youtube"</span>: <span class="k">null</span>,</div>
+      <div class="f52-q2-c-ln" style="top:496px">  <span class="k">"lyrics"</span>: <span class="s">"https://www.bobdylan.com/songs/blowin-wind/"</span> }</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "52-q2-c";
+  var $ = function (s) { return document.getElementById("f52-q2-c-" + s); };
+  var WW = 1650;
+
+  gsap.set($("W1"), { x: -WW }); gsap.set($("L1"), { x: WW });
+  gsap.set($("a1"), { opacity: 0 });
+  gsap.set($("u1"), { scaleX: 0 });
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0–6s): the record is there; the preview field wipes in as an added line, then hold
+  tl.fromTo($("place"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.05);
+  tl.fromTo($("slab"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+  tl.to($("a1"), { opacity: 1, duration: 0.2, ease: "none" }, 1.0);
+  tl.to($("W1"), { x: 0, duration: 0.8, ease: "power2.inOut" }, 1.0);     // wiped in
+  tl.to($("L1"), { x: 0, duration: 0.8, ease: "power2.inOut" }, 1.0);
+  tl.to($("u1"), { scaleX: 1, duration: 0.4, ease: "power2.out" }, 2.0);   // drawn under "preview", the one coral
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 5.99);
+
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

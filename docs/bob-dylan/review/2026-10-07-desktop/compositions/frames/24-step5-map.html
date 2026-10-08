@@ -1,0 +1,174 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes: 46 (panel title), 26 (mono, panel text, link), 24 (map label, legend) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f24-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f24-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* the browser window: 1600 x 830, top 40 → bottom 870 */
+  .f24-win { position:absolute; left:160px; top:40px; width:1600px; height:830px; box-sizing:border-box; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-paper); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f24-bar { position:absolute; left:0; top:0; width:100%; height:36px; box-sizing:border-box; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); background:var(--rp-tile); }
+  .f24-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:5px; background:rgba(var(--rp-ink-rgb),0.3); }
+  .f24-url { position:absolute; left:0; width:100%; top:0; text-align:center; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; font-variant-ligatures:none; }
+  .f24-page { position:absolute; left:0; top:36px; width:1598px; height:792px; }
+
+  /* the night chart fills the window */
+  .f24-map { position:absolute; left:0; top:0; width:1598px; height:640px; overflow:hidden; background:var(--rp-slab); }
+  .f24-map svg { position:absolute; left:0; top:0; width:1598px; height:640px; }
+  .f24-grid { stroke:rgba(var(--rp-slab-ink-rgb),0.06); stroke-width:1; }
+  .f24-e { stroke:rgba(var(--rp-slab-ink-rgb),0.18); stroke-width:1.5; }
+  .f24-ej { stroke:var(--rp-slab-ink); stroke-width:2.5; }
+  .f24-g { fill:var(--rp-syn-num); }
+  .f24-o1 { fill:var(--rp-syn-key); } .f24-o2 { fill:var(--rp-syn-str); } .f24-o3 { fill:var(--rp-syn-add); }
+  .f24-o4 { fill:var(--rp-slab-ink); } .f24-o5 { fill:var(--rp-syn-del); } .f24-o6 { fill:var(--rp-syn-com); }
+  .f24-sel { fill:var(--rp-syn-num); stroke:var(--rp-slab-ink); stroke-width:3; }
+  .f24-ring { fill:none; stroke:var(--rp-coral); stroke-width:4; }
+  .f24-lab { position:absolute; left:648px; top:296px; padding:5px 10px; border-radius:4px; background:var(--rp-slab); font:700 24px/1 "Inter"; color:var(--rp-slab-ink); white-space:nowrap; }   /* a backing plate in the slab colour, so no line runs through the name */
+
+  /* the panel at the right */
+  .f24-panel { position:absolute; left:1124px; top:30px; width:440px; height:580px; box-sizing:border-box; padding:30px 32px; border-radius:12px; border:1px solid rgba(var(--rp-ink-rgb),0.14); background:var(--rp-paper); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f24-pk { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f24-pt { margin-top:16px; font:400 46px/1.04 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+  .f24-pd { margin-top:18px; font:400 26px/1.4 "Inter"; color:var(--rp-ink); }
+  .f24-pc { margin-top:20px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; }
+  .f24-pl { position:absolute; left:32px; bottom:30px; height:56px; box-sizing:border-box; padding:0 22px; border-radius:6px; background:var(--rp-ink); color:var(--rp-on-ink); font:400 26px/56px "Inter"; white-space:nowrap; }
+
+  /* the legend under the map */
+  .f24-leg { position:absolute; left:40px; top:668px; width:1518px; display:flex; flex-wrap:wrap; gap:14px 14px; }
+  .f24-li { position:relative; height:46px; box-sizing:border-box; padding:0 14px 0 46px; border-radius:23px; border:2px solid transparent; font:400 24px/42px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f24-sw { position:absolute; left:12px; top:9px; width:22px; height:22px; border-radius:11px; box-sizing:border-box; border:1px solid rgba(var(--rp-ink-rgb),0.4); }
+  .f24-on { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; border-radius:23px; border:2px solid var(--rp-ink); }
+
+  .f24-ptr { position:absolute; left:0; top:0; width:34px; height:46px; }
+</style>
+
+<div id="root" data-composition-id="24-step5-map" data-band="bottom" data-start="0" data-duration="8.884" data-width="1920" data-height="1080">
+  <div class="clip f24-bg" id="f24-bg" data-start="0" data-duration="8.884" data-track-index="0"></div>
+
+  <div class="clip f24-scene" id="f24-scene" data-start="0" data-duration="8.884" data-track-index="1">
+
+    <div class="f24-win" id="f24-win" data-artifact="/map/gotta-serve-somebody/ (proposed)">
+      <div class="f24-bar"><span class="f24-dot" style="left:16px"></span><span class="f24-dot" style="left:34px"></span><span class="f24-dot" style="left:52px"></span><div class="f24-url">/map/gotta-serve-somebody/</div></div>
+      <div class="f24-page">
+
+        <div class="f24-map" id="f24-map">
+          <svg viewBox="0 0 1598 640" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <line class="f24-grid" x1="0" y1="80" x2="1598" y2="80"/><line class="f24-grid" x1="0" y1="200" x2="1598" y2="200"/>
+              <line class="f24-grid" x1="0" y1="320" x2="1598" y2="320"/><line class="f24-grid" x1="0" y1="440" x2="1598" y2="440"/>
+              <line class="f24-grid" x1="0" y1="560" x2="1598" y2="560"/>
+              <line class="f24-grid" x1="160" y1="0" x2="160" y2="640"/><line class="f24-grid" x1="400" y1="0" x2="400" y2="640"/>
+              <line class="f24-grid" x1="640" y1="0" x2="640" y2="640"/><line class="f24-grid" x1="880" y1="0" x2="880" y2="640"/>
+              <line class="f24-grid" x1="1120" y1="0" x2="1120" y2="640"/><line class="f24-grid" x1="1360" y1="0" x2="1360" y2="640"/>
+            </g>
+            <!-- other songs' faint links -->
+            <g id="f24-others-e">
+              <line class="f24-e" x1="120" y1="90" x2="230" y2="150"/><line class="f24-e" x1="230" y1="150" x2="300" y2="60"/>
+              <line class="f24-e" x1="180" y1="420" x2="300" y2="500"/><line class="f24-e" x1="760" y1="90" x2="900" y2="140"/>
+              <line class="f24-e" x1="980" y1="520" x2="1060" y2="590"/><line class="f24-e" x1="90" y1="270" x2="180" y2="420"/>
+              <line class="f24-e" x1="1000" y1="300" x2="900" y2="140"/>
+            </g>
+            <!-- the selected song's two connections -->
+            <line class="f24-ej" id="f24-j1" x1="620" y1="314" x2="430" y2="200" pathLength="1" stroke-dasharray="1"/>
+            <line class="f24-ej" id="f24-j2" x1="620" y1="314" x2="830" y2="450" pathLength="1" stroke-dasharray="1"/>
+            <!-- other eras' dots (dim when Gospel is picked) -->
+            <g id="f24-others">
+              <circle class="f24-o1" cx="120" cy="90" r="6"/><circle class="f24-o2" cx="230" cy="150" r="6"/>
+              <circle class="f24-o3" cx="300" cy="60" r="6"/><circle class="f24-o4" cx="180" cy="420" r="6"/>
+              <circle class="f24-o5" cx="300" cy="500" r="6"/><circle class="f24-o6" cx="760" cy="90" r="6"/>
+              <circle class="f24-o1" cx="900" cy="140" r="6"/><circle class="f24-o2" cx="980" cy="520" r="6"/>
+              <circle class="f24-o3" cx="1060" cy="590" r="6"/><circle class="f24-o4" cx="90" cy="270" r="6"/>
+              <circle class="f24-o5" cx="1000" cy="300" r="6"/><circle class="f24-o6" cx="520" cy="560" r="6"/>
+              <circle class="f24-o2" cx="430" cy="200" r="7"/><circle class="f24-o1" cx="830" cy="450" r="7"/>
+              <circle class="f24-o3" cx="360" cy="380" r="6"/><circle class="f24-o4" cx="700" cy="560" r="6"/>
+              <circle class="f24-o6" cx="560" cy="120" r="6"/>
+            </g>
+            <!-- Gospel's dots -->
+            <g id="f24-gospel">
+              <circle class="f24-g" cx="700" cy="230" r="6"/><circle class="f24-g" cx="520" cy="420" r="6"/>
+              <circle class="f24-g" cx="760" cy="380" r="6"/><circle class="f24-g" cx="640" cy="470" r="6"/>
+            </g>
+            <circle class="f24-sel" id="f24-sel" cx="620" cy="314" r="10"/>
+            <circle class="f24-ring" id="f24-ring" cx="620" cy="314" r="22"/>
+          </svg>
+          <div class="f24-lab" id="f24-lab">Gotta Serve Somebody</div>
+
+          <div class="f24-panel" id="f24-panel">
+            <div class="f24-pk" id="f24-pk">Gospel · 1979</div>
+            <div class="f24-pt" id="f24-pt">Gotta Serve Somebody</div>
+            <div class="f24-pd" id="f24-pd">Whoever you are and however high you rise, you will end up answering to one master or another.</div>
+            <div class="f24-pc" id="f24-pc">2 connections</div>
+            <div class="f24-pl" id="f24-pl">Open the song ›</div>
+          </div>
+        </div>
+
+        <div class="f24-leg" id="f24-leg">
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:color-mix(in oklab, var(--rp-coral) 60%, var(--rp-ink))"></span>Duluth and Hibbing</div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:var(--rp-paper)"></span>Greenwich Village</div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:var(--rp-syn-key)"></span>Going Electric</div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:var(--rp-syn-str)"></span>Basement and Country</div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:var(--rp-syn-com)"></span>Blood on the Tracks</div>
+          <div class="f24-li" id="f24-gli"><span class="f24-sw" style="background:var(--rp-syn-num); border-color:color-mix(in oklab, var(--rp-syn-del) 70%, var(--rp-slab))"></span>Gospel<span class="f24-on" id="f24-on"></span></div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:var(--rp-syn-add)"></span>The '80s</div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:color-mix(in oklab, var(--rp-syn-add) 50%, var(--rp-syn-str))"></span>Back to the Roots</div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:color-mix(in oklab, var(--rp-syn-key) 50%, var(--rp-syn-del))"></span>Late Renaissance</div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:var(--rp-syn-del)"></span>The Standards</div>
+          <div class="f24-li f24-dim"><span class="f24-sw" style="background:rgba(var(--rp-ink-rgb),0.45)"></span>Rough and Rowdy</div>
+        </div>
+
+        <svg class="f24-ptr" id="f24-ptr" viewBox="0 0 34 46" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 2 L2 38 L11 29 L17 43 L23 40 L17 27 L30 27 Z" style="fill:var(--rp-paper); stroke:var(--rp-ink); stroke-width:2; stroke-linejoin:round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "24-step5-map";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f24-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.45, ease: E }, at); };
+  var dims = Array.prototype.slice.call(document.querySelectorAll("#f24-leg .f24-dim"));
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the map fills the window; a dot is clicked; the panel slides in
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, 0.03);   // "the map page fills the window"
+  tl.fromTo($("leg"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 0.6);
+  tl.fromTo($("ptr"), { opacity: 0, x: 860, y: 520 }, { opacity: 1, x: 860, y: 520, duration: 0.3, ease: E }, 1.5);
+  tl.to($("ptr"), { x: 624, y: 320, duration: 0.5, ease: "power2.inOut" }, 1.65);   // "Click a dot"
+  tl.fromTo($("ptr"), { scale: 1 }, { scale: 0.85, duration: 0.1, ease: "power1.out" }, 2.18);
+  tl.to($("ptr"), { scale: 1, duration: 0.15, ease: "power1.out" }, 2.28);
+  tl.fromTo($("ring"), { opacity: 0, scale: 0.5, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: E }, 2.25);
+  tl.fromTo($("lab"), { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.4, ease: E }, 2.35);
+  tl.fromTo([$("j1"), $("j2")], { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: E }, 2.4);
+  tl.fromTo($("panel"), { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 2.7);   // "a panel"
+  pop(tl, $("pk"), 2.95, 8);
+  pop(tl, $("pt"), 3.05, 8);
+  pop(tl, $("pd"), 3.3, 8);    // "describes the song"
+  pop(tl, $("pc"), 3.7, 8);
+  pop(tl, $("pl"), 4.55, 8);   // "with a link to open it"
+  tl.to($("ptr"), { x: 1240, y: 590, duration: 0.5, ease: "power2.inOut" }, 4.5);
+
+  // Scene 2: the legend; Gospel is clicked; the other eras dim; hold
+  tl.to($("ptr"), { x: 178, y: 738, duration: 0.6, ease: "power2.inOut" }, 6.0);   // "Click an era in the legend": parked at the chip's right end, beside its label
+  tl.fromTo($("ptr"), { scale: 1 }, { scale: 0.85, duration: 0.1, ease: "power1.out" }, 6.65);
+  tl.to($("ptr"), { scale: 1, duration: 0.15, ease: "power1.out" }, 6.75);
+  tl.fromTo($("on"), { opacity: 0 }, { opacity: 1, duration: 0.3, ease: E }, 6.7);
+  tl.fromTo(dims, { opacity: 1 }, { opacity: 0.3, duration: 0.45, ease: E }, 7.65);   // "the other eras dim"
+  tl.fromTo([$("others"), $("others-e")], { opacity: 1 }, { opacity: 0.15, duration: 0.45, ease: E }, 7.65);
+
+  tl.set({}, {}, 8.384);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

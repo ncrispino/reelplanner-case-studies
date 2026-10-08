@@ -1,0 +1,68 @@
+@import "@fontsource/courier-prime/latin-400.css";
+@import "@fontsource/courier-prime/latin-700.css";
+/* Greenwich Village, 1961–1964 — folk-club flyers, typewritten setlists and coffeehouse paper.
+   Manila stock with coffee rings, a typewriter face with a red second ribbon, a dashed cut-here flyer border,
+   photographs taped on, a rubber stamp, index cards and typed labels. */
+[data-era="village"] { --paper:#f2ead7; --ink:#1c1a16; --soft:rgba(28,26,22,.76); --line:rgba(28,26,22,.26); --accent:#b3261e;
+  --accent-ink:#fff8ec; --accent2:#2d4f86; --card:#fffcf3;
+  --display:"Courier Prime","Courier New",Courier,monospace; --display-alt:"Courier Prime","Courier New",monospace; --display-weight:700;
+  --display-case:none; --display-track:-0.035em; --display-style:normal; --display-lh:1.04;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --label:"Courier Prime","Courier New",Courier,monospace; --label-weight:700; --label-track:.03em; --label-case:uppercase;
+  --texture:radial-gradient(circle, transparent 0 58px, rgba(122,78,28,.11) 59px 62px, transparent 64px) right -44px top 120px / 150px 150px no-repeat,
+    radial-gradient(circle, transparent 0 40px, rgba(122,78,28,.08) 41px 43px, transparent 45px) left -30px top 640px / 110px 110px no-repeat,
+    radial-gradient(rgba(28,26,22,.05) 1px, transparent 1.3px) 0 0 / 6px 6px;
+  --stamp:"Hootenanny tonight"; --dot:#f2e6c2; }
+
+@scope ([data-era="village"]) to ([data-era]) {
+  /* the flyer's dashed border, just inside the edge */
+  :scope.panel { padding: 26px 26px 32px; }
+  :scope.panel::before { content: ""; position: absolute; inset: 9px; border: 2px dashed rgba(28,26,22,.55); pointer-events: none; z-index: -1; }
+  /* a rubber stamp in red */
+  .stamp { top: 40px; right: 24px; rotate: 8deg; }
+  .stamp::after { display: block; padding: 6px 10px; border: 3px solid var(--accent); color: var(--accent); background: rgba(242,234,215,.86);
+    font: 700 14px/1 "Courier Prime", monospace; letter-spacing: .08em; text-transform: uppercase; opacity: .92;
+    box-shadow: inset 0 0 0 2px rgba(242,234,215,.86), inset 0 0 0 3px var(--accent); }
+  /* a print taped to the flyer */
+  :scope .photo { rotate: -1.4deg; margin: 6px 4px 0; }
+  .photo .frame { border: 9px solid #fffdf7; border-bottom-width: 9px; box-shadow: 0 2px 8px rgba(0,0,0,.28); }
+  .photo .frame img { filter: grayscale(1) contrast(1.05); }
+  .photo::before, .photo::after { content: ""; position: absolute; z-index: 2; width: 84px; height: 24px; background: rgba(233,224,190,.78);
+    box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+  .photo::before { top: -9px; left: 18px; rotate: -6deg; }
+  .photo::after { top: -8px; right: 16px; rotate: 5deg; }
+  .years { color: var(--accent); font-size: 15px; }
+  :scope .etitle { font-size: clamp(36px, 10.5vw, 58px); }
+  .display { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 3px; text-underline-offset: 7px; }
+  .moments { border-top-style: dashed; }
+  .moments a { border-bottom-style: dashed; }
+  /* typed on a scrap of label tape */
+  .chip { background: var(--card); border: 1px solid rgba(28,26,22,.4); box-shadow: 2px 2px 0 rgba(28,26,22,.18); text-transform: none;
+    font-size: 16px; letter-spacing: 0; rotate: -1.2deg; }
+  .chip:nth-child(even) { rotate: 1.3deg; }
+  .chip::before { content: "#"; color: var(--accent); margin-right: 3px; }
+  .button { background: transparent; border: 2.5px solid var(--accent); color: var(--accent); box-shadow: inset 0 0 0 2px var(--paper), inset 0 0 0 3px var(--accent); }
+  .button.accent { background: var(--accent); color: var(--accent-ink); box-shadow: 3px 3px 0 var(--ink); }
+  /* an index card: blue rules, a red margin */
+  .card, :scope.card { background: linear-gradient(90deg, transparent 30px, rgba(179,38,30,.5) 30px 31px, transparent 31px),
+      linear-gradient(transparent 0 38px, rgba(179,38,30,.35) 38px 39px, transparent 39px),
+      repeating-linear-gradient(transparent 0 25px, rgba(45,79,134,.16) 25px 26px), var(--card);
+    border: 0; padding: 14px 18px 18px 44px; box-shadow: 0 1px 2px rgba(0,0,0,.18), 0 6px 14px rgba(70,50,20,.12); }
+  .card .kicker, :scope.card .kicker { color: var(--accent); }
+  .section-title { font-size: 15px; border-bottom: 2px dashed var(--ink); padding-bottom: 6px; display: inline-block; }
+  .section-title::before { content: "— "; color: var(--accent); }
+  .list { border-top-style: dashed; }
+  .list li a, .list li > span { border-bottom-style: dashed; }
+  :scope.tc { background: linear-gradient(90deg, transparent 30px, rgba(179,38,30,.45) 30px 31px, transparent 31px),
+      repeating-linear-gradient(transparent 0 27px, rgba(45,79,134,.14) 27px 28px), var(--card);
+    padding-left: 44px; box-shadow: 0 1px 3px rgba(0,0,0,.2), 0 8px 18px rgba(70,50,20,.14); rotate: -0.4deg; margin-inline: 4px; }
+  .big { color: var(--accent); }
+  .ruler { color: var(--ink); }
+  :scope .drawn { background: radial-gradient(rgba(28,26,22,.07) 1px, transparent 1.3px) 0 0 / 5px 5px, #e8dcbc; color: var(--ink);
+    border: 6px solid #fffdf7; }
+  :scope .drawn .t { text-decoration: underline var(--accent) 2px; text-underline-offset: 3px; }
+  .pl { background: var(--card); border: 0; padding: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.22), 0 8px 16px rgba(70,50,20,.12); position: relative; }
+  .pl::before { content: ""; position: absolute; top: -10px; left: 50%; translate: -50% 0; rotate: -3deg; width: 92px; height: 22px; background: rgba(233,224,190,.85); }
+  .chart { border: 9px solid #fffdf7; box-shadow: 0 2px 10px rgba(0,0,0,.3); }
+  .tab.on { box-shadow: inset 0 4px 0 var(--accent); }
+}

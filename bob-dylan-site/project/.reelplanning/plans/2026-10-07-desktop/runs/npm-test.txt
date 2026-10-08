@@ -1,0 +1,22 @@
+$ npm test
+> dylan-site@0.1.0 test
+> node tools/check-data.mjs && astro build && node tools/check-phone.mjs && node tools/check-desktop.mjs
+✓ 11 eras, 39 albums, 538 songs, 165 connections, 12 threads, 26 photos
+19:24:28 [types] Generated 113ms
+19:24:28 [build] output: "static"
+19:24:28 [build] mode: "static"
+19:24:28 [build] directory: /root/reel-case-study/ours/dylan-site/dist/
+19:24:28 [build] Collecting build info...
+19:24:28 [build] ✓ Completed in 190ms.
+19:24:29 [build] Building static entrypoints...
+19:24:30 [vite] ✓ built in 1.39s
+19:24:30 [vite] ✓ built in 160ms
+19:24:30 [build] Rearranging server assets...
+19:24:40 ✓ Completed in 9.83s.
+19:24:40 ✓ Completed in 31ms.
+19:24:40 [build] ✓ Completed in 11.53s.
+19:24:40 [build] 1415 page(s) built in 12.00s
+19:24:40 [build] Complete!
+✓ 12 views at 375×812, screenshots in checks/; a tap on a map dot opens its song
+✓ 24 views at 1440 × 900 and 1100 × 800, screenshots in checks/desktop/
+exit 0

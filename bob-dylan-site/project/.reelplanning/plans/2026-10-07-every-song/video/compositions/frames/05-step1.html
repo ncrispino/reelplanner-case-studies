@@ -1,0 +1,129 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 64 (title), 32 (track title), 30 (coral line), 28 (record), 26 (labels, card text) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f05-step1-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f05-step1-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f05-step1-place { position:absolute; left:80px; top:64px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f05-step1-title { position:absolute; left:76px; top:102px; font:400 64px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  /* the track row */
+  .f05-step1-tl { position:absolute; left:80px; top:290px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f05-step1-row { position:absolute; left:80px; top:332px; width:560px; height:92px; box-sizing:border-box; border-radius:8px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f05-step1-row .n { position:absolute; left:28px; top:31px; font:400 30px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f05-step1-row .t { position:absolute; left:84px; top:29px; font:400 32px/1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+
+  /* the arrow, named by the script */
+  .f05-step1-arrow { position:absolute; left:672px; top:330px; width:380px; height:60px; }
+  .f05-step1-arrow .lbl { position:absolute; left:0; width:380px; top:0; text-align:center; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; font-variant-ligatures:none; }
+  .f05-step1-shaft { position:absolute; left:672px; top:401px; width:370px; height:2px; background:rgba(var(--rp-ink-rgb),0.6); transform-origin:0 50%; }
+  .f05-step1-head { position:absolute; left:1030px; top:393px; width:18px; height:18px; }
+  .f05-step1-head i { position:absolute; left:0; top:0; width:14px; height:14px; border-top:2px solid rgba(var(--rp-ink-rgb),0.6); border-right:2px solid rgba(var(--rp-ink-rgb),0.6); transform:rotate(45deg); }
+
+  /* the record on the slab */
+  .f05-step1-slab { position:absolute; left:1080px; top:200px; width:760px; height:396px; box-sizing:border-box; border-radius:8px; background:var(--rp-slab); border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); overflow:hidden; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-step1-bar { position:absolute; left:0; top:0; width:760px; height:44px; background:var(--rp-slab-bar); border-bottom:1px solid rgba(var(--rp-slab-ink-rgb),0.14); }
+  .f05-step1-bar i { position:absolute; top:17px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-slab-ink-rgb),0.3); }
+  .f05-step1-bar span { position:absolute; left:90px; top:9px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.7); white-space:nowrap; }
+  .f05-step1-code { position:absolute; left:36px; top:66px; }
+  .f05-step1-ln { position:absolute; left:0; height:44px; font:400 28px/44px "JetBrains Mono"; color:var(--rp-slab-ink); white-space:pre; font-variant-ligatures:none; }
+  .f05-step1-ln .k { color:var(--rp-syn-key); }
+  .f05-step1-ln .s { color:var(--rp-syn-str); }
+  .f05-step1-ln .m { color:var(--rp-syn-num); }
+
+  /* the four pieces of writing */
+  .f05-step1-cards { position:absolute; left:80px; top:632px; width:1760px; height:164px; }
+  .f05-step1-card { position:absolute; top:0; width:425px; height:164px; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-step1-card .l { position:absolute; left:28px; top:26px; font:400 30px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f05-step1-card .d { position:absolute; left:28px; top:76px; width:369px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.72); }
+
+  .f05-step1-own { position:absolute; left:80px; top:830px; font:400 30px/1 "Inter"; color:var(--rp-coral); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="05-step1" data-band="bottom" data-duration="15.519" data-width="1920" data-height="1080">
+
+  <div class="clip f05-step1-bg" id="f05-step1-bg" data-start="0" data-duration="15.519" data-track-index="0"></div>
+
+  <div class="clip f05-step1-scene" id="f05-step1-scene" data-start="0" data-duration="15.519" data-track-index="1">
+
+    <div class="f05-step1-place" id="f05-step1-place">Step 1</div>
+    <div class="f05-step1-title" id="f05-step1-title">A record, then the writing</div>
+
+    <div class="f05-step1-tl" id="f05-step1-tl">track list</div>
+    <div class="f05-step1-row" id="f05-step1-row" data-artifact="the track row"><span class="n">8</span><span class="t">If You See Her, Say Hello</span></div>
+
+    <div class="f05-step1-arrow" id="f05-step1-arrow"><div class="lbl">tools/add-tracks.mjs</div></div>
+    <div class="f05-step1-shaft" id="f05-step1-shaft"></div>
+    <div class="f05-step1-head" id="f05-step1-head"><i></i></div>
+
+    <div class="f05-step1-slab" id="f05-step1-slab" data-artifact="the song record">
+      <div class="f05-step1-bar"><i style="left:20px"></i><i style="left:40px"></i><i style="left:60px"></i><span>the record</span></div>
+      <div class="f05-step1-code">
+        <div class="f05-step1-ln" id="f05-step1-c0" style="top:0">{</div>
+        <div class="f05-step1-ln" id="f05-step1-c1" style="top:44px">  <span class="k">"id"</span>: <span class="s">"if-you-see-her-say-hello"</span>,</div>
+        <div class="f05-step1-ln" id="f05-step1-c2" style="top:88px">  <span class="k">"title"</span>: <span class="s">"If You See Her, Say Hello"</span>,</div>
+        <div class="f05-step1-ln" id="f05-step1-c3" style="top:132px">  <span class="k">"album"</span>: <span class="s">"blood-on-the-tracks"</span>,</div>
+        <div class="f05-step1-ln" id="f05-step1-c4" style="top:176px">  <span class="k">"year"</span>: <span class="m">1975</span>,</div>
+        <div class="f05-step1-ln" id="f05-step1-c5" style="top:220px">  <span class="k">"by"</span>: <span class="m">null</span></div>
+        <div class="f05-step1-ln" id="f05-step1-c6" style="top:264px">}</div>
+      </div>
+    </div>
+
+    <div class="f05-step1-cards" id="f05-step1-cards">
+      <div class="f05-step1-card" id="f05-step1-k1" style="left:0"><span class="l">note</span><div class="d">one sentence of fact</div></div>
+      <div class="f05-step1-card" id="f05-step1-k2" style="left:445px"><span class="l">themes</span><div class="d">a few words: loss, love</div></div>
+      <div class="f05-step1-card" id="f05-step1-k3" style="left:890px"><span class="l">preview</span><div class="d">one sentence on what it says</div></div>
+      <div class="f05-step1-card" id="f05-step1-k4" style="left:1335px"><span class="l">summary</span><div class="d">what it is about, 45–90 words</div></div>
+    </div>
+
+    <div class="f05-step1-own" id="f05-step1-own">in our own words · never quoting the lyrics</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "05-step1";
+  var $ = function (s) { return document.getElementById("f05-step1-" + s); };
+  var pop = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at); };
+  var type = function (tl, el, at, d) {
+    tl.fromTo(el, { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: d, ease: "none" }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6.8s): the row; the arrow; the record types
+  pop(tl, $("place"), 0.05);
+  pop(tl, $("title"), 0.1);
+  pop(tl, $("tl"), 0.3);
+  pop(tl, $("row"), 0.35);
+  tl.fromTo($("shaft"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 3.3);
+  tl.fromTo($("head"), { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power3.out" }, 3.7);
+  pop(tl, $("arrow"), 3.35);
+  tl.fromTo($("slab"), { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 3.6);
+  type(tl, $("c0"), 3.9, 0.1);
+  type(tl, $("c1"), 4.0, 0.45);
+  type(tl, $("c2"), 4.45, 0.45);
+  type(tl, $("c3"), 4.9, 0.4);
+  type(tl, $("c4"), 5.3, 0.25);
+  type(tl, $("c5"), 5.55, 0.25);
+  type(tl, $("c6"), 5.8, 0.1);
+
+  // Scene 2 (6.8-15s): the four pieces of writing fill, on their names; the coral line; hold
+  pop(tl, $("k1"), 8.3);
+  pop(tl, $("k2"), 8.75);
+  pop(tl, $("k3"), 9.3);
+  pop(tl, $("k4"), 10.0);
+  tl.fromTo($("own"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 10.7);
+
+  tl.set({}, {}, 15.019);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

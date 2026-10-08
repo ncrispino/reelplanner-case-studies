@@ -1,0 +1,176 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 44 (heading), 34 (notes), 26 (labels, address, terminal), 24 (map labels) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; container-type:size; -webkit-font-smoothing:antialiased; }
+  .f05-step1-hover-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f05-step1-hover-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f05-step1-hover-anchor { position:absolute; left:80px; top:62px; display:flex; align-items:baseline; gap:18px; white-space:nowrap; }
+  .f05-step1-hover-anchor .p { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f05-step1-hover-anchor .h { font:400 44px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* the browser window: radius 14, 1px ink hairline, 36px title bar */
+  .f05-step1-hover-win { position:absolute; left:80px; top:140px; width:1200px; height:620px; box-sizing:border-box; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-slab); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-step1-hover-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); display:flex; align-items:center; padding-left:16px; gap:8px; }
+  .f05-step1-hover-dot { width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f05-step1-hover-addr { margin-left:16px; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f05-step1-hover-map { position:absolute; left:0; top:36px; width:1198px; height:582px; overflow:hidden; background:var(--rp-slab); }
+  .f05-step1-hover-map svg.f05-step1-hover-net { position:absolute; left:0; top:0; width:1198px; height:582px; }
+  .f05-step1-hover-ml { position:absolute; font:400 24px/1 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.82); white-space:nowrap; }
+
+  /* + and − in the map's corner */
+  .f05-step1-hover-zoom { position:absolute; right:24px; top:24px; display:flex; flex-direction:column; gap:10px; }
+  .f05-step1-hover-zb { width:60px; height:60px; box-sizing:border-box; border-radius:8px; border:1px solid rgba(var(--rp-slab-ink-rgb),0.4); background:var(--rp-slab-bar); color:var(--rp-slab-ink); font:400 38px/58px "Inter"; text-align:center; }
+
+  /* the hover label */
+  .f05-step1-hover-tip { position:absolute; left:462px; top:392px; padding:10px 16px; border-radius:6px; background:var(--rp-paper); border:1px solid var(--rp-coral); font:400 26px/1.2 "Inter"; color:var(--rp-ink); white-space:nowrap; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-step1-hover-tip b { font-weight:700; }
+  .f05-step1-hover-cur { position:absolute; left:0; top:0; width:30px; height:42px; }
+
+  /* the notes at the right: what the wheel does now */
+  .f05-step1-hover-note { position:absolute; left:1340px; width:500px; }
+  .f05-step1-hover-note .k { font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f05-step1-hover-note .v { margin-top:12px; font:400 34px/1.2 "Inter"; color:var(--rp-ink); }
+  .f05-step1-hover-mouse { position:absolute; left:1340px; top:170px; width:64px; height:96px; }
+  .f05-step1-hover-rule { position:absolute; left:1340px; width:500px; height:1px; background:rgba(var(--rp-ink-rgb),0.12); transform-origin:0 50%; }
+
+  /* the planned phone check line */
+  .f05-step1-hover-term { position:absolute; left:80px; top:792px; width:1760px; height:80px; box-sizing:border-box; border-radius:8px; border:1px solid rgba(var(--rp-slab-ink-rgb),0.14); background:var(--rp-slab); display:flex; align-items:center; gap:24px; padding:0 28px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-slab-ink); white-space:nowrap; font-variant-ligatures:none; }
+  .f05-step1-hover-term .c { color:var(--rp-syn-com); }
+  .f05-step1-hover-term .ok { color:rgba(var(--rp-slab-ink-rgb),0.6); }   /* planned, not run: a neutral grey ring, never a green tick */
+  .f05-step1-hover-check { display:flex; align-items:center; gap:12px; }
+  .f05-step1-hover-tag { padding:8px 16px; border-radius:6px; border:1px dashed rgba(var(--rp-slab-ink-rgb),0.6); color:var(--rp-slab-ink); }
+</style>
+
+<div id="root" data-composition-id="05-step1-hover" data-band="bottom" data-start="0" data-duration="12.331" data-width="1920" data-height="1080">
+  <div class="clip f05-step1-hover-bg" id="f05-step1-hover-bg" data-start="0" data-duration="12.331" data-track-index="0"></div>
+
+  <div class="clip f05-step1-hover-scene" id="f05-step1-hover-scene" data-start="0" data-duration="12.331" data-track-index="1">
+    <div class="f05-step1-hover-anchor" id="f05-step1-hover-anchor"><span class="p">Step 1 ·</span><span class="h">Scroll past it, hover a dot</span></div>
+
+    <div class="f05-step1-hover-win" id="f05-step1-hover-win">
+      <div class="f05-step1-hover-bar"><span class="f05-step1-hover-dot"></span><span class="f05-step1-hover-dot"></span><span class="f05-step1-hover-dot"></span><span class="f05-step1-hover-addr">/map/masters-of-war/</span></div>
+      <div class="f05-step1-hover-map" id="f05-step1-hover-map">
+        <svg class="f05-step1-hover-net" viewBox="0 0 1198 582" aria-hidden="true">
+          <g style="stroke:rgba(var(--rp-slab-ink-rgb),0.22); stroke-width:1.5; fill:none">
+            <line x1="600" y1="250" x2="522" y2="300"/>
+            <line x1="600" y1="250" x2="650" y2="196"/>
+            <line x1="600" y1="250" x2="690" y2="282"/>
+            <line x1="522" y1="300" x2="470" y2="352"/>
+            <line x1="650" y1="196" x2="742" y2="120"/>
+            <line x1="742" y1="120" x2="860" y2="96"/>
+            <line x1="470" y1="352" x2="380" y2="470"/>
+            <line x1="250" y1="160" x2="330" y2="200"/>
+            <line x1="860" y1="320" x2="960" y2="360"/>
+            <line x1="960" y1="360" x2="1030" y2="460"/>
+            <line x1="180" y1="420" x2="260" y2="470"/>
+            <line x1="700" y1="470" x2="790" y2="520"/>
+          </g>
+          <!-- the lit line: Lord Randal to A Hard Rain's a-Gonna Fall -->
+          <line id="f05-step1-hover-lit" x1="430" y1="420" x2="470" y2="352" style="stroke:var(--rp-coral); stroke-width:3"/>
+          <g>
+            <circle cx="600" cy="250" r="9" style="fill:var(--rp-slab-ink)"/>
+            <circle cx="522" cy="300" r="6" style="fill:var(--rp-syn-num)"/>
+            <circle cx="650" cy="196" r="6" style="fill:var(--rp-syn-add)"/>
+            <circle cx="690" cy="282" r="5" style="fill:var(--rp-syn-num)"/>
+            <circle cx="470" cy="352" r="6" style="fill:var(--rp-syn-num)"/>
+            <circle cx="742" cy="120" r="5" style="fill:var(--rp-syn-str)"/>
+            <circle cx="860" cy="96" r="5" style="fill:var(--rp-syn-key)"/>
+            <circle cx="380" cy="470" r="5" style="fill:var(--rp-syn-del)"/>
+            <circle cx="250" cy="160" r="5" style="fill:var(--rp-syn-str)"/>
+            <circle cx="330" cy="200" r="5" style="fill:var(--rp-syn-num)"/>
+            <circle cx="860" cy="320" r="5" style="fill:var(--rp-syn-add)"/>
+            <circle cx="960" cy="360" r="5" style="fill:var(--rp-syn-key)"/>
+            <circle cx="1030" cy="460" r="5" style="fill:var(--rp-syn-del)"/>
+            <circle cx="180" cy="420" r="5" style="fill:var(--rp-syn-add)"/>
+            <circle cx="260" cy="470" r="5" style="fill:var(--rp-syn-str)"/>
+            <circle cx="700" cy="470" r="5" style="fill:var(--rp-syn-num)"/>
+            <circle cx="790" cy="520" r="5" style="fill:var(--rp-syn-key)"/>
+            <circle cx="120" cy="90" r="4" style="fill:var(--rp-syn-num)"/>
+            <circle cx="1080" cy="200" r="4" style="fill:var(--rp-syn-str)"/>
+            <circle cx="560" cy="520" r="4" style="fill:var(--rp-syn-add)"/>
+            <circle cx="440" cy="110" r="4" style="fill:var(--rp-syn-del)"/>
+          </g>
+          <circle id="f05-step1-hover-hot" cx="430" cy="420" r="9" style="fill:var(--rp-coral)"/>
+        </svg>
+        <div class="f05-step1-hover-ml" style="left:618px;top:236px">Masters of War</div>
+        <div class="f05-step1-hover-ml" style="left:330px;top:288px">Nottamun Town</div>
+        <div class="f05-step1-hover-ml" style="left:488px;top:340px">A Hard Rain's a-Gonna Fall</div>
+
+        <div class="f05-step1-hover-zoom" id="f05-step1-hover-zoom">
+          <div class="f05-step1-hover-zb" id="f05-step1-hover-plus">+</div>
+          <div class="f05-step1-hover-zb" id="f05-step1-hover-minus">−</div>
+        </div>
+
+        <svg class="f05-step1-hover-cur" id="f05-step1-hover-cur" viewBox="0 0 30 42" aria-hidden="true">
+          <path d="M2 2 L2 34 L10 26 L16 40 L22 37 L16 24 L27 24 Z" style="fill:var(--rp-paper); stroke:var(--rp-ink); stroke-width:2; stroke-linejoin:round"/>
+        </svg>
+        <div class="f05-step1-hover-tip" id="f05-step1-hover-tip"><b>Lord Randal</b> · traditional</div>
+      </div>
+    </div>
+
+    <svg class="f05-step1-hover-mouse" id="f05-step1-hover-mouse" viewBox="0 0 64 96" aria-hidden="true">
+      <rect x="2" y="2" width="60" height="92" rx="30" style="fill:var(--rp-tile); stroke:var(--rp-ink); stroke-width:2"/>
+      <line x1="32" y1="2" x2="32" y2="38" style="stroke:var(--rp-ink); stroke-width:2"/>
+      <rect id="f05-step1-hover-wheel" x="27" y="14" width="10" height="18" rx="5" style="fill:var(--rp-ink)"/>
+    </svg>
+    <div class="f05-step1-hover-note" id="f05-step1-hover-n1" style="top:290px"><div class="k">wheel</div><div class="v">scrolls the page</div></div>
+    <div class="f05-step1-hover-rule" id="f05-step1-hover-r1" style="top:420px"></div>
+    <div class="f05-step1-hover-note" id="f05-step1-hover-n2" style="top:450px"><div class="k">ctrl + wheel</div><div class="v">zooms the map</div></div>
+    <div class="f05-step1-hover-rule" id="f05-step1-hover-r2" style="top:580px"></div>
+    <div class="f05-step1-hover-note" id="f05-step1-hover-n3" style="top:610px"><div class="k">+ · −</div><div class="v">zoom buttons</div></div>
+
+    <div class="f05-step1-hover-term" id="f05-step1-hover-term">
+      <span class="c">phone check</span>
+      <span class="f05-step1-hover-check"><span class="ok">○</span><span class="f05-step1-hover-tag">planned</span></span>
+      <span>a dot tap on /map/masters-of-war/ opens /song/nottamun-town/</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "05-step1-hover";
+  var P = "f05-step1-hover-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6.7s): the map; the wheel scrolls the page; ctrl zooms; then + and -
+  rise(tl, $("anchor"), 0.02, 10);
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, 0.1);
+  tl.fromTo($("mouse"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 0.5);
+  tl.fromTo($("wheel"), { y: 0 }, { y: 8, duration: 0.5, ease: "power1.inOut" }, 0.9);
+  tl.to($("wheel"), { y: 0, duration: 0.5, ease: "power1.inOut" }, 1.4);
+  rise(tl, $("n1"), 0.74);
+  tl.fromTo($("r1"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 3.2);
+  rise(tl, $("n2"), 3.35);
+  tl.fromTo($("r2"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 4.7);
+  rise(tl, $("n3"), 4.8);
+  tl.fromTo($("plus"), { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.45, ease: E }, 4.82);
+  tl.fromTo($("minus"), { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.45, ease: E }, 5.4);
+
+  // Scene 2 (6.7-9s): the pointer comes to Lord Randal; its label and line light
+  tl.fromTo($("cur"), { opacity: 0, x: 640, y: 120 }, { opacity: 1, x: 640, y: 120, duration: 0.3, ease: E }, 6.5);
+  tl.to($("cur"), { x: 428, y: 418, duration: 0.8, ease: "power3.inOut" }, 6.7);
+  tl.fromTo($("hot"), { opacity: 0 }, { opacity: 1, duration: 0.3, ease: E }, 7.45);
+  tl.fromTo($("lit"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 7.5);
+  tl.fromTo($("tip"), { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, 7.6);
+
+  // Scene 3 (9-12.3s): the planned phone check line; hold
+  tl.fromTo($("term"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.55, ease: E }, 8.6);
+
+  tl.set({}, {}, 12.331);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

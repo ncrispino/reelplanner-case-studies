@@ -1,0 +1,74 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f22-ending-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f22-ending-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f22-ending-rail { position:absolute; height:420px; }
+  .f22-ending-ghost { position:absolute; left:0; width:900px; height:90px; border-radius:12px; border:1px dashed rgba(var(--rp-ink-rgb),0.18); box-sizing:border-box; }
+  .f22-ending-slot { position:absolute; left:0; width:900px; height:90px; border-radius:12px; border:1px dashed rgba(var(--rp-ink-rgb),0.18); box-sizing:border-box; }
+  .f22-ending-slot[data-filled] { border:1px solid rgba(var(--rp-ink-rgb),0.12); background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f22-ending-slot .n { position:absolute; left:24px; top:30px; font:500 26px/1 "JetBrains Mono"; color:var(--rp-ink); }
+  .f22-ending-slot .t { position:absolute; left:70px; top:29px; font:500 28px/1.2 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); white-space:nowrap; }
+  /* the chosen option: left empty, the player fills it */
+  .f22-ending-slot .d { position:absolute; right:20px; top:32px; font:500 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:var(--rp-coral-deep); }
+  .f22-ending-kicker { position:absolute; font:500 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f22-ending-ask { position:absolute; font:400 52px/1.08 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); white-space:nowrap; }
+  .f22-ending-qs { position:absolute; font:400 26px/1.5 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f22-ending-w { position:relative; display:inline-block; }
+  .f22-ending-uline { position:absolute; left:0; right:0; bottom:4px; height:4px; border-radius:2px; background:var(--rp-coral); transform-origin:0 50%; }
+</style>
+
+<div id="root" data-composition-id="22-ending" data-band="bottom" data-start="0" data-duration="9" data-width="1920" data-height="1080">
+
+  <div class="clip f22-ending-bg" id="f22-ending-bg" data-start="0" data-duration="9" data-track-index="0"></div>
+
+  <div class="clip f22-ending-scene" id="f22-ending-scene" data-start="0" data-duration="9" data-track-index="1">
+  <div class="f22-ending-rail" id="f22-ending-rail" style="left:80px; top:240px; width:900px">
+    <div class="f22-ending-ghost" style="top:0px"></div>
+    <div class="f22-ending-ghost" style="top:110px"></div>
+    <div class="f22-ending-ghost" style="top:220px"></div>
+    <div class="f22-ending-ghost" style="top:330px"></div>
+    <div class="f22-ending-slot" id="f22-ending-slot-1" data-plan-step="1" data-filled style="top:0px"><span class="n">1</span><span class="t">Every track becomes a song</span><span class="d"></span></div>
+    <div class="f22-ending-slot" id="f22-ending-slot-2" data-plan-step="2" data-filled style="top:110px"><span class="n">2</span><span class="t">Players, clips and lyrics links</span><span class="d"></span></div>
+    <div class="f22-ending-slot" id="f22-ending-slot-3" data-plan-step="3" data-filled style="top:220px"><span class="n">3</span><span class="t">Connections and threads</span><span class="d"></span></div>
+    <div class="f22-ending-slot" id="f22-ending-slot-4" data-plan-step="4" data-filled style="top:330px"><span class="n">4</span><span class="t">Album pages, search, the map and the data check</span><span class="d"></span></div>
+  </div>
+  <div class="f22-ending-kicker" id="f22-ending-kicker" style="left:1044px; top:330px">The plan · 4 steps</div>
+  <div class="f22-ending-ask" id="f22-ending-ask1" style="left:1040px; top:378px">Draw on any step to leave a comment,</div>
+  <div class="f22-ending-ask" id="f22-ending-ask2" style="left:1040px; top:450px">or <span class="f22-ending-w">approve<span class="f22-ending-uline" id="f22-ending-uline"></span></span> this four-step plan.</div>
+  <div class="f22-ending-qs" id="f22-ending-qs" style="left:1044px; top:556px"><div>1 · Which tracks get a page? — recommended: all 277</div><div>2 · Other writers’ songs? — recommended: the same page</div></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "22-ending";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f22-ending-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-3.9s): the four slots fill (the player writes each choice into its .d)
+  pop(tl, $("slot-1"), 0.1);
+  pop(tl, $("slot-2"), 0.45);
+  pop(tl, $("slot-3"), 0.8);
+  pop(tl, $("slot-4"), 1.15);
+  pop(tl, $("kicker"), 1.7, 8);
+  pop(tl, $("qs"), 3.85, 8);
+  // Scene 2 (4.4-7.3s): the ask beside the rail, then hold still
+  pop(tl, $("ask1"), 4.4, 14);
+  pop(tl, $("ask2"), 5.0, 14);
+  tl.fromTo($("uline"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 5.55);
+  tl.set({}, {}, 7.317);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

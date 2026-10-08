@@ -1,0 +1,87 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f17-q2-b-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f17-q2-b-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f17-q2-b-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the browser window: radius 14, 1px ink hairline, 36px title bar with three dots and the address */
+  .f17-q2-b-win { position:absolute; left:320px; top:150px; width:1280px; height:720px; box-sizing:border-box; border-radius:14px; border:1px solid rgba(var(--rp-ink-rgb),0.55); overflow:hidden; background:var(--rp-paper); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f17-q2-b-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.14); z-index:2; }
+  .f17-q2-b-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:9999px; background:rgba(var(--rp-ink-rgb),0.28); }
+  .f17-q2-b-addr { position:absolute; left:110px; top:5px; font:400 26px/26px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; font-variant-ligatures:none; }
+  .f17-q2-b-view { position:absolute; left:0; top:36px; width:1278px; height:682px; overflow:hidden; }
+  .f17-q2-b-page { position:absolute; left:0; top:0; width:1278px; height:2860px; }
+
+  .f17-q2-b-band { position:relative; width:1278px; height:260px; }
+  .f17-q2-b-band .y { position:absolute; left:72px; top:66px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; white-space:nowrap; opacity:0.82; }
+  .f17-q2-b-band .n { position:absolute; left:68px; top:108px; font:700 72px/1 "Inter"; letter-spacing:-0.03em; text-transform:uppercase; white-space:nowrap; }
+
+  .f17-q2-b-e1 { background:color-mix(in oklab, var(--rp-coral) 60%, var(--rp-ink)); color:var(--rp-slab-ink); }
+  .f17-q2-b-e2 { background:var(--rp-paper); color:var(--rp-ink); }
+  .f17-q2-b-e3 { background-color:var(--rp-slab); background-image:repeating-radial-gradient(circle at 85% 50%, rgba(var(--rp-slab-ink-rgb),0.22) 0 10px, transparent 10px 24px); color:var(--rp-slab-ink); }
+  .f17-q2-b-e4 { background:color-mix(in oklab, var(--rp-syn-num) 45%, var(--rp-tile)); color:var(--rp-ink); }
+  .f17-q2-b-e5 { background:color-mix(in oklab, var(--rp-syn-key) 45%, var(--rp-slab)); color:var(--rp-slab-ink); }
+  .f17-q2-b-e6 { background:color-mix(in oklab, var(--rp-syn-del) 70%, var(--rp-slab)); color:var(--rp-syn-num); }
+  .f17-q2-b-e7 { background:color-mix(in oklab, var(--rp-syn-str) 40%, var(--rp-tile)); color:var(--rp-ink); }
+  .f17-q2-b-e8 { background:color-mix(in oklab, var(--rp-ink) 18%, var(--rp-tile)); color:var(--rp-ink); }
+  .f17-q2-b-e9 { background:color-mix(in oklab, var(--rp-syn-com) 55%, var(--rp-slab)); color:var(--rp-slab-ink); }
+  .f17-q2-b-e10 { background:var(--rp-tile-2); color:var(--rp-ink); }
+  .f17-q2-b-e11 { background:color-mix(in oklab, var(--rp-coral) 30%, var(--rp-slab)); color:var(--rp-slab-ink); }
+</style>
+
+<div id="root" data-composition-id="17-q2-b" data-band="bottom" data-duration="6.5" data-width="1920" data-height="1080">
+
+  <div class="clip f17-q2-b-bg" id="f17-q2-b-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f17-q2-b-scene" id="f17-q2-b-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f17-q2-b-place" id="f17-q2-b-place">If B · step 3</div>
+
+    <div class="f17-q2-b-win" id="f17-q2-b-win">
+      <div class="f17-q2-b-bar">
+        <div class="f17-q2-b-dot" style="left:16px"></div>
+        <div class="f17-q2-b-dot" style="left:34px"></div>
+        <div class="f17-q2-b-dot" style="left:52px"></div>
+        <div class="f17-q2-b-addr">/</div>
+      </div>
+      <div class="f17-q2-b-view">
+        <div class="f17-q2-b-page" id="f17-q2-b-page">
+          <div class="f17-q2-b-band f17-q2-b-e1"><div class="y">1941–1960</div><div class="n">Duluth and Hibbing</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e2"><div class="y">1961–1964</div><div class="n">Greenwich Village</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e3"><div class="y">1965–1966</div><div class="n">Going Electric</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e4"><div class="y">1967–1970</div><div class="n">Basement and Country</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e5"><div class="y">1973–1978</div><div class="n">Blood on the Tracks</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e6"><div class="y">1979–1981</div><div class="n">Gospel</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e7"><div class="y">1983–1990</div><div class="n">The &#39;80s</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e8"><div class="y">1992–1993</div><div class="n">Back to the Roots</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e9"><div class="y">1997–2012</div><div class="n">Late Renaissance</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e10"><div class="y">2015–2017</div><div class="n">The Standards</div></div>
+          <div class="f17-q2-b-band f17-q2-b-e11"><div class="y">2020–</div><div class="n">Rough and Rowdy</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "17-q2-b";
+  var $ = function (s) { return document.getElementById("f17-q2-b-" + s); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the window arrives on Hibbing; on "scroll" the page runs once, Hibbing to Rough and Rowdy, and stops; hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power3.out" }, 0.03);
+  tl.fromTo($("win"), { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.05);
+  tl.fromTo($("page"), { y: 0 }, { y: -2178, duration: 1.9, ease: "power3.inOut" }, 0.6);
+
+  tl.set({}, {}, 4.437);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

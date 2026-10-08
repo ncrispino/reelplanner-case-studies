@@ -1,0 +1,87 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 34 (chose), 30 (tree), 26 (place label, tree labels, instead of, why) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f03-d1-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f03-d1-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f03-d1-place { position:absolute; left:120px; top:180px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the file tree of data/parts/ */
+  .f03-d1-tree { position:absolute; left:120px; top:240px; width:800px; height:480px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f03-d1-row { position:absolute; left:40px; font:400 30px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:pre; font-variant-ligatures:none; }
+  .f03-d1-dim { color:rgba(var(--rp-ink-rgb),0.45); }
+  .f03-d1-hot { color:var(--rp-coral); }
+  .f03-d1-lab { position:absolute; left:116px; font:400 26px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; }
+
+  /* the off-plan card */
+  .f03-d1-card { position:absolute; left:1000px; top:240px; width:820px; height:480px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f03-d1-txt { position:absolute; left:48px; top:56px; width:724px; }
+  .f03-d1-chose { font:700 34px/1.3 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f03-d1-inst { margin-top:28px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f03-d1-why { margin-top:18px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+</style>
+
+<div id="root" data-composition-id="03-d1" data-band="bottom" data-start="0" data-duration="8.564" data-width="1920" data-height="1080">
+  <div class="clip f03-d1-bg" id="f03-d1-bg" data-start="0" data-duration="8.564" data-track-index="0"></div>
+
+  <div class="clip f03-d1-scene" id="f03-d1-scene" data-start="0" data-duration="8.564" data-track-index="1">
+    <div class="f03-d1-place" id="f03-d1-place">Step 1</div>
+
+    <div class="f03-d1-tree" id="f03-d1-tree" data-artifact="data/parts/">
+      <div class="f03-d1-row" id="f03-d1-r0" style="top:44px">data/parts/</div>
+      <div class="f03-d1-row" id="f03-d1-r1" style="top:116px"><span class="f03-d1-dim">├─ </span>basement.json</div>
+      <div class="f03-d1-row" id="f03-d1-r2" style="top:188px"><span class="f03-d1-dim">├─ </span>electric.json</div>
+      <div class="f03-d1-row" id="f03-d1-r3" style="top:260px"><span class="f03-d1-dim">├─ </span>tracks.json</div>
+      <div class="f03-d1-lab" id="f03-d1-l3" style="top:306px">the Blood on the Tracks era</div>
+      <div class="f03-d1-row" id="f03-d1-r4" style="top:378px"><span class="f03-d1-dim">└─ </span><span class="f03-d1-hot">album-tracks.json</span></div>
+      <div class="f03-d1-lab" id="f03-d1-l4" style="top:424px">271 new songs</div>
+    </div>
+
+    <div class="f03-d1-card" id="f03-d1-cd1" data-call="d1">
+      <div class="f03-d1-txt">
+        <div class="f03-d1-chose" id="f03-d1-c1">Off-plan change ·<br>the new songs in album-tracks.json</div>
+        <div class="f03-d1-inst" id="f03-d1-i1">instead of: tracks.json, as the plan named it</div>
+        <div class="f03-d1-why" id="f03-d1-w1">tracks.json is the Blood on the Tracks era</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f03-d1-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // the tree
+  rise(tl, $("place"), 0.05, 8);
+  tl.fromTo($("tree"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.06);
+  rise(tl, $("r0"), 0.2, 8);
+  rise(tl, $("r1"), 0.4, 8);
+  rise(tl, $("r2"), 0.55, 8);
+  rise(tl, $("r3"), 0.7, 8);
+
+  // the card on "change"; album-tracks.json as it is named; "not tracks"; the era label; hold
+  tl.fromTo($("cd1"), { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.7, ease: E }, 0.95);
+  rise(tl, $("c1"), 1.6);
+  rise(tl, $("r4"), 3.1, 8);
+  rise(tl, $("l4"), 3.4, 8);
+  rise(tl, $("i1"), 4.05);
+  rise(tl, $("w1"), 5.0);
+  rise(tl, $("l3"), 6.7, 8);
+
+  tl.set({}, {}, 8.064);
+  window.__timelines["03-d1"] = tl;
+})();
+</script>
+</template>

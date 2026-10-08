@@ -1,0 +1,32 @@
+---
+// Spotify (D-005) and YouTube players, embedded as the page loads (from the walkthrough review: "these should be
+// loaded already"). The browser fetches each one as it nears the screen (loading="lazy"). Each sits in a frame the
+// page's era dresses (.pl in src/themes/<era>.css).
+interface Props { spotify?: string | null; youtube?: string[] | string | null; title: string }
+const { spotify, youtube, title } = Astro.props;
+const clips = (Array.isArray(youtube) ? youtube : youtube ? [youtube] : []).filter(Boolean);
+const heading = spotify && clips.length ? "Listen and watch" : spotify ? "Listen" : "Watch";
+---
+{(spotify || clips.length > 0) && (
+  <section class="players" aria-label={heading}>
+    <h2 class="section-title">{heading}</h2>
+    {spotify && (
+      <div class="pl sp-pl">
+        <iframe class="sp" src={`https://open.spotify.com/embed/track/${spotify}?utm_source=generator`} title={`${title} on Spotify`}
+          loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    )}
+    {clips.map((id) => (
+      <div class="pl yt-pl">
+        <iframe class="yt" src={`https://www.youtube-nocookie.com/embed/${id}`} title={`${title} on YouTube`} loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+      </div>
+    ))}
+  </section>
+)}
+<style>
+  .players { display: grid; gap: 14px; margin: 18px 0; }
+  .players .section-title { margin: 14px 0 0; justify-self: start; }
+  .sp { height: 152px; border-radius: 12px; }
+  .yt { aspect-ratio: 16 / 9; background: #000; }
+</style>

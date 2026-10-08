@@ -1,0 +1,96 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 64 (title), 44 (song titles), 38 (the why), 28 (rule), 26 (labels) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f17-step3-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f17-step3-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f17-step3-place { position:absolute; left:80px; top:64px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f17-step3-title { position:absolute; left:76px; top:102px; font:400 64px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  .f17-step3-card { position:absolute; top:260px; height:230px; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f17-step3-card .h { position:absolute; left:30px; top:28px; right:30px; font:400 44px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f17-step3-card .a { position:absolute; left:30px; bottom:26px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the line between them (the one coral) */
+  .f17-step3-link { position:absolute; left:580px; top:374px; width:240px; height:3px; background:var(--rp-coral); transform-origin:0 50%; }
+  .f17-step3-ll { position:absolute; left:580px; width:240px; top:326px; text-align:center; font:400 26px/1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+
+  .f17-step3-why { position:absolute; left:80px; top:540px; width:1280px; font:italic 400 38px/1.3 "EB Garamond"; letter-spacing:-0.006em; color:var(--rp-ink); }
+
+  /* the lone card */
+  .f17-step3-lone { position:absolute; left:1440px; top:260px; width:400px; height:300px; box-sizing:border-box; border-radius:12px; background:var(--rp-paper); border:1px dashed rgba(var(--rp-ink-rgb),0.3); }
+  .f17-step3-lone .h { position:absolute; left:30px; top:28px; font:400 44px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); white-space:nowrap; }
+  .f17-step3-lone .n { position:absolute; left:30px; top:124px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f17-step3-lone .d { position:absolute; left:30px; top:170px; width:340px; font:400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.72); }
+
+  .f17-step3-hr { position:absolute; left:80px; top:740px; width:1760px; height:1px; background:rgba(var(--rp-ink-rgb),0.2); transform-origin:0 50%; }
+  .f17-step3-rule { position:absolute; left:80px; top:772px; font:400 30px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.8); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="17-step3" data-band="bottom" data-duration="14.827" data-width="1920" data-height="1080">
+
+  <div class="clip f17-step3-bg" id="f17-step3-bg" data-start="0" data-duration="14.827" data-track-index="0"></div>
+
+  <div class="clip f17-step3-scene" id="f17-step3-scene" data-start="0" data-duration="14.827" data-track-index="1">
+
+    <div class="f17-step3-place" id="f17-step3-place">Step 3</div>
+    <div class="f17-step3-title" id="f17-step3-title">Connections, only when sure</div>
+
+    <div class="f17-step3-card" id="f17-step3-ca" style="left:80px;width:500px">
+      <div class="h">If You See Her, Say Hello</div>
+      <span class="a">Blood on the Tracks</span>
+    </div>
+    <div class="f17-step3-ll" id="f17-step3-ll">same theme</div>
+    <div class="f17-step3-link" id="f17-step3-link"></div>
+    <div class="f17-step3-card" id="f17-step3-cb" style="left:820px;width:540px">
+      <div class="h">You're Gonna Make Me Lonesome When You Go</div>
+      <span class="a">Blood on the Tracks</span>
+    </div>
+
+    <div class="f17-step3-why" id="f17-step3-why" data-artifact="the connection's why">Two Blood on the Tracks songs about a love that has ended, one before the parting and one after.</div>
+
+    <div class="f17-step3-lone" id="f17-step3-lone">
+      <span class="h">Braggin'</span>
+      <span class="n">no connection</span>
+      <div class="d">none the writers are sure of</div>
+    </div>
+
+    <div class="f17-step3-hr" id="f17-step3-hr"></div>
+    <div class="f17-step3-rule" id="f17-step3-rule">a wrong connection is worse than a missing one</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "17-step3";
+  var $ = function (s) { return document.getElementById("f17-step3-" + s); };
+  var pop = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-10.4s): the pair; the line draws as one joins the other; the why
+  pop(tl, $("place"), 0.05);
+  pop(tl, $("title"), 0.1);
+  tl.fromTo($("ca"), { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.4);
+  tl.fromTo($("cb"), { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 3.3);
+  tl.fromTo($("link"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 7.5);
+  pop(tl, $("ll"), 8.0);
+  pop(tl, $("why"), 10.4);
+
+  // Scene 2 (10.4-14.8s): the lone card; the rule; hold
+  pop(tl, $("lone"), 12.7);
+  tl.fromTo($("hr"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 13.6);
+  pop(tl, $("rule"), 13.75);
+
+  tl.set({}, {}, 14.827);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

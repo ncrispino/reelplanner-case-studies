@@ -1,0 +1,32 @@
+---
+import Shell from "../layouts/Shell.astro";
+import { photos, eras, albums, songs, links } from "../lib/data";
+---
+<Shell title="About" era="roots" tab="about">
+  <p class="kicker">About</p>
+  <h1 class="display" style="font-size:clamp(34px,10vw,56px)">Bob Dylan, explored</h1>
+  <p>{eras.length} eras, {albums.length} studio albums, {songs.length} songs and {links.length} connections between them, written by hand and checked so that nothing points nowhere.</p>
+  <!-- from 1100 px two columns (plan 2026-10-07-desktop, step 6); below that the wrappers are display: contents -->
+  <div class="wide about">
+  <div class="col">
+  <h2 class="section-title">What this site does not include</h2>
+  <p>Song lyrics. They are under copyright, so each song links to its official page on bobdylan.com and says in our own words what the song is about and how it unfolds, in a sentence and then a short summary. Nothing on the site quotes the lyrics.</p>
+  <h2 class="section-title">Sources</h2>
+  <p>Album covers are loaded from the <a href="https://coverartarchive.org/">Cover Art Archive</a>; album ids and track lists come from <a href="https://musicbrainz.org/">MusicBrainz</a>. Players are Spotify's and YouTube's, embedded on each song page; some clips of moments were posted by others than Bob Dylan's official channel, and `npm run check:clips` finds any taken down.</p>
+  </div>
+  <div class="col">
+  <h2 class="section-title">Photographs</h2>
+  <ul class="list">
+    {photos.map((p) => (
+      <li><span><span>{p.caption}{String(p.caption).includes(String(p.year)) ? "" : `, ${p.year}`}</span><span class="soft"> {p.photographer} · <a href={p.source} rel="noopener">{p.licence}</a></span></span></li>
+    ))}
+  </ul>
+  </div>
+  </div>
+</Shell>
+<style>
+  @media (min-width: 1100px) {
+    .about { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .about p { max-width: 62ch; }
+  }
+</style>

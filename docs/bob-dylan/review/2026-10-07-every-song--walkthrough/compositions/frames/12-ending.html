@@ -1,0 +1,64 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 72 (the question), 26 (addresses) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f12-ending-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f12-ending-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* three small browser windows: each the real 1440 x 900 shot at 0.36 (518 x 324) under a 36 px title bar */
+  .f12-ending-win { position:absolute; top:170px; width:520px; height:362px; box-sizing:border-box; border:1px solid rgba(var(--rp-ink-rgb),0.5); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f12-ending-bar { position:absolute; left:0; top:0; width:518px; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f12-ending-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:5px; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f12-ending-addr { position:absolute; left:76px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f12-ending-win img { position:absolute; left:0; top:37px; width:518px; height:324px; display:block; }
+
+  .f12-ending-ask { position:absolute; left:120px; top:650px; width:1680px; text-align:center; font:400 72px/1.08 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="12-ending" data-band="bottom" data-duration="6" data-width="1920" data-height="1080">
+
+  <div class="clip f12-ending-bg" id="f12-ending-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+  <div class="clip f12-ending-scene" id="f12-ending-scene" data-start="0" data-duration="6" data-track-index="1">
+    <div class="f12-ending-win" id="f12-ending-w1" data-artifact="/album/blood-on-the-tracks/" style="left:120px">
+      <div class="f12-ending-bar"><i class="f12-ending-dot" style="left:14px"></i><i class="f12-ending-dot" style="left:30px"></i><i class="f12-ending-dot" style="left:46px"></i><span class="f12-ending-addr">/album/blood-on-the-tracks/</span></div>
+      <img src="assets/shots/d-album-bott.png" alt="Blood on the Tracks album page: the cover and the ten-row track list">
+    </div>
+    <div class="f12-ending-win" id="f12-ending-w2" data-artifact="/song/stardust/" style="left:700px">
+      <div class="f12-ending-bar"><i class="f12-ending-dot" style="left:14px"></i><i class="f12-ending-dot" style="left:30px"></i><i class="f12-ending-dot" style="left:46px"></i><span class="f12-ending-addr">/song/stardust/</span></div>
+      <img src="assets/shots/d-song-stardust.png" alt="Stardust song page">
+    </div>
+    <div class="f12-ending-win" id="f12-ending-w3" data-artifact="/song/billy-1/" style="left:1280px">
+      <div class="f12-ending-bar"><i class="f12-ending-dot" style="left:14px"></i><i class="f12-ending-dot" style="left:30px"></i><i class="f12-ending-dot" style="left:46px"></i><span class="f12-ending-addr">/song/billy-1/</span></div>
+      <img src="assets/shots/d-song-billy.png" alt="Billy 1 song page: Takes on the album, the words card, connections">
+    </div>
+
+    <div class="f12-ending-ask" id="f12-ending-ask">Seeing it run, anything you'd change?</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "12-ending";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f12-ending-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 10 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-3.2s): the three windows, then the question on "seeing it run"; hold still
+  pop(tl, $("w1"), 0.04, 16);
+  pop(tl, $("w2"), 0.2, 16);
+  pop(tl, $("w3"), 0.36, 16);
+  pop(tl, $("ask"), 1.5, 14);
+
+  tl.set({}, {}, 3.221);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

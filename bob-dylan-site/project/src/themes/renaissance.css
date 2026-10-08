@@ -1,0 +1,63 @@
+@import "@fontsource/oswald/latin-300.css";
+@import "@fontsource/oswald/latin-500.css";
+/* Late Renaissance, 1997–2012 — Time Out of Mind to Tempest: dusty Americana noir.
+   Sepia dark with a single amber spotlight and film grain, wide-tracked condensed capitals like a picture's
+   opening credits, photographs as frames of film with sprocket holes, a tour laminate, and case-file tabs. */
+[data-era="renaissance"] { --paper:#17120d; --ink:#eedfc1; --soft:rgba(238,223,193,.76); --line:rgba(238,223,193,.22); --accent:#d9a050;
+  --accent-ink:#17120d; --accent2:#8c3b2a; --card:#221a12;
+  --display:"Oswald","Arial Narrow",sans-serif; --display-alt:"Oswald","Arial Narrow",sans-serif; --display-weight:300;
+  --display-case:uppercase; --display-track:.1em; --display-style:normal; --display-lh:1.08;
+  --body:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --label:"Oswald","Arial Narrow",sans-serif; --label-weight:500; --label-track:.24em; --label-case:uppercase;
+  --texture:radial-gradient(640px 460px at 18% -80px, rgba(217,160,80,.2), transparent 70%) no-repeat,
+    radial-gradient(rgba(238,223,193,.05) 1px, transparent 1.3px) 0 0 / 3px 3px;
+  --stamp:"Never Ending Tour"; --dot:#c99a62; }
+
+@scope ([data-era="renaissance"]) to ([data-era]) {
+  :scope.panel { box-shadow: inset 0 0 120px rgba(0,0,0,.65); }
+  /* a laminated tour pass on a lanyard clip */
+  .stamp { top: 0; right: 22px; rotate: 6deg; }
+  .stamp::after { display: block; width: 84px; padding: 22px 8px 10px; background: linear-gradient(var(--accent2) 0 14px, #efe1c2 14px);
+    color: #17120d; font: 500 10px/1.25 "Oswald", sans-serif; letter-spacing: .16em; text-transform: uppercase; text-align: center;
+    border-radius: 3px; box-shadow: 0 8px 18px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.35); }
+  /* a frame of film: black bands with sprocket holes over the top and bottom */
+  .photo .frame { box-shadow: 0 18px 40px rgba(0,0,0,.7); }
+  .photo .frame img { filter: sepia(.7) contrast(1.15) brightness(.9); }
+  .photo .frame::after { background:
+      repeating-linear-gradient(90deg, transparent 0 9px, rgba(238,223,193,.85) 9px 19px, transparent 19px 28px) 0 6px / 100% 9px no-repeat,
+      repeating-linear-gradient(90deg, transparent 0 9px, rgba(238,223,193,.85) 9px 19px, transparent 19px 28px) 0 calc(100% - 6px) / 100% 9px no-repeat,
+      linear-gradient(#0a0806, #0a0806) 0 0 / 100% 21px no-repeat, linear-gradient(#0a0806, #0a0806) 0 100% / 100% 21px no-repeat,
+      radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(10,8,6,.65)); }
+  .years { color: var(--accent); }
+  /* opening credits: hairlines above and below */
+  :scope .etitle { font-size: clamp(36px, 10.5vw, 60px); color: var(--ink); }
+  .ehead { border-top: 1px solid var(--accent); border-bottom: 1px solid var(--accent); padding: 12px 0 14px; }
+  .display { color: var(--ink); }
+  .moments .year { color: var(--accent); }
+  /* a case-file tab */
+  .chip { background: var(--card); color: var(--accent); border: 1px solid var(--accent); border-bottom-width: 3px; padding: 8px 14px; font-size: 13px;
+    letter-spacing: .2em; }
+  .button { background: transparent; color: var(--ink); border: 1px solid var(--accent); box-shadow: inset 0 0 0 3px var(--paper), inset 0 0 0 4px rgba(217,160,80,.6);
+    font: 500 14px/1.1 "Oswald", sans-serif; letter-spacing: .2em; padding: 12px 20px; }
+  .button.accent { background: var(--accent); color: #17120d; box-shadow: inset 0 0 0 3px var(--accent), inset 0 0 0 4px #17120d; }
+  .card, :scope.card { background: radial-gradient(ellipse at 20% 0, rgba(217,160,80,.12), transparent 70%), var(--card); border: 0; border-left: 3px solid var(--accent);
+    box-shadow: 0 14px 30px rgba(0,0,0,.45); padding: 18px 20px; }
+  .section-title { color: var(--accent); font-size: 13px; letter-spacing: .3em; display: flex; align-items: center; gap: 12px; }
+  .section-title::after { content: ""; flex: 1; border-top: 1px solid rgba(217,160,80,.5); }
+  .list, .list li a, .list li > span { border-color: rgba(238,223,193,.18); }
+  /* each card a frame of film, sprockets down the left */
+  :scope.tc { background: repeating-linear-gradient(transparent 0 8px, rgba(238,223,193,.7) 8px 18px, transparent 18px 26px) 6px 0 / 9px 100% no-repeat,
+      linear-gradient(#0a0806, #0a0806) 0 0 / 21px 100% no-repeat, radial-gradient(500px 300px at 20% 0, rgba(217,160,80,.18), transparent 70%) no-repeat, var(--paper);
+    padding-left: 38px; box-shadow: inset 0 0 80px rgba(0,0,0,.6); border: 1px solid rgba(217,160,80,.3); }
+  .big { color: var(--accent); }
+  :scope .drawn { background: radial-gradient(ellipse at 30% 20%, rgba(217,160,80,.5), transparent 60%), #120e0a; color: var(--ink);
+    box-shadow: inset 0 0 0 1px rgba(217,160,80,.6), inset 0 0 0 5px #120e0a, inset 0 0 0 6px rgba(217,160,80,.4); }
+  .pl { background: #0a0806; border: 0; padding: 22px 8px; position: relative;
+    background-image: repeating-linear-gradient(90deg, transparent 0 9px, rgba(238,223,193,.75) 9px 19px, transparent 19px 28px),
+      repeating-linear-gradient(90deg, transparent 0 9px, rgba(238,223,193,.75) 9px 19px, transparent 19px 28px);
+    background-size: 100% 9px, 100% 9px; background-position: 0 6px, 0 calc(100% - 6px); background-repeat: no-repeat; }
+  .chart { border: 1px solid var(--accent); box-shadow: 0 0 0 4px var(--paper), 0 0 0 5px rgba(217,160,80,.5), 0 20px 40px rgba(0,0,0,.6); }
+  .toggle { border: 1px solid var(--accent); }
+  .toggle .on { background: var(--accent); color: #17120d; }
+  .tabbar { border-top: 1px solid var(--accent); }
+}

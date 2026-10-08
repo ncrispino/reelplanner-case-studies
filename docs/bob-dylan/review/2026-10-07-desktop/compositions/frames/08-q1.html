@@ -1,0 +1,116 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 76 (heading), 46 (option names), 26 (eyebrow, keys, trade-offs) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f08-q1-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f08-q1-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f08-q1-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f08-q1-q { position:absolute; left:90px; top:150px; width:1740px; font:400 76px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  .f08-q1-opt { position:absolute; box-sizing:border-box; top:300px; width:540px; height:470px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f08-q1-opt .k { position:absolute; left:32px; top:30px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f08-q1-opt .l { position:absolute; left:32px; top:76px; width:476px; font:400 46px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f08-q1-opt .t { position:absolute; left:32px; top:398px; width:490px; font:400 26px/1.2 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); white-space:nowrap; }
+
+  /* the tiny wireframe: a window, the era's look in its margins, the content columns */
+  .f08-q1-wf { position:absolute; left:32px; top:200px; width:476px; height:176px; box-sizing:border-box; border:1px solid rgba(var(--rp-ink-rgb),0.4); border-radius:8px; overflow:hidden; background:var(--rp-paper); }
+  .f08-q1-wf .bar { position:absolute; left:0; top:0; width:474px; height:16px; background:var(--rp-tile-2); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f08-q1-wf .dot { position:absolute; top:5px; width:6px; height:6px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.35); }
+  .f08-q1-wf .era { position:absolute; top:17px; bottom:0; background:repeating-radial-gradient(circle at 50% 45%, rgba(var(--rp-slab-ink-rgb),0.22) 0 3px, rgba(var(--rp-slab-ink-rgb),0) 3px 9px), var(--rp-slab); }
+  .f08-q1-wf .col { position:absolute; top:28px; bottom:10px; box-sizing:border-box; padding:10px 10px 0; border-radius:4px; border:1px solid rgba(var(--rp-ink-rgb),0.22); background:rgba(var(--rp-ink-rgb),0.06); font:700 21px/1.15 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); }
+  .f08-q1-wf .col.map { background:rgba(var(--rp-ink-rgb),0.12); }
+
+  .f08-q1-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:13px; }
+  .f08-q1-rec { color:var(--rp-coral-deep); }
+</style>
+
+<div id="root" data-composition-id="08-q1" data-band="bottom" data-duration="16.308" data-width="1920" data-height="1080">
+
+  <div class="clip f08-q1-bg" id="f08-q1-bg" data-start="0" data-duration="16.308" data-track-index="0"></div>
+
+  <div class="clip f08-q1-scene" id="f08-q1-scene" data-start="0" data-duration="16.308" data-track-index="1">
+    <div class="f08-q1-place" id="f08-q1-place">Question 1 · step 2</div>
+    <div class="f08-q1-q" id="f08-q1-q" data-question>How wide should the content go on a computer?</div>
+
+    <!-- A: 1440 window, 1200 content in two columns, 120 of the era's look each side (scale 0.33) -->
+    <div class="f08-q1-opt" id="f08-q1-opt-a" data-option="a" style="left:90px">
+      <div class="f08-q1-ring" id="f08-q1-ring"></div>
+      <span class="k">A<span class="f08-q1-rec" id="f08-q1-rec"> · RECOMMENDED</span></span>
+      <div class="l">Up to 1200 px, two columns</div>
+      <div class="f08-q1-wf">
+        <div class="bar"><span class="dot" style="left:8px"></span><span class="dot" style="left:18px"></span><span class="dot" style="left:28px"></span></div>
+        <div class="era" style="left:0; width:40px"></div>
+        <div class="era" style="right:0; width:40px"></div>
+        <div class="col" style="left:52px; width:150px">cover ·<br>players</div>
+        <div class="col" style="left:212px; width:210px">words ·<br>connections</div>
+      </div>
+      <div class="t">cover left, words right</div>
+    </div>
+
+    <!-- B: 1920 window, 1600 content in three columns (scale 0.25) -->
+    <div class="f08-q1-opt" id="f08-q1-opt-b" data-option="b" style="left:690px">
+      <span class="k">B</span>
+      <div class="l">Up to 1600 px, three columns</div>
+      <div class="f08-q1-wf">
+        <div class="bar"><span class="dot" style="left:8px"></span><span class="dot" style="left:18px"></span><span class="dot" style="left:28px"></span></div>
+        <div class="era" style="left:0; width:40px"></div>
+        <div class="era" style="right:0; width:40px"></div>
+        <div class="col" style="left:50px; width:112px">cover · players</div>
+        <div class="col" style="left:170px; width:146px">words · connec&shy;tions</div>
+        <div class="col map" style="left:324px; width:104px">the song's map</div>
+      </div>
+      <div class="t">a map column; harder to read</div>
+    </div>
+
+    <!-- C: 1440 window, the 720 column in the middle, the margins painted (scale 0.33) -->
+    <div class="f08-q1-opt" id="f08-q1-opt-c" data-option="c" style="left:1290px">
+      <span class="k">C</span>
+      <div class="l">Keep the 720 px column</div>
+      <div class="f08-q1-wf">
+        <div class="bar"><span class="dot" style="left:8px"></span><span class="dot" style="left:18px"></span><span class="dot" style="left:28px"></span></div>
+        <div class="era" style="left:0; width:118px"></div>
+        <div class="era" style="right:0; width:118px"></div>
+        <div class="col" style="left:130px; width:214px">today's page</div>
+      </div>
+      <div class="t">cheapest; pages stay tall</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "08-q1";
+  var DUR = 15.808;
+  var $ = function (s) { return document.getElementById("f08-q1-" + s); };
+  var slideUp = function (tl, el, at) {
+    tl.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: eyebrow and heading ("Question one: how wide..."), then card A on "A, up to 1200"
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+  tl.fromTo($("q"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.2);
+  slideUp(tl, $("opt-a"), 2.65);
+
+  // Scene 2: card B on "B, up to 1600"
+  slideUp(tl, $("opt-b"), 5.45);
+
+  // Scene 3: card C on "C, keep the 720"
+  slideUp(tl, $("opt-c"), 9.35);
+
+  // Scene 4: on "I recommend A", A gets the coral border and RECOMMENDED; then hold still
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power3.out" }, 14.8);
+  tl.fromTo($("rec"), { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power3.out" }, 14.95);
+
+  tl.set({}, {}, DUR);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

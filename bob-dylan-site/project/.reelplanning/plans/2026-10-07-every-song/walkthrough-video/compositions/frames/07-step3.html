@@ -1,0 +1,101 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 80 (counter figure), 56 (title), 26 (place label, addresses, counter unit + note) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f07-step3-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f07-step3-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f07-step3-head { position:absolute; left:80px; top:62px; display:flex; align-items:baseline; gap:24px; white-space:nowrap; }
+  .f07-step3-place { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f07-step3-title { font:400 56px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* browser windows: the real screenshots at 1, cropped */
+  .f07-step3-win { position:absolute; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f07-step3-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f07-step3-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f07-step3-addr { position:absolute; left:90px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f07-step3-view { position:absolute; left:0; top:37px; right:0; bottom:0; overflow:hidden; }
+  .f07-step3-view img { position:absolute; width:1440px; height:900px; display:block; }
+
+  /* left: /song/if-you-see-her-say-hello/, crop x 110-920, y 330-900 */
+  .f07-step3-w1 { left:80px; top:160px; width:810px; height:607px; }
+  /* the Connections card: screenshot x 528-913, y 591-847 -> view x 418-803, y 261-517 */
+  .f07-step3-ring { position:absolute; left:408px; top:251px; width:398px; height:276px; box-sizing:border-box; border:2px solid var(--rp-coral); border-radius:8px; }
+
+  /* right: /thread/loss/, paged to card 11, crop x 140-1040, y 90-780 */
+  .f07-step3-w2 { left:940px; top:160px; width:900px; height:727px; }
+  /* card 11, "If You See Her, Say Hello": screenshot x 732-1013, y 282-688 -> view x 592-873, y 192-598 */
+  .f07-step3-mark { position:absolute; left:586px; top:186px; width:294px; height:418px; box-sizing:border-box; border:1.5px solid var(--rp-ink); border-radius:6px; }
+
+  /* the counter, under the song page */
+  .f07-step3-count { position:absolute; left:84px; top:792px; display:flex; align-items:baseline; gap:16px; white-space:nowrap; }
+  .f07-step3-fig { font:400 80px/1 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); }
+  .f07-step3-unit { font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); }
+  .f07-step3-was { font:400 26px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+</style>
+
+<div id="root" data-composition-id="07-step3" data-band="bottom" data-start="0" data-duration="11.029" data-width="1920" data-height="1080">
+  <div class="clip f07-step3-bg" id="f07-step3-bg" data-start="0" data-duration="11.029" data-track-index="0"></div>
+
+  <div class="clip f07-step3-scene" id="f07-step3-scene" data-start="0" data-duration="11.029" data-track-index="1">
+    <div class="f07-step3-head" id="f07-step3-head"><span class="f07-step3-place">Step 3</span><span class="f07-step3-title">Connections and threads</span></div>
+
+    <div class="f07-step3-win f07-step3-w1" id="f07-step3-w1" data-artifact="/song/if-you-see-her-say-hello/">
+      <div class="f07-step3-bar">
+        <span class="f07-step3-dot" style="left:16px"></span><span class="f07-step3-dot" style="left:34px"></span><span class="f07-step3-dot" style="left:52px"></span>
+        <span class="f07-step3-addr">/song/if-you-see-her-say-hello/</span>
+      </div>
+      <div class="f07-step3-view">
+        <img src="assets/shots/d-song-ifyousee.png" alt="If You See Her, Say Hello: its Connections card, same theme as Girl from the North Country" style="left:-110px; top:-330px">
+        <i class="f07-step3-ring" id="f07-step3-ring"></i>
+      </div>
+    </div>
+
+    <div class="f07-step3-win f07-step3-w2" id="f07-step3-w2" data-artifact="/thread/loss/">
+      <div class="f07-step3-bar">
+        <span class="f07-step3-dot" style="left:16px"></span><span class="f07-step3-dot" style="left:34px"></span><span class="f07-step3-dot" style="left:52px"></span>
+        <span class="f07-step3-addr">/thread/loss/</span>
+      </div>
+      <div class="f07-step3-view">
+        <img src="assets/shots/d-thread-loss.png" alt="The Love gone wrong thread, cards 9 to 12: If You See Her, Say Hello is card 11 of 13" style="left:-140px; top:-90px">
+        <i class="f07-step3-mark" id="f07-step3-mark"></i>
+      </div>
+    </div>
+
+    <div class="f07-step3-count" id="f07-step3-count"><span class="f07-step3-fig">165</span><span class="f07-step3-unit">connections</span><span class="f07-step3-was">up from 135</span></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "07-step3";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f07-step3-" + s); };
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8.9s): the song page; its connection card ringed on "connections", again on "Girl from the North Country"
+  rise(tl, $("head"), 0.05, 10);
+  push(tl, $("w1"), 0.15);
+  tl.fromTo($("ring"), { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, 1.5);
+  tl.fromTo($("ring"), { scale: 1 }, { scale: 1.03, duration: 0.3, ease: "power3.out" }, 7.2);
+  tl.to($("ring"), { scale: 1, duration: 0.4, ease: "power3.inOut" }, 7.5);
+
+  // Scene 2 (8.9-11s): the thread; the counter; hold
+  push(tl, $("w2"), 8.85);                                  // "joins the love gone wrong thread"
+  tl.fromTo($("mark"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 9.6);
+  rise(tl, $("count"), 9.75);
+
+  tl.set({}, {}, 11.029);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

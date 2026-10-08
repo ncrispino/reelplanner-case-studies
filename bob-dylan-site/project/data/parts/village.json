@@ -1,0 +1,776 @@
+{
+  "eras": [
+    {
+      "id": "hibbing",
+      "title": "Duluth and Hibbing",
+      "years": [
+        1941,
+        1960
+      ],
+      "theme": "hibbing",
+      "summary": "Robert Allen Zimmerman was born in Duluth and grew up in the iron-mining town of Hibbing, Minnesota, where he played rock and roll in high-school bands. At the University of Minnesota in Minneapolis he found folk music and Woody Guthrie and began calling himself Bob Dylan.",
+      "albums": [],
+      "moments": [
+        "born-in-duluth",
+        "move-to-hibbing",
+        "hibbing-high-graduation",
+        "university-of-minnesota"
+      ],
+      "photos": []
+    },
+    {
+      "id": "village",
+      "title": "Greenwich Village",
+      "years": [
+        1961,
+        1964
+      ],
+      "theme": "village",
+      "summary": "Arriving in New York in the winter of 1961, Dylan worked the coffeehouses of Greenwich Village and within a year was signed to Columbia Records. His topical songs made him the voice of the folk revival and the civil-rights movement, until he began turning inward on Another Side.",
+      "albums": [
+        "bob-dylan",
+        "freewheelin",
+        "times-they-are-a-changin",
+        "another-side"
+      ],
+      "moments": [
+        "arrives-in-new-york",
+        "shelton-review",
+        "newport-1963",
+        "march-on-washington"
+      ],
+      "photos": []
+    }
+  ],
+  "moments": [
+    {
+      "id": "born-in-duluth",
+      "year": 1941,
+      "title": "Born in Duluth, Minnesota",
+      "text": "Robert Allen Zimmerman was born on May 24, 1941, in Duluth, Minnesota, to Abram and Beatty Zimmerman.",
+      "era": "hibbing",
+      "youtube": null
+    },
+    {
+      "id": "move-to-hibbing",
+      "year": 1947,
+      "title": "Family moves to Hibbing",
+      "text": "After his father fell ill with polio, the family moved to Hibbing, an iron-range mining town where Beatty's family lived.",
+      "era": "hibbing",
+      "youtube": null
+    },
+    {
+      "id": "hibbing-high-graduation",
+      "year": 1959,
+      "title": "Graduates from Hibbing High School",
+      "text": "After years of playing rock and roll in school bands, he graduated from Hibbing High School in 1959.",
+      "era": "hibbing",
+      "youtube": null
+    },
+    {
+      "id": "university-of-minnesota",
+      "year": 1959,
+      "title": "University of Minnesota and Dinkytown",
+      "text": "He enrolled at the University of Minnesota in Minneapolis, where he immersed himself in the Dinkytown folk scene and began performing as Bob Dylan.",
+      "era": "hibbing",
+      "youtube": null
+    },
+    {
+      "id": "arrives-in-new-york",
+      "year": 1961,
+      "title": "Arrives in New York and visits Woody Guthrie",
+      "text": "Dylan reached New York in January 1961 and soon visited his hero Woody Guthrie, hospitalized with Huntington's disease in New Jersey, while playing Greenwich Village coffeehouses.",
+      "era": "village",
+      "youtube": null
+    },
+    {
+      "id": "shelton-review",
+      "year": 1961,
+      "title": "New York Times review and Columbia contract",
+      "text": "Robert Shelton's glowing New York Times review of Dylan's show at Gerde's Folk City appeared in September 1961, and John Hammond signed him to Columbia Records soon after.",
+      "era": "village",
+      "youtube": null
+    },
+    {
+      "id": "newport-1963",
+      "year": 1963,
+      "title": "Newport Folk Festival 1963",
+      "text": "At his first Newport Folk Festival in July 1963 Dylan sang with Joan Baez, and the festival closed with performers joining hands for \"Blowin' in the Wind\" and \"We Shall Overcome\".",
+      "era": "village",
+      "youtube": null
+    },
+    {
+      "id": "march-on-washington",
+      "year": 1963,
+      "title": "March on Washington",
+      "text": "On August 28, 1963, Dylan performed at the March on Washington for Jobs and Freedom, including \"Only a Pawn in Their Game\".",
+      "era": "village",
+      "youtube": null
+    }
+  ],
+  "albums": [
+    {
+      "id": "bob-dylan",
+      "title": "Bob Dylan",
+      "year": 1962,
+      "era": "village",
+      "why": "His debut, produced by John Hammond and cut in a handful of sessions in November 1961, is mostly folk and blues standards with just two originals. It sold poorly but caught the raw energy of his early club sets.",
+      "songs": [
+        "talkin-new-york",
+        "house-of-the-risin-sun",
+        "song-to-woody"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "freewheelin",
+      "title": "The Freewheelin' Bob Dylan",
+      "year": 1963,
+      "era": "village",
+      "why": "His second album was made almost entirely of his own songs, and it turned a promising folk interpreter into the most talked-about songwriter of his generation. It holds protest anthems, apocalyptic visions and tender love songs side by side, under the famous cover photo of Dylan and Suze Rotolo on a snowy Greenwich Village street.",
+      "songs": [
+        "blowin-in-the-wind",
+        "girl-from-the-north-country",
+        "masters-of-war",
+        "a-hard-rains-a-gonna-fall",
+        "dont-think-twice-its-all-right",
+        "bob-dylans-dream",
+        "oxford-town"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "times-they-are-a-changin",
+      "title": "The Times They Are a-Changin'",
+      "year": 1964,
+      "era": "village",
+      "why": "His first album of entirely original songs is his most starkly topical, with ballads of poverty, racist murder and unjust courts. Its title song became an anthem of the 1960s, and its closing farewell already hints that he was ready to move on.",
+      "songs": [
+        "the-times-they-are-a-changin",
+        "ballad-of-hollis-brown",
+        "with-god-on-our-side",
+        "only-a-pawn-in-their-game",
+        "boots-of-spanish-leather",
+        "when-the-ship-comes-in",
+        "the-lonesome-death-of-hattie-carroll",
+        "restless-farewell"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "another-side",
+      "title": "Another Side of Bob Dylan",
+      "year": 1964,
+      "era": "village",
+      "why": "Recorded in a single night session in June 1964, it trades topical protest for personal, playful and searching songs. It marked his break from the role of folk spokesman.",
+      "songs": [
+        "chimes-of-freedom",
+        "my-back-pages",
+        "it-aint-me-babe"
+      ],
+      "landmark": false,
+      "cover": null
+    }
+  ],
+  "songs": [
+    {
+      "id": "talkin-new-york",
+      "title": "Talkin' New York",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "One of only two original songs on his debut album, it is a talking blues about his first days in the city.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/talkin-new-york/",
+      "preview": "A newcomer's wry account of arriving in a cold, crowded city and scraping for gigs in the folk clubs.",
+      "excerpt": null
+    },
+    {
+      "id": "house-of-the-risin-sun",
+      "title": "House of the Risin' Sun",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "Dylan's recording of the traditional song used an arrangement he learned from Dave Van Ronk.",
+      "themes": [
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/house-risin-sun/",
+      "preview": "A ruined life looks back on a house of sin in New Orleans and warns others not to follow.",
+      "excerpt": null
+    },
+    {
+      "id": "song-to-woody",
+      "title": "Song to Woody",
+      "year": 1962,
+      "album": "bob-dylan",
+      "by": null,
+      "note": "Written in 1961 as a tribute to Woody Guthrie, it is one of the two originals on his debut album.",
+      "themes": [
+        "the road",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/song-woody/",
+      "preview": "A young singer salutes his ailing hero and the hard-traveling people Guthrie sang about.",
+      "excerpt": null
+    },
+    {
+      "id": "blowin-in-the-wind",
+      "title": "Blowin' in the Wind",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "Its melody adapts the spiritual \"No More Auction Block\", and it became a civil-rights anthem.",
+      "themes": [
+        "protest",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/blowin-wind/",
+      "preview": "A string of unanswerable questions about war, freedom and indifference, with the answers left drifting in the air.",
+      "excerpt": null
+    },
+    {
+      "id": "girl-from-the-north-country",
+      "title": "Girl from the North Country",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "He wrote it after his first trip to England, drawing on the \"Scarborough Fair\" arrangement he learned from Martin Carthy.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/girl-north-country/",
+      "preview": "A traveler asks for news of a lost love living far north and hopes she is well cared for.",
+      "excerpt": null
+    },
+    {
+      "id": "masters-of-war",
+      "title": "Masters of War",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "It sets a furious attack on arms makers to the tune of the traditional \"Nottamun Town\".",
+      "themes": [
+        "protest",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/masters-war-mono/",
+      "preview": "A bitter denunciation of the people who build weapons and profit from wars they never fight.",
+      "excerpt": null
+    },
+    {
+      "id": "a-hard-rains-a-gonna-fall",
+      "title": "A Hard Rain's a-Gonna Fall",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "Dylan premiered it in 1962, and it borrows its question-and-answer frame from the old ballad \"Lord Randal\".",
+      "themes": [
+        "protest",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/hard-rains-gonna-fall/",
+      "preview": "A young traveler returns with a torrent of nightmarish images and vows to keep telling what he saw.",
+      "excerpt": null
+    },
+    {
+      "id": "dont-think-twice-its-all-right",
+      "title": "Don't Think Twice, It's All Right",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "A finger-picked breakup song, it became a hit for Peter, Paul and Mary in 1963.",
+      "themes": [
+        "love",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/dont-think-twice-its-all-right/",
+      "preview": "A man leaving a failed love tells her, with a mix of hurt and shrugging pride, not to dwell on it.",
+      "excerpt": null
+    },
+    {
+      "id": "bob-dylans-dream",
+      "title": "Bob Dylan's Dream",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "Its melody comes from the ballad \"Lord Franklin\", which he learned from Martin Carthy in London.",
+      "themes": [
+        "time",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/bob-dylans-dream/",
+      "preview": "A dreamer longs for the lost days of youthful friendship before the world got complicated.",
+      "excerpt": null
+    },
+    {
+      "id": "oxford-town",
+      "title": "Oxford Town",
+      "year": 1963,
+      "album": "freewheelin",
+      "by": null,
+      "note": "It is about the violence that met James Meredith when he enrolled at the University of Mississippi in 1962.",
+      "themes": [
+        "protest",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/oxford-town/",
+      "preview": "A brisk, ironic look at a Southern town erupting in violence over one Black student's right to attend college.",
+      "excerpt": null
+    },
+    {
+      "id": "the-times-they-are-a-changin",
+      "title": "The Times They Are a-Changin'",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "Written in 1963 as a deliberate anthem, it became one of the defining songs of the 1960s.",
+      "themes": [
+        "protest",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/times-they-are-changin/",
+      "preview": "A warning to politicians, critics and parents that a new generation is coming and the old order is giving way.",
+      "excerpt": null
+    },
+    {
+      "id": "ballad-of-hollis-brown",
+      "title": "Ballad of Hollis Brown",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "A grim ballad of rural poverty, it tells of a South Dakota farmer driven to despair.",
+      "themes": [
+        "death",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/ballad-hollis-brown/",
+      "preview": "A starving farmer with no way out reaches a desperate and terrible end.",
+      "excerpt": null
+    },
+    {
+      "id": "with-god-on-our-side",
+      "title": "With God on Our Side",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "Its melody follows Dominic Behan's \"The Patriot Game\".",
+      "themes": [
+        "war",
+        "faith",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/god-our-side/",
+      "preview": "A survey of American wars questions the habit of claiming divine approval for every killing.",
+      "excerpt": null
+    },
+    {
+      "id": "only-a-pawn-in-their-game",
+      "title": "Only a Pawn in Their Game",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "Written about the 1963 murder of Medgar Evers, Dylan sang it at the March on Washington.",
+      "themes": [
+        "protest",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/only-pawn-their-game/",
+      "preview": "It argues that the man who killed a civil-rights leader was a tool of politicians who stoke racial hatred.",
+      "excerpt": null
+    },
+    {
+      "id": "boots-of-spanish-leather",
+      "title": "Boots of Spanish Leather",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "It is written as an exchange of letters between a man and a woman who has sailed away.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/boots-spanish-leather/",
+      "preview": "A lover offers gifts across the ocean and slowly realizes the one who left is not coming back.",
+      "excerpt": null
+    },
+    {
+      "id": "when-the-ship-comes-in",
+      "title": "When the Ship Comes In",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "Dylan sang it at the March on Washington in 1963.",
+      "themes": [
+        "protest",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/when-ship-comes/",
+      "preview": "A prophecy of a day of reckoning when the oppressed rise and their enemies are swept aside.",
+      "excerpt": null
+    },
+    {
+      "id": "the-lonesome-death-of-hattie-carroll",
+      "title": "The Lonesome Death of Hattie Carroll",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "It recounts the 1963 killing of Hattie Carroll, a Black barmaid, by William Zantzinger, who received a six-month sentence.",
+      "themes": [
+        "protest",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/lonesome-death-hattie-carroll/",
+      "preview": "A cool, exact account of a wealthy man's killing of a hotel worker and the light sentence that followed.",
+      "excerpt": null
+    },
+    {
+      "id": "restless-farewell",
+      "title": "Restless Farewell",
+      "year": 1964,
+      "album": "times-they-are-a-changin",
+      "by": null,
+      "note": "Its tune is based on the traditional Irish song \"The Parting Glass\".",
+      "themes": [
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/restless-farewell/",
+      "preview": "The singer takes leave of old friends, quarrels and critics, determined to move on on his own terms.",
+      "excerpt": null
+    },
+    {
+      "id": "chimes-of-freedom",
+      "title": "Chimes of Freedom",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "A long visionary song, it was covered by The Byrds on their 1965 debut album.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/chimes-freedom/",
+      "preview": "Sheltering from a storm, two people imagine the storm tolling for every outcast and underdog in the world.",
+      "excerpt": null
+    },
+    {
+      "id": "my-back-pages",
+      "title": "My Back Pages",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "Widely heard as his farewell to protest songwriting, it was later a hit cover for The Byrds.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/my-back-pages/",
+      "preview": "The singer looks back on his own preachy certainties and finds that shedding them has renewed him.",
+      "excerpt": null
+    },
+    {
+      "id": "it-aint-me-babe",
+      "title": "It Ain't Me Babe",
+      "year": 1964,
+      "album": "another-side",
+      "by": null,
+      "note": "It was a 1965 hit for The Turtles and became a duet favorite of Johnny Cash and June Carter.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/it-aint-me-babe/",
+      "preview": "A man gently but firmly tells a woman he is not the perfect, devoted partner she is looking for.",
+      "excerpt": null
+    },
+    {
+      "id": "1913-massacre",
+      "title": "1913 Massacre",
+      "year": 1941,
+      "album": null,
+      "by": "Woody Guthrie",
+      "note": "Guthrie's ballad tells of the Italian Hall disaster in Calumet, Michigan, where dozens of striking miners' children died in a stampede.",
+      "themes": [
+        "death",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "no-more-auction-block",
+      "title": "No More Auction Block",
+      "year": null,
+      "album": null,
+      "by": "traditional",
+      "note": "A spiritual sung by formerly enslaved people, it was in Dylan's early repertoire.",
+      "themes": [
+        "freedom",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "nottamun-town",
+      "title": "Nottamun Town",
+      "year": null,
+      "album": null,
+      "by": "traditional",
+      "note": "An English-derived folk song of topsy-turvy riddles, popularized in the folk revival by Jean Ritchie.",
+      "themes": [],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "scarborough-fair",
+      "title": "Scarborough Fair",
+      "year": null,
+      "album": null,
+      "by": "traditional",
+      "note": "An English ballad of impossible tasks set for a former lover, which Martin Carthy taught Dylan in London.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "lord-franklin",
+      "title": "Lord Franklin",
+      "year": null,
+      "album": null,
+      "by": "traditional",
+      "note": "A ballad lamenting Sir John Franklin's lost Arctic expedition, sung in the voice of his widow.",
+      "themes": [
+        "death",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "lord-randal",
+      "title": "Lord Randal",
+      "year": null,
+      "album": null,
+      "by": "traditional",
+      "note": "An old Child ballad in which a mother questions her son, who has been poisoned.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "the-patriot-game",
+      "title": "The Patriot Game",
+      "year": 1957,
+      "album": null,
+      "by": "Dominic Behan",
+      "note": "Behan's song about a young IRA volunteer killed in a 1957 raid.",
+      "themes": [
+        "war",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "the-parting-glass",
+      "title": "The Parting Glass",
+      "year": null,
+      "album": null,
+      "by": "traditional",
+      "note": "A traditional Scottish and Irish song of farewell sung at the end of a gathering.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "blowin-in-the-wind-peter-paul-and-mary",
+      "title": "Blowin' in the Wind",
+      "year": 1963,
+      "album": null,
+      "by": "Peter, Paul and Mary",
+      "note": "The trio's 1963 single was a major hit that carried Dylan's song to a mass audience.",
+      "themes": [
+        "protest",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "my-back-pages-the-byrds",
+      "title": "My Back Pages",
+      "year": 1967,
+      "album": null,
+      "by": "The Byrds",
+      "note": "The Byrds recorded it for their 1967 album Younger Than Yesterday.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "song-to-woody",
+      "to": "1913-massacre",
+      "kind": "borrowed-tune",
+      "why": "Dylan set his tribute to Woody Guthrie to the melody of Guthrie's own \"1913 Massacre\"."
+    },
+    {
+      "from": "blowin-in-the-wind",
+      "to": "no-more-auction-block",
+      "kind": "borrowed-tune",
+      "why": "Dylan acknowledged that the melody of Blowin' in the Wind came from the spiritual No More Auction Block."
+    },
+    {
+      "from": "blowin-in-the-wind",
+      "to": "blowin-in-the-wind-peter-paul-and-mary",
+      "kind": "covered-by",
+      "why": "Peter, Paul and Mary's 1963 single turned the song into a hit weeks after Freewheelin' came out."
+    },
+    {
+      "from": "masters-of-war",
+      "to": "nottamun-town",
+      "kind": "borrowed-tune",
+      "why": "Masters of War uses the melody of Nottamun Town as arranged by Jean Ritchie."
+    },
+    {
+      "from": "girl-from-the-north-country",
+      "to": "scarborough-fair",
+      "kind": "borrowed-tune",
+      "why": "Dylan drew the song's melody from the Scarborough Fair arrangement Martin Carthy taught him in London in late 1962."
+    },
+    {
+      "from": "bob-dylans-dream",
+      "to": "lord-franklin",
+      "kind": "borrowed-tune",
+      "why": "The song is set to the tune of Lord Franklin, which Dylan heard from Martin Carthy in London."
+    },
+    {
+      "from": "a-hard-rains-a-gonna-fall",
+      "to": "lord-randal",
+      "kind": "borrowed-tune",
+      "why": "Its structure of a parent's questions and a son's replies follows the ballad Lord Randal."
+    },
+    {
+      "from": "with-god-on-our-side",
+      "to": "the-patriot-game",
+      "kind": "borrowed-tune",
+      "why": "Dylan took the melody of With God on Our Side from Dominic Behan's The Patriot Game."
+    },
+    {
+      "from": "restless-farewell",
+      "to": "the-parting-glass",
+      "kind": "borrowed-tune",
+      "why": "Restless Farewell is set to the tune of the traditional farewell song The Parting Glass."
+    },
+    {
+      "from": "the-times-they-are-a-changin",
+      "to": "blowin-in-the-wind",
+      "kind": "same-theme",
+      "why": "Both were written as broad anthems for the movements of the early 1960s rather than about a single event."
+    },
+    {
+      "from": "only-a-pawn-in-their-game",
+      "to": "the-lonesome-death-of-hattie-carroll",
+      "kind": "same-theme",
+      "why": "Both songs recount 1963 racist killings and point at the system behind the killer."
+    },
+    {
+      "from": "boots-of-spanish-leather",
+      "to": "girl-from-the-north-country",
+      "kind": "same-theme",
+      "why": "Both are songs of longing for a lover who is far away, written around Dylan's separation from Suze Rotolo."
+    },
+    {
+      "from": "my-back-pages",
+      "to": "my-back-pages-the-byrds",
+      "kind": "covered-by",
+      "why": "The Byrds' 1967 version became one of the best-known covers of the song."
+    }
+  ]
+}

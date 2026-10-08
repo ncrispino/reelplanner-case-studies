@@ -1,0 +1,112 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 32 (block names), 30 (margin label), 26 (eyebrow, address, measures) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f11-q1-c-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f11-q1-c-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f11-q1-c-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* measures above the window: 360 | 720 | 360 */
+  .f11-q1-c-dims { position:absolute; left:240px; top:146px; width:1440px; height:44px; }
+  .f11-q1-c-dims svg { position:absolute; left:0; top:0; width:1440px; height:44px; overflow:visible; }
+  .f11-q1-c-dim { position:absolute; top:0; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); white-space:nowrap; text-align:center; }
+
+  /* the window: a 1440 px window drawn at 1:1 width, the thin browser frame */
+  .f11-q1-c-win { position:absolute; left:240px; top:200px; width:1440px; height:660px; box-sizing:border-box; border:1px solid rgba(var(--rp-ink-rgb),0.5); border-radius:14px; overflow:hidden; background:var(--rp-paper); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f11-q1-c-bar { position:absolute; left:0; top:0; width:1438px; height:36px; box-sizing:border-box; background:var(--rp-tile-2); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.16); }
+  .f11-q1-c-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.3); }
+  .f11-q1-c-addr { position:absolute; left:80px; top:0; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f11-q1-c-era { position:absolute; top:36px; width:360px; height:624px; background:repeating-radial-gradient(circle at 50% 40%, rgba(var(--rp-slab-ink-rgb),0.2) 0 6px, rgba(var(--rp-slab-ink-rgb),0) 6px 20px), var(--rp-slab); }
+
+  .f11-q1-c-col { position:absolute; left:0; top:0; width:1440px; height:660px; }
+  .f11-q1-c-eralab { position:absolute; left:70px; top:268px; width:220px; box-sizing:border-box; padding:12px 0; border-radius:6px; background:var(--rp-slab); text-align:center; font:400 30px/1 "Inter"; color:var(--rp-slab-ink); white-space:nowrap; }
+
+  /* the song page's real words (Like a Rolling Stone), drawn in the window: a page mock, not stand-in boxes */
+  .f11-q1-c-blk { position:absolute; box-sizing:border-box; }
+  .f11-q1-c-ttl { position:absolute; display:flex; align-items:baseline; gap:22px; white-space:nowrap; }
+  .f11-q1-c-ttl .t { font:700 40px/1.1 "Inter"; letter-spacing:-0.015em; text-transform:uppercase; color:var(--rp-ink); }
+  .f11-q1-c-ttl .a, .f11-q1-c-k { font:700 24px/1 "Inter"; letter-spacing:0.1em; text-transform:uppercase; color:rgba(var(--rp-ink-rgb),0.6); white-space:nowrap; }
+  .f11-q1-c-cv { position:absolute; box-sizing:border-box; border:1px solid rgba(var(--rp-slab-ink-rgb),0.3); background:color-mix(in oklab, var(--rp-syn-num) 75%, var(--rp-slab)); }
+  .f11-q1-c-cv span { position:absolute; left:14px; top:14px; right:12px; font:700 24px/1.08 "Inter"; text-transform:uppercase; letter-spacing:-0.005em; color:var(--rp-slab); }
+  .f11-q1-c-chips { position:absolute; display:flex; gap:12px; }
+  .f11-q1-c-chips.v { flex-direction:column; align-items:flex-start; }
+  .f11-q1-c-chips span { padding:9px 14px; background:var(--rp-slab); font:700 24px/1 "Inter"; letter-spacing:0.08em; color:var(--rp-slab-ink); }
+  .f11-q1-c-note { font:400 26px/1.3 "Inter"; color:var(--rp-ink); }
+  .f11-q1-c-pl { margin-top:12px; height:48px; box-sizing:border-box; padding-left:18px; border-radius:6px; background:var(--rp-tile-2); border:1px solid rgba(var(--rp-ink-rgb),0.16); font:700 26px/46px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f11-q1-c-card { border-radius:8px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.16); padding:20px 24px; overflow:hidden; }
+  .f11-q1-c-card .pv { margin-top:12px; font:italic 400 28px/1.28 "Inter"; color:var(--rp-ink); }
+  .f11-q1-c-card .tx { margin-top:12px; font:400 24px/1.4 "Inter"; color:rgba(var(--rp-ink-rgb),0.7); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:var(--tx-lines,2); overflow:hidden; }
+  .f11-q1-c-cn { display:flex; justify-content:space-between; gap:16px; height:40px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.14); font:400 26px/40px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f11-q1-c-cn i { font-style:normal; font-size:24px; color:rgba(var(--rp-ink-rgb),0.6); }
+  .f11-q1-c-cg { display:grid; grid-template-columns:290px 330px; column-gap:20px; }
+  .f11-q1-c-cg .f11-q1-c-cn { height:38px; line-height:38px; font-size:24px; }
+</style>
+
+<div id="root" data-composition-id="11-q1-c" data-band="bottom" data-duration="6" data-width="1920" data-height="1080">
+
+  <div class="clip f11-q1-c-bg" id="f11-q1-c-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+  <div class="clip f11-q1-c-scene" id="f11-q1-c-scene" data-start="0" data-duration="6" data-track-index="1">
+    <div class="f11-q1-c-place" id="f11-q1-c-place">If C · step 2</div>
+
+    <div class="f11-q1-c-dims" id="f11-q1-c-dims">
+      <svg viewBox="0 0 1440 44" aria-hidden="true">
+        <g stroke="rgba(var(--rp-ink-rgb),0.45)" stroke-width="1" fill="none">
+          <line x1="1" y1="34" x2="1" y2="44"/><line x1="360" y1="34" x2="360" y2="44"/><line x1="1080" y1="34" x2="1080" y2="44"/><line x1="1439" y1="34" x2="1439" y2="44"/>
+          <line x1="380" y1="39" x2="1060" y2="39"/>
+        </g>
+      </svg>
+      <div class="f11-q1-c-dim" style="left:0; width:360px">360</div>
+      <div class="f11-q1-c-dim" style="left:360px; width:720px">720 px · today's page</div>
+      <div class="f11-q1-c-dim" style="left:1080px; width:360px">360</div>
+    </div>
+
+    <div class="f11-q1-c-win" id="f11-q1-c-win" data-artifact="a song page in a 1440 px window, option C">
+      <div class="f11-q1-c-bar">
+        <span class="f11-q1-c-dot" style="left:18px"></span><span class="f11-q1-c-dot" style="left:36px"></span><span class="f11-q1-c-dot" style="left:54px"></span>
+        <span class="f11-q1-c-addr">a song page · 1440 px window</span>
+      </div>
+      <div class="f11-q1-c-era" id="f11-q1-c-era-l" style="left:0; transform-origin:100% 50%"><div class="f11-q1-c-eralab" id="f11-q1-c-lab-l">the era's look</div></div>
+      <div class="f11-q1-c-era" id="f11-q1-c-era-r" style="left:1078px; transform-origin:0 50%"><div class="f11-q1-c-eralab" id="f11-q1-c-lab-r">the era's look</div></div>
+
+      <!-- the one 720 column: today's page (the phone layout), cover and title, note, chips, the words, then connections -->
+      <div class="f11-q1-c-col" id="f11-q1-c-col">
+        <div class="f11-q1-c-cv" style="left:400px; top:64px; width:132px; height:132px"><span style="font-size:19px">Highway 61 Revisited</span></div>
+        <div class="f11-q1-c-k" style="position:absolute; left:552px; top:78px">Highway 61 Revisited · 1965</div>
+        <div class="f11-q1-c-ttl" style="left:552px; top:112px"><span class="t" style="font-size:36px">Like a Rolling Stone</span></div>
+        <div class="f11-q1-c-blk f11-q1-c-note" style="left:400px; top:202px; width:640px">Released as a single in July 1965 at over six minutes, it reached number two in the US.</div>
+        <div class="f11-q1-c-chips" style="left:400px; top:282px"><span>LOSS</span><span>FREEDOM</span></div>
+        <div class="f11-q1-c-blk f11-q1-c-card" style="left:400px; top:338px; width:640px; height:186px"><div class="f11-q1-c-k">The words</div><div class="pv">A sneering address to a once-privileged woman who has fallen and must now fend for herself.</div></div>
+        <div class="f11-q1-c-blk" style="left:400px; top:538px; width:640px; height:108px"><span class="f11-q1-c-k">Connections</span><div style="height:6px"></div><div class="f11-q1-c-cg"><div class="f11-q1-c-cn"><span>Idiot Wind</span></div><div class="f11-q1-c-cn"><span>Jimi Hendrix's version</span></div><div class="f11-q1-c-cn"><span>Ballad of a Thin Man</span></div><div class="f11-q1-c-cn"><span>The Rolling Stones' version</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "11-q1-c";
+  var DUR = 3.584;
+  var $ = function (s) { return document.getElementById("f11-q1-c-" + s); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the window, the one column on "the column stays", then the margins fill on "the era's look fills"; hold still
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+  tl.fromTo($("win"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+  tl.fromTo($("dims"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.6);
+  tl.fromTo($("col"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.7);   // "column"
+  tl.fromTo([$("era-l"), $("era-r")], { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 1.95);   // "the era's look fills"
+  tl.fromTo([$("lab-l"), $("lab-r")], { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 2.4);
+
+  tl.set({}, {}, DUR);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

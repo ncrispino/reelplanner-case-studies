@@ -1,0 +1,82 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f07-q1-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f07-q1-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f07-q1-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f07-q1-q { position:absolute; left:90px; top:160px; width:1740px; font:400 84px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f07-q1-opt { position:absolute; box-sizing:border-box; top:340px; width:540px; height:440px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f07-q1-opt .k { position:absolute; left:32px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f07-q1-opt .l { position:absolute; left:32px; top:92px; right:32px; font:400 52px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f07-q1-opt .pg { position:absolute; left:32px; bottom:36px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.02em; color:var(--rp-ink); white-space:nowrap; }
+  .f07-q1-opt .n { position:absolute; left:32px; bottom:88px; font:400 72px/1 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); white-space:nowrap; }
+  .f07-q1-opt .n .u { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.02em; color:rgba(var(--rp-ink-rgb),0.62); margin-left:12px; }
+  .f07-q1-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:13px; }
+  .f07-q1-rec { color:var(--rp-coral-deep); }
+</style>
+
+<div id="root" data-composition-id="07-q1" data-band="bottom" data-duration="12.809" data-width="1920" data-height="1080">
+
+  <div class="clip f07-q1-bg" id="f07-q1-bg" data-start="0" data-duration="12.809" data-track-index="0"></div>
+
+  <div class="clip f07-q1-scene" id="f07-q1-scene" data-start="0" data-duration="12.809" data-track-index="1">
+    <div class="f07-q1-place" id="f07-q1-place">Question 1 · step 1</div>
+    <div class="f07-q1-q" id="f07-q1-q" data-question>Which tracks get a page?</div>
+
+    <div class="f07-q1-opt" id="f07-q1-opt-a" data-option="a" style="left:90px">
+      <span class="k">A</span>
+      <div class="l">The 54 missing from the 16 landmarks</div>
+      <div class="n">54<span class="u">tracks</span></div>
+      <div class="pg">about 120 pages</div>
+    </div>
+    <div class="f07-q1-opt" id="f07-q1-opt-b" data-option="b" style="left:690px">
+      <div class="f07-q1-ring" id="f07-q1-ring"></div>
+      <span class="k">B<span class="f07-q1-rec" id="f07-q1-rec"> · RECOMMENDED</span></span>
+      <div class="l">All 277</div>
+      <div class="n">277<span class="u">tracks</span></div>
+      <div class="pg">about 600 pages</div>
+    </div>
+    <div class="f07-q1-opt" id="f07-q1-opt-c" data-option="c" style="left:1290px">
+      <span class="k">C</span>
+      <div class="l">None</div>
+      <div class="n">0<span class="u">tracks</span></div>
+      <div class="pg">no new pages</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "07-q1";
+  var $ = function (s) { return document.getElementById("f07-q1-" + s); };
+  var slideUp = function (tl, el, at) {
+    tl.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, at);
+  };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: eyebrow and heading ("Question one: which tracks get a page?"), then card A on "A, the 53"
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+  tl.fromTo($("q"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.197);
+  slideUp(tl, $("opt-a"), 1.973);
+
+  // Scene 2: card B on "B, all 277"
+  slideUp(tl, $("opt-b"), 6.82);
+
+  // Scene 3: card C on "C, none"
+  slideUp(tl, $("opt-c"), 10.233);
+
+  // Scene 4: B gets the coral border and RECOMMENDED on "I recommend B"; hold
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power3.out" }, 11.279);
+  tl.fromTo($("rec"), { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power3.out" }, 11.427);
+
+  tl.set({}, {}, 12.308);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

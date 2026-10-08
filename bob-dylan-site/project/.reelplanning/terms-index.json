@@ -1,0 +1,642 @@
+{
+  "note": "Written by finish-project (reelplanning terms-index): which video explains each word, from every storyboard's `- defines:` lines. The system video's beats come first.",
+  "words": {
+    "agent": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 16,
+        "title": "What ran",
+        "start": 200.098,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "album and song pages": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 17,
+        "title": "Step 4 · The song page",
+        "start": 231.826,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    ],
+    "app shell": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 3,
+        "title": "Step 1 · The app shell, now animated",
+        "start": 30.464,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      },
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 6,
+        "title": "Step 2 · Three widths",
+        "start": 71.083,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    ],
+    "bands": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 4,
+        "title": "Step 3 · Era bands and moments",
+        "start": 53.312,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "call": [
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 2,
+        "title": "Step 1 · The map",
+        "start": 14.379,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-every-song--walkthrough",
+        "frame": 11,
+        "title": "The rest of the choices",
+        "start": 116.927,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 3,
+        "title": "Step 2 · More photographs",
+        "start": 34.859,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "caption": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 3,
+        "title": "Step 2 · More photographs",
+        "start": 34.859,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "code check": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 16,
+        "title": "What ran",
+        "start": 200.098,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "connection": [
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 6,
+        "title": "Step 2 · Three widths",
+        "start": 71.083,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      },
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 5,
+        "title": "Step 4 · Two-column pages",
+        "start": 59.542,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 8,
+        "title": "Step 4 · The album page",
+        "start": 103.083,
+        "chapter": 2,
+        "chapterTitle": "Albums and songs"
+      }
+    ],
+    "data check": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 10,
+        "title": "Step 2 · The data check, now for credits",
+        "start": 134.559,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      },
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 31,
+        "title": "Quick check · Which check fails?",
+        "start": 317.937,
+        "chapter": 4,
+        "chapterTitle": "Threads, the map and checks"
+      },
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 14,
+        "title": "What ran",
+        "start": 153.867,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-every-song",
+        "frame": 19,
+        "title": "Step 4 · Every row a link",
+        "start": 195.736,
+        "chapter": 4,
+        "chapterTitle": "Part of the site"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 2,
+        "title": "Step 1 · Longer writing",
+        "start": 18.368,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "dataset": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    ],
+    "desktop check": [
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 3,
+        "title": "Three changes, six steps",
+        "start": 23.765,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      },
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 13,
+        "title": "Step 6 · Search, and the desktop check",
+        "start": 144.288,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 15,
+        "title": "The gaps",
+        "start": 188.407,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "deviation": [
+      {
+        "video": "2026-10-07-every-song--walkthrough",
+        "frame": 3,
+        "title": "Off-plan change · the file name",
+        "start": 36.309,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 9,
+        "title": "Off-plan change · one row fewer",
+        "start": 123.414,
+        "chapter": 2,
+        "chapterTitle": "Albums and songs"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 9,
+        "title": "Off-plan change · one row fewer",
+        "start": 123.414,
+        "chapter": 2,
+        "chapterTitle": "Albums and songs"
+      }
+    ],
+    "era": [
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 2,
+        "title": "Three things that are wrong today",
+        "start": 11.52,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      },
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 1,
+        "title": "The site on a computer",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 1,
+        "title": "A fuller site",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "era timeline": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 12,
+        "title": "Step 3 · Each era its own look",
+        "start": 157.32,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      },
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 13,
+        "title": "Step 3 · One era fills the screen",
+        "start": 139.531,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    ],
+    "essay": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 8,
+        "title": "Step 4 · The album page",
+        "start": 103.083,
+        "chapter": 2,
+        "chapterTitle": "Albums and songs"
+      }
+    ],
+    "gallery": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 1,
+        "title": "A fuller site",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "gap": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 15,
+        "title": "The gaps",
+        "start": 188.407,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "moment": [
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 20,
+        "title": "Step 4 · A song page in two columns",
+        "start": 206.446,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      },
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 6,
+        "title": "Off-plan change · a moment's songs",
+        "start": 77.057,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 4,
+        "title": "Step 3 · Era bands and moments",
+        "start": 53.312,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "musicbrainz": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 14,
+        "title": "Step 6 · Read on",
+        "start": 174.583,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "our own words": [
+      {
+        "video": "2026-10-07-every-song",
+        "frame": 5,
+        "title": "Step 1 · A record, then the writing",
+        "start": 56.362,
+        "chapter": 2,
+        "chapterTitle": "Every track a song"
+      }
+    ],
+    "phone check": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 25,
+        "title": "Step 6 · Listen and watch on the page",
+        "start": 330.785,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      },
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 5,
+        "title": "Step 1 · Scroll past it, hover a dot",
+        "start": 58.752,
+        "chapter": 2,
+        "chapterTitle": "The map, fixed"
+      },
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 14,
+        "title": "What ran",
+        "start": 153.867,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 16,
+        "title": "What ran",
+        "start": 200.098,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "placeholder": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 4,
+        "title": "What you would see differ",
+        "start": 50.752,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      }
+    ],
+    "quick links": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 13,
+        "title": "Step 5 · The rail",
+        "start": 155.66,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "rail": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 1,
+        "title": "A fuller site",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 13,
+        "title": "Step 5 · The rail",
+        "start": 155.66,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "read on": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 14,
+        "title": "Step 6 · Read on",
+        "start": 174.583,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ],
+    "rock band": [
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 13,
+        "title": "Step 3 · One era fills the screen",
+        "start": 139.531,
+        "chapter": 3,
+        "chapterTitle": "A layout for wide screens"
+      }
+    ],
+    "search": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 2,
+        "title": "Three changes, six steps",
+        "start": 16.896,
+        "chapter": 1,
+        "chapterTitle": "What changed, and how it is built"
+      },
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 3,
+        "title": "Three changes, six steps",
+        "start": 23.765,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      },
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 1,
+        "title": "The site on a computer",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-every-song",
+        "frame": 4,
+        "title": "Two changes, four steps",
+        "start": 41.429,
+        "chapter": 1,
+        "chapterTitle": "Dead rows"
+      },
+      {
+        "video": "2026-10-07-every-song--walkthrough",
+        "frame": 6,
+        "title": "Off-plan change · no Genius links",
+        "start": 63.573,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 10,
+        "title": "Question 4 · Fallen Angels",
+        "start": 131.137,
+        "chapter": 2,
+        "chapterTitle": "Albums and songs"
+      }
+    ],
+    "songs to start with": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 4,
+        "title": "Step 3 · Era bands and moments",
+        "start": 53.312,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "spotify player": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 8,
+        "title": "Step 4 · The album page",
+        "start": 103.083,
+        "chapter": 2,
+        "chapterTitle": "Albums and songs"
+      }
+    ],
+    "tag": [
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 2,
+        "title": "Step 1 · The map",
+        "start": 14.379,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 3,
+        "title": "Step 2 · More photographs",
+        "start": 34.859,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "the band": [
+      {
+        "video": "2026-10-07-every-song",
+        "frame": 2,
+        "title": "What the 277 are",
+        "start": 14.144,
+        "chapter": 1,
+        "chapterTitle": "Dead rows"
+      }
+    ],
+    "theme": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 12,
+        "title": "Step 3 · Each era its own look",
+        "start": 157.32,
+        "chapter": 2,
+        "chapterTitle": "Data, eras and pages"
+      }
+    ],
+    "thread": [
+      {
+        "video": "2026-10-06-dylan-site",
+        "frame": 23,
+        "title": "Step 5 · The map, on a phone too",
+        "start": 300.713,
+        "chapter": 3,
+        "chapterTitle": "Connections, listening, checks"
+      },
+      {
+        "video": "2026-10-07-desktop",
+        "frame": 2,
+        "title": "Three things that are wrong today",
+        "start": 11.52,
+        "chapter": 1,
+        "chapterTitle": "On a computer today"
+      },
+      {
+        "video": "2026-10-07-desktop--walkthrough",
+        "frame": 1,
+        "title": "The site on a computer",
+        "start": 0,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 4,
+        "title": "Step 3 · Era bands and moments",
+        "start": 53.312,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      },
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 8,
+        "title": "Step 4 · The album page",
+        "start": 103.083,
+        "chapter": 2,
+        "chapterTitle": "Albums and songs"
+      }
+    ],
+    "track list": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 8,
+        "title": "Step 4 · The album page",
+        "start": 103.083,
+        "chapter": 2,
+        "chapterTitle": "Albums and songs"
+      }
+    ],
+    "wikimedia commons": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 3,
+        "title": "Step 2 · More photographs",
+        "start": 34.859,
+        "chapter": 1,
+        "chapterTitle": "What landed"
+      }
+    ],
+    "wikipedia": [
+      {
+        "video": "2026-10-07-fuller--walkthrough",
+        "frame": 14,
+        "title": "Step 6 · Read on",
+        "start": 174.583,
+        "chapter": 3,
+        "chapterTitle": "Wide windows and links out"
+      }
+    ]
+  },
+  "undefined": [
+    "call",
+    "tag",
+    "miss",
+    "deviation",
+    "beat",
+    "chapter",
+    "area",
+    "app shell",
+    "dataset",
+    "data check",
+    "era",
+    "moment",
+    "connection",
+    "era timeline",
+    "album and song pages",
+    "thread",
+    "search",
+    "phone check",
+    "desktop check"
+  ]
+}

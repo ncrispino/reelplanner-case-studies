@@ -1,0 +1,654 @@
+{
+  "eras": [
+    {
+      "id": "electric",
+      "title": "Going Electric",
+      "years": [
+        1965,
+        1966
+      ],
+      "theme": "electric",
+      "summary": "In 1965 Dylan traded solo acoustic folk for a rock band, recording three albums in about fifteen months and scoring hit singles with songs of a new, surreal kind. Folk purists booed him at Newport and on his 1966 world tour with the Hawks, but the music reshaped what rock lyrics could be.",
+      "albums": [
+        "bringing-it-all-back-home",
+        "highway-61-revisited",
+        "blonde-on-blonde"
+      ],
+      "moments": [
+        "dont-look-back-tour-1965",
+        "newport-1965",
+        "marries-sara-lownds",
+        "judas-manchester-1966"
+      ],
+      "photos": []
+    }
+  ],
+  "moments": [
+    {
+      "id": "dont-look-back-tour-1965",
+      "year": 1965,
+      "title": "Solo tour of England, filmed for Dont Look Back",
+      "text": "In the spring of 1965 Dylan toured England with an acoustic show, and D. A. Pennebaker filmed the trip for the documentary Dont Look Back, released in 1967.",
+      "era": "electric",
+      "youtube": null
+    },
+    {
+      "id": "newport-1965",
+      "year": 1965,
+      "title": "Newport Folk Festival: plays electric",
+      "text": "On July 25, 1965, Dylan took the Newport stage backed by members of the Paul Butterfield Blues Band, and his short, loud electric set drew boos from part of the folk crowd.",
+      "era": "electric",
+      "youtube": null
+    },
+    {
+      "id": "marries-sara-lownds",
+      "year": 1965,
+      "title": "Marries Sara Lownds",
+      "text": "In November 1965 Dylan quietly married Sara Lownds, a former model, in a private ceremony on Long Island.",
+      "era": "electric",
+      "youtube": null
+    },
+    {
+      "id": "judas-manchester-1966",
+      "year": 1966,
+      "title": "\"Judas!\" at the Manchester Free Trade Hall",
+      "text": "On May 17, 1966, during his world tour with the Hawks, an audience member in Manchester shouted \"Judas\" at Dylan during the electric half of the show.",
+      "era": "electric",
+      "youtube": null
+    }
+  ],
+  "albums": [
+    {
+      "id": "bringing-it-all-back-home",
+      "title": "Bringing It All Back Home",
+      "year": 1965,
+      "era": "electric",
+      "why": "Dylan split the record into an electric side with a rock band and an acoustic side of long, image-packed songs. It was the first album where he plugged in, and it showed his writing moving from topical protest toward surreal, personal poetry.",
+      "songs": [
+        "subterranean-homesick-blues",
+        "maggies-farm",
+        "love-minus-zero-no-limit",
+        "mr-tambourine-man",
+        "gates-of-eden",
+        "its-alright-ma-im-only-bleeding",
+        "its-all-over-now-baby-blue"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "highway-61-revisited",
+      "title": "Highway 61 Revisited",
+      "year": 1965,
+      "era": "electric",
+      "why": "Recorded mostly with a full electric band including Mike Bloomfield and Al Kooper, it opened with Like a Rolling Stone and closed with the eleven-minute Desolation Row. It is the album where his folk-rock sound arrived fully formed, mixing blues with sprawling, sardonic storytelling.",
+      "songs": [
+        "like-a-rolling-stone",
+        "tombstone-blues",
+        "ballad-of-a-thin-man",
+        "queen-jane-approximately",
+        "highway-61-revisited",
+        "just-like-tom-thumbs-blues",
+        "desolation-row"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "blonde-on-blonde",
+      "title": "Blonde on Blonde",
+      "year": 1966,
+      "era": "electric",
+      "why": "Cut largely in Nashville with session players and Al Kooper and Robbie Robertson, it was one of rock's first double albums. Its loose, shimmering sound and mix of love songs, blues and long reveries capped his electric period.",
+      "songs": [
+        "rainy-day-women-12-35",
+        "visions-of-johanna",
+        "i-want-you",
+        "stuck-inside-of-mobile-with-the-memphis-blues-again",
+        "just-like-a-woman",
+        "4th-time-around",
+        "sad-eyed-lady-of-the-lowlands"
+      ],
+      "landmark": true,
+      "cover": null
+    }
+  ],
+  "songs": [
+    {
+      "id": "subterranean-homesick-blues",
+      "title": "Subterranean Homesick Blues",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "It became his first Top 40 hit in the US, and its cue-card promo clip opens Dont Look Back.",
+      "themes": [
+        "freedom",
+        "America"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/subterranean-homesick-blues/",
+      "preview": "A rapid-fire run of warnings about cops, fads and authority, telling a young listener to trust no leader.",
+      "excerpt": null
+    },
+    {
+      "id": "maggies-farm",
+      "title": "Maggie's Farm",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "It was the opening number of his electric set at Newport in 1965.",
+      "themes": [
+        "freedom",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/maggies-farm/",
+      "preview": "A worker announces he is done laboring for a bossy family that treats him as property.",
+      "excerpt": null
+    },
+    {
+      "id": "love-minus-zero-no-limit",
+      "title": "Love Minus Zero/No Limit",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "A quiet love song on the album's electric first side, with a title written as a fraction.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/love-minus-zero-no-limit/",
+      "preview": "A portrait of a calm, wise lover who stays above the noise and posturing of the world around her.",
+      "excerpt": null
+    },
+    {
+      "id": "mr-tambourine-man",
+      "title": "Mr. Tambourine Man",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "The Byrds' electric version reached number one in 1965 before many listeners had heard Dylan's own.",
+      "themes": [
+        "freedom",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/mr-tambourine-man/",
+      "preview": "A sleepless singer asks a street musician to carry him off into music and forgetting.",
+      "excerpt": null
+    },
+    {
+      "id": "gates-of-eden",
+      "title": "Gates of Eden",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "A long acoustic song of surreal images, it was the B-side of the single Like a Rolling Stone.",
+      "themes": [
+        "faith",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/gates-eden/",
+      "preview": "A dreamlike set of scenes contrasting the false promises of the world with a paradise where those things vanish.",
+      "excerpt": null
+    },
+    {
+      "id": "its-alright-ma-im-only-bleeding",
+      "title": "It's Alright, Ma (I'm Only Bleeding)",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "Running about seven and a half minutes, it is the longest song on the album.",
+      "themes": [
+        "protest",
+        "America",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/its-alright-ma-im-only-bleeding/",
+      "preview": "A relentless indictment of advertising, hypocrisy and power, told by someone who refuses to be shaken.",
+      "excerpt": null
+    },
+    {
+      "id": "its-all-over-now-baby-blue",
+      "title": "It's All Over Now, Baby Blue",
+      "year": 1965,
+      "album": "bringing-it-all-back-home",
+      "by": null,
+      "note": "The album's closing song, it was later recorded by Them with Van Morrison.",
+      "themes": [
+        "loss",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/its-all-over-now-baby-blue/",
+      "preview": "A farewell telling someone to leave the old life behind and start again.",
+      "excerpt": null
+    },
+    {
+      "id": "like-a-rolling-stone",
+      "title": "Like a Rolling Stone",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "Released as a single in July 1965 at over six minutes, it reached number two in the US.",
+      "themes": [
+        "loss",
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/rolling-stone/",
+      "preview": "A sneering address to a once-privileged woman who has fallen and must now fend for herself.",
+      "excerpt": null
+    },
+    {
+      "id": "tombstone-blues",
+      "title": "Tombstone Blues",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "A fast electric blues featuring Mike Bloomfield on lead guitar.",
+      "themes": [
+        "America",
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/tombstone-blues/",
+      "preview": "A chaotic parade of historical and biblical figures acting out a nightmare version of America.",
+      "excerpt": null
+    },
+    {
+      "id": "ballad-of-a-thin-man",
+      "title": "Ballad of a Thin Man",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "Built on Dylan's piano, it became a fixture of his 1966 live shows.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/ballad-thin-man/",
+      "preview": "A bewildered outsider, Mr. Jones, wanders through a strange scene he cannot understand.",
+      "excerpt": null
+    },
+    {
+      "id": "queen-jane-approximately",
+      "title": "Queen Jane Approximately",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "The song opens side two of the original LP.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/queen-jane-approximately/",
+      "preview": "An invitation to a worn-out woman to come by when she tires of the people around her.",
+      "excerpt": null
+    },
+    {
+      "id": "highway-61-revisited",
+      "title": "Highway 61 Revisited",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "Named after the highway that runs from Minnesota down to New Orleans, it features a police siren whistle.",
+      "themes": [
+        "America",
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/highway-61-revisited/",
+      "preview": "A string of absurd episodes, from a biblical sacrifice to a war, all staged on one American highway.",
+      "excerpt": null
+    },
+    {
+      "id": "just-like-tom-thumbs-blues",
+      "title": "Just Like Tom Thumb’s Blues",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "Set largely in Juarez, Mexico, it was recorded in the summer 1965 New York sessions.",
+      "themes": [
+        "the road",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/just-tom-thumbs-blues/",
+      "preview": "A traveler lost in a border town slides into sickness and despair and resolves to head back to New York.",
+      "excerpt": null
+    },
+    {
+      "id": "desolation-row",
+      "title": "Desolation Row",
+      "year": 1965,
+      "album": "highway-61-revisited",
+      "by": null,
+      "note": "At over eleven minutes, it is the album's only acoustic track and its closer.",
+      "themes": [
+        "America",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/desolation-row/",
+      "preview": "A long carnival of literary, historical and invented characters in a ruined town where everything is upside down.",
+      "excerpt": null
+    },
+    {
+      "id": "rainy-day-women-12-35",
+      "title": "Rainy Day Women #12 & 35",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "Recorded in Nashville with a raucous brass-band feel, it reached number two in the US.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/rainy-day-women-12-35/",
+      "preview": "A rowdy, laughing chorus about being attacked and judged by everyone no matter what you do.",
+      "excerpt": null
+    },
+    {
+      "id": "visions-of-johanna",
+      "title": "Visions of Johanna",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "Dylan first tried it in New York with the Hawks before cutting the album version in Nashville.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/visions-johanna/",
+      "preview": "A restless night in a cold room where the singer is with one woman but haunted by thoughts of another.",
+      "excerpt": null
+    },
+    {
+      "id": "i-want-you",
+      "title": "I Want You",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "It was released as a single ahead of the album and charted in the US and UK.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/i-want-you/",
+      "preview": "A cheerful, plain declaration of desire set among a crowd of odd characters.",
+      "excerpt": null
+    },
+    {
+      "id": "stuck-inside-of-mobile-with-the-memphis-blues-again",
+      "title": "Stuck Inside of Mobile With the Memphis Blues Again",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "Cut in Nashville in early 1966, it runs about seven minutes.",
+      "themes": [
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/stuck-inside-mobile-memphis-blues-again/",
+      "preview": "A man trapped in a strange town meets a series of eccentrics and wonders if he will ever get out.",
+      "excerpt": null
+    },
+    {
+      "id": "just-like-a-woman",
+      "title": "Just Like a Woman",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "Manfred Mann released a hit version in the UK in 1966.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/just-woman/",
+      "preview": "A bitter-tender look at a lover who seems grown-up but breaks down like a child.",
+      "excerpt": null
+    },
+    {
+      "id": "4th-time-around",
+      "title": "4th Time Around",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "Its waltz melody and story closely resemble the Beatles' Norwegian Wood.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/fourth-time-around/",
+      "preview": "A wry tale of a tense romantic encounter that ends with the singer walking away.",
+      "excerpt": null
+    },
+    {
+      "id": "sad-eyed-lady-of-the-lowlands",
+      "title": "Sad-Eyed Lady of the Lowlands",
+      "year": 1966,
+      "album": "blonde-on-blonde",
+      "by": null,
+      "note": "Over eleven minutes long, it filled the whole fourth side of the original double LP.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/sad-eyed-lady-lowlands/",
+      "preview": "A slow, hymn-like tribute to a mysterious woman, piling up images of her before asking whether he may wait for her.",
+      "excerpt": null
+    },
+    {
+      "id": "mr-tambourine-man-byrds",
+      "title": "Mr. Tambourine Man",
+      "year": 1965,
+      "album": null,
+      "by": "The Byrds",
+      "note": "The Byrds' jangling 12-string version topped the US charts and helped launch folk rock.",
+      "themes": [
+        "freedom"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "its-all-over-now-baby-blue-them",
+      "title": "It's All Over Now, Baby Blue",
+      "year": 1966,
+      "album": null,
+      "by": "Them",
+      "note": "Van Morrison's band Them recorded the song in 1966.",
+      "themes": [
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "norwegian-wood",
+      "title": "Norwegian Wood (This Bird Has Flown)",
+      "year": 1965,
+      "album": null,
+      "by": "The Beatles",
+      "note": "John Lennon's song on Rubber Soul, with sitar played by George Harrison.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "just-like-a-woman-manfred-mann",
+      "title": "Just Like a Woman",
+      "year": 1966,
+      "album": null,
+      "by": "Manfred Mann",
+      "note": "Manfred Mann's single version charted in the UK in 1966.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "highway-61-revisited-johnny-winter",
+      "title": "Highway 61 Revisited",
+      "year": 1969,
+      "album": null,
+      "by": "Johnny Winter",
+      "note": "Johnny Winter's slide-guitar version appeared on his album Second Winter.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "maggies-farm-rage-against-the-machine",
+      "title": "Maggie's Farm",
+      "year": 2000,
+      "album": null,
+      "by": "Rage Against the Machine",
+      "note": "Rage Against the Machine covered the song on their album Renegades.",
+      "themes": [
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "desolation-row-my-chemical-romance",
+      "title": "Desolation Row",
+      "year": 2009,
+      "album": null,
+      "by": "My Chemical Romance",
+      "note": "My Chemical Romance recorded a punk version for the Watchmen film soundtrack.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "like-a-rolling-stone-rolling-stones",
+      "title": "Like a Rolling Stone",
+      "year": 1995,
+      "album": null,
+      "by": "The Rolling Stones",
+      "note": "The Rolling Stones released a live version on their album Stripped.",
+      "themes": [
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "mr-tambourine-man",
+      "to": "mr-tambourine-man-byrds",
+      "kind": "covered-by",
+      "why": "The Byrds took a shortened electric version of the song to number one in the US in 1965."
+    },
+    {
+      "from": "its-all-over-now-baby-blue",
+      "to": "its-all-over-now-baby-blue-them",
+      "kind": "covered-by",
+      "why": "Them, fronted by Van Morrison, released a recording of the song in 1966."
+    },
+    {
+      "from": "4th-time-around",
+      "to": "norwegian-wood",
+      "kind": "answer",
+      "why": "Listeners have long heard the song as Dylan's reply to the Beatles' Norwegian Wood, whose tune and story it echoes."
+    },
+    {
+      "from": "just-like-a-woman",
+      "to": "just-like-a-woman-manfred-mann",
+      "kind": "covered-by",
+      "why": "Manfred Mann turned the song into a UK chart hit in 1966."
+    },
+    {
+      "from": "highway-61-revisited",
+      "to": "highway-61-revisited-johnny-winter",
+      "kind": "covered-by",
+      "why": "Johnny Winter made the song a slide-guitar showcase on Second Winter in 1969."
+    },
+    {
+      "from": "maggies-farm",
+      "to": "maggies-farm-rage-against-the-machine",
+      "kind": "covered-by",
+      "why": "Rage Against the Machine recorded a heavy version for their 2000 covers album Renegades."
+    },
+    {
+      "from": "desolation-row",
+      "to": "desolation-row-my-chemical-romance",
+      "kind": "covered-by",
+      "why": "My Chemical Romance cut a fast punk version for the 2009 Watchmen soundtrack."
+    },
+    {
+      "from": "like-a-rolling-stone",
+      "to": "like-a-rolling-stone-rolling-stones",
+      "kind": "covered-by",
+      "why": "The Rolling Stones released the song as a single from their 1995 live album Stripped."
+    },
+    {
+      "from": "gates-of-eden",
+      "to": "its-alright-ma-im-only-bleeding",
+      "kind": "same-theme",
+      "why": "Both long acoustic songs on side two of the album attack the false promises of society in streams of images."
+    }
+  ]
+}

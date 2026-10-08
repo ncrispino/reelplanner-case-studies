@@ -1,0 +1,175 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 44 (heading), 30 (era title), 28 (story, inset title), 26 (address, timeline ends), 24 (credit, covers, inset note) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; container-type:size; -webkit-font-smoothing:antialiased; }
+  .f13-step3-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f13-step3-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f13-step3-anchor { position:absolute; left:80px; top:50px; display:flex; align-items:baseline; gap:18px; white-space:nowrap; }
+  .f13-step3-anchor .p { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f13-step3-anchor .h { font:400 44px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* browser window frame: radius 14, 1px ink hairline, 36px title bar */
+  .f13-step3-win { position:absolute; box-sizing:border-box; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-slab); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f13-step3-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); display:flex; align-items:center; padding-left:16px; gap:8px; z-index:2; }
+  .f13-step3-dot { width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); flex:none; }
+  .f13-step3-addr { margin-left:16px; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+
+  .f13-step3-main { left:80px; top:116px; width:1420px; height:764px; }
+  .f13-step3-body { position:absolute; left:0; top:36px; width:1418px; height:726px; overflow:hidden; background:var(--rp-slab); }
+  .f13-step3-art { position:absolute; inset:0; background:repeating-radial-gradient(circle at 85% 70%, rgba(var(--rp-slab-ink-rgb),0.07) 0 9px, transparent 9px 22px); }
+
+  /* the desktop header bar under the address bar: the site name, the tabs (lowercase text, shown in capitals), the search field */
+  .f13-step3-hdr { position:absolute; left:0; top:0; width:100%; height:48px; box-sizing:border-box; background:color-mix(in oklab, var(--rp-slab) 88%, var(--rp-slab-ink)); border-bottom:1px solid rgba(var(--rp-slab-ink-rgb),0.18); color:var(--rp-slab-ink); z-index:1; }
+  .f13-step3-hdr .lg { position:absolute; left:22px; top:0; font:700 26px/48px "Inter"; letter-spacing:-0.01em; white-space:nowrap; }
+  .f13-step3-hdr .tabs { position:absolute; left:0; right:0; top:0; height:48px; display:flex; justify-content:center; gap:34px; }
+  .f13-step3-hdr .tab { position:relative; font:400 26px/48px "Inter"; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap; color:rgba(var(--rp-slab-ink-rgb),0.78); }
+  .f13-step3-hdr .tab.on { color:var(--rp-slab-ink); font-weight:700; }
+  .f13-step3-hdr .tab.on:after { content:""; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--rp-slab-ink); }
+  .f13-step3-hdr .sf { position:absolute; right:16px; top:7px; height:34px; box-sizing:border-box; padding:0 12px; border-radius:6px; border:1px solid rgba(var(--rp-slab-ink-rgb),0.4); font:400 26px/32px "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.7); white-space:nowrap; }
+
+  /* the timeline across the top, under the header: 1941 to today, eleven stretches */
+  .f13-step3-tline { position:absolute; left:0; top:48px; width:1418px; height:92px; border-bottom:1px solid rgba(var(--rp-slab-ink-rgb),0.2); background:var(--rp-slab); }
+  .f13-step3-tend { position:absolute; top:46px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-slab-ink-rgb),0.7); white-space:nowrap; }
+  .f13-step3-seg { position:absolute; top:56px; width:98px; height:10px; border-radius:3px; background:rgba(var(--rp-slab-ink-rgb),0.32); }
+  .f13-step3-seg.lit { background:var(--rp-coral); height:14px; top:54px; }
+  .f13-step3-segname { position:absolute; top:16px; font:700 24px/1 "Inter"; color:var(--rp-slab-ink); white-space:nowrap; }
+
+  /* the spread: photo left half, words right */
+  .f13-step3-photo { position:absolute; left:0; top:140px; width:700px; height:316px; overflow:hidden; }
+  .f13-step3-photo img { display:block; width:700px; height:316px; object-fit:cover; object-position:50% 22%; }
+  .f13-step3-credit { position:absolute; left:20px; top:468px; font:400 24px/1 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.7); white-space:nowrap; }
+
+  .f13-step3-years { position:absolute; left:760px; top:180px; font:700 30px/1 "Inter"; letter-spacing:0.04em; color:var(--rp-slab-ink); white-space:nowrap; }
+  .f13-step3-story { position:absolute; left:760px; top:232px; width:600px; font:400 28px/1.45 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.9); }
+  /* the album row: under both halves, centred on the split */
+  .f13-step3-covers { position:absolute; left:0; right:0; top:514px; display:flex; justify-content:center; gap:24px; }
+  .f13-step3-cv { position:relative; width:168px; height:168px; box-sizing:border-box; border:1px solid rgba(var(--rp-slab-ink-rgb),0.3); }
+  .f13-step3-cv span { position:absolute; left:14px; top:14px; right:12px; font:700 24px/1.08 "Inter"; text-transform:uppercase; letter-spacing:-0.005em; }
+
+  /* the inset: an era with no photo of him */
+  .f13-step3-inset { position:absolute; left:1540px; top:300px; width:300px; }
+  .f13-step3-inset .t { font:700 28px/1.1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f13-step3-iwin { position:relative; margin-top:16px; width:300px; height:245px; }
+  .f13-step3-iwin .f13-step3-bar { height:36px; }
+  .f13-step3-iwin img { position:absolute; left:0; top:36px; display:block; width:298px; height:208px; object-fit:cover; }
+  .f13-step3-inset .n { margin-top:18px; font:400 24px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+  .f13-step3-inset .cap { margin-top:14px; font:400 24px/1.25 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+  .f13-step3-inset .c { margin-top:6px; font:400 24px/1.25 "Inter"; color:rgba(var(--rp-ink-rgb),0.6); }
+</style>
+
+<div id="root" data-composition-id="13-step3" data-band="bottom" data-start="0" data-duration="15.561" data-width="1920" data-height="1080">
+  <div class="clip f13-step3-bg" id="f13-step3-bg" data-start="0" data-duration="15.561" data-track-index="0"></div>
+
+  <div class="clip f13-step3-scene" id="f13-step3-scene" data-start="0" data-duration="15.561" data-track-index="1">
+    <div class="f13-step3-anchor" id="f13-step3-anchor"><span class="p">Step 3 ·</span><span class="h">One era fills the screen</span></div>
+
+    <div class="f13-step3-win f13-step3-main" id="f13-step3-main">
+      <div class="f13-step3-bar"><span class="f13-step3-dot"></span><span class="f13-step3-dot"></span><span class="f13-step3-dot"></span><span class="f13-step3-addr">/era/electric/</span></div>
+      <div class="f13-step3-body">
+        <div class="f13-step3-art" id="f13-step3-art"></div>
+        <div class="f13-step3-hdr" id="f13-step3-hdr"><span class="lg">Dylan</span><div class="tabs"><span class="tab on">eras</span><span class="tab">threads</span><span class="tab">map</span><span class="tab">about</span></div><span class="sf">Search /</span></div>
+
+        <div class="f13-step3-tline" id="f13-step3-tline">
+          <div class="f13-step3-tend" id="f13-step3-t0" style="left:24px">1941</div>
+          <div class="f13-step3-tend" id="f13-step3-t1" style="left:1310px">today</div>
+          <div class="f13-step3-seg" id="f13-step3-s0" style="left:118px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s1" style="left:222px"></div>
+          <div class="f13-step3-seg lit" id="f13-step3-s2" style="left:326px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s3" style="left:430px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s4" style="left:534px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s5" style="left:638px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s6" style="left:742px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s7" style="left:846px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s8" style="left:950px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s9" style="left:1054px"></div>
+          <div class="f13-step3-seg" id="f13-step3-s10" style="left:1158px"></div>
+          <div class="f13-step3-segname" id="f13-step3-segname" style="left:300px">Going Electric</div>
+        </div>
+
+        <div class="f13-step3-photo" id="f13-step3-photo"><img src="assets/photos/electric-kramer-1965.jpg" alt="Bob Dylan, 1965 publicity photo by Daniel Kramer"></div>
+        <div class="f13-step3-credit" id="f13-step3-credit">1965 publicity photo · Daniel Kramer · Public domain</div>
+
+        <div class="f13-step3-years" id="f13-step3-years">1965–1966 · GOING ELECTRIC</div>
+        <div class="f13-step3-story" id="f13-step3-story">In 1965 Dylan traded solo acoustic folk for a rock band, recording three albums in about fifteen months…</div>
+
+        <div class="f13-step3-covers">
+          <div class="f13-step3-cv" id="f13-step3-c1" style="background:var(--rp-paper)"><span style="color:var(--rp-ink)">Bringing It All Back Home</span></div>
+          <div class="f13-step3-cv" id="f13-step3-c2" style="background:color-mix(in oklab, var(--rp-syn-num) 75%, var(--rp-slab))"><span style="color:var(--rp-slab)">Highway 61 Revisited</span></div>
+          <div class="f13-step3-cv" id="f13-step3-c3" style="background:repeating-radial-gradient(circle at 50% 55%, var(--rp-paper) 0 6px, var(--rp-slab) 6px 12px)"><span style="color:var(--rp-ink);background:var(--rp-paper);padding:4px 6px;right:auto">Blonde on Blonde</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="f13-step3-inset" id="f13-step3-inset">
+      <div class="t">Back to the Roots</div>
+      <div class="f13-step3-win f13-step3-iwin" id="f13-step3-iwin">
+        <div class="f13-step3-bar"><span class="f13-step3-dot"></span><span class="f13-step3-dot"></span><span class="f13-step3-dot"></span></div>
+        <img id="f13-step3-iimg" src="assets/photos/roots-american-reunion-1993.jpg" alt="The Lincoln Memorial lit at night, a stage in front of it, 1993">
+      </div>
+      <div class="n" id="f13-step3-inote">no photo of him: a photo of the place</div>
+      <div class="cap" id="f13-step3-icap">Lincoln Memorial stage, January 1993, where he sang</div>
+      <div class="c" id="f13-step3-icredit">U.S. Department of Defense · Public domain</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "13-step3";
+  var P = "f13-step3-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var fade = function (tl, el, at, dur) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: dur || 0.5, ease: E }, at); };
+
+  // the story types on, word by word (split once, at build)
+  var story = $("story");
+  var words = story.textContent.split(" ");
+  story.textContent = "";
+  var spans = words.map(function (w, i) {
+    var s = document.createElement("span");
+    s.textContent = w + (i < words.length - 1 ? " " : "");
+    story.appendChild(s);
+    return s;
+  });
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-9s): the window; the era's ground; the photo fills the left half; the years and the story on the right
+  rise(tl, $("anchor"), 0.06, 10);
+  tl.fromTo($("main"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, 0.9);
+  fade(tl, $("art"), 3.1, 0.8);
+  tl.fromTo($("photo"), { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.9, ease: "power3.inOut" }, 4.4);
+  fade(tl, $("credit"), 5.2);
+  rise(tl, $("years"), 6.0, 8);
+  spans.forEach(function (s, i) { tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "none" }, 6.5 + i * 0.075); });
+
+  // Scene 2 (8-10s): the album row underneath; then the timeline across the top, Going Electric lit
+  rise(tl, $("c1"), 8.1, 16);
+  rise(tl, $("c2"), 8.3, 16);
+  rise(tl, $("c3"), 8.5, 16);
+  for (var i = 0; i < 11; i++) {
+    tl.fromTo($("s" + i), { opacity: 0, scaleX: 0, transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, duration: 0.35, ease: E }, 9.0 + i * 0.04);
+  }
+  fade(tl, $("t0"), 9.0);
+  fade(tl, $("t1"), 9.4);
+  rise(tl, $("segname"), 9.6, 6);
+
+  // Scene 3 (10-15s): the Back to the Roots inset; hold
+  rise(tl, $("inset"), 10.0, 16);
+  tl.fromTo($("iimg"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 10.3);
+  rise(tl, $("inote"), 12.9, 8);
+
+  tl.set({}, {}, 15.061);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

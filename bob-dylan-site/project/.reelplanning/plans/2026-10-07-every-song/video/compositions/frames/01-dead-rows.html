@@ -1,0 +1,94 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 180 (figure), 72 (title), 36 (quote), 40 / 30 / 26 (mono units, address, cite) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f01-dead-rows-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f01-dead-rows-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f01-dead-rows-title { position:absolute; left:80px; top:110px; width:560px; font:400 72px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+
+  /* the browser window: the real screenshot 1440 x 900 at scale 1, cropped to the track list (shot x 360-1080, y 276-890);
+     viewport on screen x 1121-1841, y 157-771 */
+  .f01-dead-rows-win { position:absolute; left:1120px; top:120px; width:720px; height:650px; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f01-dead-rows-bar { position:absolute; left:0; top:0; width:720px; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f01-dead-rows-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f01-dead-rows-addr { position:absolute; left:90px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f01-dead-rows-view { position:absolute; left:0; top:36px; width:720px; height:614px; overflow:hidden; }
+  .f01-dead-rows-view img { position:absolute; left:-360px; top:-276px; display:block; width:1440px; height:900px; max-width:none; }
+
+  /* the coral rings on rows 3, 6 and 8 (screenshot rows y 427-478, 583-634, 687-738; x 384-1056, at scale 1) */
+  .f01-dead-rows-ring { position:absolute; left:1136px; width:690px; height:54px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:8px; }
+
+  /* the counter */
+  .f01-dead-rows-albums { display:inline-block; margin-left:16px; font:400 40px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); }
+  .f01-dead-rows-count { position:absolute; left:76px; top:300px; white-space:nowrap; line-height:0.95; }
+  .f01-dead-rows-fig { font:400 180px/0.95 "EB Garamond"; letter-spacing:-0.025em; color:var(--rp-ink); }
+  .f01-dead-rows-unit { margin-left:18px; font:400 40px/1 "JetBrains Mono"; color:var(--rp-ink); }
+
+  /* the owner's words */
+  .f01-dead-rows-quote { position:absolute; left:80px; top:520px; width:900px; box-sizing:border-box; padding:30px 34px 28px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f01-dead-rows-q { font:italic 400 36px/1.24 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f01-dead-rows-cite { margin-top:20px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+</style>
+
+<div id="root" data-composition-id="01-dead-rows" data-band="bottom" data-start="0" data-duration="14.644" data-width="1920" data-height="1080">
+
+  <div class="clip f01-dead-rows-bg" id="f01-dead-rows-bg" data-start="0" data-duration="14.644" data-track-index="0"></div>
+
+  <div class="clip f01-dead-rows-scene" id="f01-dead-rows-scene" data-start="0" data-duration="14.644" data-track-index="1">
+    <div class="f01-dead-rows-title" id="f01-dead-rows-title">Dead rows</div>
+
+    <div class="f01-dead-rows-win" id="f01-dead-rows-win" data-artifact="/album/blood-on-the-tracks/ at 1440 × 900">
+      <div class="f01-dead-rows-bar">
+        <span class="f01-dead-rows-dot" style="left:16px"></span><span class="f01-dead-rows-dot" style="left:34px"></span><span class="f01-dead-rows-dot" style="left:52px"></span>
+        <span class="f01-dead-rows-addr">/album/blood-on-the-tracks/</span>
+      </div>
+      <div class="f01-dead-rows-view"><img src="assets/shots/bott-tracks.png" alt="Blood on the Tracks track list: ten rows, seven with an its story link; rows 3, 6 and 8 have none"></div>
+    </div>
+
+    <div class="f01-dead-rows-ring" id="f01-dead-rows-r3" style="top:306px"></div>
+    <div class="f01-dead-rows-ring" id="f01-dead-rows-r6" style="top:462px"></div>
+    <div class="f01-dead-rows-ring" id="f01-dead-rows-r8" style="top:566px"></div>
+
+    <div class="f01-dead-rows-count"><span id="f01-dead-rows-count" style="display:inline-block"><span class="f01-dead-rows-fig">277</span><span class="f01-dead-rows-unit">tracks</span></span><span class="f01-dead-rows-albums" id="f01-dead-rows-albums">on 39 albums</span></div>
+
+    <div class="f01-dead-rows-quote" id="f01-dead-rows-quote">
+      <div class="f01-dead-rows-q">“i see songs like ‘If You See Her, Say Hello’ are in the main discography but have nothing there”</div>
+      <div class="f01-dead-rows-cite">the owner</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "01-dead-rows";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f01-dead-rows-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: 0.45, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-9.2s): the window pushes in; one ring per title said
+  pop(tl, $("title"), 0.05, 10);
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: E }, 0.1);
+  ring(tl, $("r3"), 3.42);    // "You're a big girl now"
+  ring(tl, $("r6"), 4.64);    // "meet me in the morning"
+  ring(tl, $("r8"), 5.95);    // "if you see her, say hello"
+
+  // Scene 2 (9.2-14.1s): the counter, then the owner's words; hold
+  pop(tl, $("albums"), 10.38, 8);                        // "39 albums"
+  pop(tl, $("count"), 11.62, 16);                        // "277"
+  tl.fromTo($("quote"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 12.5);
+
+  tl.set({}, {}, 14.144);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,8 @@
+{
+  "links": [
+    { "from": "girl-from-the-north-country", "to": "girl-from-the-north-country-with-johnny-cash", "kind": "re-recorded",
+      "why": "Six years later he sang it again as a duet with Johnny Cash, opening Nashville Skyline." },
+    { "from": "the-lonesome-death-of-hattie-carroll", "to": "hurricane", "kind": "same-theme",
+      "why": "Both tell a real case, twelve years apart, in which a court failed a Black American." }
+  ]
+}

@@ -1,0 +1,177 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 44 (heading), 34 (band names), 26 (widths, ticks), 26 (band notes) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; container-type:size; -webkit-font-smoothing:antialiased; }
+  .f06-step2-widths-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f06-step2-widths-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f06-step2-widths-anchor { position:absolute; left:80px; top:62px; display:flex; align-items:baseline; gap:18px; white-space:nowrap; }
+  .f06-step2-widths-anchor .p { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f06-step2-widths-anchor .h { font:400 44px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* the ruler: 0 px at x 120, 1440 px at x 1800 (1.1667 screen px per px); 768 -> x 1016, 1100 -> x 1403 */
+  .f06-step2-widths-axis { position:absolute; left:120px; top:780px; width:1680px; height:2px; background:var(--rp-ink); transform-origin:0 50%; }
+  .f06-step2-widths-ticks { position:absolute; left:0; top:768px; width:1920px; height:26px; }
+  .f06-step2-widths-tl { position:absolute; top:806px; width:120px; margin-left:-60px; text-align:center; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f06-step2-widths-unit { position:absolute; left:1822px; top:769px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); }
+
+  /* the three bands */
+  .f06-step2-widths-band { position:absolute; top:610px; height:150px; box-sizing:border-box; border-radius:8px; border:1px dashed rgba(var(--rp-ink-rgb),0.3); }
+  .f06-step2-widths-fill { position:absolute; inset:0; border-radius:8px; background:var(--rp-tile-2); border:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f06-step2-widths-fill.co { background:var(--rp-coral); border-color:var(--rp-coral); }
+  .f06-step2-widths-txt { position:absolute; left:24px; top:20px; right:16px; }
+  .f06-step2-widths-txt .n { font:700 34px/1 "Inter"; color:var(--rp-ink); }
+  .f06-step2-widths-txt .w { margin-top:14px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f06-step2-widths-txt .d { margin-top:12px; font:400 26px/1.1 "Inter"; color:rgba(var(--rp-ink-rgb),0.8); white-space:nowrap; }
+  .f06-step2-widths-txt.on-co .n, .f06-step2-widths-txt.on-co .w, .f06-step2-widths-txt.on-co .d { color:var(--rp-on-ink); }
+
+  /* the layout pictures above the bands: phone = the real screenshot in a phone outline; tablet and desktop = small mocks with the page's real words */
+  .f06-step2-widths-phone { position:absolute; box-sizing:border-box; border:2px solid var(--rp-ink); border-radius:26px; background:var(--rp-ink); padding:12px 10px; }
+  .f06-step2-widths-phone img { display:block; width:188px; height:407px; border-radius:6px; }
+  .f06-step2-widths-mock { position:absolute; box-sizing:border-box; border:2px solid var(--rp-ink); border-radius:10px; background:var(--rp-slab); overflow:hidden; }
+  .f06-step2-widths-mock-art { position:absolute; inset:0; background:repeating-radial-gradient(circle at 80% 20%, rgba(var(--rp-slab-ink-rgb),0.08) 0 5px, transparent 5px 12px); }
+  .f06-step2-widths-mock-hd { position:absolute; left:0; top:0; right:0; height:30px; box-sizing:border-box; background:var(--rp-slab); border-bottom:1px solid rgba(var(--rp-slab-ink-rgb),0.25); }
+  .f06-step2-widths-mock-tabs { position:absolute; top:9px; font:700 10px/12px "Inter"; letter-spacing:0.08em; color:rgba(var(--rp-slab-ink-rgb),0.85); white-space:nowrap; }
+  .f06-step2-widths-mock-tabs.c { left:0; right:0; text-align:center; }
+  .f06-step2-widths-mock-brand { position:absolute; left:10px; top:7px; font:700 14px/16px "Inter"; color:var(--rp-slab-ink); }
+  .f06-step2-widths-mock-srch { position:absolute; right:8px; top:6px; width:74px; height:18px; box-sizing:border-box; border-radius:4px; border:1px solid rgba(var(--rp-slab-ink-rgb),0.55); font:400 10px/16px "Inter"; padding-left:6px; color:rgba(var(--rp-slab-ink-rgb),0.75); }
+  .f06-step2-widths-mock-cv { position:absolute; box-sizing:border-box; border:1px solid rgba(var(--rp-slab-ink-rgb),0.3); background:color-mix(in oklab, var(--rp-syn-num) 75%, var(--rp-slab)); }
+  .f06-step2-widths-mock-cv span { position:absolute; left:6px; top:6px; right:5px; font:700 9px/1.08 "Inter"; text-transform:uppercase; color:var(--rp-slab); }
+  .f06-step2-widths-mock-k { position:absolute; font:700 8px/10px "Inter"; letter-spacing:0.12em; text-transform:uppercase; color:rgba(var(--rp-slab-ink-rgb),0.7); white-space:nowrap; }
+  .f06-step2-widths-mock-ti { position:absolute; font:700 19px/1.02 "Inter"; letter-spacing:-0.01em; text-transform:uppercase; color:var(--rp-slab-ink); }
+  .f06-step2-widths-mock-note { position:absolute; font:400 10px/1.35 "Inter"; color:rgba(var(--rp-slab-ink-rgb),0.92); }
+  .f06-step2-widths-mock-chips { position:absolute; display:flex; gap:6px; }
+  .f06-step2-widths-mock-chips span { padding:3px 6px; background:var(--rp-paper); font:700 8px/1 "Inter"; letter-spacing:0.08em; color:var(--rp-ink); }
+  .f06-step2-widths-mock-card { position:absolute; box-sizing:border-box; padding:8px 10px; background:var(--rp-paper); }
+  .f06-step2-widths-mock-card .k { font:700 7px/9px "Inter"; letter-spacing:0.14em; color:rgba(var(--rp-ink-rgb),0.7); }
+  .f06-step2-widths-mock-card .pv { margin-top:4px; font:italic 400 10.5px/1.3 "Inter"; color:var(--rp-ink); }
+  .f06-step2-widths-mock-card .tx { margin-top:6px; font:400 9.5px/1.45 "Inter"; color:rgba(var(--rp-ink-rgb),0.85); }
+  .f06-step2-widths-mock-pl { position:absolute; box-sizing:border-box; height:24px; padding-left:8px; background:var(--rp-paper); font:700 8.5px/24px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f06-step2-widths-mock-cn { position:absolute; font:400 9px/1.75 "Inter"; color:var(--rp-slab-ink); white-space:nowrap; }
+  .f06-step2-widths-mock-cn i { font-style:normal; color:rgba(var(--rp-slab-ink-rgb),0.6); }
+</style>
+
+<div id="root" data-composition-id="06-step2-widths" data-band="bottom" data-start="0" data-duration="14.281" data-width="1920" data-height="1080">
+  <div class="clip f06-step2-widths-bg" id="f06-step2-widths-bg" data-start="0" data-duration="14.281" data-track-index="0"></div>
+
+  <div class="clip f06-step2-widths-scene" id="f06-step2-widths-scene" data-start="0" data-duration="14.281" data-track-index="1">
+    <div class="f06-step2-widths-anchor" id="f06-step2-widths-anchor"><span class="p">Step 2 ·</span><span class="h">The app shell</span></div>
+
+    <!-- pictures: phone (the real page, today), tablet (today's layout, wider margins), desktop (header + two columns) -->
+    <div class="f06-step2-widths-phone" id="f06-step2-widths-o1" data-artifact="the song page on a phone" style="left:460px;top:140px;width:212px;height:435px">
+      <img src="assets/shots/phone-song.png" alt="Like a Rolling Stone on a phone today: cover, title, note, chips, the words">
+    </div>
+    <div class="f06-step2-widths-mock" id="f06-step2-widths-o2" style="left:1030px;top:190px;width:358px;height:385px">
+      <div class="f06-step2-widths-mock-art"></div>
+      <div class="f06-step2-widths-mock-hd"><div class="f06-step2-widths-mock-tabs c"><span style="text-transform:uppercase">Eras &#160; Threads &#160; Search &#160; About</span></div></div>
+      <div class="f06-step2-widths-mock-cv" style="left:44px;top:46px;width:58px;height:58px"><span>Highway 61 Revisited</span></div>
+      <div class="f06-step2-widths-mock-k" style="left:112px;top:48px">Highway 61 Revisited · 1965</div>
+      <div class="f06-step2-widths-mock-ti" style="left:112px;top:62px;width:190px">Like a Rolling Stone</div>
+      <div class="f06-step2-widths-mock-note" style="left:44px;top:116px;width:270px">Released as a single in July 1965 at over six minutes, it reached number two in the US.</div>
+      <div class="f06-step2-widths-mock-chips" style="left:44px;top:160px"><span>LOSS</span><span>FREEDOM</span></div>
+      <div class="f06-step2-widths-mock-card" style="left:44px;top:186px;width:270px;height:220px"><div class="k">THE WORDS</div><div class="pv">A sneering address to a once-privileged woman who has fallen and must now fend for herself.</div><div class="tx">The singer turns on a woman who once lived in comfort and looked down on others, and who now finds herself alone, broke and without a home. Verse after verse he lists the friends and privileges she relied on and shows how each has failed her, then lands on a chorus that taunts and challenges at once.</div></div>
+    </div>
+    <div class="f06-step2-widths-mock" id="f06-step2-widths-o3" style="left:1412px;top:190px;width:388px;height:385px">
+      <div class="f06-step2-widths-mock-art"></div>
+      <div class="f06-step2-widths-mock-hd"><div class="f06-step2-widths-mock-brand">Dylan</div> <div class="f06-step2-widths-mock-tabs" style="left:84px"><span style="text-transform:uppercase">Eras &#160;Threads &#160;Map &#160;About</span></div><div class="f06-step2-widths-mock-srch">Search</div></div>
+      <div class="f06-step2-widths-mock-cv" style="left:16px;top:44px;width:128px;height:128px"><span style="font-size:13px;left:9px;top:9px">Highway 61 Revisited</span></div>
+      <div class="f06-step2-widths-mock-note" style="left:16px;top:182px;width:128px">Released as a single in July 1965 at over six minutes, it reached number two in the US.</div>
+      <div class="f06-step2-widths-mock-k" style="left:16px;top:268px">Listen and watch</div>
+      <div class="f06-step2-widths-mock-pl" style="left:16px;top:284px;width:128px">&#9654; Spotify</div>
+      <div class="f06-step2-widths-mock-pl" style="left:16px;top:314px;width:128px">&#9654; YouTube</div>
+      <div class="f06-step2-widths-mock-k" style="left:158px;top:44px">Highway 61 Revisited · 1965</div>
+      <div class="f06-step2-widths-mock-ti" style="left:158px;top:58px;width:216px">Like a Rolling Stone</div>
+      <div class="f06-step2-widths-mock-chips" style="left:158px;top:104px"><span>LOSS</span><span>FREEDOM</span></div>
+      <div class="f06-step2-widths-mock-card" style="left:158px;top:128px;width:214px;height:104px"><div class="k">THE WORDS</div><div class="pv">A sneering address to a once-privileged woman who has fallen and must now fend for herself.</div></div>
+      <div class="f06-step2-widths-mock-k" style="left:158px;top:244px">Connections</div>
+      <div class="f06-step2-widths-mock-cn" style="left:158px;top:256px">Jimi Hendrix's version <i>· covered by</i><br>Idiot Wind <i>· same theme</i><br>Ballad of a Thin Man <i>· same theme</i><br>The Rolling Stones' version <i>· covered by</i></div>
+    </div>
+
+    <!-- bands -->
+    <div class="f06-step2-widths-band" id="f06-step2-widths-b1" style="left:120px;width:892px">
+      <div class="f06-step2-widths-fill" id="f06-step2-widths-f1"></div>
+      <div class="f06-step2-widths-txt" id="f06-step2-widths-t1"><div class="n">phone</div><div class="w">up to 767 px</div><div class="d">today's layout</div></div>
+    </div>
+    <div class="f06-step2-widths-band" id="f06-step2-widths-b2" style="left:1020px;width:379px">
+      <div class="f06-step2-widths-fill" id="f06-step2-widths-f2"></div>
+      <div class="f06-step2-widths-txt" id="f06-step2-widths-t2"><div class="n">tablet</div><div class="w">768–1099 px</div><div class="d">one wider column</div></div>
+    </div>
+    <div class="f06-step2-widths-band" id="f06-step2-widths-b3" style="left:1407px;width:393px">
+      <div class="f06-step2-widths-fill co" id="f06-step2-widths-f3"></div>
+      <div class="f06-step2-widths-txt on-co" id="f06-step2-widths-t3"><div class="n">desktop</div><div class="w">1100 px and up</div><div class="d">the new layout</div></div>
+    </div>
+
+    <!-- the ruler -->
+    <div class="f06-step2-widths-axis" id="f06-step2-widths-axis"></div>
+    <svg class="f06-step2-widths-ticks" id="f06-step2-widths-ticks" viewBox="0 0 1920 26" aria-hidden="true">
+      <g style="stroke:rgba(var(--rp-ink-rgb),0.5); stroke-width:1">
+        <line x1="236.7" y1="6" x2="236.7" y2="12"/><line x1="353.3" y1="6" x2="353.3" y2="12"/><line x1="470" y1="6" x2="470" y2="12"/>
+        <line x1="586.7" y1="6" x2="586.7" y2="12"/><line x1="703.3" y1="6" x2="703.3" y2="12"/><line x1="820" y1="6" x2="820" y2="12"/>
+        <line x1="936.7" y1="6" x2="936.7" y2="12"/><line x1="1053.3" y1="6" x2="1053.3" y2="12"/><line x1="1170" y1="6" x2="1170" y2="12"/>
+        <line x1="1286.7" y1="6" x2="1286.7" y2="12"/><line x1="1520" y1="6" x2="1520" y2="12"/>
+        <line x1="1636.7" y1="6" x2="1636.7" y2="12"/><line x1="1753.3" y1="6" x2="1753.3" y2="12"/>
+      </g>
+      <g style="stroke:var(--rp-ink); stroke-width:2">
+        <line x1="121" y1="0" x2="121" y2="26"/><line x1="1016" y1="0" x2="1016" y2="26"/><line x1="1403" y1="0" x2="1403" y2="26"/><line x1="1800" y1="0" x2="1800" y2="26"/>
+      </g>
+    </svg>
+    <div class="f06-step2-widths-tl" id="f06-step2-widths-l0" style="left:121px">0</div>
+    <div class="f06-step2-widths-tl" id="f06-step2-widths-l768" style="left:1016px">768</div>
+    <div class="f06-step2-widths-tl" id="f06-step2-widths-l1100" style="left:1403px">1100</div>
+    <div class="f06-step2-widths-tl" id="f06-step2-widths-l1440" style="left:1800px">1440</div>
+    <div class="f06-step2-widths-unit" id="f06-step2-widths-unit">px</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "06-step2-widths";
+  var P = "f06-step2-widths-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var fade = function (tl, el, at, dur) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: dur || 0.5, ease: E }, at); };
+  // a band lights: its fill grows from the left edge, its words follow
+  var light = function (tl, n, at) {
+    tl.fromTo($("f" + n), { opacity: 0, scaleX: 0.6, transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, duration: 0.6, ease: E }, at);
+    tl.fromTo($("t" + n), { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, at + 0.15);
+  };
+  var outline = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 24, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the ruler draws as "the window's width picks the layout"; the three bands stand as dashed shells
+  rise(tl, $("anchor"), 0.07, 10);
+  tl.fromTo($("axis"), { scaleX: 0 }, { scaleX: 1, duration: 1.1, ease: E }, 1.75);
+  fade(tl, $("ticks"), 2.1, 0.6);
+  rise(tl, $("l0"), 2.2, 6);
+  rise(tl, $("l1440"), 2.6, 6);
+  fade(tl, $("unit"), 2.7);
+  fade(tl, $("b1"), 2.9, 0.4);
+  fade(tl, $("b2"), 3.0, 0.4);
+  fade(tl, $("b3"), 3.1, 0.4);
+
+  // phone: up to 767
+  light(tl, 1, 3.94);
+  outline(tl, $("o1"), 5.9);
+  // tablet: up to 1100
+  rise(tl, $("l768"), 8.5, 6);
+  light(tl, 2, 9.65);
+  outline(tl, $("o2"), 10.4);
+  // desktop: from 1100
+  rise(tl, $("l1100"), 11.9, 6);
+  light(tl, 3, 12.0);
+  outline(tl, $("o3"), 12.7);
+
+  tl.set({}, {}, 13.781);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

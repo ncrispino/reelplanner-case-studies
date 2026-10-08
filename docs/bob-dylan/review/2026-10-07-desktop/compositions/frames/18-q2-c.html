@@ -1,0 +1,118 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f18-q2-c-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f18-q2-c-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f18-q2-c-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the browser window: radius 14, 1px ink hairline, 36px title bar with three dots and the address */
+  .f18-q2-c-win { position:absolute; left:320px; top:150px; width:1280px; height:720px; box-sizing:border-box; border-radius:14px; border:1px solid rgba(var(--rp-ink-rgb),0.55); overflow:hidden; background:var(--rp-paper); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f18-q2-c-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f18-q2-c-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:9999px; background:rgba(var(--rp-ink-rgb),0.28); }
+  .f18-q2-c-addr { position:absolute; left:110px; top:5px; font:400 26px/26px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; font-variant-ligatures:none; }
+  .f18-q2-c-view { position:absolute; left:0; top:36px; width:1278px; height:682px; overflow:hidden; }
+
+  /* eleven columns, 116 px each (the real ones are about 120 px at 1440) */
+  .f18-q2-c-col { position:absolute; top:0; width:116px; height:682px; box-shadow:inset -1px 0 0 rgba(var(--rp-ink-rgb),0.22); }
+  .f18-q2-c-col span { position:absolute; left:calc(50% - 20px); bottom:40px; writing-mode:vertical-rl; transform:rotate(180deg); font:700 34px/40px "Inter"; letter-spacing:-0.01em; text-transform:uppercase; white-space:nowrap; }
+  .f18-q2-c-col i { position:absolute; left:0; top:28px; width:100%; text-align:center; font:400 26px/1 "JetBrains Mono"; letter-spacing:-0.05em; font-style:normal; opacity:0.82; }
+  .f18-q2-c-hit { position:absolute; left:232px; top:0; width:116px; height:682px; box-sizing:border-box; border:3px solid var(--rp-coral); }
+
+  .f18-q2-c-e1 { background:color-mix(in oklab, var(--rp-coral) 60%, var(--rp-ink)); color:var(--rp-slab-ink); }
+  .f18-q2-c-e2 { background:var(--rp-paper); color:var(--rp-ink); }
+  .f18-q2-c-e3 { background-color:var(--rp-slab); background-image:repeating-radial-gradient(circle at 50% 30%, rgba(var(--rp-slab-ink-rgb),0.16) 0 6px, transparent 6px 16px); color:var(--rp-slab-ink); }
+  .f18-q2-c-e4 { background:color-mix(in oklab, var(--rp-syn-num) 45%, var(--rp-tile)); color:var(--rp-ink); }
+  .f18-q2-c-e5 { background:color-mix(in oklab, var(--rp-syn-key) 45%, var(--rp-slab)); color:var(--rp-slab-ink); }
+  .f18-q2-c-e6 { background:color-mix(in oklab, var(--rp-syn-del) 70%, var(--rp-slab)); color:var(--rp-slab-ink); }   /* paper on this red: about 4.8:1, WCAG AA */
+  .f18-q2-c-e7 { background:color-mix(in oklab, var(--rp-syn-str) 40%, var(--rp-tile)); color:var(--rp-ink); }
+  .f18-q2-c-e8 { background:color-mix(in oklab, var(--rp-ink) 18%, var(--rp-tile)); color:var(--rp-ink); }
+  .f18-q2-c-e9 { background:color-mix(in oklab, var(--rp-syn-com) 55%, var(--rp-slab)); color:var(--rp-slab-ink); }
+  .f18-q2-c-e10 { background:var(--rp-tile-2); color:var(--rp-ink); }
+  .f18-q2-c-e11 { background:color-mix(in oklab, var(--rp-coral) 30%, var(--rp-slab)); color:var(--rp-slab-ink); }
+
+  /* Going Electric opening: its column widens to 600 px (about half the window); the other ten squeeze to 67.8 px each and stay readable */
+  .f18-q2-c-spread { position:absolute; left:0; top:0; width:600px; height:682px; }
+  .f18-q2-c-sp-yrs { position:absolute; left:48px; top:250px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-slab-ink-rgb),0.82); white-space:nowrap; }
+  .f18-q2-c-sp-name { position:absolute; left:44px; top:294px; width:520px; font:700 84px/0.98 "Inter"; letter-spacing:-0.03em; text-transform:uppercase; color:var(--rp-slab-ink); }
+</style>
+
+<div id="root" data-composition-id="18-q2-c" data-band="bottom" data-duration="6" data-width="1920" data-height="1080">
+
+  <div class="clip f18-q2-c-bg" id="f18-q2-c-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+  <div class="clip f18-q2-c-scene" id="f18-q2-c-scene" data-start="0" data-duration="6" data-track-index="1">
+    <div class="f18-q2-c-place" id="f18-q2-c-place">If C · step 3</div>
+
+    <div class="f18-q2-c-win" id="f18-q2-c-win">
+      <div class="f18-q2-c-bar">
+        <div class="f18-q2-c-dot" style="left:16px"></div>
+        <div class="f18-q2-c-dot" style="left:34px"></div>
+        <div class="f18-q2-c-dot" style="left:52px"></div>
+        <div class="f18-q2-c-addr" id="f18-q2-c-addr">/</div>
+      </div>
+      <div class="f18-q2-c-view">
+        <div class="f18-q2-c-col f18-q2-c-e1" id="f18-q2-c-c1" style="left:0"><i>1941</i><span>Duluth and Hibbing</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e2" id="f18-q2-c-c2" style="left:116px"><i>1961</i><span>Greenwich Village</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e3" id="f18-q2-c-c3" style="left:232px"><i id="f18-q2-c-c3yr">1965</i><span id="f18-q2-c-c3name">Going Electric</span>
+          <div class="f18-q2-c-spread" id="f18-q2-c-spread">
+            <div class="f18-q2-c-sp-yrs" id="f18-q2-c-sp-yrs">1965–1966</div>
+            <div class="f18-q2-c-sp-name" id="f18-q2-c-sp-name">Going Electric</div>
+          </div></div>
+        <div class="f18-q2-c-col f18-q2-c-e4" id="f18-q2-c-c4" style="left:348px"><i>1967</i><span>Basement and Country</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e5" id="f18-q2-c-c5" style="left:464px"><i>1973</i><span>Blood on the Tracks</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e6" id="f18-q2-c-c6" style="left:580px"><i>1979</i><span>Gospel</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e7" id="f18-q2-c-c7" style="left:696px"><i>1983</i><span>The &#39;80s</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e8" id="f18-q2-c-c8" style="left:812px"><i>1992</i><span>Back to the Roots</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e9" id="f18-q2-c-c9" style="left:928px"><i>1997</i><span>Late Renaissance</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e10" id="f18-q2-c-c10" style="left:1044px"><i>2015</i><span>The Standards</span></div>
+        <div class="f18-q2-c-col f18-q2-c-e11" id="f18-q2-c-c11" style="left:1160px;width:118px"><i>2020</i><span>Rough and Rowdy</span></div>
+        <div class="f18-q2-c-hit" id="f18-q2-c-hit"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "18-q2-c";
+  var $ = function (s) { return document.getElementById("f18-q2-c-" + s); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the eleven columns arrive across on "eleven narrow columns"
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power3.out" }, 0.03);
+  tl.fromTo($("win"), { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.05);
+  for (var i = 1; i <= 11; i++) {
+    tl.fromTo($("c" + i), { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.3 + (i - 1) * 0.07);
+  }
+  tl.set($("spread"), { opacity: 0 }, 0);
+  tl.set($("sp-yrs"), { opacity: 0 }, 0);
+  tl.set($("sp-name"), { opacity: 0 }, 0);
+
+  // on "a click": Going Electric is picked (coral edge), then on "opens one" it widens into its spread; the address changes; hold
+  tl.fromTo($("hit"), { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power3.out" }, 2.6);
+  // the columns re-lay: 1-2 narrow at the left, Going Electric 600 px, 4-11 narrow at the right (10 x 67.8 + 600 = 1278)
+  var N = 67.8, W = 600;
+  for (var j = 1; j <= 11; j++) {
+    var left = j < 3 ? (j - 1) * N : (j === 3 ? 2 * N : 2 * N + W + (j - 4) * N);
+    var width = j === 3 ? W : (j === 11 ? 1278 - left : N);
+    tl.to($("c" + j), { x: left - (j - 1) * 116, width: width, duration: 0.5, ease: "power3.inOut" }, 2.9);
+  }
+  tl.to($("hit"), { x: 2 * N - 232, width: W, duration: 0.5, ease: "power3.inOut" }, 2.9);
+  tl.to($("c3yr"), { opacity: 0, duration: 0.2, ease: "power1.out" }, 2.9);
+  tl.to($("c3name"), { opacity: 0, duration: 0.2, ease: "power1.out" }, 2.9);
+  tl.to($("spread"), { opacity: 1, duration: 0.2, ease: "power3.out" }, 3.25);
+  tl.set($("addr"), { textContent: "/era/electric/" }, 3.15);
+  tl.to($("sp-yrs"), { opacity: 1, duration: 0.25, ease: "power3.out" }, 3.3);
+  tl.to($("sp-name"), { opacity: 1, duration: 0.3, ease: "power3.out" }, 3.35);
+
+  tl.set({}, {}, 3.776);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

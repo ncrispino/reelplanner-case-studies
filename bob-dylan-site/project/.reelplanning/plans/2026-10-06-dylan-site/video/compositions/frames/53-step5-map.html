@@ -1,0 +1,280 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes in this frame: 44 (title, card title) and 26 (everything else) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f53-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f53-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* anchor */
+  .f53-step { position:absolute; left:120px; top:130px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f53-title { position:absolute; left:120px; top:172px; width:420px; font:400 44px/1.08 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* the address above the phone */
+  .f53-addr { position:absolute; left:760px; top:62px; width:400px; text-align:center; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the phone (Video direction) */
+  .f53-phone { position:absolute; left:760px; top:110px; width:400px; height:800px; box-sizing:border-box; border-radius:44px; border:1px solid var(--rp-ink); background:var(--rp-paper); overflow:hidden; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f53-tabs { position:absolute; left:0; bottom:0; width:398px; height:80px; box-sizing:border-box; padding:0 24px 8px; display:flex; justify-content:space-between; align-items:center; background:var(--rp-paper); border-top:1px solid rgba(var(--rp-ink-rgb),0.14); font:400 26px/1 "Inter"; color:rgba(var(--rp-ink-rgb),0.55); }
+  .f53-tabs .on { color:var(--rp-ink); font-weight:700; }
+
+  /* Cards | Map toggle: two stacked states, crossfaded on the tap */
+  .f53-tog { position:absolute; left:99px; top:26px; width:200px; height:52px; }
+  .f53-tst { position:absolute; left:0; top:0; width:200px; height:52px; box-sizing:border-box; border-radius:9999px; border:1px solid rgba(var(--rp-ink-rgb),0.3); background:var(--rp-paper); overflow:hidden; }
+  .f53-tst span { position:absolute; top:0; width:100px; height:50px; text-align:center; font:400 26px/50px "Inter"; color:var(--rp-ink); }
+  .f53-tst span.on { background:var(--rp-ink); color:var(--rp-on-ink); }
+  .f53-tap { position:absolute; left:102px; top:-6px; width:92px; height:64px; box-sizing:border-box; border-radius:9999px; border:3px solid var(--rp-ink); }
+
+  /* card view */
+  .f53-cards { position:absolute; left:0; top:100px; width:398px; height:618px; }
+  .f53-thr { position:absolute; left:24px; top:4px; font:400 26px/32px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f53-of { position:absolute; right:28px; top:28px; font:400 26px/32px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f53-card { position:absolute; left:24px; top:52px; width:350px; height:540px; box-sizing:border-box; padding:28px; border-radius:12px; border:1px solid rgba(var(--rp-ink-rgb),0.12); background:color-mix(in oklab, var(--rp-paper) 80%, var(--rp-syn-str)); }
+  .f53-cy { font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); }
+  .f53-ct { margin-top:16px; font:400 44px/1.05 "EB Garamond"; letter-spacing:-0.015em; color:var(--rp-ink); }
+  .f53-ca { margin-top:12px; font:italic 400 26px/1.3 "Inter"; color:rgba(var(--rp-ink-rgb),0.72); }
+  .f53-cw { position:absolute; left:28px; right:28px; bottom:28px; font:400 26px/1.38 "Inter"; color:var(--rp-ink); }
+
+  /* map view: fixed dot positions in map coordinates (520 x 610), the viewport shows 398 of it; Masters of War sits at its centre (199,305) */
+  .f53-map { position:absolute; left:0; top:100px; width:398px; height:610px; overflow:hidden; }
+  .f53-pan { position:absolute; left:0; top:0; width:520px; height:610px; }
+  .f53-pan svg { position:absolute; left:0; top:0; width:520px; height:610px; overflow:visible; }
+  .f53-e { stroke:rgba(var(--rp-ink-rgb),0.34); stroke-width:2; stroke-linecap:round; }
+  .f53-e.join { stroke:var(--rp-ink); stroke-width:3; }
+  .f53-dc { fill:var(--rp-coral); }
+  .f53-d1 { fill:var(--rp-ink); }
+  .f53-d2 { fill:rgba(var(--rp-ink-rgb),0.45); }
+  .f53-lb { position:absolute; text-align:right; font:400 26px/32px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f53-lb.c { font-weight:700; }
+  .f53-touch { position:absolute; left:286px; top:441px; width:48px; height:48px; box-sizing:border-box; border-radius:24px; border:3px solid var(--rp-ink); background:rgba(var(--rp-ink-rgb),0.08); }
+
+  /* a word pinned on the thread header */
+  .f53-gloss { position:absolute; left:236px; top:0px; height:40px; padding:0 14px; border-radius:6px; background:var(--rp-ink); color:var(--rp-on-ink); font:400 26px/40px "Inter"; white-space:nowrap; }
+
+  /* the dots note */
+  .f53-lead { position:absolute; left:1172px; top:268px; width:44px; height:1px; background:var(--rp-ink); transform-origin:0 50%; }
+  .f53-note { position:absolute; left:1232px; top:250px; width:440px; font:400 26px/36px "Inter"; color:var(--rp-ink); }
+
+  /* the laptop: cards and map side by side */
+  .f53-lap { position:absolute; left:1212px; top:330px; width:650px; height:430px; }
+  .f53-scr { position:absolute; left:20px; top:0; width:610px; height:340px; box-sizing:border-box; border-radius:12px; border:2px solid rgba(var(--rp-ink-rgb),0.7); background:var(--rp-paper); overflow:hidden; }
+  .f53-base { position:absolute; left:0; top:348px; width:650px; height:14px; border-radius:7px; background:rgba(var(--rp-ink-rgb),0.7); }
+  /* the card column: one card */
+  .f53-lcol { position:absolute; left:16px; top:16px; width:300px; height:304px; }
+  .f53-lcard { position:absolute; left:0; top:0; width:300px; height:304px; box-sizing:border-box; padding:16px 14px; border-radius:8px; border:1px solid rgba(var(--rp-ink-rgb),0.12); background:color-mix(in oklab, var(--rp-paper) 80%, var(--rp-syn-str)); font:400 26px/32px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  /* the map beside it: 258 x 304 */
+  .f53-lmap { position:absolute; left:332px; top:16px; width:258px; height:304px; }
+  .f53-lmap svg { position:absolute; left:0; top:0; width:258px; height:304px; overflow:visible; }
+  .f53-llb { position:absolute; text-align:right; font:400 26px/32px "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f53-llb.c { font-weight:700; }
+  .f53-cap { position:absolute; left:20px; top:386px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="53-step5-map" data-band="bottom" data-start="0" data-duration="20.672" data-width="1920" data-height="1080">
+  <div class="clip f53-bg" id="f53-bg" data-start="0" data-duration="20.672" data-track-index="0"></div>
+
+  <div class="clip f53-scene" id="f53-scene" data-start="0" data-duration="20.672" data-track-index="1">
+    <div class="f53-step" id="f53-step">Step 5</div>
+    <div class="f53-title" id="f53-title">Threads and the map</div>
+
+    <div class="f53-addr" id="f53-addr1">#/thread/borrowed-tunes</div>
+    <div class="f53-addr" id="f53-addr2">#/map/masters-of-war</div>
+
+    <div class="f53-phone" id="f53-phone" data-artifact="#/thread/borrowed-tunes → #/map/masters-of-war">
+
+      <!-- card view -->
+      <div class="f53-cards" id="f53-cards">
+        <div class="f53-thr" id="f53-thr">Borrowed tunes</div>
+        <span class="f53-gloss" id="f53-gloss" data-gloss="thread">thread</span>
+        <div class="f53-card" id="f53-card">
+          <div class="f53-of" id="f53-of">3 of 9</div>
+          <div class="f53-cy" id="f53-cy">1963</div>
+          <div class="f53-ct" id="f53-ct">Masters of War</div>
+          <div class="f53-ca" id="f53-ca">The Freewheelin' Bob Dylan</div>
+          <div class="f53-cw" id="f53-cw">The tune is “Nottamun Town”, an Appalachian song.</div>
+        </div>
+      </div>
+
+      <!-- map view, centred on Masters of War -->
+      <div class="f53-map" id="f53-map">
+        <div class="f53-pan" id="f53-pan">
+          <svg viewBox="0 0 520 610" xmlns="http://www.w3.org/2000/svg">
+            <!-- one connection out, from Masters of War (199,305), the centre of the 398 x 610 map area -->
+            <line class="f53-e join f53-e1" id="f53-eN" x1="199" y1="305" x2="205" y2="190" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e1" id="f53-eB" x1="199" y1="305" x2="380" y2="200" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e1" id="f53-eG" x1="199" y1="305" x2="276" y2="80"  pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e1" id="f53-eH" x1="199" y1="305" x2="276" y2="520" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e1" id="f53-eS" x1="199" y1="305" x2="170" y2="420" pathLength="1" stroke-dasharray="1"/>
+            <!-- two connections out -->
+            <line class="f53-e f53-e2" x1="205" y1="190" x2="228" y2="130" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e2" x1="276" y1="80"  x2="340" y2="30"  pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e2" x1="276" y1="80"  x2="355" y2="95"  pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e2" x1="380" y1="200" x2="385" y2="268" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e2" x1="199" y1="305" x2="320" y2="330" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e2" x1="199" y1="305" x2="330" y2="410" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e2" x1="170" y1="420" x2="215" y2="425" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e2" x1="276" y1="520" x2="350" y2="500" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e2" x1="276" y1="520" x2="330" y2="580" pathLength="1" stroke-dasharray="1"/>
+            <!-- arrive with the drag -->
+            <line class="f53-e f53-e3" x1="385" y1="268" x2="435" y2="300" pathLength="1" stroke-dasharray="1"/>
+            <line class="f53-e f53-e3" x1="330" y1="410" x2="432" y2="440" pathLength="1" stroke-dasharray="1"/>
+
+            <circle class="f53-d2 f53-n2" cx="228" cy="130" r="7"/>
+            <circle class="f53-d2 f53-n2" cx="340" cy="30"  r="7"/>
+            <circle class="f53-d2 f53-n2" cx="355" cy="95"  r="7"/>
+            <circle class="f53-d2 f53-n2" cx="385" cy="268" r="7"/>
+            <circle class="f53-d2 f53-n2" cx="320" cy="330" r="7"/>
+            <circle class="f53-d2 f53-n2" cx="330" cy="410" r="7"/>
+            <circle class="f53-d2 f53-n2" cx="215" cy="425" r="7"/>
+            <circle class="f53-d2 f53-n2" cx="350" cy="500" r="7"/>
+            <circle class="f53-d2 f53-n2" cx="330" cy="580" r="7"/>
+            <circle class="f53-d2 f53-n3" cx="435" cy="300" r="7"/>
+            <circle class="f53-d2 f53-n3" cx="432" cy="440" r="7"/>
+
+            <circle class="f53-d1" id="f53-nN" cx="205" cy="190" r="10"/>
+            <circle class="f53-d1" id="f53-nB" cx="380" cy="200" r="10"/>
+            <circle class="f53-d1" id="f53-nG" cx="276" cy="80"  r="10"/>
+            <circle class="f53-d1" id="f53-nH" cx="276" cy="520" r="10"/>
+            <circle class="f53-d1" id="f53-nS" cx="170" cy="420" r="10"/>
+            <circle class="f53-dc" id="f53-nC" cx="199" cy="305" r="14"/>
+          </svg>
+          <!-- labels end 10 px before their dot (right-anchored, so the gap holds whatever the text width);
+               Blowin' in the Wind sits 10 px above its dot -->
+          <div class="f53-lb c" id="f53-lC" style="right:345px; top:273px">Masters<br>of War</div>
+          <div class="f53-lb" id="f53-lN" style="right:335px; top:158px">Nottamun<br>Town</div>
+          <div class="f53-lb" id="f53-lB" style="right:128px; top:116px">Blowin' in<br>the Wind</div>
+          <div class="f53-lb" id="f53-lG" style="right:264px; top:48px">Girl from the<br>North Country</div>
+          <div class="f53-lb" id="f53-lH" style="right:264px; top:488px">A Hard Rain's<br>a-Gonna Fall</div>
+          <div class="f53-lb" id="f53-lS" style="right:370px; top:388px">Song to<br>Woody</div>
+        </div>
+        <div class="f53-touch" id="f53-touch"></div>
+      </div>
+
+      <div class="f53-tog">
+        <div class="f53-tst" id="f53-tog1"><span class="on" style="left:0">Cards</span><span style="left:98px">Map</span></div>
+        <div class="f53-tst" id="f53-tog2"><span style="left:0">Cards</span><span class="on" style="left:98px">Map</span></div>
+        <div class="f53-tap" id="f53-tap"></div>
+      </div>
+
+      <div class="f53-tabs"><span>Eras</span> <span class="on">Threads</span> <span>Search</span> <span>About</span></div>
+    </div>
+
+
+    <div class="f53-lead" id="f53-lead"></div>
+    <div class="f53-note" id="f53-note">about 15 dots: two connections out</div>
+
+    <div class="f53-lap" id="f53-lap" data-artifact="the map page above 768 px">
+      <div class="f53-scr" id="f53-scr">
+        <div class="f53-lcol" id="f53-lcol">
+          <div class="f53-lcard" id="f53-lcard">Masters of War · 1963</div>
+        </div>
+        <div class="f53-lmap" id="f53-lmap">
+          <svg viewBox="0 0 258 304" xmlns="http://www.w3.org/2000/svg">
+            <line class="f53-e join" x1="150" y1="165" x2="170" y2="78"/>
+            <line class="f53-e" x1="150" y1="165" x2="180" y2="260"/>
+            <line class="f53-e" x1="150" y1="165" x2="235" y2="120"/>
+            <line class="f53-e" x1="150" y1="165" x2="232" y2="215"/>
+            <line class="f53-e" x1="170" y1="78"  x2="240" y2="36"/>
+            <line class="f53-e" x1="180" y1="260" x2="238" y2="286"/>
+            <circle class="f53-d2" cx="240" cy="36"  r="6"/>
+            <circle class="f53-d2" cx="238" cy="286" r="6"/>
+            <circle class="f53-d1" cx="235" cy="120" r="8"/>
+            <circle class="f53-d1" cx="232" cy="215" r="8"/>
+            <circle class="f53-d1" cx="170" cy="78"  r="8"/>
+            <circle class="f53-d1" cx="180" cy="260" r="8"/>
+            <circle class="f53-d1" cx="150" cy="165" r="11"/>
+          </svg>
+          <!-- labels end 10 px before their dot -->
+          <div class="f53-llb c" style="right:129px; top:133px">Masters<br>of War</div>
+          <div class="f53-llb" style="right:106px; top:46px">Nottamun<br>Town</div>
+          <div class="f53-llb" style="right:96px; top:228px">Blowin' in<br>the Wind</div>
+        </div>
+      </div>
+      <div class="f53-base"></div>
+      <div class="f53-cap" id="f53-cap">above 768 px</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "53-step5-map";
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out", IO = "power3.inOut";
+  function up(sel, t, d) { tl.fromTo(sel, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: d || 0.5, ease: E }, t); }
+  function draw(sel, t, d, st) { tl.fromTo(sel, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: IO, stagger: st || 0 }, t); }
+  function popAt(sel, t, st) { tl.fromTo(sel, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.35, ease: E, transformOrigin: "50% 50%", stagger: st || 0 }, t); }
+
+  // Scene 1 (0-7s): anchor; the phone on card 3 of 9, Masters of War, with the Cards | Map toggle
+  tl.fromTo("#f53-step", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 0.172);
+  tl.fromTo("#f53-title", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 0.303);
+  tl.fromTo("#f53-phone", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.258);
+  tl.fromTo("#f53-addr1", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 0.603);
+  up("#f53-thr", 0.862);
+  up("#f53-of", 1.722);
+  tl.fromTo("#f53-card", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 1.378);
+  up("#f53-cy", 1.636);
+  up("#f53-ct", 1.894);
+  up("#f53-ca", 2.241);
+  tl.fromTo("#f53-gloss", { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, 2.757);
+  up("#f53-cw", 3.446, 0.6);
+  tl.fromTo("#f53-tog1", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 0.862);
+
+  // Scene 2 (7-16s): a tap on Map; the card fades and the map draws, centred on Masters of War
+  tl.set("#f53-map", { opacity: 0 }, 0);
+  tl.set("#f53-tog2", { opacity: 0 }, 0);
+  tl.fromTo("#f53-tap", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.3, ease: E }, 6.201);
+  tl.to("#f53-tap", { opacity: 0, duration: 0.3, ease: E }, 6.633);
+  tl.to("#f53-tog2", { opacity: 1, duration: 0.25, ease: E }, 6.417);
+  tl.to("#f53-tog1", { opacity: 0, duration: 0.25, ease: E }, 6.417);
+  tl.to("#f53-cards", { opacity: 0, duration: 0.4, ease: E }, 6.545);
+  tl.to(["#f53-addr1", "#f53-gloss"], { opacity: 0, duration: 0.35, ease: E }, 6.633);
+  tl.fromTo("#f53-addr2", { opacity: 0 }, { opacity: 1, duration: 0.45, ease: E }, 6.892);
+  tl.set("#f53-map", { opacity: 1 }, 6.847);
+  tl.set("#f53-pan .f53-e", { strokeDashoffset: 1 }, 0);
+  tl.set(["#f53-nC", "#f53-nN", "#f53-nB", "#f53-nG", "#f53-nH", "#f53-nS", ".f53-n2", ".f53-n3"], { opacity: 0 }, 0);
+  popAt("#f53-nC", 7.063);
+  up("#f53-lC", 7.322);
+  draw("#f53-eN", 7.838, 0.5);   // joined: Nottamun Town
+  popAt("#f53-nN", 8.184);
+  up("#f53-lN", 8.269);
+  draw("#f53-eB", 8.872, 0.5);
+  popAt("#f53-nB", 9.216);
+  up("#f53-lB", 9.302);
+  draw("#f53-eG", 9.56, 0.45);
+  popAt("#f53-nG", 9.862);
+  up("#f53-lG", 9.95);
+  draw("#f53-eH", 10.249, 0.4);
+  popAt("#f53-nH", 10.508);
+  up("#f53-lH", 10.594);
+  draw("#f53-eS", 10.853, 0.4);
+  popAt("#f53-nS", 11.113);
+  up("#f53-lS", 11.198);
+  draw(".f53-e2", 11.628, 0.4, 0.08);
+  popAt(".f53-n2", 11.8, 0.08);
+  tl.fromTo("#f53-lead", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: E }, 12.575);
+  tl.fromTo("#f53-note", { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 12.749);
+
+  // Scene 3 (16-24s): a drag left; two more dots arrive; the laptop shows both side by side; hold
+  tl.fromTo("#f53-touch", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: E }, 13.953);
+  tl.fromTo("#f53-pan", { x: 0 }, { x: -48, duration: 1.0, ease: IO }, 14.299);
+  tl.fromTo("#f53-touch", { x: 0 }, { x: -48, duration: 1.0, ease: IO }, 14.299);
+  tl.to("#f53-touch", { opacity: 0, duration: 0.3, ease: E }, 15.246);
+  draw(".f53-e3", 15.16, 0.45, 0.12);
+  popAt(".f53-n3", 15.418, 0.2);
+  tl.fromTo("#f53-lap", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 16.365);
+  tl.fromTo("#f53-lcard", { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 16.882);
+  tl.fromTo("#f53-lmap", { opacity: 0, x: 12 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 17.142);
+  tl.fromTo("#f53-cap", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 17.657);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 27.544);
+  window.__timelines = window.__timelines || {};
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

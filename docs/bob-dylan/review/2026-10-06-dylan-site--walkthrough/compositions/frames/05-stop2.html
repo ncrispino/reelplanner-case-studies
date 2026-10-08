@@ -1,0 +1,103 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 44 (place heading, choice), 26 (labels, lines) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; container-type:size; -webkit-font-smoothing:antialiased; }
+  .f05-stop2-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f05-stop2-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f05-stop2-anchor { position:absolute; left:80px; top:86px; display:flex; align-items:baseline; gap:18px; white-space:nowrap; }
+  .f05-stop2-anchor .p { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f05-stop2-anchor .h { font:400 44px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  .f05-stop2-card { position:absolute; left:80px; top:190px; width:1760px; height:620px; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f05-stop2-txt { position:absolute; left:48px; top:44px; width:1664px; }
+  .f05-stop2-chose { font:700 44px/1.18 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); }
+  .f05-stop2-why { margin-top:14px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+
+  /* the count on one scale: 135 = 1664 px (12.33 px per connection); 49 = 604 px */
+  .f05-stop2-count { position:absolute; left:48px; top:250px; width:1664px; height:330px; }
+  .f05-stop2-track { position:absolute; left:0; top:0; width:1664px; height:36px; box-sizing:border-box; border:1px solid rgba(var(--rp-ink-rgb),0.2); border-radius:6px; background:var(--rp-paper); }
+  .f05-stop2-old { position:absolute; left:0; top:0; width:604px; height:36px; border-radius:6px 0 0 6px; background:rgba(var(--rp-ink-rgb),0.42); transform-origin:0 50%; }
+  .f05-stop2-new { position:absolute; left:604px; top:0; width:1060px; height:36px; border-radius:0 6px 6px 0; background:var(--rp-coral); transform-origin:0 50%; }
+  .f05-stop2-num { position:absolute; top:52px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; text-align:right; }
+
+  /* the 86 new ones by kind, each under its stretch of the new segment */
+  .f05-stop2-kbar { position:absolute; height:30px; border-radius:4px; background:rgba(var(--rp-ink-rgb),0.72); transform-origin:0 50%; }
+  .f05-stop2-klab { position:absolute; width:560px; font:400 26px/30px "Inter"; color:var(--rp-ink); white-space:nowrap; text-align:right; }
+</style>
+
+<div id="root" data-composition-id="05-stop2" data-band="bottom" data-duration="17.216" data-width="1920" data-height="1080">
+  <div class="clip f05-stop2-bg" id="f05-stop2-bg" data-start="0" data-duration="17.216" data-track-index="0"></div>
+
+  <div class="clip f05-stop2-scene" id="f05-stop2-scene" data-start="0" data-duration="17.216" data-track-index="1">
+    <div class="f05-stop2-anchor" id="f05-stop2-anchor"><span class="p">Step 2 ·</span><span class="h">The dataset</span></div>
+
+    <div class="f05-stop2-card" id="f05-stop2-ca6" data-call="a6">
+      <div class="f05-stop2-txt">
+        <div class="f05-stop2-chose" id="f05-stop2-c1">135 connections, up from 49</div>
+        <div class="f05-stop2-why" id="f05-stop2-w1">the first writers could only link inside their own era</div>
+      </div>
+
+      <div class="f05-stop2-count" id="f05-stop2-count">
+        <div class="f05-stop2-track" id="f05-stop2-track"></div>
+        <div class="f05-stop2-old" id="f05-stop2-old"></div>
+        <div class="f05-stop2-new" id="f05-stop2-new"></div>
+        <div class="f05-stop2-num" id="f05-stop2-n49" style="left:544px;width:60px">49</div>
+        <div class="f05-stop2-num" id="f05-stop2-n135" style="left:1564px;width:100px">135</div>
+
+        <!-- 30 covers: 604 -> 974 -->
+        <div class="f05-stop2-kbar" id="f05-stop2-k1" style="left:604px;top:110px;width:370px"></div>
+        <div class="f05-stop2-klab" id="f05-stop2-l1" style="left:28px;top:110px">30 covers</div>
+        <!-- 9 borrowed tunes: 974 -> 1085 -->
+        <div class="f05-stop2-kbar" id="f05-stop2-k2" style="left:974px;top:162px;width:111px"></div>
+        <div class="f05-stop2-klab" id="f05-stop2-l2" style="left:398px;top:162px">9 borrowed tunes</div>
+        <!-- 46 same theme: 1085 -> 1652 -->
+        <div class="f05-stop2-kbar" id="f05-stop2-k3" style="left:1085px;top:214px;width:567px"></div>
+        <div class="f05-stop2-klab" id="f05-stop2-l3" style="left:509px;top:214px">46 same theme</div>
+        <!-- 1 rewrite: 1652 -> 1664 -->
+        <div class="f05-stop2-kbar" id="f05-stop2-k4" style="left:1652px;top:266px;width:12px"></div>
+        <div class="f05-stop2-klab" id="f05-stop2-l4" style="left:1076px;top:266px">1 rewrite</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f05-stop2-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+  var grow = function (tl, el, at, dur) { tl.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: dur || 0.8, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8s): the card and the count, 49 then on to 135
+  rise(tl, $("anchor"), 0.108, 10);
+  tl.fromTo($("ca6"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.269);
+  rise(tl, $("c1"), 0.969);
+  tl.fromTo($("track"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 1.722);
+  grow(tl, $("old"), 2.152, 1.0);
+  rise(tl, $("n49"), 3.013, 8);
+  grow(tl, $("new"), 4.734, 1.2);
+  rise(tl, $("n135"), 5.81, 8);
+  rise(tl, $("w1"), 6.671);
+
+  // Scene 2 (8-16s): the new ones by kind, each under its own stretch; hold
+  grow(tl, $("k1"), 9.038);   rise(tl, $("l1"), 9.253, 8);
+  grow(tl, $("k2"), 10.114);   rise(tl, $("l2"), 10.329, 8);
+  grow(tl, $("k3"), 11.19);  rise(tl, $("l3"), 11.405, 8);
+  grow(tl, $("k4"), 12.051, 0.5); rise(tl, $("l4"), 12.159, 8);
+
+  tl.set({}, {}, 16);
+  window.__timelines["05-stop2"] = tl;
+})();
+</script>
+</template>

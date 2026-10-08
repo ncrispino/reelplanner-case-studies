@@ -1,0 +1,31 @@
+---
+// A moment's poster, drawn in its era's look (the walkthrough review of plan 2026-10-07-fuller, on the photo gaps: "is
+// there something else we can put here? be creative but also consistent"): the moment with no photograph or clip of
+// its own gets the same drawn treatment as an album with no cover (Cover.astro): its year large, its title, its era.
+// (The year's records are listed under it, on the moment page.)
+import type { Era, Moment } from "../lib/data";
+interface Props { moment: Moment; era: Era }
+const { moment, era } = Astro.props;
+---
+<div class="mcard-wrap">
+  <figure class="mcard" data-era={era.id} aria-label={`${moment.title}, ${moment.year}`}>
+    <div class="drawn">
+      <span class="k">{era.title}</span>
+      <span class="yy year">{moment.year}</span>
+      <span class="t">{moment.title}</span>
+    </div>
+  </figure>
+  <p class="credit">No photograph or film of it is free to use; this card stands in for one.</p>
+</div>
+<style>
+  .mcard { position: relative; margin: 0; aspect-ratio: 3 / 2; overflow: hidden; background: var(--card); }
+  .mcard .drawn { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 7%;
+    background: var(--texture), var(--accent); color: var(--accent-ink); overflow: hidden; }
+  .mcard .k { font: var(--label-weight, 600) 13px/1 var(--label); letter-spacing: .08em; text-transform: uppercase; opacity: .9; align-self: flex-start; }
+  .mcard .yy { font-family: var(--display-alt, var(--display)); font-weight: var(--display-weight); line-height: .9;
+    font-size: clamp(64px, 14vw, 132px); letter-spacing: -.02em; }
+  .mcard .t { font-family: var(--display-alt, var(--display)); font-weight: var(--display-weight); text-transform: var(--display-case);
+    font-style: var(--display-style); letter-spacing: var(--display-track); line-height: 1.05; font-size: clamp(20px, 3.4vw, 32px);
+    max-width: 18ch; align-self: flex-start; }
+  .mcard-wrap .credit { margin-top: 12px; }
+</style>

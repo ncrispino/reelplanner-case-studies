@@ -1,0 +1,91 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f44-q3-photos-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f44-q3-photos-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f44-q3-photos-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f44-q3-photos-q { position:absolute; left:90px; top:160px; width:1740px; font:400 76px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f44-q3-photos-opt { position:absolute; box-sizing:border-box; top:340px; width:540px; height:440px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f44-q3-photos-opt .k { position:absolute; left:32px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f44-q3-photos-opt .l { position:absolute; left:32px; top:84px; right:32px; font:400 52px/1.08 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f44-q3-photos-ring { position:absolute; left:-2px; top:-2px; right:-2px; bottom:-2px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:13px; }
+  .f44-q3-photos-rec { color:var(--rp-coral-deep); }
+
+  /* A: a small crop of a real Commons photograph, its credit beside it */
+  .f44-q3-photos-photo { position:absolute; left:32px; top:232px; width:132px; height:172px; overflow:hidden; border-radius:6px; }
+  .f44-q3-photos-photo img { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 12%; }
+  .f44-q3-photos-photocredit { position:absolute; left:188px; top:338px; font:400 26px/34px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); white-space:nowrap; }
+  /* B: the fee */
+  .f44-q3-photos-fee { position:absolute; left:32px; top:232px; width:476px; height:172px; box-sizing:border-box; border:2px dashed rgba(var(--rp-ink-rgb),0.34); border-radius:8px; display:flex; align-items:center; justify-content:center; text-align:center; font:400 26px/1.4 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  /* C: a panel with only its title, in the Gospel theme */
+  .f44-q3-photos-panel { position:absolute; left:32px; top:232px; width:476px; height:172px; border-radius:8px; background:color-mix(in oklab, var(--rp-syn-del) 50%, var(--rp-slab)); }
+  .f44-q3-photos-panel span { position:absolute; left:0; top:56px; width:476px; text-align:center; font:400 52px/1 "EB Garamond"; letter-spacing:0.2em; color:var(--rp-syn-num); }
+</style>
+
+<div id="root" data-composition-id="44-q3-photos" data-band="bottom" data-duration="23.519" data-width="1920" data-height="1080">
+
+  <div class="clip f44-q3-photos-bg" id="f44-q3-photos-bg" data-start="0" data-duration="24" data-track-index="0"></div>
+
+  <div class="clip f44-q3-photos-scene" id="f44-q3-photos-scene" data-start="0" data-duration="24" data-track-index="1">
+    <div class="f44-q3-photos-place" id="f44-q3-photos-place">Question 2 · step 3</div>
+    <div class="f44-q3-photos-q" id="f44-q3-photos-q" data-question>Where should the era photographs come from?</div>
+
+    <div class="f44-q3-photos-opt" id="f44-q3-photos-opt-a" data-option="a" style="left:90px">
+      <div class="f44-q3-photos-ring" id="f44-q3-photos-ring"></div>
+      <span class="k">A<span class="f44-q3-photos-rec" id="f44-q3-photos-rec"> · RECOMMENDED</span></span>
+      <div class="l">Wikimedia Commons, free-licensed</div>
+      <div class="f44-q3-photos-photo" id="f44-q3-photos-photo"><img src="assets/photos/1984-barcelona.jpg" alt="Bob Dylan, Barcelona, 1984"></div>
+      <div class="f44-q3-photos-photocredit" id="f44-q3-photos-photocredit">Xavier Badosa<br>CC BY 2.0</div>
+    </div>
+    <div class="f44-q3-photos-opt" id="f44-q3-photos-opt-b" data-option="b" style="left:690px">
+      <span class="k">B</span>
+      <div class="l">Licensed press photographs</div>
+      <div class="f44-q3-photos-fee" id="f44-q3-photos-fee">fee per image ·<br>renewed yearly</div>
+    </div>
+    <div class="f44-q3-photos-opt" id="f44-q3-photos-opt-c" data-option="c" style="left:1290px">
+      <span class="k">C</span>
+      <div class="l">No photographs</div>
+      <div class="f44-q3-photos-panel" id="f44-q3-photos-panel"><span>GOSPEL</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "44-q3-photos";
+  var $ = function (s) { return document.getElementById("f44-q3-photos-" + s); };
+  var E = "power3.out";
+  var slideUp = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, at); };
+  var fade = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-8s): the heading; card A with a credited Commons photo
+  fade(tl, $("place"), 0.096);
+  tl.fromTo($("q"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.193);
+  slideUp(tl, $("opt-a"), 2.6);
+  fade(tl, $("photo"), 2.877);
+  fade(tl, $("photocredit"), 3.453);
+
+  // Scene 2 (8-14s): card B, the fee
+  slideUp(tl, $("opt-b"), 11.2);
+  fade(tl, $("fee"), 9.016);
+
+  // Scene 3 (14-19s): card C, a panel with only its title
+  slideUp(tl, $("opt-c"), 15.9);
+  fade(tl, $("panel"), 14.578);
+
+  // Scene 4 (19-24s): A gets the coral border and the key; then hold still
+  tl.fromTo($("ring"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 20.0);
+  tl.fromTo($("rec"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 20.3);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 23.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

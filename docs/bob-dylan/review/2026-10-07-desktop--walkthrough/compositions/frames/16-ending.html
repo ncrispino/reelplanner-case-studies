@@ -1,0 +1,69 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 76 (the question), 26 (addresses) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f16-ending-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f16-ending-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* three small windows: 1440 x 900 at 0.38 = 547 x 342, a 36 px title bar above; x 90 / 687 / 1284, top 130 */
+  .f16-ending-win { position:absolute; top:130px; width:549px; height:380px; box-sizing:border-box; border-radius:14px; border:1px solid rgba(var(--rp-ink-rgb),0.24); overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f16-ending-bar { position:absolute; left:0; top:0; width:100%; height:36px; box-sizing:border-box; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.14); background:var(--rp-tile); }
+  .f16-ending-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.24); }
+  .f16-ending-addr { position:absolute; left:84px; right:12px; top:0; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.7); white-space:nowrap; overflow:hidden; }
+  .f16-ending-shot { position:absolute; left:0; top:36px; width:547px; height:342px; overflow:hidden; }
+  .f16-ending-shot img { display:block; width:547px; height:342px; }
+
+  .f16-ending-ask { position:absolute; left:160px; top:600px; width:1600px; text-align:center; font:400 76px/1.08 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); white-space:nowrap; }
+  .f16-ending-rule { position:absolute; left:810px; top:712px; width:300px; height:2px; background:var(--rp-coral); transform-origin:50% 50%; }
+</style>
+
+<div id="root" data-composition-id="16-ending" data-band="bottom" data-start="0" data-duration="6" data-width="1920" data-height="1080">
+
+  <div class="clip f16-ending-bg" id="f16-ending-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+  <div class="clip f16-ending-scene" id="f16-ending-scene" data-start="0" data-duration="6" data-track-index="1">
+
+    <div class="f16-ending-win" id="f16-ending-w1" data-artifact="/" style="left:90px">
+      <div class="f16-ending-bar"><span class="f16-ending-dot" style="left:16px"></span><span class="f16-ending-dot" style="left:34px"></span><span class="f16-ending-dot" style="left:52px"></span><span class="f16-ending-addr">/</span></div>
+      <div class="f16-ending-shot"><img src="assets/shots/d-home.png" alt="The home page at 1440 px"></div>
+    </div>
+    <div class="f16-ending-win" id="f16-ending-w2" data-artifact="/song/like-a-rolling-stone/" style="left:686px">
+      <div class="f16-ending-bar"><span class="f16-ending-dot" style="left:16px"></span><span class="f16-ending-dot" style="left:34px"></span><span class="f16-ending-dot" style="left:52px"></span><span class="f16-ending-addr">/song/like-a-rolling-stone/</span></div>
+      <div class="f16-ending-shot"><img src="assets/shots/d-song-lars.png" alt="Like a Rolling Stone, the song page in two columns"></div>
+    </div>
+    <div class="f16-ending-win" id="f16-ending-w3" data-artifact="/map/" style="left:1282px">
+      <div class="f16-ending-bar"><span class="f16-ending-dot" style="left:16px"></span><span class="f16-ending-dot" style="left:34px"></span><span class="f16-ending-dot" style="left:52px"></span><span class="f16-ending-addr">/map/</span></div>
+      <div class="f16-ending-shot"><img src="assets/shots/d-map.png" alt="The map page at 1440 px"></div>
+    </div>
+
+    <div class="f16-ending-ask" id="f16-ending-ask">Seeing it run, anything you'd change?</div>
+    <div class="f16-ending-rule" id="f16-ending-rule"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "16-ending";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f16-ending-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: the three windows on "the site on a computer", the question on "Seeing it run"; then hold still
+  pop(tl, $("w1"), 0.05, 16);
+  pop(tl, $("w2"), 0.2, 16);
+  pop(tl, $("w3"), 0.35, 16);
+  pop(tl, $("ask"), 1.5, 14);
+  tl.fromTo($("rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: E }, 1.8);   // the one coral
+
+  tl.set({}, {}, 3.413);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

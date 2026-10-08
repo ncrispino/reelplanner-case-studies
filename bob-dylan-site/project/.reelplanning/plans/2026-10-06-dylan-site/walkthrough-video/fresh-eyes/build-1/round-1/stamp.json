@@ -1,0 +1,120 @@
+{
+  "id": "cd4a6fa38d05",
+  "scenes": [
+    {
+      "scene": 1,
+      "narration": "863890571b44",
+      "frame": "5393fad1a398"
+    },
+    {
+      "scene": 2,
+      "narration": "22b81342dcd2",
+      "frame": "4ec59963b19e"
+    },
+    {
+      "scene": 3,
+      "narration": "d839faf382b7",
+      "frame": "d51d9340a3eb"
+    },
+    {
+      "scene": 4,
+      "narration": "d456cb92a641",
+      "frame": "09ef059ab785"
+    },
+    {
+      "scene": 5,
+      "narration": "68a108307ff8",
+      "frame": "60ab521f4e7d"
+    },
+    {
+      "scene": 6,
+      "narration": "9f96a453baa1",
+      "frame": "0d1552e9eea9"
+    },
+    {
+      "scene": 7,
+      "narration": "b53d42198ce3",
+      "frame": "23a80725395b"
+    },
+    {
+      "scene": 8,
+      "narration": "009b46375053",
+      "frame": "ec996ad3d575"
+    },
+    {
+      "scene": 9,
+      "narration": "e22b8ccf584c",
+      "frame": "a46667b61528"
+    },
+    {
+      "scene": 10,
+      "narration": "bb1831b0c770",
+      "frame": "44ec59ae3409"
+    },
+    {
+      "scene": 11,
+      "narration": "3f9fcae04003",
+      "frame": "0e519a08e3c7"
+    },
+    {
+      "scene": 12,
+      "narration": "296da0cfc76c",
+      "frame": "1c68375a015f"
+    },
+    {
+      "scene": 13,
+      "narration": "da6ec0abf087",
+      "frame": "0e1ddfb662b2"
+    },
+    {
+      "scene": 14,
+      "narration": "174cac50f479",
+      "frame": "272319622826"
+    },
+    {
+      "scene": 15,
+      "narration": "c1ef3a88649b",
+      "frame": "568ce90858bc"
+    },
+    {
+      "scene": 16,
+      "narration": "2b22af60c213",
+      "frame": "752b70b96c0c"
+    },
+    {
+      "scene": 17,
+      "narration": "d61711d92f99",
+      "frame": "cc0bee70ec79"
+    },
+    {
+      "scene": 18,
+      "narration": "d24d2d078aed",
+      "frame": "3dc9be82389b"
+    },
+    {
+      "scene": 19,
+      "narration": "097c8fa0170d",
+      "frame": "897c708bbbcb"
+    },
+    {
+      "scene": 20,
+      "narration": "c25ecc0c9e06",
+      "frame": "10fd7d7cba92"
+    },
+    {
+      "scene": 21,
+      "narration": "6f2957a21bcb",
+      "frame": "b2a73f9cb8d8"
+    },
+    {
+      "scene": 22,
+      "narration": "6b078c5a93fe",
+      "frame": "11d3a8c7cb23"
+    }
+  ],
+  "round": 1,
+  "at": "2026-10-07T02:23:08.009Z",
+  "video": "2026-10-06-dylan-site--walkthrough",
+  "build": "first",
+  "scope": null
+}

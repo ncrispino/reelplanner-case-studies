@@ -1,0 +1,93 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f14-q2-c-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f14-q2-c-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f14-q2-c-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  /* the mock album page: thin browser window, radius 14, ink hairline, 36 px title bar */
+  .f14-q2-c-win { position:absolute; box-sizing:border-box; left:360px; top:140px; width:1200px; height:740px; border-radius:14px; border:1px solid rgba(var(--rp-ink-rgb),0.22); background:var(--rp-paper); overflow:hidden; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f14-q2-c-bar { position:absolute; left:0; top:0; right:0; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f14-q2-c-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.22); }
+  .f14-q2-c-addr { position:absolute; left:100px; top:0; font:400 26px/36px "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f14-q2-c-kick { position:absolute; left:70px; top:46px; font:400 26px/1 "Inter"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f14-q2-c-h1 { position:absolute; left:66px; top:112px; font:italic 400 84px/1 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); white-space:nowrap; }
+  .f14-q2-c-sec { position:absolute; left:70px; top:222px; font:400 30px/1 "EB Garamond"; color:var(--rp-ink); white-space:nowrap; }
+  .f14-q2-c-row { position:absolute; left:70px; right:70px; height:72px; box-sizing:border-box; border-top:1px solid rgba(var(--rp-ink-rgb),0.14); }
+  .f14-q2-c-n { position:absolute; left:14px; top:22px; width:50px; text-align:right; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f14-q2-c-t { position:absolute; left:100px; top:19px; font:400 30px/1.15 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f14-q2-c-hl { position:absolute; left:0; top:0; right:0; bottom:0; background:var(--rp-tile); }
+  .f14-q2-c-row.is-it .f14-q2-c-t { color:var(--rp-ink); }
+  .f14-q2-c-w { color:rgba(var(--rp-ink-rgb),0.62); }
+
+  /* the pinned tag: "no page · writer's name only", on the row itself, a paper chip with the frame's one coral edge */
+  .f14-q2-c-pin { position:absolute; right:16px; top:9px; box-sizing:border-box; padding:10px 18px; border-radius:6px; border:1px solid var(--rp-coral); background:var(--rp-paper); font:400 28px/1.1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="14-q2-c" data-band="bottom" data-duration="6" data-width="1920" data-height="1080">
+
+  <div class="clip f14-q2-c-bg" id="f14-q2-c-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+  <div class="clip f14-q2-c-scene" id="f14-q2-c-scene" data-start="0" data-duration="6" data-track-index="1">
+    <div class="f14-q2-c-place" id="f14-q2-c-place">If C · step 1</div>
+
+    <div class="f14-q2-c-win" id="f14-q2-c-win" data-artifact="/album/triplicate/ (proposed)">
+      <div class="f14-q2-c-bar">
+        <i class="f14-q2-c-dot" style="left:18px"></i><i class="f14-q2-c-dot" style="left:38px"></i><i class="f14-q2-c-dot" style="left:58px"></i>
+        <div class="f14-q2-c-addr">/album/triplicate/</div>
+      </div>
+
+      <div class="f14-q2-c-kick">2017</div>
+      <div class="f14-q2-c-h1">Triplicate</div>
+      <div class="f14-q2-c-sec">Track list</div>
+
+      <div class="f14-q2-c-row" id="f14-q2-c-r25" style="top:270px"><span class="f14-q2-c-n">25</span><span class="f14-q2-c-t">When the World Was Young</span></div>
+      <div class="f14-q2-c-row" id="f14-q2-c-r26" style="top:342px"><span class="f14-q2-c-n">26</span><span class="f14-q2-c-t">These Foolish Things</span></div>
+      <div class="f14-q2-c-row" id="f14-q2-c-r27" style="top:414px"><span class="f14-q2-c-n">27</span><span class="f14-q2-c-t">You Go to My Head</span></div>
+      <div class="f14-q2-c-row is-it" id="f14-q2-c-r28" style="top:486px">
+        <div class="f14-q2-c-hl" id="f14-q2-c-hl"></div>
+        <span class="f14-q2-c-n">28</span><span class="f14-q2-c-t">Stardust<span class="f14-q2-c-w" id="f14-q2-c-w"> · Hoagy Carmichael</span></span>
+        <div class="f14-q2-c-pin" id="f14-q2-c-pin">no page · writer’s name only</div>
+      </div>
+      <div class="f14-q2-c-row" id="f14-q2-c-r29" style="top:558px"><span class="f14-q2-c-n">29</span><span class="f14-q2-c-t">It’s Funny to Everyone but Me</span></div>
+      <div class="f14-q2-c-row" id="f14-q2-c-r30" style="top:630px"><span class="f14-q2-c-n">30</span><span class="f14-q2-c-t">Why Was I Born</span></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "14-q2-c";
+  var D = 3.883;
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f14-q2-c-" + s); };
+  var row = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1: Triplicate's track list; the Stardust row lights and names its writer; "not a link" pins on it; hold
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.3, ease: E }, 0.02);
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: E }, 0.03);
+  row(tl, $("r25"), 0.3);
+  row(tl, $("r26"), 0.38);
+  row(tl, $("r27"), 0.46);
+  row(tl, $("r28"), 0.5);                                                   // "Stardust"
+  row(tl, $("r29"), 0.6);
+  row(tl, $("r30"), 0.68);
+  tl.fromTo($("hl"), { opacity: 0 }, { opacity: 1, duration: 0.35, ease: E }, 1.35);   // "a name"
+  tl.fromTo($("w"), { opacity: 0 }, { opacity: 1, duration: 0.35, ease: E }, 1.45);
+  tl.fromTo($("pin"), { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.35, ease: E }, 3.12);   // "not a link"
+
+  tl.set({}, {}, D);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

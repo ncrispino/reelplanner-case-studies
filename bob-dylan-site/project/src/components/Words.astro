@@ -1,0 +1,31 @@
+---
+// A song's words card (D-007, D-033): the preview and summary in our own words, the "Words by" line for another
+// writer's song (D-035), and the lyrics link (bobdylan.com or Genius). The song page shows it in its one column on a
+// phone, and in the right column from 1100 px (plan 2026-10-07-desktop, step 4).
+import type { Song } from "../lib/data";
+interface Props { song: Song; class?: string }
+const { song, class: cls } = Astro.props;
+---
+{(song.lyrics || song.preview || song.summary || song.excerpt) && (
+  <section class:list={["lyrics card", cls]} aria-label="Lyrics">
+    <p class="kicker">The words</p>
+    {song.preview && <p class="preview">{song.preview}</p>}
+    {song.summary && <p class="summary">{song.summary}</p>}
+    {song.excerpt && (
+      <blockquote class="excerpt">{song.excerpt.lines.map((l) => <span>{l}</span>)}<cite>{song.excerpt.credit}</cite></blockquote>
+    )}
+    {song.wordsBy && <p class="words-by">{song.wordsBy === "traditional" ? "A traditional song" : `Words by ${song.wordsBy}`}</p>}
+    {song.lyrics && <a class="button" href={song.lyrics} rel="noopener" target="_blank">Lyrics on {new URL(song.lyrics).hostname.replace(/^www\./, "").replace("genius.com", "Genius").replace("lyrics.com", "Lyrics.com")} ↗</a>}
+  </section>
+)}
+<style>
+  .lyrics { display: grid; gap: 12px; margin: 18px 0; }
+  .lyrics .kicker { margin: 0; }
+  .lyrics .button { justify-self: start; }
+  .preview { margin: 0; font-style: italic; font-size: 18px; }
+  .words-by { margin: 0; font-size: 15px; color: var(--soft); }
+  .summary { margin: 0; font-size: 16px; line-height: 1.6; max-width: 62ch; }
+  .excerpt { margin: 0; padding-left: 12px; border-left: 3px solid var(--accent); display: grid; }
+  .excerpt cite { font: 12px/1.4 var(--mono); color: var(--soft); font-style: normal; margin-top: 6px; }
+  @media (min-width: 1100px) { .lyrics { margin: 0 0 8px; } .summary { font-size: 17px; } }
+</style>

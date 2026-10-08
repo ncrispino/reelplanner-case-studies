@@ -1,0 +1,3 @@
+$ node tools/check-pages.mjs
+✓ 24 views at 390 × 844 and 1440 × 900 · 178 links inside docs/ · 70 events, each with its source, every quote word for word
+exit 0

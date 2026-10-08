@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "voice": "am_michael",
+  "speed": 1.25,
+  "model": "kokoro-v1.0 + whisper small.en",
+  "lines": {
+    "10": {
+      "key": "a919c3862bb993c2c40d",
+      "text": "With B, a wide monitor adds a third column, the song's map.",
+      "sha256": "d38120fee75d18051fd39568bf2de279310fc31543570bdccfc69097f516ac6e",
+      "duration_s": 3.477
+    },
+    "11": {
+      "key": "3ba80cbbc6d47ea18c1c",
+      "text": "With C, the column stays, and the era's look fills the margins.",
+      "sha256": "dc9e4c36f9206697da82096ddbbd798f13e02fc823d3ea221d87d39c96f2d9b0",
+      "duration_s": 3.584
+    },
+    "12": {
+      "key": "b1b868c35a4b27e3c6d2",
+      "text": "A quick check, a question to see whether the plan does what you expect. This one's on step one. On a phone, you press on a dot, move two pixels, and let go. What happens?",
+      "sha256": "ee8a48f0f7d36c91958611a7c0428f3610320a7fde25bff99c9e8a9a87d6855c",
+      "duration_s": 9.344
+    },
+    "13": {
+      "key": "406a0818b4b5eb6639cb",
+      "text": "Step three, the home page. On a computer, one era fills the screen: its photograph on the left half, its years and story on the right, its albums in a row underneath. An era with no photograph of him shows a photograph of the place instead, never an empty half.",
+      "sha256": "560cac9f68bf86bd4a54f7dfdf686610f5e6d90b2596a63490205572f92df7da",
+      "duration_s": 15.061
+    },
+    "14": {
+      "key": "dc2eeb629652396b221c",
+      "text": "The arrow keys, big arrows at the sides, or a click on the timeline across the top move to the next era. The look crossfades, and the address changes, so back and a shared link still work.",
+      "sha256": "bad62753bac301c861121ed074f5c07bae350db642f49ac809877701a77ebf95",
+      "duration_s": 10.667
+    },
+    "15": {
+      "key": "c85f23ebae9dec71ccce",
+      "text": "Question two: on a computer, does the home page give one era at a time, or all of them? A: one era fills the screen. B: all eleven down one long page. C: an overview of eleven columns first, each opening to A. I recommend A.",
+      "sha256": "2ae5093aed0d48cacc86fd9530fe48b48a98240d026e91517bc0349b6e036ff5",
+      "duration_s": 14.187
+    },
+    "16": {
+      "key": "f5fd6f067f821084a89a",
+      "text": "With A, Going Electric fills the screen, and the arrow brings the next era.",
+      "sha256": "4271b9722b1f417e37855ccd973b5749dc864d3e97c8ce8c2033b255546e6035",
+      "duration_s": 4.075
+    },
+    "17": {
+      "key": "18aadee7a340962027e8",
+      "text": "With B, you scroll from Hibbing to Rough and Rowdy, and the look changes as you go.",
+      "sha256": "af60235cad715d76b62f1d391b7ca12acd2bad5069cac114dbcdb7d98e2f407e",
+      "duration_s": 4.437
+    },
+    "18": {
+      "key": "848c145aa839d029d5b6",
+      "text": "With C, eleven narrow columns come first, and a click opens one.",
+      "sha256": "6c1633c72ffb5e10d3fc22499a66dd975ba650f80716f1a9dd9dc3268fca0933",
+      "duration_s": 3.776
+    },
+    "19": {
+      "key": "ffd6303284ca3a36911f",
+      "text": "A quick check on step two. You open the site in a window nine hundred pixels wide. Which layout do you get?",
+      "sha256": "9d9db6e134ab1d56f46482c5d3f34d4c831291437567872c751ae303d4290527",
+      "duration_s": 6.016
+    },
+    "20": {
+      "key": "5be215f862a565864aaf",
+      "text": "Step four, album, song and moment pages, in two columns. On a song page, the cover, the note and the players stay on the left as you scroll. On the right: the words, the connections two across, and a small map of the song's neighbours. A song with no connections shows only the words there.",
+      "sha256": "af1dd40ef429160f834749e755ab7784fbd1b77192737d0314eaea211d9f50da",
+      "duration_s": 15.979
+    },
+    "21": {
+      "key": "ef70e87652a1143f8e70",
+      "text": "An album page puts its cover large beside the full track list, with the era's other albums under them. A moment puts its clip or photograph beside its story.",
+      "sha256": "2e545ad1d59cfac237a58932941e9633983703558918a682ea699e43e03b23ee",
+      "duration_s": 8.981
+    },
+    "22": {
+      "key": "2f8eff4fc8ba77d6175a",
+      "text": "A quick check on step three. Back to the Roots has no photograph of Dylan. On a computer, what fills the left half of its screen?",
+      "sha256": "4d175cbc8134ae52e4bb1a9a815a626b3061bf6a3f2fbca0c65c1dbfbbf92b56",
+      "duration_s": 7.04
+    },
+    "23": {
+      "key": "3259dbb66a7ce41bde57",
+      "text": "Step five, threads. A thread's cards run along a line of years, four at a time, with the map under them. Hover a card and its dot lights up. The Cards and Map button is gone at this width, because both are showing. On a phone, it stays.",
+      "sha256": "a74f20a84e489f9cf1c69661e328625ef7026988d14c8c8daa3b2c1b5f3f250c",
+      "duration_s": 12.907
+    },
+    "24": {
+      "key": "86b7d56e6812cbc8d62f",
+      "text": "The map page fills the window. Click a dot, and a panel describes the song, with a link to open it. Click an era in the legend, and the other eras dim.",
+      "sha256": "36a89971b0f4c6e7f3bba35889d019d184ecf7a81a2690eb63b274ede8b9c3f6",
+      "duration_s": 8.384
+    },
+    "25": {
+      "key": "6536f51675567ca09234",
+      "text": "Question three: on a computer, what should a click on a dot do? A: select it, and show the panel; a double click opens the song. B: open the song at once, as on a phone. I recommend A.",
+      "sha256": "df7704cbbca78432282a4823f97336d290166896cd500aba81dc6d0f134012a8",
+      "duration_s": 10.517
+    },
+    "26": {
+      "key": "4808ea733aede1bcbee4",
+      "text": "With A, you stay on the map, and the panel tells you about the song.",
+      "sha256": "bd16f72b2232157c2ca8a2028bf9de5f5c1675d9778f91d6395f4a871d2ffa3b",
+      "duration_s": 3.413
+    },
+    "27": {
+      "key": "fdb4587871f9b22d81fb",
+      "text": "With B, every click takes you to a song page, and off the map.",
+      "sha256": "60f7171e4861513a5416910d5503b28686d2bb3407f4b5a4711523028e744f79",
+      "duration_s": 3.413
+    },
+    "28": {
+      "key": "15a15d87b0174c41df63",
+      "text": "A quick check on step four. I Believe in You has no connections. What is in the right column of its page?",
+      "sha256": "2f671661c58617cd35caf6ec9aaf363be910cd6645f4d3983765d02d5a0cb50f",
+      "duration_s": 5.845
+    },
+    "29": {
+      "key": "9fd77242a82a064c33f3",
+      "text": "Step six. Search shows its groups in three columns. And a new desktop check opens every view at two computer sizes. It fails on a sideways scroll, a button that does nothing, an era's look that stops short, a phone-width column, a dot that does nothing, or an error.",
+      "sha256": "5ca1b57b6f564e519ca23da0239a40aefa29cee7b328b0c0b52dc2d122d5796a",
+      "duration_s": 15.723
+    },
+    "30": {
+      "key": "5e5432e10d5a98f33705",
+      "text": "A quick check on step five. You open the Faith thread on a phone. Is the Cards and Map button there?",
+      "sha256": "30ab7aa940130684a735fa2e2f35bb738c916afa9d419a909cd8603dc620bbf0",
+      "duration_s": 5.333
+    },
+    "31": {
+      "key": "dd191415fc49d6a37e9f",
+      "text": "And one on step six. The Cards and Map button shows on a thread in a window fourteen hundred and forty pixels wide. Which check fails?",
+      "sha256": "51b78a452104e01e88d9960f27803c041deaa40efb58acbe53a46a9ac427184a",
+      "duration_s": 7.765
+    },
+    "32": {
+      "key": "6058c10d2a88c1210e4d",
+      "text": "That's the plan: the map fixed first, then the site made for a computer. Three questions: how wide, how the home page shows the eras, and what a click on the map does.",
+      "sha256": "c177a1771470ffecca4c5d1152b478637eed28980cdb28ee43e0e3307dacb680",
+      "duration_s": 9.024
+    },
+    "01": {
+      "key": "2d81e6934cc36ce2cb29",
+      "text": "You opened the site on a computer, and it is still a phone: one column, seven hundred and twenty pixels wide, in the middle of the window. This plan makes it a site for a computer too, and fixes the map on the way.",
+      "sha256": "341844452439172142dbd0f8b4f3d90380ea38b0fa24868c5230ff84f9d57448",
+      "duration_s": 11.52
+    },
+    "02": {
+      "key": "f2f145116bc8c8332921",
+      "text": "On the home page, the era's look stops at the column's edges. On a thread, the map is a thin strip beside the cards, and the Cards and Map button is still there with both showing. And on the map, clicking a dot does nothing.",
+      "sha256": "e84274184acd156d22a51830c977d99a12e059f8f87c12c7fc6103e37165541d",
+      "duration_s": 12.245
+    },
+    "03": {
+      "key": "1864182057b19c197f14",
+      "text": "Three changes, in six steps. First, the map works. Then a layout for wide screens: a header, the era's look across the window, and two columns. Last, threads, the map and search on a computer, with a check that catches a phone page on a computer. Phones keep today's layout.",
+      "sha256": "c9241f86424291a620088881406c9db32eb3df12185d8f96db4b0977399d0e9b",
+      "duration_s": 15.275
+    },
+    "04": {
+      "key": "9db464b1343e73f49dfa",
+      "text": "Step one, the map. It grabs the pointer as soon as you press, so that dragging works. But then the click lands on the map instead of the dot, and the song never opens. That is broken on phones too. Now the map grabs the pointer only once you move four pixels, so a press and release opens the song. On a computer's full map page, question three decides what a click does.",
+      "sha256": "98dfcd8dbda27d10f13dbc938da6ebf0e07edc4179ee5fa35f6e80881aa3b29a",
+      "duration_s": 19.712
+    },
+    "05": {
+      "key": "738bb5010a7beb6a48a8",
+      "text": "The mouse wheel scrolls the page again; the map zooms only with Control held, or with plus and minus buttons. Hovering a dot names it. And the phone check now taps a dot, and fails unless a song page opens.",
+      "sha256": "bbb0e25e47e4fd085040b84f00c87dd4a665cce916b9309cdeffadf76cc7aa0c",
+      "duration_s": 12.331
+    },
+    "06": {
+      "key": "a2d32c5bf65b33c08a3e",
+      "text": "Step two, the app shell. The window's width picks the layout. Up to seven hundred and sixty-seven pixels, a phone: today's layout, unchanged. Up to eleven hundred, a tablet: one wider column. From eleven hundred, the desktop layout.",
+      "sha256": "90f2f4a099f57d709f688d36d009dd92dd80c486bc6a1b705671e472d1e81939",
+      "duration_s": 13.781
+    },
+    "07": {
+      "key": "653591a3467279c068cd",
+      "text": "On the desktop, a header runs across the top, with the tabs and a search field; press slash to type in it. The era's look fills the whole window, not just the column. And the content gets two columns.",
+      "sha256": "aa509d0d551c4a55b342f9c602750faca7212d10e44081361c2b81d1552781bc",
+      "duration_s": 10.859
+    },
+    "08": {
+      "key": "6a4058fab05699ea932f",
+      "text": "Question one: how wide should the content go? A: up to twelve hundred pixels, in two columns. B: up to sixteen hundred, with a third column where there is room. C: keep the seven hundred and twenty pixel column, and only paint the era's look across the window. I recommend A.",
+      "sha256": "8912f1a8bbeb3dac5c275f14ab0f490762b6036e2cb3f1c0e19d7aa2cb6ec85c",
+      "duration_s": 15.808
+    },
+    "09": {
+      "key": "ab2780d1e57ffc122385",
+      "text": "With A, a song page is cover and players on the left, words and connections on the right.",
+      "sha256": "f6e056c2a0ff54047daef2aa811c31f2c48469e73bc65e807ccf9a4c3f09567b",
+      "duration_s": 4.693
+    }
+  }
+}

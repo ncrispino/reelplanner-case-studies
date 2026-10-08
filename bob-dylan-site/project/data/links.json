@@ -1,0 +1,992 @@
+[
+  {
+    "from": "all-along-the-watchtower",
+    "to": "all-along-the-watchtower-jimi-hendrix",
+    "kind": "covered-by",
+    "why": "Hendrix recorded his electric version within months of the original's release, and Dylan later adopted its arrangement on stage."
+  },
+  {
+    "from": "if-not-for-you",
+    "to": "if-not-for-you-george-harrison",
+    "kind": "covered-by",
+    "why": "George Harrison released his own version on All Things Must Pass in the same year Dylan put the song out."
+  },
+  {
+    "from": "all-i-really-want-to-do",
+    "to": "all-i-really-want-to-do-the-byrds",
+    "kind": "covered-by",
+    "why": "The Byrds put out their electric version as a single in 1965, a year after Dylan's own."
+  },
+  {
+    "from": "all-i-really-want-to-do",
+    "to": "all-i-really-want-to-do-cher",
+    "kind": "covered-by",
+    "why": "Cher turned it into her first solo hit in 1965, racing the Byrds' version up the charts."
+  },
+  {
+    "from": "spanish-harlem-incident",
+    "to": "spanish-harlem-incident-the-byrds",
+    "kind": "covered-by",
+    "why": "The Byrds gave it a jangling electric arrangement on their 1965 debut album."
+  },
+  {
+    "from": "she-belongs-to-me",
+    "to": "she-belongs-to-me-rick-nelson",
+    "kind": "covered-by",
+    "why": "Rick Nelson's 1969 country-rock version was his first chart single in years."
+  },
+  {
+    "from": "the-mighty-quinn-quinn-the-eskimo",
+    "to": "the-mighty-quinn-quinn-the-eskimo-manfred-mann",
+    "kind": "covered-by",
+    "why": "Manfred Mann took the song to number one in Britain in 1968, years before Dylan released a recording of his own."
+  },
+  {
+    "from": "too-much-of-nothing",
+    "to": "too-much-of-nothing-peter-paul-and-mary",
+    "kind": "covered-by",
+    "why": "Peter, Paul and Mary had it out as a single in 1967, long before the basement recording was released."
+  },
+  {
+    "from": "nothing-was-delivered",
+    "to": "nothing-was-delivered-the-byrds",
+    "kind": "covered-by",
+    "why": "The Byrds recorded it for Sweetheart of the Rodeo in 1968, from the basement demos."
+  },
+  {
+    "from": "million-dollar-bash",
+    "to": "million-dollar-bash-fairport-convention",
+    "kind": "covered-by",
+    "why": "Fairport Convention recorded it on Unhalfbricking in 1969, six years before Dylan's version was released."
+  },
+  {
+    "from": "dear-landlord",
+    "to": "dear-landlord-joe-cocker",
+    "kind": "covered-by",
+    "why": "Joe Cocker gave it a big soul treatment on his second album in 1969."
+  },
+  {
+    "from": "i-pity-the-poor-immigrant",
+    "to": "i-pity-the-poor-immigrant-joan-baez",
+    "kind": "covered-by",
+    "why": "Joan Baez sang it on Any Day Now, her 1968 album made entirely of Dylan songs."
+  },
+  {
+    "from": "father-of-night",
+    "to": "father-of-night-manfred-manns-earth-band",
+    "kind": "covered-by",
+    "why": "Manfred Mann's Earth Band stretched the short hymn into a long rock piece on Solar Fire in 1973."
+  },
+  {
+    "from": "emotionally-yours",
+    "to": "emotionally-yours-the-ojays",
+    "kind": "covered-by",
+    "why": "The O'Jays recorded it as a soul ballad and named their 1991 album after it."
+  },
+  {
+    "from": "apple-suckling-tree",
+    "to": "froggie-went-a-courtin",
+    "kind": "borrowed-tune",
+    "why": "Its nursery-rhyme melody and question-and-answer lines are modelled on the old children's song Froggie Went a-Courtin'."
+  },
+  {
+    "from": "ballad-in-plain-d",
+    "to": "dont-think-twice-its-all-right",
+    "kind": "same-theme",
+    "why": "Both come out of his relationship with Suze Rotolo, the first as it frayed and the second after it ended."
+  },
+  {
+    "from": "down-the-highway",
+    "to": "boots-of-spanish-leather",
+    "kind": "same-theme",
+    "why": "Both grew out of the months Suze Rotolo spent in Italy, one a lonesome blues about her going and the other a farewell to a lover sailing away."
+  },
+  {
+    "from": "north-country-blues",
+    "to": "union-sundown",
+    "kind": "same-theme",
+    "why": "Both tell of American working people losing their livelihoods when the work moves to cheaper places abroad."
+  },
+  {
+    "from": "talking-world-war-iii-blues",
+    "to": "with-god-on-our-side",
+    "kind": "same-theme",
+    "why": "Both reach the fear of a nuclear war, one as a comic dream of being its survivor and the other as the end of a long roll call of wars."
+  },
+  {
+    "from": "the-ballad-of-ira-hayes",
+    "to": "clean-cut-kid",
+    "kind": "same-theme",
+    "why": "Both follow a young American sent to war who comes home broken and is destroyed by what the country made of him."
+  },
+  {
+    "from": "in-the-garden",
+    "to": "when-he-returns",
+    "kind": "same-theme",
+    "why": "Both are gospel-era songs centred on Jesus himself, one retelling his life and resurrection and the other awaiting his return."
+  },
+  {
+    "from": "covenant-woman",
+    "to": "precious-angel",
+    "kind": "same-theme",
+    "why": "Both are love songs to a believing woman that double as thanks for her part in his conversion."
+  },
+  {
+    "from": "high-water-for-charley-patton",
+    "to": "the-levees-gonna-break",
+    "kind": "same-theme",
+    "why": "Both draw on the Delta blues written about the great Mississippi flood of 1927."
+  },
+  {
+    "from": "crash-on-the-levee-down-in-the-flood",
+    "to": "the-levees-gonna-break",
+    "kind": "same-theme",
+    "why": "Both take the old blues picture of a levee giving way as a sign that trouble is coming for everyone."
+  },
+  {
+    "from": "i-shall-be-free",
+    "to": "i-shall-be-free-no-10",
+    "kind": "same-theme",
+    "why": "The second is a comic sequel to the first, a year later, in the same rambling talking-blues style."
+  },
+  {
+    "from": "two-soldiers",
+    "to": "arthur-mcbride",
+    "kind": "same-theme",
+    "why": "Both are old ballads he recorded in the early 1990s that set ordinary young men against the cost of soldiering."
+  },
+  {
+    "from": "love-henry",
+    "to": "frankie-and-albert",
+    "kind": "same-theme",
+    "why": "Both are old murder ballads in which a woman kills the man who has been unfaithful to her."
+  },
+  {
+    "from": "little-sadie",
+    "to": "delia",
+    "kind": "same-theme",
+    "why": "Both are old murder ballads about a man who shoots a woman and is brought to trial for it."
+  },
+  {
+    "from": "jack-a-roe",
+    "to": "canadee-i-o",
+    "kind": "same-theme",
+    "why": "Both are old ballads of a young woman who dresses as a man to follow her love, one to war and one to sea."
+  },
+  {
+    "from": "lone-pilgrim",
+    "to": "death-is-not-the-end",
+    "kind": "same-theme",
+    "why": "Both are hymn-like songs of consolation that tell mourners death is not the last word."
+  },
+  {
+    "from": "if-you-see-her-say-hello",
+    "to": "girl-from-the-north-country",
+    "kind": "same-theme",
+    "why": "In both the singer asks someone else to carry his greetings to a woman he has lost."
+  },
+  {
+    "from": "blackjack-davey",
+    "to": "tin-angel",
+    "kind": "same-theme",
+    "why": "Both tell of a lady who rides away with another man and a husband who rides after her."
+  },
+  {
+    "from": "blowin-in-the-wind",
+    "to": "blowin-in-the-wind-stevie-wonder",
+    "kind": "covered-by",
+    "why": "Stevie Wonder turned the song into a Motown hit three years after Dylan released it."
+  },
+  {
+    "from": "blowin-in-the-wind",
+    "to": "blowin-in-the-wind-sam-cooke",
+    "kind": "covered-by",
+    "why": "Sam Cooke performed the song in his nightclub act and recorded it live at the Copa."
+  },
+  {
+    "from": "dont-think-twice-its-all-right",
+    "to": "dont-think-twice-its-all-right-peter-paul-and-mary",
+    "kind": "covered-by",
+    "why": "Peter, Paul and Mary had a hit with the song the same year Dylan released it."
+  },
+  {
+    "from": "it-aint-me-babe",
+    "to": "it-aint-me-babe-the-turtles",
+    "kind": "covered-by",
+    "why": "The Turtles made the song their first big hit in 1965."
+  },
+  {
+    "from": "it-aint-me-babe",
+    "to": "it-aint-me-babe-johnny-cash-and-june-carter",
+    "kind": "covered-by",
+    "why": "Johnny Cash and June Carter recorded it as a country duet in 1965."
+  },
+  {
+    "from": "a-hard-rains-a-gonna-fall",
+    "to": "a-hard-rains-a-gonna-fall-bryan-ferry",
+    "kind": "covered-by",
+    "why": "Bryan Ferry launched his solo career with a dramatic version of the song."
+  },
+  {
+    "from": "the-times-they-are-a-changin",
+    "to": "the-times-they-are-a-changin-simon-garfunkel",
+    "kind": "covered-by",
+    "why": "Simon & Garfunkel recorded the song on their 1964 debut album."
+  },
+  {
+    "from": "just-like-tom-thumbs-blues",
+    "to": "just-like-tom-thumbs-blues-nina-simone",
+    "kind": "covered-by",
+    "why": "Nina Simone included the song on a 1969 album built largely on contemporary songwriters."
+  },
+  {
+    "from": "just-like-a-woman",
+    "to": "just-like-a-woman-nina-simone",
+    "kind": "covered-by",
+    "why": "Nina Simone gave the song a slow, searching reading on Here Comes the Sun."
+  },
+  {
+    "from": "knockin-on-heavens-door",
+    "to": "knockin-on-heavens-door-eric-clapton",
+    "kind": "covered-by",
+    "why": "Eric Clapton released a reggae-flavoured single of the song two years after the original."
+  },
+  {
+    "from": "knockin-on-heavens-door",
+    "to": "knockin-on-heavens-door-warren-zevon",
+    "kind": "covered-by",
+    "why": "Warren Zevon sang it on his final album, recorded as he faced his own death."
+  },
+  {
+    "from": "make-you-feel-my-love",
+    "to": "make-you-feel-my-love-billy-joel",
+    "kind": "covered-by",
+    "why": "Billy Joel released his version before Dylan's own album came out."
+  },
+  {
+    "from": "make-you-feel-my-love",
+    "to": "make-you-feel-my-love-garth-brooks",
+    "kind": "covered-by",
+    "why": "Garth Brooks took the song to number one on the country chart."
+  },
+  {
+    "from": "all-along-the-watchtower",
+    "to": "all-along-the-watchtower-u2",
+    "kind": "covered-by",
+    "why": "U2 played the song live and released it on Rattle and Hum."
+  },
+  {
+    "from": "like-a-rolling-stone",
+    "to": "like-a-rolling-stone-jimi-hendrix",
+    "kind": "covered-by",
+    "why": "Jimi Hendrix performed the song at Monterey Pop in June 1967."
+  },
+  {
+    "from": "lay-lady-lay",
+    "to": "lay-lady-lay-the-isley-brothers",
+    "kind": "covered-by",
+    "why": "The Isley Brothers recorded an extended soul version on their 1971 covers album."
+  },
+  {
+    "from": "if-not-for-you",
+    "to": "if-not-for-you-olivia-newton-john",
+    "kind": "covered-by",
+    "why": "Olivia Newton-John's first hit was her version of this song."
+  },
+  {
+    "from": "its-all-over-now-baby-blue",
+    "to": "its-all-over-now-baby-blue-joan-baez",
+    "kind": "covered-by",
+    "why": "Joan Baez recorded the song in the same year Dylan released it."
+  },
+  {
+    "from": "simple-twist-of-fate",
+    "to": "simple-twist-of-fate-joan-baez",
+    "kind": "covered-by",
+    "why": "Joan Baez recorded the song on Diamonds & Rust in the year it came out."
+  },
+  {
+    "from": "sad-eyed-lady-of-the-lowlands",
+    "to": "sad-eyed-lady-of-the-lowlands-joan-baez",
+    "kind": "covered-by",
+    "why": "Joan Baez gave the long song a place on her all-Dylan double album."
+  },
+  {
+    "from": "chimes-of-freedom",
+    "to": "chimes-of-freedom-the-byrds",
+    "kind": "covered-by",
+    "why": "The Byrds put the song on their first album, next to their Mr. Tambourine Man hit."
+  },
+  {
+    "from": "chimes-of-freedom",
+    "to": "chimes-of-freedom-bruce-springsteen",
+    "kind": "covered-by",
+    "why": "Bruce Springsteen released a live version to promote the Human Rights Now! tour."
+  },
+  {
+    "from": "the-wicked-messenger",
+    "to": "the-wicked-messenger-faces",
+    "kind": "covered-by",
+    "why": "Faces, with Rod Stewart singing, opened their debut album with it."
+  },
+  {
+    "from": "ill-be-your-baby-tonight",
+    "to": "ill-be-your-baby-tonight-robert-palmer-and-ub40",
+    "kind": "covered-by",
+    "why": "Robert Palmer and UB40 had a British hit with a reggae version in 1990."
+  },
+  {
+    "from": "tears-of-rage",
+    "to": "tears-of-rage-the-band",
+    "kind": "covered-by",
+    "why": "The Band opened their first album with this song from the basement sessions."
+  },
+  {
+    "from": "this-wheels-on-fire",
+    "to": "this-wheels-on-fire-the-band",
+    "kind": "covered-by",
+    "why": "The Band, who played on the basement sessions, recorded it for their debut album."
+  },
+  {
+    "from": "one-more-cup-of-coffee",
+    "to": "one-more-cup-of-coffee-the-white-stripes",
+    "kind": "covered-by",
+    "why": "The White Stripes recorded the song on their 1999 debut album."
+  },
+  {
+    "from": "changing-of-the-guards",
+    "to": "changing-of-the-guards-patti-smith",
+    "kind": "covered-by",
+    "why": "Patti Smith chose the song for her 2007 covers album Twelve."
+  },
+  {
+    "from": "with-god-on-our-side",
+    "to": "with-god-on-our-side-the-neville-brothers",
+    "kind": "covered-by",
+    "why": "The Neville Brothers recorded the song on their 1989 album Yellow Moon."
+  },
+  {
+    "from": "youre-gonna-make-me-lonesome-when-you-go",
+    "to": "youre-gonna-make-me-lonesome-when-you-go-madeleine-peyroux",
+    "kind": "covered-by",
+    "why": "Madeleine Peyroux recorded a jazz version on her breakthrough album Careless Love."
+  },
+  {
+    "from": "dont-think-twice-its-all-right",
+    "to": "whos-gonna-buy-you-ribbons-when-im-gone",
+    "kind": "borrowed-tune",
+    "why": "Dylan built the song on a melody and phrase from his friend Paul Clayton's folk song."
+  },
+  {
+    "from": "boots-of-spanish-leather",
+    "to": "scarborough-fair",
+    "kind": "borrowed-tune",
+    "why": "Like Girl from the North Country, it draws its melody from the Scarborough Fair ballad Dylan learned from Martin Carthy."
+  },
+  {
+    "from": "i-dreamed-i-saw-st-augustine",
+    "to": "joe-hill",
+    "kind": "borrowed-tune",
+    "why": "The song follows the melody and dream framing of the labor song Joe Hill."
+  },
+  {
+    "from": "ballad-of-hollis-brown",
+    "to": "pretty-polly",
+    "kind": "borrowed-tune",
+    "why": "Its circling modal melody is taken from the Appalachian murder ballad Pretty Polly."
+  },
+  {
+    "from": "maggies-farm",
+    "to": "down-on-pennys-farm",
+    "kind": "borrowed-tune",
+    "why": "Dylan modeled the song on the old farmhand's complaint Down on Penny's Farm."
+  },
+  {
+    "from": "someday-baby",
+    "to": "trouble-no-more",
+    "kind": "borrowed-tune",
+    "why": "The song follows the tune of Muddy Waters' Trouble No More and its older Sleepy John Estes source."
+  },
+  {
+    "from": "beyond-here-lies-nothin",
+    "to": "all-your-love-i-miss-loving",
+    "kind": "borrowed-tune",
+    "why": "The song's riff and melody are taken from Otis Rush's All Your Love (I Miss Loving)."
+  },
+  {
+    "from": "sugar-baby",
+    "to": "the-lonesome-road",
+    "kind": "borrowed-tune",
+    "why": "The melody of Sugar Baby closely follows Gene Austin's The Lonesome Road."
+  },
+  {
+    "from": "when-the-deal-goes-down",
+    "to": "where-the-blue-of-the-night-meets-the-gold-of-the-day",
+    "kind": "borrowed-tune",
+    "why": "The song borrows the melody of Bing Crosby's theme song."
+  },
+  {
+    "from": "new-danville-girl",
+    "to": "brownsville-girl",
+    "kind": "rewrite",
+    "why": "Dylan and Sam Shepard reworked this earlier recording into the long Brownsville Girl."
+  },
+  {
+    "from": "sad-eyed-lady-of-the-lowlands",
+    "to": "sara",
+    "kind": "same-theme",
+    "why": "A decade later, Sara recalls writing Sad-Eyed Lady for her at the Chelsea Hotel."
+  },
+  {
+    "from": "wedding-song",
+    "to": "sara",
+    "kind": "same-theme",
+    "why": "Both are addressed to his wife Sara, one in devotion and one as the marriage was failing."
+  },
+  {
+    "from": "only-a-pawn-in-their-game",
+    "to": "murder-most-foul",
+    "kind": "same-theme",
+    "why": "Both turn on assassinations of 1963: Medgar Evers in June and John F. Kennedy in November."
+  },
+  {
+    "from": "roll-on-john",
+    "to": "murder-most-foul",
+    "kind": "same-theme",
+    "why": "Both are late elegies for a murdered public figure named John, Lennon and Kennedy."
+  },
+  {
+    "from": "lenny-bruce",
+    "to": "roll-on-john",
+    "kind": "same-theme",
+    "why": "Both are tributes to famous men he admired who died at forty."
+  },
+  {
+    "from": "they-killed-him",
+    "to": "murder-most-foul",
+    "kind": "same-theme",
+    "why": "Both reflect on public figures who were assassinated."
+  },
+  {
+    "from": "song-to-woody",
+    "to": "goodbye-jimmy-reed",
+    "kind": "same-theme",
+    "why": "Nearly sixty years apart, both pay tribute to a musical hero by name."
+  },
+  {
+    "from": "high-water-for-charley-patton",
+    "to": "goodbye-jimmy-reed",
+    "kind": "same-theme",
+    "why": "Both name a blues hero in the title and draw on that man's music."
+  },
+  {
+    "from": "john-wesley-harding",
+    "to": "billy-1",
+    "kind": "same-theme",
+    "why": "Both portray real Old West outlaws, John Wesley Hardin and Billy the Kid."
+  },
+  {
+    "from": "all-along-the-watchtower",
+    "to": "jokerman",
+    "kind": "same-theme",
+    "why": "Both place a joker figure amid biblical imagery."
+  },
+  {
+    "from": "all-along-the-watchtower",
+    "to": "slow-train",
+    "kind": "same-theme",
+    "why": "Both draw on biblical prophecy, years before and during his gospel period."
+  },
+  {
+    "from": "knockin-on-heavens-door",
+    "to": "tryin-to-get-to-heaven",
+    "kind": "same-theme",
+    "why": "Both face death through the image of reaching heaven, twenty-four years apart."
+  },
+  {
+    "from": "knockin-on-heavens-door",
+    "to": "not-dark-yet",
+    "kind": "same-theme",
+    "why": "Both are slow songs about a man sensing his life is ending."
+  },
+  {
+    "from": "every-grain-of-sand",
+    "to": "ring-them-bells",
+    "kind": "same-theme",
+    "why": "Both are hymn-like prayers, one closing the gospel years and one after them."
+  },
+  {
+    "from": "chimes-of-freedom",
+    "to": "ring-them-bells",
+    "kind": "same-theme",
+    "why": "Both use ringing bells as a call on behalf of the suffering, a quarter century apart."
+  },
+  {
+    "from": "when-he-returns",
+    "to": "death-is-not-the-end",
+    "kind": "same-theme",
+    "why": "Both offer religious consolation, one in the gospel years and one soon after."
+  },
+  {
+    "from": "like-a-rolling-stone",
+    "to": "idiot-wind",
+    "kind": "same-theme",
+    "why": "Both are long, furious songs aimed at a single person."
+  },
+  {
+    "from": "like-a-rolling-stone",
+    "to": "ballad-of-a-thin-man",
+    "kind": "same-theme",
+    "why": "Both put a character on the spot for not understanding a changing world."
+  },
+  {
+    "from": "dont-think-twice-its-all-right",
+    "to": "it-aint-me-babe",
+    "kind": "same-theme",
+    "why": "Both are bitter farewells to a lover, written in his early folk years."
+  },
+  {
+    "from": "the-times-they-are-a-changin",
+    "to": "my-back-pages",
+    "kind": "same-theme",
+    "why": "Critics read My Back Pages as stepping back from the protest certainty of The Times They Are a-Changin'."
+  },
+  {
+    "from": "bob-dylans-dream",
+    "to": "my-back-pages",
+    "kind": "same-theme",
+    "why": "Both look back with regret on lost youthful friendships and ideals."
+  },
+  {
+    "from": "the-times-they-are-a-changin",
+    "to": "when-the-ship-comes-in",
+    "kind": "same-theme",
+    "why": "Both prophesy a coming day when the powerful are brought low."
+  },
+  {
+    "from": "oxford-town",
+    "to": "only-a-pawn-in-their-game",
+    "kind": "same-theme",
+    "why": "Both respond to civil-rights violence in Mississippi in 1962 and 1963."
+  },
+  {
+    "from": "masters-of-war",
+    "to": "with-god-on-our-side",
+    "kind": "same-theme",
+    "why": "Both attack the people and beliefs that drive nations into war."
+  },
+  {
+    "from": "masters-of-war",
+    "to": "a-hard-rains-a-gonna-fall",
+    "kind": "same-theme",
+    "why": "Both were written in 1962 under the fear of nuclear war."
+  },
+  {
+    "from": "arthur-mcbride",
+    "to": "masters-of-war",
+    "kind": "same-theme",
+    "why": "Both side with young men against those who would send them to fight."
+  },
+  {
+    "from": "union-sundown",
+    "to": "workingmans-blues-2",
+    "kind": "same-theme",
+    "why": "Both lament the American worker losing out to a global economy."
+  },
+  {
+    "from": "that-lucky-old-sun",
+    "to": "workingmans-blues-2",
+    "kind": "same-theme",
+    "why": "Both are sung from the view of a worn-out laboring man."
+  },
+  {
+    "from": "a-hard-rains-a-gonna-fall",
+    "to": "gates-of-eden",
+    "kind": "same-theme",
+    "why": "Both are long catalogs of apocalyptic visions."
+  },
+  {
+    "from": "lily-rosemary-and-the-jack-of-hearts",
+    "to": "brownsville-girl",
+    "kind": "same-theme",
+    "why": "Both are long story-songs built like Western films."
+  },
+  {
+    "from": "billy-1",
+    "to": "brownsville-girl",
+    "kind": "same-theme",
+    "why": "Both come out of Western films, Peckinpah's Pat Garrett and Billy the Kid and Gregory Peck's The Gunfighter."
+  },
+  {
+    "from": "man-gave-names-to-all-the-animals",
+    "to": "under-the-red-sky",
+    "kind": "same-theme",
+    "why": "Both are fable-like songs written in the manner of children's songs."
+  },
+  {
+    "from": "subterranean-homesick-blues",
+    "to": "tombstone-blues",
+    "kind": "same-theme",
+    "why": "Both rattle off surreal images at high speed over a rock band."
+  },
+  {
+    "from": "stuck-inside-of-mobile-with-the-memphis-blues-again",
+    "to": "just-like-tom-thumbs-blues",
+    "kind": "same-theme",
+    "why": "Both strand a narrator in a strange town far from home."
+  },
+  {
+    "from": "world-gone-wrong",
+    "to": "everything-is-broken",
+    "kind": "same-theme",
+    "why": "Both survey a world falling apart, the old Mississippi Sheiks song echoing his own Oh Mercy track."
+  },
+  {
+    "from": "political-world",
+    "to": "slow-train",
+    "kind": "same-theme",
+    "why": "Both survey a society corrupted by money and power."
+  },
+  {
+    "from": "sad-eyed-lady-of-the-lowlands",
+    "to": "highlands",
+    "kind": "same-theme",
+    "why": "Both are very long album closers, with titles that answer each other."
+  },
+  {
+    "from": "highlands",
+    "to": "aint-talkin",
+    "kind": "same-theme",
+    "why": "Both close their albums with a long walk through a bleak landscape."
+  },
+  {
+    "from": "restless-farewell",
+    "to": "its-all-over-now-baby-blue",
+    "kind": "same-theme",
+    "why": "Both close their albums as farewells to an old way of life."
+  },
+  {
+    "from": "cant-help-falling-in-love",
+    "to": "im-a-fool-to-want-you",
+    "kind": "same-theme",
+    "why": "Decades before his Sinatra albums, he sang an Elvis ballad on Dylan (1973)."
+  },
+  {
+    "from": "forever-young",
+    "to": "young-at-heart",
+    "kind": "same-theme",
+    "why": "Both wish for a spirit that stays young as the years pass."
+  },
+  {
+    "from": "september-of-my-years",
+    "to": "not-dark-yet",
+    "kind": "same-theme",
+    "why": "Both are sung by a man looking back from late in life."
+  },
+  {
+    "from": "black-diamond-bay",
+    "to": "tempest",
+    "kind": "same-theme",
+    "why": "Both follow a cast of characters swept away in a disaster, an island eruption and the Titanic."
+  },
+  {
+    "from": "ill-be-your-baby-tonight",
+    "to": "lay-lady-lay",
+    "kind": "same-theme",
+    "why": "The country closer of John Wesley Harding pointed toward the sound of Nashville Skyline."
+  },
+  {
+    "from": "ill-be-your-baby-tonight",
+    "to": "make-you-feel-my-love",
+    "kind": "same-theme",
+    "why": "Both are plainspoken love songs that became hits for other singers."
+  },
+  {
+    "from": "mr-tambourine-man",
+    "to": "chimes-of-freedom",
+    "kind": "same-theme",
+    "why": "Both are long visionary songs of 1964 that the Byrds recorded on their first album."
+  },
+  {
+    "from": "girl-from-the-north-country",
+    "to": "girl-from-the-north-country-with-johnny-cash",
+    "kind": "re-recorded",
+    "why": "Six years later he sang it again as a duet with Johnny Cash, opening Nashville Skyline."
+  },
+  {
+    "from": "the-lonesome-death-of-hattie-carroll",
+    "to": "hurricane",
+    "kind": "same-theme",
+    "why": "Both tell a real case, twelve years apart, in which a court failed a Black American."
+  },
+  {
+    "from": "someones-got-a-hold-of-my-heart",
+    "to": "tight-connection-to-my-heart",
+    "kind": "rewrite",
+    "why": "Dylan reworked the unreleased 1983 song into the opening track of Empire Burlesque."
+  },
+  {
+    "from": "death-is-not-the-end",
+    "to": "death-is-not-the-end-nick-cave-and-the-bad-seeds",
+    "kind": "covered-by",
+    "why": "Nick Cave turned the Down in the Groove song into the closing ensemble piece of Murder Ballads."
+  },
+  {
+    "from": "man-in-the-long-black-coat",
+    "to": "man-in-the-long-black-coat-joan-osborne",
+    "kind": "covered-by",
+    "why": "Joan Osborne included the Oh Mercy song on her hit 1995 album Relish."
+  },
+  {
+    "from": "born-in-time",
+    "to": "born-in-time-eric-clapton",
+    "kind": "covered-by",
+    "why": "Eric Clapton recorded the Under the Red Sky ballad for his 1998 album Pilgrim."
+  },
+  {
+    "from": "political-world",
+    "to": "everything-is-broken",
+    "kind": "same-theme",
+    "why": "Both Oh Mercy songs survey a world in moral disrepair."
+  },
+  {
+    "from": "license-to-kill",
+    "to": "union-sundown",
+    "kind": "same-theme",
+    "why": "Both Infidels songs criticize power and greed in modern society."
+  },
+  {
+    "from": "frankie-and-albert",
+    "to": "stack-a-lee",
+    "kind": "same-theme",
+    "why": "Both are old American murder ballads that Dylan recorded on his two acoustic albums of the early 1990s."
+  },
+  {
+    "from": "delia",
+    "to": "stack-a-lee",
+    "kind": "same-theme",
+    "why": "Both World Gone Wrong songs retell real killings that became folk legends."
+  },
+  {
+    "from": "mr-tambourine-man",
+    "to": "mr-tambourine-man-byrds",
+    "kind": "covered-by",
+    "why": "The Byrds took a shortened electric version of the song to number one in the US in 1965."
+  },
+  {
+    "from": "its-all-over-now-baby-blue",
+    "to": "its-all-over-now-baby-blue-them",
+    "kind": "covered-by",
+    "why": "Them, fronted by Van Morrison, released a recording of the song in 1966."
+  },
+  {
+    "from": "4th-time-around",
+    "to": "norwegian-wood",
+    "kind": "answer",
+    "why": "Listeners have long heard the song as Dylan's reply to the Beatles' Norwegian Wood, whose tune and story it echoes."
+  },
+  {
+    "from": "just-like-a-woman",
+    "to": "just-like-a-woman-manfred-mann",
+    "kind": "covered-by",
+    "why": "Manfred Mann turned the song into a UK chart hit in 1966."
+  },
+  {
+    "from": "highway-61-revisited",
+    "to": "highway-61-revisited-johnny-winter",
+    "kind": "covered-by",
+    "why": "Johnny Winter made the song a slide-guitar showcase on Second Winter in 1969."
+  },
+  {
+    "from": "maggies-farm",
+    "to": "maggies-farm-rage-against-the-machine",
+    "kind": "covered-by",
+    "why": "Rage Against the Machine recorded a heavy version for their 2000 covers album Renegades."
+  },
+  {
+    "from": "desolation-row",
+    "to": "desolation-row-my-chemical-romance",
+    "kind": "covered-by",
+    "why": "My Chemical Romance cut a fast punk version for the 2009 Watchmen soundtrack."
+  },
+  {
+    "from": "like-a-rolling-stone",
+    "to": "like-a-rolling-stone-rolling-stones",
+    "kind": "covered-by",
+    "why": "The Rolling Stones released the song as a single from their 1995 live album Stripped."
+  },
+  {
+    "from": "gates-of-eden",
+    "to": "its-alright-ma-im-only-bleeding",
+    "kind": "same-theme",
+    "why": "Both long acoustic songs on side two of the album attack the false promises of society in streams of images."
+  },
+  {
+    "from": "serve-yourself",
+    "to": "gotta-serve-somebody",
+    "kind": "answer",
+    "why": "John Lennon wrote Serve Yourself as a sardonic rejoinder to Gotta Serve Somebody."
+  },
+  {
+    "from": "every-grain-of-sand",
+    "to": "every-grain-of-sand-emmylou-harris",
+    "kind": "covered-by",
+    "why": "Emmylou Harris recorded the song on her acclaimed 1995 album Wrecking Ball."
+  },
+  {
+    "from": "gotta-serve-somebody",
+    "to": "when-you-gonna-wake-up",
+    "kind": "same-theme",
+    "why": "Both songs from Slow Train Coming warn listeners that no one can avoid a moral choice."
+  },
+  {
+    "from": "make-you-feel-my-love",
+    "to": "make-you-feel-my-love-adele",
+    "kind": "covered-by",
+    "why": "Adele's 2008 cover on her debut album 19 made the song famous to a new generation."
+  },
+  {
+    "from": "mississippi",
+    "to": "mississippi-sheryl-crow",
+    "kind": "covered-by",
+    "why": "Sheryl Crow released the song in 1998, three years before Dylan's own version came out."
+  },
+  {
+    "from": "rollin-and-tumblin",
+    "to": "rollin-and-tumblin-muddy-waters",
+    "kind": "borrowed-tune",
+    "why": "Dylan's song takes the melody and riff of the old blues that Muddy Waters made famous."
+  },
+  {
+    "from": "workingmans-blues-2",
+    "to": "workin-man-blues",
+    "kind": "same-theme",
+    "why": "Dylan's title points back to Haggard's working-class anthem, and both songs honor the laborer."
+  },
+  {
+    "from": "high-water-for-charley-patton",
+    "to": "high-water-everywhere",
+    "kind": "same-theme",
+    "why": "Dylan dedicated his flood song to Patton, whose own blues chronicled the 1927 Mississippi flood."
+  },
+  {
+    "from": "false-prophet",
+    "to": "if-lovin-is-believing",
+    "kind": "borrowed-tune",
+    "why": "The music of \"False Prophet\" closely follows Emerson's 1954 Sun single."
+  },
+  {
+    "from": "murder-most-foul",
+    "to": "key-west-philosopher-pirate",
+    "kind": "same-theme",
+    "why": "Both songs dwell on the assassination of an American president, Kennedy in one and McKinley in the other."
+  },
+  {
+    "from": "knockin-on-heavens-door",
+    "to": "knockin-on-heavens-door-guns-n-roses",
+    "kind": "covered-by",
+    "why": "Guns N' Roses recorded it for Use Your Illusion II in 1991 and it became a big hit in Britain."
+  },
+  {
+    "from": "you-aint-goin-nowhere",
+    "to": "you-aint-goin-nowhere-the-byrds",
+    "kind": "covered-by",
+    "why": "The Byrds released it in 1968 from the circulating basement demos, seven years before Dylan's version came out."
+  },
+  {
+    "from": "this-wheels-on-fire",
+    "to": "this-wheels-on-fire-julie-driscoll",
+    "kind": "covered-by",
+    "why": "Julie Driscoll, Brian Auger and the Trinity turned it into a UK hit in 1968."
+  },
+  {
+    "from": "hurricane",
+    "to": "joey",
+    "kind": "same-theme",
+    "why": "Both are long Desire ballads written with Jacques Levy about real men on the wrong side of the law."
+  },
+  {
+    "from": "idiot-wind",
+    "to": "simple-twist-of-fate",
+    "kind": "same-theme",
+    "why": "Both Blood on the Tracks songs look back on a broken relationship, one in anger and one in rueful wonder."
+  },
+  {
+    "from": "song-to-woody",
+    "to": "1913-massacre",
+    "kind": "borrowed-tune",
+    "why": "Dylan set his tribute to Woody Guthrie to the melody of Guthrie's own \"1913 Massacre\"."
+  },
+  {
+    "from": "blowin-in-the-wind",
+    "to": "no-more-auction-block",
+    "kind": "borrowed-tune",
+    "why": "Dylan acknowledged that the melody of Blowin' in the Wind came from the spiritual No More Auction Block."
+  },
+  {
+    "from": "blowin-in-the-wind",
+    "to": "blowin-in-the-wind-peter-paul-and-mary",
+    "kind": "covered-by",
+    "why": "Peter, Paul and Mary's 1963 single turned the song into a hit weeks after Freewheelin' came out."
+  },
+  {
+    "from": "masters-of-war",
+    "to": "nottamun-town",
+    "kind": "borrowed-tune",
+    "why": "Masters of War uses the melody of Nottamun Town as arranged by Jean Ritchie."
+  },
+  {
+    "from": "girl-from-the-north-country",
+    "to": "scarborough-fair",
+    "kind": "borrowed-tune",
+    "why": "Dylan drew the song's melody from the Scarborough Fair arrangement Martin Carthy taught him in London in late 1962."
+  },
+  {
+    "from": "bob-dylans-dream",
+    "to": "lord-franklin",
+    "kind": "borrowed-tune",
+    "why": "The song is set to the tune of Lord Franklin, which Dylan heard from Martin Carthy in London."
+  },
+  {
+    "from": "a-hard-rains-a-gonna-fall",
+    "to": "lord-randal",
+    "kind": "borrowed-tune",
+    "why": "Its structure of a parent's questions and a son's replies follows the ballad Lord Randal."
+  },
+  {
+    "from": "with-god-on-our-side",
+    "to": "the-patriot-game",
+    "kind": "borrowed-tune",
+    "why": "Dylan took the melody of With God on Our Side from Dominic Behan's The Patriot Game."
+  },
+  {
+    "from": "restless-farewell",
+    "to": "the-parting-glass",
+    "kind": "borrowed-tune",
+    "why": "Restless Farewell is set to the tune of the traditional farewell song The Parting Glass."
+  },
+  {
+    "from": "the-times-they-are-a-changin",
+    "to": "blowin-in-the-wind",
+    "kind": "same-theme",
+    "why": "Both were written as broad anthems for the movements of the early 1960s rather than about a single event."
+  },
+  {
+    "from": "only-a-pawn-in-their-game",
+    "to": "the-lonesome-death-of-hattie-carroll",
+    "kind": "same-theme",
+    "why": "Both songs recount 1963 racist killings and point at the system behind the killer."
+  },
+  {
+    "from": "boots-of-spanish-leather",
+    "to": "girl-from-the-north-country",
+    "kind": "same-theme",
+    "why": "Both are songs of longing for a lover who is far away, written around Dylan's separation from Suze Rotolo."
+  },
+  {
+    "from": "my-back-pages",
+    "to": "my-back-pages-the-byrds",
+    "kind": "covered-by",
+    "why": "The Byrds' 1967 version became one of the best-known covers of the song."
+  }
+]

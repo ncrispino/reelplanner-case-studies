@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "voice": "am_michael",
+  "speed": 1.25,
+  "model": "kokoro-v1.0 + whisper small.en",
+  "lines": {
+    "10": {
+      "key": "d5c361dfdbe9592459b9",
+      "text": "One question came up while building. On a computer, the Cards and Map button is gone, so the full map has no way to the thread cards. A: add a link, a thread from this song, to the map page. B: no link; open the song, then start a thread from there. I recommend A.",
+      "sha256": "ce838b357175a78ceb3463e05de18245d7909e317687e25370b60ae449d231a9",
+      "duration_s": 14.656
+    },
+    "11": {
+      "key": "41c471367a4c0983bc49",
+      "text": "With A, the map page gets one link, under its title, to a thread built from its song.",
+      "sha256": "4c32ef739874e1f6f69d54d32f9df356044043a9c8a19f1a3fdcaa4befe4b8a4",
+      "duration_s": 4.523
+    },
+    "12": {
+      "key": "3b1ff0fa6c9ed73df7c3",
+      "text": "With B, it stays as built: two clicks, through the song page.",
+      "sha256": "9b4759435827f5bdc00f206971ba7b19d8d6226982a01129ce5a7068e6e1ede5",
+      "duration_s": 3.051
+    },
+    "13": {
+      "key": "24923f41e1a7691bdb53",
+      "text": "Step six. Search shows three columns. And the desktop check fails on more than the plan listed: the phone's bottom bar or no header, and any arrow that moves nothing.",
+      "sha256": "6ba0198fec0a60086d88e2d0da6a9abc22f83bb47783a9930e9c0c9a3ebf942b",
+      "duration_s": 9.579
+    },
+    "14": {
+      "key": "d0783f2a4c1186312812",
+      "text": "What ran: the data check, the build of fourteen hundred pages, the phone check and the new desktop check at two sizes, all passing. Not done: question four, and the hover label is checked only by hand.",
+      "sha256": "95058d31b452ddeb6b45de7301d6e4ffc41e9cf208d2e39318587bb43245675a",
+      "duration_s": 11.627
+    },
+    "15": {
+      "key": "aea99210e8a2a517a327",
+      "text": "The rest of the choices are on this list, twelve of them, one line each.",
+      "sha256": "f5eda33a11793c6bd84d25fef445db52f49895aaa9e05357ab69905667eb07b8",
+      "duration_s": 3.456
+    },
+    "16": {
+      "key": "ec51fa0953b28449d63b",
+      "text": "That's the site on a computer. Seeing it run, anything you'd change?",
+      "sha256": "841d175faf568cee64bacba669e7ddf307a92a08ed4e9f35d6671e329e85590a",
+      "duration_s": 3.413
+    },
+    "01": {
+      "key": "f2b8fc16c859560cb238",
+      "text": "On a computer, the site now fills the window. A header with search, each era across the whole screen, two-column pages, threads along the years, and a map you can click. On a phone, nothing changed: eighteen pages compared pixel for pixel are the same.",
+      "sha256": "01e5995854d2ff4d155323ba83756a4fc6eb62f9384d4100adebce0276506f2c",
+      "duration_s": 14.379
+    },
+    "02": {
+      "key": "513b1aa8892200b7b699",
+      "text": "Step one. A click or a tap on a dot opens its song now, on a phone too. Two choices: the plus and minus buttons show from tablet width up, since a phone pinches; and hovering a dot shows its own label in place of the browser's tooltip.",
+      "sha256": "bff0f6fa601c6a3aee3b10a0c0a7b469b166cd215fe33b1787fef8efc601ea87",
+      "duration_s": 13.845
+    },
+    "03": {
+      "key": "3246bf95a2db4f0a0b5c",
+      "text": "Step two. The header stays at the top as you scroll, so search is always there. And a tablet keeps today's column, with wider margins: at nine hundred pixels a thread still has its cards and map side by side.",
+      "sha256": "323c138cc13ac58ded0d84d55c397f1138af0f57b7809fff0d78314d8edd99f5",
+      "duration_s": 12.139
+    },
+    "04": {
+      "key": "0e2109208d2f311db5ef",
+      "text": "Step three. Each era fills the screen, and scrolling snaps to the next. The era is one piece of page at every width, laid out side by side from eleven hundred pixels. As you scroll, the header's colour fades into the next era's and the old text dims. And on the timeline, short eras' names are cut short; the current one is written in full.",
+      "sha256": "9a474aa651a1e4f9bb66ce59484dee7c30bccbe99dc98a9c3e48aaff38a54f1d",
+      "duration_s": 19.179
+    },
+    "05": {
+      "key": "2b6ad324aee9e358570a",
+      "text": "Step four. A song page has the cover, note and players on the left, and the words, connections and a small map on the right. The words card is drawn twice, once for each layout, so the phone page stays exactly as it was. And the cover sits small, above the title, so a long title never breaks inside a word.",
+      "sha256": "7b69be920510b78ed68d767dd0b73988db3f461d91fdff15936449720fd6e4b7",
+      "duration_s": 17.515
+    },
+    "06": {
+      "key": "a8345d089993fbf819a8",
+      "text": "Off the plan: a moment lists the songs its story names, and the era's records from that year, because the data has no list of songs for each moment.",
+      "sha256": "748ab4a1e696cdd21b22d46733a9e9ac546ae697e57ac5b42646fdba6cfb1b5b",
+      "duration_s": 8.341
+    },
+    "07": {
+      "key": "273fa3f8d76e9cb74b8e",
+      "text": "Step five. A thread's cards are spaced evenly, with the years between them written on the line, since a forty-year gap would push the next card off the row. Its map opens on the first song's neighbours. And the map page opens with its song already in the panel.",
+      "sha256": "bdabb35dd43ccd3d2c3714a9f8c30ffdddd3aead080b6303fb9791e9c294fa06",
+      "duration_s": 14.656
+    },
+    "08": {
+      "key": "b087497c1e38ba8cff60",
+      "text": "Off the plan: the tablet also hides the map's own Cards and Map button beside a thread's cards, the same leftover button this plan removes on a computer.",
+      "sha256": "585ac8b2010dfec1624de7fc056a3faf1e1eb0945cb52ca72fbdc58762dbea24",
+      "duration_s": 8.853
+    },
+    "09": {
+      "key": "698f3788398572bef72d",
+      "text": "And the threads list shows each thread's covers from all its songs; an old tune, or another artist's version, shows the cover of the Dylan song it leads to.",
+      "sha256": "60fb16472111a29682061f67a653dbdf12182f9c139a5f4df8db2b30ae6935f7",
+      "duration_s": 8.725
+    }
+  }
+}

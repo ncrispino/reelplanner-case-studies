@@ -1,0 +1,90 @@
+{
+  "id": "e27bf6576a59",
+  "scenes": [
+    {
+      "scene": 1,
+      "narration": "2b567b5980c7",
+      "frame": "e434993fe27e"
+    },
+    {
+      "scene": 2,
+      "narration": "9faa4d3b515d",
+      "frame": "ba6c26f4156d"
+    },
+    {
+      "scene": 3,
+      "narration": "f36500a655e0",
+      "frame": "cc7da9db3ce5"
+    },
+    {
+      "scene": 4,
+      "narration": "60d36afe1cb8",
+      "frame": "ee43214b0555"
+    },
+    {
+      "scene": 5,
+      "narration": "9e5fe57b6a3a",
+      "frame": "3b086b083258"
+    },
+    {
+      "scene": 6,
+      "narration": "9d89451c38ed",
+      "frame": "59339fb570d0"
+    },
+    {
+      "scene": 7,
+      "narration": "78119695d6cd",
+      "frame": "39e757289a5f"
+    },
+    {
+      "scene": 8,
+      "narration": "22a066726fe4",
+      "frame": "f1368a012ab5"
+    },
+    {
+      "scene": 9,
+      "narration": "cfba7ecd818d",
+      "frame": "c997a26db77a"
+    },
+    {
+      "scene": 10,
+      "narration": "abea409bd74b",
+      "frame": "ff7f5bc43a78"
+    },
+    {
+      "scene": 11,
+      "narration": "9851491f53c0",
+      "frame": "12ede40e4c94"
+    },
+    {
+      "scene": 12,
+      "narration": "de26acf5f4f5",
+      "frame": "986007f5dcda"
+    },
+    {
+      "scene": 13,
+      "narration": "504d7c60b175",
+      "frame": "3ac62a634e98"
+    },
+    {
+      "scene": 14,
+      "narration": "c33ae22f6f98",
+      "frame": "d9179ed31717"
+    },
+    {
+      "scene": 15,
+      "narration": "15841f5cd13f",
+      "frame": "80bf2f7d0df3"
+    },
+    {
+      "scene": 16,
+      "narration": "b6a5dedfdfbe",
+      "frame": "d1811158febb"
+    }
+  ],
+  "round": 1,
+  "at": "2026-10-07T20:24:15.314Z",
+  "video": "2026-10-07-desktop--walkthrough",
+  "build": "first",
+  "scope": null
+}

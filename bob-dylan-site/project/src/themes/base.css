@@ -1,0 +1,21 @@
+/* Shared tokens. Each era file (src/themes/<era>.css) sets the same custom properties on [data-era="<id>"] and then
+   adds its own gestures inside `@scope ([data-era="<id>"]) to ([data-era])`, so a panel, card, cover or map dot
+   wears the nearest era around it and never the page's. Tokens:
+   --paper/--ink/--soft/--line   ground, text, secondary text, rules
+   --accent/--accent-ink         the era's signal colour and the text that sits on it
+   --accent2                     a second colour (wash, shadow, neon)
+   --card                        raised surfaces
+   --display…                    the era's display face; --display-alt for small display text where the face is too wide
+   --label…                      kickers, chips, buttons, section titles
+   --body                        running text
+   --texture                     background layers (shorthand syntax: positions and sizes allowed)
+   --stamp                       the words on the era panel's stamp
+   --dot                         the era's colour on the map and the time ribbon (made to sit on the dark map) */
+:root { --paper:#f6f2ea; --ink:#17140f; --soft:rgba(23,20,15,.7); --line:rgba(23,20,15,.18); --accent:#b8552e; --accent-ink:#fff;
+  --accent2:#2d4f86; --card:#ece5d8;
+  --display:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; --display-weight:500;
+  --display-case:none; --display-track:-0.01em; --display-style:normal; --display-lh:1.05;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --label:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace; --label-weight:600; --label-track:.08em; --label-case:uppercase;
+  --texture:none; --stamp:""; --dot:#cccccc; }

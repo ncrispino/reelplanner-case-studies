@@ -1,0 +1,92 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-kerning:normal; }
+  .f01-hook-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f01-hook-stage { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* three sizes: title 104 serif, column heads + markers 26 mono, items 32 sans */
+  .f01-hook-title { position:absolute; left:90px; top:96px; font-family:"EB Garamond"; font-weight:400; font-size:104px; line-height:1.0; letter-spacing:-0.024em; color:var(--rp-ink); white-space:nowrap; }
+  .f01-hook-col { position:absolute; top:268px; }
+  .f01-hook-col-l { left:90px; width:740px; }
+  .f01-hook-col-r { left:940px; width:890px; }
+  .f01-hook-head { position:relative; height:44px; font-family:"JetBrains Mono"; font-weight:400; font-size:26px; line-height:26px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f01-hook-rule { position:absolute; left:0; top:40px; height:2px; background:rgba(var(--rp-ink-rgb),0.2); transform-origin:0 50%; }
+  .f01-hook-col-l .f01-hook-rule { width:740px; }
+  .f01-hook-col-r .f01-hook-rule { width:890px; }
+  .f01-hook-rule.f01-hook-coral { background:var(--rp-coral); }
+  .f01-hook-items { position:relative; margin-top:32px; }
+  .f01-hook-item { position:relative; height:88px; display:flex; align-items:center; gap:22px; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f01-hook-mk { flex:0 0 40px; font-family:"JetBrains Mono"; font-weight:400; font-size:26px; line-height:1; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f01-hook-tx { font-family:"Inter"; font-weight:400; font-size:32px; line-height:1.2; letter-spacing:-0.005em; color:var(--rp-ink); white-space:nowrap; }
+  .f01-hook-divider { position:absolute; left:885px; top:268px; width:1px; height:560px; background:rgba(var(--rp-ink-rgb),0.12); transform-origin:50% 0; }
+</style>
+<div id="root" data-composition-id="01-hook" data-duration="17.396" data-width="1920" data-height="1080" data-band="bottom">
+  <div class="clip f01-hook-bg" data-start="0" data-duration="17.396" data-track-index="0"></div>
+  <div class="clip f01-hook-stage" data-start="0" data-duration="17.396" data-track-index="1">
+
+    <div class="f01-hook-title" id="f01-hook-title">Version two</div>
+
+    <i class="f01-hook-divider" id="f01-hook-divider"></i>
+
+    <div class="f01-hook-col f01-hook-col-l">
+      <div class="f01-hook-head" id="f01-hook-head-l">You decided<i class="f01-hook-rule" id="f01-hook-rule-l"></i></div>
+      <div class="f01-hook-items">
+        <div class="f01-hook-item" id="f01-hook-l1"><span class="f01-hook-mk">1</span><span class="f01-hook-tx">All 39 albums, 16 in full</span></div>
+        <div class="f01-hook-item" id="f01-hook-l2"><span class="f01-hook-mk">2</span><span class="f01-hook-tx">The real covers</span></div>
+        <div class="f01-hook-item" id="f01-hook-l3"><span class="f01-hook-mk">3</span><span class="f01-hook-tx">Threads, plus a map</span></div>
+        <div class="f01-hook-item" id="f01-hook-l4"><span class="f01-hook-mk">4</span><span class="f01-hook-tx">An embedded Spotify player</span></div>
+      </div>
+    </div>
+
+    <div class="f01-hook-col f01-hook-col-r">
+      <div class="f01-hook-head" id="f01-hook-head-r">You asked for<i class="f01-hook-rule f01-hook-coral" id="f01-hook-rule-r"></i></div>
+      <div class="f01-hook-items">
+        <div class="f01-hook-item" id="f01-hook-r1"><span class="f01-hook-mk">1</span><span class="f01-hook-tx">Ask question 1 again, with the differences shown</span></div>
+        <div class="f01-hook-item" id="f01-hook-r2"><span class="f01-hook-mk">2</span><span class="f01-hook-tx">A theme and real photos per era</span></div>
+        <div class="f01-hook-item" id="f01-hook-r3"><span class="f01-hook-mk">3</span><span class="f01-hook-tx">Lyrics, with a preview</span></div>
+        <div class="f01-hook-item" id="f01-hook-r4"><span class="f01-hook-mk">4</span><span class="f01-hook-tx">The map on phones too</span></div>
+        <div class="f01-hook-item" id="f01-hook-r5"><span class="f01-hook-mk">5</span><span class="f01-hook-tx">YouTube for songs and moments</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+(function () {
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f01-hook-" + s); };
+  var row = function (id, at, dx) { tl.fromTo($(id), { opacity: 0, x: dx }, { opacity: 1, x: 0, duration: 0.55, ease: E }, at); };
+
+  // Scene 1 (0-7s): the title, then "you decided" one line at a time
+  tl.fromTo($("title"), { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.105);
+  tl.fromTo($("head-l"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.95);
+  tl.fromTo($("rule-l"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 1.003);
+  row("l1", 1.689, -20);
+  row("l2", 3.063, -20);
+  row("l3", 4.435, -20);
+  row("l4", 5.808, -20);
+
+  // Scene 2 (7-16s): "you asked for", five lines, then hold
+  tl.fromTo($("divider"), { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: E }, 7.392);
+  tl.fromTo($("head-r"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 7.603);
+  tl.fromTo($("rule-r"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: E }, 7.656);
+  row("r1", 8.448, 20);
+  row("r2", 10.032, 20);
+  row("r3", 11.616, 20);
+  row("r4", 12.989, 20);
+  row("r5", 14.362, 20);
+
+  // hold still to the end
+  tl.set({}, {}, 16);
+  window.__timelines = window.__timelines || {};
+  window.__timelines["01-hook"] = tl;
+})();
+</script>
+</template>

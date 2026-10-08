@@ -1,0 +1,273 @@
+<template id="captions-template" data-composition-id="captions" data-width="1920" data-height="1080">
+<script src="assets/vendor/gsap.min.js"></script>
+
+
+<style data-brand-tokens>
+      @font-face { font-family: 'EB Garamond'; src: url('assets/fonts/EBGaramond-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: 'EB Garamond'; src: url('assets/fonts/EBGaramond-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: block; }
+      :root {
+      --ink: var(--rp-ink);
+      --cream: var(--rp-paper);
+      --tile: var(--rp-tile);
+      --tile-strong: var(--rp-tile-2);
+      --coral: var(--rp-coral);
+      --navy: var(--rp-data);
+      --navy-soft: var(--rp-slab);
+      --navy-elev: var(--rp-slab-bar);
+      --cap-ink: var(--rp-ink);
+      --cap-canvas: var(--rp-paper);
+      --cap-accent: var(--rp-coral);
+      --cap-accent-2: var(--rp-tile-2);
+      --font-display: "EB Garamond", system-ui, serif;
+      --font-body: "Inter", system-ui, sans-serif;
+      --cap-band-top: 900px;
+      --cap-band-height: 180px;
+      }
+    </style>
+
+<style>
+  #captions-root {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .caption-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+  }
+  /* the keep-out band, from captionBand(H) — frame content stays above it */
+  .caption-stage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--cap-band-top, 900px);
+    height: var(--cap-band-height, 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .caption-group {
+    /* every group is absolutely stacked over the SAME band — exactly one shown at a
+       time via opacity. Must be absolute: in-flow groups would lay out side-by-side. */
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  /* THE lifted cream card — warm cream fill, 1px hairline ink border, one soft warm
+     shadow (code-editorial's only elevation language), 12px radius, no tilt */
+  .caption-pill {
+    max-width: 78%;
+    padding: 22px 44px 26px;
+    background: var(--cap-canvas, var(--rp-paper));
+    border: 1px solid color-mix(in srgb, var(--cap-ink, var(--rp-ink)) 12%, transparent);
+    border-radius: 12px;
+    box-shadow:
+      0 1px 3px color-mix(in srgb, var(--cap-ink, var(--rp-ink)) 8%, transparent),
+      0 4px 16px color-mix(in srgb, var(--cap-ink, var(--rp-ink)) 4%, transparent);
+  }
+  .caption-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.12em 0.3em;
+    font-family: "EB Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(40px, 4.4vw, 56px);
+    line-height: 1.24;
+    letter-spacing: -0.02em;
+  }
+
+  /* upcoming — faint warm ink, no underline */
+  .caption-word {
+    display: inline-block;
+    padding: 0 0.02em 0.06em;
+    color: color-mix(in srgb, var(--cap-ink, var(--rp-ink)) 40%, var(--cap-canvas, var(--rp-paper)));
+    border-bottom: 3px solid transparent;
+  }
+  /* current word — full ink under the coral voltage underline (the brand's signature
+     inline-link gesture; border-bottom = underline without layout shift) */
+  .caption-word.is-active {
+    color: var(--cap-ink, var(--rp-ink));
+    border-bottom: 3px solid var(--cap-accent, var(--rp-coral));
+  }
+  /* already spoken — solid warm ink, underline cleared */
+  .caption-word.is-spoken {
+    color: var(--cap-ink, var(--rp-ink));
+    border-bottom: 3px solid transparent;
+  }
+
+  /* optional per-word accents (dormant until a word-classer tags them) */
+  /* brand / key term — the expressive EB Garamond italic */
+  .caption-word.cap-brand {
+    font-style: italic;
+    color: var(--cap-ink, var(--rp-ink));
+  }
+  .caption-word.cap-brand.is-active {
+    border-bottom: 3px solid var(--cap-accent, var(--rp-coral));
+  }
+  /* numerals / data — slightly recessed warm ink */
+  .caption-word.cap-num {
+    color: color-mix(in srgb, var(--cap-ink, var(--rp-ink)) 72%, var(--cap-canvas, var(--rp-paper)));
+  }
+  /* emphasis — a persistent coral voltage underline */
+  .caption-word.cap-cta {
+    border-bottom: 3px solid var(--cap-accent-2, var(--rp-tile-2));
+    color: var(--cap-ink, var(--rp-ink));
+  }
+
+  @media (max-aspect-ratio: 9/16) {
+    .caption-pill {
+      max-width: 92%;
+    }
+    .caption-line {
+      font-size: clamp(34px, 5.4vw, 46px);
+    }
+  }
+</style>
+
+<div
+  id="captions-root"
+  data-composition-id="captions"
+  data-timeline-locked
+  data-start="0"
+  data-duration="131.567"
+  data-fps="30"
+  data-width="1920"
+  data-height="1080"
+>
+  <div class="caption-layer" aria-hidden="true">
+    <div id="caption-stage" class="caption-stage"></div>
+  </div>
+</div>
+
+<script>
+  // captions.mjs injects the engine's scene-aware groups + real duration here.
+  /* rp-caption-code: a caption word's code part (names.md) in code markup, inside its .caption-word span, so the karaoke className sets on the word leave it alone */
+  function __rpShowWord(span, w, tail) {
+    var t = String(w.text), c = w.code ? String(w.code) : "", i = c ? t.indexOf(c) : -1;
+    if (i < 0) { span.textContent = t + (tail || ""); return; }
+    // the script's backticks mark the code; the chip shows it, so they are never shown as letters beside it
+    var before = t.slice(0, i).replace(/`/g, ""), after = t.slice(i + c.length).replace(/`/g, "");
+    if (before) span.appendChild(document.createTextNode(before));
+    var code = document.createElement("code"); code.className = "cap-code"; if (w.run) code.setAttribute("data-run", w.run); code.textContent = c; span.appendChild(code);
+    if (after || tail) span.appendChild(document.createTextNode(after + (tail || "")));
+  }
+  var GROUPS = [{"id":"caption-group-0","frame":1,"start":0.04,"end":1.97,"text":"Every track now has a page.","words":[{"id":"caption-word-0-0","text":"Every","start":0.04,"end":0.45},{"id":"caption-word-0-1","text":"track","start":0.45,"end":0.9},{"id":"caption-word-0-2","text":"now","start":0.9,"end":1.17},{"id":"caption-word-0-3","text":"has","start":1.17,"end":1.3},{"id":"caption-word-0-4","text":"a","start":1.44,"end":1.53},{"id":"caption-word-0-5","text":"page.","start":1.92,"end":1.94}]},{"id":"caption-group-1","frame":1,"start":1.98,"end":5.67,"text":"All 458 tracks on the 39 albums link,","words":[{"id":"caption-word-1-0","text":"All","start":1.98,"end":2.19},{"id":"caption-word-1-1","text":"458","start":2.19,"end":3.02},{"id":"caption-word-1-2","text":"tracks","start":3.02,"end":3.46},{"id":"caption-word-1-3","text":"on","start":3.46,"end":3.9},{"id":"caption-word-1-4","text":"the","start":3.9,"end":4.02},{"id":"caption-word-1-5","text":"39","start":4.02,"end":4.56},{"id":"caption-word-1-6","text":"albums","start":4.56,"end":5.02},{"id":"caption-word-1-7","text":"link,","start":5.16,"end":5.68}]},{"id":"caption-group-2","frame":1,"start":5.68,"end":8.67,"text":"271 of them to new songs.","words":[{"id":"caption-word-2-0","text":"271","start":5.68,"end":6.63},{"id":"caption-word-2-1","text":"of","start":6.63,"end":6.84},{"id":"caption-word-2-2","text":"them","start":6.84,"end":7.2},{"id":"caption-word-2-3","text":"to","start":7.2,"end":7.64},{"id":"caption-word-2-4","text":"new","start":7.64,"end":7.78},{"id":"caption-word-2-5","text":"songs.","start":7.78,"end":8.6}]},{"id":"caption-group-3","frame":1,"start":8.68,"end":11.15,"text":"Every album song has a Spotify player,","words":[{"id":"caption-word-3-0","text":"Every","start":8.68,"end":9},{"id":"caption-word-3-1","text":"album","start":9.02,"end":9.4},{"id":"caption-word-3-2","text":"song","start":9.4,"end":9.65},{"id":"caption-word-3-3","text":"has","start":9.71,"end":9.92},{"id":"caption-word-3-4","text":"a","start":9.92,"end":9.94},{"id":"caption-word-3-5","text":"Spotify","start":10.1,"end":10.16},{"id":"caption-word-3-6","text":"player,","start":10.6,"end":11.16}]},{"id":"caption-group-4","frame":1,"start":11.16,"end":16.41,"text":"351 have an official clip, and 421 link to their lyrics.","words":[{"id":"caption-word-4-0","text":"351","start":11.16,"end":12.03},{"id":"caption-word-4-1","text":"have","start":12.03,"end":12.41},{"id":"caption-word-4-2","text":"an","start":12.41,"end":12.46},{"id":"caption-word-4-3","text":"official","start":12.64,"end":13.32},{"id":"caption-word-4-4","text":"clip,","start":13.41,"end":13.78},{"id":"caption-word-4-5","text":"and","start":13.78,"end":13.793},{"id":"caption-word-4-6","text":"421","start":13.793,"end":14.78},{"id":"caption-word-4-7","text":"link","start":14.78,"end":15.06},{"id":"caption-word-4-8","text":"to","start":15.22,"end":15.27},{"id":"caption-word-4-9","text":"their","start":15.27,"end":15.29},{"id":"caption-word-4-10","text":"lyrics.","start":15.74,"end":16.32}]},{"id":"caption-group-5","frame":2,"start":16.42,"end":17.105,"text":"Step 1.","words":[{"id":"caption-word-5-0","text":"Step","start":16.42,"end":16.81},{"id":"caption-word-5-1","text":"1.","start":16.81,"end":17.115}]},{"id":"caption-group-6","frame":2,"start":17.115,"end":19.11,"text":"A script maps every track to its song,","words":[{"id":"caption-word-6-0","text":"A","start":17.115,"end":17.42},{"id":"caption-word-6-1","text":"script","start":17.42,"end":17.74},{"id":"caption-word-6-2","text":"maps","start":17.74,"end":17.81},{"id":"caption-word-6-3","text":"every","start":17.81,"end":18.32},{"id":"caption-word-6-4","text":"track","start":18.32,"end":18.58},{"id":"caption-word-6-5","text":"to","start":18.58,"end":18.72},{"id":"caption-word-6-6","text":"its","start":18.72,"end":18.88},{"id":"caption-word-6-7","text":"song,","start":18.88,"end":19.12}]},{"id":"caption-group-7","frame":2,"start":19.12,"end":21.69,"text":"once, and the album pages read that map.","words":[{"id":"caption-word-7-0","text":"once,","start":19.12,"end":19.38},{"id":"caption-word-7-1","text":"and","start":19.38,"end":19.55},{"id":"caption-word-7-2","text":"the","start":19.63,"end":19.84},{"id":"caption-word-7-3","text":"album","start":19.84,"end":20.23},{"id":"caption-word-7-4","text":"pages","start":20.23,"end":20.62},{"id":"caption-word-7-5","text":"read","start":20.62,"end":20.93},{"id":"caption-word-7-6","text":"that","start":20.93,"end":21.24},{"id":"caption-word-7-7","text":"map.","start":21.24,"end":21.7}]},{"id":"caption-group-8","frame":2,"start":21.7,"end":25.42,"text":"Takes join their song: Billy 4 and Billy 7 are listed on Billy 1,","words":[{"id":"caption-word-8-0","text":"Takes","start":21.7,"end":21.93},{"id":"caption-word-8-1","text":"join","start":21.93,"end":22.08},{"id":"caption-word-8-2","text":"their","start":22.23,"end":22.45},{"id":"caption-word-8-3","text":"song:","start":22.45,"end":22.84},{"id":"caption-word-8-4","text":"Billy","start":23.12,"end":23.17},{"id":"caption-word-8-5","text":"4","start":23.17,"end":23.36},{"id":"caption-word-8-6","text":"and","start":23.36,"end":23.55},{"id":"caption-word-8-7","text":"Billy","start":23.55,"end":23.88},{"id":"caption-word-8-8","text":"7","start":23.88,"end":24.07},{"id":"caption-word-8-9","text":"are","start":24.07,"end":24.26},{"id":"caption-word-8-10","text":"listed","start":24.26,"end":24.65},{"id":"caption-word-8-11","text":"on","start":24.65,"end":24.78},{"id":"caption-word-8-12","text":"Billy","start":24.78,"end":25.11},{"id":"caption-word-8-13","text":"1,","start":25.11,"end":25.43}]},{"id":"caption-group-9","frame":2,"start":25.43,"end":28.23,"text":"and Alberta's 2 takes became one song.","words":[{"id":"caption-word-9-0","text":"and","start":25.43,"end":25.62},{"id":"caption-word-9-1","text":"Alberta's","start":25.62,"end":26.21},{"id":"caption-word-9-2","text":"2","start":26.21,"end":26.4},{"id":"caption-word-9-3","text":"takes","start":26.4,"end":26.73},{"id":"caption-word-9-4","text":"became","start":26.73,"end":26.9},{"id":"caption-word-9-5","text":"one","start":27.35,"end":27.54},{"id":"caption-word-9-6","text":"song.","start":27.54,"end":28.24}]},{"id":"caption-group-10","frame":2,"start":28.24,"end":31.59,"text":"A live take with no page became a song under its plain title,","words":[{"id":"caption-word-10-0","text":"A","start":28.24,"end":28.35},{"id":"caption-word-10-1","text":"live","start":28.35,"end":28.57},{"id":"caption-word-10-2","text":"take","start":28.57,"end":28.73},{"id":"caption-word-10-3","text":"with","start":28.73,"end":28.985},{"id":"caption-word-10-4","text":"no","start":28.985,"end":29.24},{"id":"caption-word-10-5","text":"page","start":29.24,"end":29.5},{"id":"caption-word-10-6","text":"became","start":29.64,"end":29.92},{"id":"caption-word-10-7","text":"a","start":29.92,"end":29.98},{"id":"caption-word-10-8","text":"song","start":29.98,"end":30.2},{"id":"caption-word-10-9","text":"under","start":30.25,"end":30.58},{"id":"caption-word-10-10","text":"its","start":30.6,"end":30.79},{"id":"caption-word-10-11","text":"plain","start":30.79,"end":31.13},{"id":"caption-word-10-12","text":"title,","start":31.13,"end":31.55}]},{"id":"caption-group-11","frame":2,"start":31.6,"end":32.72,"text":"like Minstrel Boy.","words":[{"id":"caption-word-11-0","text":"like","start":31.6,"end":31.87},{"id":"caption-word-11-1","text":"Minstrel","start":31.87,"end":32.39},{"id":"caption-word-11-2","text":"Boy.","start":32.4,"end":32.73}]},{"id":"caption-group-12","frame":2,"start":32.73,"end":34.78,"text":"And where Dylan co-wrote the words,","words":[{"id":"caption-word-12-0","text":"And","start":32.73,"end":32.93},{"id":"caption-word-12-1","text":"where","start":32.93,"end":33.02},{"id":"caption-word-12-2","text":"Dylan","start":33.51,"end":33.68},{"id":"caption-word-12-3","text":"co-wrote","start":33.69,"end":33.9},{"id":"caption-word-12-4","text":"the","start":33.9,"end":34.4},{"id":"caption-word-12-5","text":"words,","start":34.4,"end":34.66}]},{"id":"caption-group-13","frame":2,"start":34.8,"end":36.359,"text":"the song counts as his own.","words":[{"id":"caption-word-13-0","text":"the","start":34.8,"end":34.97},{"id":"caption-word-13-1","text":"song","start":34.97,"end":35.23},{"id":"caption-word-13-2","text":"counts","start":35.25,"end":35.62},{"id":"caption-word-13-3","text":"as","start":35.71,"end":35.81},{"id":"caption-word-13-4","text":"his","start":35.81,"end":36.02},{"id":"caption-word-13-5","text":"own.","start":36.02,"end":36.26}]},{"id":"caption-group-14","frame":3,"start":36.369,"end":39.969,"text":"One off-plan change: the new songs are in a file called album-tracks,","words":[{"id":"caption-word-14-0","text":"One","start":36.369,"end":36.559},{"id":"caption-word-14-1","text":"off-plan","start":36.609,"end":37.279},{"id":"caption-word-14-2","text":"change:","start":37.289,"end":37.909},{"id":"caption-word-14-3","text":"the","start":37.939,"end":38.089},{"id":"caption-word-14-4","text":"new","start":38.089,"end":38.269},{"id":"caption-word-14-5","text":"songs","start":38.269,"end":38.569},{"id":"caption-word-14-6","text":"are","start":38.569,"end":38.749},{"id":"caption-word-14-7","text":"in","start":38.749,"end":38.799},{"id":"caption-word-14-8","text":"a","start":38.799,"end":38.939},{"id":"caption-word-14-9","text":"file","start":38.939,"end":39.179},{"id":"caption-word-14-10","text":"called","start":39.239,"end":39.459},{"id":"caption-word-14-11","text":"album-tracks,","start":39.469,"end":39.849}]},{"id":"caption-group-15","frame":3,"start":40.379,"end":44.389,"text":"not tracks, because tracks was already taken by the Blood on the Tracks era.","words":[{"id":"caption-word-15-0","text":"not","start":40.379,"end":40.509},{"id":"caption-word-15-1","text":"tracks,","start":40.509,"end":41.249},{"id":"caption-word-15-2","text":"because","start":41.289,"end":41.469},{"id":"caption-word-15-3","text":"tracks","start":41.529,"end":41.839},{"id":"caption-word-15-4","text":"was","start":41.839,"end":41.889},{"id":"caption-word-15-5","text":"already","start":42.019,"end":42.439},{"id":"caption-word-15-6","text":"taken","start":42.439,"end":42.679},{"id":"caption-word-15-7","text":"by","start":42.679,"end":42.889},{"id":"caption-word-15-8","text":"the","start":42.889,"end":43.099},{"id":"caption-word-15-9","text":"Blood","start":43.099,"end":43.349},{"id":"caption-word-15-10","text":"on","start":43.349,"end":43.469},{"id":"caption-word-15-11","text":"the","start":43.469,"end":43.649},{"id":"caption-word-15-12","text":"Tracks","start":43.649,"end":43.949},{"id":"caption-word-15-13","text":"era.","start":44.099,"end":44.269}]},{"id":"caption-group-16","frame":4,"start":44.493,"end":45.373,"text":"Step 2.","words":[{"id":"caption-word-16-0","text":"Step","start":44.493,"end":44.793},{"id":"caption-word-16-1","text":"2.","start":44.793,"end":45.333}]},{"id":"caption-group-17","frame":4,"start":45.383,"end":47.623,"text":"Another writer's song names who wrote its words,","words":[{"id":"caption-word-17-0","text":"Another","start":45.383,"end":45.733},{"id":"caption-word-17-1","text":"writer's","start":45.743,"end":46.203},{"id":"caption-word-17-2","text":"song","start":46.203,"end":46.433},{"id":"caption-word-17-3","text":"names","start":46.433,"end":46.743},{"id":"caption-word-17-4","text":"who","start":46.783,"end":46.853},{"id":"caption-word-17-5","text":"wrote","start":46.853,"end":47.073},{"id":"caption-word-17-6","text":"its","start":47.073,"end":47.273},{"id":"caption-word-17-7","text":"words,","start":47.273,"end":47.543}]},{"id":"caption-group-18","frame":4,"start":47.633,"end":50.523,"text":"like Stardust, whose words are by Mitchell Parish.","words":[{"id":"caption-word-18-0","text":"like","start":47.633,"end":47.813},{"id":"caption-word-18-1","text":"Stardust,","start":47.823,"end":48.493},{"id":"caption-word-18-2","text":"whose","start":48.563,"end":48.693},{"id":"caption-word-18-3","text":"words","start":48.693,"end":48.983},{"id":"caption-word-18-4","text":"are","start":49.133,"end":49.213},{"id":"caption-word-18-5","text":"by","start":49.213,"end":49.333},{"id":"caption-word-18-6","text":"Mitchell","start":49.333,"end":49.613},{"id":"caption-word-18-7","text":"Parish.","start":50.023,"end":50.533}]},{"id":"caption-group-19","frame":4,"start":50.533,"end":52.323,"text":"A traditional song says just that:","words":[{"id":"caption-word-19-0","text":"A","start":50.533,"end":50.653},{"id":"caption-word-19-1","text":"traditional","start":50.653,"end":51.133},{"id":"caption-word-19-2","text":"song","start":51.133,"end":51.543},{"id":"caption-word-19-3","text":"says","start":51.543,"end":51.733},{"id":"caption-word-19-4","text":"just","start":51.733,"end":51.973},{"id":"caption-word-19-5","text":"that:","start":51.973,"end":52.333}]},{"id":"caption-group-20","frame":4,"start":52.333,"end":53.613,"text":"a traditional song.","words":[{"id":"caption-word-20-0","text":"a","start":52.333,"end":52.393},{"id":"caption-word-20-1","text":"traditional","start":52.393,"end":53.053},{"id":"caption-word-20-2","text":"song.","start":53.053,"end":53.493}]},{"id":"caption-group-21","frame":5,"start":53.64,"end":57.54,"text":"Off the plan: instrumentals keep their link to bobdylan.com,","words":[{"id":"caption-word-21-0","text":"Off","start":53.64,"end":53.85},{"id":"caption-word-21-1","text":"the","start":53.9,"end":54.09},{"id":"caption-word-21-2","text":"plan:","start":54.09,"end":54.57},{"id":"caption-word-21-3","text":"instrumentals","start":54.65,"end":55.22},{"id":"caption-word-21-4","text":"keep","start":55.22,"end":55.43},{"id":"caption-word-21-5","text":"their","start":55.43,"end":55.68},{"id":"caption-word-21-6","text":"link","start":55.68,"end":55.85},{"id":"caption-word-21-7","text":"to","start":55.91,"end":56.1},{"id":"caption-word-21-8","text":"bobdylan.com,","start":56.1,"end":57.55,"code":"bobdylan.com"}]},{"id":"caption-group-22","frame":5,"start":57.55,"end":60.39,"text":"as Nashville Skyline Rag already had.","words":[{"id":"caption-word-22-0","text":"as","start":57.55,"end":57.67},{"id":"caption-word-22-1","text":"Nashville","start":57.67,"end":58.27},{"id":"caption-word-22-2","text":"Skyline","start":58.32,"end":58.83},{"id":"caption-word-22-3","text":"Rag","start":58.83,"end":59.07},{"id":"caption-word-22-4","text":"already","start":59.1,"end":59.62},{"id":"caption-word-22-5","text":"had.","start":60.06,"end":60.37}]},{"id":"caption-group-23","frame":5,"start":60.4,"end":61.86,"text":"The site lists a page for each,","words":[{"id":"caption-word-23-0","text":"The","start":60.4,"end":60.51},{"id":"caption-word-23-1","text":"site","start":60.58,"end":60.77},{"id":"caption-word-23-2","text":"lists","start":60.77,"end":60.92},{"id":"caption-word-23-3","text":"a","start":60.92,"end":61.165},{"id":"caption-word-23-4","text":"page","start":61.165,"end":61.41},{"id":"caption-word-23-5","text":"for","start":61.41,"end":61.51},{"id":"caption-word-23-6","text":"each,","start":61.51,"end":61.83}]},{"id":"caption-group-24","frame":5,"start":61.87,"end":63.63,"text":"though there are no words on it.","words":[{"id":"caption-word-24-0","text":"though","start":61.87,"end":62.19},{"id":"caption-word-24-1","text":"there","start":62.19,"end":62.48},{"id":"caption-word-24-2","text":"are","start":62.48,"end":62.61},{"id":"caption-word-24-3","text":"no","start":62.67,"end":62.76},{"id":"caption-word-24-4","text":"words","start":62.76,"end":63.05},{"id":"caption-word-24-5","text":"on","start":63.05,"end":63.16},{"id":"caption-word-24-6","text":"it.","start":63.16,"end":63.51}]},{"id":"caption-group-25","frame":6,"start":63.633,"end":65.183,"text":"And no Genius links.","words":[{"id":"caption-word-25-0","text":"And","start":63.633,"end":63.853},{"id":"caption-word-25-1","text":"no","start":63.853,"end":64.043},{"id":"caption-word-25-2","text":"Genius","start":64.043,"end":64.523},{"id":"caption-word-25-3","text":"links.","start":64.633,"end":65.133}]},{"id":"caption-group-26","frame":6,"start":65.193,"end":67.463,"text":"Genius answers this machine with an error,","words":[{"id":"caption-word-26-0","text":"Genius","start":65.193,"end":65.483},{"id":"caption-word-26-1","text":"answers","start":65.543,"end":65.933},{"id":"caption-word-26-2","text":"this","start":65.933,"end":66.083},{"id":"caption-word-26-3","text":"machine","start":66.193,"end":66.323},{"id":"caption-word-26-4","text":"with","start":66.743,"end":66.913},{"id":"caption-word-26-5","text":"an","start":66.913,"end":67.053},{"id":"caption-word-26-6","text":"error,","start":67.053,"end":67.413}]},{"id":"caption-group-27","frame":6,"start":67.473,"end":71.263,"text":"and the search engines that could find its pages ask if it's a robot.","words":[{"id":"caption-word-27-0","text":"and","start":67.473,"end":67.573},{"id":"caption-word-27-1","text":"the","start":67.573,"end":67.733},{"id":"caption-word-27-2","text":"search","start":67.733,"end":68.053},{"id":"caption-word-27-3","text":"engines","start":68.053,"end":68.363},{"id":"caption-word-27-4","text":"that","start":68.473,"end":68.573},{"id":"caption-word-27-5","text":"could","start":68.573,"end":68.603},{"id":"caption-word-27-6","text":"find","start":68.993,"end":69.053},{"id":"caption-word-27-7","text":"its","start":69.053,"end":69.273},{"id":"caption-word-27-8","text":"pages","start":69.273,"end":69.653},{"id":"caption-word-27-9","text":"ask","start":69.713,"end":69.913},{"id":"caption-word-27-10","text":"if","start":69.913,"end":70.083},{"id":"caption-word-27-11","text":"it's","start":70.083,"end":70.423},{"id":"caption-word-27-12","text":"a","start":70.423,"end":70.453},{"id":"caption-word-27-13","text":"robot.","start":70.503,"end":71.213}]},{"id":"caption-group-28","frame":6,"start":71.273,"end":73.883,"text":"Rather than guess at addresses that might be dead,","words":[{"id":"caption-word-28-0","text":"Rather","start":71.273,"end":71.543},{"id":"caption-word-28-1","text":"than","start":71.553,"end":71.773},{"id":"caption-word-28-2","text":"guess","start":71.773,"end":72.013},{"id":"caption-word-28-3","text":"at","start":72.063,"end":72.163},{"id":"caption-word-28-4","text":"addresses","start":72.163,"end":72.403},{"id":"caption-word-28-5","text":"that","start":72.823,"end":72.953},{"id":"caption-word-28-6","text":"might","start":72.953,"end":73.283},{"id":"caption-word-28-7","text":"be","start":73.283,"end":73.393},{"id":"caption-word-28-8","text":"dead,","start":73.443,"end":73.813}]},{"id":"caption-group-29","frame":6,"start":73.893,"end":76.173,"text":"there are none; you could add them by hand.","words":[{"id":"caption-word-29-0","text":"there","start":73.893,"end":74.113},{"id":"caption-word-29-1","text":"are","start":74.113,"end":74.283},{"id":"caption-word-29-2","text":"none;","start":74.283,"end":74.683},{"id":"caption-word-29-3","text":"you","start":74.753,"end":74.873},{"id":"caption-word-29-4","text":"could","start":74.873,"end":75.163},{"id":"caption-word-29-5","text":"add","start":75.163,"end":75.343},{"id":"caption-word-29-6","text":"them","start":75.343,"end":75.583},{"id":"caption-word-29-7","text":"by","start":75.583,"end":75.643},{"id":"caption-word-29-8","text":"hand.","start":75.753,"end":76.053}]},{"id":"caption-group-30","frame":7,"start":76.173,"end":77.173,"text":"Step 3.","words":[{"id":"caption-word-30-0","text":"Step","start":76.173,"end":76.623},{"id":"caption-word-30-1","text":"3.","start":76.623,"end":77.053}]},{"id":"caption-group-31","frame":7,"start":77.173,"end":79.503,"text":"30 new connections reach the new songs,","words":[{"id":"caption-word-31-0","text":"30","start":77.173,"end":77.423},{"id":"caption-word-31-1","text":"new","start":77.433,"end":77.623},{"id":"caption-word-31-2","text":"connections","start":77.623,"end":78.313},{"id":"caption-word-31-3","text":"reach","start":78.313,"end":78.613},{"id":"caption-word-31-4","text":"the","start":78.683,"end":78.813},{"id":"caption-word-31-5","text":"new","start":78.813,"end":79.003},{"id":"caption-word-31-6","text":"songs,","start":79.003,"end":79.443}]},{"id":"caption-group-32","frame":7,"start":79.513,"end":81.473,"text":"12 of them famous covers.","words":[{"id":"caption-word-32-0","text":"12","start":79.513,"end":79.753},{"id":"caption-word-32-1","text":"of","start":79.753,"end":79.843},{"id":"caption-word-32-2","text":"them","start":79.843,"end":80.013},{"id":"caption-word-32-3","text":"famous","start":80.183,"end":80.523},{"id":"caption-word-32-4","text":"covers.","start":80.573,"end":81.353}]},{"id":"caption-group-33","frame":7,"start":81.473,"end":84.643,"text":"If You See Her, Say Hello now leads to Girl from the North Country,","words":[{"id":"caption-word-33-0","text":"If","start":81.473,"end":81.483},{"id":"caption-word-33-1","text":"You","start":81.483,"end":81.563},{"id":"caption-word-33-2","text":"See","start":81.703,"end":81.863},{"id":"caption-word-33-3","text":"Her,","start":81.863,"end":82.173},{"id":"caption-word-33-4","text":"Say","start":82.173,"end":82.363},{"id":"caption-word-33-5","text":"Hello","start":82.523,"end":82.683},{"id":"caption-word-33-6","text":"now","start":82.683,"end":82.873},{"id":"caption-word-33-7","text":"leads","start":82.873,"end":83.193},{"id":"caption-word-33-8","text":"to","start":83.193,"end":83.323},{"id":"caption-word-33-9","text":"Girl","start":83.323,"end":83.583},{"id":"caption-word-33-10","text":"from","start":83.583,"end":83.843},{"id":"caption-word-33-11","text":"the","start":83.843,"end":84.033},{"id":"caption-word-33-12","text":"North","start":84.033,"end":84.313},{"id":"caption-word-33-13","text":"Country,","start":84.343,"end":84.523}]},{"id":"caption-group-34","frame":7,"start":84.813,"end":87.133,"text":"and it joins the Love gone wrong thread.","words":[{"id":"caption-word-34-0","text":"and","start":84.813,"end":84.993},{"id":"caption-word-34-1","text":"it","start":84.993,"end":85.093},{"id":"caption-word-34-2","text":"joins","start":85.113,"end":85.443},{"id":"caption-word-34-3","text":"the","start":85.443,"end":85.633},{"id":"caption-word-34-4","text":"Love","start":85.633,"end":85.953},{"id":"caption-word-34-5","text":"gone","start":86.093,"end":86.183},{"id":"caption-word-34-6","text":"wrong","start":86.323,"end":86.563},{"id":"caption-word-34-7","text":"thread.","start":86.563,"end":87.013}]},{"id":"caption-group-35","frame":8,"start":87.152,"end":90.222,"text":"Off the plan: the threads are now kept by hand.","words":[{"id":"caption-word-35-0","text":"Off","start":87.152,"end":87.322},{"id":"caption-word-35-1","text":"the","start":87.332,"end":87.582},{"id":"caption-word-35-2","text":"plan:","start":87.582,"end":88.082},{"id":"caption-word-35-3","text":"the","start":88.182,"end":88.252},{"id":"caption-word-35-4","text":"threads","start":88.342,"end":88.842},{"id":"caption-word-35-5","text":"are","start":88.842,"end":89.072},{"id":"caption-word-35-6","text":"now","start":89.072,"end":89.302},{"id":"caption-word-35-7","text":"kept","start":89.302,"end":89.592},{"id":"caption-word-35-8","text":"by","start":89.592,"end":89.632},{"id":"caption-word-35-9","text":"hand.","start":89.732,"end":90.162}]},{"id":"caption-group-36","frame":8,"start":90.232,"end":93.512,"text":"The script that built them would choose 10 new songs per theme and drop","words":[{"id":"caption-word-36-0","text":"The","start":90.232,"end":90.302},{"id":"caption-word-36-1","text":"script","start":90.302,"end":90.592},{"id":"caption-word-36-2","text":"that","start":90.592,"end":90.762},{"id":"caption-word-36-3","text":"built","start":90.762,"end":90.852},{"id":"caption-word-36-4","text":"them","start":90.852,"end":91.262},{"id":"caption-word-36-5","text":"would","start":91.262,"end":91.452},{"id":"caption-word-36-6","text":"choose","start":91.452,"end":91.722},{"id":"caption-word-36-7","text":"10","start":91.722,"end":91.942},{"id":"caption-word-36-8","text":"new","start":91.942,"end":92.152},{"id":"caption-word-36-9","text":"songs","start":92.292,"end":92.582},{"id":"caption-word-36-10","text":"per","start":92.582,"end":92.692},{"id":"caption-word-36-11","text":"theme","start":92.772,"end":93.112},{"id":"caption-word-36-12","text":"and","start":93.112,"end":93.292},{"id":"caption-word-36-13","text":"drop","start":93.292,"end":93.522}]},{"id":"caption-group-37","frame":8,"start":93.522,"end":96.832,"text":"the ones placed here, so it refuses to run without force.","words":[{"id":"caption-word-37-0","text":"the","start":93.522,"end":93.552},{"id":"caption-word-37-1","text":"ones","start":93.672,"end":93.882},{"id":"caption-word-37-2","text":"placed","start":93.882,"end":94.202},{"id":"caption-word-37-3","text":"here,","start":94.272,"end":94.602},{"id":"caption-word-37-4","text":"so","start":94.602,"end":94.732},{"id":"caption-word-37-5","text":"it","start":94.732,"end":94.792},{"id":"caption-word-37-6","text":"refuses","start":94.862,"end":95.332},{"id":"caption-word-37-7","text":"to","start":95.332,"end":95.352},{"id":"caption-word-37-8","text":"run","start":95.462,"end":95.622},{"id":"caption-word-37-9","text":"without","start":95.662,"end":96.132},{"id":"caption-word-37-10","text":"force.","start":96.132,"end":96.712}]},{"id":"caption-group-38","frame":9,"start":96.887,"end":97.667,"text":"Step 4.","words":[{"id":"caption-word-38-0","text":"Step","start":96.887,"end":96.967},{"id":"caption-word-38-1","text":"4.","start":97.127,"end":97.607}]},{"id":"caption-group-39","frame":9,"start":97.677,"end":99.947,"text":"Every row of every album is a link.","words":[{"id":"caption-word-39-0","text":"Every","start":97.677,"end":97.957},{"id":"caption-word-39-1","text":"row","start":98.007,"end":98.167},{"id":"caption-word-39-2","text":"of","start":98.167,"end":98.297},{"id":"caption-word-39-3","text":"every","start":98.297,"end":98.657},{"id":"caption-word-39-4","text":"album","start":98.657,"end":99.047},{"id":"caption-word-39-5","text":"is","start":99.047,"end":99.287},{"id":"caption-word-39-6","text":"a","start":99.287,"end":99.397},{"id":"caption-word-39-7","text":"link.","start":99.397,"end":99.887}]},{"id":"caption-group-40","frame":9,"start":99.957,"end":103.467,"text":"And a song page now names its live takes on other albums:","words":[{"id":"caption-word-40-0","text":"And","start":99.957,"end":100.097},{"id":"caption-word-40-1","text":"a","start":100.097,"end":100.247},{"id":"caption-word-40-2","text":"song","start":100.247,"end":100.437},{"id":"caption-word-40-3","text":"page","start":100.797,"end":100.807},{"id":"caption-word-40-4","text":"now","start":100.807,"end":101.037},{"id":"caption-word-40-5","text":"names","start":101.037,"end":101.427},{"id":"caption-word-40-6","text":"its","start":101.457,"end":101.637},{"id":"caption-word-40-7","text":"live","start":101.677,"end":101.937},{"id":"caption-word-40-8","text":"takes","start":101.937,"end":102.287},{"id":"caption-word-40-9","text":"on","start":102.287,"end":102.427},{"id":"caption-word-40-10","text":"other","start":102.427,"end":102.537},{"id":"caption-word-40-11","text":"albums:","start":103.057,"end":103.407}]},{"id":"caption-group-41","frame":9,"start":103.477,"end":105.959,"text":"She Belongs to Me shows its Self Portrait take.","words":[{"id":"caption-word-41-0","text":"She","start":103.477,"end":103.587},{"id":"caption-word-41-1","text":"Belongs","start":103.587,"end":103.957},{"id":"caption-word-41-2","text":"to","start":103.957,"end":104.137},{"id":"caption-word-41-3","text":"Me","start":104.137,"end":104.317},{"id":"caption-word-41-4","text":"shows","start":104.317,"end":104.547},{"id":"caption-word-41-5","text":"its","start":104.547,"end":104.727},{"id":"caption-word-41-6","text":"Self","start":104.727,"end":105.507},{"id":"caption-word-41-7","text":"Portrait","start":105.507,"end":105.507},{"id":"caption-word-41-8","text":"take.","start":105.507,"end":105.919}]},{"id":"caption-group-42","frame":10,"start":105.969,"end":109.529,"text":"What ran: the data check, the build of 1,400 pages,","words":[{"id":"caption-word-42-0","text":"What","start":105.969,"end":106.319},{"id":"caption-word-42-1","text":"ran:","start":106.319,"end":106.919},{"id":"caption-word-42-2","text":"the","start":106.939,"end":107.059},{"id":"caption-word-42-3","text":"data","start":107.059,"end":107.179},{"id":"caption-word-42-4","text":"check,","start":107.249,"end":107.599},{"id":"caption-word-42-5","text":"the","start":107.619,"end":107.689},{"id":"caption-word-42-6","text":"build","start":107.689,"end":107.839},{"id":"caption-word-42-7","text":"of","start":107.839,"end":107.899},{"id":"caption-word-42-8","text":"1,400","start":107.899,"end":108.959},{"id":"caption-word-42-9","text":"pages,","start":108.959,"end":109.449}]},{"id":"caption-group-43","frame":10,"start":109.539,"end":111.199,"text":"the phone check and the desktop check,","words":[{"id":"caption-word-43-0","text":"the","start":109.539,"end":109.569},{"id":"caption-word-43-1","text":"phone","start":109.569,"end":109.759},{"id":"caption-word-43-2","text":"check","start":109.759,"end":109.919},{"id":"caption-word-43-3","text":"and","start":109.919,"end":110.059},{"id":"caption-word-43-4","text":"the","start":110.059,"end":110.199},{"id":"caption-word-43-5","text":"desktop","start":110.199,"end":110.599},{"id":"caption-word-43-6","text":"check,","start":110.599,"end":111.159}]},{"id":"caption-group-44","frame":10,"start":111.209,"end":113.349,"text":"all passing, and the clip check.","words":[{"id":"caption-word-44-0","text":"all","start":111.209,"end":111.399},{"id":"caption-word-44-1","text":"passing,","start":111.399,"end":111.629},{"id":"caption-word-44-2","text":"and","start":112.069,"end":112.189},{"id":"caption-word-44-3","text":"the","start":112.189,"end":112.419},{"id":"caption-word-44-4","text":"clip","start":112.419,"end":112.679},{"id":"caption-word-44-5","text":"check.","start":112.869,"end":113.229}]},{"id":"caption-group-45","frame":10,"start":113.379,"end":116.957,"text":"Not done: Genius links, and checking every sentence of the new notes.","words":[{"id":"caption-word-45-0","text":"Not","start":113.379,"end":113.559},{"id":"caption-word-45-1","text":"done:","start":113.559,"end":114.059},{"id":"caption-word-45-2","text":"Genius","start":114.059,"end":114.409},{"id":"caption-word-45-3","text":"links,","start":114.409,"end":114.689},{"id":"caption-word-45-4","text":"and","start":114.779,"end":114.809},{"id":"caption-word-45-5","text":"checking","start":114.809,"end":115.209},{"id":"caption-word-45-6","text":"every","start":115.279,"end":115.599},{"id":"caption-word-45-7","text":"sentence","start":115.599,"end":116.039},{"id":"caption-word-45-8","text":"of","start":116.039,"end":116.179},{"id":"caption-word-45-9","text":"the","start":116.229,"end":116.349},{"id":"caption-word-45-10","text":"new","start":116.369,"end":116.559},{"id":"caption-word-45-11","text":"notes.","start":116.559,"end":116.919}]},{"id":"caption-group-46","frame":11,"start":116.967,"end":119.157,"text":"The rest of the choices are on this list:","words":[{"id":"caption-word-46-0","text":"The","start":116.967,"end":117.127},{"id":"caption-word-46-1","text":"rest","start":117.127,"end":117.387},{"id":"caption-word-46-2","text":"of","start":117.387,"end":117.527},{"id":"caption-word-46-3","text":"the","start":117.527,"end":117.727},{"id":"caption-word-46-4","text":"choices","start":117.727,"end":118.207},{"id":"caption-word-46-5","text":"are","start":118.207,"end":118.397},{"id":"caption-word-46-6","text":"on","start":118.397,"end":118.527},{"id":"caption-word-46-7","text":"this","start":118.537,"end":118.727},{"id":"caption-word-46-8","text":"list:","start":118.727,"end":119.167}]},{"id":"caption-group-47","frame":11,"start":119.167,"end":120.957,"text":"the fetchers keep what they found,","words":[{"id":"caption-word-47-0","text":"the","start":119.167,"end":119.307},{"id":"caption-word-47-1","text":"fetchers","start":119.307,"end":119.777},{"id":"caption-word-47-2","text":"keep","start":119.777,"end":120.017},{"id":"caption-word-47-3","text":"what","start":120.017,"end":120.257},{"id":"caption-word-47-4","text":"they","start":120.257,"end":120.497},{"id":"caption-word-47-5","text":"found,","start":120.497,"end":120.877}]},{"id":"caption-group-48","frame":11,"start":120.967,"end":123.557,"text":"the Saturday Night Live clip stays dropped,","words":[{"id":"caption-word-48-0","text":"the","start":120.967,"end":121.137},{"id":"caption-word-48-1","text":"Saturday","start":121.137,"end":121.707},{"id":"caption-word-48-2","text":"Night","start":121.707,"end":122.067},{"id":"caption-word-48-3","text":"Live","start":122.067,"end":122.347},{"id":"caption-word-48-4","text":"clip","start":122.347,"end":122.627},{"id":"caption-word-48-5","text":"stays","start":122.627,"end":122.737},{"id":"caption-word-48-6","text":"dropped,","start":123.157,"end":123.527}]},{"id":"caption-group-49","frame":11,"start":123.567,"end":125.607,"text":"and the cover versions stay out of their thread.","words":[{"id":"caption-word-49-0","text":"and","start":123.567,"end":123.697},{"id":"caption-word-49-1","text":"the","start":123.697,"end":123.837},{"id":"caption-word-49-2","text":"cover","start":123.907,"end":124.137},{"id":"caption-word-49-3","text":"versions","start":124.167,"end":124.597},{"id":"caption-word-49-4","text":"stay","start":124.597,"end":124.817},{"id":"caption-word-49-5","text":"out","start":124.817,"end":124.987},{"id":"caption-word-49-6","text":"of","start":124.987,"end":125.097},{"id":"caption-word-49-7","text":"their","start":125.097,"end":125.277},{"id":"caption-word-49-8","text":"thread.","start":125.567,"end":125.567}]},{"id":"caption-group-50","frame":12,"start":125.617,"end":127.107,"text":"That's every track a page.","words":[{"id":"caption-word-50-0","text":"That's","start":125.617,"end":125.957},{"id":"caption-word-50-1","text":"every","start":125.957,"end":126.237},{"id":"caption-word-50-2","text":"track","start":126.287,"end":126.607},{"id":"caption-word-50-3","text":"a","start":126.607,"end":126.747},{"id":"caption-word-50-4","text":"page.","start":126.747,"end":127.117}]},{"id":"caption-group-51","frame":12,"start":127.117,"end":128.827,"text":"Seeing it run, anything you'd change?","words":[{"id":"caption-word-51-0","text":"Seeing","start":127.117,"end":127.397},{"id":"caption-word-51-1","text":"it","start":127.407,"end":127.437},{"id":"caption-word-51-2","text":"run,","start":127.447,"end":127.737},{"id":"caption-word-51-3","text":"anything","start":127.797,"end":128.107},{"id":"caption-word-51-4","text":"you'd","start":128.107,"end":128.207},{"id":"caption-word-51-5","text":"change?","start":128.267,"end":128.707}]}];
+  var DURATION = 131.567;
+
+  (function () {
+    var stage = document.getElementById("caption-stage");
+
+    // build DOM: one .caption-group per group, .caption-word per word
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.createElement("div");
+      groupEl.className = "caption-group";
+      groupEl.id = "caption-group-" + g;
+      var pill = document.createElement("div");
+      pill.className = "caption-pill";
+      var line = document.createElement("div");
+      line.className = "caption-line";
+      (group.words || []).forEach(function (w, i) {
+        var span = document.createElement("span");
+        span.className = "caption-word";
+        span.id = "caption-word-" + g + "-" + i;
+        __rpShowWord(span, w);
+        line.appendChild(span);
+      });
+      pill.appendChild(line);
+      groupEl.appendChild(pill);
+      stage.appendChild(groupEl);
+    });
+
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.getElementById("caption-group-" + g);
+      var words = group.words || [];
+      var next = GROUPS[g + 1];
+      var isLast = g === GROUPS.length - 1;
+      var start = Math.max(0, Number(group.start));
+      var end = isLast ? DURATION : Math.min(Number(next.start), Number(group.end) + 0.3);
+      if (end <= start) end = start + 0.01;
+
+      // group on/off — exactly one group visible at a time
+      tl.set(groupEl, { opacity: 1 }, start);
+      tl.set(groupEl, { opacity: 0 }, end);
+
+      // 3-state karaoke via className SETS — seek-safe (gsap.set applies on the
+      // engine's frame-by-frame seek; .call callbacks would NOT fire).
+      words.forEach(function (w, i) {
+        var el = document.getElementById("caption-word-" + g + "-" + i);
+        var at = Math.max(start, Number(w.start));
+        tl.set(el, { className: "caption-word" }, start); // upcoming (also resets on reverse-seek)
+        tl.set(el, { className: "caption-word is-active" }, at); // current
+        tl.fromTo(el, { scale: 0.98 }, { scale: 1, duration: 0.16, ease: "power1.out" }, at);
+        if (i + 1 < words.length) {
+          var nextAt = Math.max(start, Number(words[i + 1].start));
+          tl.set(el, { className: "caption-word is-spoken" }, nextAt); // demote when next activates
+        }
+      });
+      if (words.length) {
+        var lastEl = document.getElementById("caption-word-" + g + "-" + (words.length - 1));
+        var lastSpoken = Math.min(end, Number(words[words.length - 1].end) + 0.1);
+        tl.set(lastEl, { className: "caption-word is-spoken" }, lastSpoken);
+      }
+    });
+
+    // full-span anchor so the sub-comp timeline spans the whole video
+    tl.to({}, { duration: DURATION }, 0);
+    window.__timelines["captions"] = tl;
+  })();
+</script>
+
+<style>
+  .caption-line { line-height: 1.1 !important; }
+</style>
+<style data-rp-caption-code>
+  /* names.md: a tool's name in the captions, in the frames' code voice (JetBrains Mono), on a solid chip
+     the caption's own text colour fills: the chip is the words' colour and its letters the caption's
+     ground, so it reads at full contrast on either skin and in either theme, at the words' own size and
+     weight. The fill follows the word's karaoke state (still to come a little softer, said full); no
+     coral (coral is only "yours, waiting on you", D-142). The old chip (--rp-tile-2 at 0.8em, the word's
+     colour on it) was white on cream on the dark pill: too pale to read. */
+  @font-face { font-family: 'JetBrains Mono'; src: url('assets/fonts/JetBrainsMono-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: 'JetBrains Mono'; src: url('assets/fonts/JetBrainsMono-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: block; }
+  .caption-word .cap-code {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-weight: inherit;
+    font-size: 1em;
+    letter-spacing: 0;
+    font-variant-ligatures: none;
+    color: inherit;
+    /* the default layer: white words on a dark pill, so a light chip with dark letters. The word's colour
+       is laid over an opaque light grey, so the chip is solid in either karaoke state (the words still to
+       come are white at 55%) and the chips of one command meet without a seam where they overlap */
+    background: linear-gradient(currentColor, currentColor) #b8b7b3;
+    -webkit-text-fill-color: #181715;
+    padding: 0.02em 0.22em 0.06em;
+    border-radius: 0.18em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  /* the preset skin's card: ink words on the canvas (cream in light, dark in dark), so an ink chip with
+     canvas letters, pulled towards full ink so a word still to come is not a pale grey */
+  .caption-pill .caption-word .cap-code {
+    background: color-mix(in srgb, currentColor, var(--cap-ink, var(--rp-ink)) 60%);
+    -webkit-text-fill-color: var(--cap-canvas, var(--rp-paper));
+  }
+  /* a command of several words reads as one chip: each chip but the last reaches over the gap between
+     the caption's words (0.3em of the line and the words' own padding, 0.34em, or a space) and a little more, so no
+     hairline shows at the join, and the inner corners are square */
+  .caption-word .cap-code[data-run="start"], .caption-word .cap-code[data-run="mid"] { border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: -0.38em; }
+  .caption-word .cap-code[data-run="end"], .caption-word .cap-code[data-run="mid"] { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+</style>
+</template>

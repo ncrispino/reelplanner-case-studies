@@ -1,0 +1,80 @@
+---
+// The app shell: every page shares this layout — the era theme, the bottom bar, and View Transitions.
+// Three widths, decided by the window (plan 2026-10-07-desktop, step 2): a phone up to 767 px (the bottom bar), a
+// tablet from 768 to 1099 px (the same single column, wider margins), and a desktop from 1100 px (the header below,
+// with search, and room for two columns). The era's look paints the whole window at every width (body[data-era]).
+import { ClientRouter } from "astro:transitions";
+import "../themes/base.css";
+import "../themes/hibbing.css"; import "../themes/village.css"; import "../themes/electric.css"; import "../themes/basement.css";
+import "../themes/tracks.css"; import "../themes/gospel.css"; import "../themes/eighties.css"; import "../themes/roots.css";
+import "../themes/renaissance.css"; import "../themes/standards.css"; import "../themes/rough.css";
+import "../styles/site.css";
+import { url, type RailProps } from "../lib/data";
+import Rail from "../components/Rail.astro";
+
+// rail: the context rail beside the content from 1440 px (plan 2026-10-07-fuller, step 5); album, song and moment pages
+interface Props { title: string; era?: string; tab?: "eras" | "threads" | "map" | "search" | "about"; description?: string; full?: boolean; rail?: RailProps }
+const { title, era = "village", tab = "eras", description = "Bob Dylan's life and music, era by era, song by song.", full = false, rail } = Astro.props;
+// the bottom bar (phone, tablet) has no Map tab: the map is part of Threads there
+const barTab = tab === "map" ? "threads" : tab;
+const tabs = [
+  { id: "eras", label: "Eras", href: url.home() }, { id: "threads", label: "Threads", href: url.threads() },
+  { id: "search", label: "Search", href: url.search() }, { id: "about", label: "About", href: url.about() },
+];
+const heads = [
+  { id: "eras", label: "Eras", href: url.home() }, { id: "threads", label: "Threads", href: url.threads() },
+  { id: "map", label: "Map", href: url.map() }, { id: "about", label: "About", href: url.about() },
+];
+---
+<!doctype html>
+<html lang="en" data-era={era}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content={description} />
+    <title>{title === "Bob Dylan, explored" ? title : `${title} · Bob Dylan, explored`}</title>
+    <ClientRouter fallback="swap" />
+  </head>
+  <body data-era={era}>
+    <header class="masthead" aria-label="Site">
+      <a class="brand" href={url.home()}>Bob Dylan, explored</a>
+      <nav class="heads" aria-label="Sections">
+        {heads.map((t) => (
+          <a href={t.href} class:list={["hlink", { on: t.id === tab }]} aria-current={t.id === tab ? "page" : undefined}>{t.label}</a>
+        ))}
+      </nav>
+      <form class="hsearch" role="search" action={url.search()} method="get">
+        <label><span class="sr">Search eras, moments, albums and songs</span>
+          <input name="q" type="search" placeholder="Search" autocomplete="off" enterkeyhint="search" /></label>
+        <kbd aria-hidden="true">/</kbd>
+      </form>
+    </header>
+    <div class:list={["shellwrap", { railed: !!rail && !full }]}>
+      <main class:list={["page", { full }]}><slot /></main>
+      {rail && !full && <Rail {...rail} />}
+    </div>
+    <nav class="tabbar" aria-label="Sections" transition:persist>
+      {tabs.map((t) => (
+        <a href={t.href} class:list={["tab", { on: t.id === barTab }]} aria-current={t.id === barTab ? "page" : undefined}>{t.label}</a>
+      ))}
+    </nav>
+  </body>
+</html>
+<script>
+  // "/" anywhere puts the cursor in the header's search field (from 1100 px, where the header shows)
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey) return;
+    const t = e.target as HTMLElement;
+    if (t.closest("input, textarea, select, [contenteditable]")) return;
+    const field = document.querySelector<HTMLInputElement>(".hsearch input");
+    if (!field || !field.offsetParent) return;
+    e.preventDefault(); field.focus(); field.select();
+  });
+  // on the search page the header's field shows what is being searched
+  function fill() {
+    const field = document.querySelector<HTMLInputElement>(".hsearch input");
+    if (field && location.pathname.endsWith("/search/")) field.value = new URLSearchParams(location.search).get("q") ?? "";
+  }
+  fill();
+  document.addEventListener("astro:page-load", fill);
+</script>

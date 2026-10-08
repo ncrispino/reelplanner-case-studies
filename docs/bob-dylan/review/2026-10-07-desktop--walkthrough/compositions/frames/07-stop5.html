@@ -1,0 +1,113 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f07-stop5-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f07-stop5-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  /* thin browser window: radius 14, 1px ink hairline, 36px title bar, three dots, the address in mono */
+  .f07-stop5-win { position:absolute; box-sizing:border-box; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f07-stop5-bar { position:relative; height:36px; box-sizing:border-box; border-bottom:1px solid rgba(var(--rp-ink-rgb),0.12); background:var(--rp-paper); display:flex; align-items:center; padding:0 14px; gap:7px; }
+  .f07-stop5-bar i { display:block; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.24); }
+  .f07-stop5-bar span { margin-left:14px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f07-stop5-view { position:relative; overflow:hidden; }
+  .f07-stop5-view img { position:absolute; display:block; max-width:none; }
+  .f07-stop5-ring { position:absolute; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:10px; pointer-events:none; }
+
+  .f07-stop5-place { position:absolute; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f07-stop5-card { position:absolute; box-sizing:border-box; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); border-radius:12px; box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08), 0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f07-stop5-txt { position:absolute; left:44px; top:40px; right:44px; }
+  .f07-stop5-tag { font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:rgba(var(--rp-ink-rgb),0.62); margin-bottom:16px; white-space:nowrap; }
+  .f07-stop5-chose { font:700 32px/1.22 "Inter"; color:var(--rp-ink); }
+  .f07-stop5-inst { margin-top:16px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f07-stop5-why { margin-top:10px; font:400 26px/1.35 "Inter"; color:rgba(var(--rp-ink-rgb),0.86); }
+</style>
+
+<div id="root" data-composition-id="07-stop5" data-band="bottom" data-start="0" data-duration="14.656" data-width="1920" data-height="1080">
+  <div class="clip f07-stop5-bg" id="f07-stop5-bg" data-start="0" data-duration="14.656" data-track-index="0"></div>
+
+  <div class="clip f07-stop5-scene" id="f07-stop5-scene" data-start="0" data-duration="14.656" data-track-index="1">
+    <div class="f07-stop5-place" id="f07-stop5-place" style="left:860px; top:70px">Step 5 · Threads and the map</div>
+    <div class="f07-stop5-win" id="f07-stop5-w1" data-artifact="/thread/faith/" style="left:60px; top:60px; width:746px; height:408px">
+      <div class="f07-stop5-bar"><i></i><i></i><i></i><span>/thread/faith/</span></div>
+      <div class="f07-stop5-view" style="width:744px; height:370px">
+        <img src="assets/shots/d-thread-faith.png" alt="The Faith thread at 1440: four cards in a row, the years and the gaps written on the line above them" style="left:-60.0px; top:-50.4px; width:864.0px; height:540.0px">
+        <i class="f07-stop5-ring" id="f07-stop5-ry" style="left:7px; top:88px; width:728px; height:18px"></i>
+      </div>
+    </div>
+    <div class="f07-stop5-win" id="f07-stop5-w2" data-artifact="/map/masters-of-war/" style="left:60px; top:492px; width:512px; height:386px">
+      <div class="f07-stop5-bar"><i></i><i></i><i></i><span>/map/masters-of-war/</span></div>
+      <div class="f07-stop5-view" style="width:510px; height:348px">
+        <img src="assets/shots/d-map-selected.png" alt="The map page for Masters of War: the song selected on the map, the panel beside it" style="left:-288.0px; top:-126.0px; width:864.0px; height:540.0px">
+        <i class="f07-stop5-ring" id="f07-stop5-rp" style="left:286px; top:5px; width:221px; height:343px"></i>
+      </div>
+    </div>
+    <div class="f07-stop5-card" id="f07-stop5-a17" data-call="a17" style="left:860px; top:130px; width:1000px; height:230px">
+      <div class="f07-stop5-txt">
+        <div class="f07-stop5-chose" id="f07-stop5-a17c">Cards evenly spaced, the years written on the line</div>
+        <div class="f07-stop5-inst" id="f07-stop5-a17i">instead of: spaced by the years between them</div>
+        <div class="f07-stop5-why" id="f07-stop5-a17w">a 40-year gap pushes the next card off the row</div>
+      </div>
+    </div>
+    <div class="f07-stop5-card" id="f07-stop5-a18" data-call="a18" style="left:860px; top:376px; width:1000px; height:230px">
+      <div class="f07-stop5-txt">
+        <div class="f07-stop5-chose" id="f07-stop5-a18c">A thread's map opens on its first song's neighbours</div>
+        <div class="f07-stop5-inst" id="f07-stop5-a18i">instead of: fitted to all its songs</div>
+        <div class="f07-stop5-why" id="f07-stop5-a18w">fitted, the labels were 5 pixels tall</div>
+      </div>
+    </div>
+    <div class="f07-stop5-card" id="f07-stop5-a20" data-call="a20" style="left:860px; top:622px; width:1000px; height:230px">
+      <div class="f07-stop5-txt">
+        <div class="f07-stop5-chose" id="f07-stop5-a20c">The map page opens with its song in the panel</div>
+        <div class="f07-stop5-inst" id="f07-stop5-a20i">instead of: an empty panel</div>
+        <div class="f07-stop5-why" id="f07-stop5-a20w">the page is about that song</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var P = "f07-stop5-";
+  var $ = function (s) { return document.getElementById(P + s); };
+  var E = "power3.out";
+  var rise = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 14 : d }, { opacity: 1, y: 0, duration: 0.55, ease: E }, at); };
+  // a short push: in from below and a touch small, landing at scale 1 (never past it)
+  var push = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: E }, at); };
+  var slide = function (tl, el, at) { tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.7, ease: E }, at); };
+  var ring = function (tl, el, at) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-5.5s): the thread, the map; the year line ringed on "years"
+  rise(tl, $("place"), 0.05, 8);
+  push(tl, $("w1"), 0.1);
+  push(tl, $("w2"), 1.15);
+  ring(tl, $("ry"), 3.35);
+
+  // Scene 2 (5.5-14.7s): the three cards on their words; hold
+  slide(tl, $("a17"), 5.45);
+  rise(tl, $("a17c"), 5.6);
+  rise(tl, $("a17i"), 6.0);
+  rise(tl, $("a17w"), 6.55);
+  slide(tl, $("a18"), 9.0);
+  rise(tl, $("a18c"), 9.15);
+  rise(tl, $("a18i"), 10.1);
+  rise(tl, $("a18w"), 10.85);
+  slide(tl, $("a20"), 11.65);
+  rise(tl, $("a20c"), 11.8);
+  ring(tl, $("rp"), 12.5);
+  rise(tl, $("a20i"), 13.1);
+  rise(tl, $("a20w"), 13.55);
+
+  tl.set({}, {}, 14.656);
+  window.__timelines["07-stop5"] = tl;
+})();
+</script>
+</template>

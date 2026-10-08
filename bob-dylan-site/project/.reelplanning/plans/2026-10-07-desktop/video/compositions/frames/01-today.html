@@ -1,0 +1,107 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 72 (title), 40 (quote), 26 (address, measures, cite) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f01-today-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f01-today-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f01-today-title { position:absolute; left:80px; top:110px; width:560px; font:400 72px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); }
+
+  /* the browser window: the real screenshot 1440 x 900 shown at 0.8 (1152 x 720) */
+  .f01-today-win { position:absolute; left:700px; top:134px; width:1152px; height:756px; border:1px solid var(--rp-ink); border-radius:14px; overflow:hidden; background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f01-today-bar { position:absolute; left:0; top:0; width:1152px; height:36px; background:var(--rp-tile); border-bottom:1px solid rgba(var(--rp-ink-rgb),0.2); }
+  .f01-today-dot { position:absolute; top:13px; width:10px; height:10px; border-radius:50%; background:rgba(var(--rp-ink-rgb),0.25); }
+  .f01-today-addr { position:absolute; left:90px; top:5px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; font-variant-ligatures:none; }
+  .f01-today-win img { position:absolute; left:0; top:36px; display:block; width:1152px; height:720px; }
+
+  /* the measures, drawn over the window (screen coords: image x 701-1853, y 171-891; the column 989-1565) */
+  .f01-today-svg { position:absolute; left:0; top:0; width:1920px; height:900px; overflow:visible; pointer-events:none; }
+  .f01-today-chip { position:absolute; box-sizing:border-box; height:38px; padding:5px 14px 0; border-radius:6px; background:var(--rp-paper); font:400 26px/1.1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; font-variant-ligatures:none; }
+  .f01-today-chip.w { border:1px solid rgba(var(--rp-ink-rgb),0.3); }
+  .f01-today-chip.c { border:1px solid var(--rp-coral); }
+  .f01-today-shade { position:absolute; top:171px; height:720px; background:rgba(var(--rp-tile-rgb),0.7); }
+
+  /* the owner's words */
+  .f01-today-quote { position:absolute; left:80px; top:330px; width:580px; box-sizing:border-box; padding:34px 38px 30px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f01-today-q { font:italic 400 40px/1.24 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+  .f01-today-cite { margin-top:22px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); }
+</style>
+
+<div id="root" data-composition-id="01-today" data-band="bottom" data-start="0" data-duration="12.02" data-width="1920" data-height="1080">
+
+  <div class="clip f01-today-bg" id="f01-today-bg" data-start="0" data-duration="12.02" data-track-index="0"></div>
+
+  <div class="clip f01-today-scene" id="f01-today-scene" data-start="0" data-duration="12.02" data-track-index="1">
+    <div class="f01-today-title" id="f01-today-title">On a computer today</div>
+
+    <div class="f01-today-win" id="f01-today-win" data-artifact="/song/like-a-rolling-stone/ at 1440 × 900">
+      <div class="f01-today-bar">
+        <span class="f01-today-dot" style="left:16px"></span><span class="f01-today-dot" style="left:34px"></span><span class="f01-today-dot" style="left:52px"></span>
+        <span class="f01-today-addr">/song/like-a-rolling-stone/</span>
+      </div>
+      <img src="assets/shots/desk-song.png" alt="Like a Rolling Stone on a 1440 px window: one 720 px column in the middle, op-art on both sides">
+    </div>
+
+    <!-- the empty sides -->
+    <div class="f01-today-shade" id="f01-today-shl" style="left:701px;width:288px"></div>
+    <div class="f01-today-shade" id="f01-today-shr" style="left:1565px;width:288px"></div>
+
+    <!-- 1440 px: the window, above it -->
+    <svg class="f01-today-svg" id="f01-today-wline" viewBox="0 0 1920 900" aria-hidden="true">
+      <line x1="701" y1="50" x2="1853" y2="50" style="stroke:rgba(var(--rp-ink-rgb),0.62); stroke-width:1.5"/>
+      <line x1="701" y1="38" x2="701" y2="62" style="stroke:rgba(var(--rp-ink-rgb),0.62); stroke-width:1.5"/>
+      <line x1="1853" y1="38" x2="1853" y2="62" style="stroke:rgba(var(--rp-ink-rgb),0.62); stroke-width:1.5"/>
+    </svg>
+    <div class="f01-today-chip w" id="f01-today-wchip" style="left:1213px;top:31px">1440 px</div>
+
+    <!-- 720 px: the column, two coral brackets on it and the measure above the window -->
+    <svg class="f01-today-svg" id="f01-today-cline" viewBox="0 0 1920 900" aria-hidden="true">
+      <path d="M1013 176 L989 176 L989 886 L1013 886" style="fill:none; stroke:var(--rp-coral); stroke-width:4"/>
+      <path d="M1541 176 L1565 176 L1565 886 L1541 886" style="fill:none; stroke:var(--rp-coral); stroke-width:4"/>
+      <line x1="989" y1="108" x2="1565" y2="108" style="stroke:var(--rp-coral); stroke-width:2"/>
+      <line x1="989" y1="96" x2="989" y2="120" style="stroke:var(--rp-coral); stroke-width:2"/>
+      <line x1="1565" y1="96" x2="1565" y2="120" style="stroke:var(--rp-coral); stroke-width:2"/>
+    </svg>
+    <div class="f01-today-chip c" id="f01-today-cchip" style="left:1218px;top:89px">720 px</div>
+
+    <div class="f01-today-quote" id="f01-today-quote">
+      <div class="f01-today-q">“a lot was meant for a phone. we need to fill in more and fix it so it looks great on a computer too”</div>
+      <div class="f01-today-cite">the owner</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "01-today";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f01-today-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 12 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+  var fade = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: d || 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-7.6s): the window pushes in; 1440 px, then the 720 px column and the empty sides
+  pop(tl, $("title"), 0.06, 10);
+  tl.fromTo($("win"), { opacity: 0, y: 36, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: E }, 0.18);
+  fade(tl, $("wline"), 1.0, 0.5);
+  pop(tl, $("wchip"), 1.05, 6);                          // "computer"
+  fade(tl, $("cline"), 3.3, 0.5);                        // "One column"
+  pop(tl, $("cchip"), 4.0, 6);                           // "720"
+  fade(tl, $("shl"), 6.2, 0.6);                          // "in the middle"
+  fade(tl, $("shr"), 6.2, 0.6);
+
+  // Scene 2 (7.6-11.52s): the owner's words land at the left; hold
+  tl.fromTo($("quote"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 7.6);   // "This plan"
+
+  tl.set({}, {}, 11.52);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

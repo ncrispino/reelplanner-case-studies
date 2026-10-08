@@ -1,0 +1,23 @@
+---
+// A connection, drawn as an object from the other song's era (it wears that era's theme via data-era).
+import { url, eraOfSong, type Song } from "../lib/data";
+interface Props { words: string; other: Song; why: string }
+const { words, other, why } = Astro.props;
+const era = eraOfSong(other);
+---
+<a class="conn card" href={url.song(other.id)} data-era={era.id}>
+  <span class="kicker">{words}</span>
+  <span class="title">{other.title}</span>
+  <span class="meta soft">{other.by && other.by !== "Bob Dylan" ? `${other.by}` : ""}{other.by && other.year ? " · " : ""}{other.year ? <span class="year">{other.year}</span> : null}</span>
+  <span class="why">{why}</span>
+  <span class="go kicker" aria-hidden="true">{era.title} ›</span>
+</a>
+<style>
+  /* layout only: the card is dressed by the other song's era */
+  .conn { position: relative; display: block; text-decoration: none; margin: 14px 0; }
+  .title { display: block; font: var(--display-weight) 24px/1.15 var(--display-alt, var(--display)); font-style: var(--display-style);
+    text-transform: var(--display-case); letter-spacing: var(--display-track); margin-top: 2px; }
+  .meta { display: block; font-size: 15px; margin-top: 4px; }
+  .why { display: block; margin-top: 10px; font-size: 16px; }
+  .go { display: block; margin: 12px 0 0; text-align: right; }
+</style>

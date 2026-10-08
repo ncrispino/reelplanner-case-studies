@@ -1,0 +1,3 @@
+$ node tools/build-page.mjs bob-dylan-site docs/bob-dylan
+✓ docs/bob-dylan/index.html: 70 events in 3 days, 4 plans, 7 videos, 11 reviews
+exit 0

@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "voice": "am_michael",
+  "speed": 1.25,
+  "model": "kokoro-v1.0 + whisper small.en",
+  "lines": {
+    "10": {
+      "key": "3b074ab8f896c6a02531",
+      "text": "The data check, the script that fails when the dataset is wrong, also checks credits now. A photo with no licence, the terms it may be reused under, stops it, and it names the photo.",
+      "sha256": "8a7baf7925ad1b746445a281e691c89a8a6061c52961e21e8d96b99e770c8423",
+      "duration_s": 10.261
+    },
+    "11": {
+      "key": "930f789a4f4dff41eabc",
+      "text": "A quick check, a question to see whether the plan does what you expect. This one's on step one. Your phone is set to reduce motion, and you tap a cover. What do you see?",
+      "sha256": "0cde3811bcb53dce434830e08d4e3a740e76bd72a4a0f302a1fc622d74de9729",
+      "duration_s": 9.045
+    },
+    "12": {
+      "key": "66f42d42580ad6e27c93",
+      "text": "Step three is the one you asked to change most. The era timeline, the home view you swipe, now gives each era its own theme: its colours, typeface and texture. Greenwich Village is paper and typewriter, with a nineteen sixty-three photo from the March on Washington. Going Electric is black and amber, and has no free photo, so its title, set large in its theme, carries the panel. Gospel is red and gold, with a nineteen eighty concert photo. And the Late Renaissance, from nineteen ninety-seven, is shadow and brass, with a two thousand ten festival photo. Every photo shows its credit.",
+      "sha256": "5a1cec9aa21c3b592357026e6d25e72b2ce3e74a04b42294af126dfdb3c123dc",
+      "duration_s": 33.487
+    },
+    "13": {
+      "key": "1a423528722dbe54213e",
+      "text": "Question two: where do the photos come from? A: Wikimedia Commons, a free library of photos others may reuse, with the credit shown. It's free, but coverage is uneven: some eras get one photo or none. B: licensed press photos, every era covered, for a fee per image, often every year. C: no photos, just the themes, the plainer look you asked to avoid. I recommend A. Where should the era photographs come from?",
+      "sha256": "a488d87c5be89decd9f0c6abf6449b153a6097e627781341303a2801b095425e",
+      "duration_s": 23.019
+    },
+    "14": {
+      "key": "bdcb6e4117b0711a6fb7",
+      "text": "With A, each era shows what Commons has, and the ones with none lean on their theme.",
+      "sha256": "17a441122b8f6c2f8ee7032fd12d8cc8234e115c0911a2793b46c9d1b2df166a",
+      "duration_s": 4.608
+    },
+    "15": {
+      "key": "9b25fbb566361ff876d8",
+      "text": "With B, every era gets photos, and the site pays for them every year.",
+      "sha256": "c0223ad0316c747b376e5ce583193b1aae2096415d79cf198ab20bd25d79784d",
+      "duration_s": 4.075
+    },
+    "16": {
+      "key": "be18883fd011904d7f01",
+      "text": "With C, the panels keep their themes and open on their titles.",
+      "sha256": "f0c406d8d7f2a57b312d2558afa89fbcdcc146877526ac239e92e56e65022083",
+      "duration_s": 3.2
+    },
+    "17": {
+      "key": "cfe623ab09084e9ee7d4",
+      "text": "Step four, the album and song pages. Blowin' in the Wind's page wears its era's theme, and adds a Lyrics row linking to the official page, a Play row for Spotify, and its connections. On an album page, the real cover comes from the Cover Art Archive. If it fails to load, like New Morning's here, the page shows a drawn cover in the era's theme instead, so nothing shows broken.",
+      "sha256": "6e050501f3cb61757d23e0fce00abd2bbc46b8dbec18e87b57afb20bc18be9fd",
+      "duration_s": 21.056
+    },
+    "18": {
+      "key": "c670c8193a7d2a2cb0a0",
+      "text": "Check on step three. Basement and Country has no photo the site can use. What does its panel open on?",
+      "sha256": "63d17457ed5731a45fc59f1b4b82beb462f420bf5cba1647a4083032094d7eac",
+      "duration_s": 5.995
+    },
+    "19": {
+      "key": "1e2cb758e2dc9d3c0614",
+      "text": "Question three: what sits beside the lyrics link? A: the link only. B: the link and the song's first line, a real taste, but quoting a lyric, even one line, needs the publisher's permission. C: the link and a preview in our own words, like nine questions about war and freedom, and an answer that won't stay still. I recommend C. What should a song page show beside its lyrics link?",
+      "sha256": "39502d8e8c2f99bc26c31388d10ee7405c4834e89fb327f4683def7f70177a7a",
+      "duration_s": 20.331
+    },
+    "20": {
+      "key": "413f03493b42a93a179d",
+      "text": "With A, the row is just the link.",
+      "sha256": "6ef62a31c9175531a26c8937d6ab0e150c24a0dc691c011986ddb9a3c39fdc8b",
+      "duration_s": 1.749
+    },
+    "21": {
+      "key": "0e5b8da5f31387d44320",
+      "text": "With B, the site needs the publisher's permission first, for every song.",
+      "sha256": "c2bc4b3b28c30a1195ba5b9f9c91fafb1925348edff879c133f4a84598bc9fa8",
+      "duration_s": 3.797
+    },
+    "22": {
+      "key": "f56dba4fc68c01abc3f1",
+      "text": "With C, every song in the dataset gains a one-sentence preview, written for the site.",
+      "sha256": "cf2ef67d45e44f563410660737ef9fd09108cfd35ac5a9d3167743e95815eea7",
+      "duration_s": 4.48
+    },
+    "23": {
+      "key": "8d4f1b38056d81d50499",
+      "text": "Step five, threads and the map. A thread is a path through songs that share something, shown as cards you swipe. On a phone, cards are still the default, and a toggle switches to the map, where every song is a dot and every connection a line. It opens centred on the song you were on and its neighbours, about fifteen dots, and you drag to see more. On a laptop, both sit side by side.",
+      "sha256": "b74a5302767ef527057063521306582f1ebf813a0f2e65fc50f8eb65f2e37469",
+      "duration_s": 20.672
+    },
+    "24": {
+      "key": "35b499f34f8ffa819cc6",
+      "text": "Check on step four. The Cover Art Archive doesn't answer for Oh Mercy's cover. What does its album page show?",
+      "sha256": "bd0833cc95f162675f7155ccfb568700eee376f6e25488a8a016fb20a8f3cc3a",
+      "duration_s": 5.909
+    },
+    "25": {
+      "key": "8790404064b6ac3db9f1",
+      "text": "Step six. Spotify's player loads only when you tap Play, so a page you just read loads nothing from Spotify. Songs and moments that matter get a YouTube clip, like Newport in nineteen sixty-five, also after a tap. Search, and the phone check that opens every view at phone size, work as in version one.",
+      "sha256": "51d227399ed919d6c1813f260c7f3d60b4052c784be7b621e01d6bd6621ec77a",
+      "duration_s": 18.027
+    },
+    "26": {
+      "key": "78c5dc246d44f7590c06",
+      "text": "Check on step five. On a phone, you're on Blowin' in the Wind's card in a thread, and you tap Map. Where does it open?",
+      "sha256": "7b2a82d0411f0caae887a7006cfda115293f99940665cd8703555ca1b73dd7da",
+      "duration_s": 6.293
+    },
+    "27": {
+      "key": "24e6868d5e6866aac070",
+      "text": "And on step six. You open Tangled Up in Blue's page and never tap Play. What does the page load from Spotify?",
+      "sha256": "0259f1f30409b135c9fac51c09aa50377d127921b87da88eec0896b967aa939d",
+      "duration_s": 6.251
+    },
+    "28": {
+      "key": "6a5072ad8c8423383afa",
+      "text": "That's version two: six steps and three questions, and the plan shows your picks on its steps as you answer. Draw on any step to leave a note, or approve.",
+      "sha256": "8061b3740ec43e9fd15656b84571d7f825665995d399603ea459931678b7a8db",
+      "duration_s": 8.533
+    },
+    "01": {
+      "key": "22542372bf2bc0cacbde",
+      "text": "This is version two of the plan. You decided four things: all thirty-nine albums, real covers, threads with a map, and Spotify on the page. And you asked for five more: question one again, with the differences shown; a look and real photos for each era; lyrics; the map on phones; and YouTube.",
+      "sha256": "d36b91029524378901549279fad98d060d6c938447724f8c540aee11fe2de436",
+      "duration_s": 16.896
+    },
+    "02": {
+      "key": "60a79d33aad0bae6ed0e",
+      "text": "It's still three changes in six steps, and something new lands in five of them. The dataset, hand-written files that hold everything, now also points to photos, lyrics and videos. Search, which finds things as you type, stays as it was.",
+      "sha256": "99617c48ff5371a5fe70b4e342f219d4a23db25ed6328a931f62b2de391b06c5",
+      "duration_s": 13.568
+    },
+    "03": {
+      "key": "752fd05226f16ab0d91b",
+      "text": "Step one is still the app shell, the one page that reads the address and draws one view at a time. What's new is how views change. With View Transitions, the browser's own animation, the cover you tap grows into the album page's header. Press back, and it shrinks home. A phone set to reduce motion gets a gentle fade instead: the page fades in, and nothing grows.",
+      "sha256": "9352369c42cba3dd9ad3c206d10efed3a1b90c1a47a245dbba0568936d936d7f",
+      "duration_s": 20.288
+    },
+    "04": {
+      "key": "ed7941acc99f53eeeebc",
+      "text": "All three ways to build the site can look the same. The look comes from step three's themes and photos. What differs is around it. With plain files, a big photo pops in late, all at once. With Vite or Astro, each photo gets smaller sizes and a placeholder, a blurred copy that shows at once and sharpens. Vite keeps one page, so the swipe and the map keep your place; Astro loads a new page each time. And for the map and players, Vite and Astro pull in packages; plain files are wired by hand.",
+      "sha256": "bd36314adc5dc74dfb347ff3970738874e0ee336329b564dc6e1b6f74e52172a",
+      "duration_s": 29.029
+    },
+    "05": {
+      "key": "b684419a231d4fe4d985",
+      "text": "So, question one, asked again. A: plain files, with photos that pop in late and every polish by hand. B: Vite with TypeScript, one page built into plain files, with placeholders and packages. C: Astro, a real page per song that search engines find, with the swipe reloading between pages. I recommend B. How should the site be built?",
+      "sha256": "1e0218df8f3cd79cd985949505f9d9bf7a7620f74ac71a6bfcef13f57946e1a2",
+      "duration_s": 19.541
+    },
+    "06": {
+      "key": "aa1db1d85a9f62f42fbf",
+      "text": "With A, step one is three files and a data folder, and every polish is by hand.",
+      "sha256": "d9edda9aa93bc2af1062dae7f31b49f00dae51427f7e8fbc3228290ea9ae67cb",
+      "duration_s": 4.565
+    },
+    "07": {
+      "key": "57fffb971ec0a7f10f6d",
+      "text": "With B, step one is a Vite project, and `npm run build` writes plain files to `dist/`.",
+      "said": "With B, step one is a Vite project, and `npm run build` writes plain files to dist.",
+      "sha256": "334dc9cddea063620be595ddc2e3dfbb1a5863bbd06ca8d7586d860f1072b6f4",
+      "duration_s": 5.205
+    },
+    "08": {
+      "key": "4c133cc7de8e72acf254",
+      "text": "With C, step one becomes an Astro project, with a page for every album and song.",
+      "sha256": "1ab9d1a6307831d7e457290621123669c4418b34e89311ccf5ad6f1398abca0d",
+      "duration_s": 4.864
+    },
+    "09": {
+      "key": "d55a31ca3b50858953bf",
+      "text": "Step two, the dataset. It's seven JSON files now, plain-text lists of data, adding threads and photos. A song record gains three fields: its Spotify id for the player, a YouTube id when there's a clip worth showing, and a link to its official lyrics page. No lyrics are copied.",
+      "sha256": "d3fed562534edea7e82e44dcb21718957ef7a0ac134a92c4423326c1c55350ae",
+      "duration_s": 17.237
+    }
+  }
+}

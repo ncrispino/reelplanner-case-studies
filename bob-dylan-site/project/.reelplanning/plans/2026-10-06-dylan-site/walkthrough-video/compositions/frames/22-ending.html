@@ -1,0 +1,71 @@
+<template>
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"Inter"; src:url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; font-variant-ligatures:none; }
+  .f22-ending-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f22-ending-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  /* shared stage (positions from stage-snippet.html, colours as tokens) */
+  .f22-ending-rail { position:absolute; height:640px; }
+  .f22-ending-slot { position:absolute; left:0; width:500px; height:90px; border-radius:12px; border:1px dashed rgba(var(--rp-ink-rgb),0.18); box-sizing:border-box; }
+  .f22-ending-slot[data-filled] { border:1px solid rgba(var(--rp-ink-rgb),0.12); background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f22-ending-slot .n { position:absolute; left:24px; top:28px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); }
+  .f22-ending-slot .t { position:absolute; left:76px; top:27px; font:400 30px/1.2 "Inter"; letter-spacing:-0.005em; color:var(--rp-ink); white-space:nowrap; }
+  /* the chosen option: left empty, the player fills it */
+  .f22-ending-slot .d { position:absolute; right:20px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.04em; color:var(--rp-coral-deep); }
+  .f22-ending-site { position:absolute; left:740px; top:150px; width:1060px; height:440px; }
+  .f22-ending-phone { position:absolute; top:0; width:200px; height:433px; border-radius:28px; overflow:hidden; border:1px solid rgba(var(--rp-ink-rgb),0.22); background:var(--rp-tile); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f22-ending-phone img { display:block; width:200px; height:433px; }
+  .f22-ending-ask { position:absolute; left:700px; top:660px; width:1140px; text-align:center; font:400 64px/1.08 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); white-space:nowrap; }
+</style>
+
+<div id="root" data-composition-id="22-ending" data-band="bottom" data-start="0" data-duration="6" data-width="1920" data-height="1080">
+
+  <div class="clip f22-ending-bg" id="f22-ending-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+  <div class="clip f22-ending-scene" id="f22-ending-scene" data-start="0" data-duration="6" data-track-index="1">
+    <div class="f22-ending-rail" id="f22-ending-rail" style="left:80px; top:150px; width:500px">
+      <div class="f22-ending-slot" id="f22-ending-slot-1" data-plan-step="1" data-filled style="top:0px"><span class="n">1</span><span class="t">The app shell</span><span class="d"></span></div>
+      <div class="f22-ending-slot" id="f22-ending-slot-2" data-plan-step="2" data-filled style="top:110px"><span class="n">2</span><span class="t">The dataset</span><span class="d"></span></div>
+      <div class="f22-ending-slot" id="f22-ending-slot-3" data-plan-step="3" data-filled style="top:220px"><span class="n">3</span><span class="t">The era timeline</span><span class="d"></span></div>
+      <div class="f22-ending-slot" id="f22-ending-slot-4" data-plan-step="4" data-filled style="top:330px"><span class="n">4</span><span class="t">Album and song pages</span><span class="d"></span></div>
+      <div class="f22-ending-slot" id="f22-ending-slot-5" data-plan-step="5" data-filled style="top:440px"><span class="n">5</span><span class="t">Threads and the map</span><span class="d"></span></div>
+      <div class="f22-ending-slot" id="f22-ending-slot-6" data-plan-step="6" data-filled style="top:550px"><span class="n">6</span><span class="t">Search, listening, checks</span><span class="d"></span></div>
+    </div>
+
+    <div class="f22-ending-site" id="f22-ending-site" data-artifact="the built site">
+      <div class="f22-ending-phone" id="f22-ending-p1" style="left:150px"><img src="assets/shots/era-gospel.png" alt="The Gospel era panel"></div>
+      <div class="f22-ending-phone" id="f22-ending-p2" style="left:430px"><img src="assets/shots/thread-faith.png" alt="The Faith thread card"></div>
+      <div class="f22-ending-phone" id="f22-ending-p3" style="left:710px"><img src="assets/shots/song-lars.png" alt="Like a Rolling Stone song page"></div>
+    </div>
+
+    <div class="f22-ending-ask" id="f22-ending-ask">Seeing it run, anything you'd change?</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "22-ending";
+  var E = "power3.out";
+  var $ = function (s) { return document.getElementById("f22-ending-" + s); };
+  var pop = function (tl, el, at, d) { tl.fromTo(el, { opacity: 0, y: d == null ? 10 : d }, { opacity: 1, y: 0, duration: 0.5, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-6s): the rail, three phones (Gospel, Faith thread, Like a Rolling Stone), the question; then hold still
+  for (var i = 1; i <= 6; i++) pop(tl, $("slot-" + i), 0.05 + (i - 1) * 0.08, 8);
+  pop(tl, $("p1"), 0.025, 16);
+  pop(tl, $("p2"), 0.044, 16);
+  pop(tl, $("p3"), 0.063, 16);
+  // the question shows once: the caption speaks it (local 1.21-3.02 s), then the headline takes over and holds
+  pop(tl, $("ask"), 3.1, 14);
+  tl.set({}, {}, 6);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

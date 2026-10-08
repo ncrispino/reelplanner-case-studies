@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "src": "2026-10-07-fuller/plan.md",
+  "project": "chat",
+  "exportedAt": "2026-10-07T21:34:23.000Z",
+  "watch": {
+    "firstPlayAt": null,
+    "maxTimeReached": 0,
+    "durationSeconds": 0,
+    "completion": 0,
+    "chapters": [],
+    "moments": [],
+    "details": []
+  },
+  "decisions": [
+    {
+      "id": "q1",
+      "option": "a",
+      "label": "A context rail from 1440 px, the content kept at 1200 px",
+      "recommended": true,
+      "planStep": 5,
+      "question": "What fills the sides of a wide window?",
+      "t": 0,
+      "decidedAt": "2026-10-07T21:34:23.000Z"
+    },
+    {
+      "id": "q2",
+      "option": "a",
+      "label": "Wikipedia and MusicBrainz, where MusicBrainz lists them",
+      "recommended": true,
+      "planStep": 6,
+      "question": "Read on elsewhere: Wikipedia and MusicBrainz, or nothing?",
+      "t": 0,
+      "decidedAt": "2026-10-07T21:34:23.000Z"
+    },
+    {
+      "id": "q3",
+      "option": "a",
+      "label": "An era about 250 words, a moment about 120, an album about 150",
+      "recommended": true,
+      "planStep": 1,
+      "question": "How long should the new writing be?",
+      "t": 0,
+      "decidedAt": "2026-10-07T21:34:23.000Z"
+    }
+  ],
+  "checks": "off",
+  "autonomy": [],
+  "knowledgeLevel": null,
+  "watched": [],
+  "confusion": {
+    "wrongChecks": 0,
+    "walked": 0,
+    "termsOpened": 0,
+    "termsLookedUp": [],
+    "rewinds": 0,
+    "watchedPct": 0
+  },
+  "questions": [],
+  "verdict": "approve",
+  "annotations": [
+    {
+      "id": "chat-approve",
+      "kind": "approve",
+      "t": 0,
+      "frame": null,
+      "plan": {
+        "step": null,
+        "questions": [
+          1,
+          2,
+          3
+        ],
+        "component": null
+      },
+      "comment": "Approved in chat, with the recommended answers, no plan video: \"sure i approve this, you can do it in chat\""
+    }
+  ],
+  "recorded": {
+    "reviewer": "the owner, in chat",
+    "via": "chat",
+    "reelplanning": "0.2.0"
+  }
+}

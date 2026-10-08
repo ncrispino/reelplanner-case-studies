@@ -1,0 +1,58 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* two type sizes: 26 (labels, unit), 64 (the to-do and its figure) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f51-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f51-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f51-place { position:absolute; left:90px; top:96px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.06em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+
+  .f51-card { position:absolute; left:360px; top:300px; width:1200px; height:360px; box-sizing:border-box; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f51-k { position:absolute; left:64px; top:44px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f51-box { position:absolute; left:64px; top:112px; width:52px; height:52px; box-sizing:border-box; border:3px solid var(--rp-coral); border-radius:8px; }
+  .f51-todo { position:absolute; left:148px; top:100px; font:400 64px/1.1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f51-rule { position:absolute; left:148px; right:64px; top:210px; height:1px; background:rgba(var(--rp-ink-rgb),0.14); transform-origin:0 50%; }
+  .f51-fig { position:absolute; left:148px; top:240px; white-space:nowrap; }
+  .f51-fig .n { font:400 64px/1 "EB Garamond"; letter-spacing:-0.02em; color:var(--rp-ink); }
+  .f51-fig .u { margin-left:14px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.72); }
+</style>
+
+<div id="root" data-composition-id="51-q2-b" data-band="bottom" data-start="0" data-duration="6.5" data-width="1920" data-height="1080">
+  <div class="clip f51-bg" id="f51-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+  <div class="clip f51-scene" id="f51-scene" data-start="0" data-duration="6.5" data-track-index="1">
+    <div class="f51-place" id="f51-place">If B · step 4</div>
+
+    <div class="f51-card" id="f51-card">
+      <div class="f51-k">TO DO</div>
+      <i class="f51-box" id="f51-box"></i>
+      <div class="f51-todo" id="f51-todo">ask the publisher for permission</div>
+      <i class="f51-rule" id="f51-rule"></i>
+      <div class="f51-fig" id="f51-fig"><span class="n">212</span><span class="u">songs</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "51-q2-b";
+  var tl = gsap.timeline({ paused: true });
+  var E = "power3.out";
+
+  // Scene 1 (0-6s): the to-do card draws; then hold
+  tl.fromTo("#f51-place", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.1);
+  tl.fromTo("#f51-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+  tl.fromTo("#f51-box", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.4, ease: E }, 0.8);
+  tl.fromTo("#f51-todo", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 1.0);
+  tl.fromTo("#f51-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: E }, 1.9);
+  tl.fromTo("#f51-fig", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 2.2);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 5.99);
+  window.__timelines = window.__timelines || {};
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

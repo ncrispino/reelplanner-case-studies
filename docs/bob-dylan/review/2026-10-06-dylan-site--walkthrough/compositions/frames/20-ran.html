@@ -1,0 +1,78 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"Inter"; src:url("../../../shared/fonts/Inter-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  /* type sizes used: 72 (column titles), 30 (commands, not-done rows), 26 (result lines, as the runs printed them) */
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f20-ran-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f20-ran-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+
+  .f20-ran-h { position:absolute; top:110px; font:400 72px/1 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f20-ran-rule { position:absolute; top:206px; height:1px; background:rgba(var(--rp-ink-rgb),0.2); transform-origin:0 50%; }
+  .f20-ran-rule.hot { height:2px; background:var(--rp-coral); }
+
+  .f20-ran-col { position:absolute; top:240px; }
+  .f20-ran-row { position:absolute; left:0; box-sizing:border-box; border-radius:8px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.12); }
+  .f20-ran-row .t { position:absolute; left:28px; top:22px; font:400 30px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:pre; font-variant-ligatures:none; }
+  .f20-ran-row .r { position:absolute; left:24px; top:68px; font:400 26px/1 "JetBrains Mono"; color:rgba(var(--rp-ink-rgb),0.78); white-space:pre; font-variant-ligatures:none; }
+  .f20-ran-row .s { position:absolute; left:32px; top:29px; font:400 30px/1 "Inter"; color:var(--rp-ink); white-space:nowrap; }
+  .f20-ran-nd { background:var(--rp-paper); border:1px dashed rgba(var(--rp-ink-rgb),0.3); }
+</style>
+
+<div id="root" data-composition-id="20-ran" data-band="bottom" data-duration="6.144" data-width="1920" data-height="1080">
+
+  <div class="clip f20-ran-bg" id="f20-ran-bg" data-start="0" data-duration="6.144" data-track-index="0"></div>
+
+  <div class="clip f20-ran-scene" id="f20-ran-scene" data-start="0" data-duration="6.144" data-track-index="1">
+
+    <!-- left: what ran, each command with the result line it printed (runs/*.txt) -->
+    <div class="f20-ran-h" id="f20-ran-h1" style="left:80px">Ran</div>
+    <div class="f20-ran-rule" id="f20-ran-r1" style="left:80px;width:1190px"></div>
+    <div class="f20-ran-col" id="f20-ran-left" style="left:80px;width:1190px;height:620px" data-artifact="the runs">
+      <div class="f20-ran-row" id="f20-ran-l1" style="top:0;width:1190px;height:112px"><span class="t">node tools/check-data.mjs</span><span class="r">✓ 11 eras, 39 albums, 255 songs, 135 connections, 12 threads, 26 photos</span></div>
+      <div class="f20-ran-row" id="f20-ran-l2" style="top:132px;width:1190px;height:112px"><span class="t">npm run build</span><span class="r">03:43:06 [build] 802 page(s) built in 6.88s</span></div>
+      <div class="f20-ran-row" id="f20-ran-l3" style="top:264px;width:1190px;height:112px"><span class="t">node tools/check-phone.mjs</span><span class="r">✓ 12 views at 375×812, screenshots in checks/</span></div>
+      <div class="f20-ran-row" id="f20-ran-l4" style="top:396px;width:1190px;height:112px"><span class="t">npm run check:clips</span><span class="r">✓ 179 clips still play</span></div>
+    </div>
+
+    <!-- right: not done -->
+    <div class="f20-ran-h" id="f20-ran-h2" style="left:1310px">Not done</div>
+    <div class="f20-ran-rule hot" id="f20-ran-r2" style="left:1310px;width:530px"></div>
+    <div class="f20-ran-col" id="f20-ran-right" style="left:1310px;width:530px;height:620px">
+      <div class="f20-ran-row f20-ran-nd" id="f20-ran-n1" style="top:0;width:530px;height:88px"><span class="s">lyric excerpts</span></div>
+      <div class="f20-ran-row f20-ran-nd" id="f20-ran-n2" style="top:132px;width:530px;height:88px"><span class="s">hosting</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "20-ran";
+  var $ = function (s) { return document.getElementById("f20-ran-" + s); };
+  var pop = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-7s): the left column, what ran
+  pop(tl, $("h1"), 0.092);
+  tl.fromTo($("r1"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0.214);
+  pop(tl, $("l1"), 0.58);
+  pop(tl, $("l2"), 1.40);
+  pop(tl, $("l3"), 2.21);
+  pop(tl, $("l4"), 3.03);
+
+  // Scene 2 (4.3-8.6s): the right column, what is not done; hold
+  pop(tl, $("h2"), 4.17);
+  tl.fromTo($("r2"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 4.32);   // the one coral
+  pop(tl, $("n1"), 5.10);
+  pop(tl, $("n2"), 5.50);
+  tl.set({}, {}, 6.144);
+
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>

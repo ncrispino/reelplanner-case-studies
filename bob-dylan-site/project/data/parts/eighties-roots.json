@@ -1,0 +1,858 @@
+{
+  "eras": [
+    {
+      "id": "eighties",
+      "title": "The '80s",
+      "years": [
+        1983,
+        1990
+      ],
+      "theme": "eighties",
+      "summary": "After the gospel albums Dylan returned to secular songs with Infidels, then spent the middle of the decade chasing contemporary production with mixed results. A late-decade turn, from the Traveling Wilburys and the start of constant touring to Daniel Lanois's Oh Mercy, restored his footing.",
+      "albums": [
+        "infidels",
+        "empire-burlesque",
+        "knocked-out-loaded",
+        "down-in-the-groove",
+        "oh-mercy",
+        "under-the-red-sky"
+      ],
+      "moments": [
+        "live-aid-1985",
+        "hall-of-fame-1988",
+        "never-ending-tour-begins",
+        "traveling-wilburys-1988"
+      ],
+      "photos": []
+    },
+    {
+      "id": "roots",
+      "title": "Back to the Roots",
+      "years": [
+        1992,
+        1993
+      ],
+      "theme": "roots",
+      "summary": "With no new songs of his own, Dylan made two solo acoustic albums of old folk and blues material, the first since 1964 with just his guitar and harmonica. The records reconnected him with the songs he had learned as a young man and pointed toward his later work.",
+      "albums": [
+        "good-as-i-been-to-you",
+        "world-gone-wrong"
+      ],
+      "moments": [
+        "bobfest-1992",
+        "clinton-inaugural-1993"
+      ],
+      "photos": []
+    }
+  ],
+  "moments": [
+    {
+      "id": "live-aid-1985",
+      "year": 1985,
+      "title": "Live Aid: closes the Philadelphia show",
+      "text": "On July 13, 1985, Dylan played near the end of the Live Aid concert at JFK Stadium in Philadelphia, backed by Keith Richards and Ronnie Wood.",
+      "era": "eighties",
+      "youtube": null
+    },
+    {
+      "id": "hall-of-fame-1988",
+      "year": 1988,
+      "title": "Inducted into the Rock and Roll Hall of Fame",
+      "text": "Dylan was inducted into the Rock and Roll Hall of Fame in January 1988, with Bruce Springsteen giving the induction speech.",
+      "era": "eighties",
+      "youtube": null
+    },
+    {
+      "id": "never-ending-tour-begins",
+      "year": 1988,
+      "title": "The Never Ending Tour begins",
+      "text": "On June 7, 1988, in Concord, California, Dylan began the run of near-continuous touring that fans came to call the Never Ending Tour.",
+      "era": "eighties",
+      "youtube": null
+    },
+    {
+      "id": "traveling-wilburys-1988",
+      "year": 1988,
+      "title": "The Traveling Wilburys",
+      "text": "Dylan joined George Harrison, Jeff Lynne, Roy Orbison and Tom Petty in the Traveling Wilburys, whose first album came out in October 1988.",
+      "era": "eighties",
+      "youtube": null
+    },
+    {
+      "id": "bobfest-1992",
+      "year": 1992,
+      "title": "30th anniversary concert at Madison Square Garden",
+      "text": "On October 16, 1992, a host of artists performed his songs at Madison Square Garden to mark thirty years since his first album, and Dylan closed the night himself.",
+      "era": "roots",
+      "youtube": null
+    },
+    {
+      "id": "clinton-inaugural-1993",
+      "year": 1993,
+      "title": "Sings at the Clinton inaugural celebration",
+      "text": "In January 1993 Dylan performed Chimes of Freedom at a concert at the Lincoln Memorial celebrating Bill Clinton's inauguration.",
+      "era": "roots",
+      "youtube": null
+    }
+  ],
+  "albums": [
+    {
+      "id": "infidels",
+      "title": "Infidels",
+      "year": 1983,
+      "era": "eighties",
+      "why": "His first secular album after three gospel records, Infidels was co-produced with Mark Knopfler and built on the reggae rhythm section of Sly Dunbar and Robbie Shakespeare. Its songs mix politics, scripture and romance, and it was seen as a return to strong songwriting, though Dylan left some of the best material from the sessions unreleased.",
+      "songs": [
+        "jokerman",
+        "sweetheart-like-you",
+        "neighborhood-bully",
+        "license-to-kill",
+        "union-sundown",
+        "i-and-i",
+        "dont-fall-apart-on-me-tonight"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "empire-burlesque",
+      "title": "Empire Burlesque",
+      "year": 1985,
+      "era": "eighties",
+      "why": "Dylan's most polished attempt at a mid-1980s radio sound, with drum machines, horns and backing singers, ending on a solo acoustic song.",
+      "songs": [
+        "tight-connection-to-my-heart",
+        "when-the-night-comes-falling-from-the-sky",
+        "dark-eyes"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "knocked-out-loaded",
+      "title": "Knocked Out Loaded",
+      "year": 1986,
+      "era": "eighties",
+      "why": "A patchwork of covers and co-writes, it is remembered mainly for the eleven-minute Brownsville Girl.",
+      "songs": [
+        "they-killed-him",
+        "driftin-too-far-from-shore",
+        "brownsville-girl"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "down-in-the-groove",
+      "title": "Down in the Groove",
+      "year": 1988,
+      "era": "eighties",
+      "why": "Made up mostly of covers and leftovers, it was among the weakest-selling albums of his career.",
+      "songs": [
+        "death-is-not-the-end",
+        "silvio",
+        "rank-strangers-to-me"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "oh-mercy",
+      "title": "Oh Mercy",
+      "year": 1989,
+      "era": "eighties",
+      "why": "Recorded in New Orleans with producer Daniel Lanois, Oh Mercy wrapped new songs in a dark, atmospheric sound. Critics hailed it as his strongest album in years, and Dylan later devoted a long chapter of Chronicles: Volume One to making it.",
+      "songs": [
+        "political-world",
+        "everything-is-broken",
+        "ring-them-bells",
+        "man-in-the-long-black-coat",
+        "most-of-the-time",
+        "what-good-am-i",
+        "shooting-star"
+      ],
+      "landmark": true,
+      "cover": null
+    },
+    {
+      "id": "under-the-red-sky",
+      "title": "Under the Red Sky",
+      "year": 1990,
+      "era": "eighties",
+      "why": "Produced by Don Was and David Was with guests including George Harrison, Elton John and Slash, it mixes nursery-rhyme simplicity with a rock band sound.",
+      "songs": [
+        "wiggle-wiggle",
+        "under-the-red-sky",
+        "born-in-time"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "good-as-i-been-to-you",
+      "title": "Good as I Been to You",
+      "year": 1992,
+      "era": "roots",
+      "why": "His first album of just voice, guitar and harmonica since 1964, made up entirely of traditional songs and old blues.",
+      "songs": [
+        "frankie-and-albert",
+        "arthur-mcbride",
+        "froggie-went-a-courtin"
+      ],
+      "landmark": false,
+      "cover": null
+    },
+    {
+      "id": "world-gone-wrong",
+      "title": "World Gone Wrong",
+      "year": 1993,
+      "era": "roots",
+      "why": "A second solo acoustic set of old songs, darker than the first, with Dylan's own liner notes on each track; it later won a Grammy for Best Traditional Folk Album.",
+      "songs": [
+        "world-gone-wrong",
+        "delia",
+        "stack-a-lee"
+      ],
+      "landmark": false,
+      "cover": null
+    }
+  ],
+  "songs": [
+    {
+      "id": "jokerman",
+      "title": "Jokerman",
+      "year": 1983,
+      "album": "infidels",
+      "by": null,
+      "note": "The opening track, it was also released as a single with a music video.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/jokerman/",
+      "preview": "A shape-shifting figure drifts through a landscape of biblical and political images, admired and doubted at once.",
+      "excerpt": null
+    },
+    {
+      "id": "sweetheart-like-you",
+      "title": "Sweetheart Like You",
+      "year": 1983,
+      "album": "infidels",
+      "by": null,
+      "note": "It was the album's first single.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/sweetheart-you/",
+      "preview": "The singer asks a woman what she is doing in a world of corrupt and dangerous men.",
+      "excerpt": null
+    },
+    {
+      "id": "neighborhood-bully",
+      "title": "Neighborhood Bully",
+      "year": 1983,
+      "album": "infidels",
+      "by": null,
+      "note": "It is widely heard as a defense of the state of Israel.",
+      "themes": [
+        "war",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/neighborhood-bully/",
+      "preview": "A small nation surrounded by enemies is blamed for defending itself.",
+      "excerpt": null
+    },
+    {
+      "id": "license-to-kill",
+      "title": "License to Kill",
+      "year": 1983,
+      "album": "infidels",
+      "by": null,
+      "note": "Dylan played it on Late Night with David Letterman in March 1984 with the punk band the Plugz.",
+      "themes": [
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/license-kill/",
+      "preview": "Mankind's urge to conquer and destroy is held up against a woman who sees it clearly.",
+      "excerpt": null
+    },
+    {
+      "id": "union-sundown",
+      "title": "Union Sundown",
+      "year": 1983,
+      "album": "infidels",
+      "by": null,
+      "note": "It targets the shift of American manufacturing to cheap labor overseas.",
+      "themes": [
+        "America",
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/union-sundown/",
+      "preview": "Everyday goods are made abroad while workers at home lose their jobs to corporate greed.",
+      "excerpt": null
+    },
+    {
+      "id": "i-and-i",
+      "title": "I and I",
+      "year": 1983,
+      "album": "infidels",
+      "by": null,
+      "note": "Its title borrows a Rastafarian expression for the self joined with God.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/i-and-i/",
+      "preview": "A restless man walks out at dawn, weighing his own guilt against a stern, unseen judge.",
+      "excerpt": null
+    },
+    {
+      "id": "dont-fall-apart-on-me-tonight",
+      "title": "Don't Fall Apart on Me Tonight",
+      "year": 1983,
+      "album": "infidels",
+      "by": null,
+      "note": "It closes the album.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/dont-fall-apart-me-tonight/",
+      "preview": "A tired man pleads with a lover to hold together with him for one more night.",
+      "excerpt": null
+    },
+    {
+      "id": "tight-connection-to-my-heart",
+      "title": "Tight Connection to My Heart (Has Anybody Seen My Love)",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "He reworked it from an unreleased Infidels-era song.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/tight-connection-my-heart-has-anyone-seen-my-love/",
+      "preview": "A man trapped in a tense, mistrustful affair keeps asking where the love has gone.",
+      "excerpt": null
+    },
+    {
+      "id": "when-the-night-comes-falling-from-the-sky",
+      "title": "When the Night Comes Falling From the Sky",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "At seven and a half minutes it is the longest song on the album.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/when-night-comes-falling-sky/",
+      "preview": "A spurned lover warns that a reckoning is coming when darkness falls.",
+      "excerpt": null
+    },
+    {
+      "id": "dark-eyes",
+      "title": "Dark Eyes",
+      "year": 1985,
+      "album": "empire-burlesque",
+      "by": null,
+      "note": "The closing track is just Dylan with acoustic guitar and harmonica.",
+      "themes": [
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/dark-eyes/",
+      "preview": "A man feels out of step with the violent, money-driven world around him, with only a woman's gaze to steady him.",
+      "excerpt": null
+    },
+    {
+      "id": "they-killed-him",
+      "title": "They Killed Him",
+      "year": 1986,
+      "album": "knocked-out-loaded",
+      "by": null,
+      "note": "A Kris Kristofferson song about Gandhi, Martin Luther King Jr. and Jesus, sung with a children's choir.",
+      "themes": [
+        "death",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/they-killed-him/",
+      "preview": "Peacemakers who preached love are remembered, each cut down by violence.",
+      "excerpt": null
+    },
+    {
+      "id": "driftin-too-far-from-shore",
+      "title": "Driftin' Too Far From Shore",
+      "year": 1986,
+      "album": "knocked-out-loaded",
+      "by": null,
+      "note": "One of the few songs on the album Dylan wrote by himself.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/driftin-too-far-shore/",
+      "preview": "A man tells a lover she has wandered too far from him to be brought back.",
+      "excerpt": null
+    },
+    {
+      "id": "brownsville-girl",
+      "title": "Brownsville Girl",
+      "year": 1986,
+      "album": "knocked-out-loaded",
+      "by": null,
+      "note": "Co-written with playwright Sam Shepard, it runs past eleven minutes and is framed around the Gregory Peck western The Gunfighter.",
+      "themes": [
+        "the road",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/brownsville-girl/",
+      "preview": "A rambling tale of a road trip, an old movie and a lost woman blurs memory and myth.",
+      "excerpt": null
+    },
+    {
+      "id": "death-is-not-the-end",
+      "title": "Death Is Not the End",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "It was an outtake from the 1983 Infidels sessions.",
+      "themes": [
+        "death",
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/death-not-end/",
+      "preview": "In the face of grief and fear, the song offers the plain comfort that death is not final.",
+      "excerpt": null
+    },
+    {
+      "id": "silvio",
+      "title": "Silvio",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "Written with Grateful Dead lyricist Robert Hunter, it became a regular in his concerts.",
+      "themes": [
+        "the road"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/silvio/",
+      "preview": "A drifter sets off to learn what fate holds for him.",
+      "excerpt": null
+    },
+    {
+      "id": "rank-strangers-to-me",
+      "title": "Rank Strangers to Me",
+      "year": 1988,
+      "album": "down-in-the-groove",
+      "by": null,
+      "note": "An Albert E. Brumley song best known from the Stanley Brothers.",
+      "themes": [
+        "loss",
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/rank-strangers-me/",
+      "preview": "A man returns to his home place and finds no one there who knows him.",
+      "excerpt": null
+    },
+    {
+      "id": "political-world",
+      "title": "Political World",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "The opening track sets the album's mood of a corrupt world.",
+      "themes": [
+        "protest"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/political-world/",
+      "preview": "A world run by politics leaves no room for wisdom, love or peace.",
+      "excerpt": null
+    },
+    {
+      "id": "everything-is-broken",
+      "title": "Everything Is Broken",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "It was released as a single with a music video.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/everything-broken/",
+      "preview": "A rolling list of broken things paints a world falling apart piece by piece.",
+      "excerpt": null
+    },
+    {
+      "id": "ring-them-bells",
+      "title": "Ring Them Bells",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "A slow, hymn-like song built around piano.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/ring-them-bells/",
+      "preview": "Bells are called to ring out for the lost and the faithful as the world nears its end.",
+      "excerpt": null
+    },
+    {
+      "id": "man-in-the-long-black-coat",
+      "title": "Man in the Long Black Coat",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "Its recording opens with the sound of crickets, adding to Lanois's swampy atmosphere.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/man-long-black-coat/",
+      "preview": "A woman vanishes with a mysterious stranger, leaving a haunted town behind.",
+      "excerpt": null
+    },
+    {
+      "id": "most-of-the-time",
+      "title": "Most of the Time",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "It was used in the 2000 film High Fidelity.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/most-time/",
+      "preview": "A man insists he is over a past love, and the insistence gives him away.",
+      "excerpt": null
+    },
+    {
+      "id": "what-good-am-i",
+      "title": "What Good Am I?",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "One of the album's quietest songs.",
+      "themes": [
+        "faith"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/what-good-am-i/",
+      "preview": "The singer asks himself whether he is worth anything if he turns away from others' suffering.",
+      "excerpt": null
+    },
+    {
+      "id": "shooting-star",
+      "title": "Shooting Star",
+      "year": 1989,
+      "album": "oh-mercy",
+      "by": null,
+      "note": "It closes the album.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/shooting-star/",
+      "preview": "Watching a falling star, he thinks of a lover he may have failed and of the last chances slipping away.",
+      "excerpt": null
+    },
+    {
+      "id": "wiggle-wiggle",
+      "title": "Wiggle Wiggle",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "Slash of Guns N' Roses plays guitar on the opening track.",
+      "themes": [],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/wiggle-wiggle/",
+      "preview": "A childlike chant urges someone to wiggle through a series of absurd images.",
+      "excerpt": null
+    },
+    {
+      "id": "under-the-red-sky",
+      "title": "Under the Red Sky",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "George Harrison plays slide guitar on the title track.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/under-red-sky/",
+      "preview": "A fairy-tale about a boy and girl in a small town that ends in loss.",
+      "excerpt": null
+    },
+    {
+      "id": "born-in-time",
+      "title": "Born in Time",
+      "year": 1990,
+      "album": "under-the-red-sky",
+      "by": null,
+      "note": "Dylan first tried it during the Oh Mercy sessions.",
+      "themes": [
+        "love",
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/born-time/",
+      "preview": "A man recalls a love that grew and faded in a single stretch of time.",
+      "excerpt": null
+    },
+    {
+      "id": "frankie-and-albert",
+      "title": "Frankie & Albert",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "The opener is a version of the old murder ballad usually called Frankie and Johnny.",
+      "themes": [
+        "death",
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/frankie-albert/",
+      "preview": "A woman shoots the man who cheated on her and faces the consequences.",
+      "excerpt": null
+    },
+    {
+      "id": "arthur-mcbride",
+      "title": "Arthur McBride",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "An Irish anti-recruiting song, which Dylan learned from Paul Brady's recording.",
+      "themes": [
+        "war"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/arthur-mcbride/",
+      "preview": "Two cousins meet army recruiters on the road and send them packing.",
+      "excerpt": null
+    },
+    {
+      "id": "froggie-went-a-courtin",
+      "title": "Froggie Went a Courtin’",
+      "year": 1992,
+      "album": "good-as-i-been-to-you",
+      "by": null,
+      "note": "The centuries-old children's song closes the album at more than six minutes.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/froggie-went-courtin/",
+      "preview": "A frog courts a mouse, and the wedding party ends badly.",
+      "excerpt": null
+    },
+    {
+      "id": "world-gone-wrong",
+      "title": "World Gone Wrong",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "The title song comes from the Mississippi Sheiks.",
+      "themes": [
+        "time"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/world-gone-wrong/",
+      "preview": "The singer laments a world turned upside down, where nothing works as it should.",
+      "excerpt": null
+    },
+    {
+      "id": "delia",
+      "title": "Delia",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "It is based on the real 1900 killing of a teenage girl in Savannah, Georgia.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/delia/",
+      "preview": "A young woman is shot by her lover, who is left to mourn in prison.",
+      "excerpt": null
+    },
+    {
+      "id": "stack-a-lee",
+      "title": "Stack a Lee",
+      "year": 1993,
+      "album": "world-gone-wrong",
+      "by": null,
+      "note": "It tells the story of the 1895 killing of Billy Lyons by Lee Shelton in St. Louis.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/stack-lee/",
+      "preview": "A gambler kills a man over a hat and passes into legend.",
+      "excerpt": null
+    },
+    {
+      "id": "someones-got-a-hold-of-my-heart",
+      "title": "Someone's Got a Hold of My Heart",
+      "year": 1983,
+      "album": null,
+      "by": "Bob Dylan",
+      "note": "An Infidels outtake, released in 1991 on The Bootleg Series Volumes 1–3.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": "https://www.bobdylan.com/songs/someones-got-hold-my-heart/",
+      "preview": "An early version of the song he later reworked for Empire Burlesque.",
+      "excerpt": null
+    },
+    {
+      "id": "death-is-not-the-end-nick-cave-and-the-bad-seeds",
+      "title": "Death Is Not the End",
+      "year": 1996,
+      "album": null,
+      "by": "Nick Cave and the Bad Seeds",
+      "note": "The band closed their 1996 album Murder Ballads with it, trading verses among several guest singers.",
+      "themes": [
+        "death"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "man-in-the-long-black-coat-joan-osborne",
+      "title": "Man in the Long Black Coat",
+      "year": 1995,
+      "album": null,
+      "by": "Joan Osborne",
+      "note": "Osborne recorded it on her 1995 album Relish.",
+      "themes": [
+        "love",
+        "loss"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    },
+    {
+      "id": "born-in-time-eric-clapton",
+      "title": "Born in Time",
+      "year": 1998,
+      "album": null,
+      "by": "Eric Clapton",
+      "note": "Clapton recorded it on his 1998 album Pilgrim.",
+      "themes": [
+        "love"
+      ],
+      "spotify": null,
+      "youtube": null,
+      "lyrics": null,
+      "preview": null,
+      "excerpt": null
+    }
+  ],
+  "links": [
+    {
+      "from": "someones-got-a-hold-of-my-heart",
+      "to": "tight-connection-to-my-heart",
+      "kind": "rewrite",
+      "why": "Dylan reworked the unreleased 1983 song into the opening track of Empire Burlesque."
+    },
+    {
+      "from": "death-is-not-the-end",
+      "to": "death-is-not-the-end-nick-cave-and-the-bad-seeds",
+      "kind": "covered-by",
+      "why": "Nick Cave turned the Down in the Groove song into the closing ensemble piece of Murder Ballads."
+    },
+    {
+      "from": "man-in-the-long-black-coat",
+      "to": "man-in-the-long-black-coat-joan-osborne",
+      "kind": "covered-by",
+      "why": "Joan Osborne included the Oh Mercy song on her hit 1995 album Relish."
+    },
+    {
+      "from": "born-in-time",
+      "to": "born-in-time-eric-clapton",
+      "kind": "covered-by",
+      "why": "Eric Clapton recorded the Under the Red Sky ballad for his 1998 album Pilgrim."
+    },
+    {
+      "from": "political-world",
+      "to": "everything-is-broken",
+      "kind": "same-theme",
+      "why": "Both Oh Mercy songs survey a world in moral disrepair."
+    },
+    {
+      "from": "license-to-kill",
+      "to": "union-sundown",
+      "kind": "same-theme",
+      "why": "Both Infidels songs criticize power and greed in modern society."
+    },
+    {
+      "from": "frankie-and-albert",
+      "to": "stack-a-lee",
+      "kind": "same-theme",
+      "why": "Both are old American murder ballads that Dylan recorded on his two acoustic albums of the early 1990s."
+    },
+    {
+      "from": "delia",
+      "to": "stack-a-lee",
+      "kind": "same-theme",
+      "why": "Both World Gone Wrong songs retell real killings that became folk legends."
+    }
+  ]
+}

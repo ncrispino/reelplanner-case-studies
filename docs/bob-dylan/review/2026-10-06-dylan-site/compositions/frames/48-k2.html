@@ -1,0 +1,67 @@
+<template>
+<script src="../../../shared/vendor/gsap.min.js"></script>
+<style>
+  @font-face { font-family:"JetBrains Mono"; src:url("../../../shared/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+  @font-face { font-family:"EB Garamond"; src:url("../../../shared/fonts/EBGaramond-400.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:block; }
+
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; -webkit-font-smoothing:antialiased; }
+  .f48-k2-bg { position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--rp-paper); }
+  .f48-k2-scene { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+  .f48-k2-place { position:absolute; left:90px; top:80px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.16em; color:rgba(var(--rp-ink-rgb),0.62); white-space:nowrap; }
+  .f48-k2-era { position:absolute; left:90px; top:132px; font:400 26px/1 "JetBrains Mono"; color:var(--rp-ink); white-space:nowrap; }
+  .f48-k2-era .z { color:var(--rp-coral-deep); }
+  .f48-k2-q { position:absolute; left:90px; top:196px; width:1740px; font:400 76px/1.06 "EB Garamond"; letter-spacing:-0.018em; color:var(--rp-ink); white-space:nowrap; }
+  .f48-k2-opt { position:absolute; box-sizing:border-box; top:360px; width:540px; height:300px; border-radius:12px; background:var(--rp-tile); border:1px solid rgba(var(--rp-ink-rgb),0.14); box-shadow:0 1px 3px rgba(var(--rp-shadow-rgb),0.08),0 4px 16px rgba(var(--rp-shadow-rgb),0.04); }
+  .f48-k2-opt .k { position:absolute; left:32px; top:32px; font:400 26px/1 "JetBrains Mono"; letter-spacing:0.12em; color:rgba(var(--rp-ink-rgb),0.62); }
+  .f48-k2-opt .l { position:absolute; left:32px; top:92px; right:32px; font:400 52px/1.1 "EB Garamond"; letter-spacing:-0.012em; color:var(--rp-ink); }
+</style>
+
+<div id="root" data-composition-id="48-k2" data-band="bottom" data-duration="10" data-width="1920" data-height="1080">
+
+  <div class="clip f48-k2-bg" id="f48-k2-bg" data-start="0" data-duration="12" data-track-index="0"></div>
+
+  <div class="clip f48-k2-scene" id="f48-k2-scene" data-start="0" data-duration="12" data-track-index="1">
+    <div class="f48-k2-place" id="f48-k2-place">QUICK CHECK · STEP 3</div>
+    <div class="f48-k2-era" id="f48-k2-era">Basement and Country · 1967–1970 · <span class="z">0 photos</span></div>
+    <div class="f48-k2-q" id="f48-k2-q" data-question>What does its panel open on?</div>
+
+    <div class="f48-k2-opt" id="f48-k2-opt-a" data-option="a" style="left:90px">
+      <span class="k">A</span>
+      <div class="l">A grey box where the photo goes</div>
+    </div>
+    <div class="f48-k2-opt" id="f48-k2-opt-b" data-option="b" style="left:690px">
+      <span class="k">B</span>
+      <div class="l">Its title, set large in its theme</div>
+    </div>
+    <div class="f48-k2-opt" id="f48-k2-opt-c" data-option="c" style="left:1290px">
+      <span class="k">C</span>
+      <div class="l">A photo from the nearest era</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FID = "48-k2";
+  var $ = function (s) { return document.getElementById("f48-k2-" + s); };
+  var E = "power3.out";
+  var slideUp = function (tl, el, at) { tl.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, at); };
+
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0-4s): the eyebrow and the era with no photo
+  tl.fromTo($("place"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, 0.026);
+  tl.fromTo($("era"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 0.2);
+
+  // Scene 2 (4-12s): the heading and the three cards; still from 8s (the answer is never shown)
+  tl.fromTo($("q"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 1.997);
+  slideUp(tl, $("opt-a"), 4.6);
+  slideUp(tl, $("opt-b"), 5.0);
+  slideUp(tl, $("opt-c"), 5.4);
+
+  tl.to({ hold: 0 }, { hold: 1, duration: 0.001 }, 11.99);
+  window.__timelines[FID] = tl;
+})();
+</script>
+</template>
