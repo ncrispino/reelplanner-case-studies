@@ -6,7 +6,7 @@
 //
 //   node tools/check-pages.mjs     # ✓ 24 views … · 70 events, each with its source
 //
-// It uses the puppeteer-core that reelplanning installs and the headless Chrome HyperFrames keeps in its cache.
+// It uses the puppeteer-core that reelplanner installs and the headless Chrome HyperFrames keeps in its cache.
 import { createServer } from "node:http";
 import { readFileSync, existsSync, statSync, readdirSync } from "node:fs";
 import { join, extname, dirname } from "node:path";
@@ -17,7 +17,7 @@ import { homedir } from "node:os";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const DOCS = join(ROOT, "docs"), BASE = "/reelplanning-case-studies/";
+const DOCS = join(ROOT, "docs"), BASE = "/reelplanner-case-studies/";
 // every study: a folder at the root with a study.json
 const STUDIES = readdirSync(ROOT).filter((d) => existsSync(join(ROOT, d, "study.json"))).map((d) => ({ dir: join(ROOT, d), ...JSON.parse(readFileSync(join(ROOT, d, "study.json"), "utf8")) }));
 const problems = [];
@@ -76,11 +76,13 @@ await new Promise((r) => server.on("listening", r));
 const ORIGIN = `http://127.0.0.1:${server.address().port}`;
 
 // --- the browser
-const req = createRequire(join(execSync("npm root -g").toString().trim(), "reelplanning", "package.json"));
+// the installed package: reelplanner, or reelplanning (its name until October 2026) on a machine not yet moved over
+const NPM_ROOT = execSync("npm root -g").toString().trim();
+const req = createRequire(join(NPM_ROOT, ["reelplanner", "reelplanning"].find((d) => existsSync(join(NPM_ROOT, d, "package.json"))) ?? "reelplanner", "package.json"));
 const puppeteer = req("puppeteer-core");
 const cache = join(homedir(), ".cache/hyperframes/chrome/chrome-headless-shell"); let exe;
 for (const v of existsSync(cache) ? readdirSync(cache).sort().reverse() : []) for (const d of readdirSync(join(cache, v))) { const p = join(cache, v, d, "chrome-headless-shell"); if (existsSync(p) && !exe) exe = p; }
-if (!exe) { console.error("✗ no headless Chrome: run `reelplanning setup`"); process.exit(2); }
+if (!exe) { console.error("✗ no headless Chrome: run `reelplanner setup`"); process.exit(2); }
 const browser = await puppeteer.launch({ executablePath: exe, headless: true, args: ["--no-sandbox"] });
 
 const PAGES = [""], allVideos = [];

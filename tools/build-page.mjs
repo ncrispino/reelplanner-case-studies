@@ -20,8 +20,11 @@ const T = JSON.parse(readFileSync(join(dir, "timeline.json"), "utf8"));
 const OUT = join(ROOT, "docs", S.slug);
 const { videos } = JSON.parse(readFileSync(join(OUT, "watch/videos.json"), "utf8"));
 const FOLDER = basename(dir.replace(/\/$/, ""));
-const GH = `https://github.com/ncrispino/reelplanning-case-studies/blob/main/${FOLDER}/`;
-const TREE = `https://github.com/ncrispino/reelplanning-case-studies/tree/main/${FOLDER}`;
+const GH = `https://github.com/ncrispino/reelplanner-case-studies/blob/main/${FOLDER}/`;
+const TREE = `https://github.com/ncrispino/reelplanner-case-studies/tree/main/${FOLDER}`;
+// the project's record folder: .reelplanner/, or .reelplanning/ in a study made before the tool's rename
+const REC = existsSync(join(dir, "project/.reelplanner")) ? ".reelplanner" : ".reelplanning";
+const TOOL = REC === ".reelplanner" ? "reelplanner" : "reelplanning";   // the command, as the study ran it
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const E = T.events, byId = Object.fromEntries(E.map((e) => [e.id, e]));
 const plans = Object.fromEntries(S.plans.map((p, i) => [p.id, { ...p, n: i + 1 }]));
@@ -52,7 +55,7 @@ const head = (title, desc, up) => `<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
 <link rel="stylesheet" href="${up}assets/case-study.css">`;
-const bar = (here, home) => `<header class="top"><div class="in"><span class="crumbs"><a href="${home}../">reelplanning case studies</a><span aria-hidden="true">›</span><a class="name" href="${home}">${esc(S.title)}</a></span>
+const bar = (here, home) => `<header class="top"><div class="in"><span class="crumbs"><a href="${home}../">reelplanner case studies</a><span aria-hidden="true">›</span><a class="name" href="${home}">${esc(S.title)}</a></span>
   <nav aria-label="This case study"><a href="${home}"${here === "study" ? ' aria-current="page"' : ""}>Write-up</a><a href="${home}watch/"${here === "watch" ? ' aria-current="page"' : ""}><span class="long">Watch the ${videos.length} videos</span><span class="short">Videos</span></a><a href="${home}site/" title="The site this study built, as it was at the end"><span class="long">The finished site</span><span class="short">Site</span> ↗</a></nav>
   <button type="button" class="theme" aria-label="Switch theme">☾</button></div></header>`;
 const copyScript = `for (const b of document.querySelectorAll(".copy")) b.addEventListener("click", async () => {
@@ -87,7 +90,7 @@ function eventHtml(e, first) {
   }
   if (e.kind === "plan") {
     return `<article class="ev plan" ${attrs}>${t}<div><p class="who">The agent writes the plan</p><p>${esc(said(e))}</p>
-      <p class="meta"><a href="${GH}project/.reelplanning/plans/${e.plan}/plan.md">plan.md</a> · ${commitLink(e)}</p></div></article>`;
+      <p class="meta"><a href="${GH}project/${REC}/plans/${e.plan}/plan.md">plan.md</a> · ${commitLink(e)}</p></div></article>`;
   }
   if (e.kind === "video" && first) {
     const v = vid[e.video], kept = VERSIONS[v.slug] && byId[VERSIONS[v.slug]];
@@ -151,7 +154,7 @@ flush();
 const stages = (S.stages ?? []).map((st, i) => `<button type="button" class="shot ${st.kind}" data-i="${i}" data-src="img/${st.img}.jpg" data-caption="${esc(st.caption)}" data-href="#${byId[st.event] ? anchor(byId[st.event]) : "timeline"}" aria-label="See larger: ${esc(st.caption)}"><span class="pic"><img src="img/${st.img}.jpg" alt="${esc(st.caption)}" loading="eager">${st.badge ? `<span class="badge">+ ${esc(st.badge)}</span>` : ""}</span><span>${esc(st.caption)}</span></button>`).join("");
 const first = E.find((e) => e.kind === "asked")?.words ?? "";
 
-const page = `${head(`${S.title} · a reelplanning case study`, S.dek, "../")}
+const page = `${head(`${S.title} · a reelplanner case study`, S.dek, "../")}
 </head>
 <body>
 ${bar("study", "./")}
@@ -184,14 +187,15 @@ ${bar("study", "./")}
 <main>
   <section id="summary" class="brief">
     ${(S.summary ?? []).map((p) => `<p>${p}</p>`).join("\n    ")}
-    <div class="repro"><p>To try it yourself, install reelplanning, then give the owner's first prompt in an empty folder:</p>
+    <div class="repro"><p>To try it yourself, install reelplanner, then give the owner's first prompt in an empty folder${/\breelplanning\b/.test(first) ? " (it says reelplanning, the tool's name then)" : ""}:</p>
       ${cmd(`mkdir ${S.project} && cd ${S.project} && git init\n${asPrompt(first)}`)}
-      ${S.ranWith ? `<p class="ranwith">The study ran on ${[S.ranWith.modelName && `${esc(S.ranWith.modelName)} (<code>${esc(S.ranWith.model)}</code>)`, S.ranWith.claudeCode && `Claude Code ${esc(S.ranWith.claudeCode)}`, S.ranWith.reelplanning && `<code>reelplanning</code> ${esc(S.ranWith.reelplanning)}`, S.ranWith.hyperframes && `HyperFrames ${esc(S.ranWith.hyperframes)}`].filter(Boolean).join(", ")}.</p>` : ""}
-      <details class="more"><summary>Install reelplanning first</summary>
-        <p>macOS or Linux, Node 18 or later, Python 3.10 or later; about 1.3 GB in all.</p>
+      ${S.ranWith ? `<p class="ranwith">The study ran on ${[S.ranWith.modelName && `${esc(S.ranWith.modelName)} (<code>${esc(S.ranWith.model)}</code>)`, S.ranWith.claudeCode && `Claude Code ${esc(S.ranWith.claudeCode)}`, S.ranWith.reelplanner && `<code>reelplanner</code> ${esc(S.ranWith.reelplanner)}`, S.ranWith.reelplanning && `<code>reelplanning</code> ${esc(S.ranWith.reelplanning)}`, S.ranWith.hyperframes && `HyperFrames ${esc(S.ranWith.hyperframes)}`].filter(Boolean).join(", ")}.</p>` : ""}
+      <details class="more"><summary>Install reelplanner first</summary>
+        <p>macOS or Linux, Node 22.20 or later, Python 3.10 or later; about 1.3 GB in all.</p>
         <p>The narration voice runs on your machine. On a slow machine, use a hosted voice instead (about $0.03 a minute of narration): write these two lines before setup, which checks the voice it will use.</p>
-        ${cmd(`mkdir -p ~/.reelplanning && printf 'REELPLANNING_TTS=openrouter\\nOPENROUTER_API_KEY=sk-or-…\\n' >> ~/.reelplanning/.env`, "Optional: the hosted voice")}
-        ${cmd(`npm i -g github:ncrispino/reelplanning\nreelplanning setup\nnpx skills add "$(npm root -g)/reelplanning" --skill plan-to-video -g`, "Install")}
+        ${cmd(`mkdir -p ~/.reelplanner && printf 'REELPLANNER_TTS=openrouter\\nOPENROUTER_API_KEY=sk-or-…\\n' >> ~/.reelplanner/.env`, "Optional: the hosted voice")}
+        ${cmd(`npm i -g github:ncrispino/reelplanner\nreelplanner setup\nnpx skills add "$(npm root -g)/reelplanner" --skill plan-to-video -g`, "Install")}
+        <p>Installed it before as reelplanning, its name until October 2026? Run <code>npm rm -g reelplanning</code> first: npm will not install over its commands.</p>
         <p>When each video opens, answer its questions, add any comments, then send the review. Each later plan below starts with the owner's message; give it to Claude Code the same way.</p>
       </details></div>
   </section>
@@ -210,11 +214,12 @@ ${bar("study", "./")}
   <section id="appendix">
     <h2>Appendix</h2>
     <details class="more"><summary>The commands, in the order they ran</summary>
-      ${cmd(`reelplanning reel new-plan . <name> --plan plan.md\nreelplanning reel check .reelplanning/plans/<plan>`, "Write a plan and check it against earlier decisions")}
-      ${cmd(`reelplanning narrate <video>\nreelplanning check-terms <video>\nreelplanning build <video>`, "Write the narration, check it, build the video")}
-      ${cmd(`reelplanning fresh-eyes <video>\nreelplanning fresh-eyes <video> --prompt newcomer\nreelplanning fresh-eyes <video> --prompt designer`, "Outside review: the prompts for two agents that never saw the chat")}
-      ${cmd(`reelplanning review <video> --port 8006 --detach\nreelplanning review --wait\nreelplanning reel record .reelplanning/plans/<plan> .reelplanning/inbox/<review>.json`, "Open the review page, wait for the review, file it")}
-      ${cmd(`reelplanning code-check .reelplanning/plans/<plan> --base <ref>\nreelplanning reel check .reelplanning/plans/<plan> --base <ref>\nreelplanning reel audit .reelplanning/plans/<plan>`, "After a build: the code check and the walkthrough's checks")}
+      ${REC === ".reelplanning" ? `<p>They ran as <code>reelplanning</code>, the tool's name then. Today the command is <code>reelplanner</code> (the old name still runs), and a new project's record is <code>.reelplanner/</code>.</p>` : ""}
+      ${cmd(`${TOOL} reel new-plan . <name> --plan plan.md\n${TOOL} reel check ${REC}/plans/<plan>`, "Write a plan and check it against earlier decisions")}
+      ${cmd(`${TOOL} narrate <video>\n${TOOL} check-terms <video>\n${TOOL} build <video>`, "Write the narration, check it, build the video")}
+      ${cmd(`${TOOL} fresh-eyes <video>\n${TOOL} fresh-eyes <video> --prompt newcomer\n${TOOL} fresh-eyes <video> --prompt designer`, "Outside review: the prompts for two agents that never saw the chat")}
+      ${cmd(`${TOOL} review <video> --port 8006 --detach\n${TOOL} review --wait\n${TOOL} reel record ${REC}/plans/<plan> ${REC}/inbox/<review>.json`, "Open the review page, wait for the review, file it")}
+      ${cmd(`${TOOL} code-check ${REC}/plans/<plan> --base <ref>\n${TOOL} reel check ${REC}/plans/<plan> --base <ref>\n${TOOL} reel audit ${REC}/plans/<plan>`, "After a build: the code check and the walkthrough's checks")}
     </details>
     <details class="more"><summary>Where everything is kept</summary>
 <div class="tree"><a href="${TREE}">${esc(FOLDER)}/</a>
@@ -230,7 +235,7 @@ docs/${esc(S.slug)}/
   </section>
 </main>
 </div>
-<footer><div class="page doc-foot">A case study of <a href="https://github.com/ncrispino/reelplanning">reelplanning</a>.${S.credits ? " " + esc(S.credits) : " The site's photographs are from Wikimedia Commons under their own licences; album covers come from the Cover Art Archive."}</div></footer>
+<footer><div class="page doc-foot">A case study of <a href="https://github.com/ncrispino/reelplanner">reelplanner</a>.${S.credits ? " " + esc(S.credits) : " The site's photographs are from Wikimedia Commons under their own licences; album covers come from the Cover Art Archive."}</div></footer>
 <script>
   ${copyScript}
   // the strip's pictures, larger: ‹ › or ← → between stages, Esc or × to close
@@ -273,7 +278,7 @@ docs/${esc(S.slug)}/
 // --- the watch page: the read-only viewer
 const watch = `${head(`The videos · ${S.title}`, `The videos of the ${S.title} case study, to watch, with their chapters and the owner's answers.`, "../../")}
 <!-- HyperFrames' own player (MIT, assets/hyperframes-player.LICENSE): it plays a reviewed video's scenes with their voice and
-     captions, and nothing else; the review page's marks, comments and answers are reelplanning's layer, left out here -->
+     captions, and nothing else; the review page's marks, comments and answers are reelplanner's layer, left out here -->
 <script src="../../assets/hyperframes-player.js"></script>
 </head>
 <body>
@@ -345,20 +350,20 @@ ${bar("watch", "../")}
 const GH_ICON = `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>`;
 const studies = readdirSync(ROOT).filter((d) => existsSync(join(ROOT, d, "study.json"))).map((d) => JSON.parse(readFileSync(join(ROOT, d, "study.json"), "utf8")))
   .sort((a, b) => Object.keys(b.days)[0].localeCompare(Object.keys(a.days)[0]));
-const front = `${head("reelplanning case studies", "Real projects planned and reviewed through reelplanning, each with its videos, its reviews and its session transcript.", "")}
+const front = `${head("reelplanner case studies", "Real projects planned and reviewed through reelplanner, each with its videos, its reviews and its session transcript.", "")}
 </head>
 <body>
-<header class="top"><div class="in"><span class="crumbs"><a class="name" href="./">reelplanning case studies</a></span>
-  <nav aria-label="Links"><a class="gh" href="https://github.com/ncrispino/reelplanning" title="reelplanning on GitHub: what it is and how to install it">${GH_ICON}<span class="long">Install reelplanning</span><span class="short">Install</span></a><a class="gh" href="https://github.com/ncrispino/reelplanning-case-studies" title="This site's own repo on GitHub: every study's videos, transcript and project files">${GH_ICON}<span class="long">Case studies repo</span><span class="short">Repo</span></a></nav>
+<header class="top"><div class="in"><span class="crumbs"><a class="name" href="./">reelplanner case studies</a></span>
+  <nav aria-label="Links"><a class="gh" href="https://github.com/ncrispino/reelplanner" title="reelplanner on GitHub: what it is and how to install it">${GH_ICON}<span class="long">Install reelplanner</span><span class="short">Install</span></a><a class="gh" href="https://github.com/ncrispino/reelplanner-case-studies" title="This site's own repo on GitHub: every study's videos, transcript and project files">${GH_ICON}<span class="long">Case studies repo</span><span class="short">Repo</span></a></nav>
   <button type="button" class="theme" aria-label="Switch theme">☾</button></div></header>
 <main class="page"><div class="front">
   <p class="label">Case studies</p>
-  <h1>reelplanning, used on real projects</h1>
-  <p class="dek"><a href="https://github.com/ncrispino/reelplanning">reelplanning</a> turns a coding agent's plan into a short narrated video that stops at each open question, so you review the plan by watching it.
+  <h1>reelplanner, used on real projects</h1>
+  <p class="dek"><a href="https://github.com/ncrispino/reelplanner">reelplanner</a> (called reelplanning until October 2026) turns a coding agent's plan into a short narrated video that stops at each open question, so you review the plan by watching it.
   Each study here follows one project from its first prompt to its last review: what the owner asked, the videos they watched, what they said, and what changed.</p>
   <ul class="studies">${studies.map((st) => `<li><a href="${st.slug}/">${st.card ? `<img src="${st.slug}/img/${st.card}.jpg" alt="" loading="lazy">` : ""}<span class="t"><span class="l">${esc(st.label)}</span><b>${esc(st.heading ?? st.title)}</b><span>${esc(st.blurb ?? st.dek)}</span><em>Read the case study →</em></span></a></li>`).join("")}</ul>
 </div></main>
-<footer><div class="page">More studies will be added here as they are written. How a study is made: <a href="https://github.com/ncrispino/reelplanning-case-studies/blob/main/TEMPLATE.md">TEMPLATE.md</a>.</div></footer>
+<footer><div class="page">More studies will be added here as they are written. How a study is made: <a href="https://github.com/ncrispino/reelplanner-case-studies/blob/main/TEMPLATE.md">TEMPLATE.md</a>.</div></footer>
 </body>
 </html>
 `;

@@ -12,7 +12,9 @@ const [dir] = process.argv.slice(2);
 if (!dir) { console.error("usage: node tools/videos.mjs <study-folder>"); process.exit(2); }
 const study = JSON.parse(readFileSync(join(dir, "study.json"), "utf8"));
 const out = join(dirname(fileURLToPath(import.meta.url)), "..", "docs", study.slug, "watch");
-const plans = join(dir, "project/.reelplanning/plans");
+// the project's record folder: .reelplanner/, or .reelplanning/ in a study made before the tool's rename
+const REC = existsSync(join(dir, "project/.reelplanner")) ? ".reelplanner" : ".reelplanning";
+const plans = join(dir, "project", REC, "plans");
 const planTitle = Object.fromEntries(study.plans.map((p) => [p.id, p.title]));
 const LIST = study.videos.map((v) => [v.slug, v.plan, v.sub, planTitle[v.plan]]);
 const mmss = (t) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`;

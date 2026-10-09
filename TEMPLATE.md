@@ -7,18 +7,19 @@ in its own `study.json`. The Bob Dylan study (`bob-dylan-site/`) is the worked e
 
 ## While the study runs
 
-Keep every version of every video. A project's `.reelplanning/` commits each video's storyboard, script and scenes,
-but not its screenshots, fonts or narration (the repo's ignore rules leave out `assets/`, the voice and its timings), so
-a video rebuilt after a review loses its first version for good. After each video is built, and again after each review
-that asks for changes, snapshot the built videos in full: with the case-study kit, `sh eval/case-studies/kit/arm.sh ours
-snapshot`; without it, `reelplanning bundle-player <somewhere>/review-v<n> <the video folders> --reelplanning
-<project>/.reelplanning`. The watch page can then show each version.
+Keep every version of every video. A project's `.reelplanner/` (`.reelplanning/` in a project from before the tool's
+rename; the tools here read either) commits each video's storyboard, script and scenes, but not its screenshots, fonts
+or narration (the repo's ignore rules leave out `assets/`, the voice and its timings), so a video rebuilt after a review
+loses its first version for good. After each video is built, and again after each review that asks for changes, snapshot
+the built videos in full: with the case-study kit, `sh eval/case-studies/kit/arm.sh ours snapshot`; without it,
+`reelplanner bundle-player <somewhere>/review-v<n> <the video folders> --reelplanner <project>/.reelplanner`. The watch
+page can then show each version.
 
 ## Adding a study
 
 1. **Make the study folder** at the repo's root, e.g. `my-study/`, with:
    - `project/`: the project as committed (`git -C <project> archive HEAD | tar -x -C my-study/project`), its
-     `.reelplanning/` included;
+     `.reelplanner/` included;
    - `transcript.zip`: the session transcript as `transcript.jsonl` in a zip (a `.gz` will not open with a double-click on a Mac), cut just before the first message after the study (e.g. asking to
      publish it), with the owner's email, their account's skills and connected accounts, their organization's id and anything else private redacted, and checked before it is committed; the
      timeline ends where it ends;
@@ -34,9 +35,9 @@ snapshot`; without it, `reelplanning bundle-player <somewhere>/review-v<n> <the 
    | `stripLabel` | the line over the strip of screenshots |
    | `summary` | the summary's paragraphs, plain and short (HTML allowed for links) |
    | `project` | the folder name in the "try it yourself" command |
-   | `ranWith` | what the study ran on, for replicating it: `model` (its id, also put in the first command as `--model`), `modelName`, `claudeCode`, `reelplanning`, `hyperframes`; the model and Claude Code version are in the transcript (each message's `model` and each line's `version`) |
+   | `ranWith` | what the study ran on, for replicating it: `model` (its id, also put in the first command as `--model`), `modelName`, `claudeCode`, `reelplanner` (a study from before the rename has `reelplanning`), `hyperframes`; the model and Claude Code version are in the transcript (each message's `model` and each line's `version`) |
    | `days` | each date's label on the timeline |
-   | `plans` | each plan in the order the owner asked for it: its id (its `.reelplanning/plans/` folder), title, kind, and `match`, a pattern that finds it in a commit's subject |
+   | `plans` | each plan in the order the owner asked for it: its id (its `.reelplanner/plans/` folder), title, kind, and `match`, a pattern that finds it in a commit's subject |
    | `starts`, `approves` | the opening words of the owner's messages that started a plan, or approved one in chat |
    | `startedByReview` | when a plan began as a comment on another plan's review |
    | `videos` | each video: its slug on the watch page, its plan, `video` or `walkthrough-video`, and its still in `docs/<slug>/img/` |
@@ -49,9 +50,9 @@ snapshot`; without it, `reelplanning bundle-player <somewhere>/review-v<n> <the 
    | `plainCommits` | each commit on the timeline as one plain sentence, by its hash; the page links the hash to its line in `commits.txt` and shows the raw message on hover |
    | `pages` | the site's pages the check opens |
 3. **Pack the videos and the site** into `docs/<slug>/`:
-   - `reelplanning bundle-player docs/<slug>/review <each video folder> --reelplanning <project>/.reelplanning`: the
+   - `reelplanner bundle-player docs/<slug>/review <each video folder> --reelplanner <project>/.reelplanner`: the
      watch page plays these;
-   - the built site in `docs/<slug>/site/`, built with its base path set to `/reelplanning-case-studies/<slug>/site/`;
+   - the built site in `docs/<slug>/site/`, built with its base path set to `/reelplanner-case-studies/<slug>/site/`;
    - stills and screenshots in `docs/<slug>/img/`, as JPEG.
 4. **Build and check:**
    ```

@@ -1,19 +1,20 @@
 # Bob Dylan, explored: a case study
 
 **The full write-up, with pictures and the videos, is a page:**
-https://ncrispino.github.io/reelplanning-case-studies/bob-dylan/ (its source: [docs/bob-dylan/index.html](../docs/bob-dylan/index.html)).
+https://ncrispino.github.io/reelplanner-case-studies/bob-dylan/ (its source: [docs/bob-dylan/index.html](../docs/bob-dylan/index.html)).
 This file is the same story in plain text.
 
 One person and one Claude Code session built an interactive site about Bob Dylan, planned and reviewed through
-[reelplanning](https://github.com/ncrispino/reelplanning): every plan became a narrated video the owner watched and
-answered, and every build became a walkthrough video of what landed and the choices the agent made on its own.
+[reelplanner](https://github.com/ncrispino/reelplanner) (then called reelplanning): every plan became a narrated video
+the owner watched and answered, and every build became a walkthrough video of what landed and the choices the agent
+made on its own.
 
 The study has a greenfield part (the first plan, from an empty folder) and a brownfield part (three more plans on the
 working site), seven videos in all, each reviewed. It ran from 6 to 8 October 2026, over about 36 hours.
 
 - **The site:** [docs/bob-dylan/site/](../docs/bob-dylan/site/) (on Pages:
-  https://ncrispino.github.io/reelplanning-case-studies/bob-dylan/site/)
-- **The seven videos, to watch:** https://ncrispino.github.io/reelplanning-case-studies/bob-dylan/watch/
+  https://ncrispino.github.io/reelplanner-case-studies/bob-dylan/site/)
+- **The seven videos, to watch:** https://ncrispino.github.io/reelplanner-case-studies/bob-dylan/watch/
 - **The project as committed** (source, data, every plan, review and decision): [project/](project/)
 - **The session transcript:** [transcript.zip](transcript.zip) (42 MB; inside, `transcript.jsonl`, 9,595 lines), the
   session as Claude Code recorded it, one JSON event a line, up to the end of the build: it stops before the owner's
@@ -23,7 +24,7 @@ working site), seven videos in all, each reviewed. It ran from 6 to 8 October 20
 
 The first request, in full: *"Build an interactive website about Bob Dylan … explore his life and music — the
 different eras, the albums, the songs and how they connect — … more engaging than reading a Wikipedia article, and it
-should work well on a phone. Start from scratch in this empty folder."* The owner chose reelplanning's whole pipeline:
+should work well on a phone. Start from scratch in this empty folder."* The owner chose reelplanner's whole pipeline:
 answers recorded as decisions that later plans are checked against, every review kept, and a walkthrough after each
 build.
 

@@ -14,7 +14,9 @@ import { join } from "node:path";
 
 const dir = process.argv[2];
 if (!dir) { console.error("usage: node tools/timeline.mjs <study-folder>"); process.exit(2); }
-const plansDir = join(dir, "project/.reelplanning/plans");
+// the project's record folder: .reelplanner/, or .reelplanning/ in a study made before the tool's rename
+const REC = existsSync(join(dir, "project/.reelplanner")) ? ".reelplanner" : ".reelplanning";
+const plansDir = join(dir, "project", REC, "plans");
 
 // --- what is particular to this study: its study.json (its plans, the messages that started them, its videos)
 const study = JSON.parse(readFileSync(join(dir, "study.json"), "utf8"));
@@ -69,7 +71,7 @@ for (const p of PLANS) {
     add({ kind: "review", at: at(`${t[1]}-${t[2]}-${t[3]}T${t[4]}:${t[5]}:${t[6]}Z`), plan: p.id, of: kind,
           verdict: d.verdict ?? r.verdict, comments, answers, flags, inChat,
           words: inChat ? null : comments[0]?.words ?? null,
-          source: `project/.reelplanning/plans/${p.id}/reviews/${f}`,
+          source: `project/${REC}/plans/${p.id}/reviews/${f}`,
           video: inChat ? null : VIDEOS[p.id][kind] });
   }
 }
