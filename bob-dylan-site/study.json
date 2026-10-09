@@ -4,7 +4,7 @@
   "label": "Case study · 6–8 October 2026",
   "dek": "One person and Claude Code built an interactive Bob Dylan site over three days (about 36 hours), starting from an empty folder. Most of its plans were reviewed as narrated videos. Below: the site as it changed, then every step in order.",
   "summary": [
-    "The owner asked for an interactive site about Bob Dylan's life and music that works well on a phone. <a href=\"https://github.com/ncrispino/reelplanning\">reelplanning</a> turned three of the four plans into narrated videos that paused at each open question for the owner to answer, and after each build a second video showed the finished pages. The fourth plan came from a comment on one of those videos, and was approved in chat."
+    "The owner asked for an interactive site about Bob Dylan's life and music that works well on a phone. <a href=\"https://github.com/ncrispino/reelplanner\">reelplanner</a> (then called reelplanning) turned three of the four plans into narrated videos that paused at each open question for the owner to answer, and after each build a second video showed the finished pages. The fourth plan came from a comment on one of those videos, and was approved in chat."
   ],
   "project": "dylan-site",
   "days": {
@@ -196,7 +196,7 @@
     ],
     [
       "Saved decisions",
-      "The owner's answers were saved as numbered decisions in <a href=\"https://github.com/ncrispino/reelplanning-case-studies/blob/main/bob-dylan-site/project/.reelplanning/decisions.md\">decisions.md</a>. Each later plan lists the ones it must keep, as in <a href=\"https://github.com/ncrispino/reelplanning-case-studies/blob/main/bob-dylan-site/project/.reelplanning/plans/2026-10-07-fuller/plan.md#decisions-in-force\">the fuller plan</a>."
+      "The owner's answers were saved as numbered decisions in <a href=\"https://github.com/ncrispino/reelplanner-case-studies/blob/main/bob-dylan-site/project/.reelplanning/decisions.md\">decisions.md</a>. Each later plan lists the ones it must keep, as in <a href=\"https://github.com/ncrispino/reelplanner-case-studies/blob/main/bob-dylan-site/project/.reelplanning/plans/2026-10-07-fuller/plan.md#decisions-in-force\">the fuller plan</a>."
     ],
     [
       "Walkthrough videos",
@@ -204,7 +204,7 @@
     ],
     [
       "Fresh eyes",
-      "Before the owner saw a video, two agents that never saw the chat watched it: one as a newcomer, one as a designer. Each of their notes has a written answer, fixed or kept, as in <a href=\"https://github.com/ncrispino/reelplanning-case-studies/blob/main/bob-dylan-site/project/.reelplanning/plans/2026-10-07-fuller/walkthrough-video/fresh-eyes/designer.md\">this designer's notes</a>."
+      "Before the owner saw a video, two agents that never saw the chat watched it: one as a newcomer, one as a designer. Each of their notes has a written answer, fixed or kept, as in <a href=\"https://github.com/ncrispino/reelplanner-case-studies/blob/main/bob-dylan-site/project/.reelplanning/plans/2026-10-07-fuller/walkthrough-video/fresh-eyes/designer.md\">this designer's notes</a>."
     ],
     [
       "In the timeline",
@@ -215,7 +215,7 @@
     "site/",
     "site/era/electric/"
   ],
-  "heading": "Building a Bob Dylan website with reelplanning",
+  "heading": "Building a Bob Dylan website with reelplanner",
   "stripLabel": "The finished site as it changed, from the first build to the last. Click a picture to see it larger, then step through the rest with ‹ › or the arrow keys.",
   "card": "s4-desk-after",
   "blurb": "An interactive Bob Dylan site, built from an empty folder by one person and Claude Code over three days. Most of its plans were reviewed as narrated videos; the owner's comments shaped what came next.",
